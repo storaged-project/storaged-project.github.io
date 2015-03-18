@@ -1,0 +1,153 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Storaged Reference Manual: StoragedLinuxFilesystem</title>
+<meta name="generator" content="DocBook XSL Stylesheets V1.78.1">
+<link rel="home" href="index.html" title="Storaged Reference Manual">
+<link rel="up" href="ref-daemon-block-devices.html" title="Block devices on Linux">
+<link rel="prev" href="StoragedLinuxPartitionTable.html" title="StoragedLinuxPartitionTable">
+<link rel="next" href="StoragedLinuxEncrypted.html" title="StoragedLinuxEncrypted">
+<meta name="generator" content="GTK-Doc V1.21 (XML mode)">
+<link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<table class="navigation" id="top" width="100%" summary="Navigation header" cellpadding="2" cellspacing="5"><tr valign="middle">
+<td width="100%" align="left" class="shortcuts">
+<a href="#" class="shortcut">Top</a><span id="nav_description">  <span class="dim">|</span> 
+                  <a href="#StoragedLinuxFilesystem.description" class="shortcut">Description</a></span><span id="nav_hierarchy">  <span class="dim">|</span> 
+                  <a href="#StoragedLinuxFilesystem.object-hierarchy" class="shortcut">Object Hierarchy</a></span><span id="nav_interfaces">  <span class="dim">|</span> 
+                  <a href="#StoragedLinuxFilesystem.implemented-interfaces" class="shortcut">Implemented Interfaces</a></span>
+</td>
+<td><a accesskey="h" href="index.html"><img src="home.png" width="16" height="16" border="0" alt="Home"></a></td>
+<td><a accesskey="u" href="ref-daemon-block-devices.html"><img src="up.png" width="16" height="16" border="0" alt="Up"></a></td>
+<td><a accesskey="p" href="StoragedLinuxPartitionTable.html"><img src="left.png" width="16" height="16" border="0" alt="Prev"></a></td>
+<td><a accesskey="n" href="StoragedLinuxEncrypted.html"><img src="right.png" width="16" height="16" border="0" alt="Next"></a></td>
+</tr></table>
+<div class="refentry">
+<a name="StoragedLinuxFilesystem"></a><div class="titlepage"></div>
+<div class="refnamediv"><table width="100%"><tr>
+<td valign="top">
+<h2><span class="refentrytitle"><a name="StoragedLinuxFilesystem.top_of_page"></a>StoragedLinuxFilesystem</span></h2>
+<p>StoragedLinuxFilesystem — Linux implementation of <a class="link" href="StoragedFilesystem.html" title="StoragedFilesystem"><span class="type">StoragedFilesystem</span></a></p>
+</td>
+<td class="gallery_image" valign="top" align="right"></td>
+</tr></table></div>
+<div class="refsect1">
+<a name="StoragedLinuxFilesystem.functions"></a><h2>Functions</h2>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="functions_return">
+<col class="functions_name">
+</colgroup>
+<tbody>
+<tr>
+<td class="function_type">
+<a class="link" href="StoragedFilesystem.html" title="StoragedFilesystem"><span class="returnvalue">StoragedFilesystem</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="StoragedLinuxFilesystem.html#storaged-linux-filesystem-new" title="storaged_linux_filesystem_new ()">storaged_linux_filesystem_new</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="StoragedLinuxFilesystem.html#storaged-linux-filesystem-update" title="storaged_linux_filesystem_update ()">storaged_linux_filesystem_update</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect1">
+<a name="StoragedLinuxFilesystem.other"></a><h2>Types and Values</h2>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="name">
+<col class="description">
+</colgroup>
+<tbody><tr>
+<td class="datatype_keyword"> </td>
+<td class="function_name"><a class="link" href="StoragedLinuxFilesystem.html#StoragedLinuxFilesystem-struct" title="StoragedLinuxFilesystem">StoragedLinuxFilesystem</a></td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect1">
+<a name="StoragedLinuxFilesystem.object-hierarchy"></a><h2>Object Hierarchy</h2>
+<pre class="screen">    GObject
+    <span class="lineart">╰──</span> GDBusInterfaceSkeleton
+        <span class="lineart">╰──</span> <a class="link" href="StoragedFilesystem.html#StoragedFilesystemSkeleton">StoragedFilesystemSkeleton</a>
+            <span class="lineart">╰──</span> StoragedLinuxFilesystem
+</pre>
+</div>
+<div class="refsect1">
+<a name="StoragedLinuxFilesystem.implemented-interfaces"></a><h2>Implemented Interfaces</h2>
+<p>
+StoragedLinuxFilesystem implements
+ GDBusInterface and  <a class="link" href="StoragedFilesystem.html" title="StoragedFilesystem">StoragedFilesystem</a>.</p>
+</div>
+<div class="refsect1">
+<a name="StoragedLinuxFilesystem.description"></a><h2>Description</h2>
+<p>This type provides an implementation of the <a class="link" href="StoragedFilesystem.html" title="StoragedFilesystem"><span class="type">StoragedFilesystem</span></a>
+interface on Linux.</p>
+</div>
+<div class="refsect1">
+<a name="StoragedLinuxFilesystem.functions_details"></a><h2>Functions</h2>
+<div class="refsect2">
+<a name="storaged-linux-filesystem-new"></a><h3>storaged_linux_filesystem_new ()</h3>
+<pre class="programlisting"><a class="link" href="StoragedFilesystem.html" title="StoragedFilesystem"><span class="returnvalue">StoragedFilesystem</span></a> *
+storaged_linux_filesystem_new (<em class="parameter"><code><span class="type">void</span></code></em>);</pre>
+<p>Creates a new <a class="link" href="StoragedLinuxFilesystem.html" title="StoragedLinuxFilesystem"><span class="type">StoragedLinuxFilesystem</span></a> instance.</p>
+<div class="refsect3">
+<a name="id-1.5.8.5.8.2.5"></a><h4>Returns</h4>
+<p> A new <a class="link" href="StoragedLinuxFilesystem.html" title="StoragedLinuxFilesystem"><span class="type">StoragedLinuxFilesystem</span></a>. Free with <code class="function">g_object_unref()</code>.</p>
+<p></p>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="storaged-linux-filesystem-update"></a><h3>storaged_linux_filesystem_update ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+storaged_linux_filesystem_update (<em class="parameter"><code><a class="link" href="StoragedLinuxFilesystem.html" title="StoragedLinuxFilesystem"><span class="type">StoragedLinuxFilesystem</span></a> *filesystem</code></em>,
+                                  <em class="parameter"><code><a class="link" href="StoragedLinuxBlockObject.html" title="StoragedLinuxBlockObject"><span class="type">StoragedLinuxBlockObject</span></a> *object</code></em>);</pre>
+<p>Updates the interface.</p>
+<div class="refsect3">
+<a name="id-1.5.8.5.8.3.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>filesystem</p></td>
+<td class="parameter_description"><p>A <a class="link" href="StoragedLinuxFilesystem.html" title="StoragedLinuxFilesystem"><span class="type">StoragedLinuxFilesystem</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>object</p></td>
+<td class="parameter_description"><p>The enclosing <a class="link" href="StoragedLinuxBlockObject.html" title="StoragedLinuxBlockObject"><span class="type">StoragedLinuxBlockObject</span></a> instance.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+</div>
+<div class="refsect1">
+<a name="StoragedLinuxFilesystem.other_details"></a><h2>Types and Values</h2>
+<div class="refsect2">
+<a name="StoragedLinuxFilesystem-struct"></a><h3>StoragedLinuxFilesystem</h3>
+<pre class="programlisting">typedef struct _StoragedLinuxFilesystem StoragedLinuxFilesystem;</pre>
+<p>The <a class="link" href="StoragedLinuxFilesystem.html" title="StoragedLinuxFilesystem"><span class="type">StoragedLinuxFilesystem</span></a> structure contains only private data and should
+only be accessed using the provided API.</p>
+</div>
+</div>
+</div>
+<div class="footer">
+<hr>
+          Generated by GTK-Doc V1.21</div>
+</body>
+</html>

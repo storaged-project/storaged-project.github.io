@@ -1,0 +1,554 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Storaged Reference Manual: StoragedLinuxDriveObject</title>
+<meta name="generator" content="DocBook XSL Stylesheets V1.78.1">
+<link rel="home" href="index.html" title="Storaged Reference Manual">
+<link rel="up" href="ref-daemon-drives.html" title="Drives on Linux">
+<link rel="prev" href="StoragedLinuxDriveAta.html" title="StoragedLinuxDriveAta">
+<link rel="next" href="ref-daemon-mdraid.html" title="Linux RAID">
+<meta name="generator" content="GTK-Doc V1.21 (XML mode)">
+<link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<table class="navigation" id="top" width="100%" summary="Navigation header" cellpadding="2" cellspacing="5"><tr valign="middle">
+<td width="100%" align="left" class="shortcuts">
+<a href="#" class="shortcut">Top</a><span id="nav_description">  <span class="dim">|</span> 
+                  <a href="#StoragedLinuxDriveObject.description" class="shortcut">Description</a></span><span id="nav_hierarchy">  <span class="dim">|</span> 
+                  <a href="#StoragedLinuxDriveObject.object-hierarchy" class="shortcut">Object Hierarchy</a></span><span id="nav_interfaces">  <span class="dim">|</span> 
+                  <a href="#StoragedLinuxDriveObject.implemented-interfaces" class="shortcut">Implemented Interfaces</a></span><span id="nav_properties">  <span class="dim">|</span> 
+                  <a href="#StoragedLinuxDriveObject.properties" class="shortcut">Properties</a></span>
+</td>
+<td><a accesskey="h" href="index.html"><img src="home.png" width="16" height="16" border="0" alt="Home"></a></td>
+<td><a accesskey="u" href="ref-daemon-drives.html"><img src="up.png" width="16" height="16" border="0" alt="Up"></a></td>
+<td><a accesskey="p" href="StoragedLinuxDriveAta.html"><img src="left.png" width="16" height="16" border="0" alt="Prev"></a></td>
+<td><a accesskey="n" href="ref-daemon-mdraid.html"><img src="right.png" width="16" height="16" border="0" alt="Next"></a></td>
+</tr></table>
+<div class="refentry">
+<a name="StoragedLinuxDriveObject"></a><div class="titlepage"></div>
+<div class="refnamediv"><table width="100%"><tr>
+<td valign="top">
+<h2><span class="refentrytitle"><a name="StoragedLinuxDriveObject.top_of_page"></a>StoragedLinuxDriveObject</span></h2>
+<p>StoragedLinuxDriveObject — Object representing a drive on Linux</p>
+</td>
+<td class="gallery_image" valign="top" align="right"></td>
+</tr></table></div>
+<div class="refsect1">
+<a name="StoragedLinuxDriveObject.functions"></a><h2>Functions</h2>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="functions_return">
+<col class="functions_name">
+</colgroup>
+<tbody>
+<tr>
+<td class="function_type">
+<a class="link" href="StoragedLinuxDriveObject.html" title="StoragedLinuxDriveObject"><span class="returnvalue">StoragedLinuxDriveObject</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="StoragedLinuxDriveObject.html#storaged-linux-drive-object-new" title="storaged_linux_drive_object_new ()">storaged_linux_drive_object_new</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="StoragedLinuxDriveObject.html#storaged-linux-drive-object-uevent" title="storaged_linux_drive_object_uevent ()">storaged_linux_drive_object_uevent</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a class="link" href="StoragedDaemon.html" title="StoragedDaemon"><span class="returnvalue">StoragedDaemon</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="StoragedLinuxDriveObject.html#storaged-linux-drive-object-get-daemon" title="storaged_linux_drive_object_get_daemon ()">storaged_linux_drive_object_get_daemon</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a class="link" href="StoragedLinuxBlockObject.html" title="StoragedLinuxBlockObject"><span class="returnvalue">StoragedLinuxBlockObject</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="StoragedLinuxDriveObject.html#storaged-linux-drive-object-get-block" title="storaged_linux_drive_object_get_block ()">storaged_linux_drive_object_get_block</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a class="link" href="StoragedLinuxDevice.html" title="StoragedLinuxDevice"><span class="returnvalue">StoragedLinuxDevice</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="StoragedLinuxDriveObject.html#storaged-linux-drive-object-get-device" title="storaged_linux_drive_object_get_device ()">storaged_linux_drive_object_get_device</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">GList</span> *
+</td>
+<td class="function_name">
+<a class="link" href="StoragedLinuxDriveObject.html#storaged-linux-drive-object-get-devices" title="storaged_linux_drive_object_get_devices ()">storaged_linux_drive_object_get_devices</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">GList</span> *
+</td>
+<td class="function_name">
+<a class="link" href="StoragedLinuxDriveObject.html#storaged-linux-drive-object-get-siblings" title="storaged_linux_drive_object_get_siblings ()">storaged_linux_drive_object_get_siblings</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">gboolean</span>
+</td>
+<td class="function_name">
+<a class="link" href="StoragedLinuxDriveObject.html#storaged-linux-drive-object-housekeeping" title="storaged_linux_drive_object_housekeeping ()">storaged_linux_drive_object_housekeeping</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">gboolean</span>
+</td>
+<td class="function_name">
+<a class="link" href="StoragedLinuxDriveObject.html#storaged-linux-drive-object-is-not-in-use" title="storaged_linux_drive_object_is_not_in_use ()">storaged_linux_drive_object_is_not_in_use</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect1">
+<a name="StoragedLinuxDriveObject.properties"></a><h2>Properties</h2>
+<div class="informaltable"><table border="0">
+<colgroup>
+<col width="150px" class="properties_type">
+<col width="300px" class="properties_name">
+<col width="200px" class="properties_flags">
+</colgroup>
+<tbody>
+<tr>
+<td class="property_type">
+<a class="link" href="StoragedDaemon.html" title="StoragedDaemon"><span class="type">StoragedDaemon</span></a> *</td>
+<td class="property_name"><a class="link" href="StoragedLinuxDriveObject.html#StoragedLinuxDriveObject--daemon" title="The “daemon” property">daemon</a></td>
+<td class="property_flags">Read / Write / Construct Only</td>
+</tr>
+<tr>
+<td class="property_type">
+<a class="link" href="StoragedLinuxDevice.html" title="StoragedLinuxDevice"><span class="type">StoragedLinuxDevice</span></a> *</td>
+<td class="property_name"><a class="link" href="StoragedLinuxDriveObject.html#StoragedLinuxDriveObject--device" title="The “device” property">device</a></td>
+<td class="property_flags">Write / Construct Only</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect1">
+<a name="StoragedLinuxDriveObject.other"></a><h2>Types and Values</h2>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="name">
+<col class="description">
+</colgroup>
+<tbody><tr>
+<td class="datatype_keyword"> </td>
+<td class="function_name"><a class="link" href="StoragedLinuxDriveObject.html#StoragedLinuxDriveObject-struct" title="StoragedLinuxDriveObject">StoragedLinuxDriveObject</a></td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect1">
+<a name="StoragedLinuxDriveObject.object-hierarchy"></a><h2>Object Hierarchy</h2>
+<pre class="screen">    GObject
+    <span class="lineart">╰──</span> GDBusObjectSkeleton
+        <span class="lineart">╰──</span> <a class="link" href="StoragedObject.html#StoragedObjectSkeleton">StoragedObjectSkeleton</a>
+            <span class="lineart">╰──</span> StoragedLinuxDriveObject
+</pre>
+</div>
+<div class="refsect1">
+<a name="StoragedLinuxDriveObject.implemented-interfaces"></a><h2>Implemented Interfaces</h2>
+<p>
+StoragedLinuxDriveObject implements
+ GDBusObject and  <a class="link" href="StoragedObject.html" title="StoragedObject">StoragedObject</a>.</p>
+</div>
+<div class="refsect1">
+<a name="StoragedLinuxDriveObject.description"></a><h2>Description</h2>
+<p>Object corresponding to a drive on Linux.</p>
+</div>
+<div class="refsect1">
+<a name="StoragedLinuxDriveObject.functions_details"></a><h2>Functions</h2>
+<div class="refsect2">
+<a name="storaged-linux-drive-object-new"></a><h3>storaged_linux_drive_object_new ()</h3>
+<pre class="programlisting"><a class="link" href="StoragedLinuxDriveObject.html" title="StoragedLinuxDriveObject"><span class="returnvalue">StoragedLinuxDriveObject</span></a> *
+storaged_linux_drive_object_new (<em class="parameter"><code><a class="link" href="StoragedDaemon.html" title="StoragedDaemon"><span class="type">StoragedDaemon</span></a> *daemon</code></em>,
+                                 <em class="parameter"><code><a class="link" href="StoragedLinuxDevice.html" title="StoragedLinuxDevice"><span class="type">StoragedLinuxDevice</span></a> *device</code></em>);</pre>
+<p>Create a new drive object.</p>
+<div class="refsect3">
+<a name="id-1.5.6.4.9.2.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>daemon</p></td>
+<td class="parameter_description"><p>A <a class="link" href="StoragedDaemon.html" title="StoragedDaemon"><span class="type">StoragedDaemon</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>device</p></td>
+<td class="parameter_description"><p>The <a class="link" href="StoragedLinuxDevice.html" title="StoragedLinuxDevice"><span class="type">StoragedLinuxDevice</span></a> for the sysfs block device.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="id-1.5.6.4.9.2.6"></a><h4>Returns</h4>
+<p> A <a class="link" href="StoragedLinuxDriveObject.html" title="StoragedLinuxDriveObject"><span class="type">StoragedLinuxDriveObject</span></a> object or <code class="literal">NULL</code> if <em class="parameter"><code>device</code></em>
+does not represent a drive. Free with <code class="function">g_object_unref()</code>.</p>
+<p></p>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="storaged-linux-drive-object-uevent"></a><h3>storaged_linux_drive_object_uevent ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+storaged_linux_drive_object_uevent (<em class="parameter"><code><a class="link" href="StoragedLinuxDriveObject.html" title="StoragedLinuxDriveObject"><span class="type">StoragedLinuxDriveObject</span></a> *object</code></em>,
+                                    <em class="parameter"><code>const <span class="type">gchar</span> *action</code></em>,
+                                    <em class="parameter"><code><a class="link" href="StoragedLinuxDevice.html" title="StoragedLinuxDevice"><span class="type">StoragedLinuxDevice</span></a> *device</code></em>);</pre>
+<p>Updates all information on interfaces on <em class="parameter"><code>drive</code></em>
+.</p>
+<div class="refsect3">
+<a name="id-1.5.6.4.9.3.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>object</p></td>
+<td class="parameter_description"><p>A <a class="link" href="StoragedLinuxDriveObject.html" title="StoragedLinuxDriveObject"><span class="type">StoragedLinuxDriveObject</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>action</p></td>
+<td class="parameter_description"><p>Uevent action or <code class="literal">NULL</code></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>device</p></td>
+<td class="parameter_description"><p>A <a class="link" href="StoragedLinuxDevice.html" title="StoragedLinuxDevice"><span class="type">StoragedLinuxDevice</span></a> device object or <code class="literal">NULL</code> if the device hasn't changed.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="storaged-linux-drive-object-get-daemon"></a><h3>storaged_linux_drive_object_get_daemon ()</h3>
+<pre class="programlisting"><a class="link" href="StoragedDaemon.html" title="StoragedDaemon"><span class="returnvalue">StoragedDaemon</span></a> *
+storaged_linux_drive_object_get_daemon
+                               (<em class="parameter"><code><a class="link" href="StoragedLinuxDriveObject.html" title="StoragedLinuxDriveObject"><span class="type">StoragedLinuxDriveObject</span></a> *object</code></em>);</pre>
+<p>Gets the daemon used by <em class="parameter"><code>object</code></em>
+.</p>
+<div class="refsect3">
+<a name="id-1.5.6.4.9.4.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>object</p></td>
+<td class="parameter_description"><p>A <a class="link" href="StoragedLinuxDriveObject.html" title="StoragedLinuxDriveObject"><span class="type">StoragedLinuxDriveObject</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="id-1.5.6.4.9.4.6"></a><h4>Returns</h4>
+<p> A <a class="link" href="StoragedDaemon.html" title="StoragedDaemon"><span class="type">StoragedDaemon</span></a>. Do not free, the object is owned by <em class="parameter"><code>object</code></em>
+.</p>
+<p></p>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="storaged-linux-drive-object-get-block"></a><h3>storaged_linux_drive_object_get_block ()</h3>
+<pre class="programlisting"><a class="link" href="StoragedLinuxBlockObject.html" title="StoragedLinuxBlockObject"><span class="returnvalue">StoragedLinuxBlockObject</span></a> *
+storaged_linux_drive_object_get_block (<em class="parameter"><code><a class="link" href="StoragedLinuxDriveObject.html" title="StoragedLinuxDriveObject"><span class="type">StoragedLinuxDriveObject</span></a> *object</code></em>,
+                                       <em class="parameter"><code><span class="type">gboolean</span> get_hw</code></em>);</pre>
+<p>Gets a <a class="link" href="StoragedLinuxBlockObject.html" title="StoragedLinuxBlockObject"><span class="type">StoragedLinuxBlockObject</span></a> representing a block device associated with <em class="parameter"><code>object</code></em>
+.</p>
+<div class="refsect3">
+<a name="id-1.5.6.4.9.5.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>object</p></td>
+<td class="parameter_description"><p>A <a class="link" href="StoragedLinuxDriveObject.html" title="StoragedLinuxDriveObject"><span class="type">StoragedLinuxDriveObject</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>get_hw</p></td>
+<td class="parameter_description"><p>If the drive is multipath, set to <code class="literal">TRUE</code> to get a path device instead of the multipath device.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="id-1.5.6.4.9.5.6"></a><h4>Returns</h4>
+<p> A <a class="link" href="StoragedLinuxBlockObject.html" title="StoragedLinuxBlockObject"><span class="type">StoragedLinuxBlockObject</span></a> or <code class="literal">NULL</code>. The returned object
+must be freed with <code class="function">g_object_unref()</code>.</p>
+<p></p>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="storaged-linux-drive-object-get-device"></a><h3>storaged_linux_drive_object_get_device ()</h3>
+<pre class="programlisting"><a class="link" href="StoragedLinuxDevice.html" title="StoragedLinuxDevice"><span class="returnvalue">StoragedLinuxDevice</span></a> *
+storaged_linux_drive_object_get_device
+                               (<em class="parameter"><code><a class="link" href="StoragedLinuxDriveObject.html" title="StoragedLinuxDriveObject"><span class="type">StoragedLinuxDriveObject</span></a> *object</code></em>,
+                                <em class="parameter"><code><span class="type">gboolean</span> get_hw</code></em>);</pre>
+<p>Gets one of the <a class="link" href="StoragedLinuxDevice.html" title="StoragedLinuxDevice"><span class="type">StoragedLinuxDevice</span></a> object associated with <em class="parameter"><code>object</code></em>
+.</p>
+<p>If <em class="parameter"><code>get_hw</code></em>
+ is <code class="literal">TRUE</code> and <em class="parameter"><code>object</code></em>
+ represents a multipath device then
+one of the paths is returned rather than the multipath device. This
+is useful if you e.g. need to configure the physical hardware.</p>
+<div class="refsect3">
+<a name="id-1.5.6.4.9.6.6"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>object</p></td>
+<td class="parameter_description"><p>A <a class="link" href="StoragedLinuxDriveObject.html" title="StoragedLinuxDriveObject"><span class="type">StoragedLinuxDriveObject</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>get_hw</p></td>
+<td class="parameter_description"><p>If the drive is multipath, set to <code class="literal">TRUE</code> to get a path device instead of the multipath device.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="id-1.5.6.4.9.6.7"></a><h4>Returns</h4>
+<p> A <a class="link" href="StoragedLinuxDevice.html" title="StoragedLinuxDevice"><span class="type">StoragedLinuxDevice</span></a> or <code class="literal">NULL</code>. The returned object must be freed
+with <code class="function">g_object_unref()</code>.</p>
+<p></p>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="storaged-linux-drive-object-get-devices"></a><h3>storaged_linux_drive_object_get_devices ()</h3>
+<pre class="programlisting"><span class="returnvalue">GList</span> *
+storaged_linux_drive_object_get_devices
+                               (<em class="parameter"><code><a class="link" href="StoragedLinuxDriveObject.html" title="StoragedLinuxDriveObject"><span class="type">StoragedLinuxDriveObject</span></a> *object</code></em>);</pre>
+<p>Gets the current <a class="link" href="StoragedLinuxDevice.html" title="StoragedLinuxDevice"><span class="type">StoragedLinuxDevice</span></a> objects associated with <em class="parameter"><code>object</code></em>
+.</p>
+<div class="refsect3">
+<a name="id-1.5.6.4.9.7.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>object</p></td>
+<td class="parameter_description"><p>A <a class="link" href="StoragedLinuxDriveObject.html" title="StoragedLinuxDriveObject"><span class="type">StoragedLinuxDriveObject</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="id-1.5.6.4.9.7.6"></a><h4>Returns</h4>
+<p> A list of <a class="link" href="StoragedLinuxDevice.html" title="StoragedLinuxDevice"><span class="type">StoragedLinuxDevice</span></a> objects. Free each element with
+<code class="function">g_object_unref()</code>, then free the list with <code class="function">g_list_free()</code>.</p>
+<p></p>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="storaged-linux-drive-object-get-siblings"></a><h3>storaged_linux_drive_object_get_siblings ()</h3>
+<pre class="programlisting"><span class="returnvalue">GList</span> *
+storaged_linux_drive_object_get_siblings
+                               (<em class="parameter"><code><a class="link" href="StoragedLinuxDriveObject.html" title="StoragedLinuxDriveObject"><span class="type">StoragedLinuxDriveObject</span></a> *object</code></em>);</pre>
+<p>Gets the siblings for <em class="parameter"><code>object</code></em>
+, if any.</p>
+<div class="refsect3">
+<a name="id-1.5.6.4.9.8.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>object</p></td>
+<td class="parameter_description"><p>A <a class="link" href="StoragedLinuxDriveObject.html" title="StoragedLinuxDriveObject"><span class="type">StoragedLinuxDriveObject</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="id-1.5.6.4.9.8.6"></a><h4>Returns</h4>
+<p> A list of <a class="link" href="StoragedLinuxDriveObject.html" title="StoragedLinuxDriveObject"><span class="type">StoragedLinuxDriveObject</span></a>
+instances. The returned list should be freed with <code class="function">g_list_free()</code> after each element has been
+freed with <code class="function">g_object_unref()</code>. </p>
+<p><span class="annotation">[<acronym title="Free data after the code is done."><span class="acronym">transfer full</span></acronym>][<acronym title="Generics and defining elements of containers and arrays."><span class="acronym">element-type</span></acronym> StoragedLinuxDriveObject]</span></p>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="storaged-linux-drive-object-housekeeping"></a><h3>storaged_linux_drive_object_housekeeping ()</h3>
+<pre class="programlisting"><span class="returnvalue">gboolean</span>
+storaged_linux_drive_object_housekeeping
+                               (<em class="parameter"><code><a class="link" href="StoragedLinuxDriveObject.html" title="StoragedLinuxDriveObject"><span class="type">StoragedLinuxDriveObject</span></a> *object</code></em>,
+                                <em class="parameter"><code><span class="type">guint</span> secs_since_last</code></em>,
+                                <em class="parameter"><code><span class="type">GCancellable</span> *cancellable</code></em>,
+                                <em class="parameter"><code><span class="type">GError</span> **error</code></em>);</pre>
+<p>Called periodically (every ten minutes or so) to perform
+housekeeping tasks such as refreshing ATA SMART data.</p>
+<p>The function runs in a dedicated thread and is allowed to perform
+blocking I/O.</p>
+<p>Long-running tasks should periodically check <em class="parameter"><code>cancellable</code></em>
+ to see if
+they have been cancelled.</p>
+<div class="refsect3">
+<a name="id-1.5.6.4.9.9.7"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>object</p></td>
+<td class="parameter_description"><p>A <a class="link" href="StoragedLinuxDriveObject.html" title="StoragedLinuxDriveObject"><span class="type">StoragedLinuxDriveObject</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>secs_since_last</p></td>
+<td class="parameter_description"><p>Number of seconds sincex the last housekeeping or 0 if the first housekeeping ever.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>cancellable</p></td>
+<td class="parameter_description"><p>A <code class="literal">GCancellable</code> or <code class="literal">NULL</code>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>error</p></td>
+<td class="parameter_description"><p>Return location for error or <code class="literal">NULL</code>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="id-1.5.6.4.9.9.8"></a><h4>Returns</h4>
+<p> <code class="literal">TRUE</code> if the operation succeeded, <code class="literal">FALSE</code> if <em class="parameter"><code>error</code></em>
+is set.</p>
+<p></p>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="storaged-linux-drive-object-is-not-in-use"></a><h3>storaged_linux_drive_object_is_not_in_use ()</h3>
+<pre class="programlisting"><span class="returnvalue">gboolean</span>
+storaged_linux_drive_object_is_not_in_use
+                               (<em class="parameter"><code><a class="link" href="StoragedLinuxDriveObject.html" title="StoragedLinuxDriveObject"><span class="type">StoragedLinuxDriveObject</span></a> *object</code></em>,
+                                <em class="parameter"><code><span class="type">GCancellable</span> *cancellable</code></em>,
+                                <em class="parameter"><code><span class="type">GError</span> **error</code></em>);</pre>
+<p>Checks if the drive represented by <em class="parameter"><code>object</code></em>
+ is in use and sets
+<em class="parameter"><code>error</code></em>
+ if so.</p>
+<div class="refsect3">
+<a name="id-1.5.6.4.9.10.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>object</p></td>
+<td class="parameter_description"><p>A <a class="link" href="StoragedLinuxDriveObject.html" title="StoragedLinuxDriveObject"><span class="type">StoragedLinuxDriveObject</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>cancellable</p></td>
+<td class="parameter_description"><p> A <span class="type">GCancellable</span> or <code class="literal">NULL</code>. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="NULL is OK, both for passing and for returning."><span class="acronym">allow-none</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>error</p></td>
+<td class="parameter_description"><p>A <span class="type">GError</span> or <code class="literal">NULL</code>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="id-1.5.6.4.9.10.6"></a><h4>Returns</h4>
+<p> <code class="literal">TRUE</code> if <em class="parameter"><code>object</code></em>
+is not is use, <code class="literal">FALSE</code> if <em class="parameter"><code>error</code></em>
+is set.</p>
+<p></p>
+</div>
+</div>
+</div>
+<div class="refsect1">
+<a name="StoragedLinuxDriveObject.other_details"></a><h2>Types and Values</h2>
+<div class="refsect2">
+<a name="StoragedLinuxDriveObject-struct"></a><h3>StoragedLinuxDriveObject</h3>
+<pre class="programlisting">typedef struct _StoragedLinuxDriveObject StoragedLinuxDriveObject;</pre>
+<p>The <a class="link" href="StoragedLinuxDriveObject.html" title="StoragedLinuxDriveObject"><span class="type">StoragedLinuxDriveObject</span></a> structure contains only private data and
+should only be accessed using the provided API.</p>
+</div>
+</div>
+<div class="refsect1">
+<a name="StoragedLinuxDriveObject.property-details"></a><h2>Property Details</h2>
+<div class="refsect2">
+<a name="StoragedLinuxDriveObject--daemon"></a><h3>The <code class="literal">“daemon”</code> property</h3>
+<pre class="programlisting">  “daemon”                   <a class="link" href="StoragedDaemon.html" title="StoragedDaemon"><span class="type">StoragedDaemon</span></a> *</pre>
+<p>The <a class="link" href="StoragedDaemon.html" title="StoragedDaemon"><span class="type">StoragedDaemon</span></a> the object is for.</p>
+<p>Flags: Read / Write / Construct Only</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="StoragedLinuxDriveObject--device"></a><h3>The <code class="literal">“device”</code> property</h3>
+<pre class="programlisting">  “device”                   <a class="link" href="StoragedLinuxDevice.html" title="StoragedLinuxDevice"><span class="type">StoragedLinuxDevice</span></a> *</pre>
+<p>The <a class="link" href="StoragedLinuxDevice.html" title="StoragedLinuxDevice"><span class="type">StoragedLinuxDevice</span></a> for the object. Connect to the <span class="type">“notify”</span>
+signal to get notified whenever this is updated.</p>
+<p>Flags: Write / Construct Only</p>
+</div>
+</div>
+</div>
+<div class="footer">
+<hr>
+          Generated by GTK-Doc V1.21</div>
+</body>
+</html>

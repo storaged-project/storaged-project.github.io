@@ -1,0 +1,205 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Storaged Reference Manual: StoragedError</title>
+<meta name="generator" content="DocBook XSL Stylesheets V1.78.1">
+<link rel="home" href="index.html" title="Storaged Reference Manual">
+<link rel="up" href="ref-library.html" title="Part III. Library API Reference">
+<link rel="prev" href="StoragedObjectInfo.html" title="StoragedObjectInfo">
+<link rel="next" href="ref-library-generated.html" title="Generated Code">
+<meta name="generator" content="GTK-Doc V1.21 (XML mode)">
+<link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<table class="navigation" id="top" width="100%" summary="Navigation header" cellpadding="2" cellspacing="5"><tr valign="middle">
+<td width="100%" align="left" class="shortcuts">
+<a href="#" class="shortcut">Top</a><span id="nav_description">  <span class="dim">|</span> 
+                  <a href="#storaged-StoragedError.description" class="shortcut">Description</a></span>
+</td>
+<td><a accesskey="h" href="index.html"><img src="home.png" width="16" height="16" border="0" alt="Home"></a></td>
+<td><a accesskey="u" href="ref-library.html"><img src="up.png" width="16" height="16" border="0" alt="Up"></a></td>
+<td><a accesskey="p" href="StoragedObjectInfo.html"><img src="left.png" width="16" height="16" border="0" alt="Prev"></a></td>
+<td><a accesskey="n" href="ref-library-generated.html"><img src="right.png" width="16" height="16" border="0" alt="Next"></a></td>
+</tr></table>
+<div class="refentry">
+<a name="storaged-StoragedError"></a><div class="titlepage"></div>
+<div class="refnamediv"><table width="100%"><tr>
+<td valign="top">
+<h2><span class="refentrytitle"><a name="storaged-StoragedError.top_of_page"></a>StoragedError</span></h2>
+<p>StoragedError — Possible errors that can be returned</p>
+</td>
+<td class="gallery_image" valign="top" align="right"></td>
+</tr></table></div>
+<div class="refsect1">
+<a name="storaged-StoragedError.functions"></a><h2>Functions</h2>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="functions_return">
+<col class="functions_name">
+</colgroup>
+<tbody><tr>
+<td class="define_keyword">#define</td>
+<td class="function_name"><a class="link" href="storaged-StoragedError.html#STORAGED-ERROR:CAPS" title="STORAGED_ERROR">STORAGED_ERROR</a></td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect1">
+<a name="storaged-StoragedError.other"></a><h2>Types and Values</h2>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="name">
+<col class="description">
+</colgroup>
+<tbody><tr>
+<td class="datatype_keyword">enum</td>
+<td class="function_name"><a class="link" href="storaged-StoragedError.html#StoragedError" title="enum StoragedError">StoragedError</a></td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect1">
+<a name="storaged-StoragedError.description"></a><h2>Description</h2>
+<p>Error codes and D-Bus errors.</p>
+</div>
+<div class="refsect1">
+<a name="storaged-StoragedError.functions_details"></a><h2>Functions</h2>
+<div class="refsect2">
+<a name="STORAGED-ERROR:CAPS"></a><h3>STORAGED_ERROR</h3>
+<pre class="programlisting">#define STORAGED_ERROR (storaged_error_quark ())
+</pre>
+<p>Error domain for Storaged. Errors in this domain will be form the
+<a class="link" href="storaged-StoragedError.html#StoragedError" title="enum StoragedError"><span class="type">StoragedError</span></a> enumeration. See <span class="type">GError</span> for more information on error
+domains.</p>
+</div>
+</div>
+<div class="refsect1">
+<a name="storaged-StoragedError.other_details"></a><h2>Types and Values</h2>
+<div class="refsect2">
+<a name="StoragedError"></a><h3>enum StoragedError</h3>
+<p>Error codes for the <a class="link" href="storaged-StoragedError.html#STORAGED-ERROR:CAPS" title="STORAGED_ERROR"><span class="type">STORAGED_ERROR</span></a> error domain and the
+corresponding D-Bus error names.</p>
+<div class="refsect3">
+<a name="id-1.4.4.7.2.4"></a><h4>Members</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="300px" class="enum_members_name">
+<col class="enum_members_description">
+<col width="200px" class="enum_members_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="enum_member_name"><p><a name="STORAGED-ERROR-FAILED:CAPS"></a>STORAGED_ERROR_FAILED</p></td>
+<td class="enum_member_description">
+<p>The operation failed.</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="STORAGED-ERROR-CANCELLED:CAPS"></a>STORAGED_ERROR_CANCELLED</p></td>
+<td class="enum_member_description">
+<p>The operation was cancelled.</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="STORAGED-ERROR-ALREADY-CANCELLED:CAPS"></a>STORAGED_ERROR_ALREADY_CANCELLED</p></td>
+<td class="enum_member_description">
+<p>The operation has already been cancelled.</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="STORAGED-ERROR-NOT-AUTHORIZED:CAPS"></a>STORAGED_ERROR_NOT_AUTHORIZED</p></td>
+<td class="enum_member_description">
+<p>Not authorized to perform the requested operation.</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="STORAGED-ERROR-NOT-AUTHORIZED-CAN-OBTAIN:CAPS"></a>STORAGED_ERROR_NOT_AUTHORIZED_CAN_OBTAIN</p></td>
+<td class="enum_member_description">
+<p>Like <a class="link" href="storaged-StoragedError.html#STORAGED-ERROR-NOT-AUTHORIZED:CAPS"><code class="literal">STORAGED_ERROR_NOT_AUTHORIZED</code></a> but authorization can be obtained through e.g. authentication.</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="STORAGED-ERROR-NOT-AUTHORIZED-DISMISSED:CAPS"></a>STORAGED_ERROR_NOT_AUTHORIZED_DISMISSED</p></td>
+<td class="enum_member_description">
+<p>Like <a class="link" href="storaged-StoragedError.html#STORAGED-ERROR-NOT-AUTHORIZED:CAPS"><code class="literal">STORAGED_ERROR_NOT_AUTHORIZED</code></a> but an authentication was shown and the user dimissed it.</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="STORAGED-ERROR-ALREADY-MOUNTED:CAPS"></a>STORAGED_ERROR_ALREADY_MOUNTED</p></td>
+<td class="enum_member_description">
+<p>The device is already mounted.</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="STORAGED-ERROR-NOT-MOUNTED:CAPS"></a>STORAGED_ERROR_NOT_MOUNTED</p></td>
+<td class="enum_member_description">
+<p>The device is not mounted.</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="STORAGED-ERROR-OPTION-NOT-PERMITTED:CAPS"></a>STORAGED_ERROR_OPTION_NOT_PERMITTED</p></td>
+<td class="enum_member_description">
+<p>Not permitted to use the requested option.</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="STORAGED-ERROR-MOUNTED-BY-OTHER-USER:CAPS"></a>STORAGED_ERROR_MOUNTED_BY_OTHER_USER</p></td>
+<td class="enum_member_description">
+<p>The device is mounted by another user.</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="STORAGED-ERROR-ALREADY-UNMOUNTING:CAPS"></a>STORAGED_ERROR_ALREADY_UNMOUNTING</p></td>
+<td class="enum_member_description">
+<p>The device is already unmounting.</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="STORAGED-ERROR-NOT-SUPPORTED:CAPS"></a>STORAGED_ERROR_NOT_SUPPORTED</p></td>
+<td class="enum_member_description">
+<p>The operation is not supported due to missing driver/tool support.</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="STORAGED-ERROR-TIMED-OUT:CAPS"></a>STORAGED_ERROR_TIMED_OUT</p></td>
+<td class="enum_member_description">
+<p>The operation timed out.</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="STORAGED-ERROR-WOULD-WAKEUP:CAPS"></a>STORAGED_ERROR_WOULD_WAKEUP</p></td>
+<td class="enum_member_description">
+<p>The operation would wake up a disk that is in a deep-sleep state.</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="STORAGED-ERROR-DEVICE-BUSY:CAPS"></a>STORAGED_ERROR_DEVICE_BUSY</p></td>
+<td class="enum_member_description">
+<p>Attempting to unmount a device that is busy.</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+</div>
+</div>
+<div class="footer">
+<hr>
+          Generated by GTK-Doc V1.21</div>
+</body>
+</html>

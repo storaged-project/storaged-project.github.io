@@ -1,0 +1,1861 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Storaged Reference Manual: StoragedObject</title>
+<meta name="generator" content="DocBook XSL Stylesheets V1.78.1">
+<link rel="home" href="index.html" title="Storaged Reference Manual">
+<link rel="up" href="ref-library-generated.html" title="Generated Code">
+<link rel="prev" href="ref-library-generated.html" title="Generated Code">
+<link rel="next" href="StoragedObjectManagerClient.html" title="StoragedObjectManagerClient">
+<meta name="generator" content="GTK-Doc V1.21 (XML mode)">
+<link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<table class="navigation" id="top" width="100%" summary="Navigation header" cellpadding="2" cellspacing="5"><tr valign="middle">
+<td width="100%" align="left" class="shortcuts">
+<a href="#" class="shortcut">Top</a><span id="nav_description">  <span class="dim">|</span> 
+                  <a href="#StoragedObject.description" class="shortcut">Description</a></span><span id="nav_hierarchy">  <span class="dim">|</span> 
+                  <a href="#StoragedObject.object-hierarchy" class="shortcut">Object Hierarchy</a></span><span id="nav_interfaces">  <span class="dim">|</span> 
+                  <a href="#StoragedObject.implemented-interfaces" class="shortcut">Implemented Interfaces</a></span><span id="nav_prerequisites">  <span class="dim">|</span> 
+                  <a href="#StoragedObject.prerequisites" class="shortcut">Prerequisites</a></span><span id="nav_implementations">  <span class="dim">|</span> 
+                  <a href="#StoragedObject.implementations" class="shortcut">Known Implementations</a></span><span id="nav_properties">  <span class="dim">|</span> 
+                  <a href="#StoragedObject.properties" class="shortcut">Properties</a></span>
+</td>
+<td><a accesskey="h" href="index.html"><img src="home.png" width="16" height="16" border="0" alt="Home"></a></td>
+<td><a accesskey="u" href="ref-library-generated.html"><img src="up.png" width="16" height="16" border="0" alt="Up"></a></td>
+<td><a accesskey="p" href="ref-library-generated.html"><img src="left.png" width="16" height="16" border="0" alt="Prev"></a></td>
+<td><a accesskey="n" href="StoragedObjectManagerClient.html"><img src="right.png" width="16" height="16" border="0" alt="Next"></a></td>
+</tr></table>
+<div class="refentry">
+<a name="StoragedObject"></a><div class="titlepage"></div>
+<div class="refnamediv"><table width="100%"><tr>
+<td valign="top">
+<h2><span class="refentrytitle"><a name="StoragedObject.top_of_page"></a>StoragedObject</span></h2>
+<p>StoragedObject — Specialized GDBusObject types</p>
+</td>
+<td class="gallery_image" valign="top" align="right"></td>
+</tr></table></div>
+<div class="refsect1">
+<a name="StoragedObject.functions"></a><h2>Functions</h2>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="functions_return">
+<col class="functions_name">
+</colgroup>
+<tbody>
+<tr>
+<td class="function_type">
+<a class="link" href="StoragedBlock.html" title="StoragedBlock"><span class="returnvalue">StoragedBlock</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="StoragedObject.html#storaged-object-get-block" title="storaged_object_get_block ()">storaged_object_get_block</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a class="link" href="StoragedDrive.html" title="StoragedDrive"><span class="returnvalue">StoragedDrive</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="StoragedObject.html#storaged-object-get-drive" title="storaged_object_get_drive ()">storaged_object_get_drive</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a class="link" href="StoragedDriveAta.html" title="StoragedDriveAta"><span class="returnvalue">StoragedDriveAta</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="StoragedObject.html#storaged-object-get-drive-ata" title="storaged_object_get_drive_ata ()">storaged_object_get_drive_ata</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a class="link" href="StoragedFilesystem.html" title="StoragedFilesystem"><span class="returnvalue">StoragedFilesystem</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="StoragedObject.html#storaged-object-get-filesystem" title="storaged_object_get_filesystem ()">storaged_object_get_filesystem</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a class="link" href="StoragedJob.html" title="StoragedJob"><span class="returnvalue">StoragedJob</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="StoragedObject.html#storaged-object-get-job" title="storaged_object_get_job ()">storaged_object_get_job</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a class="link" href="StoragedSwapspace.html" title="StoragedSwapspace"><span class="returnvalue">StoragedSwapspace</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="StoragedObject.html#storaged-object-get-swapspace" title="storaged_object_get_swapspace ()">storaged_object_get_swapspace</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a class="link" href="StoragedEncrypted.html" title="StoragedEncrypted"><span class="returnvalue">StoragedEncrypted</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="StoragedObject.html#storaged-object-get-encrypted" title="storaged_object_get_encrypted ()">storaged_object_get_encrypted</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a class="link" href="StoragedLoop.html" title="StoragedLoop"><span class="returnvalue">StoragedLoop</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="StoragedObject.html#storaged-object-get-loop" title="storaged_object_get_loop ()">storaged_object_get_loop</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a class="link" href="StoragedManager.html" title="StoragedManager"><span class="returnvalue">StoragedManager</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="StoragedObject.html#storaged-object-get-manager" title="storaged_object_get_manager ()">storaged_object_get_manager</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a class="link" href="StoragedPartition.html" title="StoragedPartition"><span class="returnvalue">StoragedPartition</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="StoragedObject.html#storaged-object-get-partition" title="storaged_object_get_partition ()">storaged_object_get_partition</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a class="link" href="StoragedPartitionTable.html" title="StoragedPartitionTable"><span class="returnvalue">StoragedPartitionTable</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="StoragedObject.html#storaged-object-get-partition-table" title="storaged_object_get_partition_table ()">storaged_object_get_partition_table</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a class="link" href="StoragedMDRaid.html" title="StoragedMDRaid"><span class="returnvalue">StoragedMDRaid</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="StoragedObject.html#storaged-object-get-mdraid" title="storaged_object_get_mdraid ()">storaged_object_get_mdraid</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a class="link" href="StoragedBlock.html" title="StoragedBlock"><span class="returnvalue">StoragedBlock</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="StoragedObject.html#storaged-object-peek-block" title="storaged_object_peek_block ()">storaged_object_peek_block</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a class="link" href="StoragedDrive.html" title="StoragedDrive"><span class="returnvalue">StoragedDrive</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="StoragedObject.html#storaged-object-peek-drive" title="storaged_object_peek_drive ()">storaged_object_peek_drive</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a class="link" href="StoragedDriveAta.html" title="StoragedDriveAta"><span class="returnvalue">StoragedDriveAta</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="StoragedObject.html#storaged-object-peek-drive-ata" title="storaged_object_peek_drive_ata ()">storaged_object_peek_drive_ata</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a class="link" href="StoragedFilesystem.html" title="StoragedFilesystem"><span class="returnvalue">StoragedFilesystem</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="StoragedObject.html#storaged-object-peek-filesystem" title="storaged_object_peek_filesystem ()">storaged_object_peek_filesystem</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a class="link" href="StoragedJob.html" title="StoragedJob"><span class="returnvalue">StoragedJob</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="StoragedObject.html#storaged-object-peek-job" title="storaged_object_peek_job ()">storaged_object_peek_job</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a class="link" href="StoragedSwapspace.html" title="StoragedSwapspace"><span class="returnvalue">StoragedSwapspace</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="StoragedObject.html#storaged-object-peek-swapspace" title="storaged_object_peek_swapspace ()">storaged_object_peek_swapspace</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a class="link" href="StoragedEncrypted.html" title="StoragedEncrypted"><span class="returnvalue">StoragedEncrypted</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="StoragedObject.html#storaged-object-peek-encrypted" title="storaged_object_peek_encrypted ()">storaged_object_peek_encrypted</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a class="link" href="StoragedLoop.html" title="StoragedLoop"><span class="returnvalue">StoragedLoop</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="StoragedObject.html#storaged-object-peek-loop" title="storaged_object_peek_loop ()">storaged_object_peek_loop</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a class="link" href="StoragedManager.html" title="StoragedManager"><span class="returnvalue">StoragedManager</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="StoragedObject.html#storaged-object-peek-manager" title="storaged_object_peek_manager ()">storaged_object_peek_manager</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a class="link" href="StoragedPartition.html" title="StoragedPartition"><span class="returnvalue">StoragedPartition</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="StoragedObject.html#storaged-object-peek-partition" title="storaged_object_peek_partition ()">storaged_object_peek_partition</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a class="link" href="StoragedPartitionTable.html" title="StoragedPartitionTable"><span class="returnvalue">StoragedPartitionTable</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="StoragedObject.html#storaged-object-peek-partition-table" title="storaged_object_peek_partition_table ()">storaged_object_peek_partition_table</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a class="link" href="StoragedMDRaid.html" title="StoragedMDRaid"><span class="returnvalue">StoragedMDRaid</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="StoragedObject.html#storaged-object-peek-mdraid" title="storaged_object_peek_mdraid ()">storaged_object_peek_mdraid</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a class="link" href="StoragedObject.html#StoragedObjectProxy"><span class="returnvalue">StoragedObjectProxy</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="StoragedObject.html#storaged-object-proxy-new" title="storaged_object_proxy_new ()">storaged_object_proxy_new</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a class="link" href="StoragedObject.html#StoragedObjectSkeleton"><span class="returnvalue">StoragedObjectSkeleton</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="StoragedObject.html#storaged-object-skeleton-new" title="storaged_object_skeleton_new ()">storaged_object_skeleton_new</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="StoragedObject.html#storaged-object-skeleton-set-block" title="storaged_object_skeleton_set_block ()">storaged_object_skeleton_set_block</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="StoragedObject.html#storaged-object-skeleton-set-drive" title="storaged_object_skeleton_set_drive ()">storaged_object_skeleton_set_drive</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="StoragedObject.html#storaged-object-skeleton-set-drive-ata" title="storaged_object_skeleton_set_drive_ata ()">storaged_object_skeleton_set_drive_ata</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="StoragedObject.html#storaged-object-skeleton-set-filesystem" title="storaged_object_skeleton_set_filesystem ()">storaged_object_skeleton_set_filesystem</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="StoragedObject.html#storaged-object-skeleton-set-job" title="storaged_object_skeleton_set_job ()">storaged_object_skeleton_set_job</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="StoragedObject.html#storaged-object-skeleton-set-swapspace" title="storaged_object_skeleton_set_swapspace ()">storaged_object_skeleton_set_swapspace</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="StoragedObject.html#storaged-object-skeleton-set-encrypted" title="storaged_object_skeleton_set_encrypted ()">storaged_object_skeleton_set_encrypted</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="StoragedObject.html#storaged-object-skeleton-set-loop" title="storaged_object_skeleton_set_loop ()">storaged_object_skeleton_set_loop</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="StoragedObject.html#storaged-object-skeleton-set-manager" title="storaged_object_skeleton_set_manager ()">storaged_object_skeleton_set_manager</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="StoragedObject.html#storaged-object-skeleton-set-partition" title="storaged_object_skeleton_set_partition ()">storaged_object_skeleton_set_partition</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="StoragedObject.html#storaged-object-skeleton-set-partition-table" title="storaged_object_skeleton_set_partition_table ()">storaged_object_skeleton_set_partition_table</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="StoragedObject.html#storaged-object-skeleton-set-mdraid" title="storaged_object_skeleton_set_mdraid ()">storaged_object_skeleton_set_mdraid</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect1">
+<a name="StoragedObject.properties"></a><h2>Properties</h2>
+<div class="informaltable"><table border="0">
+<colgroup>
+<col width="150px" class="properties_type">
+<col width="300px" class="properties_name">
+<col width="200px" class="properties_flags">
+</colgroup>
+<tbody>
+<tr>
+<td class="property_type">
+<a class="link" href="StoragedBlock.html" title="StoragedBlock"><span class="type">StoragedBlock</span></a> *</td>
+<td class="property_name"><a class="link" href="StoragedObject.html#StoragedObject--block" title="The “block” property">block</a></td>
+<td class="property_flags">Read / Write</td>
+</tr>
+<tr>
+<td class="property_type">
+<a class="link" href="StoragedDrive.html" title="StoragedDrive"><span class="type">StoragedDrive</span></a> *</td>
+<td class="property_name"><a class="link" href="StoragedObject.html#StoragedObject--drive" title="The “drive” property">drive</a></td>
+<td class="property_flags">Read / Write</td>
+</tr>
+<tr>
+<td class="property_type">
+<a class="link" href="StoragedDriveAta.html" title="StoragedDriveAta"><span class="type">StoragedDriveAta</span></a> *</td>
+<td class="property_name"><a class="link" href="StoragedObject.html#StoragedObject--drive-ata" title="The “drive-ata” property">drive-ata</a></td>
+<td class="property_flags">Read / Write</td>
+</tr>
+<tr>
+<td class="property_type">
+<a class="link" href="StoragedEncrypted.html" title="StoragedEncrypted"><span class="type">StoragedEncrypted</span></a> *</td>
+<td class="property_name"><a class="link" href="StoragedObject.html#StoragedObject--encrypted" title="The “encrypted” property">encrypted</a></td>
+<td class="property_flags">Read / Write</td>
+</tr>
+<tr>
+<td class="property_type">
+<a class="link" href="StoragedFilesystem.html" title="StoragedFilesystem"><span class="type">StoragedFilesystem</span></a> *</td>
+<td class="property_name"><a class="link" href="StoragedObject.html#StoragedObject--filesystem" title="The “filesystem” property">filesystem</a></td>
+<td class="property_flags">Read / Write</td>
+</tr>
+<tr>
+<td class="property_type">
+<a class="link" href="StoragedJob.html" title="StoragedJob"><span class="type">StoragedJob</span></a> *</td>
+<td class="property_name"><a class="link" href="StoragedObject.html#StoragedObject--job" title="The “job” property">job</a></td>
+<td class="property_flags">Read / Write</td>
+</tr>
+<tr>
+<td class="property_type">
+<a class="link" href="StoragedLoop.html" title="StoragedLoop"><span class="type">StoragedLoop</span></a> *</td>
+<td class="property_name"><a class="link" href="StoragedObject.html#StoragedObject--loop" title="The “loop” property">loop</a></td>
+<td class="property_flags">Read / Write</td>
+</tr>
+<tr>
+<td class="property_type">
+<a class="link" href="StoragedManager.html" title="StoragedManager"><span class="type">StoragedManager</span></a> *</td>
+<td class="property_name"><a class="link" href="StoragedObject.html#StoragedObject--manager" title="The “manager” property">manager</a></td>
+<td class="property_flags">Read / Write</td>
+</tr>
+<tr>
+<td class="property_type">
+<a class="link" href="StoragedMDRaid.html" title="StoragedMDRaid"><span class="type">StoragedMDRaid</span></a> *</td>
+<td class="property_name"><a class="link" href="StoragedObject.html#StoragedObject--mdraid" title="The “mdraid” property">mdraid</a></td>
+<td class="property_flags">Read / Write</td>
+</tr>
+<tr>
+<td class="property_type">
+<a class="link" href="StoragedPartition.html" title="StoragedPartition"><span class="type">StoragedPartition</span></a> *</td>
+<td class="property_name"><a class="link" href="StoragedObject.html#StoragedObject--partition" title="The “partition” property">partition</a></td>
+<td class="property_flags">Read / Write</td>
+</tr>
+<tr>
+<td class="property_type">
+<a class="link" href="StoragedPartitionTable.html" title="StoragedPartitionTable"><span class="type">StoragedPartitionTable</span></a> *</td>
+<td class="property_name"><a class="link" href="StoragedObject.html#StoragedObject--partition-table" title="The “partition-table” property">partition-table</a></td>
+<td class="property_flags">Read / Write</td>
+</tr>
+<tr>
+<td class="property_type">
+<a class="link" href="StoragedSwapspace.html" title="StoragedSwapspace"><span class="type">StoragedSwapspace</span></a> *</td>
+<td class="property_name"><a class="link" href="StoragedObject.html#StoragedObject--swapspace" title="The “swapspace” property">swapspace</a></td>
+<td class="property_flags">Read / Write</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<a name="StoragedObjectProxy"></a><a name="StoragedObjectSkeleton"></a><div class="refsect1">
+<a name="StoragedObject.other"></a><h2>Types and Values</h2>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="name">
+<col class="description">
+</colgroup>
+<tbody>
+<tr>
+<td class="datatype_keyword"> </td>
+<td class="function_name"><a class="link" href="StoragedObject.html#StoragedObject-struct" title="StoragedObject">StoragedObject</a></td>
+</tr>
+<tr>
+<td class="datatype_keyword">struct</td>
+<td class="function_name"><a class="link" href="StoragedObject.html#StoragedObjectIface" title="struct StoragedObjectIface">StoragedObjectIface</a></td>
+</tr>
+<tr>
+<td class="datatype_keyword">struct</td>
+<td class="function_name"><a class="link" href="StoragedObject.html#StoragedObjectProxy-struct" title="struct StoragedObjectProxy">StoragedObjectProxy</a></td>
+</tr>
+<tr>
+<td class="datatype_keyword">struct</td>
+<td class="function_name"><a class="link" href="StoragedObject.html#StoragedObjectProxyClass" title="struct StoragedObjectProxyClass">StoragedObjectProxyClass</a></td>
+</tr>
+<tr>
+<td class="datatype_keyword">struct</td>
+<td class="function_name"><a class="link" href="StoragedObject.html#StoragedObjectSkeleton-struct" title="struct StoragedObjectSkeleton">StoragedObjectSkeleton</a></td>
+</tr>
+<tr>
+<td class="datatype_keyword">struct</td>
+<td class="function_name"><a class="link" href="StoragedObject.html#StoragedObjectSkeletonClass" title="struct StoragedObjectSkeletonClass">StoragedObjectSkeletonClass</a></td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect1">
+<a name="StoragedObject.object-hierarchy"></a><h2>Object Hierarchy</h2>
+<pre class="screen">    <a href="/usr/share/gtk-doc/html/gobject/GTypeModule.html">GInterface</a>
+    <span class="lineart">╰──</span> StoragedObject
+    GObject
+    <span class="lineart">├──</span> GDBusObjectProxy
+    <span class="lineart">│</span>   <span class="lineart">╰──</span> StoragedObjectProxy
+    <span class="lineart">╰──</span> GDBusObjectSkeleton
+        <span class="lineart">╰──</span> StoragedObjectSkeleton
+            <span class="lineart">├──</span> <a class="link" href="StoragedLinuxBlockObject.html" title="StoragedLinuxBlockObject">StoragedLinuxBlockObject</a>
+            <span class="lineart">├──</span> <a class="link" href="StoragedLinuxDriveObject.html" title="StoragedLinuxDriveObject">StoragedLinuxDriveObject</a>
+            <span class="lineart">╰──</span> <a class="link" href="StoragedLinuxMDRaidObject.html" title="StoragedLinuxMDRaidObject">StoragedLinuxMDRaidObject</a>
+</pre>
+</div>
+<div class="refsect1">
+<a name="StoragedObject.prerequisites"></a><h2>Prerequisites</h2>
+<p>
+StoragedObject requires
+ GDBusObject and  GObject.</p>
+</div>
+<div class="refsect1">
+<a name="StoragedObject.implemented-interfaces"></a><h2>Implemented Interfaces</h2>
+<p>
+StoragedObjectProxy implements
+ GDBusObject and  <a class="link" href="StoragedObject.html" title="StoragedObject">StoragedObject</a>.</p>
+<p>
+StoragedObjectSkeleton implements
+ GDBusObject and  <a class="link" href="StoragedObject.html" title="StoragedObject">StoragedObject</a>.</p>
+</div>
+<div class="refsect1">
+<a name="StoragedObject.implementations"></a><h2>Known Implementations</h2>
+<p>
+StoragedObject is implemented by
+ <a class="link" href="StoragedLinuxBlockObject.html" title="StoragedLinuxBlockObject">StoragedLinuxBlockObject</a>,  <a class="link" href="StoragedLinuxDriveObject.html" title="StoragedLinuxDriveObject">StoragedLinuxDriveObject</a>,  <a class="link" href="StoragedLinuxMDRaidObject.html" title="StoragedLinuxMDRaidObject">StoragedLinuxMDRaidObject</a>,  <a class="link" href="StoragedObject.html#StoragedObjectProxy">StoragedObjectProxy</a> and  <a class="link" href="StoragedObject.html#StoragedObjectSkeleton">StoragedObjectSkeleton</a>.</p>
+</div>
+<div class="refsect1">
+<a name="StoragedObject.description"></a><h2>Description</h2>
+<p>This section contains the <a class="link" href="StoragedObject.html" title="StoragedObject"><span class="type">StoragedObject</span></a>, <a class="link" href="StoragedObject.html#StoragedObjectProxy"><span class="type">StoragedObjectProxy</span></a>, and <a class="link" href="StoragedObject.html#StoragedObjectSkeleton"><span class="type">StoragedObjectSkeleton</span></a> types which make it easier to work with objects implementing generated types for D-Bus interfaces.</p>
+</div>
+<div class="refsect1">
+<a name="StoragedObject.functions_details"></a><h2>Functions</h2>
+<div class="refsect2">
+<a name="storaged-object-get-block"></a><h3>storaged_object_get_block ()</h3>
+<pre class="programlisting"><a class="link" href="StoragedBlock.html" title="StoragedBlock"><span class="returnvalue">StoragedBlock</span></a> *
+storaged_object_get_block (<em class="parameter"><code><a class="link" href="StoragedObject.html" title="StoragedObject"><span class="type">StoragedObject</span></a> *object</code></em>);</pre>
+<p>Gets the <a class="link" href="StoragedBlock.html" title="StoragedBlock"><span class="type">StoragedBlock</span></a> instance for the D-Bus interface <a class="link" href="gdbus-org.storaged.Storaged.Block.html#gdbus-interface-org-storaged-Storaged-Block.top_of_page">org.storaged.Storaged.Block</a> on <em class="parameter"><code>object</code></em>
+, if any.</p>
+<div class="refsect3">
+<a name="id-1.4.5.2.13.2.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>object</p></td>
+<td class="parameter_description"><p>A <a class="link" href="StoragedObject.html" title="StoragedObject"><span class="type">StoragedObject</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="id-1.4.5.2.13.2.6"></a><h4>Returns</h4>
+<p> A <a class="link" href="StoragedBlock.html" title="StoragedBlock"><span class="type">StoragedBlock</span></a> that must be freed with <code class="function">g_object_unref()</code> or <code class="literal">NULL</code> if <em class="parameter"><code>object</code></em>
+does not implement the interface. </p>
+<p><span class="annotation">[<acronym title="Free data after the code is done."><span class="acronym">transfer full</span></acronym>]</span></p>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="storaged-object-get-drive"></a><h3>storaged_object_get_drive ()</h3>
+<pre class="programlisting"><a class="link" href="StoragedDrive.html" title="StoragedDrive"><span class="returnvalue">StoragedDrive</span></a> *
+storaged_object_get_drive (<em class="parameter"><code><a class="link" href="StoragedObject.html" title="StoragedObject"><span class="type">StoragedObject</span></a> *object</code></em>);</pre>
+<p>Gets the <a class="link" href="StoragedDrive.html" title="StoragedDrive"><span class="type">StoragedDrive</span></a> instance for the D-Bus interface <a class="link" href="gdbus-org.storaged.Storaged.Drive.html#gdbus-interface-org-storaged-Storaged-Drive.top_of_page">org.storaged.Storaged.Drive</a> on <em class="parameter"><code>object</code></em>
+, if any.</p>
+<div class="refsect3">
+<a name="id-1.4.5.2.13.3.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>object</p></td>
+<td class="parameter_description"><p>A <a class="link" href="StoragedObject.html" title="StoragedObject"><span class="type">StoragedObject</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="id-1.4.5.2.13.3.6"></a><h4>Returns</h4>
+<p> A <a class="link" href="StoragedDrive.html" title="StoragedDrive"><span class="type">StoragedDrive</span></a> that must be freed with <code class="function">g_object_unref()</code> or <code class="literal">NULL</code> if <em class="parameter"><code>object</code></em>
+does not implement the interface. </p>
+<p><span class="annotation">[<acronym title="Free data after the code is done."><span class="acronym">transfer full</span></acronym>]</span></p>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="storaged-object-get-drive-ata"></a><h3>storaged_object_get_drive_ata ()</h3>
+<pre class="programlisting"><a class="link" href="StoragedDriveAta.html" title="StoragedDriveAta"><span class="returnvalue">StoragedDriveAta</span></a> *
+storaged_object_get_drive_ata (<em class="parameter"><code><a class="link" href="StoragedObject.html" title="StoragedObject"><span class="type">StoragedObject</span></a> *object</code></em>);</pre>
+<p>Gets the <a class="link" href="StoragedDriveAta.html" title="StoragedDriveAta"><span class="type">StoragedDriveAta</span></a> instance for the D-Bus interface <a class="link" href="gdbus-org.storaged.Storaged.Drive.Ata.html#gdbus-interface-org-storaged-Storaged-Drive-Ata.top_of_page">org.storaged.Storaged.Drive.Ata</a> on <em class="parameter"><code>object</code></em>
+, if any.</p>
+<div class="refsect3">
+<a name="id-1.4.5.2.13.4.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>object</p></td>
+<td class="parameter_description"><p>A <a class="link" href="StoragedObject.html" title="StoragedObject"><span class="type">StoragedObject</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="id-1.4.5.2.13.4.6"></a><h4>Returns</h4>
+<p> A <a class="link" href="StoragedDriveAta.html" title="StoragedDriveAta"><span class="type">StoragedDriveAta</span></a> that must be freed with <code class="function">g_object_unref()</code> or <code class="literal">NULL</code> if <em class="parameter"><code>object</code></em>
+does not implement the interface. </p>
+<p><span class="annotation">[<acronym title="Free data after the code is done."><span class="acronym">transfer full</span></acronym>]</span></p>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="storaged-object-get-filesystem"></a><h3>storaged_object_get_filesystem ()</h3>
+<pre class="programlisting"><a class="link" href="StoragedFilesystem.html" title="StoragedFilesystem"><span class="returnvalue">StoragedFilesystem</span></a> *
+storaged_object_get_filesystem (<em class="parameter"><code><a class="link" href="StoragedObject.html" title="StoragedObject"><span class="type">StoragedObject</span></a> *object</code></em>);</pre>
+<p>Gets the <a class="link" href="StoragedFilesystem.html" title="StoragedFilesystem"><span class="type">StoragedFilesystem</span></a> instance for the D-Bus interface <a class="link" href="gdbus-org.storaged.Storaged.Filesystem.html#gdbus-interface-org-storaged-Storaged-Filesystem.top_of_page">org.storaged.Storaged.Filesystem</a> on <em class="parameter"><code>object</code></em>
+, if any.</p>
+<div class="refsect3">
+<a name="id-1.4.5.2.13.5.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>object</p></td>
+<td class="parameter_description"><p>A <a class="link" href="StoragedObject.html" title="StoragedObject"><span class="type">StoragedObject</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="id-1.4.5.2.13.5.6"></a><h4>Returns</h4>
+<p> A <a class="link" href="StoragedFilesystem.html" title="StoragedFilesystem"><span class="type">StoragedFilesystem</span></a> that must be freed with <code class="function">g_object_unref()</code> or <code class="literal">NULL</code> if <em class="parameter"><code>object</code></em>
+does not implement the interface. </p>
+<p><span class="annotation">[<acronym title="Free data after the code is done."><span class="acronym">transfer full</span></acronym>]</span></p>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="storaged-object-get-job"></a><h3>storaged_object_get_job ()</h3>
+<pre class="programlisting"><a class="link" href="StoragedJob.html" title="StoragedJob"><span class="returnvalue">StoragedJob</span></a> *
+storaged_object_get_job (<em class="parameter"><code><a class="link" href="StoragedObject.html" title="StoragedObject"><span class="type">StoragedObject</span></a> *object</code></em>);</pre>
+<p>Gets the <a class="link" href="StoragedJob.html" title="StoragedJob"><span class="type">StoragedJob</span></a> instance for the D-Bus interface <a class="link" href="gdbus-org.storaged.Storaged.Job.html#gdbus-interface-org-storaged-Storaged-Job.top_of_page">org.storaged.Storaged.Job</a> on <em class="parameter"><code>object</code></em>
+, if any.</p>
+<div class="refsect3">
+<a name="id-1.4.5.2.13.6.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>object</p></td>
+<td class="parameter_description"><p>A <a class="link" href="StoragedObject.html" title="StoragedObject"><span class="type">StoragedObject</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="id-1.4.5.2.13.6.6"></a><h4>Returns</h4>
+<p> A <a class="link" href="StoragedJob.html" title="StoragedJob"><span class="type">StoragedJob</span></a> that must be freed with <code class="function">g_object_unref()</code> or <code class="literal">NULL</code> if <em class="parameter"><code>object</code></em>
+does not implement the interface. </p>
+<p><span class="annotation">[<acronym title="Free data after the code is done."><span class="acronym">transfer full</span></acronym>]</span></p>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="storaged-object-get-swapspace"></a><h3>storaged_object_get_swapspace ()</h3>
+<pre class="programlisting"><a class="link" href="StoragedSwapspace.html" title="StoragedSwapspace"><span class="returnvalue">StoragedSwapspace</span></a> *
+storaged_object_get_swapspace (<em class="parameter"><code><a class="link" href="StoragedObject.html" title="StoragedObject"><span class="type">StoragedObject</span></a> *object</code></em>);</pre>
+<p>Gets the <a class="link" href="StoragedSwapspace.html" title="StoragedSwapspace"><span class="type">StoragedSwapspace</span></a> instance for the D-Bus interface <a class="link" href="gdbus-org.storaged.Storaged.Swapspace.html#gdbus-interface-org-storaged-Storaged-Swapspace.top_of_page">org.storaged.Storaged.Swapspace</a> on <em class="parameter"><code>object</code></em>
+, if any.</p>
+<div class="refsect3">
+<a name="id-1.4.5.2.13.7.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>object</p></td>
+<td class="parameter_description"><p>A <a class="link" href="StoragedObject.html" title="StoragedObject"><span class="type">StoragedObject</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="id-1.4.5.2.13.7.6"></a><h4>Returns</h4>
+<p> A <a class="link" href="StoragedSwapspace.html" title="StoragedSwapspace"><span class="type">StoragedSwapspace</span></a> that must be freed with <code class="function">g_object_unref()</code> or <code class="literal">NULL</code> if <em class="parameter"><code>object</code></em>
+does not implement the interface. </p>
+<p><span class="annotation">[<acronym title="Free data after the code is done."><span class="acronym">transfer full</span></acronym>]</span></p>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="storaged-object-get-encrypted"></a><h3>storaged_object_get_encrypted ()</h3>
+<pre class="programlisting"><a class="link" href="StoragedEncrypted.html" title="StoragedEncrypted"><span class="returnvalue">StoragedEncrypted</span></a> *
+storaged_object_get_encrypted (<em class="parameter"><code><a class="link" href="StoragedObject.html" title="StoragedObject"><span class="type">StoragedObject</span></a> *object</code></em>);</pre>
+<p>Gets the <a class="link" href="StoragedEncrypted.html" title="StoragedEncrypted"><span class="type">StoragedEncrypted</span></a> instance for the D-Bus interface <a class="link" href="gdbus-org.storaged.Storaged.Encrypted.html#gdbus-interface-org-storaged-Storaged-Encrypted.top_of_page">org.storaged.Storaged.Encrypted</a> on <em class="parameter"><code>object</code></em>
+, if any.</p>
+<div class="refsect3">
+<a name="id-1.4.5.2.13.8.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>object</p></td>
+<td class="parameter_description"><p>A <a class="link" href="StoragedObject.html" title="StoragedObject"><span class="type">StoragedObject</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="id-1.4.5.2.13.8.6"></a><h4>Returns</h4>
+<p> A <a class="link" href="StoragedEncrypted.html" title="StoragedEncrypted"><span class="type">StoragedEncrypted</span></a> that must be freed with <code class="function">g_object_unref()</code> or <code class="literal">NULL</code> if <em class="parameter"><code>object</code></em>
+does not implement the interface. </p>
+<p><span class="annotation">[<acronym title="Free data after the code is done."><span class="acronym">transfer full</span></acronym>]</span></p>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="storaged-object-get-loop"></a><h3>storaged_object_get_loop ()</h3>
+<pre class="programlisting"><a class="link" href="StoragedLoop.html" title="StoragedLoop"><span class="returnvalue">StoragedLoop</span></a> *
+storaged_object_get_loop (<em class="parameter"><code><a class="link" href="StoragedObject.html" title="StoragedObject"><span class="type">StoragedObject</span></a> *object</code></em>);</pre>
+<p>Gets the <a class="link" href="StoragedLoop.html" title="StoragedLoop"><span class="type">StoragedLoop</span></a> instance for the D-Bus interface <a class="link" href="gdbus-org.storaged.Storaged.Loop.html#gdbus-interface-org-storaged-Storaged-Loop.top_of_page">org.storaged.Storaged.Loop</a> on <em class="parameter"><code>object</code></em>
+, if any.</p>
+<div class="refsect3">
+<a name="id-1.4.5.2.13.9.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>object</p></td>
+<td class="parameter_description"><p>A <a class="link" href="StoragedObject.html" title="StoragedObject"><span class="type">StoragedObject</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="id-1.4.5.2.13.9.6"></a><h4>Returns</h4>
+<p> A <a class="link" href="StoragedLoop.html" title="StoragedLoop"><span class="type">StoragedLoop</span></a> that must be freed with <code class="function">g_object_unref()</code> or <code class="literal">NULL</code> if <em class="parameter"><code>object</code></em>
+does not implement the interface. </p>
+<p><span class="annotation">[<acronym title="Free data after the code is done."><span class="acronym">transfer full</span></acronym>]</span></p>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="storaged-object-get-manager"></a><h3>storaged_object_get_manager ()</h3>
+<pre class="programlisting"><a class="link" href="StoragedManager.html" title="StoragedManager"><span class="returnvalue">StoragedManager</span></a> *
+storaged_object_get_manager (<em class="parameter"><code><a class="link" href="StoragedObject.html" title="StoragedObject"><span class="type">StoragedObject</span></a> *object</code></em>);</pre>
+<p>Gets the <a class="link" href="StoragedManager.html" title="StoragedManager"><span class="type">StoragedManager</span></a> instance for the D-Bus interface <a class="link" href="gdbus-org.storaged.Storaged.Manager.html#gdbus-interface-org-storaged-Storaged-Manager.top_of_page">org.storaged.Storaged.Manager</a> on <em class="parameter"><code>object</code></em>
+, if any.</p>
+<div class="refsect3">
+<a name="id-1.4.5.2.13.10.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>object</p></td>
+<td class="parameter_description"><p>A <a class="link" href="StoragedObject.html" title="StoragedObject"><span class="type">StoragedObject</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="id-1.4.5.2.13.10.6"></a><h4>Returns</h4>
+<p> A <a class="link" href="StoragedManager.html" title="StoragedManager"><span class="type">StoragedManager</span></a> that must be freed with <code class="function">g_object_unref()</code> or <code class="literal">NULL</code> if <em class="parameter"><code>object</code></em>
+does not implement the interface. </p>
+<p><span class="annotation">[<acronym title="Free data after the code is done."><span class="acronym">transfer full</span></acronym>]</span></p>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="storaged-object-get-partition"></a><h3>storaged_object_get_partition ()</h3>
+<pre class="programlisting"><a class="link" href="StoragedPartition.html" title="StoragedPartition"><span class="returnvalue">StoragedPartition</span></a> *
+storaged_object_get_partition (<em class="parameter"><code><a class="link" href="StoragedObject.html" title="StoragedObject"><span class="type">StoragedObject</span></a> *object</code></em>);</pre>
+<p>Gets the <a class="link" href="StoragedPartition.html" title="StoragedPartition"><span class="type">StoragedPartition</span></a> instance for the D-Bus interface <a class="link" href="gdbus-org.storaged.Storaged.Partition.html#gdbus-interface-org-storaged-Storaged-Partition.top_of_page">org.storaged.Storaged.Partition</a> on <em class="parameter"><code>object</code></em>
+, if any.</p>
+<div class="refsect3">
+<a name="id-1.4.5.2.13.11.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>object</p></td>
+<td class="parameter_description"><p>A <a class="link" href="StoragedObject.html" title="StoragedObject"><span class="type">StoragedObject</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="id-1.4.5.2.13.11.6"></a><h4>Returns</h4>
+<p> A <a class="link" href="StoragedPartition.html" title="StoragedPartition"><span class="type">StoragedPartition</span></a> that must be freed with <code class="function">g_object_unref()</code> or <code class="literal">NULL</code> if <em class="parameter"><code>object</code></em>
+does not implement the interface. </p>
+<p><span class="annotation">[<acronym title="Free data after the code is done."><span class="acronym">transfer full</span></acronym>]</span></p>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="storaged-object-get-partition-table"></a><h3>storaged_object_get_partition_table ()</h3>
+<pre class="programlisting"><a class="link" href="StoragedPartitionTable.html" title="StoragedPartitionTable"><span class="returnvalue">StoragedPartitionTable</span></a> *
+storaged_object_get_partition_table (<em class="parameter"><code><a class="link" href="StoragedObject.html" title="StoragedObject"><span class="type">StoragedObject</span></a> *object</code></em>);</pre>
+<p>Gets the <a class="link" href="StoragedPartitionTable.html" title="StoragedPartitionTable"><span class="type">StoragedPartitionTable</span></a> instance for the D-Bus interface <a class="link" href="gdbus-org.storaged.Storaged.PartitionTable.html#gdbus-interface-org-storaged-Storaged-PartitionTable.top_of_page">org.storaged.Storaged.PartitionTable</a> on <em class="parameter"><code>object</code></em>
+, if any.</p>
+<div class="refsect3">
+<a name="id-1.4.5.2.13.12.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>object</p></td>
+<td class="parameter_description"><p>A <a class="link" href="StoragedObject.html" title="StoragedObject"><span class="type">StoragedObject</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="id-1.4.5.2.13.12.6"></a><h4>Returns</h4>
+<p> A <a class="link" href="StoragedPartitionTable.html" title="StoragedPartitionTable"><span class="type">StoragedPartitionTable</span></a> that must be freed with <code class="function">g_object_unref()</code> or <code class="literal">NULL</code> if <em class="parameter"><code>object</code></em>
+does not implement the interface. </p>
+<p><span class="annotation">[<acronym title="Free data after the code is done."><span class="acronym">transfer full</span></acronym>]</span></p>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="storaged-object-get-mdraid"></a><h3>storaged_object_get_mdraid ()</h3>
+<pre class="programlisting"><a class="link" href="StoragedMDRaid.html" title="StoragedMDRaid"><span class="returnvalue">StoragedMDRaid</span></a> *
+storaged_object_get_mdraid (<em class="parameter"><code><a class="link" href="StoragedObject.html" title="StoragedObject"><span class="type">StoragedObject</span></a> *object</code></em>);</pre>
+<p>Gets the <a class="link" href="StoragedMDRaid.html" title="StoragedMDRaid"><span class="type">StoragedMDRaid</span></a> instance for the D-Bus interface <a class="link" href="gdbus-org.storaged.Storaged.MDRaid.html#gdbus-interface-org-storaged-Storaged-MDRaid.top_of_page">org.storaged.Storaged.MDRaid</a> on <em class="parameter"><code>object</code></em>
+, if any.</p>
+<div class="refsect3">
+<a name="id-1.4.5.2.13.13.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>object</p></td>
+<td class="parameter_description"><p>A <a class="link" href="StoragedObject.html" title="StoragedObject"><span class="type">StoragedObject</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="id-1.4.5.2.13.13.6"></a><h4>Returns</h4>
+<p> A <a class="link" href="StoragedMDRaid.html" title="StoragedMDRaid"><span class="type">StoragedMDRaid</span></a> that must be freed with <code class="function">g_object_unref()</code> or <code class="literal">NULL</code> if <em class="parameter"><code>object</code></em>
+does not implement the interface. </p>
+<p><span class="annotation">[<acronym title="Free data after the code is done."><span class="acronym">transfer full</span></acronym>]</span></p>
+</div>
+<p class="since">Since 2.1</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="storaged-object-peek-block"></a><h3>storaged_object_peek_block ()</h3>
+<pre class="programlisting"><a class="link" href="StoragedBlock.html" title="StoragedBlock"><span class="returnvalue">StoragedBlock</span></a> *
+storaged_object_peek_block (<em class="parameter"><code><a class="link" href="StoragedObject.html" title="StoragedObject"><span class="type">StoragedObject</span></a> *object</code></em>);</pre>
+<p>Like <a class="link" href="StoragedObject.html#storaged-object-get-block" title="storaged_object_get_block ()"><code class="function">storaged_object_get_block()</code></a> but doesn't increase the reference count on the returned object.</p>
+<div class="warning">It is not safe to use the returned object if you are on another thread than the one where the <span class="type">GDBusObjectManagerClient</span> or <span class="type">GDBusObjectManagerServer</span> for <em class="parameter"><code>object</code></em> is running.</div>
+<div class="refsect3">
+<a name="id-1.4.5.2.13.14.6"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>object</p></td>
+<td class="parameter_description"><p>A <a class="link" href="StoragedObject.html" title="StoragedObject"><span class="type">StoragedObject</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="id-1.4.5.2.13.14.7"></a><h4>Returns</h4>
+<p> A <a class="link" href="StoragedBlock.html" title="StoragedBlock"><span class="type">StoragedBlock</span></a> or <code class="literal">NULL</code> if <em class="parameter"><code>object</code></em>
+does not implement the interface. Do not free the returned object, it is owned by <em class="parameter"><code>object</code></em>
+. </p>
+<p><span class="annotation">[<acronym title="Don't free data after the code is done."><span class="acronym">transfer none</span></acronym>]</span></p>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="storaged-object-peek-drive"></a><h3>storaged_object_peek_drive ()</h3>
+<pre class="programlisting"><a class="link" href="StoragedDrive.html" title="StoragedDrive"><span class="returnvalue">StoragedDrive</span></a> *
+storaged_object_peek_drive (<em class="parameter"><code><a class="link" href="StoragedObject.html" title="StoragedObject"><span class="type">StoragedObject</span></a> *object</code></em>);</pre>
+<p>Like <a class="link" href="StoragedObject.html#storaged-object-get-drive" title="storaged_object_get_drive ()"><code class="function">storaged_object_get_drive()</code></a> but doesn't increase the reference count on the returned object.</p>
+<div class="warning">It is not safe to use the returned object if you are on another thread than the one where the <span class="type">GDBusObjectManagerClient</span> or <span class="type">GDBusObjectManagerServer</span> for <em class="parameter"><code>object</code></em> is running.</div>
+<div class="refsect3">
+<a name="id-1.4.5.2.13.15.6"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>object</p></td>
+<td class="parameter_description"><p>A <a class="link" href="StoragedObject.html" title="StoragedObject"><span class="type">StoragedObject</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="id-1.4.5.2.13.15.7"></a><h4>Returns</h4>
+<p> A <a class="link" href="StoragedDrive.html" title="StoragedDrive"><span class="type">StoragedDrive</span></a> or <code class="literal">NULL</code> if <em class="parameter"><code>object</code></em>
+does not implement the interface. Do not free the returned object, it is owned by <em class="parameter"><code>object</code></em>
+. </p>
+<p><span class="annotation">[<acronym title="Don't free data after the code is done."><span class="acronym">transfer none</span></acronym>]</span></p>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="storaged-object-peek-drive-ata"></a><h3>storaged_object_peek_drive_ata ()</h3>
+<pre class="programlisting"><a class="link" href="StoragedDriveAta.html" title="StoragedDriveAta"><span class="returnvalue">StoragedDriveAta</span></a> *
+storaged_object_peek_drive_ata (<em class="parameter"><code><a class="link" href="StoragedObject.html" title="StoragedObject"><span class="type">StoragedObject</span></a> *object</code></em>);</pre>
+<p>Like <a class="link" href="StoragedObject.html#storaged-object-get-drive-ata" title="storaged_object_get_drive_ata ()"><code class="function">storaged_object_get_drive_ata()</code></a> but doesn't increase the reference count on the returned object.</p>
+<div class="warning">It is not safe to use the returned object if you are on another thread than the one where the <span class="type">GDBusObjectManagerClient</span> or <span class="type">GDBusObjectManagerServer</span> for <em class="parameter"><code>object</code></em> is running.</div>
+<div class="refsect3">
+<a name="id-1.4.5.2.13.16.6"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>object</p></td>
+<td class="parameter_description"><p>A <a class="link" href="StoragedObject.html" title="StoragedObject"><span class="type">StoragedObject</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="id-1.4.5.2.13.16.7"></a><h4>Returns</h4>
+<p> A <a class="link" href="StoragedDriveAta.html" title="StoragedDriveAta"><span class="type">StoragedDriveAta</span></a> or <code class="literal">NULL</code> if <em class="parameter"><code>object</code></em>
+does not implement the interface. Do not free the returned object, it is owned by <em class="parameter"><code>object</code></em>
+. </p>
+<p><span class="annotation">[<acronym title="Don't free data after the code is done."><span class="acronym">transfer none</span></acronym>]</span></p>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="storaged-object-peek-filesystem"></a><h3>storaged_object_peek_filesystem ()</h3>
+<pre class="programlisting"><a class="link" href="StoragedFilesystem.html" title="StoragedFilesystem"><span class="returnvalue">StoragedFilesystem</span></a> *
+storaged_object_peek_filesystem (<em class="parameter"><code><a class="link" href="StoragedObject.html" title="StoragedObject"><span class="type">StoragedObject</span></a> *object</code></em>);</pre>
+<p>Like <a class="link" href="StoragedObject.html#storaged-object-get-filesystem" title="storaged_object_get_filesystem ()"><code class="function">storaged_object_get_filesystem()</code></a> but doesn't increase the reference count on the returned object.</p>
+<div class="warning">It is not safe to use the returned object if you are on another thread than the one where the <span class="type">GDBusObjectManagerClient</span> or <span class="type">GDBusObjectManagerServer</span> for <em class="parameter"><code>object</code></em> is running.</div>
+<div class="refsect3">
+<a name="id-1.4.5.2.13.17.6"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>object</p></td>
+<td class="parameter_description"><p>A <a class="link" href="StoragedObject.html" title="StoragedObject"><span class="type">StoragedObject</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="id-1.4.5.2.13.17.7"></a><h4>Returns</h4>
+<p> A <a class="link" href="StoragedFilesystem.html" title="StoragedFilesystem"><span class="type">StoragedFilesystem</span></a> or <code class="literal">NULL</code> if <em class="parameter"><code>object</code></em>
+does not implement the interface. Do not free the returned object, it is owned by <em class="parameter"><code>object</code></em>
+. </p>
+<p><span class="annotation">[<acronym title="Don't free data after the code is done."><span class="acronym">transfer none</span></acronym>]</span></p>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="storaged-object-peek-job"></a><h3>storaged_object_peek_job ()</h3>
+<pre class="programlisting"><a class="link" href="StoragedJob.html" title="StoragedJob"><span class="returnvalue">StoragedJob</span></a> *
+storaged_object_peek_job (<em class="parameter"><code><a class="link" href="StoragedObject.html" title="StoragedObject"><span class="type">StoragedObject</span></a> *object</code></em>);</pre>
+<p>Like <a class="link" href="StoragedObject.html#storaged-object-get-job" title="storaged_object_get_job ()"><code class="function">storaged_object_get_job()</code></a> but doesn't increase the reference count on the returned object.</p>
+<div class="warning">It is not safe to use the returned object if you are on another thread than the one where the <span class="type">GDBusObjectManagerClient</span> or <span class="type">GDBusObjectManagerServer</span> for <em class="parameter"><code>object</code></em> is running.</div>
+<div class="refsect3">
+<a name="id-1.4.5.2.13.18.6"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>object</p></td>
+<td class="parameter_description"><p>A <a class="link" href="StoragedObject.html" title="StoragedObject"><span class="type">StoragedObject</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="id-1.4.5.2.13.18.7"></a><h4>Returns</h4>
+<p> A <a class="link" href="StoragedJob.html" title="StoragedJob"><span class="type">StoragedJob</span></a> or <code class="literal">NULL</code> if <em class="parameter"><code>object</code></em>
+does not implement the interface. Do not free the returned object, it is owned by <em class="parameter"><code>object</code></em>
+. </p>
+<p><span class="annotation">[<acronym title="Don't free data after the code is done."><span class="acronym">transfer none</span></acronym>]</span></p>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="storaged-object-peek-swapspace"></a><h3>storaged_object_peek_swapspace ()</h3>
+<pre class="programlisting"><a class="link" href="StoragedSwapspace.html" title="StoragedSwapspace"><span class="returnvalue">StoragedSwapspace</span></a> *
+storaged_object_peek_swapspace (<em class="parameter"><code><a class="link" href="StoragedObject.html" title="StoragedObject"><span class="type">StoragedObject</span></a> *object</code></em>);</pre>
+<p>Like <a class="link" href="StoragedObject.html#storaged-object-get-swapspace" title="storaged_object_get_swapspace ()"><code class="function">storaged_object_get_swapspace()</code></a> but doesn't increase the reference count on the returned object.</p>
+<div class="warning">It is not safe to use the returned object if you are on another thread than the one where the <span class="type">GDBusObjectManagerClient</span> or <span class="type">GDBusObjectManagerServer</span> for <em class="parameter"><code>object</code></em> is running.</div>
+<div class="refsect3">
+<a name="id-1.4.5.2.13.19.6"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>object</p></td>
+<td class="parameter_description"><p>A <a class="link" href="StoragedObject.html" title="StoragedObject"><span class="type">StoragedObject</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="id-1.4.5.2.13.19.7"></a><h4>Returns</h4>
+<p> A <a class="link" href="StoragedSwapspace.html" title="StoragedSwapspace"><span class="type">StoragedSwapspace</span></a> or <code class="literal">NULL</code> if <em class="parameter"><code>object</code></em>
+does not implement the interface. Do not free the returned object, it is owned by <em class="parameter"><code>object</code></em>
+. </p>
+<p><span class="annotation">[<acronym title="Don't free data after the code is done."><span class="acronym">transfer none</span></acronym>]</span></p>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="storaged-object-peek-encrypted"></a><h3>storaged_object_peek_encrypted ()</h3>
+<pre class="programlisting"><a class="link" href="StoragedEncrypted.html" title="StoragedEncrypted"><span class="returnvalue">StoragedEncrypted</span></a> *
+storaged_object_peek_encrypted (<em class="parameter"><code><a class="link" href="StoragedObject.html" title="StoragedObject"><span class="type">StoragedObject</span></a> *object</code></em>);</pre>
+<p>Like <a class="link" href="StoragedObject.html#storaged-object-get-encrypted" title="storaged_object_get_encrypted ()"><code class="function">storaged_object_get_encrypted()</code></a> but doesn't increase the reference count on the returned object.</p>
+<div class="warning">It is not safe to use the returned object if you are on another thread than the one where the <span class="type">GDBusObjectManagerClient</span> or <span class="type">GDBusObjectManagerServer</span> for <em class="parameter"><code>object</code></em> is running.</div>
+<div class="refsect3">
+<a name="id-1.4.5.2.13.20.6"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>object</p></td>
+<td class="parameter_description"><p>A <a class="link" href="StoragedObject.html" title="StoragedObject"><span class="type">StoragedObject</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="id-1.4.5.2.13.20.7"></a><h4>Returns</h4>
+<p> A <a class="link" href="StoragedEncrypted.html" title="StoragedEncrypted"><span class="type">StoragedEncrypted</span></a> or <code class="literal">NULL</code> if <em class="parameter"><code>object</code></em>
+does not implement the interface. Do not free the returned object, it is owned by <em class="parameter"><code>object</code></em>
+. </p>
+<p><span class="annotation">[<acronym title="Don't free data after the code is done."><span class="acronym">transfer none</span></acronym>]</span></p>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="storaged-object-peek-loop"></a><h3>storaged_object_peek_loop ()</h3>
+<pre class="programlisting"><a class="link" href="StoragedLoop.html" title="StoragedLoop"><span class="returnvalue">StoragedLoop</span></a> *
+storaged_object_peek_loop (<em class="parameter"><code><a class="link" href="StoragedObject.html" title="StoragedObject"><span class="type">StoragedObject</span></a> *object</code></em>);</pre>
+<p>Like <a class="link" href="StoragedObject.html#storaged-object-get-loop" title="storaged_object_get_loop ()"><code class="function">storaged_object_get_loop()</code></a> but doesn't increase the reference count on the returned object.</p>
+<div class="warning">It is not safe to use the returned object if you are on another thread than the one where the <span class="type">GDBusObjectManagerClient</span> or <span class="type">GDBusObjectManagerServer</span> for <em class="parameter"><code>object</code></em> is running.</div>
+<div class="refsect3">
+<a name="id-1.4.5.2.13.21.6"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>object</p></td>
+<td class="parameter_description"><p>A <a class="link" href="StoragedObject.html" title="StoragedObject"><span class="type">StoragedObject</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="id-1.4.5.2.13.21.7"></a><h4>Returns</h4>
+<p> A <a class="link" href="StoragedLoop.html" title="StoragedLoop"><span class="type">StoragedLoop</span></a> or <code class="literal">NULL</code> if <em class="parameter"><code>object</code></em>
+does not implement the interface. Do not free the returned object, it is owned by <em class="parameter"><code>object</code></em>
+. </p>
+<p><span class="annotation">[<acronym title="Don't free data after the code is done."><span class="acronym">transfer none</span></acronym>]</span></p>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="storaged-object-peek-manager"></a><h3>storaged_object_peek_manager ()</h3>
+<pre class="programlisting"><a class="link" href="StoragedManager.html" title="StoragedManager"><span class="returnvalue">StoragedManager</span></a> *
+storaged_object_peek_manager (<em class="parameter"><code><a class="link" href="StoragedObject.html" title="StoragedObject"><span class="type">StoragedObject</span></a> *object</code></em>);</pre>
+<p>Like <a class="link" href="StoragedObject.html#storaged-object-get-manager" title="storaged_object_get_manager ()"><code class="function">storaged_object_get_manager()</code></a> but doesn't increase the reference count on the returned object.</p>
+<div class="warning">It is not safe to use the returned object if you are on another thread than the one where the <span class="type">GDBusObjectManagerClient</span> or <span class="type">GDBusObjectManagerServer</span> for <em class="parameter"><code>object</code></em> is running.</div>
+<div class="refsect3">
+<a name="id-1.4.5.2.13.22.6"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>object</p></td>
+<td class="parameter_description"><p>A <a class="link" href="StoragedObject.html" title="StoragedObject"><span class="type">StoragedObject</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="id-1.4.5.2.13.22.7"></a><h4>Returns</h4>
+<p> A <a class="link" href="StoragedManager.html" title="StoragedManager"><span class="type">StoragedManager</span></a> or <code class="literal">NULL</code> if <em class="parameter"><code>object</code></em>
+does not implement the interface. Do not free the returned object, it is owned by <em class="parameter"><code>object</code></em>
+. </p>
+<p><span class="annotation">[<acronym title="Don't free data after the code is done."><span class="acronym">transfer none</span></acronym>]</span></p>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="storaged-object-peek-partition"></a><h3>storaged_object_peek_partition ()</h3>
+<pre class="programlisting"><a class="link" href="StoragedPartition.html" title="StoragedPartition"><span class="returnvalue">StoragedPartition</span></a> *
+storaged_object_peek_partition (<em class="parameter"><code><a class="link" href="StoragedObject.html" title="StoragedObject"><span class="type">StoragedObject</span></a> *object</code></em>);</pre>
+<p>Like <a class="link" href="StoragedObject.html#storaged-object-get-partition" title="storaged_object_get_partition ()"><code class="function">storaged_object_get_partition()</code></a> but doesn't increase the reference count on the returned object.</p>
+<div class="warning">It is not safe to use the returned object if you are on another thread than the one where the <span class="type">GDBusObjectManagerClient</span> or <span class="type">GDBusObjectManagerServer</span> for <em class="parameter"><code>object</code></em> is running.</div>
+<div class="refsect3">
+<a name="id-1.4.5.2.13.23.6"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>object</p></td>
+<td class="parameter_description"><p>A <a class="link" href="StoragedObject.html" title="StoragedObject"><span class="type">StoragedObject</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="id-1.4.5.2.13.23.7"></a><h4>Returns</h4>
+<p> A <a class="link" href="StoragedPartition.html" title="StoragedPartition"><span class="type">StoragedPartition</span></a> or <code class="literal">NULL</code> if <em class="parameter"><code>object</code></em>
+does not implement the interface. Do not free the returned object, it is owned by <em class="parameter"><code>object</code></em>
+. </p>
+<p><span class="annotation">[<acronym title="Don't free data after the code is done."><span class="acronym">transfer none</span></acronym>]</span></p>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="storaged-object-peek-partition-table"></a><h3>storaged_object_peek_partition_table ()</h3>
+<pre class="programlisting"><a class="link" href="StoragedPartitionTable.html" title="StoragedPartitionTable"><span class="returnvalue">StoragedPartitionTable</span></a> *
+storaged_object_peek_partition_table (<em class="parameter"><code><a class="link" href="StoragedObject.html" title="StoragedObject"><span class="type">StoragedObject</span></a> *object</code></em>);</pre>
+<p>Like <a class="link" href="StoragedObject.html#storaged-object-get-partition-table" title="storaged_object_get_partition_table ()"><code class="function">storaged_object_get_partition_table()</code></a> but doesn't increase the reference count on the returned object.</p>
+<div class="warning">It is not safe to use the returned object if you are on another thread than the one where the <span class="type">GDBusObjectManagerClient</span> or <span class="type">GDBusObjectManagerServer</span> for <em class="parameter"><code>object</code></em> is running.</div>
+<div class="refsect3">
+<a name="id-1.4.5.2.13.24.6"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>object</p></td>
+<td class="parameter_description"><p>A <a class="link" href="StoragedObject.html" title="StoragedObject"><span class="type">StoragedObject</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="id-1.4.5.2.13.24.7"></a><h4>Returns</h4>
+<p> A <a class="link" href="StoragedPartitionTable.html" title="StoragedPartitionTable"><span class="type">StoragedPartitionTable</span></a> or <code class="literal">NULL</code> if <em class="parameter"><code>object</code></em>
+does not implement the interface. Do not free the returned object, it is owned by <em class="parameter"><code>object</code></em>
+. </p>
+<p><span class="annotation">[<acronym title="Don't free data after the code is done."><span class="acronym">transfer none</span></acronym>]</span></p>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="storaged-object-peek-mdraid"></a><h3>storaged_object_peek_mdraid ()</h3>
+<pre class="programlisting"><a class="link" href="StoragedMDRaid.html" title="StoragedMDRaid"><span class="returnvalue">StoragedMDRaid</span></a> *
+storaged_object_peek_mdraid (<em class="parameter"><code><a class="link" href="StoragedObject.html" title="StoragedObject"><span class="type">StoragedObject</span></a> *object</code></em>);</pre>
+<p>Like <a class="link" href="StoragedObject.html#storaged-object-get-mdraid" title="storaged_object_get_mdraid ()"><code class="function">storaged_object_get_mdraid()</code></a> but doesn't increase the reference count on the returned object.</p>
+<div class="warning">It is not safe to use the returned object if you are on another thread than the one where the <span class="type">GDBusObjectManagerClient</span> or <span class="type">GDBusObjectManagerServer</span> for <em class="parameter"><code>object</code></em> is running.</div>
+<div class="refsect3">
+<a name="id-1.4.5.2.13.25.6"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>object</p></td>
+<td class="parameter_description"><p>A <a class="link" href="StoragedObject.html" title="StoragedObject"><span class="type">StoragedObject</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="id-1.4.5.2.13.25.7"></a><h4>Returns</h4>
+<p> A <a class="link" href="StoragedMDRaid.html" title="StoragedMDRaid"><span class="type">StoragedMDRaid</span></a> or <code class="literal">NULL</code> if <em class="parameter"><code>object</code></em>
+does not implement the interface. Do not free the returned object, it is owned by <em class="parameter"><code>object</code></em>
+. </p>
+<p><span class="annotation">[<acronym title="Don't free data after the code is done."><span class="acronym">transfer none</span></acronym>]</span></p>
+</div>
+<p class="since">Since 2.1</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="storaged-object-proxy-new"></a><h3>storaged_object_proxy_new ()</h3>
+<pre class="programlisting"><a class="link" href="StoragedObject.html#StoragedObjectProxy"><span class="returnvalue">StoragedObjectProxy</span></a> *
+storaged_object_proxy_new (<em class="parameter"><code><span class="type">GDBusConnection</span> *connection</code></em>,
+                           <em class="parameter"><code>const <span class="type">gchar</span> *object_path</code></em>);</pre>
+<p>Creates a new proxy object.</p>
+<div class="refsect3">
+<a name="id-1.4.5.2.13.26.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>connection</p></td>
+<td class="parameter_description"><p>A <span class="type">GDBusConnection</span>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>object_path</p></td>
+<td class="parameter_description"><p>An object path.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="id-1.4.5.2.13.26.6"></a><h4>Returns</h4>
+<p> The proxy object. </p>
+<p><span class="annotation">[<acronym title="Free data after the code is done."><span class="acronym">transfer full</span></acronym>]</span></p>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="storaged-object-skeleton-new"></a><h3>storaged_object_skeleton_new ()</h3>
+<pre class="programlisting"><a class="link" href="StoragedObject.html#StoragedObjectSkeleton"><span class="returnvalue">StoragedObjectSkeleton</span></a> *
+storaged_object_skeleton_new (<em class="parameter"><code>const <span class="type">gchar</span> *object_path</code></em>);</pre>
+<p>Creates a new skeleton object.</p>
+<div class="refsect3">
+<a name="id-1.4.5.2.13.27.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>object_path</p></td>
+<td class="parameter_description"><p>An object path.</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="id-1.4.5.2.13.27.6"></a><h4>Returns</h4>
+<p> The skeleton object. </p>
+<p><span class="annotation">[<acronym title="Free data after the code is done."><span class="acronym">transfer full</span></acronym>]</span></p>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="storaged-object-skeleton-set-block"></a><h3>storaged_object_skeleton_set_block ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+storaged_object_skeleton_set_block (<em class="parameter"><code><a class="link" href="StoragedObject.html#StoragedObjectSkeleton"><span class="type">StoragedObjectSkeleton</span></a> *object</code></em>,
+                                    <em class="parameter"><code><a class="link" href="StoragedBlock.html" title="StoragedBlock"><span class="type">StoragedBlock</span></a> *interface_</code></em>);</pre>
+<p>Sets the <a class="link" href="StoragedBlock.html" title="StoragedBlock"><span class="type">StoragedBlock</span></a> instance for the D-Bus interface <a class="link" href="gdbus-org.storaged.Storaged.Block.html#gdbus-interface-org-storaged-Storaged-Block.top_of_page">org.storaged.Storaged.Block</a> on <em class="parameter"><code>object</code></em>
+.</p>
+<div class="refsect3">
+<a name="id-1.4.5.2.13.28.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>object</p></td>
+<td class="parameter_description"><p>A <a class="link" href="StoragedObject.html#StoragedObjectSkeleton"><span class="type">StoragedObjectSkeleton</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>interface_</p></td>
+<td class="parameter_description"><p> A <a class="link" href="StoragedBlock.html" title="StoragedBlock"><span class="type">StoragedBlock</span></a> or <code class="literal">NULL</code> to clear the interface. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="NULL is OK, both for passing and for returning."><span class="acronym">allow-none</span></acronym>]</span></td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="storaged-object-skeleton-set-drive"></a><h3>storaged_object_skeleton_set_drive ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+storaged_object_skeleton_set_drive (<em class="parameter"><code><a class="link" href="StoragedObject.html#StoragedObjectSkeleton"><span class="type">StoragedObjectSkeleton</span></a> *object</code></em>,
+                                    <em class="parameter"><code><a class="link" href="StoragedDrive.html" title="StoragedDrive"><span class="type">StoragedDrive</span></a> *interface_</code></em>);</pre>
+<p>Sets the <a class="link" href="StoragedDrive.html" title="StoragedDrive"><span class="type">StoragedDrive</span></a> instance for the D-Bus interface <a class="link" href="gdbus-org.storaged.Storaged.Drive.html#gdbus-interface-org-storaged-Storaged-Drive.top_of_page">org.storaged.Storaged.Drive</a> on <em class="parameter"><code>object</code></em>
+.</p>
+<div class="refsect3">
+<a name="id-1.4.5.2.13.29.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>object</p></td>
+<td class="parameter_description"><p>A <a class="link" href="StoragedObject.html#StoragedObjectSkeleton"><span class="type">StoragedObjectSkeleton</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>interface_</p></td>
+<td class="parameter_description"><p> A <a class="link" href="StoragedDrive.html" title="StoragedDrive"><span class="type">StoragedDrive</span></a> or <code class="literal">NULL</code> to clear the interface. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="NULL is OK, both for passing and for returning."><span class="acronym">allow-none</span></acronym>]</span></td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="storaged-object-skeleton-set-drive-ata"></a><h3>storaged_object_skeleton_set_drive_ata ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+storaged_object_skeleton_set_drive_ata
+                               (<em class="parameter"><code><a class="link" href="StoragedObject.html#StoragedObjectSkeleton"><span class="type">StoragedObjectSkeleton</span></a> *object</code></em>,
+                                <em class="parameter"><code><a class="link" href="StoragedDriveAta.html" title="StoragedDriveAta"><span class="type">StoragedDriveAta</span></a> *interface_</code></em>);</pre>
+<p>Sets the <a class="link" href="StoragedDriveAta.html" title="StoragedDriveAta"><span class="type">StoragedDriveAta</span></a> instance for the D-Bus interface <a class="link" href="gdbus-org.storaged.Storaged.Drive.Ata.html#gdbus-interface-org-storaged-Storaged-Drive-Ata.top_of_page">org.storaged.Storaged.Drive.Ata</a> on <em class="parameter"><code>object</code></em>
+.</p>
+<div class="refsect3">
+<a name="id-1.4.5.2.13.30.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>object</p></td>
+<td class="parameter_description"><p>A <a class="link" href="StoragedObject.html#StoragedObjectSkeleton"><span class="type">StoragedObjectSkeleton</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>interface_</p></td>
+<td class="parameter_description"><p> A <a class="link" href="StoragedDriveAta.html" title="StoragedDriveAta"><span class="type">StoragedDriveAta</span></a> or <code class="literal">NULL</code> to clear the interface. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="NULL is OK, both for passing and for returning."><span class="acronym">allow-none</span></acronym>]</span></td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="storaged-object-skeleton-set-filesystem"></a><h3>storaged_object_skeleton_set_filesystem ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+storaged_object_skeleton_set_filesystem
+                               (<em class="parameter"><code><a class="link" href="StoragedObject.html#StoragedObjectSkeleton"><span class="type">StoragedObjectSkeleton</span></a> *object</code></em>,
+                                <em class="parameter"><code><a class="link" href="StoragedFilesystem.html" title="StoragedFilesystem"><span class="type">StoragedFilesystem</span></a> *interface_</code></em>);</pre>
+<p>Sets the <a class="link" href="StoragedFilesystem.html" title="StoragedFilesystem"><span class="type">StoragedFilesystem</span></a> instance for the D-Bus interface <a class="link" href="gdbus-org.storaged.Storaged.Filesystem.html#gdbus-interface-org-storaged-Storaged-Filesystem.top_of_page">org.storaged.Storaged.Filesystem</a> on <em class="parameter"><code>object</code></em>
+.</p>
+<div class="refsect3">
+<a name="id-1.4.5.2.13.31.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>object</p></td>
+<td class="parameter_description"><p>A <a class="link" href="StoragedObject.html#StoragedObjectSkeleton"><span class="type">StoragedObjectSkeleton</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>interface_</p></td>
+<td class="parameter_description"><p> A <a class="link" href="StoragedFilesystem.html" title="StoragedFilesystem"><span class="type">StoragedFilesystem</span></a> or <code class="literal">NULL</code> to clear the interface. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="NULL is OK, both for passing and for returning."><span class="acronym">allow-none</span></acronym>]</span></td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="storaged-object-skeleton-set-job"></a><h3>storaged_object_skeleton_set_job ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+storaged_object_skeleton_set_job (<em class="parameter"><code><a class="link" href="StoragedObject.html#StoragedObjectSkeleton"><span class="type">StoragedObjectSkeleton</span></a> *object</code></em>,
+                                  <em class="parameter"><code><a class="link" href="StoragedJob.html" title="StoragedJob"><span class="type">StoragedJob</span></a> *interface_</code></em>);</pre>
+<p>Sets the <a class="link" href="StoragedJob.html" title="StoragedJob"><span class="type">StoragedJob</span></a> instance for the D-Bus interface <a class="link" href="gdbus-org.storaged.Storaged.Job.html#gdbus-interface-org-storaged-Storaged-Job.top_of_page">org.storaged.Storaged.Job</a> on <em class="parameter"><code>object</code></em>
+.</p>
+<div class="refsect3">
+<a name="id-1.4.5.2.13.32.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>object</p></td>
+<td class="parameter_description"><p>A <a class="link" href="StoragedObject.html#StoragedObjectSkeleton"><span class="type">StoragedObjectSkeleton</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>interface_</p></td>
+<td class="parameter_description"><p> A <a class="link" href="StoragedJob.html" title="StoragedJob"><span class="type">StoragedJob</span></a> or <code class="literal">NULL</code> to clear the interface. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="NULL is OK, both for passing and for returning."><span class="acronym">allow-none</span></acronym>]</span></td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="storaged-object-skeleton-set-swapspace"></a><h3>storaged_object_skeleton_set_swapspace ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+storaged_object_skeleton_set_swapspace
+                               (<em class="parameter"><code><a class="link" href="StoragedObject.html#StoragedObjectSkeleton"><span class="type">StoragedObjectSkeleton</span></a> *object</code></em>,
+                                <em class="parameter"><code><a class="link" href="StoragedSwapspace.html" title="StoragedSwapspace"><span class="type">StoragedSwapspace</span></a> *interface_</code></em>);</pre>
+<p>Sets the <a class="link" href="StoragedSwapspace.html" title="StoragedSwapspace"><span class="type">StoragedSwapspace</span></a> instance for the D-Bus interface <a class="link" href="gdbus-org.storaged.Storaged.Swapspace.html#gdbus-interface-org-storaged-Storaged-Swapspace.top_of_page">org.storaged.Storaged.Swapspace</a> on <em class="parameter"><code>object</code></em>
+.</p>
+<div class="refsect3">
+<a name="id-1.4.5.2.13.33.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>object</p></td>
+<td class="parameter_description"><p>A <a class="link" href="StoragedObject.html#StoragedObjectSkeleton"><span class="type">StoragedObjectSkeleton</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>interface_</p></td>
+<td class="parameter_description"><p> A <a class="link" href="StoragedSwapspace.html" title="StoragedSwapspace"><span class="type">StoragedSwapspace</span></a> or <code class="literal">NULL</code> to clear the interface. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="NULL is OK, both for passing and for returning."><span class="acronym">allow-none</span></acronym>]</span></td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="storaged-object-skeleton-set-encrypted"></a><h3>storaged_object_skeleton_set_encrypted ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+storaged_object_skeleton_set_encrypted
+                               (<em class="parameter"><code><a class="link" href="StoragedObject.html#StoragedObjectSkeleton"><span class="type">StoragedObjectSkeleton</span></a> *object</code></em>,
+                                <em class="parameter"><code><a class="link" href="StoragedEncrypted.html" title="StoragedEncrypted"><span class="type">StoragedEncrypted</span></a> *interface_</code></em>);</pre>
+<p>Sets the <a class="link" href="StoragedEncrypted.html" title="StoragedEncrypted"><span class="type">StoragedEncrypted</span></a> instance for the D-Bus interface <a class="link" href="gdbus-org.storaged.Storaged.Encrypted.html#gdbus-interface-org-storaged-Storaged-Encrypted.top_of_page">org.storaged.Storaged.Encrypted</a> on <em class="parameter"><code>object</code></em>
+.</p>
+<div class="refsect3">
+<a name="id-1.4.5.2.13.34.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>object</p></td>
+<td class="parameter_description"><p>A <a class="link" href="StoragedObject.html#StoragedObjectSkeleton"><span class="type">StoragedObjectSkeleton</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>interface_</p></td>
+<td class="parameter_description"><p> A <a class="link" href="StoragedEncrypted.html" title="StoragedEncrypted"><span class="type">StoragedEncrypted</span></a> or <code class="literal">NULL</code> to clear the interface. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="NULL is OK, both for passing and for returning."><span class="acronym">allow-none</span></acronym>]</span></td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="storaged-object-skeleton-set-loop"></a><h3>storaged_object_skeleton_set_loop ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+storaged_object_skeleton_set_loop (<em class="parameter"><code><a class="link" href="StoragedObject.html#StoragedObjectSkeleton"><span class="type">StoragedObjectSkeleton</span></a> *object</code></em>,
+                                   <em class="parameter"><code><a class="link" href="StoragedLoop.html" title="StoragedLoop"><span class="type">StoragedLoop</span></a> *interface_</code></em>);</pre>
+<p>Sets the <a class="link" href="StoragedLoop.html" title="StoragedLoop"><span class="type">StoragedLoop</span></a> instance for the D-Bus interface <a class="link" href="gdbus-org.storaged.Storaged.Loop.html#gdbus-interface-org-storaged-Storaged-Loop.top_of_page">org.storaged.Storaged.Loop</a> on <em class="parameter"><code>object</code></em>
+.</p>
+<div class="refsect3">
+<a name="id-1.4.5.2.13.35.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>object</p></td>
+<td class="parameter_description"><p>A <a class="link" href="StoragedObject.html#StoragedObjectSkeleton"><span class="type">StoragedObjectSkeleton</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>interface_</p></td>
+<td class="parameter_description"><p> A <a class="link" href="StoragedLoop.html" title="StoragedLoop"><span class="type">StoragedLoop</span></a> or <code class="literal">NULL</code> to clear the interface. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="NULL is OK, both for passing and for returning."><span class="acronym">allow-none</span></acronym>]</span></td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="storaged-object-skeleton-set-manager"></a><h3>storaged_object_skeleton_set_manager ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+storaged_object_skeleton_set_manager (<em class="parameter"><code><a class="link" href="StoragedObject.html#StoragedObjectSkeleton"><span class="type">StoragedObjectSkeleton</span></a> *object</code></em>,
+                                      <em class="parameter"><code><a class="link" href="StoragedManager.html" title="StoragedManager"><span class="type">StoragedManager</span></a> *interface_</code></em>);</pre>
+<p>Sets the <a class="link" href="StoragedManager.html" title="StoragedManager"><span class="type">StoragedManager</span></a> instance for the D-Bus interface <a class="link" href="gdbus-org.storaged.Storaged.Manager.html#gdbus-interface-org-storaged-Storaged-Manager.top_of_page">org.storaged.Storaged.Manager</a> on <em class="parameter"><code>object</code></em>
+.</p>
+<div class="refsect3">
+<a name="id-1.4.5.2.13.36.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>object</p></td>
+<td class="parameter_description"><p>A <a class="link" href="StoragedObject.html#StoragedObjectSkeleton"><span class="type">StoragedObjectSkeleton</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>interface_</p></td>
+<td class="parameter_description"><p> A <a class="link" href="StoragedManager.html" title="StoragedManager"><span class="type">StoragedManager</span></a> or <code class="literal">NULL</code> to clear the interface. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="NULL is OK, both for passing and for returning."><span class="acronym">allow-none</span></acronym>]</span></td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="storaged-object-skeleton-set-partition"></a><h3>storaged_object_skeleton_set_partition ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+storaged_object_skeleton_set_partition
+                               (<em class="parameter"><code><a class="link" href="StoragedObject.html#StoragedObjectSkeleton"><span class="type">StoragedObjectSkeleton</span></a> *object</code></em>,
+                                <em class="parameter"><code><a class="link" href="StoragedPartition.html" title="StoragedPartition"><span class="type">StoragedPartition</span></a> *interface_</code></em>);</pre>
+<p>Sets the <a class="link" href="StoragedPartition.html" title="StoragedPartition"><span class="type">StoragedPartition</span></a> instance for the D-Bus interface <a class="link" href="gdbus-org.storaged.Storaged.Partition.html#gdbus-interface-org-storaged-Storaged-Partition.top_of_page">org.storaged.Storaged.Partition</a> on <em class="parameter"><code>object</code></em>
+.</p>
+<div class="refsect3">
+<a name="id-1.4.5.2.13.37.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>object</p></td>
+<td class="parameter_description"><p>A <a class="link" href="StoragedObject.html#StoragedObjectSkeleton"><span class="type">StoragedObjectSkeleton</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>interface_</p></td>
+<td class="parameter_description"><p> A <a class="link" href="StoragedPartition.html" title="StoragedPartition"><span class="type">StoragedPartition</span></a> or <code class="literal">NULL</code> to clear the interface. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="NULL is OK, both for passing and for returning."><span class="acronym">allow-none</span></acronym>]</span></td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="storaged-object-skeleton-set-partition-table"></a><h3>storaged_object_skeleton_set_partition_table ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+storaged_object_skeleton_set_partition_table
+                               (<em class="parameter"><code><a class="link" href="StoragedObject.html#StoragedObjectSkeleton"><span class="type">StoragedObjectSkeleton</span></a> *object</code></em>,
+                                <em class="parameter"><code><a class="link" href="StoragedPartitionTable.html" title="StoragedPartitionTable"><span class="type">StoragedPartitionTable</span></a> *interface_</code></em>);</pre>
+<p>Sets the <a class="link" href="StoragedPartitionTable.html" title="StoragedPartitionTable"><span class="type">StoragedPartitionTable</span></a> instance for the D-Bus interface <a class="link" href="gdbus-org.storaged.Storaged.PartitionTable.html#gdbus-interface-org-storaged-Storaged-PartitionTable.top_of_page">org.storaged.Storaged.PartitionTable</a> on <em class="parameter"><code>object</code></em>
+.</p>
+<div class="refsect3">
+<a name="id-1.4.5.2.13.38.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>object</p></td>
+<td class="parameter_description"><p>A <a class="link" href="StoragedObject.html#StoragedObjectSkeleton"><span class="type">StoragedObjectSkeleton</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>interface_</p></td>
+<td class="parameter_description"><p> A <a class="link" href="StoragedPartitionTable.html" title="StoragedPartitionTable"><span class="type">StoragedPartitionTable</span></a> or <code class="literal">NULL</code> to clear the interface. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="NULL is OK, both for passing and for returning."><span class="acronym">allow-none</span></acronym>]</span></td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="storaged-object-skeleton-set-mdraid"></a><h3>storaged_object_skeleton_set_mdraid ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+storaged_object_skeleton_set_mdraid (<em class="parameter"><code><a class="link" href="StoragedObject.html#StoragedObjectSkeleton"><span class="type">StoragedObjectSkeleton</span></a> *object</code></em>,
+                                     <em class="parameter"><code><a class="link" href="StoragedMDRaid.html" title="StoragedMDRaid"><span class="type">StoragedMDRaid</span></a> *interface_</code></em>);</pre>
+<p>Sets the <a class="link" href="StoragedMDRaid.html" title="StoragedMDRaid"><span class="type">StoragedMDRaid</span></a> instance for the D-Bus interface <a class="link" href="gdbus-org.storaged.Storaged.MDRaid.html#gdbus-interface-org-storaged-Storaged-MDRaid.top_of_page">org.storaged.Storaged.MDRaid</a> on <em class="parameter"><code>object</code></em>
+.</p>
+<div class="refsect3">
+<a name="id-1.4.5.2.13.39.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>object</p></td>
+<td class="parameter_description"><p>A <a class="link" href="StoragedObject.html#StoragedObjectSkeleton"><span class="type">StoragedObjectSkeleton</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>interface_</p></td>
+<td class="parameter_description"><p> A <a class="link" href="StoragedMDRaid.html" title="StoragedMDRaid"><span class="type">StoragedMDRaid</span></a> or <code class="literal">NULL</code> to clear the interface. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="NULL is OK, both for passing and for returning."><span class="acronym">allow-none</span></acronym>]</span></td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<p class="since">Since 2.1</p>
+</div>
+</div>
+<div class="refsect1">
+<a name="StoragedObject.other_details"></a><h2>Types and Values</h2>
+<div class="refsect2">
+<a name="StoragedObject-struct"></a><h3>StoragedObject</h3>
+<pre class="programlisting">typedef struct _StoragedObject StoragedObject;</pre>
+<p>The <a class="link" href="StoragedObject.html" title="StoragedObject"><span class="type">StoragedObject</span></a> type is a specialized container of interfaces.</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="StoragedObjectIface"></a><h3>struct StoragedObjectIface</h3>
+<pre class="programlisting">struct StoragedObjectIface {
+  GTypeInterface parent_iface;
+};
+</pre>
+<p>Virtual table for the <a class="link" href="StoragedObject.html" title="StoragedObject"><span class="type">StoragedObject</span></a> interface.</p>
+<div class="refsect3">
+<a name="id-1.4.5.2.14.3.5"></a><h4>Members</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="300px" class="struct_members_name">
+<col class="struct_members_description">
+<col width="200px" class="struct_members_annotations">
+</colgroup>
+<tbody><tr>
+<td class="struct_member_name"><p><span class="type">GTypeInterface</span> <em class="structfield"><code><a name="StoragedObjectIface.parent-iface"></a>parent_iface</code></em>;</p></td>
+<td class="struct_member_description"><p>The parent interface.</p></td>
+<td class="struct_member_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="StoragedObjectProxy-struct"></a><h3>struct StoragedObjectProxy</h3>
+<pre class="programlisting">struct StoragedObjectProxy;</pre>
+<p>The <a class="link" href="StoragedObject.html#StoragedObjectProxy"><span class="type">StoragedObjectProxy</span></a> structure contains only private data and should only be accessed using the provided API.</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="StoragedObjectProxyClass"></a><h3>struct StoragedObjectProxyClass</h3>
+<pre class="programlisting">struct StoragedObjectProxyClass {
+  GDBusObjectProxyClass parent_class;
+};
+</pre>
+<p>Class structure for <a class="link" href="StoragedObject.html#StoragedObjectProxy"><span class="type">StoragedObjectProxy</span></a>.</p>
+<div class="refsect3">
+<a name="id-1.4.5.2.14.5.5"></a><h4>Members</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="300px" class="struct_members_name">
+<col class="struct_members_description">
+<col width="200px" class="struct_members_annotations">
+</colgroup>
+<tbody><tr>
+<td class="struct_member_name"><p><span class="type">GDBusObjectProxyClass</span> <em class="structfield"><code><a name="StoragedObjectProxyClass.parent-class"></a>parent_class</code></em>;</p></td>
+<td class="struct_member_description"><p>The parent class.</p></td>
+<td class="struct_member_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="StoragedObjectSkeleton-struct"></a><h3>struct StoragedObjectSkeleton</h3>
+<pre class="programlisting">struct StoragedObjectSkeleton;</pre>
+<p>The <a class="link" href="StoragedObject.html#StoragedObjectSkeleton"><span class="type">StoragedObjectSkeleton</span></a> structure contains only private data and should only be accessed using the provided API.</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="StoragedObjectSkeletonClass"></a><h3>struct StoragedObjectSkeletonClass</h3>
+<pre class="programlisting">struct StoragedObjectSkeletonClass {
+  GDBusObjectSkeletonClass parent_class;
+};
+</pre>
+<p>Class structure for <a class="link" href="StoragedObject.html#StoragedObjectSkeleton"><span class="type">StoragedObjectSkeleton</span></a>.</p>
+<div class="refsect3">
+<a name="id-1.4.5.2.14.7.5"></a><h4>Members</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="300px" class="struct_members_name">
+<col class="struct_members_description">
+<col width="200px" class="struct_members_annotations">
+</colgroup>
+<tbody><tr>
+<td class="struct_member_name"><p><span class="type">GDBusObjectSkeletonClass</span> <em class="structfield"><code><a name="StoragedObjectSkeletonClass.parent-class"></a>parent_class</code></em>;</p></td>
+<td class="struct_member_description"><p>The parent class.</p></td>
+<td class="struct_member_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+</div>
+</div>
+<div class="refsect1">
+<a name="StoragedObject.property-details"></a><h2>Property Details</h2>
+<div class="refsect2">
+<a name="StoragedObject--block"></a><h3>The <code class="literal">“block”</code> property</h3>
+<pre class="programlisting">  “block”                    <a class="link" href="StoragedBlock.html" title="StoragedBlock"><span class="type">StoragedBlock</span></a> *</pre>
+<p>The <a class="link" href="StoragedBlock.html" title="StoragedBlock"><span class="type">StoragedBlock</span></a> instance corresponding to the D-Bus interface <a class="link" href="gdbus-org.storaged.Storaged.Block.html#gdbus-interface-org-storaged-Storaged-Block.top_of_page">org.storaged.Storaged.Block</a>, if any.</p>
+<p>Connect to the <span class="type">“notify”</span> signal to get informed of property changes.</p>
+<p>Flags: Read / Write</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="StoragedObject--drive"></a><h3>The <code class="literal">“drive”</code> property</h3>
+<pre class="programlisting">  “drive”                    <a class="link" href="StoragedDrive.html" title="StoragedDrive"><span class="type">StoragedDrive</span></a> *</pre>
+<p>The <a class="link" href="StoragedDrive.html" title="StoragedDrive"><span class="type">StoragedDrive</span></a> instance corresponding to the D-Bus interface <a class="link" href="gdbus-org.storaged.Storaged.Drive.html#gdbus-interface-org-storaged-Storaged-Drive.top_of_page">org.storaged.Storaged.Drive</a>, if any.</p>
+<p>Connect to the <span class="type">“notify”</span> signal to get informed of property changes.</p>
+<p>Flags: Read / Write</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="StoragedObject--drive-ata"></a><h3>The <code class="literal">“drive-ata”</code> property</h3>
+<pre class="programlisting">  “drive-ata”                <a class="link" href="StoragedDriveAta.html" title="StoragedDriveAta"><span class="type">StoragedDriveAta</span></a> *</pre>
+<p>The <a class="link" href="StoragedDriveAta.html" title="StoragedDriveAta"><span class="type">StoragedDriveAta</span></a> instance corresponding to the D-Bus interface <a class="link" href="gdbus-org.storaged.Storaged.Drive.Ata.html#gdbus-interface-org-storaged-Storaged-Drive-Ata.top_of_page">org.storaged.Storaged.Drive.Ata</a>, if any.</p>
+<p>Connect to the <span class="type">“notify”</span> signal to get informed of property changes.</p>
+<p>Flags: Read / Write</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="StoragedObject--encrypted"></a><h3>The <code class="literal">“encrypted”</code> property</h3>
+<pre class="programlisting">  “encrypted”                <a class="link" href="StoragedEncrypted.html" title="StoragedEncrypted"><span class="type">StoragedEncrypted</span></a> *</pre>
+<p>The <a class="link" href="StoragedEncrypted.html" title="StoragedEncrypted"><span class="type">StoragedEncrypted</span></a> instance corresponding to the D-Bus interface <a class="link" href="gdbus-org.storaged.Storaged.Encrypted.html#gdbus-interface-org-storaged-Storaged-Encrypted.top_of_page">org.storaged.Storaged.Encrypted</a>, if any.</p>
+<p>Connect to the <span class="type">“notify”</span> signal to get informed of property changes.</p>
+<p>Flags: Read / Write</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="StoragedObject--filesystem"></a><h3>The <code class="literal">“filesystem”</code> property</h3>
+<pre class="programlisting">  “filesystem”               <a class="link" href="StoragedFilesystem.html" title="StoragedFilesystem"><span class="type">StoragedFilesystem</span></a> *</pre>
+<p>The <a class="link" href="StoragedFilesystem.html" title="StoragedFilesystem"><span class="type">StoragedFilesystem</span></a> instance corresponding to the D-Bus interface <a class="link" href="gdbus-org.storaged.Storaged.Filesystem.html#gdbus-interface-org-storaged-Storaged-Filesystem.top_of_page">org.storaged.Storaged.Filesystem</a>, if any.</p>
+<p>Connect to the <span class="type">“notify”</span> signal to get informed of property changes.</p>
+<p>Flags: Read / Write</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="StoragedObject--job"></a><h3>The <code class="literal">“job”</code> property</h3>
+<pre class="programlisting">  “job”                      <a class="link" href="StoragedJob.html" title="StoragedJob"><span class="type">StoragedJob</span></a> *</pre>
+<p>The <a class="link" href="StoragedJob.html" title="StoragedJob"><span class="type">StoragedJob</span></a> instance corresponding to the D-Bus interface <a class="link" href="gdbus-org.storaged.Storaged.Job.html#gdbus-interface-org-storaged-Storaged-Job.top_of_page">org.storaged.Storaged.Job</a>, if any.</p>
+<p>Connect to the <span class="type">“notify”</span> signal to get informed of property changes.</p>
+<p>Flags: Read / Write</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="StoragedObject--loop"></a><h3>The <code class="literal">“loop”</code> property</h3>
+<pre class="programlisting">  “loop”                     <a class="link" href="StoragedLoop.html" title="StoragedLoop"><span class="type">StoragedLoop</span></a> *</pre>
+<p>The <a class="link" href="StoragedLoop.html" title="StoragedLoop"><span class="type">StoragedLoop</span></a> instance corresponding to the D-Bus interface <a class="link" href="gdbus-org.storaged.Storaged.Loop.html#gdbus-interface-org-storaged-Storaged-Loop.top_of_page">org.storaged.Storaged.Loop</a>, if any.</p>
+<p>Connect to the <span class="type">“notify”</span> signal to get informed of property changes.</p>
+<p>Flags: Read / Write</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="StoragedObject--manager"></a><h3>The <code class="literal">“manager”</code> property</h3>
+<pre class="programlisting">  “manager”                  <a class="link" href="StoragedManager.html" title="StoragedManager"><span class="type">StoragedManager</span></a> *</pre>
+<p>The <a class="link" href="StoragedManager.html" title="StoragedManager"><span class="type">StoragedManager</span></a> instance corresponding to the D-Bus interface <a class="link" href="gdbus-org.storaged.Storaged.Manager.html#gdbus-interface-org-storaged-Storaged-Manager.top_of_page">org.storaged.Storaged.Manager</a>, if any.</p>
+<p>Connect to the <span class="type">“notify”</span> signal to get informed of property changes.</p>
+<p>Flags: Read / Write</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="StoragedObject--mdraid"></a><h3>The <code class="literal">“mdraid”</code> property</h3>
+<pre class="programlisting">  “mdraid”                   <a class="link" href="StoragedMDRaid.html" title="StoragedMDRaid"><span class="type">StoragedMDRaid</span></a> *</pre>
+<p>The <a class="link" href="StoragedMDRaid.html" title="StoragedMDRaid"><span class="type">StoragedMDRaid</span></a> instance corresponding to the D-Bus interface <a class="link" href="gdbus-org.storaged.Storaged.MDRaid.html#gdbus-interface-org-storaged-Storaged-MDRaid.top_of_page">org.storaged.Storaged.MDRaid</a>, if any.</p>
+<p>Connect to the <span class="type">“notify”</span> signal to get informed of property changes.</p>
+<p>Flags: Read / Write</p>
+<p class="since">Since 2.1</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="StoragedObject--partition"></a><h3>The <code class="literal">“partition”</code> property</h3>
+<pre class="programlisting">  “partition”                <a class="link" href="StoragedPartition.html" title="StoragedPartition"><span class="type">StoragedPartition</span></a> *</pre>
+<p>The <a class="link" href="StoragedPartition.html" title="StoragedPartition"><span class="type">StoragedPartition</span></a> instance corresponding to the D-Bus interface <a class="link" href="gdbus-org.storaged.Storaged.Partition.html#gdbus-interface-org-storaged-Storaged-Partition.top_of_page">org.storaged.Storaged.Partition</a>, if any.</p>
+<p>Connect to the <span class="type">“notify”</span> signal to get informed of property changes.</p>
+<p>Flags: Read / Write</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="StoragedObject--partition-table"></a><h3>The <code class="literal">“partition-table”</code> property</h3>
+<pre class="programlisting">  “partition-table”          <a class="link" href="StoragedPartitionTable.html" title="StoragedPartitionTable"><span class="type">StoragedPartitionTable</span></a> *</pre>
+<p>The <a class="link" href="StoragedPartitionTable.html" title="StoragedPartitionTable"><span class="type">StoragedPartitionTable</span></a> instance corresponding to the D-Bus interface <a class="link" href="gdbus-org.storaged.Storaged.PartitionTable.html#gdbus-interface-org-storaged-Storaged-PartitionTable.top_of_page">org.storaged.Storaged.PartitionTable</a>, if any.</p>
+<p>Connect to the <span class="type">“notify”</span> signal to get informed of property changes.</p>
+<p>Flags: Read / Write</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="StoragedObject--swapspace"></a><h3>The <code class="literal">“swapspace”</code> property</h3>
+<pre class="programlisting">  “swapspace”                <a class="link" href="StoragedSwapspace.html" title="StoragedSwapspace"><span class="type">StoragedSwapspace</span></a> *</pre>
+<p>The <a class="link" href="StoragedSwapspace.html" title="StoragedSwapspace"><span class="type">StoragedSwapspace</span></a> instance corresponding to the D-Bus interface <a class="link" href="gdbus-org.storaged.Storaged.Swapspace.html#gdbus-interface-org-storaged-Storaged-Swapspace.top_of_page">org.storaged.Storaged.Swapspace</a>, if any.</p>
+<p>Connect to the <span class="type">“notify”</span> signal to get informed of property changes.</p>
+<p>Flags: Read / Write</p>
+</div>
+</div>
+</div>
+<div class="footer">
+<hr>
+          Generated by GTK-Doc V1.21</div>
+</body>
+</html>
