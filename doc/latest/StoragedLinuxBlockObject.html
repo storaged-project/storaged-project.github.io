@@ -132,8 +132,8 @@
 </div>
 <div class="refsect1">
 <a name="StoragedLinuxBlockObject.object-hierarchy"></a><h2>Object Hierarchy</h2>
-<pre class="screen">    GObject
-    <span class="lineart">╰──</span> GDBusObjectSkeleton
+<pre class="screen">    <a href="/usr/share/gtk-doc/html/gobject/gobject-The-Base-Object-Type.html#GObject">GObject</a>
+    <span class="lineart">╰──</span> <a href="/usr/share/gtk-doc/html/gio/GDBusObjectSkeleton.html">GDBusObjectSkeleton</a>
         <span class="lineart">╰──</span> <a class="link" href="StoragedObject.html#StoragedObjectSkeleton">StoragedObjectSkeleton</a>
             <span class="lineart">╰──</span> StoragedLinuxBlockObject
 </pre>
@@ -142,7 +142,7 @@
 <a name="StoragedLinuxBlockObject.implemented-interfaces"></a><h2>Implemented Interfaces</h2>
 <p>
 StoragedLinuxBlockObject implements
- GDBusObject and  <a class="link" href="StoragedObject.html" title="StoragedObject">StoragedObject</a>.</p>
+ <a href="/usr/share/gtk-doc/html/gio/GDBusObject.html">GDBusObject</a> and  <a class="link" href="StoragedObject.html" title="StoragedObject">StoragedObject</a>.</p>
 </div>
 <div class="refsect1">
 <a name="StoragedLinuxBlockObject.description"></a><h2>Description</h2>
@@ -180,7 +180,7 @@ storaged_linux_block_object_new (<em class="parameter"><code><a class="link" hre
 </div>
 <div class="refsect3">
 <a name="id-1.5.8.9.9.2.6"></a><h4>Returns</h4>
-<p> A <a class="link" href="StoragedLinuxBlockObject.html" title="StoragedLinuxBlockObject"><span class="type">StoragedLinuxBlockObject</span></a> object. Free with <code class="function">g_object_unref()</code>.</p>
+<p> A <a class="link" href="StoragedLinuxBlockObject.html" title="StoragedLinuxBlockObject"><span class="type">StoragedLinuxBlockObject</span></a> object. Free with <a href="/usr/share/gtk-doc/html/gobject/gobject-The-Base-Object-Type.html#g-object-unref"><code class="function">g_object_unref()</code></a>.</p>
 <p></p>
 </div>
 </div>
@@ -189,7 +189,7 @@ storaged_linux_block_object_new (<em class="parameter"><code><a class="link" hre
 <a name="storaged-linux-block-object-uevent"></a><h3>storaged_linux_block_object_uevent ()</h3>
 <pre class="programlisting"><span class="returnvalue">void</span>
 storaged_linux_block_object_uevent (<em class="parameter"><code><a class="link" href="StoragedLinuxBlockObject.html" title="StoragedLinuxBlockObject"><span class="type">StoragedLinuxBlockObject</span></a> *object</code></em>,
-                                    <em class="parameter"><code>const <span class="type">gchar</span> *action</code></em>,
+                                    <em class="parameter"><code>const <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *action</code></em>,
                                     <em class="parameter"><code><a class="link" href="StoragedLinuxDevice.html" title="StoragedLinuxDevice"><span class="type">StoragedLinuxDevice</span></a> *device</code></em>);</pre>
 <p>Updates all information on interfaces on <em class="parameter"><code>object</code></em>
 .</p>
@@ -209,12 +209,12 @@ storaged_linux_block_object_uevent (<em class="parameter"><code><a class="link" 
 </tr>
 <tr>
 <td class="parameter_name"><p>action</p></td>
-<td class="parameter_description"><p>Uevent action or <code class="literal">NULL</code></p></td>
+<td class="parameter_description"><p>Uevent action or <a href="/usr/share/gtk-doc/html/glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a></p></td>
 <td class="parameter_annotations"> </td>
 </tr>
 <tr>
 <td class="parameter_name"><p>device</p></td>
-<td class="parameter_description"><p>A new <a class="link" href="StoragedLinuxDevice.html" title="StoragedLinuxDevice"><span class="type">StoragedLinuxDevice</span></a> device object or <code class="literal">NULL</code> if the device hasn't changed.</p></td>
+<td class="parameter_description"><p>A new <a class="link" href="StoragedLinuxDevice.html" title="StoragedLinuxDevice"><span class="type">StoragedLinuxDevice</span></a> device object or <a href="/usr/share/gtk-doc/html/glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a> if the device hasn't changed.</p></td>
 <td class="parameter_annotations"> </td>
 </tr>
 </tbody>
@@ -259,7 +259,7 @@ storaged_linux_block_object_get_device
                                (<em class="parameter"><code><a class="link" href="StoragedLinuxBlockObject.html" title="StoragedLinuxBlockObject"><span class="type">StoragedLinuxBlockObject</span></a> *object</code></em>);</pre>
 <p>Gets the current <a class="link" href="StoragedLinuxDevice.html" title="StoragedLinuxDevice"><span class="type">StoragedLinuxDevice</span></a> for <em class="parameter"><code>object</code></em>
 . Connect to
-<span class="type">“notify”</span> to track changes to the <a class="link" href="StoragedLinuxBlockObject.html#StoragedLinuxBlockObject--device" title="The “device” property"><span class="type">“device”</span></a>
+<a href="/usr/share/gtk-doc/html/gobject/gobject-The-Base-Object-Type.html#GObject-notify"><span class="type">“notify”</span></a> to track changes to the <a class="link" href="StoragedLinuxBlockObject.html#StoragedLinuxBlockObject--device" title="The “device” property"><span class="type">“device”</span></a>
 property.</p>
 <div class="refsect3">
 <a name="id-1.5.8.9.9.5.5"></a><h4>Parameters</h4>
@@ -278,7 +278,7 @@ property.</p>
 </div>
 <div class="refsect3">
 <a name="id-1.5.8.9.9.5.6"></a><h4>Returns</h4>
-<p> A <a class="link" href="StoragedLinuxDevice.html" title="StoragedLinuxDevice"><span class="type">StoragedLinuxDevice</span></a>. Free with <code class="function">g_object_unref()</code>.</p>
+<p> A <a class="link" href="StoragedLinuxDevice.html" title="StoragedLinuxDevice"><span class="type">StoragedLinuxDevice</span></a>. Free with <a href="/usr/share/gtk-doc/html/gobject/gobject-The-Base-Object-Type.html#g-object-unref"><code class="function">g_object_unref()</code></a>.</p>
 <p></p>
 </div>
 </div>
@@ -358,7 +358,7 @@ should only be accessed using the provided API.</p>
 <div class="refsect2">
 <a name="StoragedLinuxBlockObject--device"></a><h3>The <code class="literal">“device”</code> property</h3>
 <pre class="programlisting">  “device”                   <a class="link" href="StoragedLinuxDevice.html" title="StoragedLinuxDevice"><span class="type">StoragedLinuxDevice</span></a> *</pre>
-<p>The <a class="link" href="StoragedLinuxDevice.html" title="StoragedLinuxDevice"><span class="type">StoragedLinuxDevice</span></a> for the object. Connect to the <span class="type">“notify”</span>
+<p>The <a class="link" href="StoragedLinuxDevice.html" title="StoragedLinuxDevice"><span class="type">StoragedLinuxDevice</span></a> for the object. Connect to the <a href="/usr/share/gtk-doc/html/gobject/gobject-The-Base-Object-Type.html#GObject-notify"><span class="type">“notify”</span></a>
 signal to get notified whenever this is updated.</p>
 <p>Flags: Read / Write / Construct Only</p>
 </div>

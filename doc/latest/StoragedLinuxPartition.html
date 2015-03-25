@@ -59,7 +59,7 @@
 </tr>
 <tr>
 <td class="function_type">
-<span class="returnvalue">gboolean</span>
+<a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
 </td>
 <td class="function_name">
 <a class="link" href="StoragedLinuxPartition.html#storaged-linux-partition-set-type-sync" title="storaged_linux_partition_set_type_sync ()">storaged_linux_partition_set_type_sync</a> <span class="c_punctuation">()</span>
@@ -83,8 +83,8 @@
 </div>
 <div class="refsect1">
 <a name="StoragedLinuxPartition.object-hierarchy"></a><h2>Object Hierarchy</h2>
-<pre class="screen">    GObject
-    <span class="lineart">╰──</span> GDBusInterfaceSkeleton
+<pre class="screen">    <a href="/usr/share/gtk-doc/html/gobject/gobject-The-Base-Object-Type.html#GObject">GObject</a>
+    <span class="lineart">╰──</span> <a href="/usr/share/gtk-doc/html/gio/GDBusInterfaceSkeleton.html">GDBusInterfaceSkeleton</a>
         <span class="lineart">╰──</span> <a class="link" href="StoragedPartition.html#StoragedPartitionSkeleton">StoragedPartitionSkeleton</a>
             <span class="lineart">╰──</span> StoragedLinuxPartition
 </pre>
@@ -93,7 +93,7 @@
 <a name="StoragedLinuxPartition.implemented-interfaces"></a><h2>Implemented Interfaces</h2>
 <p>
 StoragedLinuxPartition implements
- GDBusInterface and  <a class="link" href="StoragedPartition.html" title="StoragedPartition">StoragedPartition</a>.</p>
+ <a href="/usr/share/gtk-doc/html/gio/GDBusInterface.html">GDBusInterface</a> and  <a class="link" href="StoragedPartition.html" title="StoragedPartition">StoragedPartition</a>.</p>
 </div>
 <div class="refsect1">
 <a name="StoragedLinuxPartition.description"></a><h2>Description</h2>
@@ -109,7 +109,7 @@ storaged_linux_partition_new (<em class="parameter"><code><span class="type">voi
 <p>Creates a new <a class="link" href="StoragedLinuxPartition.html" title="StoragedLinuxPartition"><span class="type">StoragedLinuxPartition</span></a> instance.</p>
 <div class="refsect3">
 <a name="id-1.5.8.3.8.2.5"></a><h4>Returns</h4>
-<p> A new <a class="link" href="StoragedLinuxPartition.html" title="StoragedLinuxPartition"><span class="type">StoragedLinuxPartition</span></a>. Free with <code class="function">g_object_unref()</code>.</p>
+<p> A new <a class="link" href="StoragedLinuxPartition.html" title="StoragedLinuxPartition"><span class="type">StoragedLinuxPartition</span></a>. Free with <a href="/usr/share/gtk-doc/html/gobject/gobject-The-Base-Object-Type.html#g-object-unref"><code class="function">g_object_unref()</code></a>.</p>
 <p></p>
 </div>
 </div>
@@ -146,13 +146,13 @@ storaged_linux_partition_update (<em class="parameter"><code><a class="link" hre
 <hr>
 <div class="refsect2">
 <a name="storaged-linux-partition-set-type-sync"></a><h3>storaged_linux_partition_set_type_sync ()</h3>
-<pre class="programlisting"><span class="returnvalue">gboolean</span>
+<pre class="programlisting"><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
 storaged_linux_partition_set_type_sync
                                (<em class="parameter"><code><a class="link" href="StoragedLinuxPartition.html" title="StoragedLinuxPartition"><span class="type">StoragedLinuxPartition</span></a> *partition</code></em>,
-                                <em class="parameter"><code>const <span class="type">gchar</span> *type</code></em>,
+                                <em class="parameter"><code>const <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *type</code></em>,
                                 <em class="parameter"><code><span class="type">uid_t</span> caller_uid</code></em>,
-                                <em class="parameter"><code><span class="type">GCancellable</span> *cancellable</code></em>,
-                                <em class="parameter"><code><span class="type">GError</span> **error</code></em>);</pre>
+                                <em class="parameter"><code><a href="/usr/share/gtk-doc/html/gio/GCancellable.html"><span class="type">GCancellable</span></a> *cancellable</code></em>,
+                                <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glib/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);</pre>
 <p>Sets the partition type. The calling thread is blocked while the
 operation is pending.</p>
 <div class="refsect3">
@@ -181,12 +181,12 @@ operation is pending.</p>
 </tr>
 <tr>
 <td class="parameter_name"><p>cancellable</p></td>
-<td class="parameter_description"><p>A <span class="type">GCancellable</span> or <code class="literal">NULL</code>.</p></td>
+<td class="parameter_description"><p>A <a href="/usr/share/gtk-doc/html/gio/GCancellable.html"><span class="type">GCancellable</span></a> or <a href="/usr/share/gtk-doc/html/glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>.</p></td>
 <td class="parameter_annotations"> </td>
 </tr>
 <tr>
 <td class="parameter_name"><p>error</p></td>
-<td class="parameter_description"><p>Return location for error or <code class="literal">NULL</code>.</p></td>
+<td class="parameter_description"><p>Return location for error or <a href="/usr/share/gtk-doc/html/glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>.</p></td>
 <td class="parameter_annotations"> </td>
 </tr>
 </tbody>
@@ -194,7 +194,7 @@ operation is pending.</p>
 </div>
 <div class="refsect3">
 <a name="id-1.5.8.3.8.4.6"></a><h4>Returns</h4>
-<p> <code class="literal">TRUE</code> if the operation succeeded, <code class="literal">FALSE</code> if error is set.</p>
+<p> <a href="/usr/share/gtk-doc/html/glib/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> if the operation succeeded, <a href="/usr/share/gtk-doc/html/glib/glib-Standard-Macros.html#FALSE:CAPS"><code class="literal">FALSE</code></a> if error is set.</p>
 <p></p>
 </div>
 </div>

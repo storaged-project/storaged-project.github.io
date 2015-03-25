@@ -76,7 +76,7 @@
       <a class="link" href="gdbus-org.storaged.Storaged.Block.html#gdbus-property-org-storaged-Storaged-Block.MDRaidMember" title='The "MDRaidMember" property'>"MDRaidMember"</a> properties on the
       <a class="link" href="gdbus-org.storaged.Storaged.Block.html#gdbus-interface-org-storaged-Storaged-Block.top_of_page">org.storaged.Storaged.Block</a> D-Bus interface.
 </p>
-<p class="since">Since 2.1</p>
+<p class="since">Since 2.0.0</p>
 </div>
 <div class="refsect1">
 <a name="gdbus-methods-org.storaged.Storaged.MDRaid"></a><h2>Method Details</h2>
@@ -101,7 +101,7 @@ Start (IN  a{sv} options);
 <td><p>Options - known options (in addition to <a class="link" href="storaged-std-options.html" title="The options parameter">standard options</a>) includes <em class="parameter"><code>start-degraded</code></em> (of type 'b').</p></td>
 </tr></tbody>
 </table></div>
-<p class="since">Since 2.1</p>
+<p class="since">Since 2.0.0</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -121,7 +121,7 @@ Stop (IN  a{sv} options);
 <td><p>Options (currently unused except for <a class="link" href="storaged-std-options.html" title="The options parameter">standard options</a>).</p></td>
 </tr></tbody>
 </table></div>
-<p class="since">Since 2.1</p>
+<p class="since">Since 2.0.0</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -156,7 +156,7 @@ RemoveDevice (IN  o     device,
 </tr>
 </tbody>
 </table></div>
-<p class="since">Since 2.1</p>
+<p class="since">Since 2.0.0</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -183,7 +183,7 @@ AddDevice (IN  o     device,
 </tr>
 </tbody>
 </table></div>
-<p class="since">Since 2.1</p>
+<p class="since">Since 2.0.0</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -210,7 +210,7 @@ SetBitmapLocation (IN  ay    value,
 </tr>
 </tbody>
 </table></div>
-<p class="since">Since 2.1</p>
+<p class="since">Since 2.0.0</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -247,7 +247,7 @@ RequestSyncAction (IN  s     sync_action,
 </tr>
 </tbody>
 </table></div>
-<p class="since">Since 2.1</p>
+<p class="since">Since 2.0.0</p>
 </div>
 </div>
 <div class="refsect1">
@@ -259,7 +259,7 @@ UUID  readable   s
 </pre>
 <p>         The UUID of the array.
 </p>
-<p class="since">Since 2.1</p>
+<p class="since">Since 2.0.0</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -269,7 +269,7 @@ Name  readable   s
 </pre>
 <p>         The name of the array (TODO: homehost etc).
 </p>
-<p class="since">Since 2.1</p>
+<p class="since">Since 2.0.0</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -281,7 +281,7 @@ Level  readable   s
 </p>
 <p>         Known values include <code class="literal">raid0</code>, <code class="literal">raid1</code>, <code class="literal">raid4</code>, <code class="literal">raid5</code>, <code class="literal">raid6</code> and <code class="literal">raid10</code>.
 </p>
-<p class="since">Since 2.1</p>
+<p class="since">Since 2.0.0</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -291,7 +291,7 @@ NumDevices  readable   u
 </pre>
 <p>         Number of devices that are part of the array.
 </p>
-<p class="since">Since 2.1</p>
+<p class="since">Since 2.0.0</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -304,7 +304,7 @@ Size  readable   t
 <p>         This is the usable size, e.g. for a RAID-5 array backed by 4
          1TB disks, this will be approximately 3 TB.
 </p>
-<p class="since">Since 2.1</p>
+<p class="since">Since 2.0.0</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -324,7 +324,7 @@ SyncAction  readable   s
          <code class="filename"><a class="ulink" href="http://www.kernel.org/doc/Documentation/md.txt" target="_top">Documentation/md.txt</a></code>
          file shipped with the kernel sources.
 </p>
-<p class="since">Since 2.1</p>
+<p class="since">Since 2.0.0</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -339,7 +339,7 @@ SyncCompleted  readable   d
          <code class="filename"><a class="ulink" href="http://www.kernel.org/doc/Documentation/md.txt" target="_top">Documentation/md.txt</a></code>
          file shipped with the kernel sources.
 </p>
-<p class="since">Since 2.1</p>
+<p class="since">Since 2.0.0</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -359,7 +359,7 @@ SyncRate  readable   t
          <code class="filename"><a class="ulink" href="http://www.kernel.org/doc/Documentation/md.txt" target="_top">Documentation/md.txt</a></code>
          file shipped with the kernel sources.
 </p>
-<p class="since">Since 2.1</p>
+<p class="since">Since 2.0.0</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -378,7 +378,7 @@ SyncRemainingTime  readable   t
          <code class="filename"><a class="ulink" href="http://www.kernel.org/doc/Documentation/md.txt" target="_top">Documentation/md.txt</a></code>
          file shipped with the kernel sources.
 </p>
-<p class="since">Since 2.1</p>
+<p class="since">Since 2.0.0</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -393,7 +393,7 @@ Degraded  readable   u
          <code class="filename"><a class="ulink" href="http://www.kernel.org/doc/Documentation/md.txt" target="_top">Documentation/md.txt</a></code>
          file shipped with the kernel sources.
 </p>
-<p class="since">Since 2.1</p>
+<p class="since">Since 2.0.0</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -411,7 +411,7 @@ BitmapLocation  readable   ay
          <code class="filename"><a class="ulink" href="http://www.kernel.org/doc/Documentation/md.txt" target="_top">Documentation/md.txt</a></code>
          file shipped with the kernel sources.
 </p>
-<p class="since">Since 2.1</p>
+<p class="since">Since 2.0.0</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -426,7 +426,7 @@ ChunkSize  readable   t
          <code class="filename"><a class="ulink" href="http://www.kernel.org/doc/Documentation/md.txt" target="_top">Documentation/md.txt</a></code>
          file shipped with the kernel sources.
 </p>
-<p class="since">Since 2.1</p>
+<p class="since">Since 2.0.0</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -475,7 +475,7 @@ ActiveDevices  readable   a(oiasta{sv})
          <code class="filename"><a class="ulink" href="http://www.kernel.org/doc/Documentation/md.txt" target="_top">Documentation/md.txt</a></code>
          file shipped with the kernel sources.
 </p>
-<p class="since">Since 2.1</p>
+<p class="since">Since 2.0.0</p>
 </div>
 </div>
 </div>

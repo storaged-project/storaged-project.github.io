@@ -103,9 +103,9 @@
 <a name="storaged-log"></a><h3>storaged_log ()</h3>
 <pre class="programlisting"><span class="returnvalue">void</span>
 storaged_log (<em class="parameter"><code><a class="link" href="storaged-Logging.html#StoragedLogLevel" title="enum StoragedLogLevel"><span class="type">StoragedLogLevel</span></a> level</code></em>,
-              <em class="parameter"><code>const <span class="type">gchar</span> *function</code></em>,
-              <em class="parameter"><code>const <span class="type">gchar</span> *location</code></em>,
-              <em class="parameter"><code>const <span class="type">gchar</span> *format</code></em>,
+              <em class="parameter"><code>const <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *function</code></em>,
+              <em class="parameter"><code>const <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *location</code></em>,
+              <em class="parameter"><code>const <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *format</code></em>,
               <em class="parameter"><code>...</code></em>);</pre>
 <p>Low-level logging function used by <a class="link" href="storaged-Logging.html#storaged-debug" title="storaged_debug()"><code class="function">storaged_debug()</code></a> and other macros.</p>
 <div class="refsect3">
@@ -124,12 +124,12 @@ storaged_log (<em class="parameter"><code><a class="link" href="storaged-Logging
 </tr>
 <tr>
 <td class="parameter_name"><p>function</p></td>
-<td class="parameter_description"><p>Pass <span class="type">G_STRFUNC</span> here.</p></td>
+<td class="parameter_description"><p>Pass <a href="/usr/share/gtk-doc/html/glib/glib-Miscellaneous-Macros.html#G-STRFUNC:CAPS"><span class="type">G_STRFUNC</span></a> here.</p></td>
 <td class="parameter_annotations"> </td>
 </tr>
 <tr>
 <td class="parameter_name"><p>location</p></td>
-<td class="parameter_description"><p>Pass <span class="type">G_STRLOC</span> here.</p></td>
+<td class="parameter_description"><p>Pass <a href="/usr/share/gtk-doc/html/glib/glib-Miscellaneous-Macros.html#G-STRLOC:CAPS"><span class="type">G_STRLOC</span></a> here.</p></td>
 <td class="parameter_annotations"> </td>
 </tr>
 <tr>
@@ -268,7 +268,7 @@ storaged_log (<em class="parameter"><code><a class="link" href="storaged-Logging
 <a name="StoragedLogLevel"></a><h3>enum StoragedLogLevel</h3>
 <p>Logging levels. The level <em class="parameter"><code>STORAGED_LOG_LEVEL_NOTICE</code></em>
  and above goes to syslog.</p>
-<p>Unlike <code class="function">g_warning()</code> and <code class="function">g_error()</code>, none of these logging levels causes the program to ever terminate.</p>
+<p>Unlike <a href="/usr/share/gtk-doc/html/glib/glib-Message-Logging.html#g-warning"><code class="function">g_warning()</code></a> and <a href="/usr/share/gtk-doc/html/glib/glib-Message-Logging.html#g-error"><code class="function">g_error()</code></a>, none of these logging levels causes the program to ever terminate.</p>
 <div class="refsect3">
 <a name="id-1.5.2.3.7.2.5"></a><h4>Members</h4>
 <div class="informaltable"><table width="100%" border="0">

@@ -73,6 +73,10 @@
 </dt>
 <dt>org.storaged.Storaged.Block.GetSecretConfiguration(), <a class="indexterm" href="gdbus-org.storaged.Storaged.Block.html#gdbus-method-org-storaged-Storaged-Block.GetSecretConfiguration">The GetSecretConfiguration() method</a>
 </dt>
+<dt>org.storaged.Storaged.Block.LVM2, <a class="indexterm" href="gdbus-org.storaged.Storaged.Block.LVM2.html#gdbus-interface-org-storaged-Storaged-Block-LVM2.top_of_page">org.storaged.Storaged.Block.LVM2</a>
+</dt>
+<dt>org.storaged.Storaged.Block.LVM2:LogicalVolume, <a class="indexterm" href="gdbus-org.storaged.Storaged.Block.LVM2.html#gdbus-property-org-storaged-Storaged-Block-LVM2.LogicalVolume">The "LogicalVolume" property</a>
+</dt>
 <dt>org.storaged.Storaged.Block.OpenForBackup(), <a class="indexterm" href="gdbus-org.storaged.Storaged.Block.html#gdbus-method-org-storaged-Storaged-Block.OpenForBackup">The OpenForBackup() method</a>
 </dt>
 <dt>org.storaged.Storaged.Block.OpenForBenchmark(), <a class="indexterm" href="gdbus-org.storaged.Storaged.Block.html#gdbus-method-org-storaged-Storaged-Block.OpenForBenchmark">The OpenForBenchmark() method</a>
@@ -200,6 +204,18 @@
 <dt>StoragedBlock:symlinks, <a class="indexterm" href="StoragedBlock.html#StoragedBlock--symlinks">The “symlinks” property</a>
 </dt>
 <dt>StoragedBlockIface, <a class="indexterm" href="StoragedBlock.html#StoragedBlockIface">struct StoragedBlockIface</a>
+</dt>
+<dt>StoragedBlockLVM2, <a class="indexterm" href="storaged-StoragedBlockLVM2.html#StoragedBlockLVM2">StoragedBlockLVM2</a>
+</dt>
+<dt>StoragedBlockLVM2Iface, <a class="indexterm" href="storaged-StoragedBlockLVM2.html#StoragedBlockLVM2Iface">struct StoragedBlockLVM2Iface</a>
+</dt>
+<dt>StoragedBlockLVM2Proxy, <a class="indexterm" href="storaged-StoragedBlockLVM2.html#StoragedBlockLVM2Proxy">struct StoragedBlockLVM2Proxy</a>
+</dt>
+<dt>StoragedBlockLVM2ProxyClass, <a class="indexterm" href="storaged-StoragedBlockLVM2.html#StoragedBlockLVM2ProxyClass">struct StoragedBlockLVM2ProxyClass</a>
+</dt>
+<dt>StoragedBlockLVM2Skeleton, <a class="indexterm" href="storaged-StoragedBlockLVM2.html#StoragedBlockLVM2Skeleton">struct StoragedBlockLVM2Skeleton</a>
+</dt>
+<dt>StoragedBlockLVM2SkeletonClass, <a class="indexterm" href="storaged-StoragedBlockLVM2.html#StoragedBlockLVM2SkeletonClass">struct StoragedBlockLVM2SkeletonClass</a>
 </dt>
 <dt>StoragedBlockProxy, <a class="indexterm" href="StoragedBlock.html#StoragedBlockProxy-struct">struct StoragedBlockProxy</a>
 </dt>
@@ -364,6 +380,24 @@
 <dt>storaged_block_get_symlinks, <a class="indexterm" href="StoragedBlock.html#storaged-block-get-symlinks">storaged_block_get_symlinks ()</a>
 </dt>
 <dt>storaged_block_interface_info, <a class="indexterm" href="StoragedBlock.html#storaged-block-interface-info">storaged_block_interface_info ()</a>
+</dt>
+<dt>storaged_block_lvm2_interface_info, <a class="indexterm" href="storaged-StoragedBlockLVM2.html#storaged-block-lvm2-interface-info">storaged_block_lvm2_interface_info ()</a>
+</dt>
+<dt>storaged_block_lvm2_override_properties, <a class="indexterm" href="storaged-StoragedBlockLVM2.html#storaged-block-lvm2-override-properties">storaged_block_lvm2_override_properties ()</a>
+</dt>
+<dt>storaged_block_lvm2_proxy_new, <a class="indexterm" href="storaged-StoragedBlockLVM2.html#storaged-block-lvm2-proxy-new">storaged_block_lvm2_proxy_new ()</a>
+</dt>
+<dt>storaged_block_lvm2_proxy_new_finish, <a class="indexterm" href="storaged-StoragedBlockLVM2.html#storaged-block-lvm2-proxy-new-finish">storaged_block_lvm2_proxy_new_finish ()</a>
+</dt>
+<dt>storaged_block_lvm2_proxy_new_for_bus, <a class="indexterm" href="storaged-StoragedBlockLVM2.html#storaged-block-lvm2-proxy-new-for-bus">storaged_block_lvm2_proxy_new_for_bus ()</a>
+</dt>
+<dt>storaged_block_lvm2_proxy_new_for_bus_finish, <a class="indexterm" href="storaged-StoragedBlockLVM2.html#storaged-block-lvm2-proxy-new-for-bus-finish">storaged_block_lvm2_proxy_new_for_bus_finish ()</a>
+</dt>
+<dt>storaged_block_lvm2_proxy_new_for_bus_sync, <a class="indexterm" href="storaged-StoragedBlockLVM2.html#storaged-block-lvm2-proxy-new-for-bus-sync">storaged_block_lvm2_proxy_new_for_bus_sync ()</a>
+</dt>
+<dt>storaged_block_lvm2_proxy_new_sync, <a class="indexterm" href="storaged-StoragedBlockLVM2.html#storaged-block-lvm2-proxy-new-sync">storaged_block_lvm2_proxy_new_sync ()</a>
+</dt>
+<dt>storaged_block_lvm2_skeleton_new, <a class="indexterm" href="storaged-StoragedBlockLVM2.html#storaged-block-lvm2-skeleton-new">storaged_block_lvm2_skeleton_new ()</a>
 </dt>
 <dt>storaged_block_override_properties, <a class="indexterm" href="StoragedBlock.html#storaged-block-override-properties">storaged_block_override_properties ()</a>
 </dt>
@@ -1646,7 +1680,7 @@
 </dt>
 <dt>StoragedLinuxDrive, <a class="indexterm" href="StoragedLinuxDrive.html#StoragedLinuxDrive-struct">StoragedLinuxDrive</a>
 </dt>
-<dt>StoragedLinuxDriveAta, <a class="indexterm" href="StoragedLinuxDriveAta.html#StoragedLinuxDriveAta-struct">StoragedLinuxDriveAta</a>
+<dt>StoragedLinuxDriveAta, <a class="indexterm" href="storaged-DummyLinuxBlock.html#StoragedLinuxDriveAta-struct">StoragedLinuxDriveAta</a>
 </dt>
 <dt>StoragedLinuxDriveObject, <a class="indexterm" href="StoragedLinuxDriveObject.html#StoragedLinuxDriveObject-struct">StoragedLinuxDriveObject</a>
 </dt>
@@ -1700,17 +1734,17 @@
 </dt>
 <dt>storaged_linux_device_reprobe_sync, <a class="indexterm" href="StoragedLinuxDevice.html#storaged-linux-device-reprobe-sync">storaged_linux_device_reprobe_sync ()</a>
 </dt>
-<dt>storaged_linux_drive_ata_apply_configuration, <a class="indexterm" href="StoragedLinuxDriveAta.html#storaged-linux-drive-ata-apply-configuration">storaged_linux_drive_ata_apply_configuration ()</a>
+<dt>storaged_linux_drive_ata_apply_configuration, <a class="indexterm" href="storaged-DummyLinuxBlock.html#storaged-linux-drive-ata-apply-configuration">storaged_linux_drive_ata_apply_configuration ()</a>
 </dt>
-<dt>storaged_linux_drive_ata_new, <a class="indexterm" href="StoragedLinuxDriveAta.html#storaged-linux-drive-ata-new">storaged_linux_drive_ata_new ()</a>
+<dt>storaged_linux_drive_ata_new, <a class="indexterm" href="storaged-DummyLinuxBlock.html#storaged-linux-drive-ata-new">storaged_linux_drive_ata_new ()</a>
 </dt>
-<dt>storaged_linux_drive_ata_refresh_smart_sync, <a class="indexterm" href="StoragedLinuxDriveAta.html#storaged-linux-drive-ata-refresh-smart-sync">storaged_linux_drive_ata_refresh_smart_sync ()</a>
+<dt>storaged_linux_drive_ata_refresh_smart_sync, <a class="indexterm" href="storaged-DummyLinuxBlock.html#storaged-linux-drive-ata-refresh-smart-sync">storaged_linux_drive_ata_refresh_smart_sync ()</a>
 </dt>
-<dt>storaged_linux_drive_ata_secure_erase_sync, <a class="indexterm" href="StoragedLinuxDriveAta.html#storaged-linux-drive-ata-secure-erase-sync">storaged_linux_drive_ata_secure_erase_sync ()</a>
+<dt>storaged_linux_drive_ata_secure_erase_sync, <a class="indexterm" href="storaged-DummyLinuxBlock.html#storaged-linux-drive-ata-secure-erase-sync">storaged_linux_drive_ata_secure_erase_sync ()</a>
 </dt>
-<dt>storaged_linux_drive_ata_smart_selftest_sync, <a class="indexterm" href="StoragedLinuxDriveAta.html#storaged-linux-drive-ata-smart-selftest-sync">storaged_linux_drive_ata_smart_selftest_sync ()</a>
+<dt>storaged_linux_drive_ata_smart_selftest_sync, <a class="indexterm" href="storaged-DummyLinuxBlock.html#storaged-linux-drive-ata-smart-selftest-sync">storaged_linux_drive_ata_smart_selftest_sync ()</a>
 </dt>
-<dt>storaged_linux_drive_ata_update, <a class="indexterm" href="StoragedLinuxDriveAta.html#storaged-linux-drive-ata-update">storaged_linux_drive_ata_update ()</a>
+<dt>storaged_linux_drive_ata_update, <a class="indexterm" href="storaged-DummyLinuxBlock.html#storaged-linux-drive-ata-update">storaged_linux_drive_ata_update ()</a>
 </dt>
 <dt>storaged_linux_drive_new, <a class="indexterm" href="StoragedLinuxDrive.html#storaged-linux-drive-new">storaged_linux_drive_new ()</a>
 </dt>
@@ -1789,6 +1823,118 @@
 <dt>storaged_linux_swapspace_update, <a class="indexterm" href="StoragedLinuxSwapspace.html#storaged-linux-swapspace-update">storaged_linux_swapspace_update ()</a>
 </dt>
 <dt>storaged_log, <a class="indexterm" href="storaged-Logging.html#storaged-log">storaged_log ()</a>
+</dt>
+<dt>org.storaged.Storaged.LogicalVolume, <a class="indexterm" href="gdbus-org.storaged.Storaged.LogicalVolume.html#gdbus-interface-org-storaged-Storaged-LogicalVolume.top_of_page">org.storaged.Storaged.LogicalVolume</a>
+</dt>
+<dt>StoragedLogicalVolume, <a class="indexterm" href="storaged-StoragedLogicalVolume.html#StoragedLogicalVolume">StoragedLogicalVolume</a>
+</dt>
+<dt>org.storaged.Storaged.LogicalVolume.Activate(), <a class="indexterm" href="gdbus-org.storaged.Storaged.LogicalVolume.html#gdbus-method-org-storaged-Storaged-LogicalVolume.Activate">The Activate() method</a>
+</dt>
+<dt>org.storaged.Storaged.LogicalVolume.CreateSnapshot(), <a class="indexterm" href="gdbus-org.storaged.Storaged.LogicalVolume.html#gdbus-method-org-storaged-Storaged-LogicalVolume.CreateSnapshot">The CreateSnapshot() method</a>
+</dt>
+<dt>org.storaged.Storaged.LogicalVolume.Deactivate(), <a class="indexterm" href="gdbus-org.storaged.Storaged.LogicalVolume.html#gdbus-method-org-storaged-Storaged-LogicalVolume.Deactivate">The Deactivate() method</a>
+</dt>
+<dt>org.storaged.Storaged.LogicalVolume.Delete(), <a class="indexterm" href="gdbus-org.storaged.Storaged.LogicalVolume.html#gdbus-method-org-storaged-Storaged-LogicalVolume.Delete">The Delete() method</a>
+</dt>
+<dt>org.storaged.Storaged.LogicalVolume.Rename(), <a class="indexterm" href="gdbus-org.storaged.Storaged.LogicalVolume.html#gdbus-method-org-storaged-Storaged-LogicalVolume.Rename">The Rename() method</a>
+</dt>
+<dt>org.storaged.Storaged.LogicalVolume.Resize(), <a class="indexterm" href="gdbus-org.storaged.Storaged.LogicalVolume.html#gdbus-method-org-storaged-Storaged-LogicalVolume.Resize">The Resize() method</a>
+</dt>
+<dt>org.storaged.Storaged.LogicalVolume:Active, <a class="indexterm" href="gdbus-org.storaged.Storaged.LogicalVolume.html#gdbus-property-org-storaged-Storaged-LogicalVolume.Active">The "Active" property</a>
+</dt>
+<dt>org.storaged.Storaged.LogicalVolume:DataAllocatedRatio, <a class="indexterm" href="gdbus-org.storaged.Storaged.LogicalVolume.html#gdbus-property-org-storaged-Storaged-LogicalVolume.DataAllocatedRatio">The "DataAllocatedRatio" property</a>
+</dt>
+<dt>org.storaged.Storaged.LogicalVolume:MetadataAllocatedRatio, <a class="indexterm" href="gdbus-org.storaged.Storaged.LogicalVolume.html#gdbus-property-org-storaged-Storaged-LogicalVolume.MetadataAllocatedRatio">The "MetadataAllocatedRatio" property</a>
+</dt>
+<dt>org.storaged.Storaged.LogicalVolume:Name, <a class="indexterm" href="gdbus-org.storaged.Storaged.LogicalVolume.html#gdbus-property-org-storaged-Storaged-LogicalVolume.Name">The "Name" property</a>
+</dt>
+<dt>org.storaged.Storaged.LogicalVolume:Origin, <a class="indexterm" href="gdbus-org.storaged.Storaged.LogicalVolume.html#gdbus-property-org-storaged-Storaged-LogicalVolume.Origin">The "Origin" property</a>
+</dt>
+<dt>org.storaged.Storaged.LogicalVolume:Size, <a class="indexterm" href="gdbus-org.storaged.Storaged.LogicalVolume.html#gdbus-property-org-storaged-Storaged-LogicalVolume.Size">The "Size" property</a>
+</dt>
+<dt>org.storaged.Storaged.LogicalVolume:ThinPool, <a class="indexterm" href="gdbus-org.storaged.Storaged.LogicalVolume.html#gdbus-property-org-storaged-Storaged-LogicalVolume.ThinPool">The "ThinPool" property</a>
+</dt>
+<dt>org.storaged.Storaged.LogicalVolume:Type, <a class="indexterm" href="gdbus-org.storaged.Storaged.LogicalVolume.html#gdbus-property-org-storaged-Storaged-LogicalVolume.Type">The "Type" property</a>
+</dt>
+<dt>org.storaged.Storaged.LogicalVolume:UUID, <a class="indexterm" href="gdbus-org.storaged.Storaged.LogicalVolume.html#gdbus-property-org-storaged-Storaged-LogicalVolume.UUID">The "UUID" property</a>
+</dt>
+<dt>org.storaged.Storaged.LogicalVolume:VolumeGroup, <a class="indexterm" href="gdbus-org.storaged.Storaged.LogicalVolume.html#gdbus-property-org-storaged-Storaged-LogicalVolume.VolumeGroup">The "VolumeGroup" property</a>
+</dt>
+<dt>StoragedLogicalVolumeIface, <a class="indexterm" href="storaged-StoragedLogicalVolume.html#StoragedLogicalVolumeIface">struct StoragedLogicalVolumeIface</a>
+</dt>
+<dt>StoragedLogicalVolumeProxy, <a class="indexterm" href="storaged-StoragedLogicalVolume.html#StoragedLogicalVolumeProxy">struct StoragedLogicalVolumeProxy</a>
+</dt>
+<dt>StoragedLogicalVolumeProxyClass, <a class="indexterm" href="storaged-StoragedLogicalVolume.html#StoragedLogicalVolumeProxyClass">struct StoragedLogicalVolumeProxyClass</a>
+</dt>
+<dt>StoragedLogicalVolumeSkeleton, <a class="indexterm" href="storaged-StoragedLogicalVolume.html#StoragedLogicalVolumeSkeleton">struct StoragedLogicalVolumeSkeleton</a>
+</dt>
+<dt>StoragedLogicalVolumeSkeletonClass, <a class="indexterm" href="storaged-StoragedLogicalVolume.html#StoragedLogicalVolumeSkeletonClass">struct StoragedLogicalVolumeSkeletonClass</a>
+</dt>
+<dt>storaged_logical_volume_call_activate, <a class="indexterm" href="storaged-StoragedLogicalVolume.html#storaged-logical-volume-call-activate">storaged_logical_volume_call_activate ()</a>
+</dt>
+<dt>storaged_logical_volume_call_activate_finish, <a class="indexterm" href="storaged-StoragedLogicalVolume.html#storaged-logical-volume-call-activate-finish">storaged_logical_volume_call_activate_finish ()</a>
+</dt>
+<dt>storaged_logical_volume_call_activate_sync, <a class="indexterm" href="storaged-StoragedLogicalVolume.html#storaged-logical-volume-call-activate-sync">storaged_logical_volume_call_activate_sync ()</a>
+</dt>
+<dt>storaged_logical_volume_call_create_snapshot, <a class="indexterm" href="storaged-StoragedLogicalVolume.html#storaged-logical-volume-call-create-snapshot">storaged_logical_volume_call_create_snapshot ()</a>
+</dt>
+<dt>storaged_logical_volume_call_create_snapshot_finish, <a class="indexterm" href="storaged-StoragedLogicalVolume.html#storaged-logical-volume-call-create-snapshot-finish">storaged_logical_volume_call_create_snapshot_finish ()</a>
+</dt>
+<dt>storaged_logical_volume_call_create_snapshot_sync, <a class="indexterm" href="storaged-StoragedLogicalVolume.html#storaged-logical-volume-call-create-snapshot-sync">storaged_logical_volume_call_create_snapshot_sync ()</a>
+</dt>
+<dt>storaged_logical_volume_call_deactivate, <a class="indexterm" href="storaged-StoragedLogicalVolume.html#storaged-logical-volume-call-deactivate">storaged_logical_volume_call_deactivate ()</a>
+</dt>
+<dt>storaged_logical_volume_call_deactivate_finish, <a class="indexterm" href="storaged-StoragedLogicalVolume.html#storaged-logical-volume-call-deactivate-finish">storaged_logical_volume_call_deactivate_finish ()</a>
+</dt>
+<dt>storaged_logical_volume_call_deactivate_sync, <a class="indexterm" href="storaged-StoragedLogicalVolume.html#storaged-logical-volume-call-deactivate-sync">storaged_logical_volume_call_deactivate_sync ()</a>
+</dt>
+<dt>storaged_logical_volume_call_delete, <a class="indexterm" href="storaged-StoragedLogicalVolume.html#storaged-logical-volume-call-delete">storaged_logical_volume_call_delete ()</a>
+</dt>
+<dt>storaged_logical_volume_call_delete_finish, <a class="indexterm" href="storaged-StoragedLogicalVolume.html#storaged-logical-volume-call-delete-finish">storaged_logical_volume_call_delete_finish ()</a>
+</dt>
+<dt>storaged_logical_volume_call_delete_sync, <a class="indexterm" href="storaged-StoragedLogicalVolume.html#storaged-logical-volume-call-delete-sync">storaged_logical_volume_call_delete_sync ()</a>
+</dt>
+<dt>storaged_logical_volume_call_rename, <a class="indexterm" href="storaged-StoragedLogicalVolume.html#storaged-logical-volume-call-rename">storaged_logical_volume_call_rename ()</a>
+</dt>
+<dt>storaged_logical_volume_call_rename_finish, <a class="indexterm" href="storaged-StoragedLogicalVolume.html#storaged-logical-volume-call-rename-finish">storaged_logical_volume_call_rename_finish ()</a>
+</dt>
+<dt>storaged_logical_volume_call_rename_sync, <a class="indexterm" href="storaged-StoragedLogicalVolume.html#storaged-logical-volume-call-rename-sync">storaged_logical_volume_call_rename_sync ()</a>
+</dt>
+<dt>storaged_logical_volume_call_resize, <a class="indexterm" href="storaged-StoragedLogicalVolume.html#storaged-logical-volume-call-resize">storaged_logical_volume_call_resize ()</a>
+</dt>
+<dt>storaged_logical_volume_call_resize_finish, <a class="indexterm" href="storaged-StoragedLogicalVolume.html#storaged-logical-volume-call-resize-finish">storaged_logical_volume_call_resize_finish ()</a>
+</dt>
+<dt>storaged_logical_volume_call_resize_sync, <a class="indexterm" href="storaged-StoragedLogicalVolume.html#storaged-logical-volume-call-resize-sync">storaged_logical_volume_call_resize_sync ()</a>
+</dt>
+<dt>storaged_logical_volume_complete_activate, <a class="indexterm" href="storaged-StoragedLogicalVolume.html#storaged-logical-volume-complete-activate">storaged_logical_volume_complete_activate ()</a>
+</dt>
+<dt>storaged_logical_volume_complete_create_snapshot, <a class="indexterm" href="storaged-StoragedLogicalVolume.html#storaged-logical-volume-complete-create-snapshot">storaged_logical_volume_complete_create_snapshot ()</a>
+</dt>
+<dt>storaged_logical_volume_complete_deactivate, <a class="indexterm" href="storaged-StoragedLogicalVolume.html#storaged-logical-volume-complete-deactivate">storaged_logical_volume_complete_deactivate ()</a>
+</dt>
+<dt>storaged_logical_volume_complete_delete, <a class="indexterm" href="storaged-StoragedLogicalVolume.html#storaged-logical-volume-complete-delete">storaged_logical_volume_complete_delete ()</a>
+</dt>
+<dt>storaged_logical_volume_complete_rename, <a class="indexterm" href="storaged-StoragedLogicalVolume.html#storaged-logical-volume-complete-rename">storaged_logical_volume_complete_rename ()</a>
+</dt>
+<dt>storaged_logical_volume_complete_resize, <a class="indexterm" href="storaged-StoragedLogicalVolume.html#storaged-logical-volume-complete-resize">storaged_logical_volume_complete_resize ()</a>
+</dt>
+<dt>storaged_logical_volume_interface_info, <a class="indexterm" href="storaged-StoragedLogicalVolume.html#storaged-logical-volume-interface-info">storaged_logical_volume_interface_info ()</a>
+</dt>
+<dt>storaged_logical_volume_override_properties, <a class="indexterm" href="storaged-StoragedLogicalVolume.html#storaged-logical-volume-override-properties">storaged_logical_volume_override_properties ()</a>
+</dt>
+<dt>storaged_logical_volume_proxy_new, <a class="indexterm" href="storaged-StoragedLogicalVolume.html#storaged-logical-volume-proxy-new">storaged_logical_volume_proxy_new ()</a>
+</dt>
+<dt>storaged_logical_volume_proxy_new_finish, <a class="indexterm" href="storaged-StoragedLogicalVolume.html#storaged-logical-volume-proxy-new-finish">storaged_logical_volume_proxy_new_finish ()</a>
+</dt>
+<dt>storaged_logical_volume_proxy_new_for_bus, <a class="indexterm" href="storaged-StoragedLogicalVolume.html#storaged-logical-volume-proxy-new-for-bus">storaged_logical_volume_proxy_new_for_bus ()</a>
+</dt>
+<dt>storaged_logical_volume_proxy_new_for_bus_finish, <a class="indexterm" href="storaged-StoragedLogicalVolume.html#storaged-logical-volume-proxy-new-for-bus-finish">storaged_logical_volume_proxy_new_for_bus_finish ()</a>
+</dt>
+<dt>storaged_logical_volume_proxy_new_for_bus_sync, <a class="indexterm" href="storaged-StoragedLogicalVolume.html#storaged-logical-volume-proxy-new-for-bus-sync">storaged_logical_volume_proxy_new_for_bus_sync ()</a>
+</dt>
+<dt>storaged_logical_volume_proxy_new_sync, <a class="indexterm" href="storaged-StoragedLogicalVolume.html#storaged-logical-volume-proxy-new-sync">storaged_logical_volume_proxy_new_sync ()</a>
+</dt>
+<dt>storaged_logical_volume_skeleton_new, <a class="indexterm" href="storaged-StoragedLogicalVolume.html#storaged-logical-volume-skeleton-new">storaged_logical_volume_skeleton_new ()</a>
 </dt>
 <dt>StoragedLogLevel, <a class="indexterm" href="storaged-Logging.html#StoragedLogLevel">enum StoragedLogLevel</a>
 </dt>
@@ -1889,6 +2035,10 @@
 </dt>
 <dt>org.storaged.Storaged.Manager.LoopSetup(), <a class="indexterm" href="gdbus-org.storaged.Storaged.Manager.html#gdbus-method-org-storaged-Storaged-Manager.LoopSetup">The LoopSetup() method</a>
 </dt>
+<dt>org.storaged.Storaged.Manager.LVM2, <a class="indexterm" href="gdbus-org.storaged.Storaged.Manager.LVM2.html#gdbus-interface-org-storaged-Storaged-Manager-LVM2.top_of_page">org.storaged.Storaged.Manager.LVM2</a>
+</dt>
+<dt>org.storaged.Storaged.Manager.LVM2.VolumeGroupCreate(), <a class="indexterm" href="gdbus-org.storaged.Storaged.Manager.LVM2.html#gdbus-method-org-storaged-Storaged-Manager-LVM2.VolumeGroupCreate">The VolumeGroupCreate() method</a>
+</dt>
 <dt>org.storaged.Storaged.Manager.MDRaidCreate(), <a class="indexterm" href="gdbus-org.storaged.Storaged.Manager.html#gdbus-method-org-storaged-Storaged-Manager.MDRaidCreate">The MDRaidCreate() method</a>
 </dt>
 <dt>StoragedManager::handle-enable-modules, <a class="indexterm" href="StoragedManager.html#StoragedManager-handle-enable-modules">The “handle-enable-modules” signal</a>
@@ -1902,6 +2052,18 @@
 <dt>StoragedManager:version, <a class="indexterm" href="StoragedManager.html#StoragedManager--version">The “version” property</a>
 </dt>
 <dt>StoragedManagerIface, <a class="indexterm" href="StoragedManager.html#StoragedManagerIface">struct StoragedManagerIface</a>
+</dt>
+<dt>StoragedManagerLVM2, <a class="indexterm" href="StoragedManagerLVM2.html#StoragedManagerLVM2-struct">StoragedManagerLVM2</a>
+</dt>
+<dt>StoragedManagerLVM2Iface, <a class="indexterm" href="StoragedManagerLVM2.html#StoragedManagerLVM2Iface">struct StoragedManagerLVM2Iface</a>
+</dt>
+<dt>StoragedManagerLVM2Proxy, <a class="indexterm" href="StoragedManagerLVM2.html#StoragedManagerLVM2Proxy-struct">struct StoragedManagerLVM2Proxy</a>
+</dt>
+<dt>StoragedManagerLVM2ProxyClass, <a class="indexterm" href="StoragedManagerLVM2.html#StoragedManagerLVM2ProxyClass">struct StoragedManagerLVM2ProxyClass</a>
+</dt>
+<dt>StoragedManagerLVM2Skeleton, <a class="indexterm" href="StoragedManagerLVM2.html#StoragedManagerLVM2Skeleton">struct StoragedManagerLVM2Skeleton</a>
+</dt>
+<dt>StoragedManagerLVM2SkeletonClass, <a class="indexterm" href="StoragedManagerLVM2.html#StoragedManagerLVM2SkeletonClass">struct StoragedManagerLVM2SkeletonClass</a>
 </dt>
 <dt>StoragedManagerProxy, <a class="indexterm" href="StoragedManager.html#StoragedManagerProxy-struct">struct StoragedManagerProxy</a>
 </dt>
@@ -1940,6 +2102,32 @@
 <dt>storaged_manager_get_version, <a class="indexterm" href="StoragedManager.html#storaged-manager-get-version">storaged_manager_get_version ()</a>
 </dt>
 <dt>storaged_manager_interface_info, <a class="indexterm" href="StoragedManager.html#storaged-manager-interface-info">storaged_manager_interface_info ()</a>
+</dt>
+<dt>storaged_manager_lvm2_call_volume_group_create, <a class="indexterm" href="StoragedManagerLVM2.html#storaged-manager-lvm2-call-volume-group-create">storaged_manager_lvm2_call_volume_group_create ()</a>, <a class="indexterm" href="StoragedManagerLVM2.html#storaged-manager-lvm2-call-volume-group-create">storaged_manager_lvm2_call_volume_group_create ()</a>
+</dt>
+<dt>storaged_manager_lvm2_call_volume_group_create_finish, <a class="indexterm" href="StoragedManagerLVM2.html#storaged-manager-lvm2-call-volume-group-create-finish">storaged_manager_lvm2_call_volume_group_create_finish ()</a>, <a class="indexterm" href="StoragedManagerLVM2.html#storaged-manager-lvm2-call-volume-group-create-finish">storaged_manager_lvm2_call_volume_group_create_finish ()</a>
+</dt>
+<dt>storaged_manager_lvm2_call_volume_group_create_sync, <a class="indexterm" href="StoragedManagerLVM2.html#storaged-manager-lvm2-call-volume-group-create-sync">storaged_manager_lvm2_call_volume_group_create_sync ()</a>, <a class="indexterm" href="StoragedManagerLVM2.html#storaged-manager-lvm2-call-volume-group-create-sync">storaged_manager_lvm2_call_volume_group_create_sync ()</a>
+</dt>
+<dt>storaged_manager_lvm2_complete_volume_group_create, <a class="indexterm" href="StoragedManagerLVM2.html#storaged-manager-lvm2-complete-volume-group-create">storaged_manager_lvm2_complete_volume_group_create ()</a>, <a class="indexterm" href="StoragedManagerLVM2.html#storaged-manager-lvm2-complete-volume-group-create">storaged_manager_lvm2_complete_volume_group_create ()</a>
+</dt>
+<dt>storaged_manager_lvm2_interface_info, <a class="indexterm" href="StoragedManagerLVM2.html#storaged-manager-lvm2-interface-info">storaged_manager_lvm2_interface_info ()</a>
+</dt>
+<dt>storaged_manager_lvm2_override_properties, <a class="indexterm" href="StoragedManagerLVM2.html#storaged-manager-lvm2-override-properties">storaged_manager_lvm2_override_properties ()</a>
+</dt>
+<dt>storaged_manager_lvm2_proxy_new, <a class="indexterm" href="StoragedManagerLVM2.html#storaged-manager-lvm2-proxy-new">storaged_manager_lvm2_proxy_new ()</a>
+</dt>
+<dt>storaged_manager_lvm2_proxy_new_finish, <a class="indexterm" href="StoragedManagerLVM2.html#storaged-manager-lvm2-proxy-new-finish">storaged_manager_lvm2_proxy_new_finish ()</a>
+</dt>
+<dt>storaged_manager_lvm2_proxy_new_for_bus, <a class="indexterm" href="StoragedManagerLVM2.html#storaged-manager-lvm2-proxy-new-for-bus">storaged_manager_lvm2_proxy_new_for_bus ()</a>
+</dt>
+<dt>storaged_manager_lvm2_proxy_new_for_bus_finish, <a class="indexterm" href="StoragedManagerLVM2.html#storaged-manager-lvm2-proxy-new-for-bus-finish">storaged_manager_lvm2_proxy_new_for_bus_finish ()</a>
+</dt>
+<dt>storaged_manager_lvm2_proxy_new_for_bus_sync, <a class="indexterm" href="StoragedManagerLVM2.html#storaged-manager-lvm2-proxy-new-for-bus-sync">storaged_manager_lvm2_proxy_new_for_bus_sync ()</a>
+</dt>
+<dt>storaged_manager_lvm2_proxy_new_sync, <a class="indexterm" href="StoragedManagerLVM2.html#storaged-manager-lvm2-proxy-new-sync">storaged_manager_lvm2_proxy_new_sync ()</a>
+</dt>
+<dt>storaged_manager_lvm2_skeleton_new, <a class="indexterm" href="StoragedManagerLVM2.html#storaged-manager-lvm2-skeleton-new">storaged_manager_lvm2_skeleton_new ()</a>
 </dt>
 <dt>storaged_manager_override_properties, <a class="indexterm" href="StoragedManager.html#storaged-manager-override-properties">storaged_manager_override_properties ()</a>
 </dt>
@@ -2618,6 +2806,44 @@
 </dt>
 <dt>storaged_partition_type_info_free, <a class="indexterm" href="StoragedClient.html#storaged-partition-type-info-free">storaged_partition_type_info_free ()</a>
 </dt>
+<dt>org.storaged.Storaged.PhysicalVolume, <a class="indexterm" href="gdbus-org.storaged.Storaged.PhysicalVolume.html#gdbus-interface-org-storaged-Storaged-PhysicalVolume.top_of_page">org.storaged.Storaged.PhysicalVolume</a>
+</dt>
+<dt>StoragedPhysicalVolume, <a class="indexterm" href="storaged-StoragedPhysicalVolume.html#StoragedPhysicalVolume">StoragedPhysicalVolume</a>
+</dt>
+<dt>org.storaged.Storaged.PhysicalVolume:FreeSize, <a class="indexterm" href="gdbus-org.storaged.Storaged.PhysicalVolume.html#gdbus-property-org-storaged-Storaged-PhysicalVolume.FreeSize">The "FreeSize" property</a>
+</dt>
+<dt>org.storaged.Storaged.PhysicalVolume:Size, <a class="indexterm" href="gdbus-org.storaged.Storaged.PhysicalVolume.html#gdbus-property-org-storaged-Storaged-PhysicalVolume.Size">The "Size" property</a>
+</dt>
+<dt>org.storaged.Storaged.PhysicalVolume:VolumeGroup, <a class="indexterm" href="gdbus-org.storaged.Storaged.PhysicalVolume.html#gdbus-property-org-storaged-Storaged-PhysicalVolume.VolumeGroup">The "VolumeGroup" property</a>
+</dt>
+<dt>StoragedPhysicalVolumeIface, <a class="indexterm" href="storaged-StoragedPhysicalVolume.html#StoragedPhysicalVolumeIface">struct StoragedPhysicalVolumeIface</a>
+</dt>
+<dt>StoragedPhysicalVolumeProxy, <a class="indexterm" href="storaged-StoragedPhysicalVolume.html#StoragedPhysicalVolumeProxy">struct StoragedPhysicalVolumeProxy</a>
+</dt>
+<dt>StoragedPhysicalVolumeProxyClass, <a class="indexterm" href="storaged-StoragedPhysicalVolume.html#StoragedPhysicalVolumeProxyClass">struct StoragedPhysicalVolumeProxyClass</a>
+</dt>
+<dt>StoragedPhysicalVolumeSkeleton, <a class="indexterm" href="storaged-StoragedPhysicalVolume.html#StoragedPhysicalVolumeSkeleton">struct StoragedPhysicalVolumeSkeleton</a>
+</dt>
+<dt>StoragedPhysicalVolumeSkeletonClass, <a class="indexterm" href="storaged-StoragedPhysicalVolume.html#StoragedPhysicalVolumeSkeletonClass">struct StoragedPhysicalVolumeSkeletonClass</a>
+</dt>
+<dt>storaged_physical_volume_interface_info, <a class="indexterm" href="storaged-StoragedPhysicalVolume.html#storaged-physical-volume-interface-info">storaged_physical_volume_interface_info ()</a>
+</dt>
+<dt>storaged_physical_volume_override_properties, <a class="indexterm" href="storaged-StoragedPhysicalVolume.html#storaged-physical-volume-override-properties">storaged_physical_volume_override_properties ()</a>
+</dt>
+<dt>storaged_physical_volume_proxy_new, <a class="indexterm" href="storaged-StoragedPhysicalVolume.html#storaged-physical-volume-proxy-new">storaged_physical_volume_proxy_new ()</a>
+</dt>
+<dt>storaged_physical_volume_proxy_new_finish, <a class="indexterm" href="storaged-StoragedPhysicalVolume.html#storaged-physical-volume-proxy-new-finish">storaged_physical_volume_proxy_new_finish ()</a>
+</dt>
+<dt>storaged_physical_volume_proxy_new_for_bus, <a class="indexterm" href="storaged-StoragedPhysicalVolume.html#storaged-physical-volume-proxy-new-for-bus">storaged_physical_volume_proxy_new_for_bus ()</a>
+</dt>
+<dt>storaged_physical_volume_proxy_new_for_bus_finish, <a class="indexterm" href="storaged-StoragedPhysicalVolume.html#storaged-physical-volume-proxy-new-for-bus-finish">storaged_physical_volume_proxy_new_for_bus_finish ()</a>
+</dt>
+<dt>storaged_physical_volume_proxy_new_for_bus_sync, <a class="indexterm" href="storaged-StoragedPhysicalVolume.html#storaged-physical-volume-proxy-new-for-bus-sync">storaged_physical_volume_proxy_new_for_bus_sync ()</a>
+</dt>
+<dt>storaged_physical_volume_proxy_new_sync, <a class="indexterm" href="storaged-StoragedPhysicalVolume.html#storaged-physical-volume-proxy-new-sync">storaged_physical_volume_proxy_new_sync ()</a>
+</dt>
+<dt>storaged_physical_volume_skeleton_new, <a class="indexterm" href="storaged-StoragedPhysicalVolume.html#storaged-physical-volume-skeleton-new">storaged_physical_volume_skeleton_new ()</a>
+</dt>
 <dt>StoragedProvider, <a class="indexterm" href="StoragedProvider.html#StoragedProvider-struct">StoragedProvider</a>
 </dt>
 <dt>StoragedProvider:daemon, <a class="indexterm" href="StoragedProvider.html#StoragedProvider--daemon">The “daemon” property</a>
@@ -2771,6 +2997,145 @@
 <dt>storaged_threaded_job_get_user_data, <a class="indexterm" href="StoragedThreadedJob.html#storaged-threaded-job-get-user-data">storaged_threaded_job_get_user_data ()</a>
 </dt>
 <dt>storaged_threaded_job_new, <a class="indexterm" href="StoragedThreadedJob.html#storaged-threaded-job-new">storaged_threaded_job_new ()</a>
+</dt>
+</dl>
+</div>
+<div class="indexdiv">
+<h3>V</h3>
+<dl>
+<dt>org.storaged.Storaged.VolumeGroup, <a class="indexterm" href="gdbus-org.storaged.Storaged.VolumeGroup.html#gdbus-interface-org-storaged-Storaged-VolumeGroup.top_of_page">org.storaged.Storaged.VolumeGroup</a>
+</dt>
+<dt>StoragedVolumeGroup, <a class="indexterm" href="storaged-StoragedVolumeGroup.html#StoragedVolumeGroup">StoragedVolumeGroup</a>
+</dt>
+<dt>org.storaged.Storaged.VolumeGroup.AddDevice(), <a class="indexterm" href="gdbus-org.storaged.Storaged.VolumeGroup.html#gdbus-method-org-storaged-Storaged-VolumeGroup.AddDevice">The AddDevice() method</a>
+</dt>
+<dt>org.storaged.Storaged.VolumeGroup.CreatePlainVolume(), <a class="indexterm" href="gdbus-org.storaged.Storaged.VolumeGroup.html#gdbus-method-org-storaged-Storaged-VolumeGroup.CreatePlainVolume">The CreatePlainVolume() method</a>
+</dt>
+<dt>org.storaged.Storaged.VolumeGroup.CreateThinPoolVolume(), <a class="indexterm" href="gdbus-org.storaged.Storaged.VolumeGroup.html#gdbus-method-org-storaged-Storaged-VolumeGroup.CreateThinPoolVolume">The CreateThinPoolVolume() method</a>
+</dt>
+<dt>org.storaged.Storaged.VolumeGroup.CreateThinVolume(), <a class="indexterm" href="gdbus-org.storaged.Storaged.VolumeGroup.html#gdbus-method-org-storaged-Storaged-VolumeGroup.CreateThinVolume">The CreateThinVolume() method</a>
+</dt>
+<dt>org.storaged.Storaged.VolumeGroup.Delete(), <a class="indexterm" href="gdbus-org.storaged.Storaged.VolumeGroup.html#gdbus-method-org-storaged-Storaged-VolumeGroup.Delete">The Delete() method</a>
+</dt>
+<dt>org.storaged.Storaged.VolumeGroup.EmptyDevice(), <a class="indexterm" href="gdbus-org.storaged.Storaged.VolumeGroup.html#gdbus-method-org-storaged-Storaged-VolumeGroup.EmptyDevice">The EmptyDevice() method</a>
+</dt>
+<dt>org.storaged.Storaged.VolumeGroup.Poll(), <a class="indexterm" href="gdbus-org.storaged.Storaged.VolumeGroup.html#gdbus-method-org-storaged-Storaged-VolumeGroup.Poll">The Poll() method</a>
+</dt>
+<dt>org.storaged.Storaged.VolumeGroup.RemoveDevice(), <a class="indexterm" href="gdbus-org.storaged.Storaged.VolumeGroup.html#gdbus-method-org-storaged-Storaged-VolumeGroup.RemoveDevice">The RemoveDevice() method</a>
+</dt>
+<dt>org.storaged.Storaged.VolumeGroup.Rename(), <a class="indexterm" href="gdbus-org.storaged.Storaged.VolumeGroup.html#gdbus-method-org-storaged-Storaged-VolumeGroup.Rename">The Rename() method</a>
+</dt>
+<dt>org.storaged.Storaged.VolumeGroup:ExtentSize, <a class="indexterm" href="gdbus-org.storaged.Storaged.VolumeGroup.html#gdbus-property-org-storaged-Storaged-VolumeGroup.ExtentSize">The "ExtentSize" property</a>
+</dt>
+<dt>org.storaged.Storaged.VolumeGroup:FreeSize, <a class="indexterm" href="gdbus-org.storaged.Storaged.VolumeGroup.html#gdbus-property-org-storaged-Storaged-VolumeGroup.FreeSize">The "FreeSize" property</a>
+</dt>
+<dt>org.storaged.Storaged.VolumeGroup:Name, <a class="indexterm" href="gdbus-org.storaged.Storaged.VolumeGroup.html#gdbus-property-org-storaged-Storaged-VolumeGroup.Name">The "Name" property</a>
+</dt>
+<dt>org.storaged.Storaged.VolumeGroup:NeedsPolling, <a class="indexterm" href="gdbus-org.storaged.Storaged.VolumeGroup.html#gdbus-property-org-storaged-Storaged-VolumeGroup.NeedsPolling">The "NeedsPolling" property</a>
+</dt>
+<dt>org.storaged.Storaged.VolumeGroup:Size, <a class="indexterm" href="gdbus-org.storaged.Storaged.VolumeGroup.html#gdbus-property-org-storaged-Storaged-VolumeGroup.Size">The "Size" property</a>
+</dt>
+<dt>org.storaged.Storaged.VolumeGroup:UUID, <a class="indexterm" href="gdbus-org.storaged.Storaged.VolumeGroup.html#gdbus-property-org-storaged-Storaged-VolumeGroup.UUID">The "UUID" property</a>
+</dt>
+<dt>StoragedVolumeGroupIface, <a class="indexterm" href="storaged-StoragedVolumeGroup.html#StoragedVolumeGroupIface">struct StoragedVolumeGroupIface</a>
+</dt>
+<dt>StoragedVolumeGroupProxy, <a class="indexterm" href="storaged-StoragedVolumeGroup.html#StoragedVolumeGroupProxy">struct StoragedVolumeGroupProxy</a>
+</dt>
+<dt>StoragedVolumeGroupProxyClass, <a class="indexterm" href="storaged-StoragedVolumeGroup.html#StoragedVolumeGroupProxyClass">struct StoragedVolumeGroupProxyClass</a>
+</dt>
+<dt>StoragedVolumeGroupSkeleton, <a class="indexterm" href="storaged-StoragedVolumeGroup.html#StoragedVolumeGroupSkeleton">struct StoragedVolumeGroupSkeleton</a>
+</dt>
+<dt>StoragedVolumeGroupSkeletonClass, <a class="indexterm" href="storaged-StoragedVolumeGroup.html#StoragedVolumeGroupSkeletonClass">struct StoragedVolumeGroupSkeletonClass</a>
+</dt>
+<dt>storaged_volume_group_call_add_device, <a class="indexterm" href="storaged-StoragedVolumeGroup.html#storaged-volume-group-call-add-device">storaged_volume_group_call_add_device ()</a>
+</dt>
+<dt>storaged_volume_group_call_add_device_finish, <a class="indexterm" href="storaged-StoragedVolumeGroup.html#storaged-volume-group-call-add-device-finish">storaged_volume_group_call_add_device_finish ()</a>
+</dt>
+<dt>storaged_volume_group_call_add_device_sync, <a class="indexterm" href="storaged-StoragedVolumeGroup.html#storaged-volume-group-call-add-device-sync">storaged_volume_group_call_add_device_sync ()</a>
+</dt>
+<dt>storaged_volume_group_call_create_plain_volume, <a class="indexterm" href="storaged-StoragedVolumeGroup.html#storaged-volume-group-call-create-plain-volume">storaged_volume_group_call_create_plain_volume ()</a>
+</dt>
+<dt>storaged_volume_group_call_create_plain_volume_finish, <a class="indexterm" href="storaged-StoragedVolumeGroup.html#storaged-volume-group-call-create-plain-volume-finish">storaged_volume_group_call_create_plain_volume_finish ()</a>
+</dt>
+<dt>storaged_volume_group_call_create_plain_volume_sync, <a class="indexterm" href="storaged-StoragedVolumeGroup.html#storaged-volume-group-call-create-plain-volume-sync">storaged_volume_group_call_create_plain_volume_sync ()</a>
+</dt>
+<dt>storaged_volume_group_call_create_thin_pool_volume, <a class="indexterm" href="storaged-StoragedVolumeGroup.html#storaged-volume-group-call-create-thin-pool-volume">storaged_volume_group_call_create_thin_pool_volume ()</a>
+</dt>
+<dt>storaged_volume_group_call_create_thin_pool_volume_finish, <a class="indexterm" href="storaged-StoragedVolumeGroup.html#storaged-volume-group-call-create-thin-pool-volume-finish">storaged_volume_group_call_create_thin_pool_volume_finish ()</a>
+</dt>
+<dt>storaged_volume_group_call_create_thin_pool_volume_sync, <a class="indexterm" href="storaged-StoragedVolumeGroup.html#storaged-volume-group-call-create-thin-pool-volume-sync">storaged_volume_group_call_create_thin_pool_volume_sync ()</a>
+</dt>
+<dt>storaged_volume_group_call_create_thin_volume, <a class="indexterm" href="storaged-StoragedVolumeGroup.html#storaged-volume-group-call-create-thin-volume">storaged_volume_group_call_create_thin_volume ()</a>
+</dt>
+<dt>storaged_volume_group_call_create_thin_volume_finish, <a class="indexterm" href="storaged-StoragedVolumeGroup.html#storaged-volume-group-call-create-thin-volume-finish">storaged_volume_group_call_create_thin_volume_finish ()</a>
+</dt>
+<dt>storaged_volume_group_call_create_thin_volume_sync, <a class="indexterm" href="storaged-StoragedVolumeGroup.html#storaged-volume-group-call-create-thin-volume-sync">storaged_volume_group_call_create_thin_volume_sync ()</a>
+</dt>
+<dt>storaged_volume_group_call_delete, <a class="indexterm" href="storaged-StoragedVolumeGroup.html#storaged-volume-group-call-delete">storaged_volume_group_call_delete ()</a>
+</dt>
+<dt>storaged_volume_group_call_delete_finish, <a class="indexterm" href="storaged-StoragedVolumeGroup.html#storaged-volume-group-call-delete-finish">storaged_volume_group_call_delete_finish ()</a>
+</dt>
+<dt>storaged_volume_group_call_delete_sync, <a class="indexterm" href="storaged-StoragedVolumeGroup.html#storaged-volume-group-call-delete-sync">storaged_volume_group_call_delete_sync ()</a>
+</dt>
+<dt>storaged_volume_group_call_empty_device, <a class="indexterm" href="storaged-StoragedVolumeGroup.html#storaged-volume-group-call-empty-device">storaged_volume_group_call_empty_device ()</a>
+</dt>
+<dt>storaged_volume_group_call_empty_device_finish, <a class="indexterm" href="storaged-StoragedVolumeGroup.html#storaged-volume-group-call-empty-device-finish">storaged_volume_group_call_empty_device_finish ()</a>
+</dt>
+<dt>storaged_volume_group_call_empty_device_sync, <a class="indexterm" href="storaged-StoragedVolumeGroup.html#storaged-volume-group-call-empty-device-sync">storaged_volume_group_call_empty_device_sync ()</a>
+</dt>
+<dt>storaged_volume_group_call_poll, <a class="indexterm" href="storaged-StoragedVolumeGroup.html#storaged-volume-group-call-poll">storaged_volume_group_call_poll ()</a>
+</dt>
+<dt>storaged_volume_group_call_poll_finish, <a class="indexterm" href="storaged-StoragedVolumeGroup.html#storaged-volume-group-call-poll-finish">storaged_volume_group_call_poll_finish ()</a>
+</dt>
+<dt>storaged_volume_group_call_poll_sync, <a class="indexterm" href="storaged-StoragedVolumeGroup.html#storaged-volume-group-call-poll-sync">storaged_volume_group_call_poll_sync ()</a>
+</dt>
+<dt>storaged_volume_group_call_remove_device, <a class="indexterm" href="storaged-StoragedVolumeGroup.html#storaged-volume-group-call-remove-device">storaged_volume_group_call_remove_device ()</a>
+</dt>
+<dt>storaged_volume_group_call_remove_device_finish, <a class="indexterm" href="storaged-StoragedVolumeGroup.html#storaged-volume-group-call-remove-device-finish">storaged_volume_group_call_remove_device_finish ()</a>
+</dt>
+<dt>storaged_volume_group_call_remove_device_sync, <a class="indexterm" href="storaged-StoragedVolumeGroup.html#storaged-volume-group-call-remove-device-sync">storaged_volume_group_call_remove_device_sync ()</a>
+</dt>
+<dt>storaged_volume_group_call_rename, <a class="indexterm" href="storaged-StoragedVolumeGroup.html#storaged-volume-group-call-rename">storaged_volume_group_call_rename ()</a>
+</dt>
+<dt>storaged_volume_group_call_rename_finish, <a class="indexterm" href="storaged-StoragedVolumeGroup.html#storaged-volume-group-call-rename-finish">storaged_volume_group_call_rename_finish ()</a>
+</dt>
+<dt>storaged_volume_group_call_rename_sync, <a class="indexterm" href="storaged-StoragedVolumeGroup.html#storaged-volume-group-call-rename-sync">storaged_volume_group_call_rename_sync ()</a>
+</dt>
+<dt>storaged_volume_group_complete_add_device, <a class="indexterm" href="storaged-StoragedVolumeGroup.html#storaged-volume-group-complete-add-device">storaged_volume_group_complete_add_device ()</a>
+</dt>
+<dt>storaged_volume_group_complete_create_plain_volume, <a class="indexterm" href="storaged-StoragedVolumeGroup.html#storaged-volume-group-complete-create-plain-volume">storaged_volume_group_complete_create_plain_volume ()</a>
+</dt>
+<dt>storaged_volume_group_complete_create_thin_pool_volume, <a class="indexterm" href="storaged-StoragedVolumeGroup.html#storaged-volume-group-complete-create-thin-pool-volume">storaged_volume_group_complete_create_thin_pool_volume ()</a>
+</dt>
+<dt>storaged_volume_group_complete_create_thin_volume, <a class="indexterm" href="storaged-StoragedVolumeGroup.html#storaged-volume-group-complete-create-thin-volume">storaged_volume_group_complete_create_thin_volume ()</a>
+</dt>
+<dt>storaged_volume_group_complete_delete, <a class="indexterm" href="storaged-StoragedVolumeGroup.html#storaged-volume-group-complete-delete">storaged_volume_group_complete_delete ()</a>
+</dt>
+<dt>storaged_volume_group_complete_empty_device, <a class="indexterm" href="storaged-StoragedVolumeGroup.html#storaged-volume-group-complete-empty-device">storaged_volume_group_complete_empty_device ()</a>
+</dt>
+<dt>storaged_volume_group_complete_poll, <a class="indexterm" href="storaged-StoragedVolumeGroup.html#storaged-volume-group-complete-poll">storaged_volume_group_complete_poll ()</a>
+</dt>
+<dt>storaged_volume_group_complete_remove_device, <a class="indexterm" href="storaged-StoragedVolumeGroup.html#storaged-volume-group-complete-remove-device">storaged_volume_group_complete_remove_device ()</a>
+</dt>
+<dt>storaged_volume_group_complete_rename, <a class="indexterm" href="storaged-StoragedVolumeGroup.html#storaged-volume-group-complete-rename">storaged_volume_group_complete_rename ()</a>
+</dt>
+<dt>storaged_volume_group_interface_info, <a class="indexterm" href="storaged-StoragedVolumeGroup.html#storaged-volume-group-interface-info">storaged_volume_group_interface_info ()</a>
+</dt>
+<dt>storaged_volume_group_override_properties, <a class="indexterm" href="storaged-StoragedVolumeGroup.html#storaged-volume-group-override-properties">storaged_volume_group_override_properties ()</a>
+</dt>
+<dt>storaged_volume_group_proxy_new, <a class="indexterm" href="storaged-StoragedVolumeGroup.html#storaged-volume-group-proxy-new">storaged_volume_group_proxy_new ()</a>
+</dt>
+<dt>storaged_volume_group_proxy_new_finish, <a class="indexterm" href="storaged-StoragedVolumeGroup.html#storaged-volume-group-proxy-new-finish">storaged_volume_group_proxy_new_finish ()</a>
+</dt>
+<dt>storaged_volume_group_proxy_new_for_bus, <a class="indexterm" href="storaged-StoragedVolumeGroup.html#storaged-volume-group-proxy-new-for-bus">storaged_volume_group_proxy_new_for_bus ()</a>
+</dt>
+<dt>storaged_volume_group_proxy_new_for_bus_finish, <a class="indexterm" href="storaged-StoragedVolumeGroup.html#storaged-volume-group-proxy-new-for-bus-finish">storaged_volume_group_proxy_new_for_bus_finish ()</a>
+</dt>
+<dt>storaged_volume_group_proxy_new_for_bus_sync, <a class="indexterm" href="storaged-StoragedVolumeGroup.html#storaged-volume-group-proxy-new-for-bus-sync">storaged_volume_group_proxy_new_for_bus_sync ()</a>
+</dt>
+<dt>storaged_volume_group_proxy_new_sync, <a class="indexterm" href="storaged-StoragedVolumeGroup.html#storaged-volume-group-proxy-new-sync">storaged_volume_group_proxy_new_sync ()</a>
+</dt>
+<dt>storaged_volume_group_skeleton_new, <a class="indexterm" href="storaged-StoragedVolumeGroup.html#storaged-volume-group-skeleton-new">storaged_volume_group_skeleton_new ()</a>
 </dt>
 </dl>
 </div>

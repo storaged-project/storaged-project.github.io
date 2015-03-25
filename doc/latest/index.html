@@ -26,13 +26,16 @@
 <dt><span class="part"><a href="overview.html">I. Manual pages and Overview</a></span></dt>
 <dd><dl>
 <dt>
-<span class="refentrytitle"><a href="storaged.8.html">storaged</a></span><span class="refpurpose"> — Disk Manager</span>
+<span class="refentrytitle"><a href="storaged.8.html">storaged</a></span><span class="refpurpose"> — The storaged system daemon</span>
 </dt>
 <dt>
-<span class="refentrytitle"><a href="storaged-daemon.8.html">storaged-daemon</a></span><span class="refpurpose"> — The storaged system daemon</span>
+<span class="refentrytitle"><a href="storaged-project.8.html">storaged-project</a></span><span class="refpurpose"> — Disk Manager</span>
 </dt>
 <dt>
 <span class="refentrytitle"><a href="storagedctl.1.html">storagedctl</a></span><span class="refpurpose"> — The storaged command line tool</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="umount.storaged.8.html">umount.storaged</a></span><span class="refpurpose"> — unmount file systems that have been mounted by storaged</span>
 </dt>
 </dl></dd>
 <dt><span class="part"><a href="ref-dbus.html">II. D-Bus API Reference</a></span></dt>
@@ -86,6 +89,21 @@
 </dt>
 <dt>
 <span class="refentrytitle"><a href="gdbus-org.storaged.Storaged.Job.html">org.storaged.Storaged.Job</a></span><span class="refpurpose"> — Long-running tasks</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="gdbus-org.storaged.Storaged.Block.LVM2.html">org.storaged.Storaged.Block.LVM2</a></span><span class="refpurpose"> — LVM2 add-on to the block device</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="gdbus-org.storaged.Storaged.LogicalVolume.html">org.storaged.Storaged.LogicalVolume</a></span><span class="refpurpose"> — A logical volume</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="gdbus-org.storaged.Storaged.Manager.LVM2.html">org.storaged.Storaged.Manager.LVM2</a></span><span class="refpurpose"> — LVM2 add-on to the manager singleton</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="gdbus-org.storaged.Storaged.PhysicalVolume.html">org.storaged.Storaged.PhysicalVolume</a></span><span class="refpurpose"> — Block device that is a physical volume</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="gdbus-org.storaged.Storaged.VolumeGroup.html">org.storaged.Storaged.VolumeGroup</a></span><span class="refpurpose"> — A volume group</span>
 </dt>
 </dl></dd>
 </dl></dd>
@@ -143,6 +161,21 @@
 </dt>
 <dt>
 <span class="refentrytitle"><a href="StoragedLoop.html">StoragedLoop</a></span><span class="refpurpose"> — Generated C code for the org.storaged.Storaged.Loop D-Bus interface</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="StoragedManagerLVM2.html">StoragedManagerLVM2</a></span><span class="refpurpose"> — Generated C code for the org.storaged.Storaged.Manager.LVM2 D-Bus interface</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="storaged-StoragedBlockLVM2.html">StoragedBlockLVM2</a></span><span class="refpurpose"> — Generated C code for the org.storaged.Storaged.Block.LVM2 D-Bus interface</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="storaged-StoragedPhysicalVolume.html">StoragedPhysicalVolume</a></span><span class="refpurpose"> — Generated C code for the org.storaged.Storaged.PhysicalVolume D-Bus interface</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="storaged-StoragedVolumeGroup.html">StoragedVolumeGroup</a></span><span class="refpurpose"> — Generated C code for the org.storaged.Storaged.VolumeGroup D-Bus interface</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="storaged-StoragedLogicalVolume.html">StoragedLogicalVolume</a></span><span class="refpurpose"> — Generated C code for the org.storaged.Storaged.LogicalVolume D-Bus interface</span>
 </dt>
 </dl></dd>
 </dl></dd>
@@ -217,7 +250,7 @@
 <span class="refentrytitle"><a href="StoragedLinuxDrive.html">StoragedLinuxDrive</a></span><span class="refpurpose">Linux implementation of <span class="type">StoragedDrive</span></span>
 </dt>
 <dt>
-<span class="refentrytitle"><a href="StoragedLinuxDriveAta.html">StoragedLinuxDriveAta</a></span><span class="refpurpose">Linux implementation of <span class="type">StoragedDriveAta</span></span>
+<span class="refentrytitle"><a href="storaged-DummyLinuxBlock.html">DummyLinuxBlock</a></span><span class="refpurpose">Linux implementation of <span class="type">DummyDummyBlock</span></span>
 </dt>
 <dt>
 <span class="refentrytitle"><a href="StoragedLinuxDriveObject.html">StoragedLinuxDriveObject</a></span><span class="refpurpose"> — Object representing a drive on Linux</span>
@@ -262,7 +295,7 @@
 </dl></dd>
 <dt><span class="index"><a href="api-index.html">Index</a></span></dt>
 <dt><span class="index"><a href="api-index-deprecated.html">Index of deprecated symbols</a></span></dt>
-<dt><span class="index"><a href="api-index-2.1.html">Index of new symbols in 2.1</a></span></dt>
+<dt><span class="index"><a href="api-index-2.0.0.html">Index of new symbols in 2.0.0</a></span></dt>
 <dt><span class="glossary"><a href="annotation-glossary.html">Annotation Glossary</a></span></dt>
 <dt><span class="chapter"><a href="gio-hierarchy.html">Object Hierarchy</a></span></dt>
 </dl></div>

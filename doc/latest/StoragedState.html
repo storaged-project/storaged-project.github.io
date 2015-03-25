@@ -91,7 +91,7 @@
 </tr>
 <tr>
 <td class="function_type">
-<span class="returnvalue">gchar</span> *
+<a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *
 </td>
 <td class="function_name">
 <a class="link" href="StoragedState.html#storaged-state-find-mounted-fs" title="storaged_state_find_mounted_fs ()">storaged_state_find_mounted_fs</a> <span class="c_punctuation">()</span>
@@ -123,7 +123,7 @@
 </tr>
 <tr>
 <td class="function_type">
-<span class="returnvalue">gboolean</span>
+<a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
 </td>
 <td class="function_name">
 <a class="link" href="StoragedState.html#storaged-state-has-loop" title="storaged_state_has_loop ()">storaged_state_has_loop</a> <span class="c_punctuation">()</span>
@@ -139,7 +139,7 @@
 </tr>
 <tr>
 <td class="function_type">
-<span class="returnvalue">gboolean</span>
+<a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
 </td>
 <td class="function_name">
 <a class="link" href="StoragedState.html#storaged-state-has-mdraid" title="storaged_state_has_mdraid ()">storaged_state_has_mdraid</a> <span class="c_punctuation">()</span>
@@ -179,7 +179,7 @@
 </div>
 <div class="refsect1">
 <a name="StoragedState.object-hierarchy"></a><h2>Object Hierarchy</h2>
-<pre class="screen">    GObject
+<pre class="screen">    <a href="/usr/share/gtk-doc/html/gobject/gobject-The-Base-Object-Type.html#GObject">GObject</a>
     <span class="lineart">╰──</span> StoragedState
 </pre>
 </div>
@@ -204,61 +204,61 @@ still in use - for example, a USB stick being yanked.</p>
 <tr>
 <td align="left"><code class="filename">/run/storaged/mounted-fs</code></td>
 <td align="left">
-          A serialized 'a{sa{sv}}' <span class="type">GVariant</span> mapping from the
+          A serialized 'a{sa{sv}}' <a href="/usr/share/gtk-doc/html/glib/glib-GVariant.html#GVariant"><span class="type">GVariant</span></a> mapping from the
           mount point (e.g. <code class="filename">/media/EOS_DIGITAL</code>) into a set of details.
           Known details include
           <code class="literal">block-device</code>
-          (of type 't') that is the <span class="type">dev_t</span>
+          (of type <a href="/usr/share/gtk-doc/html/glib/glib-GVariantType.html#G-VARIANT-TYPE-UINT64:CAPS">'t'</a>) that is the <span class="type">dev_t</span>
           for the mounted device,
           <code class="literal">mounted-by-uid</code>
-          (of type 'u') that is the <span class="type">uid_t</span>
+          (of type <a href="/usr/share/gtk-doc/html/glib/glib-GVariantType.html#G-VARIANT-TYPE-UINT32:CAPS">'u'</a>) that is the <span class="type">uid_t</span>
           of the user who mounted the device, and
           <code class="literal">fstab-mount</code>
-          (of type 'b') that is <code class="literal">TRUE</code>
+          (of type <a href="/usr/share/gtk-doc/html/glib/glib-GVariantType.html#G-VARIANT-TYPE-BOOLEAN:CAPS">'b'</a>) that is <a href="/usr/share/gtk-doc/html/glib/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a>
           if the device was mounted via an entry in /etc/fstab.
         </td>
 </tr>
 <tr>
 <td align="left"><code class="filename">/run/storaged/unlocked-luks</code></td>
 <td align="left">
-          A serialized 'a{ta{sv}}' <span class="type">GVariant</span> mapping from the
+          A serialized 'a{ta{sv}}' <a href="/usr/share/gtk-doc/html/glib/glib-GVariant.html#GVariant"><span class="type">GVariant</span></a> mapping from the
           <span class="type">dev_t</span> of the clear-text device (e.g. <code class="filename">/dev/dm-0</code>) into a set of details.
           Known details include
           <code class="literal">crypto-device</code>
-          (of type 't') that is the <span class="type">dev_t</span>
+          (of type <a href="/usr/share/gtk-doc/html/glib/glib-GVariantType.html#G-VARIANT-TYPE-UINT64:CAPS">'t'</a>) that is the <span class="type">dev_t</span>
           for the crypto-text device,
           <code class="literal">dm-uuid</code>
-          (of type 'ay') that is the device mapper UUID
+          (of type <a href="/usr/share/gtk-doc/html/glib/glib-GVariantType.html#G-VARIANT-TYPE-ARRAY:CAPS">'ay'</a>) that is the device mapper UUID
           for the clear-text device and
           <code class="literal">unlocked-by-uid</code>
-          (of type 'u') that is the <span class="type">uid_t</span>
+          (of type <a href="/usr/share/gtk-doc/html/glib/glib-GVariantType.html#G-VARIANT-TYPE-UINT32:CAPS">'u'</a>) that is the <span class="type">uid_t</span>
           of the user who unlocked the device.
         </td>
 </tr>
 <tr>
 <td align="left"><code class="filename">/run/storaged/loop</code></td>
 <td align="left">
-          A serialized 'a{sa{sv}}' <span class="type">GVariant</span> mapping from the
+          A serialized 'a{sa{sv}}' <a href="/usr/share/gtk-doc/html/glib/glib-GVariant.html#GVariant"><span class="type">GVariant</span></a> mapping from the
           loop device name (e.g. <code class="filename">/dev/loop0</code>) into a set of details.
           Known details include
           <code class="literal">backing-file</code>
-          (of type 'ay') for the name of the backing file and
+          (of type <a href="/usr/share/gtk-doc/html/glib/glib-GVariantType.html#G-VARIANT-TYPE-ARRAY:CAPS">'ay'</a>) for the name of the backing file and
           <code class="literal">backing-file-device</code>
-          (of type 't') for the <span class="type">dev_t</span>
+          (of type <a href="/usr/share/gtk-doc/html/glib/glib-GVariantType.html#G-VARIANT-TYPE-UINT64:CAPS">'t'</a>) for the <span class="type">dev_t</span>
           for of the device holding the backing file (or 0 if unknown) and
           <code class="literal">setup-by-uid</code>
-          (of type 'u') that is the <span class="type">uid_t</span>
+          (of type <a href="/usr/share/gtk-doc/html/glib/glib-GVariantType.html#G-VARIANT-TYPE-UINT32:CAPS">'u'</a>) that is the <span class="type">uid_t</span>
           of the user who set up the loop device.
         </td>
 </tr>
 <tr>
 <td align="left"><code class="filename">/run/storaged/mdraid</code></td>
 <td align="left">
-          A serialized 'a{ta{sv}}' <span class="type">GVariant</span> mapping from the
+          A serialized 'a{ta{sv}}' <a href="/usr/share/gtk-doc/html/glib/glib-GVariant.html#GVariant"><span class="type">GVariant</span></a> mapping from the
           <span class="type">dev_t</span> of the raid device (e.g. <code class="filename">/dev/md127</code>) into a set of details.
           Known details include
           <code class="literal">started-by-uid</code>
-          (of type 'u') that is the <span class="type">uid_t</span>
+          (of type <a href="/usr/share/gtk-doc/html/glib/glib-GVariantType.html#G-VARIANT-TYPE-UINT32:CAPS">'u'</a>) that is the <span class="type">uid_t</span>
           of the user who started the array.
         </td>
 </tr>
@@ -301,7 +301,7 @@ storaged_state_new (<em class="parameter"><code><a class="link" href="StoragedDa
 </div>
 <div class="refsect3">
 <a name="id-1.5.2.6.8.2.6"></a><h4>Returns</h4>
-<p> A <a class="link" href="StoragedState.html" title="StoragedState"><span class="type">StoragedState</span></a> that should be freed with <code class="function">g_object_unref()</code>.</p>
+<p> A <a class="link" href="StoragedState.html" title="StoragedState"><span class="type">StoragedState</span></a> that should be freed with <a href="/usr/share/gtk-doc/html/gobject/gobject-The-Base-Object-Type.html#g-object-unref"><code class="function">g_object_unref()</code></a>.</p>
 <p></p>
 </div>
 </div>
@@ -410,10 +410,10 @@ storaged_state_get_daemon (<em class="parameter"><code><a class="link" href="Sto
 <a name="storaged-state-add-mounted-fs"></a><h3>storaged_state_add_mounted_fs ()</h3>
 <pre class="programlisting"><span class="returnvalue">void</span>
 storaged_state_add_mounted_fs (<em class="parameter"><code><a class="link" href="StoragedState.html" title="StoragedState"><span class="type">StoragedState</span></a> *state</code></em>,
-                               <em class="parameter"><code>const <span class="type">gchar</span> *mount_point</code></em>,
+                               <em class="parameter"><code>const <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *mount_point</code></em>,
                                <em class="parameter"><code><span class="type">dev_t</span> block_device</code></em>,
                                <em class="parameter"><code><span class="type">uid_t</span> uid</code></em>,
-                               <em class="parameter"><code><span class="type">gboolean</span> fstab_mount</code></em>);</pre>
+                               <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a> fstab_mount</code></em>);</pre>
 <p>Adds a new entry to the
 <code class="filename">/run/storaged/mounted-fs</code> file.</p>
 <div class="refsect3">
@@ -447,7 +447,7 @@ storaged_state_add_mounted_fs (<em class="parameter"><code><a class="link" href=
 </tr>
 <tr>
 <td class="parameter_name"><p>fstab_mount</p></td>
-<td class="parameter_description"><p><code class="literal">TRUE</code> if the device was mounted via /etc/fstab.</p></td>
+<td class="parameter_description"><p><a href="/usr/share/gtk-doc/html/glib/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> if the device was mounted via /etc/fstab.</p></td>
 <td class="parameter_annotations"> </td>
 </tr>
 </tbody>
@@ -457,11 +457,11 @@ storaged_state_add_mounted_fs (<em class="parameter"><code><a class="link" href=
 <hr>
 <div class="refsect2">
 <a name="storaged-state-find-mounted-fs"></a><h3>storaged_state_find_mounted_fs ()</h3>
-<pre class="programlisting"><span class="returnvalue">gchar</span> *
+<pre class="programlisting"><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *
 storaged_state_find_mounted_fs (<em class="parameter"><code><a class="link" href="StoragedState.html" title="StoragedState"><span class="type">StoragedState</span></a> *state</code></em>,
                                 <em class="parameter"><code><span class="type">dev_t</span> block_device</code></em>,
                                 <em class="parameter"><code><span class="type">uid_t</span> *out_uid</code></em>,
-                                <em class="parameter"><code><span class="type">gboolean</span> *out_fstab_mount</code></em>);</pre>
+                                <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a> *out_fstab_mount</code></em>);</pre>
 <p>Gets the mount point for <em class="parameter"><code>block_device</code></em>
 , if it exists in the
 <code class="filename">/run/storaged/mounted-fs</code> file.</p>
@@ -486,12 +486,12 @@ storaged_state_find_mounted_fs (<em class="parameter"><code><a class="link" href
 </tr>
 <tr>
 <td class="parameter_name"><p>out_uid</p></td>
-<td class="parameter_description"><p>Return location for the user id who mounted the device or <code class="literal">NULL</code>.</p></td>
+<td class="parameter_description"><p>Return location for the user id who mounted the device or <a href="/usr/share/gtk-doc/html/glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>.</p></td>
 <td class="parameter_annotations"> </td>
 </tr>
 <tr>
 <td class="parameter_name"><p>out_fstab_mount</p></td>
-<td class="parameter_description"><p>Return location for whether the device was a fstab mount or <code class="literal">NULL</code>.</p></td>
+<td class="parameter_description"><p>Return location for whether the device was a fstab mount or <a href="/usr/share/gtk-doc/html/glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>.</p></td>
 <td class="parameter_annotations"> </td>
 </tr>
 </tbody>
@@ -500,7 +500,7 @@ storaged_state_find_mounted_fs (<em class="parameter"><code><a class="link" href
 <div class="refsect3">
 <a name="id-1.5.2.6.8.8.6"></a><h4>Returns</h4>
 <p> The mount point for <em class="parameter"><code>block_device</code></em>
-or <code class="literal">NULL</code> if not found.</p>
+or <a href="/usr/share/gtk-doc/html/glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a> if not found.</p>
 <p></p>
 </div>
 </div>
@@ -511,7 +511,7 @@ or <code class="literal">NULL</code> if not found.</p>
 storaged_state_add_unlocked_luks (<em class="parameter"><code><a class="link" href="StoragedState.html" title="StoragedState"><span class="type">StoragedState</span></a> *state</code></em>,
                                   <em class="parameter"><code><span class="type">dev_t</span> cleartext_device</code></em>,
                                   <em class="parameter"><code><span class="type">dev_t</span> crypto_device</code></em>,
-                                  <em class="parameter"><code>const <span class="type">gchar</span> *dm_uuid</code></em>,
+                                  <em class="parameter"><code>const <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *dm_uuid</code></em>,
                                   <em class="parameter"><code><span class="type">uid_t</span> uid</code></em>);</pre>
 <p>Adds a new entry to the
 <code class="filename">/run/storaged/unlocked-luks</code> file.</p>
@@ -584,7 +584,7 @@ storaged_state_find_unlocked_luks (<em class="parameter"><code><a class="link" h
 </tr>
 <tr>
 <td class="parameter_name"><p>out_uid</p></td>
-<td class="parameter_description"><p>Return location for the user id who mounted the device or <code class="literal">NULL</code>.</p></td>
+<td class="parameter_description"><p>Return location for the user id who mounted the device or <a href="/usr/share/gtk-doc/html/glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>.</p></td>
 <td class="parameter_annotations"> </td>
 </tr>
 </tbody>
@@ -602,8 +602,8 @@ or 0 if not found.</p>
 <a name="storaged-state-add-loop"></a><h3>storaged_state_add_loop ()</h3>
 <pre class="programlisting"><span class="returnvalue">void</span>
 storaged_state_add_loop (<em class="parameter"><code><a class="link" href="StoragedState.html" title="StoragedState"><span class="type">StoragedState</span></a> *state</code></em>,
-                         <em class="parameter"><code>const <span class="type">gchar</span> *device_file</code></em>,
-                         <em class="parameter"><code>const <span class="type">gchar</span> *backing_file</code></em>,
+                         <em class="parameter"><code>const <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *device_file</code></em>,
+                         <em class="parameter"><code>const <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *backing_file</code></em>,
                          <em class="parameter"><code><span class="type">dev_t</span> backing_file_device</code></em>,
                          <em class="parameter"><code><span class="type">uid_t</span> uid</code></em>);</pre>
 <p>Adds a new entry to the <code class="filename">/run/storaged/loop</code>
@@ -649,9 +649,9 @@ file.</p>
 <hr>
 <div class="refsect2">
 <a name="storaged-state-has-loop"></a><h3>storaged_state_has_loop ()</h3>
-<pre class="programlisting"><span class="returnvalue">gboolean</span>
+<pre class="programlisting"><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
 storaged_state_has_loop (<em class="parameter"><code><a class="link" href="StoragedState.html" title="StoragedState"><span class="type">StoragedState</span></a> *state</code></em>,
-                         <em class="parameter"><code>const <span class="type">gchar</span> *device_file</code></em>,
+                         <em class="parameter"><code>const <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *device_file</code></em>,
                          <em class="parameter"><code><span class="type">uid_t</span> *out_uid</code></em>);</pre>
 <p>Checks if <em class="parameter"><code>device_file</code></em>
  is set up via storaged.</p>
@@ -676,12 +676,12 @@ storaged_state_has_loop (<em class="parameter"><code><a class="link" href="Stora
 </tr>
 <tr>
 <td class="parameter_name"><p>out_uid</p></td>
-<td class="parameter_description"><p>Return location for the user id who setup the loop device or <code class="literal">NULL</code>.</p></td>
+<td class="parameter_description"><p>Return location for the user id who setup the loop device or <a href="/usr/share/gtk-doc/html/glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>.</p></td>
 <td class="parameter_annotations"> </td>
 </tr>
 <tr>
 <td class="parameter_name"><p>error</p></td>
-<td class="parameter_description"><p>Return location for error or <code class="literal">NULL</code>.</p></td>
+<td class="parameter_description"><p>Return location for error or <a href="/usr/share/gtk-doc/html/glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>.</p></td>
 <td class="parameter_annotations"> </td>
 </tr>
 </tbody>
@@ -689,7 +689,7 @@ storaged_state_has_loop (<em class="parameter"><code><a class="link" href="Stora
 </div>
 <div class="refsect3">
 <a name="id-1.5.2.6.8.12.6"></a><h4>Returns</h4>
-<p> <code class="literal">TRUE</code> if set up via storaged, otherwise <code class="literal">FALSE</code> or if <em class="parameter"><code>error</code></em>
+<p> <a href="/usr/share/gtk-doc/html/glib/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> if set up via storaged, otherwise <a href="/usr/share/gtk-doc/html/glib/glib-Standard-Macros.html#FALSE:CAPS"><code class="literal">FALSE</code></a> or if <em class="parameter"><code>error</code></em>
 is set.</p>
 <p></p>
 </div>
@@ -734,7 +734,7 @@ file.</p>
 <hr>
 <div class="refsect2">
 <a name="storaged-state-has-mdraid"></a><h3>storaged_state_has_mdraid ()</h3>
-<pre class="programlisting"><span class="returnvalue">gboolean</span>
+<pre class="programlisting"><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
 storaged_state_has_mdraid (<em class="parameter"><code><a class="link" href="StoragedState.html" title="StoragedState"><span class="type">StoragedState</span></a> *state</code></em>,
                            <em class="parameter"><code><span class="type">dev_t</span> raid_device</code></em>,
                            <em class="parameter"><code><span class="type">uid_t</span> *out_uid</code></em>);</pre>
@@ -761,12 +761,12 @@ storaged_state_has_mdraid (<em class="parameter"><code><a class="link" href="Sto
 </tr>
 <tr>
 <td class="parameter_name"><p>out_uid</p></td>
-<td class="parameter_description"><p>Return location for the user id who setup the loop device or <code class="literal">NULL</code>.</p></td>
+<td class="parameter_description"><p>Return location for the user id who setup the loop device or <a href="/usr/share/gtk-doc/html/glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>.</p></td>
 <td class="parameter_annotations"> </td>
 </tr>
 <tr>
 <td class="parameter_name"><p>error</p></td>
-<td class="parameter_description"><p>Return location for error or <code class="literal">NULL</code>.</p></td>
+<td class="parameter_description"><p>Return location for error or <a href="/usr/share/gtk-doc/html/glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>.</p></td>
 <td class="parameter_annotations"> </td>
 </tr>
 </tbody>
@@ -774,7 +774,7 @@ storaged_state_has_mdraid (<em class="parameter"><code><a class="link" href="Sto
 </div>
 <div class="refsect3">
 <a name="id-1.5.2.6.8.14.6"></a><h4>Returns</h4>
-<p> <code class="literal">TRUE</code> if set up via storaged, otherwise <code class="literal">FALSE</code> or if <em class="parameter"><code>error</code></em>
+<p> <a href="/usr/share/gtk-doc/html/glib/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> if set up via storaged, otherwise <a href="/usr/share/gtk-doc/html/glib/glib-Standard-Macros.html#FALSE:CAPS"><code class="literal">FALSE</code></a> or if <em class="parameter"><code>error</code></em>
 is set.</p>
 <p></p>
 </div>

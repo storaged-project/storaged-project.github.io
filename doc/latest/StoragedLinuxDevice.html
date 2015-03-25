@@ -50,7 +50,7 @@
 </tr>
 <tr>
 <td class="function_type">
-<span class="returnvalue">gboolean</span>
+<a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
 </td>
 <td class="function_name">
 <a class="link" href="StoragedLinuxDevice.html#storaged-linux-device-reprobe-sync" title="storaged_linux_device_reprobe_sync ()">storaged_linux_device_reprobe_sync</a> <span class="c_punctuation">()</span>
@@ -74,7 +74,7 @@
 </div>
 <div class="refsect1">
 <a name="StoragedLinuxDevice.object-hierarchy"></a><h2>Object Hierarchy</h2>
-<pre class="screen">    GObject
+<pre class="screen">    <a href="/usr/share/gtk-doc/html/gobject/gobject-The-Base-Object-Type.html#GObject">GObject</a>
     <span class="lineart">╰──</span> StoragedLinuxDevice
 </pre>
 </div>
@@ -118,10 +118,10 @@ while the probing is underway.</p>
 <hr>
 <div class="refsect2">
 <a name="storaged-linux-device-reprobe-sync"></a><h3>storaged_linux_device_reprobe_sync ()</h3>
-<pre class="programlisting"><span class="returnvalue">gboolean</span>
+<pre class="programlisting"><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
 storaged_linux_device_reprobe_sync (<em class="parameter"><code><a class="link" href="StoragedLinuxDevice.html" title="StoragedLinuxDevice"><span class="type">StoragedLinuxDevice</span></a> *device</code></em>,
-                                    <em class="parameter"><code><span class="type">GCancellable</span> *cancellable</code></em>,
-                                    <em class="parameter"><code><span class="type">GError</span> **error</code></em>);</pre>
+                                    <em class="parameter"><code><a href="/usr/share/gtk-doc/html/gio/GCancellable.html"><span class="type">GCancellable</span></a> *cancellable</code></em>,
+                                    <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glib/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);</pre>
 <p>Forcibly reprobe information on <em class="parameter"><code>device</code></em>
 . The calling thread may be
 blocked for a non-trivial amount of time while the probing is
@@ -142,12 +142,12 @@ underway.</p>
 </tr>
 <tr>
 <td class="parameter_name"><p>cancellable</p></td>
-<td class="parameter_description"><p> A <span class="type">GCancellable</span> or <code class="literal">NULL</code>. </p></td>
+<td class="parameter_description"><p> A <a href="/usr/share/gtk-doc/html/gio/GCancellable.html"><span class="type">GCancellable</span></a> or <a href="/usr/share/gtk-doc/html/glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>. </p></td>
 <td class="parameter_annotations"><span class="annotation">[<acronym title="NULL is OK, both for passing and for returning."><span class="acronym">allow-none</span></acronym>]</span></td>
 </tr>
 <tr>
 <td class="parameter_name"><p>error</p></td>
-<td class="parameter_description"><p>Return location for error or <code class="literal">NULL</code>.</p></td>
+<td class="parameter_description"><p>Return location for error or <a href="/usr/share/gtk-doc/html/glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>.</p></td>
 <td class="parameter_annotations"> </td>
 </tr>
 </tbody>
@@ -155,7 +155,7 @@ underway.</p>
 </div>
 <div class="refsect3">
 <a name="id-1.5.5.4.7.3.6"></a><h4>Returns</h4>
-<p> <code class="literal">TRUE</code> if reprobing succeeded, <code class="literal">FALSE</code> otherwise.</p>
+<p> <a href="/usr/share/gtk-doc/html/glib/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> if reprobing succeeded, <a href="/usr/share/gtk-doc/html/glib/glib-Standard-Macros.html#FALSE:CAPS"><code class="literal">FALSE</code></a> otherwise.</p>
 <p></p>
 </div>
 </div>
@@ -189,13 +189,13 @@ and uevent "change" time.</p>
 <td class="struct_member_annotations"> </td>
 </tr>
 <tr>
-<td class="struct_member_name"><p><span class="type">guchar</span> *<em class="structfield"><code><a name="StoragedLinuxDevice-struct.ata-identify-device-data"></a>ata_identify_device_data</code></em>;</p></td>
-<td class="struct_member_description"><p>512-byte array containing the result of the IDENTIY DEVICE command or <code class="literal">NULL</code>.</p></td>
+<td class="struct_member_name"><p><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#guchar"><span class="type">guchar</span></a> *<em class="structfield"><code><a name="StoragedLinuxDevice-struct.ata-identify-device-data"></a>ata_identify_device_data</code></em>;</p></td>
+<td class="struct_member_description"><p>512-byte array containing the result of the IDENTIY DEVICE command or <a href="/usr/share/gtk-doc/html/glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>.</p></td>
 <td class="struct_member_annotations"> </td>
 </tr>
 <tr>
-<td class="struct_member_name"><p><span class="type">guchar</span> *<em class="structfield"><code><a name="StoragedLinuxDevice-struct.ata-identify-packet-device-data"></a>ata_identify_packet_device_data</code></em>;</p></td>
-<td class="struct_member_description"><p>512-byte array containing the result of the IDENTIY PACKET DEVICE command or <code class="literal">NULL</code>.</p></td>
+<td class="struct_member_name"><p><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#guchar"><span class="type">guchar</span></a> *<em class="structfield"><code><a name="StoragedLinuxDevice-struct.ata-identify-packet-device-data"></a>ata_identify_packet_device_data</code></em>;</p></td>
+<td class="struct_member_description"><p>512-byte array containing the result of the IDENTIY PACKET DEVICE command or <a href="/usr/share/gtk-doc/html/glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>.</p></td>
 <td class="struct_member_annotations"> </td>
 </tr>
 </tbody>

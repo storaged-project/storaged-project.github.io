@@ -4,8 +4,9 @@
   <chapters>
     <sub name="Manual pages and Overview" link="overview.html">
       <sub name="storaged" link="storaged.8.html"/>
-      <sub name="storaged-daemon" link="storaged-daemon.8.html"/>
+      <sub name="storaged-project" link="storaged-project.8.html"/>
       <sub name="storagedctl" link="storagedctl.1.html"/>
+      <sub name="umount.storaged" link="umount.storaged.8.html"/>
     </sub>
     <sub name="D-Bus API Reference" link="ref-dbus.html">
       <sub name="Overview" link="ref-dbus-overview.html">
@@ -32,6 +33,11 @@
         <sub name="org.storaged.Storaged.Encrypted" link="gdbus-org.storaged.Storaged.Encrypted.html"/>
         <sub name="org.storaged.Storaged.Loop" link="gdbus-org.storaged.Storaged.Loop.html"/>
         <sub name="org.storaged.Storaged.Job" link="gdbus-org.storaged.Storaged.Job.html"/>
+        <sub name="org.storaged.Storaged.Block.LVM2" link="gdbus-org.storaged.Storaged.Block.LVM2.html"/>
+        <sub name="org.storaged.Storaged.LogicalVolume" link="gdbus-org.storaged.Storaged.LogicalVolume.html"/>
+        <sub name="org.storaged.Storaged.Manager.LVM2" link="gdbus-org.storaged.Storaged.Manager.LVM2.html"/>
+        <sub name="org.storaged.Storaged.PhysicalVolume" link="gdbus-org.storaged.Storaged.PhysicalVolume.html"/>
+        <sub name="org.storaged.Storaged.VolumeGroup" link="gdbus-org.storaged.Storaged.VolumeGroup.html"/>
       </sub>
     </sub>
     <sub name="Library API Reference" link="ref-library.html">
@@ -53,6 +59,11 @@
         <sub name="StoragedSwapspace" link="StoragedSwapspace.html"/>
         <sub name="StoragedEncrypted" link="StoragedEncrypted.html"/>
         <sub name="StoragedLoop" link="StoragedLoop.html"/>
+        <sub name="StoragedManagerLVM2" link="StoragedManagerLVM2.html"/>
+        <sub name="StoragedBlockLVM2" link="storaged-StoragedBlockLVM2.html"/>
+        <sub name="StoragedPhysicalVolume" link="storaged-StoragedPhysicalVolume.html"/>
+        <sub name="StoragedVolumeGroup" link="storaged-StoragedVolumeGroup.html"/>
+        <sub name="StoragedLogicalVolume" link="storaged-StoragedLogicalVolume.html"/>
       </sub>
     </sub>
     <sub name="Daemon Implementation Details" link="ref-daemon.html">
@@ -83,7 +94,7 @@
       </sub>
       <sub name="Drives on Linux" link="ref-daemon-drives.html">
         <sub name="StoragedLinuxDrive" link="StoragedLinuxDrive.html"/>
-        <sub name="StoragedLinuxDriveAta" link="StoragedLinuxDriveAta.html"/>
+        <sub name="DummyLinuxBlock" link="storaged-DummyLinuxBlock.html"/>
         <sub name="StoragedLinuxDriveObject" link="StoragedLinuxDriveObject.html"/>
       </sub>
       <sub name="Linux RAID" link="ref-daemon-mdraid.html">
@@ -103,12 +114,12 @@
     </sub>
     <sub name="Index" link="api-index.html"/>
     <sub name="Index of deprecated symbols" link="api-index-deprecated.html"/>
-    <sub name="Index of new symbols in 2.1" link="api-index-2.1.html"/>
+    <sub name="Index of new symbols in 2.0.0" link="api-index-2.0.0.html"/>
     <sub name="Annotation Glossary" link="annotation-glossary.html"/>
     <sub name="Object Hierarchy" link="gio-hierarchy.html"/>
   </chapters>
   <functions>
-    <keyword type="" name="ATA group" link="storaged.8.html#id-1.2.2.6.3"/>
+    <keyword type="" name="ATA group" link="storaged-project.8.html#id-1.2.3.6.3"/>
     <keyword type="method" name="The LoopSetup() method" link="gdbus-org.storaged.Storaged.Manager.html#gdbus-method-org-storaged-Storaged-Manager.LoopSetup"/>
     <keyword type="method" name="The MDRaidCreate() method" link="gdbus-org.storaged.Storaged.Manager.html#gdbus-method-org-storaged-Storaged-Manager.MDRaidCreate"/>
     <keyword type="method" name="The EnableModules() method" link="gdbus-org.storaged.Storaged.Manager.html#gdbus-method-org-storaged-Storaged-Manager.EnableModules"/>
@@ -272,6 +283,42 @@
     <keyword type="property" name="The &quot;Objects&quot; property" link="gdbus-org.storaged.Storaged.Job.html#gdbus-property-org-storaged-Storaged-Job.Objects"/>
     <keyword type="property" name="The &quot;StartedByUID&quot; property" link="gdbus-org.storaged.Storaged.Job.html#gdbus-property-org-storaged-Storaged-Job.StartedByUID"/>
     <keyword type="property" name="The &quot;Cancelable&quot; property" link="gdbus-org.storaged.Storaged.Job.html#gdbus-property-org-storaged-Storaged-Job.Cancelable"/>
+    <keyword type="property" name="The &quot;LogicalVolume&quot; property" link="gdbus-org.storaged.Storaged.Block.LVM2.html#gdbus-property-org-storaged-Storaged-Block-LVM2.LogicalVolume"/>
+    <keyword type="method" name="The Activate() method" link="gdbus-org.storaged.Storaged.LogicalVolume.html#gdbus-method-org-storaged-Storaged-LogicalVolume.Activate"/>
+    <keyword type="method" name="The Deactivate() method" link="gdbus-org.storaged.Storaged.LogicalVolume.html#gdbus-method-org-storaged-Storaged-LogicalVolume.Deactivate"/>
+    <keyword type="method" name="The Delete() method" link="gdbus-org.storaged.Storaged.LogicalVolume.html#gdbus-method-org-storaged-Storaged-LogicalVolume.Delete"/>
+    <keyword type="method" name="The Rename() method" link="gdbus-org.storaged.Storaged.LogicalVolume.html#gdbus-method-org-storaged-Storaged-LogicalVolume.Rename"/>
+    <keyword type="method" name="The Resize() method" link="gdbus-org.storaged.Storaged.LogicalVolume.html#gdbus-method-org-storaged-Storaged-LogicalVolume.Resize"/>
+    <keyword type="method" name="The CreateSnapshot() method" link="gdbus-org.storaged.Storaged.LogicalVolume.html#gdbus-method-org-storaged-Storaged-LogicalVolume.CreateSnapshot"/>
+    <keyword type="property" name="The &quot;VolumeGroup&quot; property" link="gdbus-org.storaged.Storaged.LogicalVolume.html#gdbus-property-org-storaged-Storaged-LogicalVolume.VolumeGroup"/>
+    <keyword type="property" name="The &quot;Name&quot; property" link="gdbus-org.storaged.Storaged.LogicalVolume.html#gdbus-property-org-storaged-Storaged-LogicalVolume.Name"/>
+    <keyword type="property" name="The &quot;Active&quot; property" link="gdbus-org.storaged.Storaged.LogicalVolume.html#gdbus-property-org-storaged-Storaged-LogicalVolume.Active"/>
+    <keyword type="property" name="The &quot;UUID&quot; property" link="gdbus-org.storaged.Storaged.LogicalVolume.html#gdbus-property-org-storaged-Storaged-LogicalVolume.UUID"/>
+    <keyword type="property" name="The &quot;Size&quot; property" link="gdbus-org.storaged.Storaged.LogicalVolume.html#gdbus-property-org-storaged-Storaged-LogicalVolume.Size"/>
+    <keyword type="property" name="The &quot;DataAllocatedRatio&quot; property" link="gdbus-org.storaged.Storaged.LogicalVolume.html#gdbus-property-org-storaged-Storaged-LogicalVolume.DataAllocatedRatio"/>
+    <keyword type="property" name="The &quot;MetadataAllocatedRatio&quot; property" link="gdbus-org.storaged.Storaged.LogicalVolume.html#gdbus-property-org-storaged-Storaged-LogicalVolume.MetadataAllocatedRatio"/>
+    <keyword type="property" name="The &quot;Type&quot; property" link="gdbus-org.storaged.Storaged.LogicalVolume.html#gdbus-property-org-storaged-Storaged-LogicalVolume.Type"/>
+    <keyword type="property" name="The &quot;ThinPool&quot; property" link="gdbus-org.storaged.Storaged.LogicalVolume.html#gdbus-property-org-storaged-Storaged-LogicalVolume.ThinPool"/>
+    <keyword type="property" name="The &quot;Origin&quot; property" link="gdbus-org.storaged.Storaged.LogicalVolume.html#gdbus-property-org-storaged-Storaged-LogicalVolume.Origin"/>
+    <keyword type="method" name="The VolumeGroupCreate() method" link="gdbus-org.storaged.Storaged.Manager.LVM2.html#gdbus-method-org-storaged-Storaged-Manager-LVM2.VolumeGroupCreate"/>
+    <keyword type="property" name="The &quot;VolumeGroup&quot; property" link="gdbus-org.storaged.Storaged.PhysicalVolume.html#gdbus-property-org-storaged-Storaged-PhysicalVolume.VolumeGroup"/>
+    <keyword type="property" name="The &quot;Size&quot; property" link="gdbus-org.storaged.Storaged.PhysicalVolume.html#gdbus-property-org-storaged-Storaged-PhysicalVolume.Size"/>
+    <keyword type="property" name="The &quot;FreeSize&quot; property" link="gdbus-org.storaged.Storaged.PhysicalVolume.html#gdbus-property-org-storaged-Storaged-PhysicalVolume.FreeSize"/>
+    <keyword type="method" name="The Poll() method" link="gdbus-org.storaged.Storaged.VolumeGroup.html#gdbus-method-org-storaged-Storaged-VolumeGroup.Poll"/>
+    <keyword type="method" name="The Delete() method" link="gdbus-org.storaged.Storaged.VolumeGroup.html#gdbus-method-org-storaged-Storaged-VolumeGroup.Delete"/>
+    <keyword type="method" name="The Rename() method" link="gdbus-org.storaged.Storaged.VolumeGroup.html#gdbus-method-org-storaged-Storaged-VolumeGroup.Rename"/>
+    <keyword type="method" name="The AddDevice() method" link="gdbus-org.storaged.Storaged.VolumeGroup.html#gdbus-method-org-storaged-Storaged-VolumeGroup.AddDevice"/>
+    <keyword type="method" name="The EmptyDevice() method" link="gdbus-org.storaged.Storaged.VolumeGroup.html#gdbus-method-org-storaged-Storaged-VolumeGroup.EmptyDevice"/>
+    <keyword type="method" name="The RemoveDevice() method" link="gdbus-org.storaged.Storaged.VolumeGroup.html#gdbus-method-org-storaged-Storaged-VolumeGroup.RemoveDevice"/>
+    <keyword type="method" name="The CreatePlainVolume() method" link="gdbus-org.storaged.Storaged.VolumeGroup.html#gdbus-method-org-storaged-Storaged-VolumeGroup.CreatePlainVolume"/>
+    <keyword type="method" name="The CreateThinPoolVolume() method" link="gdbus-org.storaged.Storaged.VolumeGroup.html#gdbus-method-org-storaged-Storaged-VolumeGroup.CreateThinPoolVolume"/>
+    <keyword type="method" name="The CreateThinVolume() method" link="gdbus-org.storaged.Storaged.VolumeGroup.html#gdbus-method-org-storaged-Storaged-VolumeGroup.CreateThinVolume"/>
+    <keyword type="property" name="The &quot;Name&quot; property" link="gdbus-org.storaged.Storaged.VolumeGroup.html#gdbus-property-org-storaged-Storaged-VolumeGroup.Name"/>
+    <keyword type="property" name="The &quot;UUID&quot; property" link="gdbus-org.storaged.Storaged.VolumeGroup.html#gdbus-property-org-storaged-Storaged-VolumeGroup.UUID"/>
+    <keyword type="property" name="The &quot;Size&quot; property" link="gdbus-org.storaged.Storaged.VolumeGroup.html#gdbus-property-org-storaged-Storaged-VolumeGroup.Size"/>
+    <keyword type="property" name="The &quot;FreeSize&quot; property" link="gdbus-org.storaged.Storaged.VolumeGroup.html#gdbus-property-org-storaged-Storaged-VolumeGroup.FreeSize"/>
+    <keyword type="property" name="The &quot;ExtentSize&quot; property" link="gdbus-org.storaged.Storaged.VolumeGroup.html#gdbus-property-org-storaged-Storaged-VolumeGroup.ExtentSize"/>
+    <keyword type="property" name="The &quot;NeedsPolling&quot; property" link="gdbus-org.storaged.Storaged.VolumeGroup.html#gdbus-property-org-storaged-Storaged-VolumeGroup.NeedsPolling"/>
     <keyword type="macro" name="STORAGED_CHECK_VERSION()" link="StoragedClient.html#STORAGED-CHECK-VERSION:CAPS"/>
     <keyword type="function" name="storaged_client_new ()" link="StoragedClient.html#storaged-client-new"/>
     <keyword type="function" name="storaged_client_new_finish ()" link="StoragedClient.html#storaged-client-new-finish"/>
@@ -345,7 +392,7 @@
     <keyword type="function" name="storaged_object_get_manager ()" link="StoragedObject.html#storaged-object-get-manager"/>
     <keyword type="function" name="storaged_object_get_partition ()" link="StoragedObject.html#storaged-object-get-partition"/>
     <keyword type="function" name="storaged_object_get_partition_table ()" link="StoragedObject.html#storaged-object-get-partition-table"/>
-    <keyword type="function" name="storaged_object_get_mdraid ()" link="StoragedObject.html#storaged-object-get-mdraid" since="2.1"/>
+    <keyword type="function" name="storaged_object_get_mdraid ()" link="StoragedObject.html#storaged-object-get-mdraid" since="2.0.0"/>
     <keyword type="function" name="storaged_object_peek_block ()" link="StoragedObject.html#storaged-object-peek-block"/>
     <keyword type="function" name="storaged_object_peek_drive ()" link="StoragedObject.html#storaged-object-peek-drive"/>
     <keyword type="function" name="storaged_object_peek_drive_ata ()" link="StoragedObject.html#storaged-object-peek-drive-ata"/>
@@ -357,7 +404,7 @@
     <keyword type="function" name="storaged_object_peek_manager ()" link="StoragedObject.html#storaged-object-peek-manager"/>
     <keyword type="function" name="storaged_object_peek_partition ()" link="StoragedObject.html#storaged-object-peek-partition"/>
     <keyword type="function" name="storaged_object_peek_partition_table ()" link="StoragedObject.html#storaged-object-peek-partition-table"/>
-    <keyword type="function" name="storaged_object_peek_mdraid ()" link="StoragedObject.html#storaged-object-peek-mdraid" since="2.1"/>
+    <keyword type="function" name="storaged_object_peek_mdraid ()" link="StoragedObject.html#storaged-object-peek-mdraid" since="2.0.0"/>
     <keyword type="function" name="storaged_object_proxy_new ()" link="StoragedObject.html#storaged-object-proxy-new"/>
     <keyword type="function" name="storaged_object_skeleton_new ()" link="StoragedObject.html#storaged-object-skeleton-new"/>
     <keyword type="function" name="storaged_object_skeleton_set_block ()" link="StoragedObject.html#storaged-object-skeleton-set-block"/>
@@ -371,7 +418,7 @@
     <keyword type="function" name="storaged_object_skeleton_set_manager ()" link="StoragedObject.html#storaged-object-skeleton-set-manager"/>
     <keyword type="function" name="storaged_object_skeleton_set_partition ()" link="StoragedObject.html#storaged-object-skeleton-set-partition"/>
     <keyword type="function" name="storaged_object_skeleton_set_partition_table ()" link="StoragedObject.html#storaged-object-skeleton-set-partition-table"/>
-    <keyword type="function" name="storaged_object_skeleton_set_mdraid ()" link="StoragedObject.html#storaged-object-skeleton-set-mdraid" since="2.1"/>
+    <keyword type="function" name="storaged_object_skeleton_set_mdraid ()" link="StoragedObject.html#storaged-object-skeleton-set-mdraid" since="2.0.0"/>
     <keyword type="struct" name="StoragedObject" link="StoragedObject.html#StoragedObject-struct"/>
     <keyword type="struct" name="struct StoragedObjectIface" link="StoragedObject.html#StoragedObjectIface"/>
     <keyword type="struct" name="struct StoragedObjectProxy" link="StoragedObject.html#StoragedObjectProxy-struct"/>
@@ -408,10 +455,10 @@
     <keyword type="function" name="storaged_manager_call_loop_setup_finish ()" link="StoragedManager.html#storaged-manager-call-loop-setup-finish"/>
     <keyword type="function" name="storaged_manager_call_loop_setup_sync ()" link="StoragedManager.html#storaged-manager-call-loop-setup-sync"/>
     <keyword type="function" name="storaged_manager_complete_loop_setup ()" link="StoragedManager.html#storaged-manager-complete-loop-setup"/>
-    <keyword type="function" name="storaged_manager_call_mdraid_create ()" link="StoragedManager.html#storaged-manager-call-mdraid-create" since="2.1"/>
-    <keyword type="function" name="storaged_manager_call_mdraid_create_finish ()" link="StoragedManager.html#storaged-manager-call-mdraid-create-finish" since="2.1"/>
-    <keyword type="function" name="storaged_manager_call_mdraid_create_sync ()" link="StoragedManager.html#storaged-manager-call-mdraid-create-sync" since="2.1"/>
-    <keyword type="function" name="storaged_manager_complete_mdraid_create ()" link="StoragedManager.html#storaged-manager-complete-mdraid-create" since="2.1"/>
+    <keyword type="function" name="storaged_manager_call_mdraid_create ()" link="StoragedManager.html#storaged-manager-call-mdraid-create" since="2.0.0"/>
+    <keyword type="function" name="storaged_manager_call_mdraid_create_finish ()" link="StoragedManager.html#storaged-manager-call-mdraid-create-finish" since="2.0.0"/>
+    <keyword type="function" name="storaged_manager_call_mdraid_create_sync ()" link="StoragedManager.html#storaged-manager-call-mdraid-create-sync" since="2.0.0"/>
+    <keyword type="function" name="storaged_manager_complete_mdraid_create ()" link="StoragedManager.html#storaged-manager-complete-mdraid-create" since="2.0.0"/>
     <keyword type="function" name="storaged_manager_proxy_new ()" link="StoragedManager.html#storaged-manager-proxy-new"/>
     <keyword type="function" name="storaged_manager_proxy_new_finish ()" link="StoragedManager.html#storaged-manager-proxy-new-finish"/>
     <keyword type="function" name="storaged_manager_proxy_new_sync ()" link="StoragedManager.html#storaged-manager-proxy-new-sync"/>
@@ -443,10 +490,10 @@
     <keyword type="function" name="storaged_drive_call_set_configuration_finish ()" link="StoragedDrive.html#storaged-drive-call-set-configuration-finish"/>
     <keyword type="function" name="storaged_drive_call_set_configuration_sync ()" link="StoragedDrive.html#storaged-drive-call-set-configuration-sync"/>
     <keyword type="function" name="storaged_drive_complete_set_configuration ()" link="StoragedDrive.html#storaged-drive-complete-set-configuration"/>
-    <keyword type="function" name="storaged_drive_call_power_off ()" link="StoragedDrive.html#storaged-drive-call-power-off" since="2.1"/>
-    <keyword type="function" name="storaged_drive_call_power_off_finish ()" link="StoragedDrive.html#storaged-drive-call-power-off-finish" since="2.1"/>
-    <keyword type="function" name="storaged_drive_call_power_off_sync ()" link="StoragedDrive.html#storaged-drive-call-power-off-sync" since="2.1"/>
-    <keyword type="function" name="storaged_drive_complete_power_off ()" link="StoragedDrive.html#storaged-drive-complete-power-off" since="2.1"/>
+    <keyword type="function" name="storaged_drive_call_power_off ()" link="StoragedDrive.html#storaged-drive-call-power-off" since="2.0.0"/>
+    <keyword type="function" name="storaged_drive_call_power_off_finish ()" link="StoragedDrive.html#storaged-drive-call-power-off-finish" since="2.0.0"/>
+    <keyword type="function" name="storaged_drive_call_power_off_sync ()" link="StoragedDrive.html#storaged-drive-call-power-off-sync" since="2.0.0"/>
+    <keyword type="function" name="storaged_drive_complete_power_off ()" link="StoragedDrive.html#storaged-drive-complete-power-off" since="2.0.0"/>
     <keyword type="function" name="storaged_drive_get_connection_bus ()" link="StoragedDrive.html#storaged-drive-get-connection-bus"/>
     <keyword type="function" name="storaged_drive_get_removable ()" link="StoragedDrive.html#storaged-drive-get-removable"/>
     <keyword type="function" name="storaged_drive_get_ejectable ()" link="StoragedDrive.html#storaged-drive-get-ejectable"/>
@@ -474,8 +521,8 @@
     <keyword type="function" name="storaged_drive_get_sort_key ()" link="StoragedDrive.html#storaged-drive-get-sort-key"/>
     <keyword type="function" name="storaged_drive_get_configuration ()" link="StoragedDrive.html#storaged-drive-get-configuration"/>
     <keyword type="function" name="storaged_drive_get_id ()" link="StoragedDrive.html#storaged-drive-get-id"/>
-    <keyword type="function" name="storaged_drive_get_can_power_off ()" link="StoragedDrive.html#storaged-drive-get-can-power-off" since="2.1"/>
-    <keyword type="function" name="storaged_drive_get_sibling_id ()" link="StoragedDrive.html#storaged-drive-get-sibling-id" since="2.1"/>
+    <keyword type="function" name="storaged_drive_get_can_power_off ()" link="StoragedDrive.html#storaged-drive-get-can-power-off" since="2.0.0"/>
+    <keyword type="function" name="storaged_drive_get_sibling_id ()" link="StoragedDrive.html#storaged-drive-get-sibling-id" since="2.0.0"/>
     <keyword type="function" name="storaged_drive_dup_connection_bus ()" link="StoragedDrive.html#storaged-drive-dup-connection-bus"/>
     <keyword type="function" name="storaged_drive_dup_seat ()" link="StoragedDrive.html#storaged-drive-dup-seat"/>
     <keyword type="function" name="storaged_drive_dup_media ()" link="StoragedDrive.html#storaged-drive-dup-media"/>
@@ -488,7 +535,7 @@
     <keyword type="function" name="storaged_drive_dup_sort_key ()" link="StoragedDrive.html#storaged-drive-dup-sort-key"/>
     <keyword type="function" name="storaged_drive_dup_configuration ()" link="StoragedDrive.html#storaged-drive-dup-configuration"/>
     <keyword type="function" name="storaged_drive_dup_id ()" link="StoragedDrive.html#storaged-drive-dup-id"/>
-    <keyword type="function" name="storaged_drive_dup_sibling_id ()" link="StoragedDrive.html#storaged-drive-dup-sibling-id" since="2.1"/>
+    <keyword type="function" name="storaged_drive_dup_sibling_id ()" link="StoragedDrive.html#storaged-drive-dup-sibling-id" since="2.0.0"/>
     <keyword type="function" name="storaged_drive_set_connection_bus ()" link="StoragedDrive.html#storaged-drive-set-connection-bus"/>
     <keyword type="function" name="storaged_drive_set_removable ()" link="StoragedDrive.html#storaged-drive-set-removable"/>
     <keyword type="function" name="storaged_drive_set_ejectable ()" link="StoragedDrive.html#storaged-drive-set-ejectable"/>
@@ -516,8 +563,8 @@
     <keyword type="function" name="storaged_drive_set_sort_key ()" link="StoragedDrive.html#storaged-drive-set-sort-key"/>
     <keyword type="function" name="storaged_drive_set_configuration ()" link="StoragedDrive.html#storaged-drive-set-configuration"/>
     <keyword type="function" name="storaged_drive_set_id ()" link="StoragedDrive.html#storaged-drive-set-id"/>
-    <keyword type="function" name="storaged_drive_set_can_power_off ()" link="StoragedDrive.html#storaged-drive-set-can-power-off" since="2.1"/>
-    <keyword type="function" name="storaged_drive_set_sibling_id ()" link="StoragedDrive.html#storaged-drive-set-sibling-id" since="2.1"/>
+    <keyword type="function" name="storaged_drive_set_can_power_off ()" link="StoragedDrive.html#storaged-drive-set-can-power-off" since="2.0.0"/>
+    <keyword type="function" name="storaged_drive_set_sibling_id ()" link="StoragedDrive.html#storaged-drive-set-sibling-id" since="2.0.0"/>
     <keyword type="function" name="storaged_drive_proxy_new ()" link="StoragedDrive.html#storaged-drive-proxy-new"/>
     <keyword type="function" name="storaged_drive_proxy_new_finish ()" link="StoragedDrive.html#storaged-drive-proxy-new-finish"/>
     <keyword type="function" name="storaged_drive_proxy_new_sync ()" link="StoragedDrive.html#storaged-drive-proxy-new-sync"/>
@@ -581,10 +628,10 @@
     <keyword type="function" name="storaged_drive_ata_call_smart_selftest_start_finish ()" link="StoragedDriveAta.html#storaged-drive-ata-call-smart-selftest-start-finish"/>
     <keyword type="function" name="storaged_drive_ata_call_smart_selftest_start_sync ()" link="StoragedDriveAta.html#storaged-drive-ata-call-smart-selftest-start-sync"/>
     <keyword type="function" name="storaged_drive_ata_complete_smart_selftest_start ()" link="StoragedDriveAta.html#storaged-drive-ata-complete-smart-selftest-start"/>
-    <keyword type="function" name="storaged_drive_ata_call_smart_set_enabled ()" link="StoragedDriveAta.html#storaged-drive-ata-call-smart-set-enabled" since="2.1"/>
-    <keyword type="function" name="storaged_drive_ata_call_smart_set_enabled_finish ()" link="StoragedDriveAta.html#storaged-drive-ata-call-smart-set-enabled-finish" since="2.1"/>
-    <keyword type="function" name="storaged_drive_ata_call_smart_set_enabled_sync ()" link="StoragedDriveAta.html#storaged-drive-ata-call-smart-set-enabled-sync" since="2.1"/>
-    <keyword type="function" name="storaged_drive_ata_complete_smart_set_enabled ()" link="StoragedDriveAta.html#storaged-drive-ata-complete-smart-set-enabled" since="2.1"/>
+    <keyword type="function" name="storaged_drive_ata_call_smart_set_enabled ()" link="StoragedDriveAta.html#storaged-drive-ata-call-smart-set-enabled" since="2.0.0"/>
+    <keyword type="function" name="storaged_drive_ata_call_smart_set_enabled_finish ()" link="StoragedDriveAta.html#storaged-drive-ata-call-smart-set-enabled-finish" since="2.0.0"/>
+    <keyword type="function" name="storaged_drive_ata_call_smart_set_enabled_sync ()" link="StoragedDriveAta.html#storaged-drive-ata-call-smart-set-enabled-sync" since="2.0.0"/>
+    <keyword type="function" name="storaged_drive_ata_complete_smart_set_enabled ()" link="StoragedDriveAta.html#storaged-drive-ata-complete-smart-set-enabled" since="2.0.0"/>
     <keyword type="function" name="storaged_drive_ata_call_pm_get_state ()" link="StoragedDriveAta.html#storaged-drive-ata-call-pm-get-state"/>
     <keyword type="function" name="storaged_drive_ata_call_pm_get_state_finish ()" link="StoragedDriveAta.html#storaged-drive-ata-call-pm-get-state-finish"/>
     <keyword type="function" name="storaged_drive_ata_call_pm_get_state_sync ()" link="StoragedDriveAta.html#storaged-drive-ata-call-pm-get-state-sync"/>
@@ -620,8 +667,8 @@
     <keyword type="function" name="storaged_drive_ata_get_apm_supported ()" link="StoragedDriveAta.html#storaged-drive-ata-get-apm-supported"/>
     <keyword type="function" name="storaged_drive_ata_get_pm_enabled ()" link="StoragedDriveAta.html#storaged-drive-ata-get-pm-enabled"/>
     <keyword type="function" name="storaged_drive_ata_get_pm_supported ()" link="StoragedDriveAta.html#storaged-drive-ata-get-pm-supported"/>
-    <keyword type="function" name="storaged_drive_ata_get_write_cache_enabled ()" link="StoragedDriveAta.html#storaged-drive-ata-get-write-cache-enabled" since="2.1"/>
-    <keyword type="function" name="storaged_drive_ata_get_write_cache_supported ()" link="StoragedDriveAta.html#storaged-drive-ata-get-write-cache-supported" since="2.1"/>
+    <keyword type="function" name="storaged_drive_ata_get_write_cache_enabled ()" link="StoragedDriveAta.html#storaged-drive-ata-get-write-cache-enabled" since="2.0.0"/>
+    <keyword type="function" name="storaged_drive_ata_get_write_cache_supported ()" link="StoragedDriveAta.html#storaged-drive-ata-get-write-cache-supported" since="2.0.0"/>
     <keyword type="function" name="storaged_drive_ata_get_security_enhanced_erase_unit_minutes ()" link="StoragedDriveAta.html#storaged-drive-ata-get-security-enhanced-erase-unit-minutes"/>
     <keyword type="function" name="storaged_drive_ata_get_security_erase_unit_minutes ()" link="StoragedDriveAta.html#storaged-drive-ata-get-security-erase-unit-minutes"/>
     <keyword type="function" name="storaged_drive_ata_get_security_frozen ()" link="StoragedDriveAta.html#storaged-drive-ata-get-security-frozen"/>
@@ -643,8 +690,8 @@
     <keyword type="function" name="storaged_drive_ata_set_apm_supported ()" link="StoragedDriveAta.html#storaged-drive-ata-set-apm-supported"/>
     <keyword type="function" name="storaged_drive_ata_set_pm_enabled ()" link="StoragedDriveAta.html#storaged-drive-ata-set-pm-enabled"/>
     <keyword type="function" name="storaged_drive_ata_set_pm_supported ()" link="StoragedDriveAta.html#storaged-drive-ata-set-pm-supported"/>
-    <keyword type="function" name="storaged_drive_ata_set_write_cache_enabled ()" link="StoragedDriveAta.html#storaged-drive-ata-set-write-cache-enabled" since="2.1"/>
-    <keyword type="function" name="storaged_drive_ata_set_write_cache_supported ()" link="StoragedDriveAta.html#storaged-drive-ata-set-write-cache-supported" since="2.1"/>
+    <keyword type="function" name="storaged_drive_ata_set_write_cache_enabled ()" link="StoragedDriveAta.html#storaged-drive-ata-set-write-cache-enabled" since="2.0.0"/>
+    <keyword type="function" name="storaged_drive_ata_set_write_cache_supported ()" link="StoragedDriveAta.html#storaged-drive-ata-set-write-cache-supported" since="2.0.0"/>
     <keyword type="function" name="storaged_drive_ata_set_security_enhanced_erase_unit_minutes ()" link="StoragedDriveAta.html#storaged-drive-ata-set-security-enhanced-erase-unit-minutes"/>
     <keyword type="function" name="storaged_drive_ata_set_security_erase_unit_minutes ()" link="StoragedDriveAta.html#storaged-drive-ata-set-security-erase-unit-minutes"/>
     <keyword type="function" name="storaged_drive_ata_set_security_frozen ()" link="StoragedDriveAta.html#storaged-drive-ata-set-security-frozen"/>
@@ -693,77 +740,77 @@
     <keyword type="signal" name="The “handle-smart-selftest-start” signal" link="StoragedDriveAta.html#StoragedDriveAta-handle-smart-selftest-start"/>
     <keyword type="signal" name="The “handle-smart-set-enabled” signal" link="StoragedDriveAta.html#StoragedDriveAta-handle-smart-set-enabled"/>
     <keyword type="signal" name="The “handle-smart-update” signal" link="StoragedDriveAta.html#StoragedDriveAta-handle-smart-update"/>
-    <keyword type="function" name="storaged_mdraid_interface_info ()" link="StoragedMDRaid.html#storaged-mdraid-interface-info" since="2.1"/>
-    <keyword type="function" name="storaged_mdraid_override_properties ()" link="StoragedMDRaid.html#storaged-mdraid-override-properties" since="2.1"/>
-    <keyword type="function" name="storaged_mdraid_call_remove_device ()" link="StoragedMDRaid.html#storaged-mdraid-call-remove-device" since="2.1"/>
-    <keyword type="function" name="storaged_mdraid_call_remove_device_finish ()" link="StoragedMDRaid.html#storaged-mdraid-call-remove-device-finish" since="2.1"/>
-    <keyword type="function" name="storaged_mdraid_call_remove_device_sync ()" link="StoragedMDRaid.html#storaged-mdraid-call-remove-device-sync" since="2.1"/>
-    <keyword type="function" name="storaged_mdraid_complete_remove_device ()" link="StoragedMDRaid.html#storaged-mdraid-complete-remove-device" since="2.1"/>
-    <keyword type="function" name="storaged_mdraid_call_add_device ()" link="StoragedMDRaid.html#storaged-mdraid-call-add-device" since="2.1"/>
-    <keyword type="function" name="storaged_mdraid_call_add_device_finish ()" link="StoragedMDRaid.html#storaged-mdraid-call-add-device-finish" since="2.1"/>
-    <keyword type="function" name="storaged_mdraid_call_add_device_sync ()" link="StoragedMDRaid.html#storaged-mdraid-call-add-device-sync" since="2.1"/>
-    <keyword type="function" name="storaged_mdraid_complete_add_device ()" link="StoragedMDRaid.html#storaged-mdraid-complete-add-device" since="2.1"/>
-    <keyword type="function" name="storaged_mdraid_call_start ()" link="StoragedMDRaid.html#storaged-mdraid-call-start" since="2.1"/>
-    <keyword type="function" name="storaged_mdraid_call_start_finish ()" link="StoragedMDRaid.html#storaged-mdraid-call-start-finish" since="2.1"/>
-    <keyword type="function" name="storaged_mdraid_call_start_sync ()" link="StoragedMDRaid.html#storaged-mdraid-call-start-sync" since="2.1"/>
-    <keyword type="function" name="storaged_mdraid_complete_start ()" link="StoragedMDRaid.html#storaged-mdraid-complete-start" since="2.1"/>
-    <keyword type="function" name="storaged_mdraid_call_stop ()" link="StoragedMDRaid.html#storaged-mdraid-call-stop" since="2.1"/>
-    <keyword type="function" name="storaged_mdraid_call_stop_finish ()" link="StoragedMDRaid.html#storaged-mdraid-call-stop-finish" since="2.1"/>
-    <keyword type="function" name="storaged_mdraid_call_stop_sync ()" link="StoragedMDRaid.html#storaged-mdraid-call-stop-sync" since="2.1"/>
-    <keyword type="function" name="storaged_mdraid_complete_stop ()" link="StoragedMDRaid.html#storaged-mdraid-complete-stop" since="2.1"/>
-    <keyword type="function" name="storaged_mdraid_call_set_bitmap_location ()" link="StoragedMDRaid.html#storaged-mdraid-call-set-bitmap-location" since="2.1"/>
-    <keyword type="function" name="storaged_mdraid_call_set_bitmap_location_finish ()" link="StoragedMDRaid.html#storaged-mdraid-call-set-bitmap-location-finish" since="2.1"/>
-    <keyword type="function" name="storaged_mdraid_call_set_bitmap_location_sync ()" link="StoragedMDRaid.html#storaged-mdraid-call-set-bitmap-location-sync" since="2.1"/>
-    <keyword type="function" name="storaged_mdraid_complete_set_bitmap_location ()" link="StoragedMDRaid.html#storaged-mdraid-complete-set-bitmap-location" since="2.1"/>
-    <keyword type="function" name="storaged_mdraid_call_request_sync_action ()" link="StoragedMDRaid.html#storaged-mdraid-call-request-sync-action" since="2.1"/>
-    <keyword type="function" name="storaged_mdraid_call_request_sync_action_finish ()" link="StoragedMDRaid.html#storaged-mdraid-call-request-sync-action-finish" since="2.1"/>
-    <keyword type="function" name="storaged_mdraid_call_request_sync_action_sync ()" link="StoragedMDRaid.html#storaged-mdraid-call-request-sync-action-sync" since="2.1"/>
-    <keyword type="function" name="storaged_mdraid_complete_request_sync_action ()" link="StoragedMDRaid.html#storaged-mdraid-complete-request-sync-action" since="2.1"/>
-    <keyword type="function" name="storaged_mdraid_get_active_devices ()" link="StoragedMDRaid.html#storaged-mdraid-get-active-devices" since="2.1"/>
-    <keyword type="function" name="storaged_mdraid_get_bitmap_location ()" link="StoragedMDRaid.html#storaged-mdraid-get-bitmap-location" since="2.1"/>
-    <keyword type="function" name="storaged_mdraid_get_chunk_size ()" link="StoragedMDRaid.html#storaged-mdraid-get-chunk-size" since="2.1"/>
-    <keyword type="function" name="storaged_mdraid_get_degraded ()" link="StoragedMDRaid.html#storaged-mdraid-get-degraded" since="2.1"/>
-    <keyword type="function" name="storaged_mdraid_get_level ()" link="StoragedMDRaid.html#storaged-mdraid-get-level" since="2.1"/>
-    <keyword type="function" name="storaged_mdraid_get_name ()" link="StoragedMDRaid.html#storaged-mdraid-get-name" since="2.1"/>
-    <keyword type="function" name="storaged_mdraid_get_num_devices ()" link="StoragedMDRaid.html#storaged-mdraid-get-num-devices" since="2.1"/>
-    <keyword type="function" name="storaged_mdraid_get_size ()" link="StoragedMDRaid.html#storaged-mdraid-get-size" since="2.1"/>
-    <keyword type="function" name="storaged_mdraid_get_sync_action ()" link="StoragedMDRaid.html#storaged-mdraid-get-sync-action" since="2.1"/>
-    <keyword type="function" name="storaged_mdraid_get_sync_completed ()" link="StoragedMDRaid.html#storaged-mdraid-get-sync-completed" since="2.1"/>
-    <keyword type="function" name="storaged_mdraid_get_sync_rate ()" link="StoragedMDRaid.html#storaged-mdraid-get-sync-rate" since="2.1"/>
-    <keyword type="function" name="storaged_mdraid_get_sync_remaining_time ()" link="StoragedMDRaid.html#storaged-mdraid-get-sync-remaining-time" since="2.1"/>
-    <keyword type="function" name="storaged_mdraid_get_uuid ()" link="StoragedMDRaid.html#storaged-mdraid-get-uuid" since="2.1"/>
-    <keyword type="function" name="storaged_mdraid_dup_active_devices ()" link="StoragedMDRaid.html#storaged-mdraid-dup-active-devices" since="2.1"/>
-    <keyword type="function" name="storaged_mdraid_dup_bitmap_location ()" link="StoragedMDRaid.html#storaged-mdraid-dup-bitmap-location" since="2.1"/>
-    <keyword type="function" name="storaged_mdraid_dup_level ()" link="StoragedMDRaid.html#storaged-mdraid-dup-level" since="2.1"/>
-    <keyword type="function" name="storaged_mdraid_dup_name ()" link="StoragedMDRaid.html#storaged-mdraid-dup-name" since="2.1"/>
-    <keyword type="function" name="storaged_mdraid_dup_sync_action ()" link="StoragedMDRaid.html#storaged-mdraid-dup-sync-action" since="2.1"/>
-    <keyword type="function" name="storaged_mdraid_dup_uuid ()" link="StoragedMDRaid.html#storaged-mdraid-dup-uuid" since="2.1"/>
-    <keyword type="function" name="storaged_mdraid_set_active_devices ()" link="StoragedMDRaid.html#storaged-mdraid-set-active-devices" since="2.1"/>
-    <keyword type="function" name="storaged_mdraid_set_bitmap_location ()" link="StoragedMDRaid.html#storaged-mdraid-set-bitmap-location" since="2.1"/>
-    <keyword type="function" name="storaged_mdraid_set_chunk_size ()" link="StoragedMDRaid.html#storaged-mdraid-set-chunk-size" since="2.1"/>
-    <keyword type="function" name="storaged_mdraid_set_degraded ()" link="StoragedMDRaid.html#storaged-mdraid-set-degraded" since="2.1"/>
-    <keyword type="function" name="storaged_mdraid_set_level ()" link="StoragedMDRaid.html#storaged-mdraid-set-level" since="2.1"/>
-    <keyword type="function" name="storaged_mdraid_set_name ()" link="StoragedMDRaid.html#storaged-mdraid-set-name" since="2.1"/>
-    <keyword type="function" name="storaged_mdraid_set_num_devices ()" link="StoragedMDRaid.html#storaged-mdraid-set-num-devices" since="2.1"/>
-    <keyword type="function" name="storaged_mdraid_set_size ()" link="StoragedMDRaid.html#storaged-mdraid-set-size" since="2.1"/>
-    <keyword type="function" name="storaged_mdraid_set_sync_action ()" link="StoragedMDRaid.html#storaged-mdraid-set-sync-action" since="2.1"/>
-    <keyword type="function" name="storaged_mdraid_set_sync_completed ()" link="StoragedMDRaid.html#storaged-mdraid-set-sync-completed" since="2.1"/>
-    <keyword type="function" name="storaged_mdraid_set_sync_rate ()" link="StoragedMDRaid.html#storaged-mdraid-set-sync-rate" since="2.1"/>
-    <keyword type="function" name="storaged_mdraid_set_sync_remaining_time ()" link="StoragedMDRaid.html#storaged-mdraid-set-sync-remaining-time" since="2.1"/>
-    <keyword type="function" name="storaged_mdraid_set_uuid ()" link="StoragedMDRaid.html#storaged-mdraid-set-uuid" since="2.1"/>
-    <keyword type="function" name="storaged_mdraid_proxy_new ()" link="StoragedMDRaid.html#storaged-mdraid-proxy-new" since="2.1"/>
-    <keyword type="function" name="storaged_mdraid_proxy_new_finish ()" link="StoragedMDRaid.html#storaged-mdraid-proxy-new-finish" since="2.1"/>
-    <keyword type="function" name="storaged_mdraid_proxy_new_sync ()" link="StoragedMDRaid.html#storaged-mdraid-proxy-new-sync" since="2.1"/>
-    <keyword type="function" name="storaged_mdraid_proxy_new_for_bus ()" link="StoragedMDRaid.html#storaged-mdraid-proxy-new-for-bus" since="2.1"/>
-    <keyword type="function" name="storaged_mdraid_proxy_new_for_bus_finish ()" link="StoragedMDRaid.html#storaged-mdraid-proxy-new-for-bus-finish" since="2.1"/>
-    <keyword type="function" name="storaged_mdraid_proxy_new_for_bus_sync ()" link="StoragedMDRaid.html#storaged-mdraid-proxy-new-for-bus-sync" since="2.1"/>
-    <keyword type="function" name="storaged_mdraid_skeleton_new ()" link="StoragedMDRaid.html#storaged-mdraid-skeleton-new" since="2.1"/>
+    <keyword type="function" name="storaged_mdraid_interface_info ()" link="StoragedMDRaid.html#storaged-mdraid-interface-info" since="2.0.0"/>
+    <keyword type="function" name="storaged_mdraid_override_properties ()" link="StoragedMDRaid.html#storaged-mdraid-override-properties" since="2.0.0"/>
+    <keyword type="function" name="storaged_mdraid_call_remove_device ()" link="StoragedMDRaid.html#storaged-mdraid-call-remove-device" since="2.0.0"/>
+    <keyword type="function" name="storaged_mdraid_call_remove_device_finish ()" link="StoragedMDRaid.html#storaged-mdraid-call-remove-device-finish" since="2.0.0"/>
+    <keyword type="function" name="storaged_mdraid_call_remove_device_sync ()" link="StoragedMDRaid.html#storaged-mdraid-call-remove-device-sync" since="2.0.0"/>
+    <keyword type="function" name="storaged_mdraid_complete_remove_device ()" link="StoragedMDRaid.html#storaged-mdraid-complete-remove-device" since="2.0.0"/>
+    <keyword type="function" name="storaged_mdraid_call_add_device ()" link="StoragedMDRaid.html#storaged-mdraid-call-add-device" since="2.0.0"/>
+    <keyword type="function" name="storaged_mdraid_call_add_device_finish ()" link="StoragedMDRaid.html#storaged-mdraid-call-add-device-finish" since="2.0.0"/>
+    <keyword type="function" name="storaged_mdraid_call_add_device_sync ()" link="StoragedMDRaid.html#storaged-mdraid-call-add-device-sync" since="2.0.0"/>
+    <keyword type="function" name="storaged_mdraid_complete_add_device ()" link="StoragedMDRaid.html#storaged-mdraid-complete-add-device" since="2.0.0"/>
+    <keyword type="function" name="storaged_mdraid_call_start ()" link="StoragedMDRaid.html#storaged-mdraid-call-start" since="2.0.0"/>
+    <keyword type="function" name="storaged_mdraid_call_start_finish ()" link="StoragedMDRaid.html#storaged-mdraid-call-start-finish" since="2.0.0"/>
+    <keyword type="function" name="storaged_mdraid_call_start_sync ()" link="StoragedMDRaid.html#storaged-mdraid-call-start-sync" since="2.0.0"/>
+    <keyword type="function" name="storaged_mdraid_complete_start ()" link="StoragedMDRaid.html#storaged-mdraid-complete-start" since="2.0.0"/>
+    <keyword type="function" name="storaged_mdraid_call_stop ()" link="StoragedMDRaid.html#storaged-mdraid-call-stop" since="2.0.0"/>
+    <keyword type="function" name="storaged_mdraid_call_stop_finish ()" link="StoragedMDRaid.html#storaged-mdraid-call-stop-finish" since="2.0.0"/>
+    <keyword type="function" name="storaged_mdraid_call_stop_sync ()" link="StoragedMDRaid.html#storaged-mdraid-call-stop-sync" since="2.0.0"/>
+    <keyword type="function" name="storaged_mdraid_complete_stop ()" link="StoragedMDRaid.html#storaged-mdraid-complete-stop" since="2.0.0"/>
+    <keyword type="function" name="storaged_mdraid_call_set_bitmap_location ()" link="StoragedMDRaid.html#storaged-mdraid-call-set-bitmap-location" since="2.0.0"/>
+    <keyword type="function" name="storaged_mdraid_call_set_bitmap_location_finish ()" link="StoragedMDRaid.html#storaged-mdraid-call-set-bitmap-location-finish" since="2.0.0"/>
+    <keyword type="function" name="storaged_mdraid_call_set_bitmap_location_sync ()" link="StoragedMDRaid.html#storaged-mdraid-call-set-bitmap-location-sync" since="2.0.0"/>
+    <keyword type="function" name="storaged_mdraid_complete_set_bitmap_location ()" link="StoragedMDRaid.html#storaged-mdraid-complete-set-bitmap-location" since="2.0.0"/>
+    <keyword type="function" name="storaged_mdraid_call_request_sync_action ()" link="StoragedMDRaid.html#storaged-mdraid-call-request-sync-action" since="2.0.0"/>
+    <keyword type="function" name="storaged_mdraid_call_request_sync_action_finish ()" link="StoragedMDRaid.html#storaged-mdraid-call-request-sync-action-finish" since="2.0.0"/>
+    <keyword type="function" name="storaged_mdraid_call_request_sync_action_sync ()" link="StoragedMDRaid.html#storaged-mdraid-call-request-sync-action-sync" since="2.0.0"/>
+    <keyword type="function" name="storaged_mdraid_complete_request_sync_action ()" link="StoragedMDRaid.html#storaged-mdraid-complete-request-sync-action" since="2.0.0"/>
+    <keyword type="function" name="storaged_mdraid_get_active_devices ()" link="StoragedMDRaid.html#storaged-mdraid-get-active-devices" since="2.0.0"/>
+    <keyword type="function" name="storaged_mdraid_get_bitmap_location ()" link="StoragedMDRaid.html#storaged-mdraid-get-bitmap-location" since="2.0.0"/>
+    <keyword type="function" name="storaged_mdraid_get_chunk_size ()" link="StoragedMDRaid.html#storaged-mdraid-get-chunk-size" since="2.0.0"/>
+    <keyword type="function" name="storaged_mdraid_get_degraded ()" link="StoragedMDRaid.html#storaged-mdraid-get-degraded" since="2.0.0"/>
+    <keyword type="function" name="storaged_mdraid_get_level ()" link="StoragedMDRaid.html#storaged-mdraid-get-level" since="2.0.0"/>
+    <keyword type="function" name="storaged_mdraid_get_name ()" link="StoragedMDRaid.html#storaged-mdraid-get-name" since="2.0.0"/>
+    <keyword type="function" name="storaged_mdraid_get_num_devices ()" link="StoragedMDRaid.html#storaged-mdraid-get-num-devices" since="2.0.0"/>
+    <keyword type="function" name="storaged_mdraid_get_size ()" link="StoragedMDRaid.html#storaged-mdraid-get-size" since="2.0.0"/>
+    <keyword type="function" name="storaged_mdraid_get_sync_action ()" link="StoragedMDRaid.html#storaged-mdraid-get-sync-action" since="2.0.0"/>
+    <keyword type="function" name="storaged_mdraid_get_sync_completed ()" link="StoragedMDRaid.html#storaged-mdraid-get-sync-completed" since="2.0.0"/>
+    <keyword type="function" name="storaged_mdraid_get_sync_rate ()" link="StoragedMDRaid.html#storaged-mdraid-get-sync-rate" since="2.0.0"/>
+    <keyword type="function" name="storaged_mdraid_get_sync_remaining_time ()" link="StoragedMDRaid.html#storaged-mdraid-get-sync-remaining-time" since="2.0.0"/>
+    <keyword type="function" name="storaged_mdraid_get_uuid ()" link="StoragedMDRaid.html#storaged-mdraid-get-uuid" since="2.0.0"/>
+    <keyword type="function" name="storaged_mdraid_dup_active_devices ()" link="StoragedMDRaid.html#storaged-mdraid-dup-active-devices" since="2.0.0"/>
+    <keyword type="function" name="storaged_mdraid_dup_bitmap_location ()" link="StoragedMDRaid.html#storaged-mdraid-dup-bitmap-location" since="2.0.0"/>
+    <keyword type="function" name="storaged_mdraid_dup_level ()" link="StoragedMDRaid.html#storaged-mdraid-dup-level" since="2.0.0"/>
+    <keyword type="function" name="storaged_mdraid_dup_name ()" link="StoragedMDRaid.html#storaged-mdraid-dup-name" since="2.0.0"/>
+    <keyword type="function" name="storaged_mdraid_dup_sync_action ()" link="StoragedMDRaid.html#storaged-mdraid-dup-sync-action" since="2.0.0"/>
+    <keyword type="function" name="storaged_mdraid_dup_uuid ()" link="StoragedMDRaid.html#storaged-mdraid-dup-uuid" since="2.0.0"/>
+    <keyword type="function" name="storaged_mdraid_set_active_devices ()" link="StoragedMDRaid.html#storaged-mdraid-set-active-devices" since="2.0.0"/>
+    <keyword type="function" name="storaged_mdraid_set_bitmap_location ()" link="StoragedMDRaid.html#storaged-mdraid-set-bitmap-location" since="2.0.0"/>
+    <keyword type="function" name="storaged_mdraid_set_chunk_size ()" link="StoragedMDRaid.html#storaged-mdraid-set-chunk-size" since="2.0.0"/>
+    <keyword type="function" name="storaged_mdraid_set_degraded ()" link="StoragedMDRaid.html#storaged-mdraid-set-degraded" since="2.0.0"/>
+    <keyword type="function" name="storaged_mdraid_set_level ()" link="StoragedMDRaid.html#storaged-mdraid-set-level" since="2.0.0"/>
+    <keyword type="function" name="storaged_mdraid_set_name ()" link="StoragedMDRaid.html#storaged-mdraid-set-name" since="2.0.0"/>
+    <keyword type="function" name="storaged_mdraid_set_num_devices ()" link="StoragedMDRaid.html#storaged-mdraid-set-num-devices" since="2.0.0"/>
+    <keyword type="function" name="storaged_mdraid_set_size ()" link="StoragedMDRaid.html#storaged-mdraid-set-size" since="2.0.0"/>
+    <keyword type="function" name="storaged_mdraid_set_sync_action ()" link="StoragedMDRaid.html#storaged-mdraid-set-sync-action" since="2.0.0"/>
+    <keyword type="function" name="storaged_mdraid_set_sync_completed ()" link="StoragedMDRaid.html#storaged-mdraid-set-sync-completed" since="2.0.0"/>
+    <keyword type="function" name="storaged_mdraid_set_sync_rate ()" link="StoragedMDRaid.html#storaged-mdraid-set-sync-rate" since="2.0.0"/>
+    <keyword type="function" name="storaged_mdraid_set_sync_remaining_time ()" link="StoragedMDRaid.html#storaged-mdraid-set-sync-remaining-time" since="2.0.0"/>
+    <keyword type="function" name="storaged_mdraid_set_uuid ()" link="StoragedMDRaid.html#storaged-mdraid-set-uuid" since="2.0.0"/>
+    <keyword type="function" name="storaged_mdraid_proxy_new ()" link="StoragedMDRaid.html#storaged-mdraid-proxy-new" since="2.0.0"/>
+    <keyword type="function" name="storaged_mdraid_proxy_new_finish ()" link="StoragedMDRaid.html#storaged-mdraid-proxy-new-finish" since="2.0.0"/>
+    <keyword type="function" name="storaged_mdraid_proxy_new_sync ()" link="StoragedMDRaid.html#storaged-mdraid-proxy-new-sync" since="2.0.0"/>
+    <keyword type="function" name="storaged_mdraid_proxy_new_for_bus ()" link="StoragedMDRaid.html#storaged-mdraid-proxy-new-for-bus" since="2.0.0"/>
+    <keyword type="function" name="storaged_mdraid_proxy_new_for_bus_finish ()" link="StoragedMDRaid.html#storaged-mdraid-proxy-new-for-bus-finish" since="2.0.0"/>
+    <keyword type="function" name="storaged_mdraid_proxy_new_for_bus_sync ()" link="StoragedMDRaid.html#storaged-mdraid-proxy-new-for-bus-sync" since="2.0.0"/>
+    <keyword type="function" name="storaged_mdraid_skeleton_new ()" link="StoragedMDRaid.html#storaged-mdraid-skeleton-new" since="2.0.0"/>
     <keyword type="struct" name="StoragedMDRaid" link="StoragedMDRaid.html#StoragedMDRaid-struct"/>
-    <keyword type="struct" name="struct StoragedMDRaidIface" link="StoragedMDRaid.html#StoragedMDRaidIface" since="2.1"/>
+    <keyword type="struct" name="struct StoragedMDRaidIface" link="StoragedMDRaid.html#StoragedMDRaidIface" since="2.0.0"/>
     <keyword type="struct" name="struct StoragedMDRaidProxy" link="StoragedMDRaid.html#StoragedMDRaidProxy-struct"/>
-    <keyword type="struct" name="struct StoragedMDRaidProxyClass" link="StoragedMDRaid.html#StoragedMDRaidProxyClass" since="2.1"/>
+    <keyword type="struct" name="struct StoragedMDRaidProxyClass" link="StoragedMDRaid.html#StoragedMDRaidProxyClass" since="2.0.0"/>
     <keyword type="struct" name="struct StoragedMDRaidSkeleton" link="StoragedMDRaid.html#StoragedMDRaidSkeleton-struct"/>
-    <keyword type="struct" name="struct StoragedMDRaidSkeletonClass" link="StoragedMDRaid.html#StoragedMDRaidSkeletonClass" since="2.1"/>
+    <keyword type="struct" name="struct StoragedMDRaidSkeletonClass" link="StoragedMDRaid.html#StoragedMDRaidSkeletonClass" since="2.0.0"/>
     <keyword type="property" name="The “active-devices” property" link="StoragedMDRaid.html#StoragedMDRaid--active-devices"/>
     <keyword type="property" name="The “bitmap-location” property" link="StoragedMDRaid.html#StoragedMDRaid--bitmap-location"/>
     <keyword type="property" name="The “chunk-size” property" link="StoragedMDRaid.html#StoragedMDRaid--chunk-size"/>
@@ -792,8 +839,8 @@
     <keyword type="function" name="storaged_job_emit_completed ()" link="StoragedJob.html#storaged-job-emit-completed"/>
     <keyword type="function" name="storaged_job_get_expected_end_time ()" link="StoragedJob.html#storaged-job-get-expected-end-time"/>
     <keyword type="function" name="storaged_job_get_progress ()" link="StoragedJob.html#storaged-job-get-progress"/>
-    <keyword type="function" name="storaged_job_get_bytes ()" link="StoragedJob.html#storaged-job-get-bytes" since="2.1"/>
-    <keyword type="function" name="storaged_job_get_rate ()" link="StoragedJob.html#storaged-job-get-rate" since="2.1"/>
+    <keyword type="function" name="storaged_job_get_bytes ()" link="StoragedJob.html#storaged-job-get-bytes" since="2.0.0"/>
+    <keyword type="function" name="storaged_job_get_rate ()" link="StoragedJob.html#storaged-job-get-rate" since="2.0.0"/>
     <keyword type="function" name="storaged_job_get_start_time ()" link="StoragedJob.html#storaged-job-get-start-time"/>
     <keyword type="function" name="storaged_job_get_objects ()" link="StoragedJob.html#storaged-job-get-objects"/>
     <keyword type="function" name="storaged_job_get_cancelable ()" link="StoragedJob.html#storaged-job-get-cancelable"/>
@@ -804,8 +851,8 @@
     <keyword type="function" name="storaged_job_dup_operation ()" link="StoragedJob.html#storaged-job-dup-operation"/>
     <keyword type="function" name="storaged_job_set_expected_end_time ()" link="StoragedJob.html#storaged-job-set-expected-end-time"/>
     <keyword type="function" name="storaged_job_set_progress ()" link="StoragedJob.html#storaged-job-set-progress"/>
-    <keyword type="function" name="storaged_job_set_bytes ()" link="StoragedJob.html#storaged-job-set-bytes" since="2.1"/>
-    <keyword type="function" name="storaged_job_set_rate ()" link="StoragedJob.html#storaged-job-set-rate" since="2.1"/>
+    <keyword type="function" name="storaged_job_set_bytes ()" link="StoragedJob.html#storaged-job-set-bytes" since="2.0.0"/>
+    <keyword type="function" name="storaged_job_set_rate ()" link="StoragedJob.html#storaged-job-set-rate" since="2.0.0"/>
     <keyword type="function" name="storaged_job_set_start_time ()" link="StoragedJob.html#storaged-job-set-start-time"/>
     <keyword type="function" name="storaged_job_set_objects ()" link="StoragedJob.html#storaged-job-set-objects"/>
     <keyword type="function" name="storaged_job_set_cancelable ()" link="StoragedJob.html#storaged-job-set-cancelable"/>
@@ -886,7 +933,7 @@
     <keyword type="function" name="storaged_block_get_id_version ()" link="StoragedBlock.html#storaged-block-get-id-version"/>
     <keyword type="function" name="storaged_block_get_device_number ()" link="StoragedBlock.html#storaged-block-get-device-number"/>
     <keyword type="function" name="storaged_block_get_preferred_device ()" link="StoragedBlock.html#storaged-block-get-preferred-device"/>
-    <keyword type="function" name="storaged_block_get_id ()" link="StoragedBlock.html#storaged-block-get-id" since="2.1"/>
+    <keyword type="function" name="storaged_block_get_id ()" link="StoragedBlock.html#storaged-block-get-id" since="2.0.0"/>
     <keyword type="function" name="storaged_block_get_size ()" link="StoragedBlock.html#storaged-block-get-size"/>
     <keyword type="function" name="storaged_block_get_read_only ()" link="StoragedBlock.html#storaged-block-get-read-only"/>
     <keyword type="function" name="storaged_block_get_symlinks ()" link="StoragedBlock.html#storaged-block-get-symlinks"/>
@@ -896,9 +943,9 @@
     <keyword type="function" name="storaged_block_get_hint_auto ()" link="StoragedBlock.html#storaged-block-get-hint-auto"/>
     <keyword type="function" name="storaged_block_get_hint_name ()" link="StoragedBlock.html#storaged-block-get-hint-name"/>
     <keyword type="function" name="storaged_block_get_hint_icon_name ()" link="StoragedBlock.html#storaged-block-get-hint-icon-name"/>
-    <keyword type="function" name="storaged_block_get_hint_symbolic_icon_name ()" link="StoragedBlock.html#storaged-block-get-hint-symbolic-icon-name" since="2.1"/>
-    <keyword type="function" name="storaged_block_get_mdraid ()" link="StoragedBlock.html#storaged-block-get-mdraid" since="2.1"/>
-    <keyword type="function" name="storaged_block_get_mdraid_member ()" link="StoragedBlock.html#storaged-block-get-mdraid-member" since="2.1"/>
+    <keyword type="function" name="storaged_block_get_hint_symbolic_icon_name ()" link="StoragedBlock.html#storaged-block-get-hint-symbolic-icon-name" since="2.0.0"/>
+    <keyword type="function" name="storaged_block_get_mdraid ()" link="StoragedBlock.html#storaged-block-get-mdraid" since="2.0.0"/>
+    <keyword type="function" name="storaged_block_get_mdraid_member ()" link="StoragedBlock.html#storaged-block-get-mdraid-member" since="2.0.0"/>
     <keyword type="function" name="storaged_block_dup_configuration ()" link="StoragedBlock.html#storaged-block-dup-configuration"/>
     <keyword type="function" name="storaged_block_dup_crypto_backing_device ()" link="StoragedBlock.html#storaged-block-dup-crypto-backing-device"/>
     <keyword type="function" name="storaged_block_dup_device ()" link="StoragedBlock.html#storaged-block-dup-device"/>
@@ -909,13 +956,13 @@
     <keyword type="function" name="storaged_block_dup_id_uuid ()" link="StoragedBlock.html#storaged-block-dup-id-uuid"/>
     <keyword type="function" name="storaged_block_dup_id_version ()" link="StoragedBlock.html#storaged-block-dup-id-version"/>
     <keyword type="function" name="storaged_block_dup_preferred_device ()" link="StoragedBlock.html#storaged-block-dup-preferred-device"/>
-    <keyword type="function" name="storaged_block_dup_id ()" link="StoragedBlock.html#storaged-block-dup-id" since="2.1"/>
+    <keyword type="function" name="storaged_block_dup_id ()" link="StoragedBlock.html#storaged-block-dup-id" since="2.0.0"/>
     <keyword type="function" name="storaged_block_dup_symlinks ()" link="StoragedBlock.html#storaged-block-dup-symlinks"/>
     <keyword type="function" name="storaged_block_dup_hint_name ()" link="StoragedBlock.html#storaged-block-dup-hint-name"/>
     <keyword type="function" name="storaged_block_dup_hint_icon_name ()" link="StoragedBlock.html#storaged-block-dup-hint-icon-name"/>
-    <keyword type="function" name="storaged_block_dup_hint_symbolic_icon_name ()" link="StoragedBlock.html#storaged-block-dup-hint-symbolic-icon-name" since="2.1"/>
-    <keyword type="function" name="storaged_block_dup_mdraid ()" link="StoragedBlock.html#storaged-block-dup-mdraid" since="2.1"/>
-    <keyword type="function" name="storaged_block_dup_mdraid_member ()" link="StoragedBlock.html#storaged-block-dup-mdraid-member" since="2.1"/>
+    <keyword type="function" name="storaged_block_dup_hint_symbolic_icon_name ()" link="StoragedBlock.html#storaged-block-dup-hint-symbolic-icon-name" since="2.0.0"/>
+    <keyword type="function" name="storaged_block_dup_mdraid ()" link="StoragedBlock.html#storaged-block-dup-mdraid" since="2.0.0"/>
+    <keyword type="function" name="storaged_block_dup_mdraid_member ()" link="StoragedBlock.html#storaged-block-dup-mdraid-member" since="2.0.0"/>
     <keyword type="function" name="storaged_block_set_configuration ()" link="StoragedBlock.html#storaged-block-set-configuration"/>
     <keyword type="function" name="storaged_block_set_crypto_backing_device ()" link="StoragedBlock.html#storaged-block-set-crypto-backing-device"/>
     <keyword type="function" name="storaged_block_set_device ()" link="StoragedBlock.html#storaged-block-set-device"/>
@@ -927,7 +974,7 @@
     <keyword type="function" name="storaged_block_set_id_version ()" link="StoragedBlock.html#storaged-block-set-id-version"/>
     <keyword type="function" name="storaged_block_set_device_number ()" link="StoragedBlock.html#storaged-block-set-device-number"/>
     <keyword type="function" name="storaged_block_set_preferred_device ()" link="StoragedBlock.html#storaged-block-set-preferred-device"/>
-    <keyword type="function" name="storaged_block_set_id ()" link="StoragedBlock.html#storaged-block-set-id" since="2.1"/>
+    <keyword type="function" name="storaged_block_set_id ()" link="StoragedBlock.html#storaged-block-set-id" since="2.0.0"/>
     <keyword type="function" name="storaged_block_set_size ()" link="StoragedBlock.html#storaged-block-set-size"/>
     <keyword type="function" name="storaged_block_set_read_only ()" link="StoragedBlock.html#storaged-block-set-read-only"/>
     <keyword type="function" name="storaged_block_set_symlinks ()" link="StoragedBlock.html#storaged-block-set-symlinks"/>
@@ -937,9 +984,9 @@
     <keyword type="function" name="storaged_block_set_hint_auto ()" link="StoragedBlock.html#storaged-block-set-hint-auto"/>
     <keyword type="function" name="storaged_block_set_hint_name ()" link="StoragedBlock.html#storaged-block-set-hint-name"/>
     <keyword type="function" name="storaged_block_set_hint_icon_name ()" link="StoragedBlock.html#storaged-block-set-hint-icon-name"/>
-    <keyword type="function" name="storaged_block_set_hint_symbolic_icon_name ()" link="StoragedBlock.html#storaged-block-set-hint-symbolic-icon-name" since="2.1"/>
-    <keyword type="function" name="storaged_block_set_mdraid ()" link="StoragedBlock.html#storaged-block-set-mdraid" since="2.1"/>
-    <keyword type="function" name="storaged_block_set_mdraid_member ()" link="StoragedBlock.html#storaged-block-set-mdraid-member" since="2.1"/>
+    <keyword type="function" name="storaged_block_set_hint_symbolic_icon_name ()" link="StoragedBlock.html#storaged-block-set-hint-symbolic-icon-name" since="2.0.0"/>
+    <keyword type="function" name="storaged_block_set_mdraid ()" link="StoragedBlock.html#storaged-block-set-mdraid" since="2.0.0"/>
+    <keyword type="function" name="storaged_block_set_mdraid_member ()" link="StoragedBlock.html#storaged-block-set-mdraid-member" since="2.0.0"/>
     <keyword type="function" name="storaged_block_proxy_new ()" link="StoragedBlock.html#storaged-block-proxy-new"/>
     <keyword type="function" name="storaged_block_proxy_new_finish ()" link="StoragedBlock.html#storaged-block-proxy-new-finish"/>
     <keyword type="function" name="storaged_block_proxy_new_sync ()" link="StoragedBlock.html#storaged-block-proxy-new-sync"/>
@@ -1190,6 +1237,149 @@
     <keyword type="property" name="The “setup-by-uid” property" link="StoragedLoop.html#StoragedLoop--setup-by-uid"/>
     <keyword type="signal" name="The “handle-delete” signal" link="StoragedLoop.html#StoragedLoop-handle-delete"/>
     <keyword type="signal" name="The “handle-set-autoclear” signal" link="StoragedLoop.html#StoragedLoop-handle-set-autoclear"/>
+    <keyword type="function" name="storaged_manager_lvm2_interface_info ()" link="StoragedManagerLVM2.html#storaged-manager-lvm2-interface-info" since="2.0.0"/>
+    <keyword type="function" name="storaged_manager_lvm2_override_properties ()" link="StoragedManagerLVM2.html#storaged-manager-lvm2-override-properties" since="2.0.0"/>
+    <keyword type="function" name="storaged_manager_lvm2_call_volume_group_create ()" link="StoragedManagerLVM2.html#storaged-manager-lvm2-call-volume-group-create" since="2.0.0"/>
+    <keyword type="function" name="storaged_manager_lvm2_call_volume_group_create_finish ()" link="StoragedManagerLVM2.html#storaged-manager-lvm2-call-volume-group-create-finish" since="2.0.0"/>
+    <keyword type="function" name="storaged_manager_lvm2_call_volume_group_create_sync ()" link="StoragedManagerLVM2.html#storaged-manager-lvm2-call-volume-group-create-sync" since="2.0.0"/>
+    <keyword type="function" name="storaged_manager_lvm2_complete_volume_group_create ()" link="StoragedManagerLVM2.html#storaged-manager-lvm2-complete-volume-group-create" since="2.0.0"/>
+    <keyword type="function" name="storaged_manager_lvm2_proxy_new ()" link="StoragedManagerLVM2.html#storaged-manager-lvm2-proxy-new" since="2.0.0"/>
+    <keyword type="function" name="storaged_manager_lvm2_proxy_new_finish ()" link="StoragedManagerLVM2.html#storaged-manager-lvm2-proxy-new-finish" since="2.0.0"/>
+    <keyword type="function" name="storaged_manager_lvm2_proxy_new_sync ()" link="StoragedManagerLVM2.html#storaged-manager-lvm2-proxy-new-sync" since="2.0.0"/>
+    <keyword type="function" name="storaged_manager_lvm2_proxy_new_for_bus ()" link="StoragedManagerLVM2.html#storaged-manager-lvm2-proxy-new-for-bus" since="2.0.0"/>
+    <keyword type="function" name="storaged_manager_lvm2_proxy_new_for_bus_finish ()" link="StoragedManagerLVM2.html#storaged-manager-lvm2-proxy-new-for-bus-finish" since="2.0.0"/>
+    <keyword type="function" name="storaged_manager_lvm2_proxy_new_for_bus_sync ()" link="StoragedManagerLVM2.html#storaged-manager-lvm2-proxy-new-for-bus-sync" since="2.0.0"/>
+    <keyword type="function" name="storaged_manager_lvm2_skeleton_new ()" link="StoragedManagerLVM2.html#storaged-manager-lvm2-skeleton-new" since="2.0.0"/>
+    <keyword type="struct" name="StoragedManagerLVM2" link="StoragedManagerLVM2.html#StoragedManagerLVM2-struct"/>
+    <keyword type="struct" name="struct StoragedManagerLVM2Iface" link="StoragedManagerLVM2.html#StoragedManagerLVM2Iface" since="2.0.0"/>
+    <keyword type="struct" name="struct StoragedManagerLVM2Proxy" link="StoragedManagerLVM2.html#StoragedManagerLVM2Proxy-struct"/>
+    <keyword type="struct" name="struct StoragedManagerLVM2ProxyClass" link="StoragedManagerLVM2.html#StoragedManagerLVM2ProxyClass" since="2.0.0"/>
+    <keyword type="struct" name="struct StoragedManagerLVM2Skeleton" link="StoragedManagerLVM2.html#StoragedManagerLVM2Skeleton" since="2.0.0"/>
+    <keyword type="struct" name="struct StoragedManagerLVM2SkeletonClass" link="StoragedManagerLVM2.html#StoragedManagerLVM2SkeletonClass" since="2.0.0"/>
+    <keyword type="function" name="storaged_block_lvm2_interface_info ()" link="storaged-StoragedBlockLVM2.html#storaged-block-lvm2-interface-info" since="2.0.0"/>
+    <keyword type="function" name="storaged_block_lvm2_override_properties ()" link="storaged-StoragedBlockLVM2.html#storaged-block-lvm2-override-properties" since="2.0.0"/>
+    <keyword type="function" name="storaged_block_lvm2_proxy_new ()" link="storaged-StoragedBlockLVM2.html#storaged-block-lvm2-proxy-new" since="2.0.0"/>
+    <keyword type="function" name="storaged_block_lvm2_proxy_new_finish ()" link="storaged-StoragedBlockLVM2.html#storaged-block-lvm2-proxy-new-finish" since="2.0.0"/>
+    <keyword type="function" name="storaged_block_lvm2_proxy_new_sync ()" link="storaged-StoragedBlockLVM2.html#storaged-block-lvm2-proxy-new-sync" since="2.0.0"/>
+    <keyword type="function" name="storaged_block_lvm2_proxy_new_for_bus ()" link="storaged-StoragedBlockLVM2.html#storaged-block-lvm2-proxy-new-for-bus" since="2.0.0"/>
+    <keyword type="function" name="storaged_block_lvm2_proxy_new_for_bus_finish ()" link="storaged-StoragedBlockLVM2.html#storaged-block-lvm2-proxy-new-for-bus-finish" since="2.0.0"/>
+    <keyword type="function" name="storaged_block_lvm2_proxy_new_for_bus_sync ()" link="storaged-StoragedBlockLVM2.html#storaged-block-lvm2-proxy-new-for-bus-sync" since="2.0.0"/>
+    <keyword type="function" name="storaged_block_lvm2_skeleton_new ()" link="storaged-StoragedBlockLVM2.html#storaged-block-lvm2-skeleton-new" since="2.0.0"/>
+    <keyword type="struct" name="StoragedBlockLVM2" link="storaged-StoragedBlockLVM2.html#StoragedBlockLVM2" since="2.0.0"/>
+    <keyword type="struct" name="struct StoragedBlockLVM2Iface" link="storaged-StoragedBlockLVM2.html#StoragedBlockLVM2Iface" since="2.0.0"/>
+    <keyword type="struct" name="struct StoragedBlockLVM2Proxy" link="storaged-StoragedBlockLVM2.html#StoragedBlockLVM2Proxy" since="2.0.0"/>
+    <keyword type="struct" name="struct StoragedBlockLVM2ProxyClass" link="storaged-StoragedBlockLVM2.html#StoragedBlockLVM2ProxyClass" since="2.0.0"/>
+    <keyword type="struct" name="struct StoragedBlockLVM2Skeleton" link="storaged-StoragedBlockLVM2.html#StoragedBlockLVM2Skeleton" since="2.0.0"/>
+    <keyword type="struct" name="struct StoragedBlockLVM2SkeletonClass" link="storaged-StoragedBlockLVM2.html#StoragedBlockLVM2SkeletonClass" since="2.0.0"/>
+    <keyword type="function" name="storaged_physical_volume_interface_info ()" link="storaged-StoragedPhysicalVolume.html#storaged-physical-volume-interface-info" since="2.0.0"/>
+    <keyword type="function" name="storaged_physical_volume_override_properties ()" link="storaged-StoragedPhysicalVolume.html#storaged-physical-volume-override-properties" since="2.0.0"/>
+    <keyword type="function" name="storaged_physical_volume_proxy_new ()" link="storaged-StoragedPhysicalVolume.html#storaged-physical-volume-proxy-new" since="2.0.0"/>
+    <keyword type="function" name="storaged_physical_volume_proxy_new_finish ()" link="storaged-StoragedPhysicalVolume.html#storaged-physical-volume-proxy-new-finish" since="2.0.0"/>
+    <keyword type="function" name="storaged_physical_volume_proxy_new_sync ()" link="storaged-StoragedPhysicalVolume.html#storaged-physical-volume-proxy-new-sync" since="2.0.0"/>
+    <keyword type="function" name="storaged_physical_volume_proxy_new_for_bus ()" link="storaged-StoragedPhysicalVolume.html#storaged-physical-volume-proxy-new-for-bus" since="2.0.0"/>
+    <keyword type="function" name="storaged_physical_volume_proxy_new_for_bus_finish ()" link="storaged-StoragedPhysicalVolume.html#storaged-physical-volume-proxy-new-for-bus-finish" since="2.0.0"/>
+    <keyword type="function" name="storaged_physical_volume_proxy_new_for_bus_sync ()" link="storaged-StoragedPhysicalVolume.html#storaged-physical-volume-proxy-new-for-bus-sync" since="2.0.0"/>
+    <keyword type="function" name="storaged_physical_volume_skeleton_new ()" link="storaged-StoragedPhysicalVolume.html#storaged-physical-volume-skeleton-new" since="2.0.0"/>
+    <keyword type="struct" name="StoragedPhysicalVolume" link="storaged-StoragedPhysicalVolume.html#StoragedPhysicalVolume" since="2.0.0"/>
+    <keyword type="struct" name="struct StoragedPhysicalVolumeIface" link="storaged-StoragedPhysicalVolume.html#StoragedPhysicalVolumeIface" since="2.0.0"/>
+    <keyword type="struct" name="struct StoragedPhysicalVolumeProxy" link="storaged-StoragedPhysicalVolume.html#StoragedPhysicalVolumeProxy" since="2.0.0"/>
+    <keyword type="struct" name="struct StoragedPhysicalVolumeProxyClass" link="storaged-StoragedPhysicalVolume.html#StoragedPhysicalVolumeProxyClass" since="2.0.0"/>
+    <keyword type="struct" name="struct StoragedPhysicalVolumeSkeleton" link="storaged-StoragedPhysicalVolume.html#StoragedPhysicalVolumeSkeleton" since="2.0.0"/>
+    <keyword type="struct" name="struct StoragedPhysicalVolumeSkeletonClass" link="storaged-StoragedPhysicalVolume.html#StoragedPhysicalVolumeSkeletonClass" since="2.0.0"/>
+    <keyword type="function" name="storaged_volume_group_interface_info ()" link="storaged-StoragedVolumeGroup.html#storaged-volume-group-interface-info" since="2.0.0"/>
+    <keyword type="function" name="storaged_volume_group_override_properties ()" link="storaged-StoragedVolumeGroup.html#storaged-volume-group-override-properties" since="2.0.0"/>
+    <keyword type="function" name="storaged_manager_lvm2_call_volume_group_create ()" link="storaged-StoragedVolumeGroup.html#storaged-manager-lvm2-call-volume-group-create" since="2.0.0"/>
+    <keyword type="function" name="storaged_manager_lvm2_call_volume_group_create_finish ()" link="storaged-StoragedVolumeGroup.html#storaged-manager-lvm2-call-volume-group-create-finish" since="2.0.0"/>
+    <keyword type="function" name="storaged_manager_lvm2_call_volume_group_create_sync ()" link="storaged-StoragedVolumeGroup.html#storaged-manager-lvm2-call-volume-group-create-sync" since="2.0.0"/>
+    <keyword type="function" name="storaged_manager_lvm2_complete_volume_group_create ()" link="storaged-StoragedVolumeGroup.html#storaged-manager-lvm2-complete-volume-group-create" since="2.0.0"/>
+    <keyword type="function" name="storaged_volume_group_call_poll ()" link="storaged-StoragedVolumeGroup.html#storaged-volume-group-call-poll" since="2.0.0"/>
+    <keyword type="function" name="storaged_volume_group_call_poll_finish ()" link="storaged-StoragedVolumeGroup.html#storaged-volume-group-call-poll-finish" since="2.0.0"/>
+    <keyword type="function" name="storaged_volume_group_call_poll_sync ()" link="storaged-StoragedVolumeGroup.html#storaged-volume-group-call-poll-sync" since="2.0.0"/>
+    <keyword type="function" name="storaged_volume_group_call_delete ()" link="storaged-StoragedVolumeGroup.html#storaged-volume-group-call-delete" since="2.0.0"/>
+    <keyword type="function" name="storaged_volume_group_call_delete_finish ()" link="storaged-StoragedVolumeGroup.html#storaged-volume-group-call-delete-finish" since="2.0.0"/>
+    <keyword type="function" name="storaged_volume_group_call_delete_sync ()" link="storaged-StoragedVolumeGroup.html#storaged-volume-group-call-delete-sync" since="2.0.0"/>
+    <keyword type="function" name="storaged_volume_group_call_rename ()" link="storaged-StoragedVolumeGroup.html#storaged-volume-group-call-rename" since="2.0.0"/>
+    <keyword type="function" name="storaged_volume_group_call_rename_finish ()" link="storaged-StoragedVolumeGroup.html#storaged-volume-group-call-rename-finish" since="2.0.0"/>
+    <keyword type="function" name="storaged_volume_group_call_rename_sync ()" link="storaged-StoragedVolumeGroup.html#storaged-volume-group-call-rename-sync" since="2.0.0"/>
+    <keyword type="function" name="storaged_volume_group_call_add_device ()" link="storaged-StoragedVolumeGroup.html#storaged-volume-group-call-add-device" since="2.0.0"/>
+    <keyword type="function" name="storaged_volume_group_call_add_device_finish ()" link="storaged-StoragedVolumeGroup.html#storaged-volume-group-call-add-device-finish" since="2.0.0"/>
+    <keyword type="function" name="storaged_volume_group_call_add_device_sync ()" link="storaged-StoragedVolumeGroup.html#storaged-volume-group-call-add-device-sync" since="2.0.0"/>
+    <keyword type="function" name="storaged_volume_group_call_empty_device ()" link="storaged-StoragedVolumeGroup.html#storaged-volume-group-call-empty-device" since="2.0.0"/>
+    <keyword type="function" name="storaged_volume_group_call_empty_device_finish ()" link="storaged-StoragedVolumeGroup.html#storaged-volume-group-call-empty-device-finish" since="2.0.0"/>
+    <keyword type="function" name="storaged_volume_group_call_empty_device_sync ()" link="storaged-StoragedVolumeGroup.html#storaged-volume-group-call-empty-device-sync" since="2.0.0"/>
+    <keyword type="function" name="storaged_volume_group_call_remove_device ()" link="storaged-StoragedVolumeGroup.html#storaged-volume-group-call-remove-device" since="2.0.0"/>
+    <keyword type="function" name="storaged_volume_group_call_remove_device_finish ()" link="storaged-StoragedVolumeGroup.html#storaged-volume-group-call-remove-device-finish" since="2.0.0"/>
+    <keyword type="function" name="storaged_volume_group_call_remove_device_sync ()" link="storaged-StoragedVolumeGroup.html#storaged-volume-group-call-remove-device-sync" since="2.0.0"/>
+    <keyword type="function" name="storaged_volume_group_call_create_plain_volume ()" link="storaged-StoragedVolumeGroup.html#storaged-volume-group-call-create-plain-volume" since="2.0.0"/>
+    <keyword type="function" name="storaged_volume_group_call_create_plain_volume_finish ()" link="storaged-StoragedVolumeGroup.html#storaged-volume-group-call-create-plain-volume-finish" since="2.0.0"/>
+    <keyword type="function" name="storaged_volume_group_call_create_plain_volume_sync ()" link="storaged-StoragedVolumeGroup.html#storaged-volume-group-call-create-plain-volume-sync" since="2.0.0"/>
+    <keyword type="function" name="storaged_volume_group_call_create_thin_pool_volume ()" link="storaged-StoragedVolumeGroup.html#storaged-volume-group-call-create-thin-pool-volume" since="2.0.0"/>
+    <keyword type="function" name="storaged_volume_group_call_create_thin_pool_volume_finish ()" link="storaged-StoragedVolumeGroup.html#storaged-volume-group-call-create-thin-pool-volume-finish" since="2.0.0"/>
+    <keyword type="function" name="storaged_volume_group_call_create_thin_pool_volume_sync ()" link="storaged-StoragedVolumeGroup.html#storaged-volume-group-call-create-thin-pool-volume-sync" since="2.0.0"/>
+    <keyword type="function" name="storaged_volume_group_call_create_thin_volume ()" link="storaged-StoragedVolumeGroup.html#storaged-volume-group-call-create-thin-volume" since="2.0.0"/>
+    <keyword type="function" name="storaged_volume_group_call_create_thin_volume_finish ()" link="storaged-StoragedVolumeGroup.html#storaged-volume-group-call-create-thin-volume-finish" since="2.0.0"/>
+    <keyword type="function" name="storaged_volume_group_call_create_thin_volume_sync ()" link="storaged-StoragedVolumeGroup.html#storaged-volume-group-call-create-thin-volume-sync" since="2.0.0"/>
+    <keyword type="function" name="storaged_volume_group_complete_poll ()" link="storaged-StoragedVolumeGroup.html#storaged-volume-group-complete-poll" since="2.0.0"/>
+    <keyword type="function" name="storaged_volume_group_complete_delete ()" link="storaged-StoragedVolumeGroup.html#storaged-volume-group-complete-delete" since="2.0.0"/>
+    <keyword type="function" name="storaged_volume_group_complete_rename ()" link="storaged-StoragedVolumeGroup.html#storaged-volume-group-complete-rename" since="2.0.0"/>
+    <keyword type="function" name="storaged_volume_group_complete_add_device ()" link="storaged-StoragedVolumeGroup.html#storaged-volume-group-complete-add-device" since="2.0.0"/>
+    <keyword type="function" name="storaged_volume_group_complete_empty_device ()" link="storaged-StoragedVolumeGroup.html#storaged-volume-group-complete-empty-device" since="2.0.0"/>
+    <keyword type="function" name="storaged_volume_group_complete_remove_device ()" link="storaged-StoragedVolumeGroup.html#storaged-volume-group-complete-remove-device" since="2.0.0"/>
+    <keyword type="function" name="storaged_volume_group_complete_create_plain_volume ()" link="storaged-StoragedVolumeGroup.html#storaged-volume-group-complete-create-plain-volume" since="2.0.0"/>
+    <keyword type="function" name="storaged_volume_group_complete_create_thin_pool_volume ()" link="storaged-StoragedVolumeGroup.html#storaged-volume-group-complete-create-thin-pool-volume" since="2.0.0"/>
+    <keyword type="function" name="storaged_volume_group_complete_create_thin_volume ()" link="storaged-StoragedVolumeGroup.html#storaged-volume-group-complete-create-thin-volume" since="2.0.0"/>
+    <keyword type="function" name="storaged_volume_group_proxy_new ()" link="storaged-StoragedVolumeGroup.html#storaged-volume-group-proxy-new" since="2.0.0"/>
+    <keyword type="function" name="storaged_volume_group_proxy_new_finish ()" link="storaged-StoragedVolumeGroup.html#storaged-volume-group-proxy-new-finish" since="2.0.0"/>
+    <keyword type="function" name="storaged_volume_group_proxy_new_sync ()" link="storaged-StoragedVolumeGroup.html#storaged-volume-group-proxy-new-sync" since="2.0.0"/>
+    <keyword type="function" name="storaged_volume_group_proxy_new_for_bus ()" link="storaged-StoragedVolumeGroup.html#storaged-volume-group-proxy-new-for-bus" since="2.0.0"/>
+    <keyword type="function" name="storaged_volume_group_proxy_new_for_bus_finish ()" link="storaged-StoragedVolumeGroup.html#storaged-volume-group-proxy-new-for-bus-finish" since="2.0.0"/>
+    <keyword type="function" name="storaged_volume_group_proxy_new_for_bus_sync ()" link="storaged-StoragedVolumeGroup.html#storaged-volume-group-proxy-new-for-bus-sync" since="2.0.0"/>
+    <keyword type="function" name="storaged_volume_group_skeleton_new ()" link="storaged-StoragedVolumeGroup.html#storaged-volume-group-skeleton-new" since="2.0.0"/>
+    <keyword type="struct" name="StoragedVolumeGroup" link="storaged-StoragedVolumeGroup.html#StoragedVolumeGroup" since="2.0.0"/>
+    <keyword type="struct" name="struct StoragedVolumeGroupIface" link="storaged-StoragedVolumeGroup.html#StoragedVolumeGroupIface" since="2.0.0"/>
+    <keyword type="struct" name="struct StoragedVolumeGroupProxy" link="storaged-StoragedVolumeGroup.html#StoragedVolumeGroupProxy" since="2.0.0"/>
+    <keyword type="struct" name="struct StoragedVolumeGroupProxyClass" link="storaged-StoragedVolumeGroup.html#StoragedVolumeGroupProxyClass" since="2.0.0"/>
+    <keyword type="struct" name="struct StoragedVolumeGroupSkeleton" link="storaged-StoragedVolumeGroup.html#StoragedVolumeGroupSkeleton" since="2.0.0"/>
+    <keyword type="struct" name="struct StoragedVolumeGroupSkeletonClass" link="storaged-StoragedVolumeGroup.html#StoragedVolumeGroupSkeletonClass" since="2.0.0"/>
+    <keyword type="function" name="storaged_logical_volume_interface_info ()" link="storaged-StoragedLogicalVolume.html#storaged-logical-volume-interface-info" since="2.0.0"/>
+    <keyword type="function" name="storaged_logical_volume_override_properties ()" link="storaged-StoragedLogicalVolume.html#storaged-logical-volume-override-properties" since="2.0.0"/>
+    <keyword type="function" name="storaged_logical_volume_call_activate ()" link="storaged-StoragedLogicalVolume.html#storaged-logical-volume-call-activate" since="2.0.0"/>
+    <keyword type="function" name="storaged_logical_volume_call_activate_finish ()" link="storaged-StoragedLogicalVolume.html#storaged-logical-volume-call-activate-finish" since="2.0.0"/>
+    <keyword type="function" name="storaged_logical_volume_call_activate_sync ()" link="storaged-StoragedLogicalVolume.html#storaged-logical-volume-call-activate-sync" since="2.0.0"/>
+    <keyword type="function" name="storaged_logical_volume_call_deactivate ()" link="storaged-StoragedLogicalVolume.html#storaged-logical-volume-call-deactivate" since="2.0.0"/>
+    <keyword type="function" name="storaged_logical_volume_call_deactivate_finish ()" link="storaged-StoragedLogicalVolume.html#storaged-logical-volume-call-deactivate-finish" since="2.0.0"/>
+    <keyword type="function" name="storaged_logical_volume_call_deactivate_sync ()" link="storaged-StoragedLogicalVolume.html#storaged-logical-volume-call-deactivate-sync" since="2.0.0"/>
+    <keyword type="function" name="storaged_logical_volume_call_delete ()" link="storaged-StoragedLogicalVolume.html#storaged-logical-volume-call-delete" since="2.0.0"/>
+    <keyword type="function" name="storaged_logical_volume_call_delete_finish ()" link="storaged-StoragedLogicalVolume.html#storaged-logical-volume-call-delete-finish" since="2.0.0"/>
+    <keyword type="function" name="storaged_logical_volume_call_delete_sync ()" link="storaged-StoragedLogicalVolume.html#storaged-logical-volume-call-delete-sync" since="2.0.0"/>
+    <keyword type="function" name="storaged_logical_volume_call_rename ()" link="storaged-StoragedLogicalVolume.html#storaged-logical-volume-call-rename" since="2.0.0"/>
+    <keyword type="function" name="storaged_logical_volume_call_rename_finish ()" link="storaged-StoragedLogicalVolume.html#storaged-logical-volume-call-rename-finish" since="2.0.0"/>
+    <keyword type="function" name="storaged_logical_volume_call_rename_sync ()" link="storaged-StoragedLogicalVolume.html#storaged-logical-volume-call-rename-sync" since="2.0.0"/>
+    <keyword type="function" name="storaged_logical_volume_call_resize ()" link="storaged-StoragedLogicalVolume.html#storaged-logical-volume-call-resize" since="2.0.0"/>
+    <keyword type="function" name="storaged_logical_volume_call_resize_finish ()" link="storaged-StoragedLogicalVolume.html#storaged-logical-volume-call-resize-finish" since="2.0.0"/>
+    <keyword type="function" name="storaged_logical_volume_call_resize_sync ()" link="storaged-StoragedLogicalVolume.html#storaged-logical-volume-call-resize-sync" since="2.0.0"/>
+    <keyword type="function" name="storaged_logical_volume_call_create_snapshot ()" link="storaged-StoragedLogicalVolume.html#storaged-logical-volume-call-create-snapshot" since="2.0.0"/>
+    <keyword type="function" name="storaged_logical_volume_call_create_snapshot_finish ()" link="storaged-StoragedLogicalVolume.html#storaged-logical-volume-call-create-snapshot-finish" since="2.0.0"/>
+    <keyword type="function" name="storaged_logical_volume_call_create_snapshot_sync ()" link="storaged-StoragedLogicalVolume.html#storaged-logical-volume-call-create-snapshot-sync" since="2.0.0"/>
+    <keyword type="function" name="storaged_logical_volume_complete_activate ()" link="storaged-StoragedLogicalVolume.html#storaged-logical-volume-complete-activate" since="2.0.0"/>
+    <keyword type="function" name="storaged_logical_volume_complete_deactivate ()" link="storaged-StoragedLogicalVolume.html#storaged-logical-volume-complete-deactivate" since="2.0.0"/>
+    <keyword type="function" name="storaged_logical_volume_complete_delete ()" link="storaged-StoragedLogicalVolume.html#storaged-logical-volume-complete-delete" since="2.0.0"/>
+    <keyword type="function" name="storaged_logical_volume_complete_rename ()" link="storaged-StoragedLogicalVolume.html#storaged-logical-volume-complete-rename" since="2.0.0"/>
+    <keyword type="function" name="storaged_logical_volume_complete_resize ()" link="storaged-StoragedLogicalVolume.html#storaged-logical-volume-complete-resize" since="2.0.0"/>
+    <keyword type="function" name="storaged_logical_volume_complete_create_snapshot ()" link="storaged-StoragedLogicalVolume.html#storaged-logical-volume-complete-create-snapshot" since="2.0.0"/>
+    <keyword type="function" name="storaged_logical_volume_proxy_new ()" link="storaged-StoragedLogicalVolume.html#storaged-logical-volume-proxy-new" since="2.0.0"/>
+    <keyword type="function" name="storaged_logical_volume_proxy_new_finish ()" link="storaged-StoragedLogicalVolume.html#storaged-logical-volume-proxy-new-finish" since="2.0.0"/>
+    <keyword type="function" name="storaged_logical_volume_proxy_new_sync ()" link="storaged-StoragedLogicalVolume.html#storaged-logical-volume-proxy-new-sync" since="2.0.0"/>
+    <keyword type="function" name="storaged_logical_volume_proxy_new_for_bus ()" link="storaged-StoragedLogicalVolume.html#storaged-logical-volume-proxy-new-for-bus" since="2.0.0"/>
+    <keyword type="function" name="storaged_logical_volume_proxy_new_for_bus_finish ()" link="storaged-StoragedLogicalVolume.html#storaged-logical-volume-proxy-new-for-bus-finish" since="2.0.0"/>
+    <keyword type="function" name="storaged_logical_volume_proxy_new_for_bus_sync ()" link="storaged-StoragedLogicalVolume.html#storaged-logical-volume-proxy-new-for-bus-sync" since="2.0.0"/>
+    <keyword type="function" name="storaged_logical_volume_skeleton_new ()" link="storaged-StoragedLogicalVolume.html#storaged-logical-volume-skeleton-new" since="2.0.0"/>
+    <keyword type="struct" name="StoragedLogicalVolume" link="storaged-StoragedLogicalVolume.html#StoragedLogicalVolume" since="2.0.0"/>
+    <keyword type="struct" name="struct StoragedLogicalVolumeIface" link="storaged-StoragedLogicalVolume.html#StoragedLogicalVolumeIface" since="2.0.0"/>
+    <keyword type="struct" name="struct StoragedLogicalVolumeProxy" link="storaged-StoragedLogicalVolume.html#StoragedLogicalVolumeProxy" since="2.0.0"/>
+    <keyword type="struct" name="struct StoragedLogicalVolumeProxyClass" link="storaged-StoragedLogicalVolume.html#StoragedLogicalVolumeProxyClass" since="2.0.0"/>
+    <keyword type="struct" name="struct StoragedLogicalVolumeSkeleton" link="storaged-StoragedLogicalVolume.html#StoragedLogicalVolumeSkeleton" since="2.0.0"/>
+    <keyword type="struct" name="struct StoragedLogicalVolumeSkeletonClass" link="storaged-StoragedLogicalVolume.html#StoragedLogicalVolumeSkeletonClass" since="2.0.0"/>
     <keyword type="function" name="storaged_decode_udev_string ()" link="storaged-Utilities.html#storaged-decode-udev-string"/>
     <keyword type="function" name="storaged_safe_append_to_object_path ()" link="storaged-Utilities.html#storaged-safe-append-to-object-path"/>
     <keyword type="function" name="storaged_daemon_util_block_get_size ()" link="storaged-Utilities.html#storaged-daemon-util-block-get-size"/>
@@ -1375,13 +1565,13 @@
     <keyword type="function" name="storaged_linux_drive_new ()" link="StoragedLinuxDrive.html#storaged-linux-drive-new"/>
     <keyword type="function" name="storaged_linux_drive_update ()" link="StoragedLinuxDrive.html#storaged-linux-drive-update"/>
     <keyword type="struct" name="StoragedLinuxDrive" link="StoragedLinuxDrive.html#StoragedLinuxDrive-struct"/>
-    <keyword type="function" name="storaged_linux_drive_ata_new ()" link="StoragedLinuxDriveAta.html#storaged-linux-drive-ata-new"/>
-    <keyword type="function" name="storaged_linux_drive_ata_update ()" link="StoragedLinuxDriveAta.html#storaged-linux-drive-ata-update"/>
-    <keyword type="function" name="storaged_linux_drive_ata_refresh_smart_sync ()" link="StoragedLinuxDriveAta.html#storaged-linux-drive-ata-refresh-smart-sync"/>
-    <keyword type="function" name="storaged_linux_drive_ata_smart_selftest_sync ()" link="StoragedLinuxDriveAta.html#storaged-linux-drive-ata-smart-selftest-sync"/>
-    <keyword type="function" name="storaged_linux_drive_ata_apply_configuration ()" link="StoragedLinuxDriveAta.html#storaged-linux-drive-ata-apply-configuration"/>
-    <keyword type="function" name="storaged_linux_drive_ata_secure_erase_sync ()" link="StoragedLinuxDriveAta.html#storaged-linux-drive-ata-secure-erase-sync"/>
-    <keyword type="struct" name="StoragedLinuxDriveAta" link="StoragedLinuxDriveAta.html#StoragedLinuxDriveAta-struct"/>
+    <keyword type="function" name="storaged_linux_drive_ata_new ()" link="storaged-DummyLinuxBlock.html#storaged-linux-drive-ata-new"/>
+    <keyword type="function" name="storaged_linux_drive_ata_update ()" link="storaged-DummyLinuxBlock.html#storaged-linux-drive-ata-update"/>
+    <keyword type="function" name="storaged_linux_drive_ata_refresh_smart_sync ()" link="storaged-DummyLinuxBlock.html#storaged-linux-drive-ata-refresh-smart-sync"/>
+    <keyword type="function" name="storaged_linux_drive_ata_smart_selftest_sync ()" link="storaged-DummyLinuxBlock.html#storaged-linux-drive-ata-smart-selftest-sync"/>
+    <keyword type="function" name="storaged_linux_drive_ata_apply_configuration ()" link="storaged-DummyLinuxBlock.html#storaged-linux-drive-ata-apply-configuration"/>
+    <keyword type="function" name="storaged_linux_drive_ata_secure_erase_sync ()" link="storaged-DummyLinuxBlock.html#storaged-linux-drive-ata-secure-erase-sync"/>
+    <keyword type="struct" name="StoragedLinuxDriveAta" link="storaged-DummyLinuxBlock.html#StoragedLinuxDriveAta-struct"/>
     <keyword type="function" name="storaged_linux_drive_object_new ()" link="StoragedLinuxDriveObject.html#storaged-linux-drive-object-new"/>
     <keyword type="function" name="storaged_linux_drive_object_uevent ()" link="StoragedLinuxDriveObject.html#storaged-linux-drive-object-uevent"/>
     <keyword type="function" name="storaged_linux_drive_object_get_daemon ()" link="StoragedLinuxDriveObject.html#storaged-linux-drive-object-get-daemon"/>
