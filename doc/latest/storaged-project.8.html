@@ -6,7 +6,7 @@
 <meta name="generator" content="DocBook XSL Stylesheets V1.78.1">
 <link rel="home" href="index.html" title="Storaged Reference Manual">
 <link rel="up" href="overview.html" title="Part I. Manual pages and Overview">
-<link rel="prev" href="storaged.8.html" title="storaged">
+<link rel="prev" href="storaged-lvm.8.html" title="storaged-lvm">
 <link rel="next" href="storagedctl.1.html" title="storagedctl">
 <meta name="generator" content="GTK-Doc V1.21 (XML mode)">
 <link rel="stylesheet" href="style.css" type="text/css">
@@ -16,7 +16,7 @@
 <td width="100%" align="left" class="shortcuts"></td>
 <td><a accesskey="h" href="index.html"><img src="home.png" width="16" height="16" border="0" alt="Home"></a></td>
 <td><a accesskey="u" href="overview.html"><img src="up.png" width="16" height="16" border="0" alt="Up"></a></td>
-<td><a accesskey="p" href="storaged.8.html"><img src="left.png" width="16" height="16" border="0" alt="Prev"></a></td>
+<td><a accesskey="p" href="storaged-lvm.8.html"><img src="left.png" width="16" height="16" border="0" alt="Prev"></a></td>
 <td><a accesskey="n" href="storagedctl.1.html"><img src="right.png" width="16" height="16" border="0" alt="Next"></a></td>
 </tr></table>
 <div class="refentry">
@@ -29,7 +29,7 @@
 <td class="gallery_image" valign="top" align="right"></td>
 </tr></table></div>
 <div class="refsect1">
-<a name="id-1.2.3.4"></a><h2>DESCRIPTION</h2>
+<a name="id-1.2.4.4"></a><h2>DESCRIPTION</h2>
 <p>
       storaged provides interfaces to enumerate and perform operations
       on disks and storage devices. Any application (including
@@ -47,7 +47,7 @@
     </p>
 </div>
 <div class="refsect1">
-<a name="id-1.2.3.5"></a><h2>ACCESS CONTROL</h2>
+<a name="id-1.2.4.5"></a><h2>ACCESS CONTROL</h2>
 <p>
       By default, logged-in users in active log-in sessions are
       permitted to perform operations (for example, mounting,
@@ -66,7 +66,7 @@
     </p>
 </div>
 <div class="refsect1">
-<a name="id-1.2.3.6"></a><h2>DRIVE CONFIGURATION</h2>
+<a name="id-1.2.4.6"></a><h2>DRIVE CONFIGURATION</h2>
 <p>
       At start-up and when a drive is connected,
       <a class="link" href="storaged.8.html" title="storaged"><span class="citerefentry"><span class="refentrytitle">storaged</span>(8)</span></a>
@@ -88,7 +88,7 @@
       be added in the future.
     </p>
 <div class="refsect2">
-<a name="id-1.2.3.6.3"></a><h3>ATA group</h3>
+<a name="id-1.2.4.6.3"></a><h3>ATA group</h3>
 <p>
         The <code class="literal">ATA</code> group is for settings that apply to
         drives using the ATA command-set. The following keys are
@@ -171,7 +171,7 @@
 </div>
 </div>
 <div class="refsect1">
-<a name="id-1.2.3.7"></a><h2>DEVICE INFORMATION</h2>
+<a name="id-1.2.4.7"></a><h2>DEVICE INFORMATION</h2>
 <p>
       storaged relies on recent versions of
       <span class="citerefentry"><span class="refentrytitle">udev</span>(7)</span>
@@ -258,7 +258,7 @@
 </table></div>
 </div>
 <div class="refsect1">
-<a name="id-1.2.3.8"></a><h2>API STABILITY</h2>
+<a name="id-1.2.4.8"></a><h2>API STABILITY</h2>
 <p>
       storaged guarantees a stable D-Bus API within the same major
       version and this guarantee also extends to the client-side
@@ -294,7 +294,7 @@
     </p>
 </div>
 <div class="refsect1">
-<a name="id-1.2.3.9"></a><h2>AUDIENCE</h2>
+<a name="id-1.2.4.9"></a><h2>AUDIENCE</h2>
 <p>
       The intended audience of storaged include operating system
       developers working on the higher-level parts of the operating
@@ -343,7 +343,7 @@
     </p>
 </div>
 <div class="refsect1">
-<a name="id-1.2.3.10"></a><h2>AUTHOR</h2>
+<a name="id-1.2.4.10"></a><h2>AUTHOR</h2>
 <p>
       Written by David Zeuthen
       <code class="email">&lt;<a class="email" href="mailto:zeuthen@gmail.com">zeuthen@gmail.com</a>&gt;</code> with a lot of help
@@ -351,7 +351,7 @@
     </p>
 </div>
 <div class="refsect1">
-<a name="id-1.2.3.11"></a><h2>BUGS</h2>
+<a name="id-1.2.4.11"></a><h2>BUGS</h2>
 <p>
       Please send bug reports to either the distribution bug tracker
       or the upstream bug tracker at
@@ -359,7 +359,7 @@
     </p>
 </div>
 <div class="refsect1">
-<a name="id-1.2.3.12"></a><h2>SEE ALSO</h2>
+<a name="id-1.2.4.12"></a><h2>SEE ALSO</h2>
 <p>
       <span class="citerefentry"><span class="refentrytitle">udev</span>(7)</span>,
       <span class="citerefentry"><span class="refentrytitle">polkit</span>(8)</span>,

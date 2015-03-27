@@ -4,6 +4,7 @@
   <chapters>
     <sub name="Manual pages and Overview" link="overview.html">
       <sub name="storaged" link="storaged.8.html"/>
+      <sub name="storaged-lvm" link="storaged-lvm.8.html"/>
       <sub name="storaged-project" link="storaged-project.8.html"/>
       <sub name="storagedctl" link="storagedctl.1.html"/>
       <sub name="umount.storaged" link="umount.storaged.8.html"/>
@@ -119,7 +120,7 @@
     <sub name="Object Hierarchy" link="gio-hierarchy.html"/>
   </chapters>
   <functions>
-    <keyword type="" name="ATA group" link="storaged-project.8.html#id-1.2.3.6.3"/>
+    <keyword type="" name="ATA group" link="storaged-project.8.html#id-1.2.4.6.3"/>
     <keyword type="method" name="The LoopSetup() method" link="gdbus-org.storaged.Storaged.Manager.html#gdbus-method-org-storaged-Storaged-Manager.LoopSetup"/>
     <keyword type="method" name="The MDRaidCreate() method" link="gdbus-org.storaged.Storaged.Manager.html#gdbus-method-org-storaged-Storaged-Manager.MDRaidCreate"/>
     <keyword type="method" name="The EnableModules() method" link="gdbus-org.storaged.Storaged.Manager.html#gdbus-method-org-storaged-Storaged-Manager.EnableModules"/>
