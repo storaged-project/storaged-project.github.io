@@ -265,6 +265,11 @@
 <td class="property_name"><a class="link" href="StoragedDaemon.html#StoragedDaemon--object-manager" title="The “object-manager” property">object-manager</a></td>
 <td class="property_flags">Read</td>
 </tr>
+<tr>
+<td class="property_type"><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a></td>
+<td class="property_name"><a class="link" href="StoragedDaemon.html#StoragedDaemon--uninstalled" title="The “uninstalled” property">uninstalled</a></td>
+<td class="property_flags">Read / Write / Construct Only</td>
+</tr>
 </tbody>
 </table></div>
 </div>
@@ -298,7 +303,8 @@
 <pre class="programlisting"><a class="link" href="StoragedDaemon.html" title="StoragedDaemon"><span class="returnvalue">StoragedDaemon</span></a> *
 storaged_daemon_new (<em class="parameter"><code><a href="/usr/share/gtk-doc/html/gio/GDBusConnection.html"><span class="type">GDBusConnection</span></a> *connection</code></em>,
                      <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a> disable_modules</code></em>,
-                     <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a> force_load_modules</code></em>);</pre>
+                     <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a> force_load_modules</code></em>,
+                     <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a> uninstalled</code></em>);</pre>
 <p>Create a new daemon object for exporting objects on <em class="parameter"><code>connection</code></em>
 .</p>
 <div class="refsect3">
@@ -323,6 +329,11 @@ storaged_daemon_new (<em class="parameter"><code><a href="/usr/share/gtk-doc/htm
 <tr>
 <td class="parameter_name"><p>force_load_modules</p></td>
 <td class="parameter_description"><p>Activate modules on startup (for debugging purposes).</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>uninstalled</p></td>
+<td class="parameter_description"><p>Loads modules from the build directory (for debugging purposes).</p></td>
 <td class="parameter_annotations"> </td>
 </tr>
 </tbody>
@@ -1321,6 +1332,14 @@ only be accessed using the provided API.</p>
 <pre class="programlisting">  “object-manager”           <a href="/usr/share/gtk-doc/html/gio/GDBusObjectManagerServer.html"><span class="type">GDBusObjectManagerServer</span></a> *</pre>
 <p>The <a href="/usr/share/gtk-doc/html/gio/GDBusObjectManager.html"><span class="type">GDBusObjectManager</span></a> used by the daemon</p>
 <p>Flags: Read</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="StoragedDaemon--uninstalled"></a><h3>The <code class="literal">“uninstalled”</code> property</h3>
+<pre class="programlisting">  “uninstalled”              <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a></pre>
+<p>Loads modules from the build directory.</p>
+<p>Flags: Read / Write / Construct Only</p>
+<p>Default value: FALSE</p>
 </div>
 </div>
 </div>

@@ -591,6 +591,8 @@
 </dt>
 <dt>StoragedDaemon:object-manager, <a class="indexterm" href="StoragedDaemon.html#StoragedDaemon--object-manager">The “object-manager” property</a>
 </dt>
+<dt>StoragedDaemon:uninstalled, <a class="indexterm" href="StoragedDaemon.html#StoragedDaemon--uninstalled">The “uninstalled” property</a>
+</dt>
 <dt>StoragedDaemonWaitFunc, <a class="indexterm" href="StoragedDaemon.html#StoragedDaemonWaitFunc">StoragedDaemonWaitFunc ()</a>
 </dt>
 <dt>storaged_daemon_find_block, <a class="indexterm" href="StoragedDaemon.html#storaged-daemon-find-block">storaged_daemon_find_block ()</a>
@@ -2053,6 +2055,18 @@
 </dt>
 <dt>StoragedManagerIface, <a class="indexterm" href="StoragedManager.html#StoragedManagerIface">struct StoragedManagerIface</a>
 </dt>
+<dt>org.storaged.Storaged.Manager.ISCSI.Initiator, <a class="indexterm" href="gdbus-org.storaged.Storaged.Manager.ISCSI.Initiator.html#gdbus-interface-org-storaged-Storaged-Manager-ISCSI-Initiator.top_of_page">org.storaged.Storaged.Manager.ISCSI.Initiator</a>
+</dt>
+<dt>org.storaged.Storaged.Manager.ISCSI.Initiator.DiscoverFirmware(), <a class="indexterm" href="gdbus-org.storaged.Storaged.Manager.ISCSI.Initiator.html#gdbus-method-org-storaged-Storaged-Manager-ISCSI-Initiator.DiscoverFirmware">The DiscoverFirmware() method</a>
+</dt>
+<dt>org.storaged.Storaged.Manager.ISCSI.Initiator.DiscoverSendTargetsChap(), <a class="indexterm" href="gdbus-org.storaged.Storaged.Manager.ISCSI.Initiator.html#gdbus-method-org-storaged-Storaged-Manager-ISCSI-Initiator.DiscoverSendTargetsChap">The DiscoverSendTargetsChap() method</a>
+</dt>
+<dt>org.storaged.Storaged.Manager.ISCSI.Initiator.DiscoverSendTargetsNoAuth(), <a class="indexterm" href="gdbus-org.storaged.Storaged.Manager.ISCSI.Initiator.html#gdbus-method-org-storaged-Storaged-Manager-ISCSI-Initiator.DiscoverSendTargetsNoAuth">The DiscoverSendTargetsNoAuth() method</a>
+</dt>
+<dt>org.storaged.Storaged.Manager.ISCSI.Initiator.GetInitiatorName(), <a class="indexterm" href="gdbus-org.storaged.Storaged.Manager.ISCSI.Initiator.html#gdbus-method-org-storaged-Storaged-Manager-ISCSI-Initiator.GetInitiatorName">The GetInitiatorName() method</a>
+</dt>
+<dt>org.storaged.Storaged.Manager.ISCSI.Initiator.SetInitiatorName(), <a class="indexterm" href="gdbus-org.storaged.Storaged.Manager.ISCSI.Initiator.html#gdbus-method-org-storaged-Storaged-Manager-ISCSI-Initiator.SetInitiatorName">The SetInitiatorName() method</a>
+</dt>
 <dt>StoragedManagerLVM2, <a class="indexterm" href="StoragedManagerLVM2.html#StoragedManagerLVM2-struct">StoragedManagerLVM2</a>
 </dt>
 <dt>StoragedManagerLVM2Iface, <a class="indexterm" href="StoragedManagerLVM2.html#StoragedManagerLVM2Iface">struct StoragedManagerLVM2Iface</a>
@@ -2102,6 +2116,46 @@
 <dt>storaged_manager_get_version, <a class="indexterm" href="StoragedManager.html#storaged-manager-get-version">storaged_manager_get_version ()</a>
 </dt>
 <dt>storaged_manager_interface_info, <a class="indexterm" href="StoragedManager.html#storaged-manager-interface-info">storaged_manager_interface_info ()</a>
+</dt>
+<dt>storaged_manager_iscsi_initiator_call_get_initiator_name, <a class="indexterm" href="storaged-StoragedManagerISCSIInitiator.html#storaged-manager-iscsi-initiator-call-get-initiator-name">storaged_manager_iscsi_initiator_call_get_initiator_name ()</a>
+</dt>
+<dt>storaged_manager_iscsi_initiator_call_get_initiator_name_finish, <a class="indexterm" href="storaged-StoragedManagerISCSIInitiator.html#storaged-manager-iscsi-initiator-call-get-initiator-name-finish">storaged_manager_iscsi_initiator_call_get_initiator_name_finish ()</a>
+</dt>
+<dt>storaged_manager_iscsi_initiator_call_get_initiator_name_sync, <a class="indexterm" href="storaged-StoragedManagerISCSIInitiator.html#storaged-manager-iscsi-initiator-call-get-initiator-name-sync">storaged_manager_iscsi_initiator_call_get_initiator_name_sync ()</a>
+</dt>
+<dt>storaged_manager_iscsi_initiator_call_set_initiator_name, <a class="indexterm" href="storaged-StoragedManagerISCSIInitiator.html#storaged-manager-iscsi-initiator-call-set-initiator-name">storaged_manager_iscsi_initiator_call_set_initiator_name ()</a>
+</dt>
+<dt>storaged_manager_iscsi_initiator_call_set_initiator_name_finish, <a class="indexterm" href="storaged-StoragedManagerISCSIInitiator.html#storaged-manager-iscsi-initiator-call-set-initiator-name-finish">storaged_manager_iscsi_initiator_call_set_initiator_name_finish ()</a>
+</dt>
+<dt>storaged_manager_iscsi_initiator_call_set_initiator_name_sync, <a class="indexterm" href="storaged-StoragedManagerISCSIInitiator.html#storaged-manager-iscsi-initiator-call-set-initiator-name-sync">storaged_manager_iscsi_initiator_call_set_initiator_name_sync ()</a>
+</dt>
+<dt>storaged_manager_iscsi_initiator_complete_get_initiator_name, <a class="indexterm" href="storaged-StoragedManagerISCSIInitiator.html#storaged-manager-iscsi-initiator-complete-get-initiator-name">storaged_manager_iscsi_initiator_complete_get_initiator_name ()</a>
+</dt>
+<dt>storaged_manager_iscsi_initiator_complete_set_initiator_name, <a class="indexterm" href="storaged-StoragedManagerISCSIInitiator.html#storaged-manager-iscsi-initiator-complete-set-initiator-name">storaged_manager_iscsi_initiator_complete_set_initiator_name ()</a>
+</dt>
+<dt>storaged_manager_iscsi_initiator_get_type, <a class="indexterm" href="storaged-StoragedManagerISCSIInitiator.html#storaged-manager-iscsi-initiator-get-type">storaged_manager_iscsi_initiator_get_type ()</a>
+</dt>
+<dt>storaged_manager_iscsi_initiator_interface_info, <a class="indexterm" href="storaged-StoragedManagerISCSIInitiator.html#storaged-manager-iscsi-initiator-interface-info">storaged_manager_iscsi_initiator_interface_info ()</a>
+</dt>
+<dt>storaged_manager_iscsi_initiator_override_properties, <a class="indexterm" href="storaged-StoragedManagerISCSIInitiator.html#storaged-manager-iscsi-initiator-override-properties">storaged_manager_iscsi_initiator_override_properties ()</a>
+</dt>
+<dt>storaged_manager_iscsi_initiator_proxy_get_type, <a class="indexterm" href="storaged-StoragedManagerISCSIInitiator.html#storaged-manager-iscsi-initiator-proxy-get-type">storaged_manager_iscsi_initiator_proxy_get_type ()</a>
+</dt>
+<dt>storaged_manager_iscsi_initiator_proxy_new, <a class="indexterm" href="storaged-StoragedManagerISCSIInitiator.html#storaged-manager-iscsi-initiator-proxy-new">storaged_manager_iscsi_initiator_proxy_new ()</a>
+</dt>
+<dt>storaged_manager_iscsi_initiator_proxy_new_finish, <a class="indexterm" href="storaged-StoragedManagerISCSIInitiator.html#storaged-manager-iscsi-initiator-proxy-new-finish">storaged_manager_iscsi_initiator_proxy_new_finish ()</a>
+</dt>
+<dt>storaged_manager_iscsi_initiator_proxy_new_for_bus, <a class="indexterm" href="storaged-StoragedManagerISCSIInitiator.html#storaged-manager-iscsi-initiator-proxy-new-for-bus">storaged_manager_iscsi_initiator_proxy_new_for_bus ()</a>
+</dt>
+<dt>storaged_manager_iscsi_initiator_proxy_new_for_bus_finish, <a class="indexterm" href="storaged-StoragedManagerISCSIInitiator.html#storaged-manager-iscsi-initiator-proxy-new-for-bus-finish">storaged_manager_iscsi_initiator_proxy_new_for_bus_finish ()</a>
+</dt>
+<dt>storaged_manager_iscsi_initiator_proxy_new_for_bus_sync, <a class="indexterm" href="storaged-StoragedManagerISCSIInitiator.html#storaged-manager-iscsi-initiator-proxy-new-for-bus-sync">storaged_manager_iscsi_initiator_proxy_new_for_bus_sync ()</a>
+</dt>
+<dt>storaged_manager_iscsi_initiator_proxy_new_sync, <a class="indexterm" href="storaged-StoragedManagerISCSIInitiator.html#storaged-manager-iscsi-initiator-proxy-new-sync">storaged_manager_iscsi_initiator_proxy_new_sync ()</a>
+</dt>
+<dt>storaged_manager_iscsi_initiator_skeleton_get_type, <a class="indexterm" href="storaged-StoragedManagerISCSIInitiator.html#storaged-manager-iscsi-initiator-skeleton-get-type">storaged_manager_iscsi_initiator_skeleton_get_type ()</a>
+</dt>
+<dt>storaged_manager_iscsi_initiator_skeleton_new, <a class="indexterm" href="storaged-StoragedManagerISCSIInitiator.html#storaged-manager-iscsi-initiator-skeleton-new">storaged_manager_iscsi_initiator_skeleton_new ()</a>
 </dt>
 <dt>storaged_manager_lvm2_call_volume_group_create, <a class="indexterm" href="StoragedManagerLVM2.html#storaged-manager-lvm2-call-volume-group-create">storaged_manager_lvm2_call_volume_group_create ()</a>, <a class="indexterm" href="StoragedManagerLVM2.html#storaged-manager-lvm2-call-volume-group-create">storaged_manager_lvm2_call_volume_group_create ()</a>
 </dt>

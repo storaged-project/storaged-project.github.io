@@ -39,6 +39,7 @@
         <sub name="org.storaged.Storaged.Manager.LVM2" link="gdbus-org.storaged.Storaged.Manager.LVM2.html"/>
         <sub name="org.storaged.Storaged.PhysicalVolume" link="gdbus-org.storaged.Storaged.PhysicalVolume.html"/>
         <sub name="org.storaged.Storaged.VolumeGroup" link="gdbus-org.storaged.Storaged.VolumeGroup.html"/>
+        <sub name="org.storaged.Storaged.Manager.ISCSI.Initiator" link="gdbus-org.storaged.Storaged.Manager.ISCSI.Initiator.html"/>
       </sub>
     </sub>
     <sub name="Library API Reference" link="ref-library.html">
@@ -65,6 +66,7 @@
         <sub name="StoragedPhysicalVolume" link="storaged-StoragedPhysicalVolume.html"/>
         <sub name="StoragedVolumeGroup" link="storaged-StoragedVolumeGroup.html"/>
         <sub name="StoragedLogicalVolume" link="storaged-StoragedLogicalVolume.html"/>
+        <sub name="StoragedManagerISCSIInitiator" link="storaged-StoragedManagerISCSIInitiator.html"/>
       </sub>
     </sub>
     <sub name="Daemon Implementation Details" link="ref-daemon.html">
@@ -320,6 +322,11 @@
     <keyword type="property" name="The &quot;FreeSize&quot; property" link="gdbus-org.storaged.Storaged.VolumeGroup.html#gdbus-property-org-storaged-Storaged-VolumeGroup.FreeSize"/>
     <keyword type="property" name="The &quot;ExtentSize&quot; property" link="gdbus-org.storaged.Storaged.VolumeGroup.html#gdbus-property-org-storaged-Storaged-VolumeGroup.ExtentSize"/>
     <keyword type="property" name="The &quot;NeedsPolling&quot; property" link="gdbus-org.storaged.Storaged.VolumeGroup.html#gdbus-property-org-storaged-Storaged-VolumeGroup.NeedsPolling"/>
+    <keyword type="method" name="The GetInitiatorName() method" link="gdbus-org.storaged.Storaged.Manager.ISCSI.Initiator.html#gdbus-method-org-storaged-Storaged-Manager-ISCSI-Initiator.GetInitiatorName"/>
+    <keyword type="method" name="The SetInitiatorName() method" link="gdbus-org.storaged.Storaged.Manager.ISCSI.Initiator.html#gdbus-method-org-storaged-Storaged-Manager-ISCSI-Initiator.SetInitiatorName"/>
+    <keyword type="method" name="The DiscoverSendTargetsNoAuth() method" link="gdbus-org.storaged.Storaged.Manager.ISCSI.Initiator.html#gdbus-method-org-storaged-Storaged-Manager-ISCSI-Initiator.DiscoverSendTargetsNoAuth"/>
+    <keyword type="method" name="The DiscoverSendTargetsChap() method" link="gdbus-org.storaged.Storaged.Manager.ISCSI.Initiator.html#gdbus-method-org-storaged-Storaged-Manager-ISCSI-Initiator.DiscoverSendTargetsChap"/>
+    <keyword type="method" name="The DiscoverFirmware() method" link="gdbus-org.storaged.Storaged.Manager.ISCSI.Initiator.html#gdbus-method-org-storaged-Storaged-Manager-ISCSI-Initiator.DiscoverFirmware"/>
     <keyword type="macro" name="STORAGED_CHECK_VERSION()" link="StoragedClient.html#STORAGED-CHECK-VERSION:CAPS"/>
     <keyword type="function" name="storaged_client_new ()" link="StoragedClient.html#storaged-client-new"/>
     <keyword type="function" name="storaged_client_new_finish ()" link="StoragedClient.html#storaged-client-new-finish"/>
@@ -1381,6 +1388,26 @@
     <keyword type="struct" name="struct StoragedLogicalVolumeProxyClass" link="storaged-StoragedLogicalVolume.html#StoragedLogicalVolumeProxyClass" since="2.0.0"/>
     <keyword type="struct" name="struct StoragedLogicalVolumeSkeleton" link="storaged-StoragedLogicalVolume.html#StoragedLogicalVolumeSkeleton" since="2.0.0"/>
     <keyword type="struct" name="struct StoragedLogicalVolumeSkeletonClass" link="storaged-StoragedLogicalVolume.html#StoragedLogicalVolumeSkeletonClass" since="2.0.0"/>
+    <keyword type="function" name="storaged_manager_iscsi_initiator_call_get_initiator_name ()" link="storaged-StoragedManagerISCSIInitiator.html#storaged-manager-iscsi-initiator-call-get-initiator-name" since="2.0.1"/>
+    <keyword type="function" name="storaged_manager_iscsi_initiator_call_get_initiator_name_finish ()" link="storaged-StoragedManagerISCSIInitiator.html#storaged-manager-iscsi-initiator-call-get-initiator-name-finish" since="2.0.1"/>
+    <keyword type="function" name="storaged_manager_iscsi_initiator_call_get_initiator_name_sync ()" link="storaged-StoragedManagerISCSIInitiator.html#storaged-manager-iscsi-initiator-call-get-initiator-name-sync" since="2.0.1"/>
+    <keyword type="function" name="storaged_manager_iscsi_initiator_call_set_initiator_name ()" link="storaged-StoragedManagerISCSIInitiator.html#storaged-manager-iscsi-initiator-call-set-initiator-name" since="2.0.1"/>
+    <keyword type="function" name="storaged_manager_iscsi_initiator_call_set_initiator_name_finish ()" link="storaged-StoragedManagerISCSIInitiator.html#storaged-manager-iscsi-initiator-call-set-initiator-name-finish" since="2.0.1"/>
+    <keyword type="function" name="storaged_manager_iscsi_initiator_call_set_initiator_name_sync ()" link="storaged-StoragedManagerISCSIInitiator.html#storaged-manager-iscsi-initiator-call-set-initiator-name-sync" since="2.0.1"/>
+    <keyword type="function" name="storaged_manager_iscsi_initiator_complete_get_initiator_name ()" link="storaged-StoragedManagerISCSIInitiator.html#storaged-manager-iscsi-initiator-complete-get-initiator-name" since="2.0.1"/>
+    <keyword type="function" name="storaged_manager_iscsi_initiator_complete_set_initiator_name ()" link="storaged-StoragedManagerISCSIInitiator.html#storaged-manager-iscsi-initiator-complete-set-initiator-name" since="2.0.1"/>
+    <keyword type="function" name="storaged_manager_iscsi_initiator_get_type ()" link="storaged-StoragedManagerISCSIInitiator.html#storaged-manager-iscsi-initiator-get-type"/>
+    <keyword type="function" name="storaged_manager_iscsi_initiator_interface_info ()" link="storaged-StoragedManagerISCSIInitiator.html#storaged-manager-iscsi-initiator-interface-info" since="2.0.1"/>
+    <keyword type="function" name="storaged_manager_iscsi_initiator_override_properties ()" link="storaged-StoragedManagerISCSIInitiator.html#storaged-manager-iscsi-initiator-override-properties" since="2.0.1"/>
+    <keyword type="function" name="storaged_manager_iscsi_initiator_proxy_get_type ()" link="storaged-StoragedManagerISCSIInitiator.html#storaged-manager-iscsi-initiator-proxy-get-type"/>
+    <keyword type="function" name="storaged_manager_iscsi_initiator_proxy_new ()" link="storaged-StoragedManagerISCSIInitiator.html#storaged-manager-iscsi-initiator-proxy-new" since="2.0.1"/>
+    <keyword type="function" name="storaged_manager_iscsi_initiator_proxy_new_finish ()" link="storaged-StoragedManagerISCSIInitiator.html#storaged-manager-iscsi-initiator-proxy-new-finish" since="2.0.1"/>
+    <keyword type="function" name="storaged_manager_iscsi_initiator_proxy_new_for_bus ()" link="storaged-StoragedManagerISCSIInitiator.html#storaged-manager-iscsi-initiator-proxy-new-for-bus" since="2.0.1"/>
+    <keyword type="function" name="storaged_manager_iscsi_initiator_proxy_new_for_bus_finish ()" link="storaged-StoragedManagerISCSIInitiator.html#storaged-manager-iscsi-initiator-proxy-new-for-bus-finish" since="2.0.1"/>
+    <keyword type="function" name="storaged_manager_iscsi_initiator_proxy_new_for_bus_sync ()" link="storaged-StoragedManagerISCSIInitiator.html#storaged-manager-iscsi-initiator-proxy-new-for-bus-sync" since="2.0.1"/>
+    <keyword type="function" name="storaged_manager_iscsi_initiator_proxy_new_sync ()" link="storaged-StoragedManagerISCSIInitiator.html#storaged-manager-iscsi-initiator-proxy-new-sync" since="2.0.1"/>
+    <keyword type="function" name="storaged_manager_iscsi_initiator_skeleton_get_type ()" link="storaged-StoragedManagerISCSIInitiator.html#storaged-manager-iscsi-initiator-skeleton-get-type"/>
+    <keyword type="function" name="storaged_manager_iscsi_initiator_skeleton_new ()" link="storaged-StoragedManagerISCSIInitiator.html#storaged-manager-iscsi-initiator-skeleton-new" since="2.0.1"/>
     <keyword type="function" name="storaged_decode_udev_string ()" link="storaged-Utilities.html#storaged-decode-udev-string"/>
     <keyword type="function" name="storaged_safe_append_to_object_path ()" link="storaged-Utilities.html#storaged-safe-append-to-object-path"/>
     <keyword type="function" name="storaged_daemon_util_block_get_size ()" link="storaged-Utilities.html#storaged-daemon-util-block-get-size"/>
@@ -1438,6 +1465,7 @@
     <keyword type="property" name="The “force-load-modules” property" link="StoragedDaemon.html#StoragedDaemon--force-load-modules"/>
     <keyword type="property" name="The “mount-monitor” property" link="StoragedDaemon.html#StoragedDaemon--mount-monitor"/>
     <keyword type="property" name="The “object-manager” property" link="StoragedDaemon.html#StoragedDaemon--object-manager"/>
+    <keyword type="property" name="The “uninstalled” property" link="StoragedDaemon.html#StoragedDaemon--uninstalled"/>
     <keyword type="function" name="storaged_provider_start ()" link="StoragedProvider.html#storaged-provider-start"/>
     <keyword type="function" name="storaged_provider_get_daemon ()" link="StoragedProvider.html#storaged-provider-get-daemon"/>
     <keyword type="struct" name="StoragedProvider" link="StoragedProvider.html#StoragedProvider-struct"/>

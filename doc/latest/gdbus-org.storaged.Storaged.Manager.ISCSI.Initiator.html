@@ -1,0 +1,241 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Storaged Reference Manual: org.storaged.Storaged.Manager.ISCSI.Initiator</title>
+<meta name="generator" content="DocBook XSL Stylesheets V1.78.1">
+<link rel="home" href="index.html" title="Storaged Reference Manual">
+<link rel="up" href="ch02.html" title="D-Bus Interfaces">
+<link rel="prev" href="gdbus-org.storaged.Storaged.VolumeGroup.html" title="org.storaged.Storaged.VolumeGroup">
+<link rel="next" href="ref-library.html" title="Part III. Library API Reference">
+<meta name="generator" content="GTK-Doc V1.21 (XML mode)">
+<link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<table class="navigation" id="top" width="100%" summary="Navigation header" cellpadding="2" cellspacing="5"><tr valign="middle">
+<td width="100%" align="left" class="shortcuts">
+<a href="#" class="shortcut">Top</a><span id="nav_description">  <span class="dim">|</span> 
+                  <a href="#gdbus-org.storaged.Storaged.Manager.ISCSI.Initiator.description" class="shortcut">Description</a></span>
+</td>
+<td><a accesskey="h" href="index.html"><img src="home.png" width="16" height="16" border="0" alt="Home"></a></td>
+<td><a accesskey="u" href="ch02.html"><img src="up.png" width="16" height="16" border="0" alt="Up"></a></td>
+<td><a accesskey="p" href="gdbus-org.storaged.Storaged.VolumeGroup.html"><img src="left.png" width="16" height="16" border="0" alt="Prev"></a></td>
+<td><a accesskey="n" href="ref-library.html"><img src="right.png" width="16" height="16" border="0" alt="Next"></a></td>
+</tr></table>
+<div class="refentry">
+<a name="gdbus-org.storaged.Storaged.Manager.ISCSI.Initiator"></a><div class="titlepage"></div>
+<div class="refnamediv"><table width="100%"><tr>
+<td valign="top">
+<h2><span class="refentrytitle"><a name="gdbus-interface-org-storaged-Storaged-Manager-ISCSI-Initiator.top_of_page"></a>org.storaged.Storaged.Manager.ISCSI.Initiator</span></h2>
+<p>org.storaged.Storaged.Manager.ISCSI.Initiator — iSCSI add-on to the manager singleton</p>
+</td>
+<td class="gallery_image" valign="top" align="right"></td>
+</tr></table></div>
+<div class="refsynopsisdiv">
+<h2>Methods</h2>
+<pre class="synopsis">
+<a class="link" href="gdbus-org.storaged.Storaged.Manager.ISCSI.Initiator.html#gdbus-method-org-storaged-Storaged-Manager-ISCSI-Initiator.GetInitiatorName" title="The GetInitiatorName() method">GetInitiatorName</a>          (OUT s        result);
+<a class="link" href="gdbus-org.storaged.Storaged.Manager.ISCSI.Initiator.html#gdbus-method-org-storaged-Storaged-Manager-ISCSI-Initiator.SetInitiatorName" title="The SetInitiatorName() method">SetInitiatorName</a>          (IN  s        name);
+<a class="link" href="gdbus-org.storaged.Storaged.Manager.ISCSI.Initiator.html#gdbus-method-org-storaged-Storaged-Manager-ISCSI-Initiator.DiscoverSendTargetsNoAuth" title="The DiscoverSendTargetsNoAuth() method">DiscoverSendTargetsNoAuth</a> (IN  s        address,
+                           IN  q        port,
+                           OUT a(sisis) nodes,
+                           OUT i        nodes_cnt);
+<a class="link" href="gdbus-org.storaged.Storaged.Manager.ISCSI.Initiator.html#gdbus-method-org-storaged-Storaged-Manager-ISCSI-Initiator.DiscoverSendTargetsChap" title="The DiscoverSendTargetsChap() method">DiscoverSendTargetsChap</a>   (IN  s        address,
+                           IN  q        port,
+                           IN  s        username,
+                           IN  s        password,
+                           IN  s        reverse_username,
+                           IN  s        reverse_password,
+                           OUT a(sisis) nodes,
+                           OUT i        nodes_cnt);
+<a class="link" href="gdbus-org.storaged.Storaged.Manager.ISCSI.Initiator.html#gdbus-method-org-storaged-Storaged-Manager-ISCSI-Initiator.DiscoverFirmware" title="The DiscoverFirmware() method">DiscoverFirmware</a>          (OUT a(sisis) nodes,
+                           OUT i        nodes_cnt);
+</pre>
+</div>
+<div class="refsect1">
+<a name="gdbus-interface-org-storaged-Storaged-Manager-ISCSI-Initiator"></a><h2>Description</h2>
+<p>       Additional interface with iSCSI specifics for top-level manager
+       singleton object located at the object path
+       <code class="literal">/org/storaged/Storaged/Manager</code>.
+</p>
+<p class="since">Since 2.0.1</p>
+</div>
+<div class="refsect1">
+<a name="gdbus-methods-org.storaged.Storaged.Manager.ISCSI.Initiator"></a><h2>Method Details</h2>
+<div class="refsect2">
+<a name="gdbus-method-org-storaged-Storaged-Manager-ISCSI-Initiator.GetInitiatorName"></a><h3>The GetInitiatorName() method</h3>
+<pre class="programlisting">
+GetInitiatorName (OUT s result);
+</pre>
+<p>         <em class="parameter"><code>since</code></em> 2.0.1
+</p>
+<p>         Returns a iSCSI initiator name.
+</p>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody><tr>
+<td><p><span class="term"><code class="literal">OUT s <em class="parameter"><code>result</code></em></code>:</span></p></td>
+<td><p>The iSCSI initiator name.</p></td>
+</tr></tbody>
+</table></div>
+<p class="since">Since 2.0.1</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="gdbus-method-org-storaged-Storaged-Manager-ISCSI-Initiator.SetInitiatorName"></a><h3>The SetInitiatorName() method</h3>
+<pre class="programlisting">
+SetInitiatorName (IN  s name);
+</pre>
+<p>        <em class="parameter"><code>since</code></em> 2.0.1
+</p>
+<p>        Sets a new iSCSI initiator name.
+</p>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody><tr>
+<td><p><span class="term"><code class="literal">IN s <em class="parameter"><code>name</code></em></code>:</span></p></td>
+<td><p>The new iSCSI initiator name.</p></td>
+</tr></tbody>
+</table></div>
+<p class="since">Since 2.0.1</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="gdbus-method-org-storaged-Storaged-Manager-ISCSI-Initiator.DiscoverSendTargetsNoAuth"></a><h3>The DiscoverSendTargetsNoAuth() method</h3>
+<pre class="programlisting">
+DiscoverSendTargetsNoAuth (IN  s        address,
+                           IN  q        port,
+                           OUT a(sisis) nodes,
+                           OUT i        nodes_cnt);
+</pre>
+<p>        <em class="parameter"><code>since</code></em> 2.0.1
+</p>
+<p>        Performs targets' discovery with no authentication data.
+</p>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><code class="literal">IN s <em class="parameter"><code>address</code></em></code>:</span></p></td>
+<td><p>Hostname or IP-address to connect to.</p></td>
+</tr>
+<tr>
+<td><p><span class="term"><code class="literal">IN q <em class="parameter"><code>port</code></em></code>:</span></p></td>
+<td><p>Port to connect to, or 0 for the default port.</p></td>
+</tr>
+<tr>
+<td><p><span class="term"><code class="literal">OUT a(sisis) <em class="parameter"><code>nodes</code></em></code>:</span></p></td>
+<td><p>Discovered nodes.</p></td>
+</tr>
+<tr>
+<td><p><span class="term"><code class="literal">OUT i <em class="parameter"><code>nodes_cnt</code></em></code>:</span></p></td>
+<td><p>The number of found nodes will be returned.</p></td>
+</tr>
+</tbody>
+</table></div>
+<p class="since">Since 2.0.1</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="gdbus-method-org-storaged-Storaged-Manager-ISCSI-Initiator.DiscoverSendTargetsChap"></a><h3>The DiscoverSendTargetsChap() method</h3>
+<pre class="programlisting">
+DiscoverSendTargetsChap (IN  s        address,
+                         IN  q        port,
+                         IN  s        username,
+                         IN  s        password,
+                         IN  s        reverse_username,
+                         IN  s        reverse_password,
+                         OUT a(sisis) nodes,
+                         OUT i        nodes_cnt);
+</pre>
+<p>        <em class="parameter"><code>since</code></em> 2.0.1
+</p>
+<p>        Performs targets' discovery with CHAP authentication method.
+</p>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><code class="literal">IN s <em class="parameter"><code>address</code></em></code>:</span></p></td>
+<td><p>Hostname or IP-address to connect to.</p></td>
+</tr>
+<tr>
+<td><p><span class="term"><code class="literal">IN q <em class="parameter"><code>port</code></em></code>:</span></p></td>
+<td><p>Port to connect to, or 0 for the default port.</p></td>
+</tr>
+<tr>
+<td><p><span class="term"><code class="literal">IN s <em class="parameter"><code>username</code></em></code>:</span></p></td>
+<td><p>Authentication username.</p></td>
+</tr>
+<tr>
+<td><p><span class="term"><code class="literal">IN s <em class="parameter"><code>password</code></em></code>:</span></p></td>
+<td><p>Authentication password.</p></td>
+</tr>
+<tr>
+<td><p><span class="term"><code class="literal">IN s <em class="parameter"><code>reverse_username</code></em></code>:</span></p></td>
+<td><p>Reverse authentication username. May be empty in which case only forward authentication will be done.</p></td>
+</tr>
+<tr>
+<td><p><span class="term"><code class="literal">IN s <em class="parameter"><code>reverse_password</code></em></code>:</span></p></td>
+<td><p>Reverse authentication password.</p></td>
+</tr>
+<tr>
+<td><p><span class="term"><code class="literal">OUT a(sisis) <em class="parameter"><code>nodes</code></em></code>:</span></p></td>
+<td><p>Discovered nodes.</p></td>
+</tr>
+<tr>
+<td><p><span class="term"><code class="literal">OUT i <em class="parameter"><code>nodes_cnt</code></em></code>:</span></p></td>
+<td><p>The number of found nodes will be returned.</p></td>
+</tr>
+</tbody>
+</table></div>
+<p class="since">Since 2.0.1</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="gdbus-method-org-storaged-Storaged-Manager-ISCSI-Initiator.DiscoverFirmware"></a><h3>The DiscoverFirmware() method</h3>
+<pre class="programlisting">
+DiscoverFirmware (OUT a(sisis) nodes,
+                  OUT i        nodes_cnt);
+</pre>
+<p>        <em class="parameter"><code>since</code></em> 2.0.1
+</p>
+<p>        Performs targets' discovery  using firmware (ppc or ibft).
+</p>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><code class="literal">OUT a(sisis) <em class="parameter"><code>nodes</code></em></code>:</span></p></td>
+<td><p></p></td>
+</tr>
+<tr>
+<td><p><span class="term"><code class="literal">OUT i <em class="parameter"><code>nodes_cnt</code></em></code>:</span></p></td>
+<td><p></p></td>
+</tr>
+</tbody>
+</table></div>
+<p class="since">Since 2.0.1</p>
+</div>
+</div>
+</div>
+<div class="footer">
+<hr>
+          Generated by GTK-Doc V1.21</div>
+</body>
+</html>
