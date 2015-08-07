@@ -2,13 +2,13 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Storaged Reference Manual: Index</title>
+<title>Index: Storaged Reference Manual</title>
 <meta name="generator" content="DocBook XSL Stylesheets V1.78.1">
 <link rel="home" href="index.html" title="Storaged Reference Manual">
 <link rel="up" href="index.html" title="Storaged Reference Manual">
 <link rel="prev" href="StoragedLinuxBlockObject.html" title="StoragedLinuxBlockObject">
 <link rel="next" href="api-index-deprecated.html" title="Index of deprecated symbols">
-<meta name="generator" content="GTK-Doc V1.21 (XML mode)">
+<meta name="generator" content="GTK-Doc V1.24 (XML mode)">
 <link rel="stylesheet" href="style.css" type="text/css">
 </head>
 <body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
@@ -661,7 +661,7 @@
 </dt>
 <dt>storaged_daemon_util_inhibit_system_sync, <a class="indexterm" href="storaged-Utilities.html#storaged-daemon-util-inhibit-system-sync">storaged_daemon_util_inhibit_system_sync ()</a>
 </dt>
-<dt>storaged_daemon_util_on_same_seat, <a class="indexterm" href="storaged-Utilities.html#storaged-daemon-util-on-same-seat">storaged_daemon_util_on_same_seat ()</a>
+<dt>storaged_daemon_util_on_user_seat, <a class="indexterm" href="storaged-Utilities.html#storaged-daemon-util-on-user-seat">storaged_daemon_util_on_user_seat ()</a>
 </dt>
 <dt>storaged_daemon_util_resolve_link, <a class="indexterm" href="storaged-Utilities.html#storaged-daemon-util-resolve-link">storaged_daemon_util_resolve_link ()</a>
 </dt>
@@ -1350,6 +1350,10 @@
 </dt>
 <dt>StoragedEncrypted::handle-unlock, <a class="indexterm" href="StoragedEncrypted.html#StoragedEncrypted-handle-unlock">The “handle-unlock” signal</a>
 </dt>
+<dt>StoragedEncrypted:child-configuration, <a class="indexterm" href="StoragedEncrypted.html#StoragedEncrypted--child-configuration">The “child-configuration” property</a>
+</dt>
+<dt>org.storaged.Storaged.Encrypted:ChildConfiguration, <a class="indexterm" href="gdbus-org.storaged.Storaged.Encrypted.html#gdbus-property-org-storaged-Storaged-Encrypted.ChildConfiguration">The "ChildConfiguration" property</a>
+</dt>
 <dt>StoragedEncryptedIface, <a class="indexterm" href="StoragedEncrypted.html#StoragedEncryptedIface">struct StoragedEncryptedIface</a>
 </dt>
 <dt>StoragedEncryptedProxy, <a class="indexterm" href="StoragedEncrypted.html#StoragedEncryptedProxy-struct">struct StoragedEncryptedProxy</a>
@@ -1417,6 +1421,18 @@
 </dt>
 <dt>StoragedFilesystem, <a class="indexterm" href="StoragedFilesystem.html#StoragedFilesystem-struct">StoragedFilesystem</a>
 </dt>
+<dt>org.storaged.Storaged.Filesystem.BTRFS, <a class="indexterm" href="gdbus-org.storaged.Storaged.Filesystem.BTRFS.html#gdbus-interface-org-storaged-Storaged-Filesystem-BTRFS.top_of_page">org.storaged.Storaged.Filesystem.BTRFS</a>
+</dt>
+<dt>org.storaged.Storaged.Filesystem.BTRFS.SetLabel(), <a class="indexterm" href="gdbus-org.storaged.Storaged.Filesystem.BTRFS.html#gdbus-method-org-storaged-Storaged-Filesystem-BTRFS.SetLabel">The SetLabel() method</a>
+</dt>
+<dt>org.storaged.Storaged.Filesystem.BTRFS:label, <a class="indexterm" href="gdbus-org.storaged.Storaged.Filesystem.BTRFS.html#gdbus-property-org-storaged-Storaged-Filesystem-BTRFS.label">The "label" property</a>
+</dt>
+<dt>org.storaged.Storaged.Filesystem.BTRFS:num_devices, <a class="indexterm" href="gdbus-org.storaged.Storaged.Filesystem.BTRFS.html#gdbus-property-org-storaged-Storaged-Filesystem-BTRFS.num_devices">The "num_devices" property</a>
+</dt>
+<dt>org.storaged.Storaged.Filesystem.BTRFS:used, <a class="indexterm" href="gdbus-org.storaged.Storaged.Filesystem.BTRFS.html#gdbus-property-org-storaged-Storaged-Filesystem-BTRFS.used">The "used" property</a>
+</dt>
+<dt>org.storaged.Storaged.Filesystem.BTRFS:uuid, <a class="indexterm" href="gdbus-org.storaged.Storaged.Filesystem.BTRFS.html#gdbus-property-org-storaged-Storaged-Filesystem-BTRFS.uuid">The "uuid" property</a>
+</dt>
 <dt>org.storaged.Storaged.Filesystem.Mount(), <a class="indexterm" href="gdbus-org.storaged.Storaged.Filesystem.html#gdbus-method-org-storaged-Storaged-Filesystem.Mount">The Mount() method</a>
 </dt>
 <dt>org.storaged.Storaged.Filesystem.SetLabel(), <a class="indexterm" href="gdbus-org.storaged.Storaged.Filesystem.html#gdbus-method-org-storaged-Storaged-Filesystem.SetLabel">The SetLabel() method</a>
@@ -1442,6 +1458,52 @@
 <dt>StoragedFilesystemSkeleton, <a class="indexterm" href="StoragedFilesystem.html#StoragedFilesystemSkeleton-struct">struct StoragedFilesystemSkeleton</a>
 </dt>
 <dt>StoragedFilesystemSkeletonClass, <a class="indexterm" href="StoragedFilesystem.html#StoragedFilesystemSkeletonClass">struct StoragedFilesystemSkeletonClass</a>
+</dt>
+<dt>storaged_filesystem_btrfs_call_set_label, <a class="indexterm" href="storaged-StoragedFilesystemBTRFS.html#storaged-filesystem-btrfs-call-set-label">storaged_filesystem_btrfs_call_set_label ()</a>
+</dt>
+<dt>storaged_filesystem_btrfs_call_set_label_finish, <a class="indexterm" href="storaged-StoragedFilesystemBTRFS.html#storaged-filesystem-btrfs-call-set-label-finish">storaged_filesystem_btrfs_call_set_label_finish ()</a>
+</dt>
+<dt>storaged_filesystem_btrfs_call_set_label_sync, <a class="indexterm" href="storaged-StoragedFilesystemBTRFS.html#storaged-filesystem-btrfs-call-set-label-sync">storaged_filesystem_btrfs_call_set_label_sync ()</a>
+</dt>
+<dt>storaged_filesystem_btrfs_complete_set_label, <a class="indexterm" href="storaged-StoragedFilesystemBTRFS.html#storaged-filesystem-btrfs-complete-set-label">storaged_filesystem_btrfs_complete_set_label ()</a>
+</dt>
+<dt>storaged_filesystem_btrfs_dup_label, <a class="indexterm" href="storaged-StoragedFilesystemBTRFS.html#storaged-filesystem-btrfs-dup-label">storaged_filesystem_btrfs_dup_label ()</a>
+</dt>
+<dt>storaged_filesystem_btrfs_dup_uuid, <a class="indexterm" href="storaged-StoragedFilesystemBTRFS.html#storaged-filesystem-btrfs-dup-uuid">storaged_filesystem_btrfs_dup_uuid ()</a>
+</dt>
+<dt>storaged_filesystem_btrfs_get_label, <a class="indexterm" href="storaged-StoragedFilesystemBTRFS.html#storaged-filesystem-btrfs-get-label">storaged_filesystem_btrfs_get_label ()</a>
+</dt>
+<dt>storaged_filesystem_btrfs_get_num_devices, <a class="indexterm" href="storaged-StoragedFilesystemBTRFS.html#storaged-filesystem-btrfs-get-num-devices">storaged_filesystem_btrfs_get_num_devices ()</a>
+</dt>
+<dt>storaged_filesystem_btrfs_get_used, <a class="indexterm" href="storaged-StoragedFilesystemBTRFS.html#storaged-filesystem-btrfs-get-used">storaged_filesystem_btrfs_get_used ()</a>
+</dt>
+<dt>storaged_filesystem_btrfs_get_uuid, <a class="indexterm" href="storaged-StoragedFilesystemBTRFS.html#storaged-filesystem-btrfs-get-uuid">storaged_filesystem_btrfs_get_uuid ()</a>
+</dt>
+<dt>storaged_filesystem_btrfs_interface_info, <a class="indexterm" href="storaged-StoragedFilesystemBTRFS.html#storaged-filesystem-btrfs-interface-info">storaged_filesystem_btrfs_interface_info ()</a>
+</dt>
+<dt>storaged_filesystem_btrfs_override_properties, <a class="indexterm" href="storaged-StoragedFilesystemBTRFS.html#storaged-filesystem-btrfs-override-properties">storaged_filesystem_btrfs_override_properties ()</a>
+</dt>
+<dt>storaged_filesystem_btrfs_proxy_new, <a class="indexterm" href="storaged-StoragedFilesystemBTRFS.html#storaged-filesystem-btrfs-proxy-new">storaged_filesystem_btrfs_proxy_new ()</a>
+</dt>
+<dt>storaged_filesystem_btrfs_proxy_new_finish, <a class="indexterm" href="storaged-StoragedFilesystemBTRFS.html#storaged-filesystem-btrfs-proxy-new-finish">storaged_filesystem_btrfs_proxy_new_finish ()</a>
+</dt>
+<dt>storaged_filesystem_btrfs_proxy_new_for_bus, <a class="indexterm" href="storaged-StoragedFilesystemBTRFS.html#storaged-filesystem-btrfs-proxy-new-for-bus">storaged_filesystem_btrfs_proxy_new_for_bus ()</a>
+</dt>
+<dt>storaged_filesystem_btrfs_proxy_new_for_bus_finish, <a class="indexterm" href="storaged-StoragedFilesystemBTRFS.html#storaged-filesystem-btrfs-proxy-new-for-bus-finish">storaged_filesystem_btrfs_proxy_new_for_bus_finish ()</a>
+</dt>
+<dt>storaged_filesystem_btrfs_proxy_new_for_bus_sync, <a class="indexterm" href="storaged-StoragedFilesystemBTRFS.html#storaged-filesystem-btrfs-proxy-new-for-bus-sync">storaged_filesystem_btrfs_proxy_new_for_bus_sync ()</a>
+</dt>
+<dt>storaged_filesystem_btrfs_proxy_new_sync, <a class="indexterm" href="storaged-StoragedFilesystemBTRFS.html#storaged-filesystem-btrfs-proxy-new-sync">storaged_filesystem_btrfs_proxy_new_sync ()</a>
+</dt>
+<dt>storaged_filesystem_btrfs_set_label, <a class="indexterm" href="storaged-StoragedFilesystemBTRFS.html#storaged-filesystem-btrfs-set-label">storaged_filesystem_btrfs_set_label ()</a>
+</dt>
+<dt>storaged_filesystem_btrfs_set_num_devices, <a class="indexterm" href="storaged-StoragedFilesystemBTRFS.html#storaged-filesystem-btrfs-set-num-devices">storaged_filesystem_btrfs_set_num_devices ()</a>
+</dt>
+<dt>storaged_filesystem_btrfs_set_used, <a class="indexterm" href="storaged-StoragedFilesystemBTRFS.html#storaged-filesystem-btrfs-set-used">storaged_filesystem_btrfs_set_used ()</a>
+</dt>
+<dt>storaged_filesystem_btrfs_set_uuid, <a class="indexterm" href="storaged-StoragedFilesystemBTRFS.html#storaged-filesystem-btrfs-set-uuid">storaged_filesystem_btrfs_set_uuid ()</a>
+</dt>
+<dt>storaged_filesystem_btrfs_skeleton_new, <a class="indexterm" href="storaged-StoragedFilesystemBTRFS.html#storaged-filesystem-btrfs-skeleton-new">storaged_filesystem_btrfs_skeleton_new ()</a>
 </dt>
 <dt>storaged_filesystem_call_mount, <a class="indexterm" href="StoragedFilesystem.html#storaged-filesystem-call-mount">storaged_filesystem_call_mount ()</a>
 </dt>
@@ -1525,6 +1587,92 @@
 <dt>storaged_info, <a class="indexterm" href="storaged-Logging.html#storaged-info">storaged_info()</a>
 </dt>
 <dt>StoragedInhibitCookie, <a class="indexterm" href="storaged-Utilities.html#StoragedInhibitCookie">StoragedInhibitCookie</a>
+</dt>
+<dt>org.storaged.Storaged.ISCSI.Session, <a class="indexterm" href="gdbus-org.storaged.Storaged.ISCSI.Session.html#gdbus-interface-org-storaged-Storaged-ISCSI-Session.top_of_page">org.storaged.Storaged.ISCSI.Session</a>
+</dt>
+<dt>org.storaged.Storaged.ISCSI.Session:abort_timeout, <a class="indexterm" href="gdbus-org.storaged.Storaged.ISCSI.Session.html#gdbus-property-org-storaged-Storaged-ISCSI-Session.abort_timeout">The "abort_timeout" property</a>
+</dt>
+<dt>org.storaged.Storaged.ISCSI.Session:address, <a class="indexterm" href="gdbus-org.storaged.Storaged.ISCSI.Session.html#gdbus-property-org-storaged-Storaged-ISCSI-Session.address">The "address" property</a>
+</dt>
+<dt>org.storaged.Storaged.ISCSI.Session:lu_reset_timeout, <a class="indexterm" href="gdbus-org.storaged.Storaged.ISCSI.Session.html#gdbus-property-org-storaged-Storaged-ISCSI-Session.lu_reset_timeout">The "lu_reset_timeout" property</a>
+</dt>
+<dt>org.storaged.Storaged.ISCSI.Session:persistent_address, <a class="indexterm" href="gdbus-org.storaged.Storaged.ISCSI.Session.html#gdbus-property-org-storaged-Storaged-ISCSI-Session.persistent_address">The "persistent_address" property</a>
+</dt>
+<dt>org.storaged.Storaged.ISCSI.Session:persistent_port, <a class="indexterm" href="gdbus-org.storaged.Storaged.ISCSI.Session.html#gdbus-property-org-storaged-Storaged-ISCSI-Session.persistent_port">The "persistent_port" property</a>
+</dt>
+<dt>org.storaged.Storaged.ISCSI.Session:port, <a class="indexterm" href="gdbus-org.storaged.Storaged.ISCSI.Session.html#gdbus-property-org-storaged-Storaged-ISCSI-Session.port">The "port" property</a>
+</dt>
+<dt>org.storaged.Storaged.ISCSI.Session:recovery_timeout, <a class="indexterm" href="gdbus-org.storaged.Storaged.ISCSI.Session.html#gdbus-property-org-storaged-Storaged-ISCSI-Session.recovery_timeout">The "recovery_timeout" property</a>
+</dt>
+<dt>org.storaged.Storaged.ISCSI.Session:target_name, <a class="indexterm" href="gdbus-org.storaged.Storaged.ISCSI.Session.html#gdbus-property-org-storaged-Storaged-ISCSI-Session.target_name">The "target_name" property</a>
+</dt>
+<dt>org.storaged.Storaged.ISCSI.Session:tgt_reset_timeout, <a class="indexterm" href="gdbus-org.storaged.Storaged.ISCSI.Session.html#gdbus-property-org-storaged-Storaged-ISCSI-Session.tgt_reset_timeout">The "tgt_reset_timeout" property</a>
+</dt>
+<dt>org.storaged.Storaged.ISCSI.Session:tpgt, <a class="indexterm" href="gdbus-org.storaged.Storaged.ISCSI.Session.html#gdbus-property-org-storaged-Storaged-ISCSI-Session.tpgt">The "tpgt" property</a>
+</dt>
+<dt>storaged_iscsi_session_dup_address, <a class="indexterm" href="storaged-StoragedISCSISession.html#storaged-iscsi-session-dup-address">storaged_iscsi_session_dup_address ()</a>
+</dt>
+<dt>storaged_iscsi_session_dup_persistent_address, <a class="indexterm" href="storaged-StoragedISCSISession.html#storaged-iscsi-session-dup-persistent-address">storaged_iscsi_session_dup_persistent_address ()</a>
+</dt>
+<dt>storaged_iscsi_session_dup_target_name, <a class="indexterm" href="storaged-StoragedISCSISession.html#storaged-iscsi-session-dup-target-name">storaged_iscsi_session_dup_target_name ()</a>
+</dt>
+<dt>storaged_iscsi_session_get_abort_timeout, <a class="indexterm" href="storaged-StoragedISCSISession.html#storaged-iscsi-session-get-abort-timeout">storaged_iscsi_session_get_abort_timeout ()</a>
+</dt>
+<dt>storaged_iscsi_session_get_address, <a class="indexterm" href="storaged-StoragedISCSISession.html#storaged-iscsi-session-get-address">storaged_iscsi_session_get_address ()</a>
+</dt>
+<dt>storaged_iscsi_session_get_lu_reset_timeout, <a class="indexterm" href="storaged-StoragedISCSISession.html#storaged-iscsi-session-get-lu-reset-timeout">storaged_iscsi_session_get_lu_reset_timeout ()</a>
+</dt>
+<dt>storaged_iscsi_session_get_persistent_address, <a class="indexterm" href="storaged-StoragedISCSISession.html#storaged-iscsi-session-get-persistent-address">storaged_iscsi_session_get_persistent_address ()</a>
+</dt>
+<dt>storaged_iscsi_session_get_persistent_port, <a class="indexterm" href="storaged-StoragedISCSISession.html#storaged-iscsi-session-get-persistent-port">storaged_iscsi_session_get_persistent_port ()</a>
+</dt>
+<dt>storaged_iscsi_session_get_port, <a class="indexterm" href="storaged-StoragedISCSISession.html#storaged-iscsi-session-get-port">storaged_iscsi_session_get_port ()</a>
+</dt>
+<dt>storaged_iscsi_session_get_recovery_timeout, <a class="indexterm" href="storaged-StoragedISCSISession.html#storaged-iscsi-session-get-recovery-timeout">storaged_iscsi_session_get_recovery_timeout ()</a>
+</dt>
+<dt>storaged_iscsi_session_get_target_name, <a class="indexterm" href="storaged-StoragedISCSISession.html#storaged-iscsi-session-get-target-name">storaged_iscsi_session_get_target_name ()</a>
+</dt>
+<dt>storaged_iscsi_session_get_tgt_reset_timeout, <a class="indexterm" href="storaged-StoragedISCSISession.html#storaged-iscsi-session-get-tgt-reset-timeout">storaged_iscsi_session_get_tgt_reset_timeout ()</a>
+</dt>
+<dt>storaged_iscsi_session_get_tpgt, <a class="indexterm" href="storaged-StoragedISCSISession.html#storaged-iscsi-session-get-tpgt">storaged_iscsi_session_get_tpgt ()</a>
+</dt>
+<dt>storaged_iscsi_session_interface_info, <a class="indexterm" href="storaged-StoragedISCSISession.html#storaged-iscsi-session-interface-info">storaged_iscsi_session_interface_info ()</a>
+</dt>
+<dt>storaged_iscsi_session_override_properties, <a class="indexterm" href="storaged-StoragedISCSISession.html#storaged-iscsi-session-override-properties">storaged_iscsi_session_override_properties ()</a>
+</dt>
+<dt>storaged_iscsi_session_proxy_new, <a class="indexterm" href="storaged-StoragedISCSISession.html#storaged-iscsi-session-proxy-new">storaged_iscsi_session_proxy_new ()</a>
+</dt>
+<dt>storaged_iscsi_session_proxy_new_finish, <a class="indexterm" href="storaged-StoragedISCSISession.html#storaged-iscsi-session-proxy-new-finish">storaged_iscsi_session_proxy_new_finish ()</a>
+</dt>
+<dt>storaged_iscsi_session_proxy_new_for_bus, <a class="indexterm" href="storaged-StoragedISCSISession.html#storaged-iscsi-session-proxy-new-for-bus">storaged_iscsi_session_proxy_new_for_bus ()</a>
+</dt>
+<dt>storaged_iscsi_session_proxy_new_for_bus_finish, <a class="indexterm" href="storaged-StoragedISCSISession.html#storaged-iscsi-session-proxy-new-for-bus-finish">storaged_iscsi_session_proxy_new_for_bus_finish ()</a>
+</dt>
+<dt>storaged_iscsi_session_proxy_new_for_bus_sync, <a class="indexterm" href="storaged-StoragedISCSISession.html#storaged-iscsi-session-proxy-new-for-bus-sync">storaged_iscsi_session_proxy_new_for_bus_sync ()</a>
+</dt>
+<dt>storaged_iscsi_session_proxy_new_sync, <a class="indexterm" href="storaged-StoragedISCSISession.html#storaged-iscsi-session-proxy-new-sync">storaged_iscsi_session_proxy_new_sync ()</a>
+</dt>
+<dt>storaged_iscsi_session_set_abort_timeout, <a class="indexterm" href="storaged-StoragedISCSISession.html#storaged-iscsi-session-set-abort-timeout">storaged_iscsi_session_set_abort_timeout ()</a>
+</dt>
+<dt>storaged_iscsi_session_set_address, <a class="indexterm" href="storaged-StoragedISCSISession.html#storaged-iscsi-session-set-address">storaged_iscsi_session_set_address ()</a>
+</dt>
+<dt>storaged_iscsi_session_set_lu_reset_timeout, <a class="indexterm" href="storaged-StoragedISCSISession.html#storaged-iscsi-session-set-lu-reset-timeout">storaged_iscsi_session_set_lu_reset_timeout ()</a>
+</dt>
+<dt>storaged_iscsi_session_set_persistent_address, <a class="indexterm" href="storaged-StoragedISCSISession.html#storaged-iscsi-session-set-persistent-address">storaged_iscsi_session_set_persistent_address ()</a>
+</dt>
+<dt>storaged_iscsi_session_set_persistent_port, <a class="indexterm" href="storaged-StoragedISCSISession.html#storaged-iscsi-session-set-persistent-port">storaged_iscsi_session_set_persistent_port ()</a>
+</dt>
+<dt>storaged_iscsi_session_set_port, <a class="indexterm" href="storaged-StoragedISCSISession.html#storaged-iscsi-session-set-port">storaged_iscsi_session_set_port ()</a>
+</dt>
+<dt>storaged_iscsi_session_set_recovery_timeout, <a class="indexterm" href="storaged-StoragedISCSISession.html#storaged-iscsi-session-set-recovery-timeout">storaged_iscsi_session_set_recovery_timeout ()</a>
+</dt>
+<dt>storaged_iscsi_session_set_target_name, <a class="indexterm" href="storaged-StoragedISCSISession.html#storaged-iscsi-session-set-target-name">storaged_iscsi_session_set_target_name ()</a>
+</dt>
+<dt>storaged_iscsi_session_set_tgt_reset_timeout, <a class="indexterm" href="storaged-StoragedISCSISession.html#storaged-iscsi-session-set-tgt-reset-timeout">storaged_iscsi_session_set_tgt_reset_timeout ()</a>
+</dt>
+<dt>storaged_iscsi_session_set_tpgt, <a class="indexterm" href="storaged-StoragedISCSISession.html#storaged-iscsi-session-set-tpgt">storaged_iscsi_session_set_tpgt ()</a>
+</dt>
+<dt>storaged_iscsi_session_skeleton_new, <a class="indexterm" href="storaged-StoragedISCSISession.html#storaged-iscsi-session-skeleton-new">storaged_iscsi_session_skeleton_new ()</a>
 </dt>
 </dl>
 </div>
@@ -1844,6 +1992,8 @@
 </dt>
 <dt>org.storaged.Storaged.LogicalVolume:Active, <a class="indexterm" href="gdbus-org.storaged.Storaged.LogicalVolume.html#gdbus-property-org-storaged-Storaged-LogicalVolume.Active">The "Active" property</a>
 </dt>
+<dt>org.storaged.Storaged.LogicalVolume:ChildConfiguration, <a class="indexterm" href="gdbus-org.storaged.Storaged.LogicalVolume.html#gdbus-property-org-storaged-Storaged-LogicalVolume.ChildConfiguration">The "ChildConfiguration" property</a>
+</dt>
 <dt>org.storaged.Storaged.LogicalVolume:DataAllocatedRatio, <a class="indexterm" href="gdbus-org.storaged.Storaged.LogicalVolume.html#gdbus-property-org-storaged-Storaged-LogicalVolume.DataAllocatedRatio">The "DataAllocatedRatio" property</a>
 </dt>
 <dt>org.storaged.Storaged.LogicalVolume:MetadataAllocatedRatio, <a class="indexterm" href="gdbus-org.storaged.Storaged.LogicalVolume.html#gdbus-property-org-storaged-Storaged-LogicalVolume.MetadataAllocatedRatio">The "MetadataAllocatedRatio" property</a>
@@ -2033,6 +2183,8 @@
 </dt>
 <dt>StoragedManager, <a class="indexterm" href="StoragedManager.html#StoragedManager-struct">StoragedManager</a>
 </dt>
+<dt>org.storaged.Storaged.Manager.BTRFS, <a class="indexterm" href="gdbus-org.storaged.Storaged.Manager.BTRFS.html#gdbus-interface-org-storaged-Storaged-Manager-BTRFS.top_of_page">org.storaged.Storaged.Manager.BTRFS</a>
+</dt>
 <dt>org.storaged.Storaged.Manager.EnableModules(), <a class="indexterm" href="gdbus-org.storaged.Storaged.Manager.html#gdbus-method-org-storaged-Storaged-Manager.EnableModules">The EnableModules() method</a>
 </dt>
 <dt>org.storaged.Storaged.Manager.LoopSetup(), <a class="indexterm" href="gdbus-org.storaged.Storaged.Manager.html#gdbus-method-org-storaged-Storaged-Manager.LoopSetup">The LoopSetup() method</a>
@@ -2065,6 +2217,10 @@
 </dt>
 <dt>org.storaged.Storaged.Manager.ISCSI.Initiator.GetInitiatorName(), <a class="indexterm" href="gdbus-org.storaged.Storaged.Manager.ISCSI.Initiator.html#gdbus-method-org-storaged-Storaged-Manager-ISCSI-Initiator.GetInitiatorName">The GetInitiatorName() method</a>
 </dt>
+<dt>org.storaged.Storaged.Manager.ISCSI.Initiator.Login(), <a class="indexterm" href="gdbus-org.storaged.Storaged.Manager.ISCSI.Initiator.html#gdbus-method-org-storaged-Storaged-Manager-ISCSI-Initiator.Login">The Login() method</a>
+</dt>
+<dt>org.storaged.Storaged.Manager.ISCSI.Initiator.Logout(), <a class="indexterm" href="gdbus-org.storaged.Storaged.Manager.ISCSI.Initiator.html#gdbus-method-org-storaged-Storaged-Manager-ISCSI-Initiator.Logout">The Logout() method</a>
+</dt>
 <dt>org.storaged.Storaged.Manager.ISCSI.Initiator.SetInitiatorName(), <a class="indexterm" href="gdbus-org.storaged.Storaged.Manager.ISCSI.Initiator.html#gdbus-method-org-storaged-Storaged-Manager-ISCSI-Initiator.SetInitiatorName">The SetInitiatorName() method</a>
 </dt>
 <dt>StoragedManagerLVM2, <a class="indexterm" href="StoragedManagerLVM2.html#StoragedManagerLVM2-struct">StoragedManagerLVM2</a>
@@ -2086,6 +2242,24 @@
 <dt>StoragedManagerSkeleton, <a class="indexterm" href="StoragedManager.html#StoragedManagerSkeleton-struct">struct StoragedManagerSkeleton</a>
 </dt>
 <dt>StoragedManagerSkeletonClass, <a class="indexterm" href="StoragedManager.html#StoragedManagerSkeletonClass">struct StoragedManagerSkeletonClass</a>
+</dt>
+<dt>storaged_manager_btrfs_interface_info, <a class="indexterm" href="storaged-StoragedManagerBTRFS.html#storaged-manager-btrfs-interface-info">storaged_manager_btrfs_interface_info ()</a>
+</dt>
+<dt>storaged_manager_btrfs_override_properties, <a class="indexterm" href="storaged-StoragedManagerBTRFS.html#storaged-manager-btrfs-override-properties">storaged_manager_btrfs_override_properties ()</a>
+</dt>
+<dt>storaged_manager_btrfs_proxy_new, <a class="indexterm" href="storaged-StoragedManagerBTRFS.html#storaged-manager-btrfs-proxy-new">storaged_manager_btrfs_proxy_new ()</a>
+</dt>
+<dt>storaged_manager_btrfs_proxy_new_finish, <a class="indexterm" href="storaged-StoragedManagerBTRFS.html#storaged-manager-btrfs-proxy-new-finish">storaged_manager_btrfs_proxy_new_finish ()</a>
+</dt>
+<dt>storaged_manager_btrfs_proxy_new_for_bus, <a class="indexterm" href="storaged-StoragedManagerBTRFS.html#storaged-manager-btrfs-proxy-new-for-bus">storaged_manager_btrfs_proxy_new_for_bus ()</a>
+</dt>
+<dt>storaged_manager_btrfs_proxy_new_for_bus_finish, <a class="indexterm" href="storaged-StoragedManagerBTRFS.html#storaged-manager-btrfs-proxy-new-for-bus-finish">storaged_manager_btrfs_proxy_new_for_bus_finish ()</a>
+</dt>
+<dt>storaged_manager_btrfs_proxy_new_for_bus_sync, <a class="indexterm" href="storaged-StoragedManagerBTRFS.html#storaged-manager-btrfs-proxy-new-for-bus-sync">storaged_manager_btrfs_proxy_new_for_bus_sync ()</a>
+</dt>
+<dt>storaged_manager_btrfs_proxy_new_sync, <a class="indexterm" href="storaged-StoragedManagerBTRFS.html#storaged-manager-btrfs-proxy-new-sync">storaged_manager_btrfs_proxy_new_sync ()</a>
+</dt>
+<dt>storaged_manager_btrfs_skeleton_new, <a class="indexterm" href="storaged-StoragedManagerBTRFS.html#storaged-manager-btrfs-skeleton-new">storaged_manager_btrfs_skeleton_new ()</a>
 </dt>
 <dt>storaged_manager_call_enable_modules, <a class="indexterm" href="StoragedManager.html#storaged-manager-call-enable-modules">storaged_manager_call_enable_modules ()</a>
 </dt>
@@ -2117,11 +2291,41 @@
 </dt>
 <dt>storaged_manager_interface_info, <a class="indexterm" href="StoragedManager.html#storaged-manager-interface-info">storaged_manager_interface_info ()</a>
 </dt>
+<dt>storaged_manager_iscsi_initiator_call_discover_firmware, <a class="indexterm" href="storaged-StoragedManagerISCSIInitiator.html#storaged-manager-iscsi-initiator-call-discover-firmware">storaged_manager_iscsi_initiator_call_discover_firmware ()</a>
+</dt>
+<dt>storaged_manager_iscsi_initiator_call_discover_firmware_finish, <a class="indexterm" href="storaged-StoragedManagerISCSIInitiator.html#storaged-manager-iscsi-initiator-call-discover-firmware-finish">storaged_manager_iscsi_initiator_call_discover_firmware_finish ()</a>
+</dt>
+<dt>storaged_manager_iscsi_initiator_call_discover_firmware_sync, <a class="indexterm" href="storaged-StoragedManagerISCSIInitiator.html#storaged-manager-iscsi-initiator-call-discover-firmware-sync">storaged_manager_iscsi_initiator_call_discover_firmware_sync ()</a>
+</dt>
+<dt>storaged_manager_iscsi_initiator_call_discover_send_targets_chap, <a class="indexterm" href="storaged-StoragedManagerISCSIInitiator.html#storaged-manager-iscsi-initiator-call-discover-send-targets-chap">storaged_manager_iscsi_initiator_call_discover_send_targets_chap ()</a>
+</dt>
+<dt>storaged_manager_iscsi_initiator_call_discover_send_targets_chap_finish, <a class="indexterm" href="storaged-StoragedManagerISCSIInitiator.html#storaged-manager-iscsi-initiator-call-discover-send-targets-chap-finish">storaged_manager_iscsi_initiator_call_discover_send_targets_chap_finish ()</a>
+</dt>
+<dt>storaged_manager_iscsi_initiator_call_discover_send_targets_chap_sync, <a class="indexterm" href="storaged-StoragedManagerISCSIInitiator.html#storaged-manager-iscsi-initiator-call-discover-send-targets-chap-sync">storaged_manager_iscsi_initiator_call_discover_send_targets_chap_sync ()</a>
+</dt>
+<dt>storaged_manager_iscsi_initiator_call_discover_send_targets_no_auth, <a class="indexterm" href="storaged-StoragedManagerISCSIInitiator.html#storaged-manager-iscsi-initiator-call-discover-send-targets-no-auth">storaged_manager_iscsi_initiator_call_discover_send_targets_no_auth ()</a>
+</dt>
+<dt>storaged_manager_iscsi_initiator_call_discover_send_targets_no_auth_finish, <a class="indexterm" href="storaged-StoragedManagerISCSIInitiator.html#storaged-manager-iscsi-initiator-call-discover-send-targets-no-auth-finish">storaged_manager_iscsi_initiator_call_discover_send_targets_no_auth_finish ()</a>
+</dt>
+<dt>storaged_manager_iscsi_initiator_call_discover_send_targets_no_auth_sync, <a class="indexterm" href="storaged-StoragedManagerISCSIInitiator.html#storaged-manager-iscsi-initiator-call-discover-send-targets-no-auth-sync">storaged_manager_iscsi_initiator_call_discover_send_targets_no_auth_sync ()</a>
+</dt>
 <dt>storaged_manager_iscsi_initiator_call_get_initiator_name, <a class="indexterm" href="storaged-StoragedManagerISCSIInitiator.html#storaged-manager-iscsi-initiator-call-get-initiator-name">storaged_manager_iscsi_initiator_call_get_initiator_name ()</a>
 </dt>
 <dt>storaged_manager_iscsi_initiator_call_get_initiator_name_finish, <a class="indexterm" href="storaged-StoragedManagerISCSIInitiator.html#storaged-manager-iscsi-initiator-call-get-initiator-name-finish">storaged_manager_iscsi_initiator_call_get_initiator_name_finish ()</a>
 </dt>
 <dt>storaged_manager_iscsi_initiator_call_get_initiator_name_sync, <a class="indexterm" href="storaged-StoragedManagerISCSIInitiator.html#storaged-manager-iscsi-initiator-call-get-initiator-name-sync">storaged_manager_iscsi_initiator_call_get_initiator_name_sync ()</a>
+</dt>
+<dt>storaged_manager_iscsi_initiator_call_login, <a class="indexterm" href="storaged-StoragedManagerISCSIInitiator.html#storaged-manager-iscsi-initiator-call-login">storaged_manager_iscsi_initiator_call_login ()</a>
+</dt>
+<dt>storaged_manager_iscsi_initiator_call_login_finish, <a class="indexterm" href="storaged-StoragedManagerISCSIInitiator.html#storaged-manager-iscsi-initiator-call-login-finish">storaged_manager_iscsi_initiator_call_login_finish ()</a>
+</dt>
+<dt>storaged_manager_iscsi_initiator_call_login_sync, <a class="indexterm" href="storaged-StoragedManagerISCSIInitiator.html#storaged-manager-iscsi-initiator-call-login-sync">storaged_manager_iscsi_initiator_call_login_sync ()</a>
+</dt>
+<dt>storaged_manager_iscsi_initiator_call_logout, <a class="indexterm" href="storaged-StoragedManagerISCSIInitiator.html#storaged-manager-iscsi-initiator-call-logout">storaged_manager_iscsi_initiator_call_logout ()</a>
+</dt>
+<dt>storaged_manager_iscsi_initiator_call_logout_finish, <a class="indexterm" href="storaged-StoragedManagerISCSIInitiator.html#storaged-manager-iscsi-initiator-call-logout-finish">storaged_manager_iscsi_initiator_call_logout_finish ()</a>
+</dt>
+<dt>storaged_manager_iscsi_initiator_call_logout_sync, <a class="indexterm" href="storaged-StoragedManagerISCSIInitiator.html#storaged-manager-iscsi-initiator-call-logout-sync">storaged_manager_iscsi_initiator_call_logout_sync ()</a>
 </dt>
 <dt>storaged_manager_iscsi_initiator_call_set_initiator_name, <a class="indexterm" href="storaged-StoragedManagerISCSIInitiator.html#storaged-manager-iscsi-initiator-call-set-initiator-name">storaged_manager_iscsi_initiator_call_set_initiator_name ()</a>
 </dt>
@@ -2129,17 +2333,23 @@
 </dt>
 <dt>storaged_manager_iscsi_initiator_call_set_initiator_name_sync, <a class="indexterm" href="storaged-StoragedManagerISCSIInitiator.html#storaged-manager-iscsi-initiator-call-set-initiator-name-sync">storaged_manager_iscsi_initiator_call_set_initiator_name_sync ()</a>
 </dt>
+<dt>storaged_manager_iscsi_initiator_complete_discover_firmware, <a class="indexterm" href="storaged-StoragedManagerISCSIInitiator.html#storaged-manager-iscsi-initiator-complete-discover-firmware">storaged_manager_iscsi_initiator_complete_discover_firmware ()</a>
+</dt>
+<dt>storaged_manager_iscsi_initiator_complete_discover_send_targets_chap, <a class="indexterm" href="storaged-StoragedManagerISCSIInitiator.html#storaged-manager-iscsi-initiator-complete-discover-send-targets-chap">storaged_manager_iscsi_initiator_complete_discover_send_targets_chap ()</a>
+</dt>
+<dt>storaged_manager_iscsi_initiator_complete_discover_send_targets_no_auth, <a class="indexterm" href="storaged-StoragedManagerISCSIInitiator.html#storaged-manager-iscsi-initiator-complete-discover-send-targets-no-auth">storaged_manager_iscsi_initiator_complete_discover_send_targets_no_auth ()</a>
+</dt>
 <dt>storaged_manager_iscsi_initiator_complete_get_initiator_name, <a class="indexterm" href="storaged-StoragedManagerISCSIInitiator.html#storaged-manager-iscsi-initiator-complete-get-initiator-name">storaged_manager_iscsi_initiator_complete_get_initiator_name ()</a>
 </dt>
-<dt>storaged_manager_iscsi_initiator_complete_set_initiator_name, <a class="indexterm" href="storaged-StoragedManagerISCSIInitiator.html#storaged-manager-iscsi-initiator-complete-set-initiator-name">storaged_manager_iscsi_initiator_complete_set_initiator_name ()</a>
+<dt>storaged_manager_iscsi_initiator_complete_login, <a class="indexterm" href="storaged-StoragedManagerISCSIInitiator.html#storaged-manager-iscsi-initiator-complete-login">storaged_manager_iscsi_initiator_complete_login ()</a>
 </dt>
-<dt>storaged_manager_iscsi_initiator_get_type, <a class="indexterm" href="storaged-StoragedManagerISCSIInitiator.html#storaged-manager-iscsi-initiator-get-type">storaged_manager_iscsi_initiator_get_type ()</a>
+<dt>storaged_manager_iscsi_initiator_complete_logout, <a class="indexterm" href="storaged-StoragedManagerISCSIInitiator.html#storaged-manager-iscsi-initiator-complete-logout">storaged_manager_iscsi_initiator_complete_logout ()</a>
+</dt>
+<dt>storaged_manager_iscsi_initiator_complete_set_initiator_name, <a class="indexterm" href="storaged-StoragedManagerISCSIInitiator.html#storaged-manager-iscsi-initiator-complete-set-initiator-name">storaged_manager_iscsi_initiator_complete_set_initiator_name ()</a>
 </dt>
 <dt>storaged_manager_iscsi_initiator_interface_info, <a class="indexterm" href="storaged-StoragedManagerISCSIInitiator.html#storaged-manager-iscsi-initiator-interface-info">storaged_manager_iscsi_initiator_interface_info ()</a>
 </dt>
 <dt>storaged_manager_iscsi_initiator_override_properties, <a class="indexterm" href="storaged-StoragedManagerISCSIInitiator.html#storaged-manager-iscsi-initiator-override-properties">storaged_manager_iscsi_initiator_override_properties ()</a>
-</dt>
-<dt>storaged_manager_iscsi_initiator_proxy_get_type, <a class="indexterm" href="storaged-StoragedManagerISCSIInitiator.html#storaged-manager-iscsi-initiator-proxy-get-type">storaged_manager_iscsi_initiator_proxy_get_type ()</a>
 </dt>
 <dt>storaged_manager_iscsi_initiator_proxy_new, <a class="indexterm" href="storaged-StoragedManagerISCSIInitiator.html#storaged-manager-iscsi-initiator-proxy-new">storaged_manager_iscsi_initiator_proxy_new ()</a>
 </dt>
@@ -2152,8 +2362,6 @@
 <dt>storaged_manager_iscsi_initiator_proxy_new_for_bus_sync, <a class="indexterm" href="storaged-StoragedManagerISCSIInitiator.html#storaged-manager-iscsi-initiator-proxy-new-for-bus-sync">storaged_manager_iscsi_initiator_proxy_new_for_bus_sync ()</a>
 </dt>
 <dt>storaged_manager_iscsi_initiator_proxy_new_sync, <a class="indexterm" href="storaged-StoragedManagerISCSIInitiator.html#storaged-manager-iscsi-initiator-proxy-new-sync">storaged_manager_iscsi_initiator_proxy_new_sync ()</a>
-</dt>
-<dt>storaged_manager_iscsi_initiator_skeleton_get_type, <a class="indexterm" href="storaged-StoragedManagerISCSIInitiator.html#storaged-manager-iscsi-initiator-skeleton-get-type">storaged_manager_iscsi_initiator_skeleton_get_type ()</a>
 </dt>
 <dt>storaged_manager_iscsi_initiator_skeleton_new, <a class="indexterm" href="storaged-StoragedManagerISCSIInitiator.html#storaged-manager-iscsi-initiator-skeleton-new">storaged_manager_iscsi_initiator_skeleton_new ()</a>
 </dt>
@@ -2207,6 +2415,8 @@
 </dt>
 <dt>org.storaged.Storaged.MDRaid.AddDevice(), <a class="indexterm" href="gdbus-org.storaged.Storaged.MDRaid.html#gdbus-method-org-storaged-Storaged-MDRaid.AddDevice">The AddDevice() method</a>
 </dt>
+<dt>org.storaged.Storaged.MDRaid.Delete(), <a class="indexterm" href="gdbus-org.storaged.Storaged.MDRaid.html#gdbus-method-org-storaged-Storaged-MDRaid.Delete">The Delete() method</a>
+</dt>
 <dt>org.storaged.Storaged.MDRaid.RemoveDevice(), <a class="indexterm" href="gdbus-org.storaged.Storaged.MDRaid.html#gdbus-method-org-storaged-Storaged-MDRaid.RemoveDevice">The RemoveDevice() method</a>
 </dt>
 <dt>org.storaged.Storaged.MDRaid.RequestSyncAction(), <a class="indexterm" href="gdbus-org.storaged.Storaged.MDRaid.html#gdbus-method-org-storaged-Storaged-MDRaid.RequestSyncAction">The RequestSyncAction() method</a>
@@ -2218,6 +2428,8 @@
 <dt>org.storaged.Storaged.MDRaid.Stop(), <a class="indexterm" href="gdbus-org.storaged.Storaged.MDRaid.html#gdbus-method-org-storaged-Storaged-MDRaid.Stop">The Stop() method</a>
 </dt>
 <dt>StoragedMDRaid::handle-add-device, <a class="indexterm" href="StoragedMDRaid.html#StoragedMDRaid-handle-add-device">The “handle-add-device” signal</a>
+</dt>
+<dt>StoragedMDRaid::handle-delete, <a class="indexterm" href="StoragedMDRaid.html#StoragedMDRaid-handle-delete">The “handle-delete” signal</a>
 </dt>
 <dt>StoragedMDRaid::handle-remove-device, <a class="indexterm" href="StoragedMDRaid.html#StoragedMDRaid-handle-remove-device">The “handle-remove-device” signal</a>
 </dt>
@@ -2236,6 +2448,10 @@
 <dt>StoragedMDRaid:bitmap-location, <a class="indexterm" href="StoragedMDRaid.html#StoragedMDRaid--bitmap-location">The “bitmap-location” property</a>
 </dt>
 <dt>org.storaged.Storaged.MDRaid:BitmapLocation, <a class="indexterm" href="gdbus-org.storaged.Storaged.MDRaid.html#gdbus-property-org-storaged-Storaged-MDRaid.BitmapLocation">The "BitmapLocation" property</a>
+</dt>
+<dt>StoragedMDRaid:child-configuration, <a class="indexterm" href="StoragedMDRaid.html#StoragedMDRaid--child-configuration">The “child-configuration” property</a>
+</dt>
+<dt>org.storaged.Storaged.MDRaid:ChildConfiguration, <a class="indexterm" href="gdbus-org.storaged.Storaged.MDRaid.html#gdbus-property-org-storaged-Storaged-MDRaid.ChildConfiguration">The "ChildConfiguration" property</a>
 </dt>
 <dt>StoragedMDRaid:chunk-size, <a class="indexterm" href="StoragedMDRaid.html#StoragedMDRaid--chunk-size">The “chunk-size” property</a>
 </dt>
@@ -2256,6 +2472,10 @@
 <dt>StoragedMDRaid:num-devices, <a class="indexterm" href="StoragedMDRaid.html#StoragedMDRaid--num-devices">The “num-devices” property</a>
 </dt>
 <dt>org.storaged.Storaged.MDRaid:NumDevices, <a class="indexterm" href="gdbus-org.storaged.Storaged.MDRaid.html#gdbus-property-org-storaged-Storaged-MDRaid.NumDevices">The "NumDevices" property</a>
+</dt>
+<dt>org.storaged.Storaged.MDRaid:Running, <a class="indexterm" href="gdbus-org.storaged.Storaged.MDRaid.html#gdbus-property-org-storaged-Storaged-MDRaid.Running">The "Running" property</a>
+</dt>
+<dt>StoragedMDRaid:running, <a class="indexterm" href="StoragedMDRaid.html#StoragedMDRaid--running">The “running” property</a>
 </dt>
 <dt>org.storaged.Storaged.MDRaid:Size, <a class="indexterm" href="gdbus-org.storaged.Storaged.MDRaid.html#gdbus-property-org-storaged-Storaged-MDRaid.Size">The "Size" property</a>
 </dt>
@@ -2711,6 +2931,8 @@
 <dt>StoragedPartitionTable, <a class="indexterm" href="StoragedPartitionTable.html#StoragedPartitionTable-struct">StoragedPartitionTable</a>
 </dt>
 <dt>org.storaged.Storaged.PartitionTable.CreatePartition(), <a class="indexterm" href="gdbus-org.storaged.Storaged.PartitionTable.html#gdbus-method-org-storaged-Storaged-PartitionTable.CreatePartition">The CreatePartition() method</a>
+</dt>
+<dt>org.storaged.Storaged.PartitionTable.CreatePartitionAndFormat(), <a class="indexterm" href="gdbus-org.storaged.Storaged.PartitionTable.html#gdbus-method-org-storaged-Storaged-PartitionTable.CreatePartitionAndFormat">The CreatePartitionAndFormat() method</a>
 </dt>
 <dt>org.storaged.Storaged.PartitionTable:Type, <a class="indexterm" href="gdbus-org.storaged.Storaged.PartitionTable.html#gdbus-property-org-storaged-Storaged-PartitionTable.Type">The "Type" property</a>
 </dt>
@@ -3201,7 +3423,6 @@
 </div>
 </div>
 <div class="footer">
-<hr>
-          Generated by GTK-Doc V1.21</div>
+<hr>Generated by GTK-Doc V1.24</div>
 </body>
 </html>

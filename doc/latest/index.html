@@ -6,7 +6,7 @@
 <meta name="generator" content="DocBook XSL Stylesheets V1.78.1">
 <link rel="home" href="index.html" title="Storaged Reference Manual">
 <link rel="next" href="overview.html" title="Part I. Manual pages and Overview">
-<meta name="generator" content="GTK-Doc V1.21 (XML mode)">
+<meta name="generator" content="GTK-Doc V1.24 (XML mode)">
 <link rel="stylesheet" href="style.css" type="text/css">
 </head>
 <body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
@@ -15,7 +15,7 @@
 <div>
 <div><table class="navigation" id="top" width="100%" cellpadding="2" cellspacing="0"><tr><th valign="middle"><p class="title">Storaged Reference Manual</p></th></tr></table></div>
 <div><p class="releaseinfo">
-      For version 2.0.1
+      For version 2.1.3
  — the latest version of this
       documentation can be found at <a class="ulink" href="https://storaged-project.github.io/doc/latest/" target="_top">https://storaged-project.github.io/doc/latest/</a>.
     </p></div>
@@ -51,6 +51,7 @@
 <dt><span class="sect1"><a href="ref-dbus-block-devices.html">The /org/storaged/Storaged/block_devices/* objects</a></span></dt>
 <dt><span class="sect1"><a href="ref-dbus-drives.html">The /org/storaged/Storaged/drives/* objects</a></span></dt>
 <dt><span class="sect1"><a href="ref-dbus-md-raid.html">The /org/storaged/Storaged/mdraid/* objects</a></span></dt>
+<dt><span class="sect1"><a href="ref-iscsi-session.html">The /org/storaged/Storaged/iscsi/session[0-9]+ objects</a></span></dt>
 <dt><span class="sect1"><a href="ref-dbus-jobs.html">The /org/storaged/Storaged/jobs/* objects</a></span></dt>
 <dt><span class="sect1"><a href="storaged-polkit-actions.html">Authorization Checks</a></span></dt>
 <dt><span class="sect1"><a href="storaged-std-options.html">The <em class="parameter"><code>options</code></em> parameter</a></span></dt>
@@ -109,7 +110,16 @@
 <span class="refentrytitle"><a href="gdbus-org.storaged.Storaged.VolumeGroup.html">org.storaged.Storaged.VolumeGroup</a></span><span class="refpurpose"> — A volume group</span>
 </dt>
 <dt>
+<span class="refentrytitle"><a href="gdbus-org.storaged.Storaged.ISCSI.Session.html">org.storaged.Storaged.ISCSI.Session</a></span><span class="refpurpose"> — iSCSI session.</span>
+</dt>
+<dt>
 <span class="refentrytitle"><a href="gdbus-org.storaged.Storaged.Manager.ISCSI.Initiator.html">org.storaged.Storaged.Manager.ISCSI.Initiator</a></span><span class="refpurpose"> — iSCSI add-on to the manager singleton</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="gdbus-org.storaged.Storaged.Manager.BTRFS.html">org.storaged.Storaged.Manager.BTRFS</a></span><span class="refpurpose"> — BTRFS add-on to the manager singleton</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="gdbus-org.storaged.Storaged.Filesystem.BTRFS.html">org.storaged.Storaged.Filesystem.BTRFS</a></span><span class="refpurpose"> — BTRFS filesystem interface exported on block objects</span>
 </dt>
 </dl></dd>
 </dl></dd>
@@ -184,7 +194,16 @@
 <span class="refentrytitle"><a href="storaged-StoragedLogicalVolume.html">StoragedLogicalVolume</a></span><span class="refpurpose"> — Generated C code for the org.storaged.Storaged.LogicalVolume D-Bus interface</span>
 </dt>
 <dt>
+<span class="refentrytitle"><a href="storaged-StoragedISCSISession.html">StoragedISCSISession</a></span><span class="refpurpose"> — Generated C code for the org.storaged.Storaged.ISCSI.Session D-Bus interface</span>
+</dt>
+<dt>
 <span class="refentrytitle"><a href="storaged-StoragedManagerISCSIInitiator.html">StoragedManagerISCSIInitiator</a></span><span class="refpurpose"> — Generated C code for the org.storaged.Storaged.Manager.ISCSI.Initiator D-Bus interface</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="storaged-StoragedManagerBTRFS.html">StoragedManagerBTRFS</a></span><span class="refpurpose"> — Generated C code for the org.storaged.Storaged.Manager.BTRFS D-Bus interface</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="storaged-StoragedFilesystemBTRFS.html">StoragedFilesystemBTRFS</a></span><span class="refpurpose"> — Generated C code for the org.storaged.Storaged.Filesystem.BTRFS D-Bus interface</span>
 </dt>
 </dl></dd>
 </dl></dd>
@@ -244,7 +263,7 @@
 <dt><span class="chapter"><a href="ref-daemon-linux-types.html">Linux-specific types</a></span></dt>
 <dd><dl>
 <dt>
-<span class="refentrytitle"><a href="StoragedLinuxManager.html">StoragedLinuxManager</a></span><span class="refpurpose">Linux implementation of <span class="type">StoragedManager</span></span>
+<span class="refentrytitle"><a href="StoragedLinuxManager.html">StoragedLinuxManager</a></span><span class="refpurpose"> — Linux implementation of <span class="type">StoragedManager</span></span>
 </dt>
 <dt>
 <span class="refentrytitle"><a href="StoragedLinuxProvider.html">StoragedLinuxProvider</a></span><span class="refpurpose"> — Provides Linux-specific objects</span>
@@ -256,10 +275,10 @@
 <dt><span class="chapter"><a href="ref-daemon-drives.html">Drives on Linux</a></span></dt>
 <dd><dl>
 <dt>
-<span class="refentrytitle"><a href="StoragedLinuxDrive.html">StoragedLinuxDrive</a></span><span class="refpurpose">Linux implementation of <span class="type">StoragedDrive</span></span>
+<span class="refentrytitle"><a href="StoragedLinuxDrive.html">StoragedLinuxDrive</a></span><span class="refpurpose"> — Linux implementation of <span class="type">StoragedDrive</span></span>
 </dt>
 <dt>
-<span class="refentrytitle"><a href="storaged-DummyLinuxBlock.html">DummyLinuxBlock</a></span><span class="refpurpose">Linux implementation of <span class="type">DummyDummyBlock</span></span>
+<span class="refentrytitle"><a href="storaged-DummyLinuxBlock.html">DummyLinuxBlock</a></span><span class="refpurpose"> — Linux implementation of <span class="type">DummyDummyBlock</span></span>
 </dt>
 <dt>
 <span class="refentrytitle"><a href="StoragedLinuxDriveObject.html">StoragedLinuxDriveObject</a></span><span class="refpurpose"> — Object representing a drive on Linux</span>
@@ -268,7 +287,7 @@
 <dt><span class="chapter"><a href="ref-daemon-mdraid.html">Linux RAID</a></span></dt>
 <dd><dl>
 <dt>
-<span class="refentrytitle"><a href="StoragedLinuxMDRaid.html">StoragedLinuxMDRaid</a></span><span class="refpurpose">Linux implementation of <span class="type">StoragedMDRaid</span></span>
+<span class="refentrytitle"><a href="StoragedLinuxMDRaid.html">StoragedLinuxMDRaid</a></span><span class="refpurpose"> — Linux implementation of <span class="type">StoragedMDRaid</span></span>
 </dt>
 <dt>
 <span class="refentrytitle"><a href="StoragedLinuxMDRaidObject.html">StoragedLinuxMDRaidObject</a></span><span class="refpurpose"> — Object representing a Linux Software RAID array</span>
@@ -277,25 +296,25 @@
 <dt><span class="chapter"><a href="ref-daemon-block-devices.html">Block devices on Linux</a></span></dt>
 <dd><dl>
 <dt>
-<span class="refentrytitle"><a href="StoragedLinuxBlock.html">StoragedLinuxBlock</a></span><span class="refpurpose">Linux implementation of <span class="type">StoragedBlock</span></span>
+<span class="refentrytitle"><a href="StoragedLinuxBlock.html">StoragedLinuxBlock</a></span><span class="refpurpose"> — Linux implementation of <span class="type">StoragedBlock</span></span>
 </dt>
 <dt>
-<span class="refentrytitle"><a href="StoragedLinuxPartition.html">StoragedLinuxPartition</a></span><span class="refpurpose">Linux implementation of <span class="type">StoragedPartition</span></span>
+<span class="refentrytitle"><a href="StoragedLinuxPartition.html">StoragedLinuxPartition</a></span><span class="refpurpose"> — Linux implementation of <span class="type">StoragedPartition</span></span>
 </dt>
 <dt>
-<span class="refentrytitle"><a href="StoragedLinuxPartitionTable.html">StoragedLinuxPartitionTable</a></span><span class="refpurpose">Linux implementation of <span class="type">StoragedPartitionTable</span></span>
+<span class="refentrytitle"><a href="StoragedLinuxPartitionTable.html">StoragedLinuxPartitionTable</a></span><span class="refpurpose"> — Linux implementation of <span class="type">StoragedPartitionTable</span></span>
 </dt>
 <dt>
-<span class="refentrytitle"><a href="StoragedLinuxFilesystem.html">StoragedLinuxFilesystem</a></span><span class="refpurpose">Linux implementation of <span class="type">StoragedFilesystem</span></span>
+<span class="refentrytitle"><a href="StoragedLinuxFilesystem.html">StoragedLinuxFilesystem</a></span><span class="refpurpose"> — Linux implementation of <span class="type">StoragedFilesystem</span></span>
 </dt>
 <dt>
-<span class="refentrytitle"><a href="StoragedLinuxEncrypted.html">StoragedLinuxEncrypted</a></span><span class="refpurpose">Linux implementation of <span class="type">StoragedEncrypted</span></span>
+<span class="refentrytitle"><a href="StoragedLinuxEncrypted.html">StoragedLinuxEncrypted</a></span><span class="refpurpose"> — Linux implementation of <span class="type">StoragedEncrypted</span></span>
 </dt>
 <dt>
-<span class="refentrytitle"><a href="StoragedLinuxSwapspace.html">StoragedLinuxSwapspace</a></span><span class="refpurpose">Linux implementation of <span class="type">StoragedSwapspace</span></span>
+<span class="refentrytitle"><a href="StoragedLinuxSwapspace.html">StoragedLinuxSwapspace</a></span><span class="refpurpose"> — Linux implementation of <span class="type">StoragedSwapspace</span></span>
 </dt>
 <dt>
-<span class="refentrytitle"><a href="StoragedLinuxLoop.html">StoragedLinuxLoop</a></span><span class="refpurpose">Linux implementation of <span class="type">StoragedLoop</span></span>
+<span class="refentrytitle"><a href="StoragedLinuxLoop.html">StoragedLinuxLoop</a></span><span class="refpurpose"> — Linux implementation of <span class="type">StoragedLoop</span></span>
 </dt>
 <dt>
 <span class="refentrytitle"><a href="StoragedLinuxBlockObject.html">StoragedLinuxBlockObject</a></span><span class="refpurpose"> — Object representing a block device on Linux.</span>
@@ -304,13 +323,12 @@
 </dl></dd>
 <dt><span class="index"><a href="api-index.html">Index</a></span></dt>
 <dt><span class="index"><a href="api-index-deprecated.html">Index of deprecated symbols</a></span></dt>
-<dt><span class="index"><a href="api-index-2.0.0.html">Index of new symbols in 2.0.0</a></span></dt>
+<dt><span class="index"><a href="api-index-2.1.3.html">Index of new symbols in 2.1.3</a></span></dt>
 <dt><span class="glossary"><a href="annotation-glossary.html">Annotation Glossary</a></span></dt>
 <dt><span class="chapter"><a href="gio-hierarchy.html">Object Hierarchy</a></span></dt>
 </dl></div>
 </div>
 <div class="footer">
-<hr>
-          Generated by GTK-Doc V1.21</div>
+<hr>Generated by GTK-Doc V1.24</div>
 </body>
 </html>

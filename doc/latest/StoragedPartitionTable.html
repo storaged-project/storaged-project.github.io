@@ -2,13 +2,13 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Storaged Reference Manual: StoragedPartitionTable</title>
+<title>StoragedPartitionTable: Storaged Reference Manual</title>
 <meta name="generator" content="DocBook XSL Stylesheets V1.78.1">
 <link rel="home" href="index.html" title="Storaged Reference Manual">
 <link rel="up" href="ref-library-generated.html" title="Generated Code">
 <link rel="prev" href="StoragedPartition.html" title="StoragedPartition">
 <link rel="next" href="StoragedFilesystem.html" title="StoragedFilesystem">
-<meta name="generator" content="GTK-Doc V1.21 (XML mode)">
+<meta name="generator" content="GTK-Doc V1.24 (XML mode)">
 <link rel="stylesheet" href="style.css" type="text/css">
 </head>
 <body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
@@ -288,7 +288,6 @@ The properties are overridden in the order they are defined.</p>
 <div class="refsect3">
 <a name="id-1.4.5.11.11.3.6"></a><h4>Returns</h4>
 <p> The last property id.</p>
-<p></p>
 </div>
 </div>
 <hr>
@@ -547,8 +546,9 @@ storaged_partition_table_get_type_ (<em class="parameter"><code><a class="link" 
 <p>Gets the value of the <a class="link" href="gdbus-org.storaged.Storaged.PartitionTable.html#gdbus-property-org-storaged-Storaged-PartitionTable.Type" title='The "Type" property'>"Type"</a> D-Bus property.</p>
 <p>Since this D-Bus property is readable, it is meaningful to use this function on both the client- and service-side.</p>
 <div class="warning">The returned value is only valid until the property changes so on the client-side it is only safe to use this function on the thread where <em class="parameter"><code>object</code></em> was constructed. Use <a class="link" href="StoragedPartitionTable.html#storaged-partition-table-dup-type-" title="storaged_partition_table_dup_type_ ()"><code class="function">storaged_partition_table_dup_type_()</code></a> if on another thread.</div>
+<p><span class="annotation">[<acronym title="Exposed in C code, not necessarily available in other languages."><span class="acronym">skip</span></acronym>]</span></p>
 <div class="refsect3">
-<a name="id-1.4.5.11.11.8.7"></a><h4>Parameters</h4>
+<a name="id-1.4.5.11.11.8.8"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -563,7 +563,7 @@ storaged_partition_table_get_type_ (<em class="parameter"><code><a class="link" 
 </table></div>
 </div>
 <div class="refsect3">
-<a name="id-1.4.5.11.11.8.8"></a><h4>Returns</h4>
+<a name="id-1.4.5.11.11.8.9"></a><h4>Returns</h4>
 <p> The property value or <a href="/usr/share/gtk-doc/html/glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a> if the property is not set. Do not free the returned value, it belongs to <em class="parameter"><code>object</code></em>
 . </p>
 <p><span class="annotation">[<acronym title="Don't free data after the code is done."><span class="acronym">transfer none</span></acronym>]</span></p>
@@ -576,8 +576,9 @@ storaged_partition_table_get_type_ (<em class="parameter"><code><a class="link" 
 storaged_partition_table_dup_type_ (<em class="parameter"><code><a class="link" href="StoragedPartitionTable.html" title="StoragedPartitionTable"><span class="type">StoragedPartitionTable</span></a> *object</code></em>);</pre>
 <p>Gets a copy of the <a class="link" href="gdbus-org.storaged.Storaged.PartitionTable.html#gdbus-property-org-storaged-Storaged-PartitionTable.Type" title='The "Type" property'>"Type"</a> D-Bus property.</p>
 <p>Since this D-Bus property is readable, it is meaningful to use this function on both the client- and service-side.</p>
+<p><span class="annotation">[<acronym title="Exposed in C code, not necessarily available in other languages."><span class="acronym">skip</span></acronym>]</span></p>
 <div class="refsect3">
-<a name="id-1.4.5.11.11.9.6"></a><h4>Parameters</h4>
+<a name="id-1.4.5.11.11.9.7"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -592,7 +593,7 @@ storaged_partition_table_dup_type_ (<em class="parameter"><code><a class="link" 
 </table></div>
 </div>
 <div class="refsect3">
-<a name="id-1.4.5.11.11.9.7"></a><h4>Returns</h4>
+<a name="id-1.4.5.11.11.9.8"></a><h4>Returns</h4>
 <p> The property value or <a href="/usr/share/gtk-doc/html/glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a> if the property is not set. The returned value should be freed with <a href="/usr/share/gtk-doc/html/glib/glib-Memory-Allocation.html#g-free"><code class="function">g_free()</code></a>. </p>
 <p><span class="annotation">[<acronym title="Free data after the code is done."><span class="acronym">transfer full</span></acronym>]</span></p>
 </div>
@@ -606,8 +607,9 @@ storaged_partition_table_set_type_ (<em class="parameter"><code><a class="link" 
 <p>Sets the <a class="link" href="gdbus-org.storaged.Storaged.PartitionTable.html#gdbus-property-org-storaged-Storaged-PartitionTable.Type" title='The "Type" property'>"Type"</a> D-Bus property to <em class="parameter"><code>value</code></em>
 .</p>
 <p>Since this D-Bus property is not writable, it is only meaningful to use this function on the service-side.</p>
+<p><span class="annotation">[<acronym title="Exposed in C code, not necessarily available in other languages."><span class="acronym">skip</span></acronym>]</span></p>
 <div class="refsect3">
-<a name="id-1.4.5.11.11.10.6"></a><h4>Parameters</h4>
+<a name="id-1.4.5.11.11.10.7"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -998,6 +1000,17 @@ storaged_partition_table_skeleton_new (<em class="parameter"><code><span class="
     const gchar *arg_name,
     GVariant *arg_options);
 
+  gboolean (*handle_create_partition_and_format) (
+    StoragedPartitionTable *object,
+    GDBusMethodInvocation *invocation,
+    guint64 arg_offset,
+    guint64 arg_size,
+    const gchar *arg_type,
+    const gchar *arg_name,
+    GVariant *arg_options,
+    const gchar *arg_format_type,
+    GVariant *arg_format_options);
+
   const gchar * (*get_type_) (StoragedPartitionTable *object);
 };
 </pre>
@@ -1019,6 +1032,11 @@ storaged_partition_table_skeleton_new (<em class="parameter"><code><span class="
 <tr>
 <td class="struct_member_name"><p><em class="structfield"><code><a name="StoragedPartitionTableIface.handle-create-partition"></a>handle_create_partition</code></em> ()</p></td>
 <td class="struct_member_description"><p>Handler for the <span class="type">“handle-create-partition”</span> signal.</p></td>
+<td class="struct_member_annotations"> </td>
+</tr>
+<tr>
+<td class="struct_member_name"><p><em class="structfield"><code><a name="StoragedPartitionTableIface.handle-create-partition-and-format"></a>handle_create_partition_and_format</code></em> ()</p></td>
+<td class="struct_member_description"><p>Handler for the <span class="type">“handle-create-partition-and-format”</span> signal.</p></td>
 <td class="struct_member_annotations"> </td>
 </tr>
 <tr>
@@ -1095,7 +1113,6 @@ storaged_partition_table_skeleton_new (<em class="parameter"><code><span class="
 </div>
 </div>
 <div class="footer">
-<hr>
-          Generated by GTK-Doc V1.21</div>
+<hr>Generated by GTK-Doc V1.24</div>
 </body>
 </html>

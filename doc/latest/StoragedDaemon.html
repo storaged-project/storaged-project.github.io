@@ -2,13 +2,13 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Storaged Reference Manual: StoragedDaemon</title>
+<title>StoragedDaemon: Storaged Reference Manual</title>
 <meta name="generator" content="DocBook XSL Stylesheets V1.78.1">
 <link rel="home" href="index.html" title="Storaged Reference Manual">
 <link rel="up" href="ref-daemon-core.html" title="Core">
 <link rel="prev" href="storaged-Logging.html" title="Logging">
 <link rel="next" href="StoragedProvider.html" title="StoragedProvider">
-<meta name="generator" content="GTK-Doc V1.21 (XML mode)">
+<meta name="generator" content="GTK-Doc V1.24 (XML mode)">
 <link rel="stylesheet" href="style.css" type="text/css">
 </head>
 <body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
@@ -342,7 +342,6 @@ storaged_daemon_new (<em class="parameter"><code><a href="/usr/share/gtk-doc/htm
 <div class="refsect3">
 <a name="id-1.5.2.4.8.2.6"></a><h4>Returns</h4>
 <p> A <a class="link" href="StoragedDaemon.html" title="StoragedDaemon"><span class="type">StoragedDaemon</span></a> object. Free with <a href="/usr/share/gtk-doc/html/gobject/gobject-The-Base-Object-Type.html#g-object-unref"><code class="function">g_object_unref()</code></a>.</p>
-<p></p>
 </div>
 </div>
 <hr>
@@ -371,7 +370,6 @@ storaged_daemon_get_connection (<em class="parameter"><code><a class="link" href
 <a name="id-1.5.2.4.8.3.6"></a><h4>Returns</h4>
 <p> A <a href="/usr/share/gtk-doc/html/gio/GDBusConnection.html"><span class="type">GDBusConnection</span></a>. Do not free, the object is owned by <em class="parameter"><code>daemon</code></em>
 .</p>
-<p></p>
 </div>
 </div>
 <hr>
@@ -400,7 +398,6 @@ storaged_daemon_get_object_manager (<em class="parameter"><code><a class="link" 
 <a name="id-1.5.2.4.8.4.6"></a><h4>Returns</h4>
 <p> A <a href="/usr/share/gtk-doc/html/gio/GDBusObjectManagerServer.html"><span class="type">GDBusObjectManagerServer</span></a>. Do not free, the object is owned by <em class="parameter"><code>daemon</code></em>
 .</p>
-<p></p>
 </div>
 </div>
 <hr>
@@ -429,7 +426,6 @@ storaged_daemon_get_mount_monitor (<em class="parameter"><code><a class="link" h
 <a name="id-1.5.2.4.8.5.6"></a><h4>Returns</h4>
 <p> A <a class="link" href="StoragedMountMonitor.html" title="StoragedMountMonitor"><span class="type">StoragedMountMonitor</span></a>. Do not free, the object is owned by <em class="parameter"><code>daemon</code></em>
 .</p>
-<p></p>
 </div>
 </div>
 <hr>
@@ -458,7 +454,6 @@ storaged_daemon_get_fstab_monitor (<em class="parameter"><code><a class="link" h
 <a name="id-1.5.2.4.8.6.6"></a><h4>Returns</h4>
 <p> A <a class="link" href="StoragedFstabMonitor.html" title="StoragedFstabMonitor"><span class="type">StoragedFstabMonitor</span></a>. Do not free, the object is owned by <em class="parameter"><code>daemon</code></em>
 .</p>
-<p></p>
 </div>
 </div>
 <hr>
@@ -487,7 +482,6 @@ storaged_daemon_get_crypttab_monitor (<em class="parameter"><code><a class="link
 <a name="id-1.5.2.4.8.7.6"></a><h4>Returns</h4>
 <p> A <a class="link" href="StoragedCrypttabMonitor.html" title="StoragedCrypttabMonitor"><span class="type">StoragedCrypttabMonitor</span></a>. Do not free, the object is owned by <em class="parameter"><code>daemon</code></em>
 .</p>
-<p></p>
 </div>
 </div>
 <hr>
@@ -515,7 +509,6 @@ storaged_daemon_get_linux_provider (<em class="parameter"><code><a class="link" 
 <a name="id-1.5.2.4.8.8.6"></a><h4>Returns</h4>
 <p> A <a class="link" href="StoragedLinuxProvider.html" title="StoragedLinuxProvider"><span class="type">StoragedLinuxProvider</span></a> or <a href="/usr/share/gtk-doc/html/glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>. Do not free, the object is owned by <em class="parameter"><code>daemon</code></em>
 .</p>
-<p></p>
 </div>
 </div>
 <hr>
@@ -546,7 +539,6 @@ storaged_daemon_get_authority (<em class="parameter"><code><a class="link" href=
 authority is not available. Do not free, the object is owned by
 <em class="parameter"><code>daemon</code></em>
 .</p>
-<p></p>
 </div>
 </div>
 <hr>
@@ -575,7 +567,6 @@ storaged_daemon_get_state (<em class="parameter"><code><a class="link" href="Sto
 <a name="id-1.5.2.4.8.10.6"></a><h4>Returns</h4>
 <p> A <a class="link" href="StoragedState.html" title="StoragedState"><span class="type">StoragedState</span></a> instance. Do not free, the object is owned by <em class="parameter"><code>daemon</code></em>
 .</p>
-<p></p>
 </div>
 </div>
 <hr>
@@ -917,7 +908,6 @@ valid to use the returned object after this signal fires.</p>
 <p> A <a class="link" href="StoragedSimpleJob.html" title="StoragedSimpleJob"><span class="type">StoragedSimpleJob</span></a> object. Do not free, the object
 belongs to <em class="parameter"><code>manager</code></em>
 .</p>
-<p></p>
 </div>
 </div>
 <hr>
@@ -1010,7 +1000,6 @@ valid to use the returned object after this signal fires.</p>
 <p> A <a class="link" href="StoragedSpawnedJob.html" title="StoragedSpawnedJob"><span class="type">StoragedSpawnedJob</span></a> object. Do not free, the object
 belongs to <em class="parameter"><code>manager</code></em>
 .</p>
-<p></p>
 </div>
 </div>
 <hr>
@@ -1111,7 +1100,6 @@ parameter of the <a class="link" href="StoragedJob.html#StoragedJob-completed" t
 <a name="id-1.5.2.4.8.20.6"></a><h4>Returns</h4>
 <p> The <em class="parameter"><code>success</code></em>
 parameter of the <a class="link" href="StoragedJob.html#StoragedJob-completed" title="The “completed” signal"><span class="type">“completed”</span></a> signal.</p>
-<p></p>
 </div>
 </div>
 <hr>
@@ -1196,7 +1184,6 @@ with or <a href="/usr/share/gtk-doc/html/glib/glib-Standard-Macros.html#NULL:CAP
 <p> A <a class="link" href="StoragedThreadedJob.html" title="StoragedThreadedJob"><span class="type">StoragedThreadedJob</span></a> object. Do not free, the object
 belongs to <em class="parameter"><code>manager</code></em>
 .</p>
-<p></p>
 </div>
 </div>
 <hr>
@@ -1224,7 +1211,6 @@ storaged_daemon_get_disable_modules (<em class="parameter"><code><a class="link"
 <div class="refsect3">
 <a name="id-1.5.2.4.8.22.6"></a><h4>Returns</h4>
 <p> <a href="/usr/share/gtk-doc/html/glib/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> if --disable-modules commandline switch has been specified.</p>
-<p></p>
 </div>
 </div>
 <hr>
@@ -1253,7 +1239,6 @@ storaged_daemon_get_force_load_modules
 <div class="refsect3">
 <a name="id-1.5.2.4.8.23.6"></a><h4>Returns</h4>
 <p> <a href="/usr/share/gtk-doc/html/glib/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> if --force-load-modules commandline switch has been specified.</p>
-<p></p>
 </div>
 </div>
 <hr>
@@ -1282,7 +1267,6 @@ storaged_daemon_get_module_manager (<em class="parameter"><code><a class="link" 
 <a name="id-1.5.2.4.8.24.6"></a><h4>Returns</h4>
 <p> A <a class="link" href="storaged-StoragedModuleManager.html#StoragedModuleManager" title="StoragedModuleManager"><span class="type">StoragedModuleManager</span></a>. Do not free, the object is owned by <em class="parameter"><code>daemon</code></em>
 .</p>
-<p></p>
 </div>
 </div>
 </div>
@@ -1344,7 +1328,6 @@ only be accessed using the provided API.</p>
 </div>
 </div>
 <div class="footer">
-<hr>
-          Generated by GTK-Doc V1.21</div>
+<hr>Generated by GTK-Doc V1.24</div>
 </body>
 </html>

@@ -2,13 +2,13 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Storaged Reference Manual: StoragedFilesystem</title>
+<title>StoragedFilesystem: Storaged Reference Manual</title>
 <meta name="generator" content="DocBook XSL Stylesheets V1.78.1">
 <link rel="home" href="index.html" title="Storaged Reference Manual">
 <link rel="up" href="ref-library-generated.html" title="Generated Code">
 <link rel="prev" href="StoragedPartitionTable.html" title="StoragedPartitionTable">
 <link rel="next" href="StoragedSwapspace.html" title="StoragedSwapspace">
-<meta name="generator" content="GTK-Doc V1.21 (XML mode)">
+<meta name="generator" content="GTK-Doc V1.24 (XML mode)">
 <link rel="stylesheet" href="style.css" type="text/css">
 </head>
 <body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
@@ -400,7 +400,6 @@ The properties are overridden in the order they are defined.</p>
 <div class="refsect3">
 <a name="id-1.4.5.12.14.3.6"></a><h4>Returns</h4>
 <p> The last property id.</p>
-<p></p>
 </div>
 </div>
 <hr>
@@ -979,8 +978,9 @@ storaged_filesystem_get_mount_points (<em class="parameter"><code><a class="link
 <p>Gets the value of the <a class="link" href="gdbus-org.storaged.Storaged.Filesystem.html#gdbus-property-org-storaged-Storaged-Filesystem.MountPoints" title='The "MountPoints" property'>"MountPoints"</a> D-Bus property.</p>
 <p>Since this D-Bus property is readable, it is meaningful to use this function on both the client- and service-side.</p>
 <div class="warning">The returned value is only valid until the property changes so on the client-side it is only safe to use this function on the thread where <em class="parameter"><code>object</code></em> was constructed. Use <a class="link" href="StoragedFilesystem.html#storaged-filesystem-dup-mount-points" title="storaged_filesystem_dup_mount_points ()"><code class="function">storaged_filesystem_dup_mount_points()</code></a> if on another thread.</div>
+<p><span class="annotation">[<acronym title="Exposed in C code, not necessarily available in other languages."><span class="acronym">skip</span></acronym>]</span></p>
 <div class="refsect3">
-<a name="id-1.4.5.12.14.16.7"></a><h4>Parameters</h4>
+<a name="id-1.4.5.12.14.16.8"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -995,7 +995,7 @@ storaged_filesystem_get_mount_points (<em class="parameter"><code><a class="link
 </table></div>
 </div>
 <div class="refsect3">
-<a name="id-1.4.5.12.14.16.8"></a><h4>Returns</h4>
+<a name="id-1.4.5.12.14.16.9"></a><h4>Returns</h4>
 <p> The property value or <a href="/usr/share/gtk-doc/html/glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a> if the property is not set. Do not free the returned value, it belongs to <em class="parameter"><code>object</code></em>
 . </p>
 <p><span class="annotation">[<acronym title="Don't free data after the code is done."><span class="acronym">transfer none</span></acronym>]</span></p>
@@ -1008,8 +1008,9 @@ storaged_filesystem_get_mount_points (<em class="parameter"><code><a class="link
 storaged_filesystem_dup_mount_points (<em class="parameter"><code><a class="link" href="StoragedFilesystem.html" title="StoragedFilesystem"><span class="type">StoragedFilesystem</span></a> *object</code></em>);</pre>
 <p>Gets a copy of the <a class="link" href="gdbus-org.storaged.Storaged.Filesystem.html#gdbus-property-org-storaged-Storaged-Filesystem.MountPoints" title='The "MountPoints" property'>"MountPoints"</a> D-Bus property.</p>
 <p>Since this D-Bus property is readable, it is meaningful to use this function on both the client- and service-side.</p>
+<p><span class="annotation">[<acronym title="Exposed in C code, not necessarily available in other languages."><span class="acronym">skip</span></acronym>]</span></p>
 <div class="refsect3">
-<a name="id-1.4.5.12.14.17.6"></a><h4>Parameters</h4>
+<a name="id-1.4.5.12.14.17.7"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -1024,7 +1025,7 @@ storaged_filesystem_dup_mount_points (<em class="parameter"><code><a class="link
 </table></div>
 </div>
 <div class="refsect3">
-<a name="id-1.4.5.12.14.17.7"></a><h4>Returns</h4>
+<a name="id-1.4.5.12.14.17.8"></a><h4>Returns</h4>
 <p> The property value or <a href="/usr/share/gtk-doc/html/glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a> if the property is not set. The returned value should be freed with <a href="/usr/share/gtk-doc/html/glib/glib-String-Utility-Functions.html#g-strfreev"><code class="function">g_strfreev()</code></a>. </p>
 <p><span class="annotation">[<acronym title="Free data after the code is done."><span class="acronym">transfer full</span></acronym>]</span></p>
 </div>
@@ -1038,8 +1039,9 @@ storaged_filesystem_set_mount_points (<em class="parameter"><code><a class="link
 <p>Sets the <a class="link" href="gdbus-org.storaged.Storaged.Filesystem.html#gdbus-property-org-storaged-Storaged-Filesystem.MountPoints" title='The "MountPoints" property'>"MountPoints"</a> D-Bus property to <em class="parameter"><code>value</code></em>
 .</p>
 <p>Since this D-Bus property is not writable, it is only meaningful to use this function on the service-side.</p>
+<p><span class="annotation">[<acronym title="Exposed in C code, not necessarily available in other languages."><span class="acronym">skip</span></acronym>]</span></p>
 <div class="refsect3">
-<a name="id-1.4.5.12.14.18.6"></a><h4>Parameters</h4>
+<a name="id-1.4.5.12.14.18.7"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -1594,7 +1596,6 @@ user_function (<a class="link" href="StoragedFilesystem.html" title="StoragedFil
 <div class="refsect3">
 <a name="id-1.4.5.12.17.2.7"></a><h4>Returns</h4>
 <p> <a href="/usr/share/gtk-doc/html/glib/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> if the invocation was handled, <a href="/usr/share/gtk-doc/html/glib/glib-Standard-Macros.html#FALSE:CAPS"><code class="literal">FALSE</code></a> to let other signal handlers run.</p>
-<p></p>
 </div>
 <p>Flags: <a href="/usr/share/gtk-doc/html/gobject/gobject-Signals.html#G-SIGNAL-RUN-LAST:CAPS">Run Last</a></p>
 </div>
@@ -1650,7 +1651,6 @@ user_function (<a class="link" href="StoragedFilesystem.html" title="StoragedFil
 <div class="refsect3">
 <a name="id-1.4.5.12.17.3.7"></a><h4>Returns</h4>
 <p> <a href="/usr/share/gtk-doc/html/glib/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> if the invocation was handled, <a href="/usr/share/gtk-doc/html/glib/glib-Standard-Macros.html#FALSE:CAPS"><code class="literal">FALSE</code></a> to let other signal handlers run.</p>
-<p></p>
 </div>
 <p>Flags: <a href="/usr/share/gtk-doc/html/gobject/gobject-Signals.html#G-SIGNAL-RUN-LAST:CAPS">Run Last</a></p>
 </div>
@@ -1700,14 +1700,12 @@ user_function (<a class="link" href="StoragedFilesystem.html" title="StoragedFil
 <div class="refsect3">
 <a name="id-1.4.5.12.17.4.7"></a><h4>Returns</h4>
 <p> <a href="/usr/share/gtk-doc/html/glib/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> if the invocation was handled, <a href="/usr/share/gtk-doc/html/glib/glib-Standard-Macros.html#FALSE:CAPS"><code class="literal">FALSE</code></a> to let other signal handlers run.</p>
-<p></p>
 </div>
 <p>Flags: <a href="/usr/share/gtk-doc/html/gobject/gobject-Signals.html#G-SIGNAL-RUN-LAST:CAPS">Run Last</a></p>
 </div>
 </div>
 </div>
 <div class="footer">
-<hr>
-          Generated by GTK-Doc V1.21</div>
+<hr>Generated by GTK-Doc V1.24</div>
 </body>
 </html>

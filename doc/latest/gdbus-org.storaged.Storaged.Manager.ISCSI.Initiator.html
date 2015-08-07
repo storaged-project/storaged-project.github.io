@@ -2,13 +2,13 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Storaged Reference Manual: org.storaged.Storaged.Manager.ISCSI.Initiator</title>
+<title>org.storaged.Storaged.Manager.ISCSI.Initiator: Storaged Reference Manual</title>
 <meta name="generator" content="DocBook XSL Stylesheets V1.78.1">
 <link rel="home" href="index.html" title="Storaged Reference Manual">
 <link rel="up" href="ch02.html" title="D-Bus Interfaces">
-<link rel="prev" href="gdbus-org.storaged.Storaged.VolumeGroup.html" title="org.storaged.Storaged.VolumeGroup">
-<link rel="next" href="ref-library.html" title="Part III. Library API Reference">
-<meta name="generator" content="GTK-Doc V1.21 (XML mode)">
+<link rel="prev" href="gdbus-org.storaged.Storaged.ISCSI.Session.html" title="org.storaged.Storaged.ISCSI.Session">
+<link rel="next" href="gdbus-org.storaged.Storaged.Manager.BTRFS.html" title="org.storaged.Storaged.Manager.BTRFS">
+<meta name="generator" content="GTK-Doc V1.24 (XML mode)">
 <link rel="stylesheet" href="style.css" type="text/css">
 </head>
 <body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
@@ -19,8 +19,8 @@
 </td>
 <td><a accesskey="h" href="index.html"><img src="home.png" width="16" height="16" border="0" alt="Home"></a></td>
 <td><a accesskey="u" href="ch02.html"><img src="up.png" width="16" height="16" border="0" alt="Up"></a></td>
-<td><a accesskey="p" href="gdbus-org.storaged.Storaged.VolumeGroup.html"><img src="left.png" width="16" height="16" border="0" alt="Prev"></a></td>
-<td><a accesskey="n" href="ref-library.html"><img src="right.png" width="16" height="16" border="0" alt="Next"></a></td>
+<td><a accesskey="p" href="gdbus-org.storaged.Storaged.ISCSI.Session.html"><img src="left.png" width="16" height="16" border="0" alt="Prev"></a></td>
+<td><a accesskey="n" href="gdbus-org.storaged.Storaged.Manager.BTRFS.html"><img src="right.png" width="16" height="16" border="0" alt="Next"></a></td>
 </tr></table>
 <div class="refentry">
 <a name="gdbus-org.storaged.Storaged.Manager.ISCSI.Initiator"></a><div class="titlepage"></div>
@@ -50,6 +50,16 @@
                            OUT i        nodes_cnt);
 <a class="link" href="gdbus-org.storaged.Storaged.Manager.ISCSI.Initiator.html#gdbus-method-org-storaged-Storaged-Manager-ISCSI-Initiator.DiscoverFirmware" title="The DiscoverFirmware() method">DiscoverFirmware</a>          (OUT a(sisis) nodes,
                            OUT i        nodes_cnt);
+<a class="link" href="gdbus-org.storaged.Storaged.Manager.ISCSI.Initiator.html#gdbus-method-org-storaged-Storaged-Manager-ISCSI-Initiator.Login" title="The Login() method">Login</a>                     (IN  s        name,
+                           IN  i        tpgt,
+                           IN  s        address,
+                           IN  i        port,
+                           IN  s        iface);
+<a class="link" href="gdbus-org.storaged.Storaged.Manager.ISCSI.Initiator.html#gdbus-method-org-storaged-Storaged-Manager-ISCSI-Initiator.Logout" title="The Logout() method">Logout</a>                    (IN  s        name,
+                           IN  i        tpgt,
+                           IN  s        address,
+                           IN  i        port,
+                           IN  s        iface);
 </pre>
 </div>
 <div class="refsect1">
@@ -232,10 +242,97 @@ DiscoverFirmware (OUT a(sisis) nodes,
 </table></div>
 <p class="since">Since 2.0.1</p>
 </div>
+<hr>
+<div class="refsect2">
+<a name="gdbus-method-org-storaged-Storaged-Manager-ISCSI-Initiator.Login"></a><h3>The Login() method</h3>
+<pre class="programlisting">
+Login (IN  s name,
+       IN  i tpgt,
+       IN  s address,
+       IN  i port,
+       IN  s iface);
+</pre>
+<p>        <em class="parameter"><code>since</code></em> 2.0.1
+</p>
+<p>        Login to the iSCSI node described by the given node properties.
+</p>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><code class="literal">IN s <em class="parameter"><code>name</code></em></code>:</span></p></td>
+<td><p>iSCSI iqn for the node.</p></td>
+</tr>
+<tr>
+<td><p><span class="term"><code class="literal">IN i <em class="parameter"><code>tpgt</code></em></code>:</span></p></td>
+<td><p>Portal group number.</p></td>
+</tr>
+<tr>
+<td><p><span class="term"><code class="literal">IN s <em class="parameter"><code>address</code></em></code>:</span></p></td>
+<td><p>Portal hostname or IP-address.</p></td>
+</tr>
+<tr>
+<td><p><span class="term"><code class="literal">IN i <em class="parameter"><code>port</code></em></code>:</span></p></td>
+<td><p>Portal port number.</p></td>
+</tr>
+<tr>
+<td><p><span class="term"><code class="literal">IN s <em class="parameter"><code>iface</code></em></code>:</span></p></td>
+<td><p>Interface to connect through.</p></td>
+</tr>
+</tbody>
+</table></div>
+<p class="since">Since 2.0.1</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="gdbus-method-org-storaged-Storaged-Manager-ISCSI-Initiator.Logout"></a><h3>The Logout() method</h3>
+<pre class="programlisting">
+Logout (IN  s name,
+        IN  i tpgt,
+        IN  s address,
+        IN  i port,
+        IN  s iface);
+</pre>
+<p>        <em class="parameter"><code>since</code></em> 2.0.1
+</p>
+<p>        Logout of the iSCSI node described by the given node properties.
+</p>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><code class="literal">IN s <em class="parameter"><code>name</code></em></code>:</span></p></td>
+<td><p>iSCSI iqn for the node.</p></td>
+</tr>
+<tr>
+<td><p><span class="term"><code class="literal">IN i <em class="parameter"><code>tpgt</code></em></code>:</span></p></td>
+<td><p>Portal group number.</p></td>
+</tr>
+<tr>
+<td><p><span class="term"><code class="literal">IN s <em class="parameter"><code>address</code></em></code>:</span></p></td>
+<td><p>Portal hostname or IP-address.</p></td>
+</tr>
+<tr>
+<td><p><span class="term"><code class="literal">IN i <em class="parameter"><code>port</code></em></code>:</span></p></td>
+<td><p>Portal port number.</p></td>
+</tr>
+<tr>
+<td><p><span class="term"><code class="literal">IN s <em class="parameter"><code>iface</code></em></code>:</span></p></td>
+<td><p>Interface to connect through.</p></td>
+</tr>
+</tbody>
+</table></div>
+<p class="since">Since 2.0.1</p>
+</div>
 </div>
 </div>
 <div class="footer">
-<hr>
-          Generated by GTK-Doc V1.21</div>
+<hr>Generated by GTK-Doc V1.24</div>
 </body>
 </html>

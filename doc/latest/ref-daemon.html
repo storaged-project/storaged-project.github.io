@@ -2,13 +2,13 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Storaged Reference Manual: Part IV. Daemon Implementation Details</title>
+<title>Part IV. Daemon Implementation Details: Storaged Reference Manual</title>
 <meta name="generator" content="DocBook XSL Stylesheets V1.78.1">
 <link rel="home" href="index.html" title="Storaged Reference Manual">
 <link rel="up" href="index.html" title="Storaged Reference Manual">
-<link rel="prev" href="storaged-StoragedManagerISCSIInitiator.html" title="StoragedManagerISCSIInitiator">
+<link rel="prev" href="storaged-StoragedFilesystemBTRFS.html" title="StoragedFilesystemBTRFS">
 <link rel="next" href="ref-daemon-core.html" title="Core">
-<meta name="generator" content="GTK-Doc V1.21 (XML mode)">
+<meta name="generator" content="GTK-Doc V1.24 (XML mode)">
 <link rel="stylesheet" href="style.css" type="text/css">
 </head>
 <body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
@@ -16,7 +16,7 @@
 <td width="100%" align="left" class="shortcuts"></td>
 <td><a accesskey="h" href="index.html"><img src="home.png" width="16" height="16" border="0" alt="Home"></a></td>
 <td><img src="up-insensitive.png" width="16" height="16" border="0"></td>
-<td><a accesskey="p" href="storaged-StoragedManagerISCSIInitiator.html"><img src="left.png" width="16" height="16" border="0" alt="Prev"></a></td>
+<td><a accesskey="p" href="storaged-StoragedFilesystemBTRFS.html"><img src="left.png" width="16" height="16" border="0" alt="Prev"></a></td>
 <td><a accesskey="n" href="ref-daemon-core.html"><img src="right.png" width="16" height="16" border="0" alt="Next"></a></td>
 </tr></table>
 <div class="part">
@@ -79,7 +79,7 @@
 <dt><span class="chapter"><a href="ref-daemon-linux-types.html">Linux-specific types</a></span></dt>
 <dd><dl>
 <dt>
-<span class="refentrytitle"><a href="StoragedLinuxManager.html">StoragedLinuxManager</a></span><span class="refpurpose">Linux implementation of <span class="type">StoragedManager</span></span>
+<span class="refentrytitle"><a href="StoragedLinuxManager.html">StoragedLinuxManager</a></span><span class="refpurpose"> — Linux implementation of <span class="type">StoragedManager</span></span>
 </dt>
 <dt>
 <span class="refentrytitle"><a href="StoragedLinuxProvider.html">StoragedLinuxProvider</a></span><span class="refpurpose"> — Provides Linux-specific objects</span>
@@ -91,10 +91,10 @@
 <dt><span class="chapter"><a href="ref-daemon-drives.html">Drives on Linux</a></span></dt>
 <dd><dl>
 <dt>
-<span class="refentrytitle"><a href="StoragedLinuxDrive.html">StoragedLinuxDrive</a></span><span class="refpurpose">Linux implementation of <span class="type">StoragedDrive</span></span>
+<span class="refentrytitle"><a href="StoragedLinuxDrive.html">StoragedLinuxDrive</a></span><span class="refpurpose"> — Linux implementation of <span class="type">StoragedDrive</span></span>
 </dt>
 <dt>
-<span class="refentrytitle"><a href="storaged-DummyLinuxBlock.html">DummyLinuxBlock</a></span><span class="refpurpose">Linux implementation of <span class="type">DummyDummyBlock</span></span>
+<span class="refentrytitle"><a href="storaged-DummyLinuxBlock.html">DummyLinuxBlock</a></span><span class="refpurpose"> — Linux implementation of <span class="type">DummyDummyBlock</span></span>
 </dt>
 <dt>
 <span class="refentrytitle"><a href="StoragedLinuxDriveObject.html">StoragedLinuxDriveObject</a></span><span class="refpurpose"> — Object representing a drive on Linux</span>
@@ -103,7 +103,7 @@
 <dt><span class="chapter"><a href="ref-daemon-mdraid.html">Linux RAID</a></span></dt>
 <dd><dl>
 <dt>
-<span class="refentrytitle"><a href="StoragedLinuxMDRaid.html">StoragedLinuxMDRaid</a></span><span class="refpurpose">Linux implementation of <span class="type">StoragedMDRaid</span></span>
+<span class="refentrytitle"><a href="StoragedLinuxMDRaid.html">StoragedLinuxMDRaid</a></span><span class="refpurpose"> — Linux implementation of <span class="type">StoragedMDRaid</span></span>
 </dt>
 <dt>
 <span class="refentrytitle"><a href="StoragedLinuxMDRaidObject.html">StoragedLinuxMDRaidObject</a></span><span class="refpurpose"> — Object representing a Linux Software RAID array</span>
@@ -112,25 +112,25 @@
 <dt><span class="chapter"><a href="ref-daemon-block-devices.html">Block devices on Linux</a></span></dt>
 <dd><dl>
 <dt>
-<span class="refentrytitle"><a href="StoragedLinuxBlock.html">StoragedLinuxBlock</a></span><span class="refpurpose">Linux implementation of <span class="type">StoragedBlock</span></span>
+<span class="refentrytitle"><a href="StoragedLinuxBlock.html">StoragedLinuxBlock</a></span><span class="refpurpose"> — Linux implementation of <span class="type">StoragedBlock</span></span>
 </dt>
 <dt>
-<span class="refentrytitle"><a href="StoragedLinuxPartition.html">StoragedLinuxPartition</a></span><span class="refpurpose">Linux implementation of <span class="type">StoragedPartition</span></span>
+<span class="refentrytitle"><a href="StoragedLinuxPartition.html">StoragedLinuxPartition</a></span><span class="refpurpose"> — Linux implementation of <span class="type">StoragedPartition</span></span>
 </dt>
 <dt>
-<span class="refentrytitle"><a href="StoragedLinuxPartitionTable.html">StoragedLinuxPartitionTable</a></span><span class="refpurpose">Linux implementation of <span class="type">StoragedPartitionTable</span></span>
+<span class="refentrytitle"><a href="StoragedLinuxPartitionTable.html">StoragedLinuxPartitionTable</a></span><span class="refpurpose"> — Linux implementation of <span class="type">StoragedPartitionTable</span></span>
 </dt>
 <dt>
-<span class="refentrytitle"><a href="StoragedLinuxFilesystem.html">StoragedLinuxFilesystem</a></span><span class="refpurpose">Linux implementation of <span class="type">StoragedFilesystem</span></span>
+<span class="refentrytitle"><a href="StoragedLinuxFilesystem.html">StoragedLinuxFilesystem</a></span><span class="refpurpose"> — Linux implementation of <span class="type">StoragedFilesystem</span></span>
 </dt>
 <dt>
-<span class="refentrytitle"><a href="StoragedLinuxEncrypted.html">StoragedLinuxEncrypted</a></span><span class="refpurpose">Linux implementation of <span class="type">StoragedEncrypted</span></span>
+<span class="refentrytitle"><a href="StoragedLinuxEncrypted.html">StoragedLinuxEncrypted</a></span><span class="refpurpose"> — Linux implementation of <span class="type">StoragedEncrypted</span></span>
 </dt>
 <dt>
-<span class="refentrytitle"><a href="StoragedLinuxSwapspace.html">StoragedLinuxSwapspace</a></span><span class="refpurpose">Linux implementation of <span class="type">StoragedSwapspace</span></span>
+<span class="refentrytitle"><a href="StoragedLinuxSwapspace.html">StoragedLinuxSwapspace</a></span><span class="refpurpose"> — Linux implementation of <span class="type">StoragedSwapspace</span></span>
 </dt>
 <dt>
-<span class="refentrytitle"><a href="StoragedLinuxLoop.html">StoragedLinuxLoop</a></span><span class="refpurpose">Linux implementation of <span class="type">StoragedLoop</span></span>
+<span class="refentrytitle"><a href="StoragedLinuxLoop.html">StoragedLinuxLoop</a></span><span class="refpurpose"> — Linux implementation of <span class="type">StoragedLoop</span></span>
 </dt>
 <dt>
 <span class="refentrytitle"><a href="StoragedLinuxBlockObject.html">StoragedLinuxBlockObject</a></span><span class="refpurpose"> — Object representing a block device on Linux.</span>
@@ -140,7 +140,6 @@
 </div>
 </div>
 <div class="footer">
-<hr>
-          Generated by GTK-Doc V1.21</div>
+<hr>Generated by GTK-Doc V1.24</div>
 </body>
 </html>

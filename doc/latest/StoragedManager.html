@@ -2,13 +2,13 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Storaged Reference Manual: StoragedManager</title>
+<title>StoragedManager: Storaged Reference Manual</title>
 <meta name="generator" content="DocBook XSL Stylesheets V1.78.1">
 <link rel="home" href="index.html" title="Storaged Reference Manual">
 <link rel="up" href="ref-library-generated.html" title="Generated Code">
 <link rel="prev" href="StoragedObjectManagerClient.html" title="StoragedObjectManagerClient">
 <link rel="next" href="StoragedDrive.html" title="StoragedDrive">
-<meta name="generator" content="GTK-Doc V1.21 (XML mode)">
+<meta name="generator" content="GTK-Doc V1.24 (XML mode)">
 <link rel="stylesheet" href="style.css" type="text/css">
 </head>
 <body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
@@ -400,7 +400,6 @@ The properties are overridden in the order they are defined.</p>
 <div class="refsect3">
 <a name="id-1.4.5.4.14.3.6"></a><h4>Returns</h4>
 <p> The last property id.</p>
-<p></p>
 </div>
 </div>
 <hr>
@@ -411,8 +410,9 @@ storaged_manager_get_version (<em class="parameter"><code><a class="link" href="
 <p>Gets the value of the <a class="link" href="gdbus-org.storaged.Storaged.Manager.html#gdbus-property-org-storaged-Storaged-Manager.Version" title='The "Version" property'>"Version"</a> D-Bus property.</p>
 <p>Since this D-Bus property is readable, it is meaningful to use this function on both the client- and service-side.</p>
 <div class="warning">The returned value is only valid until the property changes so on the client-side it is only safe to use this function on the thread where <em class="parameter"><code>object</code></em> was constructed. Use <a class="link" href="StoragedManager.html#storaged-manager-dup-version" title="storaged_manager_dup_version ()"><code class="function">storaged_manager_dup_version()</code></a> if on another thread.</div>
+<p><span class="annotation">[<acronym title="Exposed in C code, not necessarily available in other languages."><span class="acronym">skip</span></acronym>]</span></p>
 <div class="refsect3">
-<a name="id-1.4.5.4.14.4.7"></a><h4>Parameters</h4>
+<a name="id-1.4.5.4.14.4.8"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -427,7 +427,7 @@ storaged_manager_get_version (<em class="parameter"><code><a class="link" href="
 </table></div>
 </div>
 <div class="refsect3">
-<a name="id-1.4.5.4.14.4.8"></a><h4>Returns</h4>
+<a name="id-1.4.5.4.14.4.9"></a><h4>Returns</h4>
 <p> The property value or <a href="/usr/share/gtk-doc/html/glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a> if the property is not set. Do not free the returned value, it belongs to <em class="parameter"><code>object</code></em>
 . </p>
 <p><span class="annotation">[<acronym title="Don't free data after the code is done."><span class="acronym">transfer none</span></acronym>]</span></p>
@@ -440,8 +440,9 @@ storaged_manager_get_version (<em class="parameter"><code><a class="link" href="
 storaged_manager_dup_version (<em class="parameter"><code><a class="link" href="StoragedManager.html" title="StoragedManager"><span class="type">StoragedManager</span></a> *object</code></em>);</pre>
 <p>Gets a copy of the <a class="link" href="gdbus-org.storaged.Storaged.Manager.html#gdbus-property-org-storaged-Storaged-Manager.Version" title='The "Version" property'>"Version"</a> D-Bus property.</p>
 <p>Since this D-Bus property is readable, it is meaningful to use this function on both the client- and service-side.</p>
+<p><span class="annotation">[<acronym title="Exposed in C code, not necessarily available in other languages."><span class="acronym">skip</span></acronym>]</span></p>
 <div class="refsect3">
-<a name="id-1.4.5.4.14.5.6"></a><h4>Parameters</h4>
+<a name="id-1.4.5.4.14.5.7"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -456,7 +457,7 @@ storaged_manager_dup_version (<em class="parameter"><code><a class="link" href="
 </table></div>
 </div>
 <div class="refsect3">
-<a name="id-1.4.5.4.14.5.7"></a><h4>Returns</h4>
+<a name="id-1.4.5.4.14.5.8"></a><h4>Returns</h4>
 <p> The property value or <a href="/usr/share/gtk-doc/html/glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a> if the property is not set. The returned value should be freed with <a href="/usr/share/gtk-doc/html/glib/glib-Memory-Allocation.html#g-free"><code class="function">g_free()</code></a>. </p>
 <p><span class="annotation">[<acronym title="Free data after the code is done."><span class="acronym">transfer full</span></acronym>]</span></p>
 </div>
@@ -470,8 +471,9 @@ storaged_manager_set_version (<em class="parameter"><code><a class="link" href="
 <p>Sets the <a class="link" href="gdbus-org.storaged.Storaged.Manager.html#gdbus-property-org-storaged-Storaged-Manager.Version" title='The "Version" property'>"Version"</a> D-Bus property to <em class="parameter"><code>value</code></em>
 .</p>
 <p>Since this D-Bus property is not writable, it is only meaningful to use this function on the service-side.</p>
+<p><span class="annotation">[<acronym title="Exposed in C code, not necessarily available in other languages."><span class="acronym">skip</span></acronym>]</span></p>
 <div class="refsect3">
-<a name="id-1.4.5.4.14.6.6"></a><h4>Parameters</h4>
+<a name="id-1.4.5.4.14.6.7"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -809,7 +811,7 @@ You can then call <a class="link" href="StoragedManager.html#storaged-manager-ca
 </tbody>
 </table></div>
 </div>
-<p class="since">Since 2.0.0</p>
+<p class="since">Since: 2.0.0</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -859,7 +861,7 @@ storaged_manager_call_mdraid_create_finish
 is set. </p>
 <p><span class="annotation">[<acronym title="Exposed in C code, not necessarily available in other languages."><span class="acronym">skip</span></acronym>]</span></p>
 </div>
-<p class="since">Since 2.0.0</p>
+<p class="since">Since: 2.0.0</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -941,7 +943,7 @@ storaged_manager_call_mdraid_create_sync
 is set. </p>
 <p><span class="annotation">[<acronym title="Exposed in C code, not necessarily available in other languages."><span class="acronym">skip</span></acronym>]</span></p>
 </div>
-<p class="since">Since 2.0.0</p>
+<p class="since">Since: 2.0.0</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -981,7 +983,7 @@ storaged_manager_complete_mdraid_create
 </tbody>
 </table></div>
 </div>
-<p class="since">Since 2.0.0</p>
+<p class="since">Since: 2.0.0</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -1703,7 +1705,6 @@ user_function (<a class="link" href="StoragedManager.html" title="StoragedManage
 <div class="refsect3">
 <a name="id-1.4.5.4.17.2.7"></a><h4>Returns</h4>
 <p> <a href="/usr/share/gtk-doc/html/glib/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> if the invocation was handled, <a href="/usr/share/gtk-doc/html/glib/glib-Standard-Macros.html#FALSE:CAPS"><code class="literal">FALSE</code></a> to let other signal handlers run.</p>
-<p></p>
 </div>
 <p>Flags: <a href="/usr/share/gtk-doc/html/gobject/gobject-Signals.html#G-SIGNAL-RUN-LAST:CAPS">Run Last</a></p>
 </div>
@@ -1765,7 +1766,6 @@ user_function (<a class="link" href="StoragedManager.html" title="StoragedManage
 <div class="refsect3">
 <a name="id-1.4.5.4.17.3.7"></a><h4>Returns</h4>
 <p> <a href="/usr/share/gtk-doc/html/glib/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> if the invocation was handled, <a href="/usr/share/gtk-doc/html/glib/glib-Standard-Macros.html#FALSE:CAPS"><code class="literal">FALSE</code></a> to let other signal handlers run.</p>
-<p></p>
 </div>
 <p>Flags: <a href="/usr/share/gtk-doc/html/gobject/gobject-Signals.html#G-SIGNAL-RUN-LAST:CAPS">Run Last</a></p>
 </div>
@@ -1839,15 +1839,13 @@ user_function (<a class="link" href="StoragedManager.html" title="StoragedManage
 <div class="refsect3">
 <a name="id-1.4.5.4.17.4.7"></a><h4>Returns</h4>
 <p> <a href="/usr/share/gtk-doc/html/glib/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> if the invocation was handled, <a href="/usr/share/gtk-doc/html/glib/glib-Standard-Macros.html#FALSE:CAPS"><code class="literal">FALSE</code></a> to let other signal handlers run.</p>
-<p></p>
 </div>
 <p>Flags: <a href="/usr/share/gtk-doc/html/gobject/gobject-Signals.html#G-SIGNAL-RUN-LAST:CAPS">Run Last</a></p>
-<p class="since">Since 2.0.0</p>
+<p class="since">Since: 2.0.0</p>
 </div>
 </div>
 </div>
 <div class="footer">
-<hr>
-          Generated by GTK-Doc V1.21</div>
+<hr>Generated by GTK-Doc V1.24</div>
 </body>
 </html>

@@ -2,13 +2,13 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Storaged Reference Manual: StoragedClient</title>
+<title>StoragedClient: Storaged Reference Manual</title>
 <meta name="generator" content="DocBook XSL Stylesheets V1.78.1">
 <link rel="home" href="index.html" title="Storaged Reference Manual">
 <link rel="up" href="ref-library.html" title="Part III. Library API Reference">
 <link rel="prev" href="ref-library.html" title="Part III. Library API Reference">
 <link rel="next" href="StoragedObjectInfo.html" title="StoragedObjectInfo">
-<meta name="generator" content="GTK-Doc V1.21 (XML mode)">
+<meta name="generator" content="GTK-Doc V1.24 (XML mode)">
 <link rel="stylesheet" href="style.css" type="text/css">
 </head>
 <body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
@@ -484,7 +484,6 @@ is being compiled against.</p>
 <a name="id-1.4.2.11.2.6"></a><h4>Returns</h4>
 <p> <a href="/usr/share/gtk-doc/html/glib/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> if the version of the libstoraged header files is the
 same as or newer than the passed in version.</p>
-<p></p>
 </div>
 </div>
 <hr>
@@ -561,7 +560,6 @@ storaged_client_new_finish (<em class="parameter"><code><a href="/usr/share/gtk-
 <p> A <a class="link" href="StoragedClient.html" title="StoragedClient"><span class="type">StoragedClient</span></a> or <a href="/usr/share/gtk-doc/html/glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a> if <em class="parameter"><code>error</code></em>
 is set. Free with
 <a href="/usr/share/gtk-doc/html/gobject/gobject-The-Base-Object-Type.html#g-object-unref"><code class="function">g_object_unref()</code></a> when done with it.</p>
-<p></p>
 </div>
 </div>
 <hr>
@@ -598,7 +596,6 @@ storaged_client_new_sync (<em class="parameter"><code><a href="/usr/share/gtk-do
 <p> A <a class="link" href="StoragedClient.html" title="StoragedClient"><span class="type">StoragedClient</span></a> or <a href="/usr/share/gtk-doc/html/glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a> if <em class="parameter"><code>error</code></em>
 is set. Free with
 <a href="/usr/share/gtk-doc/html/gobject/gobject-The-Base-Object-Type.html#g-object-unref"><code class="function">g_object_unref()</code></a> when done with it.</p>
-<p></p>
 </div>
 </div>
 <hr>
@@ -792,7 +789,7 @@ information.</p>
 </tr></tbody>
 </table></div>
 </div>
-<p class="since">Since 2.1</p>
+<p class="since">Since: 2.1</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -868,7 +865,6 @@ operation of <em class="parameter"><code>job</code></em>
 <div class="refsect3">
 <a name="id-1.4.2.11.13.9"></a><h4>Returns</h4>
 <p> A string that should be freed with <a href="/usr/share/gtk-doc/html/glib/glib-Memory-Allocation.html#g-free"><code class="function">g_free()</code></a>.</p>
-<p></p>
 </div>
 </div>
 <hr>
@@ -1259,7 +1255,7 @@ returned list should be freed with <a href="/usr/share/gtk-doc/html/glib/glib-Do
 freed with <a href="/usr/share/gtk-doc/html/gobject/gobject-The-Base-Object-Type.html#g-object-unref"><code class="function">g_object_unref()</code></a>. </p>
 <p><span class="annotation">[<acronym title="Free data after the code is done."><span class="acronym">transfer full</span></acronym>][<acronym title="Generics and defining elements of containers and arrays."><span class="acronym">element-type</span></acronym> StoragedDrive]</span></p>
 </div>
-<p class="since">Since 2.1</p>
+<p class="since">Since: 2.1</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -1304,7 +1300,7 @@ using exactly one of the two devices. Use
 <p> A <a class="link" href="StoragedBlock.html" title="StoragedBlock"><span class="type">StoragedBlock</span></a> or <a href="/usr/share/gtk-doc/html/glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a> if no RAID device is running. </p>
 <p><span class="annotation">[<acronym title="Free data after the code is done."><span class="acronym">transfer full</span></acronym>]</span></p>
 </div>
-<p class="since">Since 2.1</p>
+<p class="since">Since: 2.1</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -1348,7 +1344,7 @@ returned list should be freed with <a href="/usr/share/gtk-doc/html/glib/glib-Do
 element has been freed with <a href="/usr/share/gtk-doc/html/gobject/gobject-The-Base-Object-Type.html#g-object-unref"><code class="function">g_object_unref()</code></a>. </p>
 <p><span class="annotation">[<acronym title="Free data after the code is done."><span class="acronym">transfer full</span></acronym>][<acronym title="Generics and defining elements of containers and arrays."><span class="acronym">element-type</span></acronym> StoragedBlock]</span></p>
 </div>
-<p class="since">Since 2.1</p>
+<p class="since">Since: 2.1</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -1388,7 +1384,7 @@ returned list should be freed with <a href="/usr/share/gtk-doc/html/glib/glib-Do
 element has been freed with <a href="/usr/share/gtk-doc/html/gobject/gobject-The-Base-Object-Type.html#g-object-unref"><code class="function">g_object_unref()</code></a>. </p>
 <p><span class="annotation">[<acronym title="Free data after the code is done."><span class="acronym">transfer full</span></acronym>][<acronym title="Generics and defining elements of containers and arrays."><span class="acronym">element-type</span></acronym> StoragedBlock]</span></p>
 </div>
-<p class="since">Since 2.1</p>
+<p class="since">Since: 2.1</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -1429,7 +1425,7 @@ is not a MD-RAID block
 device. Free the returned object with <a href="/usr/share/gtk-doc/html/gobject/gobject-The-Base-Object-Type.html#g-object-unref"><code class="function">g_object_unref()</code></a>. </p>
 <p><span class="annotation">[<acronym title="Free data after the code is done."><span class="acronym">transfer full</span></acronym>]</span></p>
 </div>
-<p class="since">Since 2.1</p>
+<p class="since">Since: 2.1</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -1467,7 +1463,7 @@ present in an user interface. Information is returned in the
 <p> A <a class="link" href="StoragedObjectInfo.html" title="StoragedObjectInfo"><span class="type">StoragedObjectInfo</span></a> instance that should be freed with <a href="/usr/share/gtk-doc/html/gobject/gobject-The-Base-Object-Type.html#g-object-unref"><code class="function">g_object_unref()</code></a>. </p>
 <p><span class="annotation">[<acronym title="Free data after the code is done."><span class="acronym">transfer full</span></acronym>]</span></p>
 </div>
-<p class="since">Since 2.1</p>
+<p class="since">Since: 2.1</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -1621,7 +1617,6 @@ storaged_client_get_size_for_display (<em class="parameter"><code><a class="link
 <div class="refsect3">
 <a name="id-1.4.2.11.31.6"></a><h4>Returns</h4>
 <p> A string that should be freed with <a href="/usr/share/gtk-doc/html/glib/glib-Memory-Allocation.html#g-free"><code class="function">g_free()</code></a>.</p>
-<p></p>
 </div>
 </div>
 <hr>
@@ -1677,7 +1672,6 @@ storaged_client_get_id_for_display (<em class="parameter"><code><a class="link" 
 <div class="refsect3">
 <a name="id-1.4.2.11.32.6"></a><h4>Returns</h4>
 <p> A string that should be freed with <a href="/usr/share/gtk-doc/html/glib/glib-Memory-Allocation.html#g-free"><code class="function">g_free()</code></a>.</p>
-<p></p>
 </div>
 </div>
 <hr>
@@ -1716,7 +1710,6 @@ storaged_client_get_media_compat_for_display
 <a name="id-1.4.2.11.33.6"></a><h4>Returns</h4>
 <p> A string that should be freed with <a href="/usr/share/gtk-doc/html/glib/glib-Memory-Allocation.html#g-free"><code class="function">g_free()</code></a> or <a href="/usr/share/gtk-doc/html/glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a> if
 unknown.</p>
-<p></p>
 </div>
 </div>
 <hr>
@@ -1868,7 +1861,6 @@ storaged_client_get_partition_type_for_display
 <a name="id-1.4.2.11.37.6"></a><h4>Returns</h4>
 <p> A description of <em class="parameter"><code>partition_type</code></em>
 or <a href="/usr/share/gtk-doc/html/glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a> if unknown.</p>
-<p></p>
 </div>
 </div>
 <hr>
@@ -1920,9 +1912,8 @@ partition type.</p>
 <a name="id-1.4.2.11.38.6"></a><h4>Returns</h4>
 <p> A description of <em class="parameter"><code>partition_type</code></em>
 or <a href="/usr/share/gtk-doc/html/glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a> if unknown.</p>
-<p></p>
 </div>
-<p class="since">Since 2.1.1</p>
+<p class="since">Since: 2.1.1</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -1959,7 +1950,6 @@ storaged_client_get_partition_table_type_for_display
 <a name="id-1.4.2.11.39.6"></a><h4>Returns</h4>
 <p> A description of <em class="parameter"><code>partition_table_type</code></em>
 or <a href="/usr/share/gtk-doc/html/glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>.</p>
-<p></p>
 </div>
 </div>
 <hr>
@@ -2005,7 +1995,6 @@ storaged_client_get_partition_table_subtype_for_display
 <p> A description of <em class="parameter"><code>partition_table_type</code></em>
 and <em class="parameter"><code>partition_table_subtype</code></em>
 or <a href="/usr/share/gtk-doc/html/glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>.</p>
-<p></p>
 </div>
 </div>
 </div>
@@ -2020,14 +2009,14 @@ or <a href="/usr/share/gtk-doc/html/glib/glib-Standard-Macros.html#NULL:CAPS"><c
 <hr>
 <div class="refsect2">
 <a name="STORAGED-MINOR-VERSION:CAPS"></a><h3>STORAGED_MINOR_VERSION</h3>
-<pre class="programlisting">#define STORAGED_MINOR_VERSION 0
+<pre class="programlisting">#define STORAGED_MINOR_VERSION 1
 </pre>
 <p>The minor version of the libstoraged header files.</p>
 </div>
 <hr>
 <div class="refsect2">
 <a name="STORAGED-MICRO-VERSION:CAPS"></a><h3>STORAGED_MICRO_VERSION</h3>
-<pre class="programlisting">#define STORAGED_MICRO_VERSION 1
+<pre class="programlisting">#define STORAGED_MICRO_VERSION 3
 </pre>
 <p>The micro version of the libstoraged header files.</p>
 </div>
@@ -2213,7 +2202,6 @@ signals on the <a class="link" href="StoragedClient.html#StoragedClient--object-
 </div>
 </div>
 <div class="footer">
-<hr>
-          Generated by GTK-Doc V1.21</div>
+<hr>Generated by GTK-Doc V1.24</div>
 </body>
 </html>

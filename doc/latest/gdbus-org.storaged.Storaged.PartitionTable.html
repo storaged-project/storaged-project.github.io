@@ -2,13 +2,13 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Storaged Reference Manual: org.storaged.Storaged.PartitionTable</title>
+<title>org.storaged.Storaged.PartitionTable: Storaged Reference Manual</title>
 <meta name="generator" content="DocBook XSL Stylesheets V1.78.1">
 <link rel="home" href="index.html" title="Storaged Reference Manual">
 <link rel="up" href="ch02.html" title="D-Bus Interfaces">
 <link rel="prev" href="gdbus-org.storaged.Storaged.Partition.html" title="org.storaged.Storaged.Partition">
 <link rel="next" href="gdbus-org.storaged.Storaged.Filesystem.html" title="org.storaged.Storaged.Filesystem">
-<meta name="generator" content="GTK-Doc V1.21 (XML mode)">
+<meta name="generator" content="GTK-Doc V1.24 (XML mode)">
 <link rel="stylesheet" href="style.css" type="text/css">
 </head>
 <body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
@@ -35,12 +35,20 @@
 <div class="refsynopsisdiv">
 <h2>Methods</h2>
 <pre class="synopsis">
-<a class="link" href="gdbus-org.storaged.Storaged.PartitionTable.html#gdbus-method-org-storaged-Storaged-PartitionTable.CreatePartition" title="The CreatePartition() method">CreatePartition</a> (IN  t     offset,
-                 IN  t     size,
-                 IN  s     type,
-                 IN  s     name,
-                 IN  a{sv} options,
-                 OUT o     created_partition);
+<a class="link" href="gdbus-org.storaged.Storaged.PartitionTable.html#gdbus-method-org-storaged-Storaged-PartitionTable.CreatePartition" title="The CreatePartition() method">CreatePartition</a>          (IN  t     offset,
+                          IN  t     size,
+                          IN  s     type,
+                          IN  s     name,
+                          IN  a{sv} options,
+                          OUT o     created_partition);
+<a class="link" href="gdbus-org.storaged.Storaged.PartitionTable.html#gdbus-method-org-storaged-Storaged-PartitionTable.CreatePartitionAndFormat" title="The CreatePartitionAndFormat() method">CreatePartitionAndFormat</a> (IN  t     offset,
+                          IN  t     size,
+                          IN  s     type,
+                          IN  s     name,
+                          IN  a{sv} options,
+                          IN  s     format_type,
+                          IN  a{sv} format_options,
+                          OUT o     created_partition);
 </pre>
 </div>
 <div class="refsect1">
@@ -115,6 +123,65 @@ CreatePartition (IN  t     offset,
 </tbody>
 </table></div>
 </div>
+<hr>
+<div class="refsect2">
+<a name="gdbus-method-org-storaged-Storaged-PartitionTable.CreatePartitionAndFormat"></a><h3>The CreatePartitionAndFormat() method</h3>
+<pre class="programlisting">
+CreatePartitionAndFormat (IN  t     offset,
+                          IN  t     size,
+                          IN  s     type,
+                          IN  s     name,
+                          IN  a{sv} options,
+                          IN  s     format_type,
+                          IN  a{sv} format_options,
+                          OUT o     created_partition);
+</pre>
+<p>        This is a combination of
+        <a class="link" href="gdbus-org.storaged.Storaged.PartitionTable.html#gdbus-interface-org-storaged-Storaged-PartitionTable.top_of_page">org.storaged.Storaged.PartitionTable</a>:CreatePartition and
+        <a class="link" href="gdbus-org.storaged.Storaged.Block.html#gdbus-interface-org-storaged-Storaged-Block.top_of_page">org.storaged.Storaged.Block</a>:Format.  After creating the
+        partition, the resulting block device is formatted.
+</p>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><code class="literal">IN t <em class="parameter"><code>offset</code></em></code>:</span></p></td>
+<td><p>The desired offset where the partition should be created, in bytes.</p></td>
+</tr>
+<tr>
+<td><p><span class="term"><code class="literal">IN t <em class="parameter"><code>size</code></em></code>:</span></p></td>
+<td><p>The desired size of the partition, in bytes.</p></td>
+</tr>
+<tr>
+<td><p><span class="term"><code class="literal">IN s <em class="parameter"><code>type</code></em></code>:</span></p></td>
+<td><p>The type of partition to create (cf. the <a class="link" href="gdbus-org.storaged.Storaged.Partition.html#gdbus-property-org-storaged-Storaged-Partition.Type" title='The "Type" property'>"Type"</a> property) or blank to use the default for the partition table type and OS.</p></td>
+</tr>
+<tr>
+<td><p><span class="term"><code class="literal">IN s <em class="parameter"><code>name</code></em></code>:</span></p></td>
+<td><p>The name for the new partition or blank if the partition table do not support names.</p></td>
+</tr>
+<tr>
+<td><p><span class="term"><code class="literal">IN a{sv} <em class="parameter"><code>options</code></em></code>:</span></p></td>
+<td><p>Options (currently unused except for <a class="link" href="storaged-std-options.html" title="The options parameter">standard options</a>).</p></td>
+</tr>
+<tr>
+<td><p><span class="term"><code class="literal">IN s <em class="parameter"><code>format_type</code></em></code>:</span></p></td>
+<td><p>The type to use for Format.</p></td>
+</tr>
+<tr>
+<td><p><span class="term"><code class="literal">IN a{sv} <em class="parameter"><code>format_options</code></em></code>:</span></p></td>
+<td><p>Options for Format.</p></td>
+</tr>
+<tr>
+<td><p><span class="term"><code class="literal">OUT o <em class="parameter"><code>created_partition</code></em></code>:</span></p></td>
+<td><p>An object path to the created block device object implementing the <a class="link" href="gdbus-org.storaged.Storaged.Partition.html#gdbus-interface-org-storaged-Storaged-Partition.top_of_page">org.storaged.Storaged.Partition</a> interface.</p></td>
+</tr>
+</tbody>
+</table></div>
+</div>
 </div>
 <div class="refsect1">
 <a name="gdbus-properties-org.storaged.Storaged.PartitionTable"></a><h2>Property Details</h2>
@@ -150,7 +217,6 @@ Type  readable   s
 </div>
 </div>
 <div class="footer">
-<hr>
-          Generated by GTK-Doc V1.21</div>
+<hr>Generated by GTK-Doc V1.24</div>
 </body>
 </html>

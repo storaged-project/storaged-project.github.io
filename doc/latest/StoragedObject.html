@@ -2,13 +2,13 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Storaged Reference Manual: StoragedObject</title>
+<title>StoragedObject: Storaged Reference Manual</title>
 <meta name="generator" content="DocBook XSL Stylesheets V1.78.1">
 <link rel="home" href="index.html" title="Storaged Reference Manual">
 <link rel="up" href="ref-library-generated.html" title="Generated Code">
 <link rel="prev" href="ref-library-generated.html" title="Generated Code">
 <link rel="next" href="StoragedObjectManagerClient.html" title="StoragedObjectManagerClient">
-<meta name="generator" content="GTK-Doc V1.21 (XML mode)">
+<meta name="generator" content="GTK-Doc V1.24 (XML mode)">
 <link rel="stylesheet" href="style.css" type="text/css">
 </head>
 <body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
@@ -857,7 +857,7 @@ storaged_object_get_mdraid (<em class="parameter"><code><a class="link" href="St
 does not implement the interface. </p>
 <p><span class="annotation">[<acronym title="Free data after the code is done."><span class="acronym">transfer full</span></acronym>]</span></p>
 </div>
-<p class="since">Since 2.0.0</p>
+<p class="since">Since: 2.0.0</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -866,8 +866,9 @@ does not implement the interface. </p>
 storaged_object_peek_block (<em class="parameter"><code><a class="link" href="StoragedObject.html" title="StoragedObject"><span class="type">StoragedObject</span></a> *object</code></em>);</pre>
 <p>Like <a class="link" href="StoragedObject.html#storaged-object-get-block" title="storaged_object_get_block ()"><code class="function">storaged_object_get_block()</code></a> but doesn't increase the reference count on the returned object.</p>
 <div class="warning">It is not safe to use the returned object if you are on another thread than the one where the <a href="/usr/share/gtk-doc/html/gio/GDBusObjectManagerClient.html"><span class="type">GDBusObjectManagerClient</span></a> or <a href="/usr/share/gtk-doc/html/gio/GDBusObjectManagerServer.html"><span class="type">GDBusObjectManagerServer</span></a> for <em class="parameter"><code>object</code></em> is running.</div>
+<p><span class="annotation">[<acronym title="Exposed in C code, not necessarily available in other languages."><span class="acronym">skip</span></acronym>]</span></p>
 <div class="refsect3">
-<a name="id-1.4.5.2.13.14.6"></a><h4>Parameters</h4>
+<a name="id-1.4.5.2.13.14.7"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -882,7 +883,7 @@ storaged_object_peek_block (<em class="parameter"><code><a class="link" href="St
 </table></div>
 </div>
 <div class="refsect3">
-<a name="id-1.4.5.2.13.14.7"></a><h4>Returns</h4>
+<a name="id-1.4.5.2.13.14.8"></a><h4>Returns</h4>
 <p> A <a class="link" href="StoragedBlock.html" title="StoragedBlock"><span class="type">StoragedBlock</span></a> or <a href="/usr/share/gtk-doc/html/glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a> if <em class="parameter"><code>object</code></em>
 does not implement the interface. Do not free the returned object, it is owned by <em class="parameter"><code>object</code></em>
 . </p>
@@ -896,8 +897,9 @@ does not implement the interface. Do not free the returned object, it is owned b
 storaged_object_peek_drive (<em class="parameter"><code><a class="link" href="StoragedObject.html" title="StoragedObject"><span class="type">StoragedObject</span></a> *object</code></em>);</pre>
 <p>Like <a class="link" href="StoragedObject.html#storaged-object-get-drive" title="storaged_object_get_drive ()"><code class="function">storaged_object_get_drive()</code></a> but doesn't increase the reference count on the returned object.</p>
 <div class="warning">It is not safe to use the returned object if you are on another thread than the one where the <a href="/usr/share/gtk-doc/html/gio/GDBusObjectManagerClient.html"><span class="type">GDBusObjectManagerClient</span></a> or <a href="/usr/share/gtk-doc/html/gio/GDBusObjectManagerServer.html"><span class="type">GDBusObjectManagerServer</span></a> for <em class="parameter"><code>object</code></em> is running.</div>
+<p><span class="annotation">[<acronym title="Exposed in C code, not necessarily available in other languages."><span class="acronym">skip</span></acronym>]</span></p>
 <div class="refsect3">
-<a name="id-1.4.5.2.13.15.6"></a><h4>Parameters</h4>
+<a name="id-1.4.5.2.13.15.7"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -912,7 +914,7 @@ storaged_object_peek_drive (<em class="parameter"><code><a class="link" href="St
 </table></div>
 </div>
 <div class="refsect3">
-<a name="id-1.4.5.2.13.15.7"></a><h4>Returns</h4>
+<a name="id-1.4.5.2.13.15.8"></a><h4>Returns</h4>
 <p> A <a class="link" href="StoragedDrive.html" title="StoragedDrive"><span class="type">StoragedDrive</span></a> or <a href="/usr/share/gtk-doc/html/glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a> if <em class="parameter"><code>object</code></em>
 does not implement the interface. Do not free the returned object, it is owned by <em class="parameter"><code>object</code></em>
 . </p>
@@ -926,8 +928,9 @@ does not implement the interface. Do not free the returned object, it is owned b
 storaged_object_peek_drive_ata (<em class="parameter"><code><a class="link" href="StoragedObject.html" title="StoragedObject"><span class="type">StoragedObject</span></a> *object</code></em>);</pre>
 <p>Like <a class="link" href="StoragedObject.html#storaged-object-get-drive-ata" title="storaged_object_get_drive_ata ()"><code class="function">storaged_object_get_drive_ata()</code></a> but doesn't increase the reference count on the returned object.</p>
 <div class="warning">It is not safe to use the returned object if you are on another thread than the one where the <a href="/usr/share/gtk-doc/html/gio/GDBusObjectManagerClient.html"><span class="type">GDBusObjectManagerClient</span></a> or <a href="/usr/share/gtk-doc/html/gio/GDBusObjectManagerServer.html"><span class="type">GDBusObjectManagerServer</span></a> for <em class="parameter"><code>object</code></em> is running.</div>
+<p><span class="annotation">[<acronym title="Exposed in C code, not necessarily available in other languages."><span class="acronym">skip</span></acronym>]</span></p>
 <div class="refsect3">
-<a name="id-1.4.5.2.13.16.6"></a><h4>Parameters</h4>
+<a name="id-1.4.5.2.13.16.7"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -942,7 +945,7 @@ storaged_object_peek_drive_ata (<em class="parameter"><code><a class="link" href
 </table></div>
 </div>
 <div class="refsect3">
-<a name="id-1.4.5.2.13.16.7"></a><h4>Returns</h4>
+<a name="id-1.4.5.2.13.16.8"></a><h4>Returns</h4>
 <p> A <a class="link" href="StoragedDriveAta.html" title="StoragedDriveAta"><span class="type">StoragedDriveAta</span></a> or <a href="/usr/share/gtk-doc/html/glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a> if <em class="parameter"><code>object</code></em>
 does not implement the interface. Do not free the returned object, it is owned by <em class="parameter"><code>object</code></em>
 . </p>
@@ -956,8 +959,9 @@ does not implement the interface. Do not free the returned object, it is owned b
 storaged_object_peek_filesystem (<em class="parameter"><code><a class="link" href="StoragedObject.html" title="StoragedObject"><span class="type">StoragedObject</span></a> *object</code></em>);</pre>
 <p>Like <a class="link" href="StoragedObject.html#storaged-object-get-filesystem" title="storaged_object_get_filesystem ()"><code class="function">storaged_object_get_filesystem()</code></a> but doesn't increase the reference count on the returned object.</p>
 <div class="warning">It is not safe to use the returned object if you are on another thread than the one where the <a href="/usr/share/gtk-doc/html/gio/GDBusObjectManagerClient.html"><span class="type">GDBusObjectManagerClient</span></a> or <a href="/usr/share/gtk-doc/html/gio/GDBusObjectManagerServer.html"><span class="type">GDBusObjectManagerServer</span></a> for <em class="parameter"><code>object</code></em> is running.</div>
+<p><span class="annotation">[<acronym title="Exposed in C code, not necessarily available in other languages."><span class="acronym">skip</span></acronym>]</span></p>
 <div class="refsect3">
-<a name="id-1.4.5.2.13.17.6"></a><h4>Parameters</h4>
+<a name="id-1.4.5.2.13.17.7"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -972,7 +976,7 @@ storaged_object_peek_filesystem (<em class="parameter"><code><a class="link" hre
 </table></div>
 </div>
 <div class="refsect3">
-<a name="id-1.4.5.2.13.17.7"></a><h4>Returns</h4>
+<a name="id-1.4.5.2.13.17.8"></a><h4>Returns</h4>
 <p> A <a class="link" href="StoragedFilesystem.html" title="StoragedFilesystem"><span class="type">StoragedFilesystem</span></a> or <a href="/usr/share/gtk-doc/html/glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a> if <em class="parameter"><code>object</code></em>
 does not implement the interface. Do not free the returned object, it is owned by <em class="parameter"><code>object</code></em>
 . </p>
@@ -986,8 +990,9 @@ does not implement the interface. Do not free the returned object, it is owned b
 storaged_object_peek_job (<em class="parameter"><code><a class="link" href="StoragedObject.html" title="StoragedObject"><span class="type">StoragedObject</span></a> *object</code></em>);</pre>
 <p>Like <a class="link" href="StoragedObject.html#storaged-object-get-job" title="storaged_object_get_job ()"><code class="function">storaged_object_get_job()</code></a> but doesn't increase the reference count on the returned object.</p>
 <div class="warning">It is not safe to use the returned object if you are on another thread than the one where the <a href="/usr/share/gtk-doc/html/gio/GDBusObjectManagerClient.html"><span class="type">GDBusObjectManagerClient</span></a> or <a href="/usr/share/gtk-doc/html/gio/GDBusObjectManagerServer.html"><span class="type">GDBusObjectManagerServer</span></a> for <em class="parameter"><code>object</code></em> is running.</div>
+<p><span class="annotation">[<acronym title="Exposed in C code, not necessarily available in other languages."><span class="acronym">skip</span></acronym>]</span></p>
 <div class="refsect3">
-<a name="id-1.4.5.2.13.18.6"></a><h4>Parameters</h4>
+<a name="id-1.4.5.2.13.18.7"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -1002,7 +1007,7 @@ storaged_object_peek_job (<em class="parameter"><code><a class="link" href="Stor
 </table></div>
 </div>
 <div class="refsect3">
-<a name="id-1.4.5.2.13.18.7"></a><h4>Returns</h4>
+<a name="id-1.4.5.2.13.18.8"></a><h4>Returns</h4>
 <p> A <a class="link" href="StoragedJob.html" title="StoragedJob"><span class="type">StoragedJob</span></a> or <a href="/usr/share/gtk-doc/html/glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a> if <em class="parameter"><code>object</code></em>
 does not implement the interface. Do not free the returned object, it is owned by <em class="parameter"><code>object</code></em>
 . </p>
@@ -1016,8 +1021,9 @@ does not implement the interface. Do not free the returned object, it is owned b
 storaged_object_peek_swapspace (<em class="parameter"><code><a class="link" href="StoragedObject.html" title="StoragedObject"><span class="type">StoragedObject</span></a> *object</code></em>);</pre>
 <p>Like <a class="link" href="StoragedObject.html#storaged-object-get-swapspace" title="storaged_object_get_swapspace ()"><code class="function">storaged_object_get_swapspace()</code></a> but doesn't increase the reference count on the returned object.</p>
 <div class="warning">It is not safe to use the returned object if you are on another thread than the one where the <a href="/usr/share/gtk-doc/html/gio/GDBusObjectManagerClient.html"><span class="type">GDBusObjectManagerClient</span></a> or <a href="/usr/share/gtk-doc/html/gio/GDBusObjectManagerServer.html"><span class="type">GDBusObjectManagerServer</span></a> for <em class="parameter"><code>object</code></em> is running.</div>
+<p><span class="annotation">[<acronym title="Exposed in C code, not necessarily available in other languages."><span class="acronym">skip</span></acronym>]</span></p>
 <div class="refsect3">
-<a name="id-1.4.5.2.13.19.6"></a><h4>Parameters</h4>
+<a name="id-1.4.5.2.13.19.7"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -1032,7 +1038,7 @@ storaged_object_peek_swapspace (<em class="parameter"><code><a class="link" href
 </table></div>
 </div>
 <div class="refsect3">
-<a name="id-1.4.5.2.13.19.7"></a><h4>Returns</h4>
+<a name="id-1.4.5.2.13.19.8"></a><h4>Returns</h4>
 <p> A <a class="link" href="StoragedSwapspace.html" title="StoragedSwapspace"><span class="type">StoragedSwapspace</span></a> or <a href="/usr/share/gtk-doc/html/glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a> if <em class="parameter"><code>object</code></em>
 does not implement the interface. Do not free the returned object, it is owned by <em class="parameter"><code>object</code></em>
 . </p>
@@ -1046,8 +1052,9 @@ does not implement the interface. Do not free the returned object, it is owned b
 storaged_object_peek_encrypted (<em class="parameter"><code><a class="link" href="StoragedObject.html" title="StoragedObject"><span class="type">StoragedObject</span></a> *object</code></em>);</pre>
 <p>Like <a class="link" href="StoragedObject.html#storaged-object-get-encrypted" title="storaged_object_get_encrypted ()"><code class="function">storaged_object_get_encrypted()</code></a> but doesn't increase the reference count on the returned object.</p>
 <div class="warning">It is not safe to use the returned object if you are on another thread than the one where the <a href="/usr/share/gtk-doc/html/gio/GDBusObjectManagerClient.html"><span class="type">GDBusObjectManagerClient</span></a> or <a href="/usr/share/gtk-doc/html/gio/GDBusObjectManagerServer.html"><span class="type">GDBusObjectManagerServer</span></a> for <em class="parameter"><code>object</code></em> is running.</div>
+<p><span class="annotation">[<acronym title="Exposed in C code, not necessarily available in other languages."><span class="acronym">skip</span></acronym>]</span></p>
 <div class="refsect3">
-<a name="id-1.4.5.2.13.20.6"></a><h4>Parameters</h4>
+<a name="id-1.4.5.2.13.20.7"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -1062,7 +1069,7 @@ storaged_object_peek_encrypted (<em class="parameter"><code><a class="link" href
 </table></div>
 </div>
 <div class="refsect3">
-<a name="id-1.4.5.2.13.20.7"></a><h4>Returns</h4>
+<a name="id-1.4.5.2.13.20.8"></a><h4>Returns</h4>
 <p> A <a class="link" href="StoragedEncrypted.html" title="StoragedEncrypted"><span class="type">StoragedEncrypted</span></a> or <a href="/usr/share/gtk-doc/html/glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a> if <em class="parameter"><code>object</code></em>
 does not implement the interface. Do not free the returned object, it is owned by <em class="parameter"><code>object</code></em>
 . </p>
@@ -1076,8 +1083,9 @@ does not implement the interface. Do not free the returned object, it is owned b
 storaged_object_peek_loop (<em class="parameter"><code><a class="link" href="StoragedObject.html" title="StoragedObject"><span class="type">StoragedObject</span></a> *object</code></em>);</pre>
 <p>Like <a class="link" href="StoragedObject.html#storaged-object-get-loop" title="storaged_object_get_loop ()"><code class="function">storaged_object_get_loop()</code></a> but doesn't increase the reference count on the returned object.</p>
 <div class="warning">It is not safe to use the returned object if you are on another thread than the one where the <a href="/usr/share/gtk-doc/html/gio/GDBusObjectManagerClient.html"><span class="type">GDBusObjectManagerClient</span></a> or <a href="/usr/share/gtk-doc/html/gio/GDBusObjectManagerServer.html"><span class="type">GDBusObjectManagerServer</span></a> for <em class="parameter"><code>object</code></em> is running.</div>
+<p><span class="annotation">[<acronym title="Exposed in C code, not necessarily available in other languages."><span class="acronym">skip</span></acronym>]</span></p>
 <div class="refsect3">
-<a name="id-1.4.5.2.13.21.6"></a><h4>Parameters</h4>
+<a name="id-1.4.5.2.13.21.7"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -1092,7 +1100,7 @@ storaged_object_peek_loop (<em class="parameter"><code><a class="link" href="Sto
 </table></div>
 </div>
 <div class="refsect3">
-<a name="id-1.4.5.2.13.21.7"></a><h4>Returns</h4>
+<a name="id-1.4.5.2.13.21.8"></a><h4>Returns</h4>
 <p> A <a class="link" href="StoragedLoop.html" title="StoragedLoop"><span class="type">StoragedLoop</span></a> or <a href="/usr/share/gtk-doc/html/glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a> if <em class="parameter"><code>object</code></em>
 does not implement the interface. Do not free the returned object, it is owned by <em class="parameter"><code>object</code></em>
 . </p>
@@ -1106,8 +1114,9 @@ does not implement the interface. Do not free the returned object, it is owned b
 storaged_object_peek_manager (<em class="parameter"><code><a class="link" href="StoragedObject.html" title="StoragedObject"><span class="type">StoragedObject</span></a> *object</code></em>);</pre>
 <p>Like <a class="link" href="StoragedObject.html#storaged-object-get-manager" title="storaged_object_get_manager ()"><code class="function">storaged_object_get_manager()</code></a> but doesn't increase the reference count on the returned object.</p>
 <div class="warning">It is not safe to use the returned object if you are on another thread than the one where the <a href="/usr/share/gtk-doc/html/gio/GDBusObjectManagerClient.html"><span class="type">GDBusObjectManagerClient</span></a> or <a href="/usr/share/gtk-doc/html/gio/GDBusObjectManagerServer.html"><span class="type">GDBusObjectManagerServer</span></a> for <em class="parameter"><code>object</code></em> is running.</div>
+<p><span class="annotation">[<acronym title="Exposed in C code, not necessarily available in other languages."><span class="acronym">skip</span></acronym>]</span></p>
 <div class="refsect3">
-<a name="id-1.4.5.2.13.22.6"></a><h4>Parameters</h4>
+<a name="id-1.4.5.2.13.22.7"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -1122,7 +1131,7 @@ storaged_object_peek_manager (<em class="parameter"><code><a class="link" href="
 </table></div>
 </div>
 <div class="refsect3">
-<a name="id-1.4.5.2.13.22.7"></a><h4>Returns</h4>
+<a name="id-1.4.5.2.13.22.8"></a><h4>Returns</h4>
 <p> A <a class="link" href="StoragedManager.html" title="StoragedManager"><span class="type">StoragedManager</span></a> or <a href="/usr/share/gtk-doc/html/glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a> if <em class="parameter"><code>object</code></em>
 does not implement the interface. Do not free the returned object, it is owned by <em class="parameter"><code>object</code></em>
 . </p>
@@ -1136,8 +1145,9 @@ does not implement the interface. Do not free the returned object, it is owned b
 storaged_object_peek_partition (<em class="parameter"><code><a class="link" href="StoragedObject.html" title="StoragedObject"><span class="type">StoragedObject</span></a> *object</code></em>);</pre>
 <p>Like <a class="link" href="StoragedObject.html#storaged-object-get-partition" title="storaged_object_get_partition ()"><code class="function">storaged_object_get_partition()</code></a> but doesn't increase the reference count on the returned object.</p>
 <div class="warning">It is not safe to use the returned object if you are on another thread than the one where the <a href="/usr/share/gtk-doc/html/gio/GDBusObjectManagerClient.html"><span class="type">GDBusObjectManagerClient</span></a> or <a href="/usr/share/gtk-doc/html/gio/GDBusObjectManagerServer.html"><span class="type">GDBusObjectManagerServer</span></a> for <em class="parameter"><code>object</code></em> is running.</div>
+<p><span class="annotation">[<acronym title="Exposed in C code, not necessarily available in other languages."><span class="acronym">skip</span></acronym>]</span></p>
 <div class="refsect3">
-<a name="id-1.4.5.2.13.23.6"></a><h4>Parameters</h4>
+<a name="id-1.4.5.2.13.23.7"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -1152,7 +1162,7 @@ storaged_object_peek_partition (<em class="parameter"><code><a class="link" href
 </table></div>
 </div>
 <div class="refsect3">
-<a name="id-1.4.5.2.13.23.7"></a><h4>Returns</h4>
+<a name="id-1.4.5.2.13.23.8"></a><h4>Returns</h4>
 <p> A <a class="link" href="StoragedPartition.html" title="StoragedPartition"><span class="type">StoragedPartition</span></a> or <a href="/usr/share/gtk-doc/html/glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a> if <em class="parameter"><code>object</code></em>
 does not implement the interface. Do not free the returned object, it is owned by <em class="parameter"><code>object</code></em>
 . </p>
@@ -1166,8 +1176,9 @@ does not implement the interface. Do not free the returned object, it is owned b
 storaged_object_peek_partition_table (<em class="parameter"><code><a class="link" href="StoragedObject.html" title="StoragedObject"><span class="type">StoragedObject</span></a> *object</code></em>);</pre>
 <p>Like <a class="link" href="StoragedObject.html#storaged-object-get-partition-table" title="storaged_object_get_partition_table ()"><code class="function">storaged_object_get_partition_table()</code></a> but doesn't increase the reference count on the returned object.</p>
 <div class="warning">It is not safe to use the returned object if you are on another thread than the one where the <a href="/usr/share/gtk-doc/html/gio/GDBusObjectManagerClient.html"><span class="type">GDBusObjectManagerClient</span></a> or <a href="/usr/share/gtk-doc/html/gio/GDBusObjectManagerServer.html"><span class="type">GDBusObjectManagerServer</span></a> for <em class="parameter"><code>object</code></em> is running.</div>
+<p><span class="annotation">[<acronym title="Exposed in C code, not necessarily available in other languages."><span class="acronym">skip</span></acronym>]</span></p>
 <div class="refsect3">
-<a name="id-1.4.5.2.13.24.6"></a><h4>Parameters</h4>
+<a name="id-1.4.5.2.13.24.7"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -1182,7 +1193,7 @@ storaged_object_peek_partition_table (<em class="parameter"><code><a class="link
 </table></div>
 </div>
 <div class="refsect3">
-<a name="id-1.4.5.2.13.24.7"></a><h4>Returns</h4>
+<a name="id-1.4.5.2.13.24.8"></a><h4>Returns</h4>
 <p> A <a class="link" href="StoragedPartitionTable.html" title="StoragedPartitionTable"><span class="type">StoragedPartitionTable</span></a> or <a href="/usr/share/gtk-doc/html/glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a> if <em class="parameter"><code>object</code></em>
 does not implement the interface. Do not free the returned object, it is owned by <em class="parameter"><code>object</code></em>
 . </p>
@@ -1196,8 +1207,9 @@ does not implement the interface. Do not free the returned object, it is owned b
 storaged_object_peek_mdraid (<em class="parameter"><code><a class="link" href="StoragedObject.html" title="StoragedObject"><span class="type">StoragedObject</span></a> *object</code></em>);</pre>
 <p>Like <a class="link" href="StoragedObject.html#storaged-object-get-mdraid" title="storaged_object_get_mdraid ()"><code class="function">storaged_object_get_mdraid()</code></a> but doesn't increase the reference count on the returned object.</p>
 <div class="warning">It is not safe to use the returned object if you are on another thread than the one where the <a href="/usr/share/gtk-doc/html/gio/GDBusObjectManagerClient.html"><span class="type">GDBusObjectManagerClient</span></a> or <a href="/usr/share/gtk-doc/html/gio/GDBusObjectManagerServer.html"><span class="type">GDBusObjectManagerServer</span></a> for <em class="parameter"><code>object</code></em> is running.</div>
+<p><span class="annotation">[<acronym title="Exposed in C code, not necessarily available in other languages."><span class="acronym">skip</span></acronym>]</span></p>
 <div class="refsect3">
-<a name="id-1.4.5.2.13.25.6"></a><h4>Parameters</h4>
+<a name="id-1.4.5.2.13.25.7"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -1212,13 +1224,13 @@ storaged_object_peek_mdraid (<em class="parameter"><code><a class="link" href="S
 </table></div>
 </div>
 <div class="refsect3">
-<a name="id-1.4.5.2.13.25.7"></a><h4>Returns</h4>
+<a name="id-1.4.5.2.13.25.8"></a><h4>Returns</h4>
 <p> A <a class="link" href="StoragedMDRaid.html" title="StoragedMDRaid"><span class="type">StoragedMDRaid</span></a> or <a href="/usr/share/gtk-doc/html/glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a> if <em class="parameter"><code>object</code></em>
 does not implement the interface. Do not free the returned object, it is owned by <em class="parameter"><code>object</code></em>
 . </p>
 <p><span class="annotation">[<acronym title="Don't free data after the code is done."><span class="acronym">transfer none</span></acronym>]</span></p>
 </div>
-<p class="since">Since 2.0.0</p>
+<p class="since">Since: 2.0.0</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -1659,7 +1671,7 @@ storaged_object_skeleton_set_mdraid (<em class="parameter"><code><a class="link"
 </tbody>
 </table></div>
 </div>
-<p class="since">Since 2.0.0</p>
+<p class="since">Since: 2.0.0</p>
 </div>
 </div>
 <div class="refsect1">
@@ -1826,7 +1838,7 @@ storaged_object_skeleton_set_mdraid (<em class="parameter"><code><a class="link"
 <p>The <a class="link" href="StoragedMDRaid.html" title="StoragedMDRaid"><span class="type">StoragedMDRaid</span></a> instance corresponding to the D-Bus interface <a class="link" href="gdbus-org.storaged.Storaged.MDRaid.html#gdbus-interface-org-storaged-Storaged-MDRaid.top_of_page">org.storaged.Storaged.MDRaid</a>, if any.</p>
 <p>Connect to the <a href="/usr/share/gtk-doc/html/gobject/gobject-The-Base-Object-Type.html#GObject-notify"><span class="type">“notify”</span></a> signal to get informed of property changes.</p>
 <p>Flags: Read / Write</p>
-<p class="since">Since 2.0.0</p>
+<p class="since">Since: 2.0.0</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -1855,7 +1867,6 @@ storaged_object_skeleton_set_mdraid (<em class="parameter"><code><a class="link"
 </div>
 </div>
 <div class="footer">
-<hr>
-          Generated by GTK-Doc V1.21</div>
+<hr>Generated by GTK-Doc V1.24</div>
 </body>
 </html>
