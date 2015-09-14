@@ -6,7 +6,7 @@
 <meta name="generator" content="DocBook XSL Stylesheets V1.78.1">
 <link rel="home" href="index.html" title="Storaged Reference Manual">
 <link rel="up" href="ref-library-generated.html" title="Generated Code">
-<link rel="prev" href="StoragedLoop.html" title="StoragedLoop">
+<link rel="prev" href="storaged-StoragedDriveLSM.html" title="StoragedDriveLSM">
 <link rel="next" href="storaged-StoragedBlockLVM2.html" title="StoragedBlockLVM2">
 <meta name="generator" content="GTK-Doc V1.24 (XML mode)">
 <link rel="stylesheet" href="style.css" type="text/css">
@@ -23,7 +23,7 @@
 </td>
 <td><a accesskey="h" href="index.html"><img src="home.png" width="16" height="16" border="0" alt="Home"></a></td>
 <td><a accesskey="u" href="ref-library-generated.html"><img src="up.png" width="16" height="16" border="0" alt="Up"></a></td>
-<td><a accesskey="p" href="StoragedLoop.html"><img src="left.png" width="16" height="16" border="0" alt="Prev"></a></td>
+<td><a accesskey="p" href="storaged-StoragedDriveLSM.html"><img src="left.png" width="16" height="16" border="0" alt="Prev"></a></td>
 <td><a accesskey="n" href="storaged-StoragedBlockLVM2.html"><img src="right.png" width="16" height="16" border="0" alt="Next"></a></td>
 </tr></table>
 <div class="refentry">
@@ -224,7 +224,7 @@ StoragedManagerLVM2 is implemented by
 storaged_manager_lvm2_interface_info (<em class="parameter"><code><span class="type">void</span></code></em>);</pre>
 <p>Gets a machine-readable description of the <a class="link" href="gdbus-org.storaged.Storaged.Manager.LVM2.html#gdbus-interface-org-storaged-Storaged-Manager-LVM2.top_of_page">org.storaged.Storaged.Manager.LVM2</a> D-Bus interface.</p>
 <div class="refsect3">
-<a name="id-1.4.5.16.11.2.5"></a><h4>Returns</h4>
+<a name="id-1.4.5.18.11.2.5"></a><h4>Returns</h4>
 <p> A <a href="/usr/share/gtk-doc/html/gio/gio-D-Bus-Introspection-Data.html#GDBusInterfaceInfo"><span class="type">GDBusInterfaceInfo</span></a>. Do not free. </p>
 <p><span class="annotation">[<acronym title="Don't free data after the code is done."><span class="acronym">transfer none</span></acronym>]</span></p>
 </div>
@@ -240,7 +240,7 @@ storaged_manager_lvm2_override_properties
 <p>Overrides all <a href="/usr/share/gtk-doc/html/gobject/gobject-The-Base-Object-Type.html#GObject"><span class="type">GObject</span></a> properties in the <a class="link" href="StoragedManagerLVM2.html" title="StoragedManagerLVM2"><span class="type">StoragedManagerLVM2</span></a> interface for a concrete class.
 The properties are overridden in the order they are defined.</p>
 <div class="refsect3">
-<a name="id-1.4.5.16.11.3.5"></a><h4>Parameters</h4>
+<a name="id-1.4.5.18.11.3.5"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -262,7 +262,7 @@ The properties are overridden in the order they are defined.</p>
 </table></div>
 </div>
 <div class="refsect3">
-<a name="id-1.4.5.16.11.3.6"></a><h4>Returns</h4>
+<a name="id-1.4.5.18.11.3.6"></a><h4>Returns</h4>
 <p> The last property id.</p>
 </div>
 <p class="since">Since: 2.0.0</p>
@@ -286,7 +286,7 @@ When the operation is finished, <em class="parameter"><code>callback</code></em>
 You can then call <a class="link" href="StoragedManagerLVM2.html#storaged-manager-lvm2-call-volume-group-create-finish" title="storaged_manager_lvm2_call_volume_group_create_finish ()"><code class="function">storaged_manager_lvm2_call_volume_group_create_finish()</code></a> to get the result of the operation.</p>
 <p>See <a class="link" href="StoragedManagerLVM2.html#storaged-manager-lvm2-call-volume-group-create-sync" title="storaged_manager_lvm2_call_volume_group_create_sync ()"><code class="function">storaged_manager_lvm2_call_volume_group_create_sync()</code></a> for the synchronous, blocking version of this method.</p>
 <div class="refsect3">
-<a name="id-1.4.5.16.11.4.6"></a><h4>Parameters</h4>
+<a name="id-1.4.5.18.11.4.6"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -346,7 +346,7 @@ storaged_manager_lvm2_call_volume_group_create_finish
                                 <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glib/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);</pre>
 <p>Finishes an operation started with <a class="link" href="StoragedManagerLVM2.html#storaged-manager-lvm2-call-volume-group-create" title="storaged_manager_lvm2_call_volume_group_create ()"><code class="function">storaged_manager_lvm2_call_volume_group_create()</code></a>.</p>
 <div class="refsect3">
-<a name="id-1.4.5.16.11.5.5"></a><h4>Parameters</h4>
+<a name="id-1.4.5.18.11.5.5"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -378,7 +378,7 @@ storaged_manager_lvm2_call_volume_group_create_finish
 </table></div>
 </div>
 <div class="refsect3">
-<a name="id-1.4.5.16.11.5.6"></a><h4>Returns</h4>
+<a name="id-1.4.5.18.11.5.6"></a><h4>Returns</h4>
 <p> <a href="/usr/share/gtk-doc/html/glib/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> if the call succeded, <a href="/usr/share/gtk-doc/html/glib/glib-Standard-Macros.html#FALSE:CAPS"><code class="literal">FALSE</code></a> if <em class="parameter"><code>error</code></em>
 is set. </p>
 <p><span class="annotation">[<acronym title="Exposed in C code, not necessarily available in other languages."><span class="acronym">skip</span></acronym>]</span></p>
@@ -401,7 +401,7 @@ storaged_manager_lvm2_call_volume_group_create_sync
 . The calling thread is blocked until a reply is received.</p>
 <p>See <a class="link" href="StoragedManagerLVM2.html#storaged-manager-lvm2-call-volume-group-create" title="storaged_manager_lvm2_call_volume_group_create ()"><code class="function">storaged_manager_lvm2_call_volume_group_create()</code></a> for the asynchronous version of this method.</p>
 <div class="refsect3">
-<a name="id-1.4.5.16.11.6.6"></a><h4>Parameters</h4>
+<a name="id-1.4.5.18.11.6.6"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -448,7 +448,7 @@ storaged_manager_lvm2_call_volume_group_create_sync
 </table></div>
 </div>
 <div class="refsect3">
-<a name="id-1.4.5.16.11.6.7"></a><h4>Returns</h4>
+<a name="id-1.4.5.18.11.6.7"></a><h4>Returns</h4>
 <p> <a href="/usr/share/gtk-doc/html/glib/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> if the call succeded, <a href="/usr/share/gtk-doc/html/glib/glib-Standard-Macros.html#FALSE:CAPS"><code class="literal">FALSE</code></a> if <em class="parameter"><code>error</code></em>
 is set. </p>
 <p><span class="annotation">[<acronym title="Exposed in C code, not necessarily available in other languages."><span class="acronym">skip</span></acronym>]</span></p>
@@ -467,7 +467,7 @@ storaged_manager_lvm2_complete_volume_group_create
 <p>This method will free <em class="parameter"><code>invocation</code></em>
 , you cannot use it afterwards.</p>
 <div class="refsect3">
-<a name="id-1.4.5.16.11.7.6"></a><h4>Parameters</h4>
+<a name="id-1.4.5.18.11.7.6"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -512,7 +512,7 @@ storaged_manager_lvm2_proxy_new (<em class="parameter"><code><a href="/usr/share
 You can then call <a class="link" href="StoragedManagerLVM2.html#storaged-manager-lvm2-proxy-new-finish" title="storaged_manager_lvm2_proxy_new_finish ()"><code class="function">storaged_manager_lvm2_proxy_new_finish()</code></a> to get the result of the operation.</p>
 <p>See <a class="link" href="StoragedManagerLVM2.html#storaged-manager-lvm2-proxy-new-sync" title="storaged_manager_lvm2_proxy_new_sync ()"><code class="function">storaged_manager_lvm2_proxy_new_sync()</code></a> for the synchronous, blocking version of this constructor.</p>
 <div class="refsect3">
-<a name="id-1.4.5.16.11.8.7"></a><h4>Parameters</h4>
+<a name="id-1.4.5.18.11.8.7"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -571,7 +571,7 @@ storaged_manager_lvm2_proxy_new_finish
                                 <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glib/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);</pre>
 <p>Finishes an operation started with <a class="link" href="StoragedManagerLVM2.html#storaged-manager-lvm2-proxy-new" title="storaged_manager_lvm2_proxy_new ()"><code class="function">storaged_manager_lvm2_proxy_new()</code></a>.</p>
 <div class="refsect3">
-<a name="id-1.4.5.16.11.9.5"></a><h4>Parameters</h4>
+<a name="id-1.4.5.18.11.9.5"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -593,7 +593,7 @@ storaged_manager_lvm2_proxy_new_finish
 </table></div>
 </div>
 <div class="refsect3">
-<a name="id-1.4.5.16.11.9.6"></a><h4>Returns</h4>
+<a name="id-1.4.5.18.11.9.6"></a><h4>Returns</h4>
 <p> The constructed proxy object or <a href="/usr/share/gtk-doc/html/glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a> if <em class="parameter"><code>error</code></em>
 is set. </p>
 <p><span class="annotation">[<acronym title="Free data after the code is done."><span class="acronym">transfer full</span></acronym>][<acronym title="Override the parsed C type with given type."><span class="acronym">type</span></acronym> StoragedManagerLVM2Proxy]</span></p>
@@ -614,7 +614,7 @@ storaged_manager_lvm2_proxy_new_sync (<em class="parameter"><code><a href="/usr/
 <p>The calling thread is blocked until a reply is received.</p>
 <p>See <a class="link" href="StoragedManagerLVM2.html#storaged-manager-lvm2-proxy-new" title="storaged_manager_lvm2_proxy_new ()"><code class="function">storaged_manager_lvm2_proxy_new()</code></a> for the asynchronous version of this constructor.</p>
 <div class="refsect3">
-<a name="id-1.4.5.16.11.10.7"></a><h4>Parameters</h4>
+<a name="id-1.4.5.18.11.10.7"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -657,7 +657,7 @@ is not a message bus connection. </p></td>
 </table></div>
 </div>
 <div class="refsect3">
-<a name="id-1.4.5.16.11.10.8"></a><h4>Returns</h4>
+<a name="id-1.4.5.18.11.10.8"></a><h4>Returns</h4>
 <p> The constructed proxy object or <a href="/usr/share/gtk-doc/html/glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a> if <em class="parameter"><code>error</code></em>
 is set. </p>
 <p><span class="annotation">[<acronym title="Free data after the code is done."><span class="acronym">transfer full</span></acronym>][<acronym title="Override the parsed C type with given type."><span class="acronym">type</span></acronym> StoragedManagerLVM2Proxy]</span></p>
@@ -682,7 +682,7 @@ storaged_manager_lvm2_proxy_new_for_bus
 You can then call <a class="link" href="StoragedManagerLVM2.html#storaged-manager-lvm2-proxy-new-for-bus-finish" title="storaged_manager_lvm2_proxy_new_for_bus_finish ()"><code class="function">storaged_manager_lvm2_proxy_new_for_bus_finish()</code></a> to get the result of the operation.</p>
 <p>See <a class="link" href="StoragedManagerLVM2.html#storaged-manager-lvm2-proxy-new-for-bus-sync" title="storaged_manager_lvm2_proxy_new_for_bus_sync ()"><code class="function">storaged_manager_lvm2_proxy_new_for_bus_sync()</code></a> for the synchronous, blocking version of this constructor.</p>
 <div class="refsect3">
-<a name="id-1.4.5.16.11.11.7"></a><h4>Parameters</h4>
+<a name="id-1.4.5.18.11.11.7"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -740,7 +740,7 @@ storaged_manager_lvm2_proxy_new_for_bus_finish
                                 <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glib/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);</pre>
 <p>Finishes an operation started with <a class="link" href="StoragedManagerLVM2.html#storaged-manager-lvm2-proxy-new-for-bus" title="storaged_manager_lvm2_proxy_new_for_bus ()"><code class="function">storaged_manager_lvm2_proxy_new_for_bus()</code></a>.</p>
 <div class="refsect3">
-<a name="id-1.4.5.16.11.12.5"></a><h4>Parameters</h4>
+<a name="id-1.4.5.18.11.12.5"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -762,7 +762,7 @@ storaged_manager_lvm2_proxy_new_for_bus_finish
 </table></div>
 </div>
 <div class="refsect3">
-<a name="id-1.4.5.16.11.12.6"></a><h4>Returns</h4>
+<a name="id-1.4.5.18.11.12.6"></a><h4>Returns</h4>
 <p> The constructed proxy object or <a href="/usr/share/gtk-doc/html/glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a> if <em class="parameter"><code>error</code></em>
 is set. </p>
 <p><span class="annotation">[<acronym title="Free data after the code is done."><span class="acronym">transfer full</span></acronym>][<acronym title="Override the parsed C type with given type."><span class="acronym">type</span></acronym> StoragedManagerLVM2Proxy]</span></p>
@@ -784,7 +784,7 @@ storaged_manager_lvm2_proxy_new_for_bus_sync
 <p>The calling thread is blocked until a reply is received.</p>
 <p>See <a class="link" href="StoragedManagerLVM2.html#storaged-manager-lvm2-proxy-new-for-bus" title="storaged_manager_lvm2_proxy_new_for_bus ()"><code class="function">storaged_manager_lvm2_proxy_new_for_bus()</code></a> for the asynchronous version of this constructor.</p>
 <div class="refsect3">
-<a name="id-1.4.5.16.11.13.7"></a><h4>Parameters</h4>
+<a name="id-1.4.5.18.11.13.7"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -826,7 +826,7 @@ storaged_manager_lvm2_proxy_new_for_bus_sync
 </table></div>
 </div>
 <div class="refsect3">
-<a name="id-1.4.5.16.11.13.8"></a><h4>Returns</h4>
+<a name="id-1.4.5.18.11.13.8"></a><h4>Returns</h4>
 <p> The constructed proxy object or <a href="/usr/share/gtk-doc/html/glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a> if <em class="parameter"><code>error</code></em>
 is set. </p>
 <p><span class="annotation">[<acronym title="Free data after the code is done."><span class="acronym">transfer full</span></acronym>][<acronym title="Override the parsed C type with given type."><span class="acronym">type</span></acronym> StoragedManagerLVM2Proxy]</span></p>
@@ -840,7 +840,7 @@ is set. </p>
 storaged_manager_lvm2_skeleton_new (<em class="parameter"><code><span class="type">void</span></code></em>);</pre>
 <p>Creates a skeleton object for the D-Bus interface <a class="link" href="gdbus-org.storaged.Storaged.Manager.LVM2.html#gdbus-interface-org-storaged-Storaged-Manager-LVM2.top_of_page">org.storaged.Storaged.Manager.LVM2</a>.</p>
 <div class="refsect3">
-<a name="id-1.4.5.16.11.14.5"></a><h4>Returns</h4>
+<a name="id-1.4.5.18.11.14.5"></a><h4>Returns</h4>
 <p> The skeleton object. </p>
 <p><span class="annotation">[<acronym title="Free data after the code is done."><span class="acronym">transfer full</span></acronym>][<acronym title="Override the parsed C type with given type."><span class="acronym">type</span></acronym> StoragedManagerLVM2Skeleton]</span></p>
 </div>
@@ -871,7 +871,7 @@ storaged_manager_lvm2_skeleton_new (<em class="parameter"><code><span class="typ
 </pre>
 <p>Virtual table for the D-Bus interface <a class="link" href="gdbus-org.storaged.Storaged.Manager.LVM2.html#gdbus-interface-org-storaged-Storaged-Manager-LVM2.top_of_page">org.storaged.Storaged.Manager.LVM2</a>.</p>
 <div class="refsect3">
-<a name="id-1.4.5.16.12.3.5"></a><h4>Members</h4>
+<a name="id-1.4.5.18.12.3.5"></a><h4>Members</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="300px" class="struct_members_name">
@@ -910,7 +910,7 @@ storaged_manager_lvm2_skeleton_new (<em class="parameter"><code><span class="typ
 </pre>
 <p>Class structure for <a class="link" href="StoragedManagerLVM2.html#StoragedManagerLVM2Proxy"><span class="type">StoragedManagerLVM2Proxy</span></a>.</p>
 <div class="refsect3">
-<a name="id-1.4.5.16.12.5.5"></a><h4>Members</h4>
+<a name="id-1.4.5.18.12.5.5"></a><h4>Members</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="300px" class="struct_members_name">
@@ -944,7 +944,7 @@ storaged_manager_lvm2_skeleton_new (<em class="parameter"><code><span class="typ
 </pre>
 <p>Class structure for <a class="link" href="StoragedManagerLVM2.html#StoragedManagerLVM2Skeleton" title="struct StoragedManagerLVM2Skeleton"><span class="type">StoragedManagerLVM2Skeleton</span></a>.</p>
 <div class="refsect3">
-<a name="id-1.4.5.16.12.7.5"></a><h4>Members</h4>
+<a name="id-1.4.5.18.12.7.5"></a><h4>Members</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="300px" class="struct_members_name">

@@ -1,5 +1,4 @@
 <?xml version="1.0" encoding="utf-8" standalone="no"?>
-<!DOCTYPE book PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "">
 <book xmlns="http://www.devhelp.net/book" title="Storaged Reference Manual" link="index.html" author="" name="storaged" version="2" language="c">
   <chapters>
     <sub name="Manual pages and Overview" link="overview.html">
@@ -17,6 +16,7 @@
         <sub name="The /org/storaged/Storaged/block_devices/* objects" link="ref-dbus-block-devices.html"/>
         <sub name="The /org/storaged/Storaged/drives/* objects" link="ref-dbus-drives.html"/>
         <sub name="The /org/storaged/Storaged/mdraid/* objects" link="ref-dbus-md-raid.html"/>
+        <sub name="The /org/storaged/Storaged/iscsi/session[0-9]+ objects" link="ref-iscsi-session.html"/>
         <sub name="The /org/storaged/Storaged/jobs/* objects" link="ref-dbus-jobs.html"/>
         <sub name="Authorization Checks" link="storaged-polkit-actions.html"/>
         <sub name="The options parameter" link="storaged-std-options.html"/>
@@ -34,12 +34,19 @@
         <sub name="org.storaged.Storaged.Encrypted" link="gdbus-org.storaged.Storaged.Encrypted.html"/>
         <sub name="org.storaged.Storaged.Loop" link="gdbus-org.storaged.Storaged.Loop.html"/>
         <sub name="org.storaged.Storaged.Job" link="gdbus-org.storaged.Storaged.Job.html"/>
+        <sub name="org.storaged.Storaged.Manager.LSM" link="gdbus-org.storaged.Storaged.Manager.LSM.html"/>
+        <sub name="org.storaged.Storaged.Drive.LSM" link="gdbus-org.storaged.Storaged.Drive.LSM.html"/>
         <sub name="org.storaged.Storaged.Block.LVM2" link="gdbus-org.storaged.Storaged.Block.LVM2.html"/>
         <sub name="org.storaged.Storaged.LogicalVolume" link="gdbus-org.storaged.Storaged.LogicalVolume.html"/>
         <sub name="org.storaged.Storaged.Manager.LVM2" link="gdbus-org.storaged.Storaged.Manager.LVM2.html"/>
         <sub name="org.storaged.Storaged.PhysicalVolume" link="gdbus-org.storaged.Storaged.PhysicalVolume.html"/>
         <sub name="org.storaged.Storaged.VolumeGroup" link="gdbus-org.storaged.Storaged.VolumeGroup.html"/>
+        <sub name="org.storaged.Storaged.ISCSI.Session" link="gdbus-org.storaged.Storaged.ISCSI.Session.html"/>
         <sub name="org.storaged.Storaged.Manager.ISCSI.Initiator" link="gdbus-org.storaged.Storaged.Manager.ISCSI.Initiator.html"/>
+        <sub name="org.storaged.Storaged.Manager.BTRFS" link="gdbus-org.storaged.Storaged.Manager.BTRFS.html"/>
+        <sub name="org.storaged.Storaged.Filesystem.BTRFS" link="gdbus-org.storaged.Storaged.Filesystem.BTRFS.html"/>
+        <sub name="org.storaged.Storaged.Manager.ZRAM" link="gdbus-org.storaged.Storaged.Manager.ZRAM.html"/>
+        <sub name="org.storaged.Storaged.Block.ZRAM" link="gdbus-org.storaged.Storaged.Block.ZRAM.html"/>
       </sub>
     </sub>
     <sub name="Library API Reference" link="ref-library.html">
@@ -61,12 +68,19 @@
         <sub name="StoragedSwapspace" link="StoragedSwapspace.html"/>
         <sub name="StoragedEncrypted" link="StoragedEncrypted.html"/>
         <sub name="StoragedLoop" link="StoragedLoop.html"/>
+        <sub name="StoragedManagerLSM" link="storaged-StoragedManagerLSM.html"/>
+        <sub name="StoragedDriveLSM" link="storaged-StoragedDriveLSM.html"/>
         <sub name="StoragedManagerLVM2" link="StoragedManagerLVM2.html"/>
         <sub name="StoragedBlockLVM2" link="storaged-StoragedBlockLVM2.html"/>
         <sub name="StoragedPhysicalVolume" link="storaged-StoragedPhysicalVolume.html"/>
         <sub name="StoragedVolumeGroup" link="storaged-StoragedVolumeGroup.html"/>
         <sub name="StoragedLogicalVolume" link="storaged-StoragedLogicalVolume.html"/>
-        <sub name="StoragedManagerISCSIInitiator" link="storaged-StoragedManagerISCSIInitiator.html"/>
+        <sub name="StoragedISCSISession" link="StoragedISCSISession.html"/>
+        <sub name="StoragedManagerISCSIInitiator" link="StoragedManagerISCSIInitiator.html"/>
+        <sub name="StoragedManagerBTRFS" link="StoragedManagerBTRFS.html"/>
+        <sub name="StoragedFilesystemBTRFS" link="StoragedFilesystemBTRFS.html"/>
+        <sub name="StoragedManagerZRAM" link="StoragedManagerZRAM.html"/>
+        <sub name="StoragedBlockZRAM" link="StoragedBlockZRAM.html"/>
       </sub>
     </sub>
     <sub name="Daemon Implementation Details" link="ref-daemon.html">
@@ -117,12 +131,11 @@
     </sub>
     <sub name="Index" link="api-index.html"/>
     <sub name="Index of deprecated symbols" link="api-index-deprecated.html"/>
-    <sub name="Index of new symbols in 2.0.0" link="api-index-2.0.0.html"/>
+    <sub name="Index of new symbols in 2.3.0" link="api-index-2.3.0.html"/>
     <sub name="Annotation Glossary" link="annotation-glossary.html"/>
     <sub name="Object Hierarchy" link="gio-hierarchy.html"/>
   </chapters>
   <functions>
-    <keyword type="" name="ATA group" link="storaged-project.8.html#id-1.2.4.6.3"/>
     <keyword type="method" name="The LoopSetup() method" link="gdbus-org.storaged.Storaged.Manager.html#gdbus-method-org-storaged-Storaged-Manager.LoopSetup"/>
     <keyword type="method" name="The MDRaidCreate() method" link="gdbus-org.storaged.Storaged.Manager.html#gdbus-method-org-storaged-Storaged-Manager.MDRaidCreate"/>
     <keyword type="method" name="The EnableModules() method" link="gdbus-org.storaged.Storaged.Manager.html#gdbus-method-org-storaged-Storaged-Manager.EnableModules"/>
@@ -197,6 +210,7 @@
     <keyword type="method" name="The AddDevice() method" link="gdbus-org.storaged.Storaged.MDRaid.html#gdbus-method-org-storaged-Storaged-MDRaid.AddDevice"/>
     <keyword type="method" name="The SetBitmapLocation() method" link="gdbus-org.storaged.Storaged.MDRaid.html#gdbus-method-org-storaged-Storaged-MDRaid.SetBitmapLocation"/>
     <keyword type="method" name="The RequestSyncAction() method" link="gdbus-org.storaged.Storaged.MDRaid.html#gdbus-method-org-storaged-Storaged-MDRaid.RequestSyncAction"/>
+    <keyword type="method" name="The Delete() method" link="gdbus-org.storaged.Storaged.MDRaid.html#gdbus-method-org-storaged-Storaged-MDRaid.Delete"/>
     <keyword type="property" name="The &quot;UUID&quot; property" link="gdbus-org.storaged.Storaged.MDRaid.html#gdbus-property-org-storaged-Storaged-MDRaid.UUID"/>
     <keyword type="property" name="The &quot;Name&quot; property" link="gdbus-org.storaged.Storaged.MDRaid.html#gdbus-property-org-storaged-Storaged-MDRaid.Name"/>
     <keyword type="property" name="The &quot;Level&quot; property" link="gdbus-org.storaged.Storaged.MDRaid.html#gdbus-property-org-storaged-Storaged-MDRaid.Level"/>
@@ -210,6 +224,8 @@
     <keyword type="property" name="The &quot;BitmapLocation&quot; property" link="gdbus-org.storaged.Storaged.MDRaid.html#gdbus-property-org-storaged-Storaged-MDRaid.BitmapLocation"/>
     <keyword type="property" name="The &quot;ChunkSize&quot; property" link="gdbus-org.storaged.Storaged.MDRaid.html#gdbus-property-org-storaged-Storaged-MDRaid.ChunkSize"/>
     <keyword type="property" name="The &quot;ActiveDevices&quot; property" link="gdbus-org.storaged.Storaged.MDRaid.html#gdbus-property-org-storaged-Storaged-MDRaid.ActiveDevices"/>
+    <keyword type="property" name="The &quot;ChildConfiguration&quot; property" link="gdbus-org.storaged.Storaged.MDRaid.html#gdbus-property-org-storaged-Storaged-MDRaid.ChildConfiguration"/>
+    <keyword type="property" name="The &quot;Running&quot; property" link="gdbus-org.storaged.Storaged.MDRaid.html#gdbus-property-org-storaged-Storaged-MDRaid.Running"/>
     <keyword type="method" name="The AddConfigurationItem() method" link="gdbus-org.storaged.Storaged.Block.html#gdbus-method-org-storaged-Storaged-Block.AddConfigurationItem"/>
     <keyword type="method" name="The RemoveConfigurationItem() method" link="gdbus-org.storaged.Storaged.Block.html#gdbus-method-org-storaged-Storaged-Block.RemoveConfigurationItem"/>
     <keyword type="method" name="The UpdateConfigurationItem() method" link="gdbus-org.storaged.Storaged.Block.html#gdbus-method-org-storaged-Storaged-Block.UpdateConfigurationItem"/>
@@ -258,6 +274,7 @@
     <keyword type="property" name="The &quot;IsContainer&quot; property" link="gdbus-org.storaged.Storaged.Partition.html#gdbus-property-org-storaged-Storaged-Partition.IsContainer"/>
     <keyword type="property" name="The &quot;IsContained&quot; property" link="gdbus-org.storaged.Storaged.Partition.html#gdbus-property-org-storaged-Storaged-Partition.IsContained"/>
     <keyword type="method" name="The CreatePartition() method" link="gdbus-org.storaged.Storaged.PartitionTable.html#gdbus-method-org-storaged-Storaged-PartitionTable.CreatePartition"/>
+    <keyword type="method" name="The CreatePartitionAndFormat() method" link="gdbus-org.storaged.Storaged.PartitionTable.html#gdbus-method-org-storaged-Storaged-PartitionTable.CreatePartitionAndFormat"/>
     <keyword type="property" name="The &quot;Type&quot; property" link="gdbus-org.storaged.Storaged.PartitionTable.html#gdbus-property-org-storaged-Storaged-PartitionTable.Type"/>
     <keyword type="method" name="The SetLabel() method" link="gdbus-org.storaged.Storaged.Filesystem.html#gdbus-method-org-storaged-Storaged-Filesystem.SetLabel"/>
     <keyword type="method" name="The Mount() method" link="gdbus-org.storaged.Storaged.Filesystem.html#gdbus-method-org-storaged-Storaged-Filesystem.Mount"/>
@@ -269,6 +286,7 @@
     <keyword type="method" name="The Unlock() method" link="gdbus-org.storaged.Storaged.Encrypted.html#gdbus-method-org-storaged-Storaged-Encrypted.Unlock"/>
     <keyword type="method" name="The Lock() method" link="gdbus-org.storaged.Storaged.Encrypted.html#gdbus-method-org-storaged-Storaged-Encrypted.Lock"/>
     <keyword type="method" name="The ChangePassphrase() method" link="gdbus-org.storaged.Storaged.Encrypted.html#gdbus-method-org-storaged-Storaged-Encrypted.ChangePassphrase"/>
+    <keyword type="property" name="The &quot;ChildConfiguration&quot; property" link="gdbus-org.storaged.Storaged.Encrypted.html#gdbus-property-org-storaged-Storaged-Encrypted.ChildConfiguration"/>
     <keyword type="method" name="The Delete() method" link="gdbus-org.storaged.Storaged.Loop.html#gdbus-method-org-storaged-Storaged-Loop.Delete"/>
     <keyword type="method" name="The SetAutoclear() method" link="gdbus-org.storaged.Storaged.Loop.html#gdbus-method-org-storaged-Storaged-Loop.SetAutoclear"/>
     <keyword type="property" name="The &quot;BackingFile&quot; property" link="gdbus-org.storaged.Storaged.Loop.html#gdbus-property-org-storaged-Storaged-Loop.BackingFile"/>
@@ -286,6 +304,16 @@
     <keyword type="property" name="The &quot;Objects&quot; property" link="gdbus-org.storaged.Storaged.Job.html#gdbus-property-org-storaged-Storaged-Job.Objects"/>
     <keyword type="property" name="The &quot;StartedByUID&quot; property" link="gdbus-org.storaged.Storaged.Job.html#gdbus-property-org-storaged-Storaged-Job.StartedByUID"/>
     <keyword type="property" name="The &quot;Cancelable&quot; property" link="gdbus-org.storaged.Storaged.Job.html#gdbus-property-org-storaged-Storaged-Job.Cancelable"/>
+    <keyword type="property" name="The &quot;IsOK&quot; property" link="gdbus-org.storaged.Storaged.Drive.LSM.html#gdbus-property-org-storaged-Storaged-Drive-LSM.IsOK"/>
+    <keyword type="property" name="The &quot;IsRaidDegraded&quot; property" link="gdbus-org.storaged.Storaged.Drive.LSM.html#gdbus-property-org-storaged-Storaged-Drive-LSM.IsRaidDegraded"/>
+    <keyword type="property" name="The &quot;IsRaidError&quot; property" link="gdbus-org.storaged.Storaged.Drive.LSM.html#gdbus-property-org-storaged-Storaged-Drive-LSM.IsRaidError"/>
+    <keyword type="property" name="The &quot;IsRaidVerifying&quot; property" link="gdbus-org.storaged.Storaged.Drive.LSM.html#gdbus-property-org-storaged-Storaged-Drive-LSM.IsRaidVerifying"/>
+    <keyword type="property" name="The &quot;IsRaidReconstructing&quot; property" link="gdbus-org.storaged.Storaged.Drive.LSM.html#gdbus-property-org-storaged-Storaged-Drive-LSM.IsRaidReconstructing"/>
+    <keyword type="property" name="The &quot;RaidType&quot; property" link="gdbus-org.storaged.Storaged.Drive.LSM.html#gdbus-property-org-storaged-Storaged-Drive-LSM.RaidType"/>
+    <keyword type="property" name="The &quot;StatusInfo&quot; property" link="gdbus-org.storaged.Storaged.Drive.LSM.html#gdbus-property-org-storaged-Storaged-Drive-LSM.StatusInfo"/>
+    <keyword type="property" name="The &quot;MinIoSize&quot; property" link="gdbus-org.storaged.Storaged.Drive.LSM.html#gdbus-property-org-storaged-Storaged-Drive-LSM.MinIoSize"/>
+    <keyword type="property" name="The &quot;OptIoSize&quot; property" link="gdbus-org.storaged.Storaged.Drive.LSM.html#gdbus-property-org-storaged-Storaged-Drive-LSM.OptIoSize"/>
+    <keyword type="property" name="The &quot;RaidDiskCount&quot; property" link="gdbus-org.storaged.Storaged.Drive.LSM.html#gdbus-property-org-storaged-Storaged-Drive-LSM.RaidDiskCount"/>
     <keyword type="property" name="The &quot;LogicalVolume&quot; property" link="gdbus-org.storaged.Storaged.Block.LVM2.html#gdbus-property-org-storaged-Storaged-Block-LVM2.LogicalVolume"/>
     <keyword type="method" name="The Activate() method" link="gdbus-org.storaged.Storaged.LogicalVolume.html#gdbus-method-org-storaged-Storaged-LogicalVolume.Activate"/>
     <keyword type="method" name="The Deactivate() method" link="gdbus-org.storaged.Storaged.LogicalVolume.html#gdbus-method-org-storaged-Storaged-LogicalVolume.Deactivate"/>
@@ -293,6 +321,8 @@
     <keyword type="method" name="The Rename() method" link="gdbus-org.storaged.Storaged.LogicalVolume.html#gdbus-method-org-storaged-Storaged-LogicalVolume.Rename"/>
     <keyword type="method" name="The Resize() method" link="gdbus-org.storaged.Storaged.LogicalVolume.html#gdbus-method-org-storaged-Storaged-LogicalVolume.Resize"/>
     <keyword type="method" name="The CreateSnapshot() method" link="gdbus-org.storaged.Storaged.LogicalVolume.html#gdbus-method-org-storaged-Storaged-LogicalVolume.CreateSnapshot"/>
+    <keyword type="method" name="The CacheAttach() method" link="gdbus-org.storaged.Storaged.LogicalVolume.html#gdbus-method-org-storaged-Storaged-LogicalVolume.CacheAttach"/>
+    <keyword type="method" name="The CacheSplit() method" link="gdbus-org.storaged.Storaged.LogicalVolume.html#gdbus-method-org-storaged-Storaged-LogicalVolume.CacheSplit"/>
     <keyword type="property" name="The &quot;VolumeGroup&quot; property" link="gdbus-org.storaged.Storaged.LogicalVolume.html#gdbus-property-org-storaged-Storaged-LogicalVolume.VolumeGroup"/>
     <keyword type="property" name="The &quot;Name&quot; property" link="gdbus-org.storaged.Storaged.LogicalVolume.html#gdbus-property-org-storaged-Storaged-LogicalVolume.Name"/>
     <keyword type="property" name="The &quot;Active&quot; property" link="gdbus-org.storaged.Storaged.LogicalVolume.html#gdbus-property-org-storaged-Storaged-LogicalVolume.Active"/>
@@ -303,6 +333,7 @@
     <keyword type="property" name="The &quot;Type&quot; property" link="gdbus-org.storaged.Storaged.LogicalVolume.html#gdbus-property-org-storaged-Storaged-LogicalVolume.Type"/>
     <keyword type="property" name="The &quot;ThinPool&quot; property" link="gdbus-org.storaged.Storaged.LogicalVolume.html#gdbus-property-org-storaged-Storaged-LogicalVolume.ThinPool"/>
     <keyword type="property" name="The &quot;Origin&quot; property" link="gdbus-org.storaged.Storaged.LogicalVolume.html#gdbus-property-org-storaged-Storaged-LogicalVolume.Origin"/>
+    <keyword type="property" name="The &quot;ChildConfiguration&quot; property" link="gdbus-org.storaged.Storaged.LogicalVolume.html#gdbus-property-org-storaged-Storaged-LogicalVolume.ChildConfiguration"/>
     <keyword type="method" name="The VolumeGroupCreate() method" link="gdbus-org.storaged.Storaged.Manager.LVM2.html#gdbus-method-org-storaged-Storaged-Manager-LVM2.VolumeGroupCreate"/>
     <keyword type="property" name="The &quot;VolumeGroup&quot; property" link="gdbus-org.storaged.Storaged.PhysicalVolume.html#gdbus-property-org-storaged-Storaged-PhysicalVolume.VolumeGroup"/>
     <keyword type="property" name="The &quot;Size&quot; property" link="gdbus-org.storaged.Storaged.PhysicalVolume.html#gdbus-property-org-storaged-Storaged-PhysicalVolume.Size"/>
@@ -322,11 +353,56 @@
     <keyword type="property" name="The &quot;FreeSize&quot; property" link="gdbus-org.storaged.Storaged.VolumeGroup.html#gdbus-property-org-storaged-Storaged-VolumeGroup.FreeSize"/>
     <keyword type="property" name="The &quot;ExtentSize&quot; property" link="gdbus-org.storaged.Storaged.VolumeGroup.html#gdbus-property-org-storaged-Storaged-VolumeGroup.ExtentSize"/>
     <keyword type="property" name="The &quot;NeedsPolling&quot; property" link="gdbus-org.storaged.Storaged.VolumeGroup.html#gdbus-property-org-storaged-Storaged-VolumeGroup.NeedsPolling"/>
+    <keyword type="method" name="The Logout() method" link="gdbus-org.storaged.Storaged.ISCSI.Session.html#gdbus-method-org-storaged-Storaged-ISCSI-Session.Logout"/>
+    <keyword type="method" name="The LogoutInterface() method" link="gdbus-org.storaged.Storaged.ISCSI.Session.html#gdbus-method-org-storaged-Storaged-ISCSI-Session.LogoutInterface"/>
+    <keyword type="property" name="The &quot;target_name&quot; property" link="gdbus-org.storaged.Storaged.ISCSI.Session.html#gdbus-property-org-storaged-Storaged-ISCSI-Session.target_name"/>
+    <keyword type="property" name="The &quot;tpgt&quot; property" link="gdbus-org.storaged.Storaged.ISCSI.Session.html#gdbus-property-org-storaged-Storaged-ISCSI-Session.tpgt"/>
+    <keyword type="property" name="The &quot;address&quot; property" link="gdbus-org.storaged.Storaged.ISCSI.Session.html#gdbus-property-org-storaged-Storaged-ISCSI-Session.address"/>
+    <keyword type="property" name="The &quot;port&quot; property" link="gdbus-org.storaged.Storaged.ISCSI.Session.html#gdbus-property-org-storaged-Storaged-ISCSI-Session.port"/>
+    <keyword type="property" name="The &quot;persistent_address&quot; property" link="gdbus-org.storaged.Storaged.ISCSI.Session.html#gdbus-property-org-storaged-Storaged-ISCSI-Session.persistent_address"/>
+    <keyword type="property" name="The &quot;persistent_port&quot; property" link="gdbus-org.storaged.Storaged.ISCSI.Session.html#gdbus-property-org-storaged-Storaged-ISCSI-Session.persistent_port"/>
+    <keyword type="property" name="The &quot;abort_timeout&quot; property" link="gdbus-org.storaged.Storaged.ISCSI.Session.html#gdbus-property-org-storaged-Storaged-ISCSI-Session.abort_timeout"/>
+    <keyword type="property" name="The &quot;lu_reset_timeout&quot; property" link="gdbus-org.storaged.Storaged.ISCSI.Session.html#gdbus-property-org-storaged-Storaged-ISCSI-Session.lu_reset_timeout"/>
+    <keyword type="property" name="The &quot;recovery_timeout&quot; property" link="gdbus-org.storaged.Storaged.ISCSI.Session.html#gdbus-property-org-storaged-Storaged-ISCSI-Session.recovery_timeout"/>
+    <keyword type="property" name="The &quot;tgt_reset_timeout&quot; property" link="gdbus-org.storaged.Storaged.ISCSI.Session.html#gdbus-property-org-storaged-Storaged-ISCSI-Session.tgt_reset_timeout"/>
     <keyword type="method" name="The GetInitiatorName() method" link="gdbus-org.storaged.Storaged.Manager.ISCSI.Initiator.html#gdbus-method-org-storaged-Storaged-Manager-ISCSI-Initiator.GetInitiatorName"/>
     <keyword type="method" name="The SetInitiatorName() method" link="gdbus-org.storaged.Storaged.Manager.ISCSI.Initiator.html#gdbus-method-org-storaged-Storaged-Manager-ISCSI-Initiator.SetInitiatorName"/>
     <keyword type="method" name="The DiscoverSendTargetsNoAuth() method" link="gdbus-org.storaged.Storaged.Manager.ISCSI.Initiator.html#gdbus-method-org-storaged-Storaged-Manager-ISCSI-Initiator.DiscoverSendTargetsNoAuth"/>
     <keyword type="method" name="The DiscoverSendTargetsChap() method" link="gdbus-org.storaged.Storaged.Manager.ISCSI.Initiator.html#gdbus-method-org-storaged-Storaged-Manager-ISCSI-Initiator.DiscoverSendTargetsChap"/>
     <keyword type="method" name="The DiscoverFirmware() method" link="gdbus-org.storaged.Storaged.Manager.ISCSI.Initiator.html#gdbus-method-org-storaged-Storaged-Manager-ISCSI-Initiator.DiscoverFirmware"/>
+    <keyword type="method" name="The Login() method" link="gdbus-org.storaged.Storaged.Manager.ISCSI.Initiator.html#gdbus-method-org-storaged-Storaged-Manager-ISCSI-Initiator.Login"/>
+    <keyword type="method" name="The Logout() method" link="gdbus-org.storaged.Storaged.Manager.ISCSI.Initiator.html#gdbus-method-org-storaged-Storaged-Manager-ISCSI-Initiator.Logout"/>
+    <keyword type="method" name="The CreateVolume() method" link="gdbus-org.storaged.Storaged.Manager.BTRFS.html#gdbus-method-org-storaged-Storaged-Manager-BTRFS.CreateVolume"/>
+    <keyword type="method" name="The AddDevice() method" link="gdbus-org.storaged.Storaged.Filesystem.BTRFS.html#gdbus-method-org-storaged-Storaged-Filesystem-BTRFS.AddDevice"/>
+    <keyword type="method" name="The RemoveDevice() method" link="gdbus-org.storaged.Storaged.Filesystem.BTRFS.html#gdbus-method-org-storaged-Storaged-Filesystem-BTRFS.RemoveDevice"/>
+    <keyword type="method" name="The CreateSubvolume() method" link="gdbus-org.storaged.Storaged.Filesystem.BTRFS.html#gdbus-method-org-storaged-Storaged-Filesystem-BTRFS.CreateSubvolume"/>
+    <keyword type="method" name="The RemoveSubvolume() method" link="gdbus-org.storaged.Storaged.Filesystem.BTRFS.html#gdbus-method-org-storaged-Storaged-Filesystem-BTRFS.RemoveSubvolume"/>
+    <keyword type="method" name="The GetSubvolumes() method" link="gdbus-org.storaged.Storaged.Filesystem.BTRFS.html#gdbus-method-org-storaged-Storaged-Filesystem-BTRFS.GetSubvolumes"/>
+    <keyword type="method" name="The CreateSnapshot() method" link="gdbus-org.storaged.Storaged.Filesystem.BTRFS.html#gdbus-method-org-storaged-Storaged-Filesystem-BTRFS.CreateSnapshot"/>
+    <keyword type="method" name="The Repair() method" link="gdbus-org.storaged.Storaged.Filesystem.BTRFS.html#gdbus-method-org-storaged-Storaged-Filesystem-BTRFS.Repair"/>
+    <keyword type="method" name="The Resize() method" link="gdbus-org.storaged.Storaged.Filesystem.BTRFS.html#gdbus-method-org-storaged-Storaged-Filesystem-BTRFS.Resize"/>
+    <keyword type="method" name="The SetLabel() method" link="gdbus-org.storaged.Storaged.Filesystem.BTRFS.html#gdbus-method-org-storaged-Storaged-Filesystem-BTRFS.SetLabel"/>
+    <keyword type="property" name="The &quot;label&quot; property" link="gdbus-org.storaged.Storaged.Filesystem.BTRFS.html#gdbus-property-org-storaged-Storaged-Filesystem-BTRFS.label"/>
+    <keyword type="property" name="The &quot;uuid&quot; property" link="gdbus-org.storaged.Storaged.Filesystem.BTRFS.html#gdbus-property-org-storaged-Storaged-Filesystem-BTRFS.uuid"/>
+    <keyword type="property" name="The &quot;num_devices&quot; property" link="gdbus-org.storaged.Storaged.Filesystem.BTRFS.html#gdbus-property-org-storaged-Storaged-Filesystem-BTRFS.num_devices"/>
+    <keyword type="property" name="The &quot;used&quot; property" link="gdbus-org.storaged.Storaged.Filesystem.BTRFS.html#gdbus-property-org-storaged-Storaged-Filesystem-BTRFS.used"/>
+    <keyword type="method" name="The CreateDevices() method" link="gdbus-org.storaged.Storaged.Manager.ZRAM.html#gdbus-method-org-storaged-Storaged-Manager-ZRAM.CreateDevices"/>
+    <keyword type="method" name="The DestroyDevices() method" link="gdbus-org.storaged.Storaged.Manager.ZRAM.html#gdbus-method-org-storaged-Storaged-Manager-ZRAM.DestroyDevices"/>
+    <keyword type="method" name="The Refresh() method" link="gdbus-org.storaged.Storaged.Block.ZRAM.html#gdbus-method-org-storaged-Storaged-Block-ZRAM.Refresh"/>
+    <keyword type="method" name="The Activate() method" link="gdbus-org.storaged.Storaged.Block.ZRAM.html#gdbus-method-org-storaged-Storaged-Block-ZRAM.Activate"/>
+    <keyword type="method" name="The ActivateLabeled() method" link="gdbus-org.storaged.Storaged.Block.ZRAM.html#gdbus-method-org-storaged-Storaged-Block-ZRAM.ActivateLabeled"/>
+    <keyword type="method" name="The Deactivate() method" link="gdbus-org.storaged.Storaged.Block.ZRAM.html#gdbus-method-org-storaged-Storaged-Block-ZRAM.Deactivate"/>
+    <keyword type="property" name="The &quot;disksize&quot; property" link="gdbus-org.storaged.Storaged.Block.ZRAM.html#gdbus-property-org-storaged-Storaged-Block-ZRAM.disksize"/>
+    <keyword type="property" name="The &quot;max_comp_streams&quot; property" link="gdbus-org.storaged.Storaged.Block.ZRAM.html#gdbus-property-org-storaged-Storaged-Block-ZRAM.max_comp_streams"/>
+    <keyword type="property" name="The &quot;comp_algorithm&quot; property" link="gdbus-org.storaged.Storaged.Block.ZRAM.html#gdbus-property-org-storaged-Storaged-Block-ZRAM.comp_algorithm"/>
+    <keyword type="property" name="The &quot;active&quot; property" link="gdbus-org.storaged.Storaged.Block.ZRAM.html#gdbus-property-org-storaged-Storaged-Block-ZRAM.active"/>
+    <keyword type="property" name="The &quot;num_reads&quot; property" link="gdbus-org.storaged.Storaged.Block.ZRAM.html#gdbus-property-org-storaged-Storaged-Block-ZRAM.num_reads"/>
+    <keyword type="property" name="The &quot;num_writes&quot; property" link="gdbus-org.storaged.Storaged.Block.ZRAM.html#gdbus-property-org-storaged-Storaged-Block-ZRAM.num_writes"/>
+    <keyword type="property" name="The &quot;invalid_io&quot; property" link="gdbus-org.storaged.Storaged.Block.ZRAM.html#gdbus-property-org-storaged-Storaged-Block-ZRAM.invalid_io"/>
+    <keyword type="property" name="The &quot;zero_pages&quot; property" link="gdbus-org.storaged.Storaged.Block.ZRAM.html#gdbus-property-org-storaged-Storaged-Block-ZRAM.zero_pages"/>
+    <keyword type="property" name="The &quot;orig_data_size&quot; property" link="gdbus-org.storaged.Storaged.Block.ZRAM.html#gdbus-property-org-storaged-Storaged-Block-ZRAM.orig_data_size"/>
+    <keyword type="property" name="The &quot;compr_data_size&quot; property" link="gdbus-org.storaged.Storaged.Block.ZRAM.html#gdbus-property-org-storaged-Storaged-Block-ZRAM.compr_data_size"/>
+    <keyword type="property" name="The &quot;mem_used_total&quot; property" link="gdbus-org.storaged.Storaged.Block.ZRAM.html#gdbus-property-org-storaged-Storaged-Block-ZRAM.mem_used_total"/>
     <keyword type="macro" name="STORAGED_CHECK_VERSION()" link="StoragedClient.html#STORAGED-CHECK-VERSION:CAPS"/>
     <keyword type="function" name="storaged_client_new ()" link="StoragedClient.html#storaged-client-new"/>
     <keyword type="function" name="storaged_client_new_finish ()" link="StoragedClient.html#storaged-client-new-finish"/>
@@ -356,7 +432,6 @@
     <keyword type="function" name="storaged_client_get_object_info ()" link="StoragedClient.html#storaged-client-get-object-info" since="2.1"/>
     <keyword type="function" name="storaged_client_get_drive_info ()" link="StoragedClient.html#storaged-client-get-drive-info" deprecated="2.1: Use storaged_client_get_object_info() instead."/>
     <keyword type="function" name="storaged_client_get_partition_info ()" link="StoragedClient.html#storaged-client-get-partition-info"/>
-    <keyword type="" name="StoragedPartition." link="StoragedClient.html#id-1.4.2.11.30.6.2.1.4.2.2.1"/>
     <keyword type="function" name="storaged_client_get_size_for_display ()" link="StoragedClient.html#storaged-client-get-size-for-display"/>
     <keyword type="function" name="storaged_client_get_id_for_display ()" link="StoragedClient.html#storaged-client-get-id-for-display"/>
     <keyword type="function" name="storaged_client_get_media_compat_for_display ()" link="StoragedClient.html#storaged-client-get-media-compat-for-display"/>
@@ -821,11 +896,13 @@
     <keyword type="struct" name="struct StoragedMDRaidSkeletonClass" link="StoragedMDRaid.html#StoragedMDRaidSkeletonClass" since="2.0.0"/>
     <keyword type="property" name="The “active-devices” property" link="StoragedMDRaid.html#StoragedMDRaid--active-devices"/>
     <keyword type="property" name="The “bitmap-location” property" link="StoragedMDRaid.html#StoragedMDRaid--bitmap-location"/>
+    <keyword type="property" name="The “child-configuration” property" link="StoragedMDRaid.html#StoragedMDRaid--child-configuration"/>
     <keyword type="property" name="The “chunk-size” property" link="StoragedMDRaid.html#StoragedMDRaid--chunk-size"/>
     <keyword type="property" name="The “degraded” property" link="StoragedMDRaid.html#StoragedMDRaid--degraded"/>
     <keyword type="property" name="The “level” property" link="StoragedMDRaid.html#StoragedMDRaid--level"/>
     <keyword type="property" name="The “name” property" link="StoragedMDRaid.html#StoragedMDRaid--name"/>
     <keyword type="property" name="The “num-devices” property" link="StoragedMDRaid.html#StoragedMDRaid--num-devices"/>
+    <keyword type="property" name="The “running” property" link="StoragedMDRaid.html#StoragedMDRaid--running"/>
     <keyword type="property" name="The “size” property" link="StoragedMDRaid.html#StoragedMDRaid--size"/>
     <keyword type="property" name="The “sync-action” property" link="StoragedMDRaid.html#StoragedMDRaid--sync-action"/>
     <keyword type="property" name="The “sync-completed” property" link="StoragedMDRaid.html#StoragedMDRaid--sync-completed"/>
@@ -833,6 +910,7 @@
     <keyword type="property" name="The “sync-remaining-time” property" link="StoragedMDRaid.html#StoragedMDRaid--sync-remaining-time"/>
     <keyword type="property" name="The “uuid” property" link="StoragedMDRaid.html#StoragedMDRaid--uuid"/>
     <keyword type="signal" name="The “handle-add-device” signal" link="StoragedMDRaid.html#StoragedMDRaid-handle-add-device"/>
+    <keyword type="signal" name="The “handle-delete” signal" link="StoragedMDRaid.html#StoragedMDRaid-handle-delete"/>
     <keyword type="signal" name="The “handle-remove-device” signal" link="StoragedMDRaid.html#StoragedMDRaid-handle-remove-device"/>
     <keyword type="signal" name="The “handle-request-sync-action” signal" link="StoragedMDRaid.html#StoragedMDRaid-handle-request-sync-action"/>
     <keyword type="signal" name="The “handle-set-bitmap-location” signal" link="StoragedMDRaid.html#StoragedMDRaid-handle-set-bitmap-location"/>
@@ -1207,6 +1285,7 @@
     <keyword type="struct" name="struct StoragedEncryptedProxyClass" link="StoragedEncrypted.html#StoragedEncryptedProxyClass"/>
     <keyword type="struct" name="struct StoragedEncryptedSkeleton" link="StoragedEncrypted.html#StoragedEncryptedSkeleton-struct"/>
     <keyword type="struct" name="struct StoragedEncryptedSkeletonClass" link="StoragedEncrypted.html#StoragedEncryptedSkeletonClass"/>
+    <keyword type="property" name="The “child-configuration” property" link="StoragedEncrypted.html#StoragedEncrypted--child-configuration"/>
     <keyword type="signal" name="The “handle-change-passphrase” signal" link="StoragedEncrypted.html#StoragedEncrypted-handle-change-passphrase"/>
     <keyword type="signal" name="The “handle-lock” signal" link="StoragedEncrypted.html#StoragedEncrypted-handle-lock"/>
     <keyword type="signal" name="The “handle-unlock” signal" link="StoragedEncrypted.html#StoragedEncrypted-handle-unlock"/>
@@ -1245,6 +1324,58 @@
     <keyword type="property" name="The “setup-by-uid” property" link="StoragedLoop.html#StoragedLoop--setup-by-uid"/>
     <keyword type="signal" name="The “handle-delete” signal" link="StoragedLoop.html#StoragedLoop-handle-delete"/>
     <keyword type="signal" name="The “handle-set-autoclear” signal" link="StoragedLoop.html#StoragedLoop-handle-set-autoclear"/>
+    <keyword type="function" name="storaged_manager_lsm_interface_info ()" link="storaged-StoragedManagerLSM.html#storaged-manager-lsm-interface-info" since="2.3.0"/>
+    <keyword type="function" name="storaged_manager_lsm_override_properties ()" link="storaged-StoragedManagerLSM.html#storaged-manager-lsm-override-properties" since="2.3.0"/>
+    <keyword type="function" name="storaged_manager_lsm_proxy_new ()" link="storaged-StoragedManagerLSM.html#storaged-manager-lsm-proxy-new" since="2.3.0"/>
+    <keyword type="function" name="storaged_manager_lsm_proxy_new_finish ()" link="storaged-StoragedManagerLSM.html#storaged-manager-lsm-proxy-new-finish" since="2.3.0"/>
+    <keyword type="function" name="storaged_manager_lsm_proxy_new_for_bus ()" link="storaged-StoragedManagerLSM.html#storaged-manager-lsm-proxy-new-for-bus" since="2.3.0"/>
+    <keyword type="function" name="storaged_manager_lsm_proxy_new_for_bus_finish ()" link="storaged-StoragedManagerLSM.html#storaged-manager-lsm-proxy-new-for-bus-finish" since="2.3.0"/>
+    <keyword type="function" name="storaged_manager_lsm_proxy_new_for_bus_sync ()" link="storaged-StoragedManagerLSM.html#storaged-manager-lsm-proxy-new-for-bus-sync" since="2.3.0"/>
+    <keyword type="function" name="storaged_manager_lsm_proxy_new_sync ()" link="storaged-StoragedManagerLSM.html#storaged-manager-lsm-proxy-new-sync" since="2.3.0"/>
+    <keyword type="function" name="storaged_manager_lsm_skeleton_new ()" link="storaged-StoragedManagerLSM.html#storaged-manager-lsm-skeleton-new" since="2.3.0"/>
+    <keyword type="struct" name="StoragedManagerLSM" link="storaged-StoragedManagerLSM.html#StoragedManagerLSM" since="2.3.0"/>
+    <keyword type="struct" name="struct StoragedManagerLSMIface" link="storaged-StoragedManagerLSM.html#StoragedManagerLSMIface" since="2.3.0"/>
+    <keyword type="struct" name="struct StoragedManagerLSMProxy" link="storaged-StoragedManagerLSM.html#StoragedManagerLSMProxy" since="2.3.0"/>
+    <keyword type="struct" name="struct StoragedManagerLSMProxyClass" link="storaged-StoragedManagerLSM.html#StoragedManagerLSMProxyClass" since="2.3.0"/>
+    <keyword type="struct" name="struct StoragedManagerLSMSkeleton" link="storaged-StoragedManagerLSM.html#StoragedManagerLSMSkeleton" since="2.3.0"/>
+    <keyword type="struct" name="struct StoragedManagerLSMSkeletonClass" link="storaged-StoragedManagerLSM.html#StoragedManagerLSMSkeletonClass" since="2.3.0"/>
+    <keyword type="function" name="storaged_drive_lsm_dup_raid_type ()" link="storaged-StoragedDriveLSM.html#storaged-drive-lsm-dup-raid-type" since="2.3.0"/>
+    <keyword type="function" name="storaged_drive_lsm_dup_status_info ()" link="storaged-StoragedDriveLSM.html#storaged-drive-lsm-dup-status-info" since="2.3.0"/>
+    <keyword type="function" name="storaged_drive_lsm_get_is_ok ()" link="storaged-StoragedDriveLSM.html#storaged-drive-lsm-get-is-ok" since="2.3.0"/>
+    <keyword type="function" name="storaged_drive_lsm_get_is_raid_degraded ()" link="storaged-StoragedDriveLSM.html#storaged-drive-lsm-get-is-raid-degraded" since="2.3.0"/>
+    <keyword type="function" name="storaged_drive_lsm_get_is_raid_error ()" link="storaged-StoragedDriveLSM.html#storaged-drive-lsm-get-is-raid-error" since="2.3.0"/>
+    <keyword type="function" name="storaged_drive_lsm_get_is_raid_reconstructing ()" link="storaged-StoragedDriveLSM.html#storaged-drive-lsm-get-is-raid-reconstructing" since="2.3.0"/>
+    <keyword type="function" name="storaged_drive_lsm_get_is_raid_verifying ()" link="storaged-StoragedDriveLSM.html#storaged-drive-lsm-get-is-raid-verifying" since="2.3.0"/>
+    <keyword type="function" name="storaged_drive_lsm_get_min_io_size ()" link="storaged-StoragedDriveLSM.html#storaged-drive-lsm-get-min-io-size" since="2.3.0"/>
+    <keyword type="function" name="storaged_drive_lsm_get_opt_io_size ()" link="storaged-StoragedDriveLSM.html#storaged-drive-lsm-get-opt-io-size" since="2.3.0"/>
+    <keyword type="function" name="storaged_drive_lsm_get_raid_disk_count ()" link="storaged-StoragedDriveLSM.html#storaged-drive-lsm-get-raid-disk-count" since="2.3.0"/>
+    <keyword type="function" name="storaged_drive_lsm_get_raid_type ()" link="storaged-StoragedDriveLSM.html#storaged-drive-lsm-get-raid-type" since="2.3.0"/>
+    <keyword type="function" name="storaged_drive_lsm_get_status_info ()" link="storaged-StoragedDriveLSM.html#storaged-drive-lsm-get-status-info" since="2.3.0"/>
+    <keyword type="function" name="storaged_drive_lsm_interface_info ()" link="storaged-StoragedDriveLSM.html#storaged-drive-lsm-interface-info" since="2.3.0"/>
+    <keyword type="function" name="storaged_drive_lsm_override_properties ()" link="storaged-StoragedDriveLSM.html#storaged-drive-lsm-override-properties" since="2.3.0"/>
+    <keyword type="function" name="storaged_drive_lsm_proxy_new ()" link="storaged-StoragedDriveLSM.html#storaged-drive-lsm-proxy-new" since="2.3.0"/>
+    <keyword type="function" name="storaged_drive_lsm_proxy_new_finish ()" link="storaged-StoragedDriveLSM.html#storaged-drive-lsm-proxy-new-finish" since="2.3.0"/>
+    <keyword type="function" name="storaged_drive_lsm_proxy_new_for_bus ()" link="storaged-StoragedDriveLSM.html#storaged-drive-lsm-proxy-new-for-bus" since="2.3.0"/>
+    <keyword type="function" name="storaged_drive_lsm_proxy_new_for_bus_finish ()" link="storaged-StoragedDriveLSM.html#storaged-drive-lsm-proxy-new-for-bus-finish" since="2.3.0"/>
+    <keyword type="function" name="storaged_drive_lsm_proxy_new_for_bus_sync ()" link="storaged-StoragedDriveLSM.html#storaged-drive-lsm-proxy-new-for-bus-sync" since="2.3.0"/>
+    <keyword type="function" name="storaged_drive_lsm_proxy_new_sync ()" link="storaged-StoragedDriveLSM.html#storaged-drive-lsm-proxy-new-sync" since="2.3.0"/>
+    <keyword type="function" name="storaged_drive_lsm_set_is_ok ()" link="storaged-StoragedDriveLSM.html#storaged-drive-lsm-set-is-ok" since="2.3.0"/>
+    <keyword type="function" name="storaged_drive_lsm_set_is_raid_degraded ()" link="storaged-StoragedDriveLSM.html#storaged-drive-lsm-set-is-raid-degraded" since="2.3.0"/>
+    <keyword type="function" name="storaged_drive_lsm_set_is_raid_error ()" link="storaged-StoragedDriveLSM.html#storaged-drive-lsm-set-is-raid-error" since="2.3.0"/>
+    <keyword type="function" name="storaged_drive_lsm_set_is_raid_reconstructing ()" link="storaged-StoragedDriveLSM.html#storaged-drive-lsm-set-is-raid-reconstructing" since="2.3.0"/>
+    <keyword type="function" name="storaged_drive_lsm_set_is_raid_verifying ()" link="storaged-StoragedDriveLSM.html#storaged-drive-lsm-set-is-raid-verifying" since="2.3.0"/>
+    <keyword type="function" name="storaged_drive_lsm_set_min_io_size ()" link="storaged-StoragedDriveLSM.html#storaged-drive-lsm-set-min-io-size" since="2.3.0"/>
+    <keyword type="function" name="storaged_drive_lsm_set_opt_io_size ()" link="storaged-StoragedDriveLSM.html#storaged-drive-lsm-set-opt-io-size" since="2.3.0"/>
+    <keyword type="function" name="storaged_drive_lsm_set_raid_disk_count ()" link="storaged-StoragedDriveLSM.html#storaged-drive-lsm-set-raid-disk-count" since="2.3.0"/>
+    <keyword type="function" name="storaged_drive_lsm_set_raid_type ()" link="storaged-StoragedDriveLSM.html#storaged-drive-lsm-set-raid-type" since="2.3.0"/>
+    <keyword type="function" name="storaged_drive_lsm_set_status_info ()" link="storaged-StoragedDriveLSM.html#storaged-drive-lsm-set-status-info" since="2.3.0"/>
+    <keyword type="function" name="storaged_drive_lsm_skeleton_new ()" link="storaged-StoragedDriveLSM.html#storaged-drive-lsm-skeleton-new" since="2.3.0"/>
+    <keyword type="struct" name="StoragedDriveLSM" link="storaged-StoragedDriveLSM.html#StoragedDriveLSM" since="2.3.0"/>
+    <keyword type="struct" name="struct StoragedDriveLSMIface" link="storaged-StoragedDriveLSM.html#StoragedDriveLSMIface" since="2.3.0"/>
+    <keyword type="struct" name="struct StoragedDriveLSMProxy" link="storaged-StoragedDriveLSM.html#StoragedDriveLSMProxy" since="2.3.0"/>
+    <keyword type="struct" name="struct StoragedDriveLSMProxyClass" link="storaged-StoragedDriveLSM.html#StoragedDriveLSMProxyClass" since="2.3.0"/>
+    <keyword type="struct" name="struct StoragedDriveLSMSkeleton" link="storaged-StoragedDriveLSM.html#StoragedDriveLSMSkeleton" since="2.3.0"/>
+    <keyword type="struct" name="struct StoragedDriveLSMSkeletonClass" link="storaged-StoragedDriveLSM.html#StoragedDriveLSMSkeletonClass" since="2.3.0"/>
     <keyword type="function" name="storaged_manager_lvm2_interface_info ()" link="StoragedManagerLVM2.html#storaged-manager-lvm2-interface-info" since="2.0.0"/>
     <keyword type="function" name="storaged_manager_lvm2_override_properties ()" link="StoragedManagerLVM2.html#storaged-manager-lvm2-override-properties" since="2.0.0"/>
     <keyword type="function" name="storaged_manager_lvm2_call_volume_group_create ()" link="StoragedManagerLVM2.html#storaged-manager-lvm2-call-volume-group-create" since="2.0.0"/>
@@ -1349,11 +1480,18 @@
     <keyword type="struct" name="struct StoragedVolumeGroupProxyClass" link="storaged-StoragedVolumeGroup.html#StoragedVolumeGroupProxyClass" since="2.0.0"/>
     <keyword type="struct" name="struct StoragedVolumeGroupSkeleton" link="storaged-StoragedVolumeGroup.html#StoragedVolumeGroupSkeleton" since="2.0.0"/>
     <keyword type="struct" name="struct StoragedVolumeGroupSkeletonClass" link="storaged-StoragedVolumeGroup.html#StoragedVolumeGroupSkeletonClass" since="2.0.0"/>
-    <keyword type="function" name="storaged_logical_volume_interface_info ()" link="storaged-StoragedLogicalVolume.html#storaged-logical-volume-interface-info" since="2.0.0"/>
-    <keyword type="function" name="storaged_logical_volume_override_properties ()" link="storaged-StoragedLogicalVolume.html#storaged-logical-volume-override-properties" since="2.0.0"/>
     <keyword type="function" name="storaged_logical_volume_call_activate ()" link="storaged-StoragedLogicalVolume.html#storaged-logical-volume-call-activate" since="2.0.0"/>
     <keyword type="function" name="storaged_logical_volume_call_activate_finish ()" link="storaged-StoragedLogicalVolume.html#storaged-logical-volume-call-activate-finish" since="2.0.0"/>
     <keyword type="function" name="storaged_logical_volume_call_activate_sync ()" link="storaged-StoragedLogicalVolume.html#storaged-logical-volume-call-activate-sync" since="2.0.0"/>
+    <keyword type="function" name="storaged_logical_volume_call_cache_attach ()" link="storaged-StoragedLogicalVolume.html#storaged-logical-volume-call-cache-attach" since="2.3.0"/>
+    <keyword type="function" name="storaged_logical_volume_call_cache_attach_finish ()" link="storaged-StoragedLogicalVolume.html#storaged-logical-volume-call-cache-attach-finish" since="2.3.0"/>
+    <keyword type="function" name="storaged_logical_volume_call_cache_attach_sync ()" link="storaged-StoragedLogicalVolume.html#storaged-logical-volume-call-cache-attach-sync" since="2.3.0"/>
+    <keyword type="function" name="storaged_logical_volume_call_cache_split ()" link="storaged-StoragedLogicalVolume.html#storaged-logical-volume-call-cache-split" since="2.3.0"/>
+    <keyword type="function" name="storaged_logical_volume_call_cache_split_finish ()" link="storaged-StoragedLogicalVolume.html#storaged-logical-volume-call-cache-split-finish" since="2.3.0"/>
+    <keyword type="function" name="storaged_logical_volume_call_cache_split_sync ()" link="storaged-StoragedLogicalVolume.html#storaged-logical-volume-call-cache-split-sync" since="2.3.0"/>
+    <keyword type="function" name="storaged_logical_volume_call_create_snapshot ()" link="storaged-StoragedLogicalVolume.html#storaged-logical-volume-call-create-snapshot" since="2.0.0"/>
+    <keyword type="function" name="storaged_logical_volume_call_create_snapshot_finish ()" link="storaged-StoragedLogicalVolume.html#storaged-logical-volume-call-create-snapshot-finish" since="2.0.0"/>
+    <keyword type="function" name="storaged_logical_volume_call_create_snapshot_sync ()" link="storaged-StoragedLogicalVolume.html#storaged-logical-volume-call-create-snapshot-sync" since="2.0.0"/>
     <keyword type="function" name="storaged_logical_volume_call_deactivate ()" link="storaged-StoragedLogicalVolume.html#storaged-logical-volume-call-deactivate" since="2.0.0"/>
     <keyword type="function" name="storaged_logical_volume_call_deactivate_finish ()" link="storaged-StoragedLogicalVolume.html#storaged-logical-volume-call-deactivate-finish" since="2.0.0"/>
     <keyword type="function" name="storaged_logical_volume_call_deactivate_sync ()" link="storaged-StoragedLogicalVolume.html#storaged-logical-volume-call-deactivate-sync" since="2.0.0"/>
@@ -1366,21 +1504,50 @@
     <keyword type="function" name="storaged_logical_volume_call_resize ()" link="storaged-StoragedLogicalVolume.html#storaged-logical-volume-call-resize" since="2.0.0"/>
     <keyword type="function" name="storaged_logical_volume_call_resize_finish ()" link="storaged-StoragedLogicalVolume.html#storaged-logical-volume-call-resize-finish" since="2.0.0"/>
     <keyword type="function" name="storaged_logical_volume_call_resize_sync ()" link="storaged-StoragedLogicalVolume.html#storaged-logical-volume-call-resize-sync" since="2.0.0"/>
-    <keyword type="function" name="storaged_logical_volume_call_create_snapshot ()" link="storaged-StoragedLogicalVolume.html#storaged-logical-volume-call-create-snapshot" since="2.0.0"/>
-    <keyword type="function" name="storaged_logical_volume_call_create_snapshot_finish ()" link="storaged-StoragedLogicalVolume.html#storaged-logical-volume-call-create-snapshot-finish" since="2.0.0"/>
-    <keyword type="function" name="storaged_logical_volume_call_create_snapshot_sync ()" link="storaged-StoragedLogicalVolume.html#storaged-logical-volume-call-create-snapshot-sync" since="2.0.0"/>
     <keyword type="function" name="storaged_logical_volume_complete_activate ()" link="storaged-StoragedLogicalVolume.html#storaged-logical-volume-complete-activate" since="2.0.0"/>
+    <keyword type="function" name="storaged_logical_volume_complete_cache_attach ()" link="storaged-StoragedLogicalVolume.html#storaged-logical-volume-complete-cache-attach" since="2.3.0"/>
+    <keyword type="function" name="storaged_logical_volume_complete_cache_split ()" link="storaged-StoragedLogicalVolume.html#storaged-logical-volume-complete-cache-split" since="2.3.0"/>
+    <keyword type="function" name="storaged_logical_volume_complete_create_snapshot ()" link="storaged-StoragedLogicalVolume.html#storaged-logical-volume-complete-create-snapshot" since="2.0.0"/>
     <keyword type="function" name="storaged_logical_volume_complete_deactivate ()" link="storaged-StoragedLogicalVolume.html#storaged-logical-volume-complete-deactivate" since="2.0.0"/>
     <keyword type="function" name="storaged_logical_volume_complete_delete ()" link="storaged-StoragedLogicalVolume.html#storaged-logical-volume-complete-delete" since="2.0.0"/>
     <keyword type="function" name="storaged_logical_volume_complete_rename ()" link="storaged-StoragedLogicalVolume.html#storaged-logical-volume-complete-rename" since="2.0.0"/>
     <keyword type="function" name="storaged_logical_volume_complete_resize ()" link="storaged-StoragedLogicalVolume.html#storaged-logical-volume-complete-resize" since="2.0.0"/>
-    <keyword type="function" name="storaged_logical_volume_complete_create_snapshot ()" link="storaged-StoragedLogicalVolume.html#storaged-logical-volume-complete-create-snapshot" since="2.0.0"/>
+    <keyword type="function" name="storaged_logical_volume_dup_child_configuration ()" link="storaged-StoragedLogicalVolume.html#storaged-logical-volume-dup-child-configuration" since="2.0.0"/>
+    <keyword type="function" name="storaged_logical_volume_dup_name ()" link="storaged-StoragedLogicalVolume.html#storaged-logical-volume-dup-name" since="2.0.0"/>
+    <keyword type="function" name="storaged_logical_volume_dup_origin ()" link="storaged-StoragedLogicalVolume.html#storaged-logical-volume-dup-origin" since="2.0.0"/>
+    <keyword type="function" name="storaged_logical_volume_dup_thin_pool ()" link="storaged-StoragedLogicalVolume.html#storaged-logical-volume-dup-thin-pool" since="2.0.0"/>
+    <keyword type="function" name="storaged_logical_volume_dup_type_ ()" link="storaged-StoragedLogicalVolume.html#storaged-logical-volume-dup-type-" since="2.0.0"/>
+    <keyword type="function" name="storaged_logical_volume_dup_uuid ()" link="storaged-StoragedLogicalVolume.html#storaged-logical-volume-dup-uuid" since="2.0.0"/>
+    <keyword type="function" name="storaged_logical_volume_dup_volume_group ()" link="storaged-StoragedLogicalVolume.html#storaged-logical-volume-dup-volume-group" since="2.0.0"/>
+    <keyword type="function" name="storaged_logical_volume_get_active ()" link="storaged-StoragedLogicalVolume.html#storaged-logical-volume-get-active" since="2.0.0"/>
+    <keyword type="function" name="storaged_logical_volume_get_child_configuration ()" link="storaged-StoragedLogicalVolume.html#storaged-logical-volume-get-child-configuration" since="2.0.0"/>
+    <keyword type="function" name="storaged_logical_volume_get_data_allocated_ratio ()" link="storaged-StoragedLogicalVolume.html#storaged-logical-volume-get-data-allocated-ratio" since="2.0.0"/>
+    <keyword type="function" name="storaged_logical_volume_get_metadata_allocated_ratio ()" link="storaged-StoragedLogicalVolume.html#storaged-logical-volume-get-metadata-allocated-ratio" since="2.0.0"/>
+    <keyword type="function" name="storaged_logical_volume_get_name ()" link="storaged-StoragedLogicalVolume.html#storaged-logical-volume-get-name" since="2.0.0"/>
+    <keyword type="function" name="storaged_logical_volume_get_origin ()" link="storaged-StoragedLogicalVolume.html#storaged-logical-volume-get-origin" since="2.0.0"/>
+    <keyword type="function" name="storaged_logical_volume_get_size ()" link="storaged-StoragedLogicalVolume.html#storaged-logical-volume-get-size" since="2.0.0"/>
+    <keyword type="function" name="storaged_logical_volume_get_thin_pool ()" link="storaged-StoragedLogicalVolume.html#storaged-logical-volume-get-thin-pool" since="2.0.0"/>
+    <keyword type="function" name="storaged_logical_volume_get_uuid ()" link="storaged-StoragedLogicalVolume.html#storaged-logical-volume-get-uuid" since="2.0.0"/>
+    <keyword type="function" name="storaged_logical_volume_get_volume_group ()" link="storaged-StoragedLogicalVolume.html#storaged-logical-volume-get-volume-group" since="2.0.0"/>
+    <keyword type="function" name="storaged_logical_volume_interface_info ()" link="storaged-StoragedLogicalVolume.html#storaged-logical-volume-interface-info" since="2.0.0"/>
+    <keyword type="function" name="storaged_logical_volume_override_properties ()" link="storaged-StoragedLogicalVolume.html#storaged-logical-volume-override-properties" since="2.0.0"/>
     <keyword type="function" name="storaged_logical_volume_proxy_new ()" link="storaged-StoragedLogicalVolume.html#storaged-logical-volume-proxy-new" since="2.0.0"/>
     <keyword type="function" name="storaged_logical_volume_proxy_new_finish ()" link="storaged-StoragedLogicalVolume.html#storaged-logical-volume-proxy-new-finish" since="2.0.0"/>
-    <keyword type="function" name="storaged_logical_volume_proxy_new_sync ()" link="storaged-StoragedLogicalVolume.html#storaged-logical-volume-proxy-new-sync" since="2.0.0"/>
     <keyword type="function" name="storaged_logical_volume_proxy_new_for_bus ()" link="storaged-StoragedLogicalVolume.html#storaged-logical-volume-proxy-new-for-bus" since="2.0.0"/>
     <keyword type="function" name="storaged_logical_volume_proxy_new_for_bus_finish ()" link="storaged-StoragedLogicalVolume.html#storaged-logical-volume-proxy-new-for-bus-finish" since="2.0.0"/>
     <keyword type="function" name="storaged_logical_volume_proxy_new_for_bus_sync ()" link="storaged-StoragedLogicalVolume.html#storaged-logical-volume-proxy-new-for-bus-sync" since="2.0.0"/>
+    <keyword type="function" name="storaged_logical_volume_proxy_new_sync ()" link="storaged-StoragedLogicalVolume.html#storaged-logical-volume-proxy-new-sync" since="2.0.0"/>
+    <keyword type="function" name="storaged_logical_volume_set_active ()" link="storaged-StoragedLogicalVolume.html#storaged-logical-volume-set-active" since="2.0.0"/>
+    <keyword type="function" name="storaged_logical_volume_set_child_configuration ()" link="storaged-StoragedLogicalVolume.html#storaged-logical-volume-set-child-configuration" since="2.0.0"/>
+    <keyword type="function" name="storaged_logical_volume_set_data_allocated_ratio ()" link="storaged-StoragedLogicalVolume.html#storaged-logical-volume-set-data-allocated-ratio" since="2.0.0"/>
+    <keyword type="function" name="storaged_logical_volume_set_metadata_allocated_ratio ()" link="storaged-StoragedLogicalVolume.html#storaged-logical-volume-set-metadata-allocated-ratio" since="2.0.0"/>
+    <keyword type="function" name="storaged_logical_volume_set_name ()" link="storaged-StoragedLogicalVolume.html#storaged-logical-volume-set-name" since="2.0.0"/>
+    <keyword type="function" name="storaged_logical_volume_set_origin ()" link="storaged-StoragedLogicalVolume.html#storaged-logical-volume-set-origin" since="2.0.0"/>
+    <keyword type="function" name="storaged_logical_volume_set_size ()" link="storaged-StoragedLogicalVolume.html#storaged-logical-volume-set-size" since="2.0.0"/>
+    <keyword type="function" name="storaged_logical_volume_set_thin_pool ()" link="storaged-StoragedLogicalVolume.html#storaged-logical-volume-set-thin-pool" since="2.0.0"/>
+    <keyword type="function" name="storaged_logical_volume_set_type_ ()" link="storaged-StoragedLogicalVolume.html#storaged-logical-volume-set-type-" since="2.0.0"/>
+    <keyword type="function" name="storaged_logical_volume_set_uuid ()" link="storaged-StoragedLogicalVolume.html#storaged-logical-volume-set-uuid" since="2.0.0"/>
+    <keyword type="function" name="storaged_logical_volume_set_volume_group ()" link="storaged-StoragedLogicalVolume.html#storaged-logical-volume-set-volume-group" since="2.0.0"/>
     <keyword type="function" name="storaged_logical_volume_skeleton_new ()" link="storaged-StoragedLogicalVolume.html#storaged-logical-volume-skeleton-new" since="2.0.0"/>
     <keyword type="struct" name="StoragedLogicalVolume" link="storaged-StoragedLogicalVolume.html#StoragedLogicalVolume" since="2.0.0"/>
     <keyword type="struct" name="struct StoragedLogicalVolumeIface" link="storaged-StoragedLogicalVolume.html#StoragedLogicalVolumeIface" since="2.0.0"/>
@@ -1388,26 +1555,294 @@
     <keyword type="struct" name="struct StoragedLogicalVolumeProxyClass" link="storaged-StoragedLogicalVolume.html#StoragedLogicalVolumeProxyClass" since="2.0.0"/>
     <keyword type="struct" name="struct StoragedLogicalVolumeSkeleton" link="storaged-StoragedLogicalVolume.html#StoragedLogicalVolumeSkeleton" since="2.0.0"/>
     <keyword type="struct" name="struct StoragedLogicalVolumeSkeletonClass" link="storaged-StoragedLogicalVolume.html#StoragedLogicalVolumeSkeletonClass" since="2.0.0"/>
-    <keyword type="function" name="storaged_manager_iscsi_initiator_call_get_initiator_name ()" link="storaged-StoragedManagerISCSIInitiator.html#storaged-manager-iscsi-initiator-call-get-initiator-name" since="2.0.1"/>
-    <keyword type="function" name="storaged_manager_iscsi_initiator_call_get_initiator_name_finish ()" link="storaged-StoragedManagerISCSIInitiator.html#storaged-manager-iscsi-initiator-call-get-initiator-name-finish" since="2.0.1"/>
-    <keyword type="function" name="storaged_manager_iscsi_initiator_call_get_initiator_name_sync ()" link="storaged-StoragedManagerISCSIInitiator.html#storaged-manager-iscsi-initiator-call-get-initiator-name-sync" since="2.0.1"/>
-    <keyword type="function" name="storaged_manager_iscsi_initiator_call_set_initiator_name ()" link="storaged-StoragedManagerISCSIInitiator.html#storaged-manager-iscsi-initiator-call-set-initiator-name" since="2.0.1"/>
-    <keyword type="function" name="storaged_manager_iscsi_initiator_call_set_initiator_name_finish ()" link="storaged-StoragedManagerISCSIInitiator.html#storaged-manager-iscsi-initiator-call-set-initiator-name-finish" since="2.0.1"/>
-    <keyword type="function" name="storaged_manager_iscsi_initiator_call_set_initiator_name_sync ()" link="storaged-StoragedManagerISCSIInitiator.html#storaged-manager-iscsi-initiator-call-set-initiator-name-sync" since="2.0.1"/>
-    <keyword type="function" name="storaged_manager_iscsi_initiator_complete_get_initiator_name ()" link="storaged-StoragedManagerISCSIInitiator.html#storaged-manager-iscsi-initiator-complete-get-initiator-name" since="2.0.1"/>
-    <keyword type="function" name="storaged_manager_iscsi_initiator_complete_set_initiator_name ()" link="storaged-StoragedManagerISCSIInitiator.html#storaged-manager-iscsi-initiator-complete-set-initiator-name" since="2.0.1"/>
-    <keyword type="function" name="storaged_manager_iscsi_initiator_get_type ()" link="storaged-StoragedManagerISCSIInitiator.html#storaged-manager-iscsi-initiator-get-type"/>
-    <keyword type="function" name="storaged_manager_iscsi_initiator_interface_info ()" link="storaged-StoragedManagerISCSIInitiator.html#storaged-manager-iscsi-initiator-interface-info" since="2.0.1"/>
-    <keyword type="function" name="storaged_manager_iscsi_initiator_override_properties ()" link="storaged-StoragedManagerISCSIInitiator.html#storaged-manager-iscsi-initiator-override-properties" since="2.0.1"/>
-    <keyword type="function" name="storaged_manager_iscsi_initiator_proxy_get_type ()" link="storaged-StoragedManagerISCSIInitiator.html#storaged-manager-iscsi-initiator-proxy-get-type"/>
-    <keyword type="function" name="storaged_manager_iscsi_initiator_proxy_new ()" link="storaged-StoragedManagerISCSIInitiator.html#storaged-manager-iscsi-initiator-proxy-new" since="2.0.1"/>
-    <keyword type="function" name="storaged_manager_iscsi_initiator_proxy_new_finish ()" link="storaged-StoragedManagerISCSIInitiator.html#storaged-manager-iscsi-initiator-proxy-new-finish" since="2.0.1"/>
-    <keyword type="function" name="storaged_manager_iscsi_initiator_proxy_new_for_bus ()" link="storaged-StoragedManagerISCSIInitiator.html#storaged-manager-iscsi-initiator-proxy-new-for-bus" since="2.0.1"/>
-    <keyword type="function" name="storaged_manager_iscsi_initiator_proxy_new_for_bus_finish ()" link="storaged-StoragedManagerISCSIInitiator.html#storaged-manager-iscsi-initiator-proxy-new-for-bus-finish" since="2.0.1"/>
-    <keyword type="function" name="storaged_manager_iscsi_initiator_proxy_new_for_bus_sync ()" link="storaged-StoragedManagerISCSIInitiator.html#storaged-manager-iscsi-initiator-proxy-new-for-bus-sync" since="2.0.1"/>
-    <keyword type="function" name="storaged_manager_iscsi_initiator_proxy_new_sync ()" link="storaged-StoragedManagerISCSIInitiator.html#storaged-manager-iscsi-initiator-proxy-new-sync" since="2.0.1"/>
-    <keyword type="function" name="storaged_manager_iscsi_initiator_skeleton_get_type ()" link="storaged-StoragedManagerISCSIInitiator.html#storaged-manager-iscsi-initiator-skeleton-get-type"/>
-    <keyword type="function" name="storaged_manager_iscsi_initiator_skeleton_new ()" link="storaged-StoragedManagerISCSIInitiator.html#storaged-manager-iscsi-initiator-skeleton-new" since="2.0.1"/>
+    <keyword type="function" name="storaged_iscsi_session_interface_info ()" link="StoragedISCSISession.html#storaged-iscsi-session-interface-info"/>
+    <keyword type="function" name="storaged_iscsi_session_override_properties ()" link="StoragedISCSISession.html#storaged-iscsi-session-override-properties"/>
+    <keyword type="function" name="storaged_iscsi_session_get_target_name ()" link="StoragedISCSISession.html#storaged-iscsi-session-get-target-name"/>
+    <keyword type="function" name="storaged_iscsi_session_dup_target_name ()" link="StoragedISCSISession.html#storaged-iscsi-session-dup-target-name"/>
+    <keyword type="function" name="storaged_iscsi_session_set_target_name ()" link="StoragedISCSISession.html#storaged-iscsi-session-set-target-name"/>
+    <keyword type="function" name="storaged_iscsi_session_get_tpgt ()" link="StoragedISCSISession.html#storaged-iscsi-session-get-tpgt"/>
+    <keyword type="function" name="storaged_iscsi_session_set_tpgt ()" link="StoragedISCSISession.html#storaged-iscsi-session-set-tpgt"/>
+    <keyword type="function" name="storaged_iscsi_session_get_address ()" link="StoragedISCSISession.html#storaged-iscsi-session-get-address"/>
+    <keyword type="function" name="storaged_iscsi_session_dup_address ()" link="StoragedISCSISession.html#storaged-iscsi-session-dup-address"/>
+    <keyword type="function" name="storaged_iscsi_session_set_address ()" link="StoragedISCSISession.html#storaged-iscsi-session-set-address"/>
+    <keyword type="function" name="storaged_iscsi_session_get_port ()" link="StoragedISCSISession.html#storaged-iscsi-session-get-port"/>
+    <keyword type="function" name="storaged_iscsi_session_set_port ()" link="StoragedISCSISession.html#storaged-iscsi-session-set-port"/>
+    <keyword type="function" name="storaged_iscsi_session_get_persistent_address ()" link="StoragedISCSISession.html#storaged-iscsi-session-get-persistent-address"/>
+    <keyword type="function" name="storaged_iscsi_session_dup_persistent_address ()" link="StoragedISCSISession.html#storaged-iscsi-session-dup-persistent-address"/>
+    <keyword type="function" name="storaged_iscsi_session_set_persistent_address ()" link="StoragedISCSISession.html#storaged-iscsi-session-set-persistent-address"/>
+    <keyword type="function" name="storaged_iscsi_session_get_persistent_port ()" link="StoragedISCSISession.html#storaged-iscsi-session-get-persistent-port"/>
+    <keyword type="function" name="storaged_iscsi_session_set_persistent_port ()" link="StoragedISCSISession.html#storaged-iscsi-session-set-persistent-port"/>
+    <keyword type="function" name="storaged_iscsi_session_get_abort_timeout ()" link="StoragedISCSISession.html#storaged-iscsi-session-get-abort-timeout"/>
+    <keyword type="function" name="storaged_iscsi_session_set_abort_timeout ()" link="StoragedISCSISession.html#storaged-iscsi-session-set-abort-timeout"/>
+    <keyword type="function" name="storaged_iscsi_session_get_lu_reset_timeout ()" link="StoragedISCSISession.html#storaged-iscsi-session-get-lu-reset-timeout"/>
+    <keyword type="function" name="storaged_iscsi_session_set_lu_reset_timeout ()" link="StoragedISCSISession.html#storaged-iscsi-session-set-lu-reset-timeout"/>
+    <keyword type="function" name="storaged_iscsi_session_get_recovery_timeout ()" link="StoragedISCSISession.html#storaged-iscsi-session-get-recovery-timeout"/>
+    <keyword type="function" name="storaged_iscsi_session_set_recovery_timeout ()" link="StoragedISCSISession.html#storaged-iscsi-session-set-recovery-timeout"/>
+    <keyword type="function" name="storaged_iscsi_session_get_tgt_reset_timeout ()" link="StoragedISCSISession.html#storaged-iscsi-session-get-tgt-reset-timeout"/>
+    <keyword type="function" name="storaged_iscsi_session_set_tgt_reset_timeout ()" link="StoragedISCSISession.html#storaged-iscsi-session-set-tgt-reset-timeout"/>
+    <keyword type="function" name="storaged_iscsi_session_proxy_new ()" link="StoragedISCSISession.html#storaged-iscsi-session-proxy-new"/>
+    <keyword type="function" name="storaged_iscsi_session_proxy_new_finish ()" link="StoragedISCSISession.html#storaged-iscsi-session-proxy-new-finish"/>
+    <keyword type="function" name="storaged_iscsi_session_proxy_new_sync ()" link="StoragedISCSISession.html#storaged-iscsi-session-proxy-new-sync"/>
+    <keyword type="function" name="storaged_iscsi_session_proxy_new_for_bus ()" link="StoragedISCSISession.html#storaged-iscsi-session-proxy-new-for-bus"/>
+    <keyword type="function" name="storaged_iscsi_session_proxy_new_for_bus_finish ()" link="StoragedISCSISession.html#storaged-iscsi-session-proxy-new-for-bus-finish"/>
+    <keyword type="function" name="storaged_iscsi_session_proxy_new_for_bus_sync ()" link="StoragedISCSISession.html#storaged-iscsi-session-proxy-new-for-bus-sync"/>
+    <keyword type="function" name="storaged_iscsi_session_skeleton_new ()" link="StoragedISCSISession.html#storaged-iscsi-session-skeleton-new"/>
+    <keyword type="struct" name="StoragedISCSISession" link="StoragedISCSISession.html#StoragedISCSISession-struct"/>
+    <keyword type="struct" name="struct StoragedISCSISessionIface" link="StoragedISCSISession.html#StoragedISCSISessionIface"/>
+    <keyword type="struct" name="struct StoragedISCSISessionProxy" link="StoragedISCSISession.html#StoragedISCSISessionProxy-struct"/>
+    <keyword type="struct" name="struct StoragedISCSISessionProxyClass" link="StoragedISCSISession.html#StoragedISCSISessionProxyClass"/>
+    <keyword type="struct" name="struct StoragedISCSISessionSkeleton" link="StoragedISCSISession.html#StoragedISCSISessionSkeleton-struct"/>
+    <keyword type="struct" name="struct StoragedISCSISessionSkeletonClass" link="StoragedISCSISession.html#StoragedISCSISessionSkeletonClass"/>
+    <keyword type="property" name="The “abort-timeout” property" link="StoragedISCSISession.html#StoragedISCSISession--abort-timeout"/>
+    <keyword type="property" name="The “address” property" link="StoragedISCSISession.html#StoragedISCSISession--address"/>
+    <keyword type="property" name="The “lu-reset-timeout” property" link="StoragedISCSISession.html#StoragedISCSISession--lu-reset-timeout"/>
+    <keyword type="property" name="The “persistent-address” property" link="StoragedISCSISession.html#StoragedISCSISession--persistent-address"/>
+    <keyword type="property" name="The “persistent-port” property" link="StoragedISCSISession.html#StoragedISCSISession--persistent-port"/>
+    <keyword type="property" name="The “port” property" link="StoragedISCSISession.html#StoragedISCSISession--port"/>
+    <keyword type="property" name="The “recovery-timeout” property" link="StoragedISCSISession.html#StoragedISCSISession--recovery-timeout"/>
+    <keyword type="property" name="The “target-name” property" link="StoragedISCSISession.html#StoragedISCSISession--target-name"/>
+    <keyword type="property" name="The “tgt-reset-timeout” property" link="StoragedISCSISession.html#StoragedISCSISession--tgt-reset-timeout"/>
+    <keyword type="property" name="The “tpgt” property" link="StoragedISCSISession.html#StoragedISCSISession--tpgt"/>
+    <keyword type="signal" name="The “handle-logout” signal" link="StoragedISCSISession.html#StoragedISCSISession-handle-logout"/>
+    <keyword type="signal" name="The “handle-logout-interface” signal" link="StoragedISCSISession.html#StoragedISCSISession-handle-logout-interface"/>
+    <keyword type="function" name="storaged_manager_iscsi_initiator_interface_info ()" link="StoragedManagerISCSIInitiator.html#storaged-manager-iscsi-initiator-interface-info" since="2.0.1"/>
+    <keyword type="function" name="storaged_manager_iscsi_initiator_override_properties ()" link="StoragedManagerISCSIInitiator.html#storaged-manager-iscsi-initiator-override-properties" since="2.0.1"/>
+    <keyword type="function" name="storaged_manager_iscsi_initiator_complete_get_initiator_name ()" link="StoragedManagerISCSIInitiator.html#storaged-manager-iscsi-initiator-complete-get-initiator-name" since="2.0.1"/>
+    <keyword type="function" name="storaged_manager_iscsi_initiator_complete_set_initiator_name ()" link="StoragedManagerISCSIInitiator.html#storaged-manager-iscsi-initiator-complete-set-initiator-name" since="2.1.3"/>
+    <keyword type="function" name="storaged_manager_iscsi_initiator_complete_discover_send_targets_no_auth ()" link="StoragedManagerISCSIInitiator.html#storaged-manager-iscsi-initiator-complete-discover-send-targets-no-auth" since="2.1.3"/>
+    <keyword type="function" name="storaged_manager_iscsi_initiator_complete_discover_send_targets_chap ()" link="StoragedManagerISCSIInitiator.html#storaged-manager-iscsi-initiator-complete-discover-send-targets-chap" since="2.1.3"/>
+    <keyword type="function" name="storaged_manager_iscsi_initiator_complete_discover_firmware ()" link="StoragedManagerISCSIInitiator.html#storaged-manager-iscsi-initiator-complete-discover-firmware" since="2.1.3"/>
+    <keyword type="function" name="storaged_manager_iscsi_initiator_complete_login ()" link="StoragedManagerISCSIInitiator.html#storaged-manager-iscsi-initiator-complete-login" since="2.1.3"/>
+    <keyword type="function" name="storaged_manager_iscsi_initiator_complete_logout ()" link="StoragedManagerISCSIInitiator.html#storaged-manager-iscsi-initiator-complete-logout" since="2.1.3"/>
+    <keyword type="function" name="storaged_manager_iscsi_initiator_call_get_initiator_name ()" link="StoragedManagerISCSIInitiator.html#storaged-manager-iscsi-initiator-call-get-initiator-name" since="2.0.1"/>
+    <keyword type="function" name="storaged_manager_iscsi_initiator_call_get_initiator_name_finish ()" link="StoragedManagerISCSIInitiator.html#storaged-manager-iscsi-initiator-call-get-initiator-name-finish" since="2.0.1"/>
+    <keyword type="function" name="storaged_manager_iscsi_initiator_call_get_initiator_name_sync ()" link="StoragedManagerISCSIInitiator.html#storaged-manager-iscsi-initiator-call-get-initiator-name-sync" since="2.0.1"/>
+    <keyword type="function" name="storaged_manager_iscsi_initiator_call_set_initiator_name ()" link="StoragedManagerISCSIInitiator.html#storaged-manager-iscsi-initiator-call-set-initiator-name" since="2.1.3"/>
+    <keyword type="function" name="storaged_manager_iscsi_initiator_call_set_initiator_name_finish ()" link="StoragedManagerISCSIInitiator.html#storaged-manager-iscsi-initiator-call-set-initiator-name-finish" since="2.1.3"/>
+    <keyword type="function" name="storaged_manager_iscsi_initiator_call_set_initiator_name_sync ()" link="StoragedManagerISCSIInitiator.html#storaged-manager-iscsi-initiator-call-set-initiator-name-sync" since="2.1.3"/>
+    <keyword type="function" name="storaged_manager_iscsi_initiator_call_discover_send_targets_no_auth ()" link="StoragedManagerISCSIInitiator.html#storaged-manager-iscsi-initiator-call-discover-send-targets-no-auth" since="2.1.3"/>
+    <keyword type="function" name="storaged_manager_iscsi_initiator_call_discover_send_targets_no_auth_finish ()" link="StoragedManagerISCSIInitiator.html#storaged-manager-iscsi-initiator-call-discover-send-targets-no-auth-finish" since="2.1.3"/>
+    <keyword type="function" name="storaged_manager_iscsi_initiator_call_discover_send_targets_no_auth_sync ()" link="StoragedManagerISCSIInitiator.html#storaged-manager-iscsi-initiator-call-discover-send-targets-no-auth-sync" since="2.1.3"/>
+    <keyword type="function" name="storaged_manager_iscsi_initiator_call_discover_send_targets_chap ()" link="StoragedManagerISCSIInitiator.html#storaged-manager-iscsi-initiator-call-discover-send-targets-chap" since="2.1.3"/>
+    <keyword type="function" name="storaged_manager_iscsi_initiator_call_discover_send_targets_chap_finish ()" link="StoragedManagerISCSIInitiator.html#storaged-manager-iscsi-initiator-call-discover-send-targets-chap-finish" since="2.1.3"/>
+    <keyword type="function" name="storaged_manager_iscsi_initiator_call_discover_send_targets_chap_sync ()" link="StoragedManagerISCSIInitiator.html#storaged-manager-iscsi-initiator-call-discover-send-targets-chap-sync" since="2.1.3"/>
+    <keyword type="function" name="storaged_manager_iscsi_initiator_call_discover_firmware ()" link="StoragedManagerISCSIInitiator.html#storaged-manager-iscsi-initiator-call-discover-firmware" since="2.1.3"/>
+    <keyword type="function" name="storaged_manager_iscsi_initiator_call_discover_firmware_finish ()" link="StoragedManagerISCSIInitiator.html#storaged-manager-iscsi-initiator-call-discover-firmware-finish" since="2.1.3"/>
+    <keyword type="function" name="storaged_manager_iscsi_initiator_call_discover_firmware_sync ()" link="StoragedManagerISCSIInitiator.html#storaged-manager-iscsi-initiator-call-discover-firmware-sync" since="2.1.3"/>
+    <keyword type="function" name="storaged_manager_iscsi_initiator_call_login ()" link="StoragedManagerISCSIInitiator.html#storaged-manager-iscsi-initiator-call-login" since="2.1.3"/>
+    <keyword type="function" name="storaged_manager_iscsi_initiator_call_login_finish ()" link="StoragedManagerISCSIInitiator.html#storaged-manager-iscsi-initiator-call-login-finish" since="2.1.3"/>
+    <keyword type="function" name="storaged_manager_iscsi_initiator_call_login_sync ()" link="StoragedManagerISCSIInitiator.html#storaged-manager-iscsi-initiator-call-login-sync" since="2.1.3"/>
+    <keyword type="function" name="storaged_manager_iscsi_initiator_call_logout ()" link="StoragedManagerISCSIInitiator.html#storaged-manager-iscsi-initiator-call-logout" since="2.1.3"/>
+    <keyword type="function" name="storaged_manager_iscsi_initiator_call_logout_finish ()" link="StoragedManagerISCSIInitiator.html#storaged-manager-iscsi-initiator-call-logout-finish" since="2.1.3"/>
+    <keyword type="function" name="storaged_manager_iscsi_initiator_call_logout_sync ()" link="StoragedManagerISCSIInitiator.html#storaged-manager-iscsi-initiator-call-logout-sync" since="2.1.3"/>
+    <keyword type="function" name="storaged_manager_iscsi_initiator_proxy_new ()" link="StoragedManagerISCSIInitiator.html#storaged-manager-iscsi-initiator-proxy-new" since="2.0.1"/>
+    <keyword type="function" name="storaged_manager_iscsi_initiator_proxy_new_finish ()" link="StoragedManagerISCSIInitiator.html#storaged-manager-iscsi-initiator-proxy-new-finish" since="2.0.1"/>
+    <keyword type="function" name="storaged_manager_iscsi_initiator_proxy_new_sync ()" link="StoragedManagerISCSIInitiator.html#storaged-manager-iscsi-initiator-proxy-new-sync" since="2.0.1"/>
+    <keyword type="function" name="storaged_manager_iscsi_initiator_proxy_new_for_bus ()" link="StoragedManagerISCSIInitiator.html#storaged-manager-iscsi-initiator-proxy-new-for-bus" since="2.0.1"/>
+    <keyword type="function" name="storaged_manager_iscsi_initiator_proxy_new_for_bus_finish ()" link="StoragedManagerISCSIInitiator.html#storaged-manager-iscsi-initiator-proxy-new-for-bus-finish" since="2.0.1"/>
+    <keyword type="function" name="storaged_manager_iscsi_initiator_proxy_new_for_bus_sync ()" link="StoragedManagerISCSIInitiator.html#storaged-manager-iscsi-initiator-proxy-new-for-bus-sync" since="2.0.1"/>
+    <keyword type="function" name="storaged_manager_iscsi_initiator_skeleton_new ()" link="StoragedManagerISCSIInitiator.html#storaged-manager-iscsi-initiator-skeleton-new" since="2.0.1"/>
+    <keyword type="struct" name="StoragedManagerISCSIInitiator" link="StoragedManagerISCSIInitiator.html#StoragedManagerISCSIInitiator-struct"/>
+    <keyword type="struct" name="struct StoragedManagerISCSIInitiatorIface" link="StoragedManagerISCSIInitiator.html#StoragedManagerISCSIInitiatorIface" since="2.0.1"/>
+    <keyword type="struct" name="struct StoragedManagerISCSIInitiatorProxy" link="StoragedManagerISCSIInitiator.html#StoragedManagerISCSIInitiatorProxy-struct"/>
+    <keyword type="struct" name="struct StoragedManagerISCSIInitiatorProxyClass" link="StoragedManagerISCSIInitiator.html#StoragedManagerISCSIInitiatorProxyClass" since="2.0.1"/>
+    <keyword type="struct" name="struct StoragedManagerISCSIInitiatorSkeleton" link="StoragedManagerISCSIInitiator.html#StoragedManagerISCSIInitiatorSkeleton-struct"/>
+    <keyword type="struct" name="struct StoragedManagerISCSIInitiatorSkeletonClass" link="StoragedManagerISCSIInitiator.html#StoragedManagerISCSIInitiatorSkeletonClass" since="2.0.1"/>
+    <keyword type="signal" name="The “handle-discover-firmware” signal" link="StoragedManagerISCSIInitiator.html#StoragedManagerISCSIInitiator-handle-discover-firmware"/>
+    <keyword type="signal" name="The “handle-discover-send-targets-chap” signal" link="StoragedManagerISCSIInitiator.html#StoragedManagerISCSIInitiator-handle-discover-send-targets-chap"/>
+    <keyword type="signal" name="The “handle-discover-send-targets-no-auth” signal" link="StoragedManagerISCSIInitiator.html#StoragedManagerISCSIInitiator-handle-discover-send-targets-no-auth"/>
+    <keyword type="signal" name="The “handle-get-initiator-name” signal" link="StoragedManagerISCSIInitiator.html#StoragedManagerISCSIInitiator-handle-get-initiator-name"/>
+    <keyword type="signal" name="The “handle-login” signal" link="StoragedManagerISCSIInitiator.html#StoragedManagerISCSIInitiator-handle-login"/>
+    <keyword type="signal" name="The “handle-logout” signal" link="StoragedManagerISCSIInitiator.html#StoragedManagerISCSIInitiator-handle-logout"/>
+    <keyword type="signal" name="The “handle-set-initiator-name” signal" link="StoragedManagerISCSIInitiator.html#StoragedManagerISCSIInitiator-handle-set-initiator-name"/>
+    <keyword type="function" name="storaged_manager_btrfs_call_create_volume ()" link="StoragedManagerBTRFS.html#storaged-manager-btrfs-call-create-volume" since="2.3.0"/>
+    <keyword type="function" name="storaged_manager_btrfs_call_create_volume_finish ()" link="StoragedManagerBTRFS.html#storaged-manager-btrfs-call-create-volume-finish" since="2.3.0"/>
+    <keyword type="function" name="storaged_manager_btrfs_call_create_volume_sync ()" link="StoragedManagerBTRFS.html#storaged-manager-btrfs-call-create-volume-sync" since="2.3.0"/>
+    <keyword type="function" name="storaged_manager_btrfs_complete_create_volume ()" link="StoragedManagerBTRFS.html#storaged-manager-btrfs-complete-create-volume" since="2.3.0"/>
+    <keyword type="function" name="storaged_manager_btrfs_interface_info ()" link="StoragedManagerBTRFS.html#storaged-manager-btrfs-interface-info" since="2.1.3"/>
+    <keyword type="function" name="storaged_manager_btrfs_override_properties ()" link="StoragedManagerBTRFS.html#storaged-manager-btrfs-override-properties" since="2.1.3"/>
+    <keyword type="function" name="storaged_manager_btrfs_proxy_new ()" link="StoragedManagerBTRFS.html#storaged-manager-btrfs-proxy-new" since="2.1.3"/>
+    <keyword type="function" name="storaged_manager_btrfs_proxy_new_finish ()" link="StoragedManagerBTRFS.html#storaged-manager-btrfs-proxy-new-finish" since="2.1.3"/>
+    <keyword type="function" name="storaged_manager_btrfs_proxy_new_for_bus ()" link="StoragedManagerBTRFS.html#storaged-manager-btrfs-proxy-new-for-bus" since="2.1.3"/>
+    <keyword type="function" name="storaged_manager_btrfs_proxy_new_for_bus_finish ()" link="StoragedManagerBTRFS.html#storaged-manager-btrfs-proxy-new-for-bus-finish" since="2.1.3"/>
+    <keyword type="function" name="storaged_manager_btrfs_proxy_new_for_bus_sync ()" link="StoragedManagerBTRFS.html#storaged-manager-btrfs-proxy-new-for-bus-sync" since="2.1.3"/>
+    <keyword type="function" name="storaged_manager_btrfs_proxy_new_sync ()" link="StoragedManagerBTRFS.html#storaged-manager-btrfs-proxy-new-sync" since="2.1.3"/>
+    <keyword type="function" name="storaged_manager_btrfs_skeleton_new ()" link="StoragedManagerBTRFS.html#storaged-manager-btrfs-skeleton-new" since="2.1.3"/>
+    <keyword type="struct" name="StoragedManagerBTRFS" link="StoragedManagerBTRFS.html#StoragedManagerBTRFS-struct"/>
+    <keyword type="struct" name="struct StoragedManagerBTRFSIface" link="StoragedManagerBTRFS.html#StoragedManagerBTRFSIface" since="2.1.3"/>
+    <keyword type="struct" name="struct StoragedManagerBTRFSProxy" link="StoragedManagerBTRFS.html#StoragedManagerBTRFSProxy-struct"/>
+    <keyword type="struct" name="struct StoragedManagerBTRFSProxyClass" link="StoragedManagerBTRFS.html#StoragedManagerBTRFSProxyClass" since="2.1.3"/>
+    <keyword type="struct" name="struct StoragedManagerBTRFSSkeleton" link="StoragedManagerBTRFS.html#StoragedManagerBTRFSSkeleton-struct"/>
+    <keyword type="struct" name="struct StoragedManagerBTRFSSkeletonClass" link="StoragedManagerBTRFS.html#StoragedManagerBTRFSSkeletonClass" since="2.1.3"/>
+    <keyword type="signal" name="The “handle-create-volume” signal" link="StoragedManagerBTRFS.html#StoragedManagerBTRFS-handle-create-volume"/>
+    <keyword type="function" name="storaged_filesystem_btrfs_call_add_device ()" link="StoragedFilesystemBTRFS.html#storaged-filesystem-btrfs-call-add-device" since="2.3.0"/>
+    <keyword type="function" name="storaged_filesystem_btrfs_call_add_device_finish ()" link="StoragedFilesystemBTRFS.html#storaged-filesystem-btrfs-call-add-device-finish" since="2.3.0"/>
+    <keyword type="function" name="storaged_filesystem_btrfs_call_add_device_sync ()" link="StoragedFilesystemBTRFS.html#storaged-filesystem-btrfs-call-add-device-sync" since="2.3.0"/>
+    <keyword type="function" name="storaged_filesystem_btrfs_call_create_snapshot ()" link="StoragedFilesystemBTRFS.html#storaged-filesystem-btrfs-call-create-snapshot" since="2.1.3"/>
+    <keyword type="function" name="storaged_filesystem_btrfs_call_create_snapshot_finish ()" link="StoragedFilesystemBTRFS.html#storaged-filesystem-btrfs-call-create-snapshot-finish" since="2.1.3"/>
+    <keyword type="function" name="storaged_filesystem_btrfs_call_create_snapshot_sync ()" link="StoragedFilesystemBTRFS.html#storaged-filesystem-btrfs-call-create-snapshot-sync" since="2.1.3"/>
+    <keyword type="function" name="storaged_filesystem_btrfs_call_create_subvolume ()" link="StoragedFilesystemBTRFS.html#storaged-filesystem-btrfs-call-create-subvolume" since="2.1.3"/>
+    <keyword type="function" name="storaged_filesystem_btrfs_call_create_subvolume_finish ()" link="StoragedFilesystemBTRFS.html#storaged-filesystem-btrfs-call-create-subvolume-finish" since="2.1.3"/>
+    <keyword type="function" name="storaged_filesystem_btrfs_call_create_subvolume_sync ()" link="StoragedFilesystemBTRFS.html#storaged-filesystem-btrfs-call-create-subvolume-sync" since="2.1.3"/>
+    <keyword type="function" name="storaged_filesystem_btrfs_call_get_subvolumes ()" link="StoragedFilesystemBTRFS.html#storaged-filesystem-btrfs-call-get-subvolumes" since="2.1.3"/>
+    <keyword type="function" name="storaged_filesystem_btrfs_call_get_subvolumes_finish ()" link="StoragedFilesystemBTRFS.html#storaged-filesystem-btrfs-call-get-subvolumes-finish" since="2.1.3"/>
+    <keyword type="function" name="storaged_filesystem_btrfs_call_get_subvolumes_sync ()" link="StoragedFilesystemBTRFS.html#storaged-filesystem-btrfs-call-get-subvolumes-sync" since="2.1.3"/>
+    <keyword type="function" name="storaged_filesystem_btrfs_call_remove_device ()" link="StoragedFilesystemBTRFS.html#storaged-filesystem-btrfs-call-remove-device" since="2.3.0"/>
+    <keyword type="function" name="storaged_filesystem_btrfs_call_remove_device_finish ()" link="StoragedFilesystemBTRFS.html#storaged-filesystem-btrfs-call-remove-device-finish" since="2.3.0"/>
+    <keyword type="function" name="storaged_filesystem_btrfs_call_remove_device_sync ()" link="StoragedFilesystemBTRFS.html#storaged-filesystem-btrfs-call-remove-device-sync" since="2.3.0"/>
+    <keyword type="function" name="storaged_filesystem_btrfs_call_remove_subvolume ()" link="StoragedFilesystemBTRFS.html#storaged-filesystem-btrfs-call-remove-subvolume" since="2.1.3"/>
+    <keyword type="function" name="storaged_filesystem_btrfs_call_remove_subvolume_finish ()" link="StoragedFilesystemBTRFS.html#storaged-filesystem-btrfs-call-remove-subvolume-finish" since="2.1.3"/>
+    <keyword type="function" name="storaged_filesystem_btrfs_call_remove_subvolume_sync ()" link="StoragedFilesystemBTRFS.html#storaged-filesystem-btrfs-call-remove-subvolume-sync" since="2.1.3"/>
+    <keyword type="function" name="storaged_filesystem_btrfs_call_repair ()" link="StoragedFilesystemBTRFS.html#storaged-filesystem-btrfs-call-repair" since="2.3.0"/>
+    <keyword type="function" name="storaged_filesystem_btrfs_call_repair_finish ()" link="StoragedFilesystemBTRFS.html#storaged-filesystem-btrfs-call-repair-finish" since="2.3.0"/>
+    <keyword type="function" name="storaged_filesystem_btrfs_call_repair_sync ()" link="StoragedFilesystemBTRFS.html#storaged-filesystem-btrfs-call-repair-sync" since="2.3.0"/>
+    <keyword type="function" name="storaged_filesystem_btrfs_call_resize ()" link="StoragedFilesystemBTRFS.html#storaged-filesystem-btrfs-call-resize" since="2.3.0"/>
+    <keyword type="function" name="storaged_filesystem_btrfs_call_resize_finish ()" link="StoragedFilesystemBTRFS.html#storaged-filesystem-btrfs-call-resize-finish" since="2.3.0"/>
+    <keyword type="function" name="storaged_filesystem_btrfs_call_resize_sync ()" link="StoragedFilesystemBTRFS.html#storaged-filesystem-btrfs-call-resize-sync" since="2.3.0"/>
+    <keyword type="function" name="storaged_filesystem_btrfs_call_set_label ()" link="StoragedFilesystemBTRFS.html#storaged-filesystem-btrfs-call-set-label" since="2.1.3"/>
+    <keyword type="function" name="storaged_filesystem_btrfs_call_set_label_finish ()" link="StoragedFilesystemBTRFS.html#storaged-filesystem-btrfs-call-set-label-finish" since="2.1.3"/>
+    <keyword type="function" name="storaged_filesystem_btrfs_call_set_label_sync ()" link="StoragedFilesystemBTRFS.html#storaged-filesystem-btrfs-call-set-label-sync" since="2.1.3"/>
+    <keyword type="function" name="storaged_filesystem_btrfs_complete_add_device ()" link="StoragedFilesystemBTRFS.html#storaged-filesystem-btrfs-complete-add-device" since="2.3.0"/>
+    <keyword type="function" name="storaged_filesystem_btrfs_complete_create_snapshot ()" link="StoragedFilesystemBTRFS.html#storaged-filesystem-btrfs-complete-create-snapshot" since="2.1.3"/>
+    <keyword type="function" name="storaged_filesystem_btrfs_complete_create_subvolume ()" link="StoragedFilesystemBTRFS.html#storaged-filesystem-btrfs-complete-create-subvolume" since="2.1.3"/>
+    <keyword type="function" name="storaged_filesystem_btrfs_complete_get_subvolumes ()" link="StoragedFilesystemBTRFS.html#storaged-filesystem-btrfs-complete-get-subvolumes" since="2.1.3"/>
+    <keyword type="function" name="storaged_filesystem_btrfs_complete_remove_device ()" link="StoragedFilesystemBTRFS.html#storaged-filesystem-btrfs-complete-remove-device" since="2.3.0"/>
+    <keyword type="function" name="storaged_filesystem_btrfs_complete_remove_subvolume ()" link="StoragedFilesystemBTRFS.html#storaged-filesystem-btrfs-complete-remove-subvolume" since="2.1.3"/>
+    <keyword type="function" name="storaged_filesystem_btrfs_complete_repair ()" link="StoragedFilesystemBTRFS.html#storaged-filesystem-btrfs-complete-repair" since="2.3.0"/>
+    <keyword type="function" name="storaged_filesystem_btrfs_complete_resize ()" link="StoragedFilesystemBTRFS.html#storaged-filesystem-btrfs-complete-resize" since="2.3.0"/>
+    <keyword type="function" name="storaged_filesystem_btrfs_complete_set_label ()" link="StoragedFilesystemBTRFS.html#storaged-filesystem-btrfs-complete-set-label" since="2.1.3"/>
+    <keyword type="function" name="storaged_filesystem_btrfs_dup_label ()" link="StoragedFilesystemBTRFS.html#storaged-filesystem-btrfs-dup-label" since="2.1.3"/>
+    <keyword type="function" name="storaged_filesystem_btrfs_dup_uuid ()" link="StoragedFilesystemBTRFS.html#storaged-filesystem-btrfs-dup-uuid" since="2.1.3"/>
+    <keyword type="function" name="storaged_filesystem_btrfs_get_label ()" link="StoragedFilesystemBTRFS.html#storaged-filesystem-btrfs-get-label" since="2.1.3"/>
+    <keyword type="function" name="storaged_filesystem_btrfs_get_num_devices ()" link="StoragedFilesystemBTRFS.html#storaged-filesystem-btrfs-get-num-devices" since="2.1.3"/>
+    <keyword type="function" name="storaged_filesystem_btrfs_get_used ()" link="StoragedFilesystemBTRFS.html#storaged-filesystem-btrfs-get-used" since="2.1.3"/>
+    <keyword type="function" name="storaged_filesystem_btrfs_get_uuid ()" link="StoragedFilesystemBTRFS.html#storaged-filesystem-btrfs-get-uuid" since="2.1.3"/>
+    <keyword type="function" name="storaged_filesystem_btrfs_interface_info ()" link="StoragedFilesystemBTRFS.html#storaged-filesystem-btrfs-interface-info" since="2.1.3"/>
+    <keyword type="function" name="storaged_filesystem_btrfs_override_properties ()" link="StoragedFilesystemBTRFS.html#storaged-filesystem-btrfs-override-properties" since="2.1.3"/>
+    <keyword type="function" name="storaged_filesystem_btrfs_proxy_new ()" link="StoragedFilesystemBTRFS.html#storaged-filesystem-btrfs-proxy-new" since="2.1.3"/>
+    <keyword type="function" name="storaged_filesystem_btrfs_proxy_new_finish ()" link="StoragedFilesystemBTRFS.html#storaged-filesystem-btrfs-proxy-new-finish" since="2.1.3"/>
+    <keyword type="function" name="storaged_filesystem_btrfs_proxy_new_for_bus ()" link="StoragedFilesystemBTRFS.html#storaged-filesystem-btrfs-proxy-new-for-bus" since="2.1.3"/>
+    <keyword type="function" name="storaged_filesystem_btrfs_proxy_new_for_bus_finish ()" link="StoragedFilesystemBTRFS.html#storaged-filesystem-btrfs-proxy-new-for-bus-finish" since="2.1.3"/>
+    <keyword type="function" name="storaged_filesystem_btrfs_proxy_new_for_bus_sync ()" link="StoragedFilesystemBTRFS.html#storaged-filesystem-btrfs-proxy-new-for-bus-sync" since="2.1.3"/>
+    <keyword type="function" name="storaged_filesystem_btrfs_proxy_new_sync ()" link="StoragedFilesystemBTRFS.html#storaged-filesystem-btrfs-proxy-new-sync" since="2.1.3"/>
+    <keyword type="function" name="storaged_filesystem_btrfs_set_label ()" link="StoragedFilesystemBTRFS.html#storaged-filesystem-btrfs-set-label" since="2.1.3"/>
+    <keyword type="function" name="storaged_filesystem_btrfs_set_num_devices ()" link="StoragedFilesystemBTRFS.html#storaged-filesystem-btrfs-set-num-devices" since="2.1.3"/>
+    <keyword type="function" name="storaged_filesystem_btrfs_set_used ()" link="StoragedFilesystemBTRFS.html#storaged-filesystem-btrfs-set-used" since="2.1.3"/>
+    <keyword type="function" name="storaged_filesystem_btrfs_set_uuid ()" link="StoragedFilesystemBTRFS.html#storaged-filesystem-btrfs-set-uuid" since="2.1.3"/>
+    <keyword type="function" name="storaged_filesystem_btrfs_skeleton_new ()" link="StoragedFilesystemBTRFS.html#storaged-filesystem-btrfs-skeleton-new" since="2.1.3"/>
+    <keyword type="struct" name="StoragedFilesystemBTRFS" link="StoragedFilesystemBTRFS.html#StoragedFilesystemBTRFS-struct"/>
+    <keyword type="struct" name="struct StoragedFilesystemBTRFSIface" link="StoragedFilesystemBTRFS.html#StoragedFilesystemBTRFSIface" since="2.1.3"/>
+    <keyword type="struct" name="struct StoragedFilesystemBTRFSProxy" link="StoragedFilesystemBTRFS.html#StoragedFilesystemBTRFSProxy-struct"/>
+    <keyword type="struct" name="struct StoragedFilesystemBTRFSProxyClass" link="StoragedFilesystemBTRFS.html#StoragedFilesystemBTRFSProxyClass" since="2.1.3"/>
+    <keyword type="struct" name="struct StoragedFilesystemBTRFSSkeleton" link="StoragedFilesystemBTRFS.html#StoragedFilesystemBTRFSSkeleton-struct"/>
+    <keyword type="struct" name="struct StoragedFilesystemBTRFSSkeletonClass" link="StoragedFilesystemBTRFS.html#StoragedFilesystemBTRFSSkeletonClass" since="2.1.3"/>
+    <keyword type="property" name="The “label” property" link="StoragedFilesystemBTRFS.html#StoragedFilesystemBTRFS--label"/>
+    <keyword type="property" name="The “num-devices” property" link="StoragedFilesystemBTRFS.html#StoragedFilesystemBTRFS--num-devices"/>
+    <keyword type="property" name="The “used” property" link="StoragedFilesystemBTRFS.html#StoragedFilesystemBTRFS--used"/>
+    <keyword type="property" name="The “uuid” property" link="StoragedFilesystemBTRFS.html#StoragedFilesystemBTRFS--uuid"/>
+    <keyword type="signal" name="The “handle-add-device” signal" link="StoragedFilesystemBTRFS.html#StoragedFilesystemBTRFS-handle-add-device"/>
+    <keyword type="signal" name="The “handle-create-snapshot” signal" link="StoragedFilesystemBTRFS.html#StoragedFilesystemBTRFS-handle-create-snapshot"/>
+    <keyword type="signal" name="The “handle-create-subvolume” signal" link="StoragedFilesystemBTRFS.html#StoragedFilesystemBTRFS-handle-create-subvolume"/>
+    <keyword type="signal" name="The “handle-get-subvolumes” signal" link="StoragedFilesystemBTRFS.html#StoragedFilesystemBTRFS-handle-get-subvolumes"/>
+    <keyword type="signal" name="The “handle-remove-device” signal" link="StoragedFilesystemBTRFS.html#StoragedFilesystemBTRFS-handle-remove-device"/>
+    <keyword type="signal" name="The “handle-remove-subvolume” signal" link="StoragedFilesystemBTRFS.html#StoragedFilesystemBTRFS-handle-remove-subvolume"/>
+    <keyword type="signal" name="The “handle-repair” signal" link="StoragedFilesystemBTRFS.html#StoragedFilesystemBTRFS-handle-repair"/>
+    <keyword type="signal" name="The “handle-resize” signal" link="StoragedFilesystemBTRFS.html#StoragedFilesystemBTRFS-handle-resize"/>
+    <keyword type="signal" name="The “handle-set-label” signal" link="StoragedFilesystemBTRFS.html#StoragedFilesystemBTRFS-handle-set-label"/>
+    <keyword type="function" name="storaged_manager_zram_call_create_devices ()" link="StoragedManagerZRAM.html#storaged-manager-zram-call-create-devices" since="2.3.0"/>
+    <keyword type="function" name="storaged_manager_zram_call_create_devices_finish ()" link="StoragedManagerZRAM.html#storaged-manager-zram-call-create-devices-finish" since="2.3.0"/>
+    <keyword type="function" name="storaged_manager_zram_call_create_devices_sync ()" link="StoragedManagerZRAM.html#storaged-manager-zram-call-create-devices-sync" since="2.3.0"/>
+    <keyword type="function" name="storaged_manager_zram_call_destroy_devices ()" link="StoragedManagerZRAM.html#storaged-manager-zram-call-destroy-devices" since="2.3.0"/>
+    <keyword type="function" name="storaged_manager_zram_call_destroy_devices_finish ()" link="StoragedManagerZRAM.html#storaged-manager-zram-call-destroy-devices-finish" since="2.3.0"/>
+    <keyword type="function" name="storaged_manager_zram_call_destroy_devices_sync ()" link="StoragedManagerZRAM.html#storaged-manager-zram-call-destroy-devices-sync" since="2.3.0"/>
+    <keyword type="function" name="storaged_manager_zram_complete_create_devices ()" link="StoragedManagerZRAM.html#storaged-manager-zram-complete-create-devices" since="2.3.0"/>
+    <keyword type="function" name="storaged_manager_zram_complete_destroy_devices ()" link="StoragedManagerZRAM.html#storaged-manager-zram-complete-destroy-devices" since="2.3.0"/>
+    <keyword type="function" name="storaged_manager_zram_interface_info ()" link="StoragedManagerZRAM.html#storaged-manager-zram-interface-info" since="2.3.0"/>
+    <keyword type="function" name="storaged_manager_zram_override_properties ()" link="StoragedManagerZRAM.html#storaged-manager-zram-override-properties" since="2.3.0"/>
+    <keyword type="function" name="storaged_manager_zram_proxy_new ()" link="StoragedManagerZRAM.html#storaged-manager-zram-proxy-new" since="2.3.0"/>
+    <keyword type="function" name="storaged_manager_zram_proxy_new_finish ()" link="StoragedManagerZRAM.html#storaged-manager-zram-proxy-new-finish" since="2.3.0"/>
+    <keyword type="function" name="storaged_manager_zram_proxy_new_for_bus ()" link="StoragedManagerZRAM.html#storaged-manager-zram-proxy-new-for-bus" since="2.3.0"/>
+    <keyword type="function" name="storaged_manager_zram_proxy_new_for_bus_finish ()" link="StoragedManagerZRAM.html#storaged-manager-zram-proxy-new-for-bus-finish" since="2.3.0"/>
+    <keyword type="function" name="storaged_manager_zram_proxy_new_for_bus_sync ()" link="StoragedManagerZRAM.html#storaged-manager-zram-proxy-new-for-bus-sync" since="2.3.0"/>
+    <keyword type="function" name="storaged_manager_zram_proxy_new_sync ()" link="StoragedManagerZRAM.html#storaged-manager-zram-proxy-new-sync" since="2.3.0"/>
+    <keyword type="function" name="storaged_manager_zram_skeleton_new ()" link="StoragedManagerZRAM.html#storaged-manager-zram-skeleton-new" since="2.3.0"/>
+    <keyword type="struct" name="StoragedManagerZRAM" link="StoragedManagerZRAM.html#StoragedManagerZRAM-struct"/>
+    <keyword type="struct" name="struct StoragedManagerZRAMIface" link="StoragedManagerZRAM.html#StoragedManagerZRAMIface" since="2.3.0"/>
+    <keyword type="struct" name="struct StoragedManagerZRAMProxy" link="StoragedManagerZRAM.html#StoragedManagerZRAMProxy-struct"/>
+    <keyword type="struct" name="struct StoragedManagerZRAMProxyClass" link="StoragedManagerZRAM.html#StoragedManagerZRAMProxyClass" since="2.3.0"/>
+    <keyword type="struct" name="struct StoragedManagerZRAMSkeleton" link="StoragedManagerZRAM.html#StoragedManagerZRAMSkeleton-struct"/>
+    <keyword type="struct" name="struct StoragedManagerZRAMSkeletonClass" link="StoragedManagerZRAM.html#StoragedManagerZRAMSkeletonClass" since="2.3.0"/>
+    <keyword type="signal" name="The “handle-create-devices” signal" link="StoragedManagerZRAM.html#StoragedManagerZRAM-handle-create-devices"/>
+    <keyword type="signal" name="The “handle-destroy-devices” signal" link="StoragedManagerZRAM.html#StoragedManagerZRAM-handle-destroy-devices"/>
+    <keyword type="function" name="storaged_block_zram_call_activate ()" link="StoragedBlockZRAM.html#storaged-block-zram-call-activate" since="2.3.0"/>
+    <keyword type="function" name="storaged_block_zram_call_activate_finish ()" link="StoragedBlockZRAM.html#storaged-block-zram-call-activate-finish" since="2.3.0"/>
+    <keyword type="function" name="storaged_block_zram_call_activate_labeled ()" link="StoragedBlockZRAM.html#storaged-block-zram-call-activate-labeled" since="2.3.0"/>
+    <keyword type="function" name="storaged_block_zram_call_activate_labeled_finish ()" link="StoragedBlockZRAM.html#storaged-block-zram-call-activate-labeled-finish" since="2.3.0"/>
+    <keyword type="function" name="storaged_block_zram_call_activate_labeled_sync ()" link="StoragedBlockZRAM.html#storaged-block-zram-call-activate-labeled-sync" since="2.3.0"/>
+    <keyword type="function" name="storaged_block_zram_call_activate_sync ()" link="StoragedBlockZRAM.html#storaged-block-zram-call-activate-sync" since="2.3.0"/>
+    <keyword type="function" name="storaged_block_zram_call_deactivate ()" link="StoragedBlockZRAM.html#storaged-block-zram-call-deactivate" since="2.3.0"/>
+    <keyword type="function" name="storaged_block_zram_call_deactivate_finish ()" link="StoragedBlockZRAM.html#storaged-block-zram-call-deactivate-finish" since="2.3.0"/>
+    <keyword type="function" name="storaged_block_zram_call_deactivate_sync ()" link="StoragedBlockZRAM.html#storaged-block-zram-call-deactivate-sync" since="2.3.0"/>
+    <keyword type="function" name="storaged_block_zram_call_refresh ()" link="StoragedBlockZRAM.html#storaged-block-zram-call-refresh" since="2.3.0"/>
+    <keyword type="function" name="storaged_block_zram_call_refresh_finish ()" link="StoragedBlockZRAM.html#storaged-block-zram-call-refresh-finish" since="2.3.0"/>
+    <keyword type="function" name="storaged_block_zram_call_refresh_sync ()" link="StoragedBlockZRAM.html#storaged-block-zram-call-refresh-sync" since="2.3.0"/>
+    <keyword type="function" name="storaged_block_zram_complete_activate ()" link="StoragedBlockZRAM.html#storaged-block-zram-complete-activate" since="2.3.0"/>
+    <keyword type="function" name="storaged_block_zram_complete_activate_labeled ()" link="StoragedBlockZRAM.html#storaged-block-zram-complete-activate-labeled" since="2.3.0"/>
+    <keyword type="function" name="storaged_block_zram_complete_deactivate ()" link="StoragedBlockZRAM.html#storaged-block-zram-complete-deactivate" since="2.3.0"/>
+    <keyword type="function" name="storaged_block_zram_complete_refresh ()" link="StoragedBlockZRAM.html#storaged-block-zram-complete-refresh" since="2.3.0"/>
+    <keyword type="function" name="storaged_block_zram_dup_comp_algorithm ()" link="StoragedBlockZRAM.html#storaged-block-zram-dup-comp-algorithm" since="2.3.0"/>
+    <keyword type="function" name="storaged_block_zram_get_active ()" link="StoragedBlockZRAM.html#storaged-block-zram-get-active" since="2.3.0"/>
+    <keyword type="function" name="storaged_block_zram_get_comp_algorithm ()" link="StoragedBlockZRAM.html#storaged-block-zram-get-comp-algorithm" since="2.3.0"/>
+    <keyword type="function" name="storaged_block_zram_get_compr_data_size ()" link="StoragedBlockZRAM.html#storaged-block-zram-get-compr-data-size" since="2.3.0"/>
+    <keyword type="function" name="storaged_block_zram_get_disksize ()" link="StoragedBlockZRAM.html#storaged-block-zram-get-disksize" since="2.3.0"/>
+    <keyword type="function" name="storaged_block_zram_get_invalid_io ()" link="StoragedBlockZRAM.html#storaged-block-zram-get-invalid-io" since="2.3.0"/>
+    <keyword type="function" name="storaged_block_zram_get_max_comp_streams ()" link="StoragedBlockZRAM.html#storaged-block-zram-get-max-comp-streams" since="2.3.0"/>
+    <keyword type="function" name="storaged_block_zram_get_mem_used_total ()" link="StoragedBlockZRAM.html#storaged-block-zram-get-mem-used-total" since="2.3.0"/>
+    <keyword type="function" name="storaged_block_zram_get_num_reads ()" link="StoragedBlockZRAM.html#storaged-block-zram-get-num-reads" since="2.3.0"/>
+    <keyword type="function" name="storaged_block_zram_get_num_writes ()" link="StoragedBlockZRAM.html#storaged-block-zram-get-num-writes" since="2.3.0"/>
+    <keyword type="function" name="storaged_block_zram_get_orig_data_size ()" link="StoragedBlockZRAM.html#storaged-block-zram-get-orig-data-size" since="2.3.0"/>
+    <keyword type="function" name="storaged_block_zram_get_zero_pages ()" link="StoragedBlockZRAM.html#storaged-block-zram-get-zero-pages" since="2.3.0"/>
+    <keyword type="function" name="storaged_block_zram_interface_info ()" link="StoragedBlockZRAM.html#storaged-block-zram-interface-info" since="2.3.0"/>
+    <keyword type="function" name="storaged_block_zram_override_properties ()" link="StoragedBlockZRAM.html#storaged-block-zram-override-properties" since="2.3.0"/>
+    <keyword type="function" name="storaged_block_zram_proxy_new ()" link="StoragedBlockZRAM.html#storaged-block-zram-proxy-new" since="2.3.0"/>
+    <keyword type="function" name="storaged_block_zram_proxy_new_finish ()" link="StoragedBlockZRAM.html#storaged-block-zram-proxy-new-finish" since="2.3.0"/>
+    <keyword type="function" name="storaged_block_zram_proxy_new_for_bus ()" link="StoragedBlockZRAM.html#storaged-block-zram-proxy-new-for-bus" since="2.3.0"/>
+    <keyword type="function" name="storaged_block_zram_proxy_new_for_bus_finish ()" link="StoragedBlockZRAM.html#storaged-block-zram-proxy-new-for-bus-finish" since="2.3.0"/>
+    <keyword type="function" name="storaged_block_zram_proxy_new_for_bus_sync ()" link="StoragedBlockZRAM.html#storaged-block-zram-proxy-new-for-bus-sync" since="2.3.0"/>
+    <keyword type="function" name="storaged_block_zram_proxy_new_sync ()" link="StoragedBlockZRAM.html#storaged-block-zram-proxy-new-sync" since="2.3.0"/>
+    <keyword type="function" name="storaged_block_zram_set_active ()" link="StoragedBlockZRAM.html#storaged-block-zram-set-active" since="2.3.0"/>
+    <keyword type="function" name="storaged_block_zram_set_comp_algorithm ()" link="StoragedBlockZRAM.html#storaged-block-zram-set-comp-algorithm" since="2.3.0"/>
+    <keyword type="function" name="storaged_block_zram_set_compr_data_size ()" link="StoragedBlockZRAM.html#storaged-block-zram-set-compr-data-size" since="2.3.0"/>
+    <keyword type="function" name="storaged_block_zram_set_disksize ()" link="StoragedBlockZRAM.html#storaged-block-zram-set-disksize" since="2.3.0"/>
+    <keyword type="function" name="storaged_block_zram_set_invalid_io ()" link="StoragedBlockZRAM.html#storaged-block-zram-set-invalid-io" since="2.3.0"/>
+    <keyword type="function" name="storaged_block_zram_set_max_comp_streams ()" link="StoragedBlockZRAM.html#storaged-block-zram-set-max-comp-streams" since="2.3.0"/>
+    <keyword type="function" name="storaged_block_zram_set_mem_used_total ()" link="StoragedBlockZRAM.html#storaged-block-zram-set-mem-used-total" since="2.3.0"/>
+    <keyword type="function" name="storaged_block_zram_set_num_reads ()" link="StoragedBlockZRAM.html#storaged-block-zram-set-num-reads" since="2.3.0"/>
+    <keyword type="function" name="storaged_block_zram_set_num_writes ()" link="StoragedBlockZRAM.html#storaged-block-zram-set-num-writes" since="2.3.0"/>
+    <keyword type="function" name="storaged_block_zram_set_orig_data_size ()" link="StoragedBlockZRAM.html#storaged-block-zram-set-orig-data-size" since="2.3.0"/>
+    <keyword type="function" name="storaged_block_zram_set_zero_pages ()" link="StoragedBlockZRAM.html#storaged-block-zram-set-zero-pages" since="2.3.0"/>
+    <keyword type="function" name="storaged_block_zram_skeleton_new ()" link="StoragedBlockZRAM.html#storaged-block-zram-skeleton-new" since="2.3.0"/>
+    <keyword type="struct" name="StoragedBlockZRAM" link="StoragedBlockZRAM.html#StoragedBlockZRAM-struct"/>
+    <keyword type="struct" name="struct StoragedBlockZRAMIface" link="StoragedBlockZRAM.html#StoragedBlockZRAMIface" since="2.3.0"/>
+    <keyword type="struct" name="struct StoragedBlockZRAMProxy" link="StoragedBlockZRAM.html#StoragedBlockZRAMProxy-struct"/>
+    <keyword type="struct" name="struct StoragedBlockZRAMProxyClass" link="StoragedBlockZRAM.html#StoragedBlockZRAMProxyClass" since="2.3.0"/>
+    <keyword type="struct" name="struct StoragedBlockZRAMSkeleton" link="StoragedBlockZRAM.html#StoragedBlockZRAMSkeleton-struct"/>
+    <keyword type="struct" name="struct StoragedBlockZRAMSkeletonClass" link="StoragedBlockZRAM.html#StoragedBlockZRAMSkeletonClass" since="2.3.0"/>
+    <keyword type="property" name="The “active” property" link="StoragedBlockZRAM.html#StoragedBlockZRAM--active"/>
+    <keyword type="property" name="The “comp-algorithm” property" link="StoragedBlockZRAM.html#StoragedBlockZRAM--comp-algorithm"/>
+    <keyword type="property" name="The “compr-data-size” property" link="StoragedBlockZRAM.html#StoragedBlockZRAM--compr-data-size"/>
+    <keyword type="property" name="The “disksize” property" link="StoragedBlockZRAM.html#StoragedBlockZRAM--disksize"/>
+    <keyword type="property" name="The “invalid-io” property" link="StoragedBlockZRAM.html#StoragedBlockZRAM--invalid-io"/>
+    <keyword type="property" name="The “max-comp-streams” property" link="StoragedBlockZRAM.html#StoragedBlockZRAM--max-comp-streams"/>
+    <keyword type="property" name="The “mem-used-total” property" link="StoragedBlockZRAM.html#StoragedBlockZRAM--mem-used-total"/>
+    <keyword type="property" name="The “num-reads” property" link="StoragedBlockZRAM.html#StoragedBlockZRAM--num-reads"/>
+    <keyword type="property" name="The “num-writes” property" link="StoragedBlockZRAM.html#StoragedBlockZRAM--num-writes"/>
+    <keyword type="property" name="The “orig-data-size” property" link="StoragedBlockZRAM.html#StoragedBlockZRAM--orig-data-size"/>
+    <keyword type="property" name="The “zero-pages” property" link="StoragedBlockZRAM.html#StoragedBlockZRAM--zero-pages"/>
+    <keyword type="signal" name="The “handle-activate” signal" link="StoragedBlockZRAM.html#StoragedBlockZRAM-handle-activate"/>
+    <keyword type="signal" name="The “handle-activate-labeled” signal" link="StoragedBlockZRAM.html#StoragedBlockZRAM-handle-activate-labeled"/>
+    <keyword type="signal" name="The “handle-deactivate” signal" link="StoragedBlockZRAM.html#StoragedBlockZRAM-handle-deactivate"/>
+    <keyword type="signal" name="The “handle-refresh” signal" link="StoragedBlockZRAM.html#StoragedBlockZRAM-handle-refresh"/>
     <keyword type="function" name="storaged_decode_udev_string ()" link="storaged-Utilities.html#storaged-decode-udev-string"/>
     <keyword type="function" name="storaged_safe_append_to_object_path ()" link="storaged-Utilities.html#storaged-safe-append-to-object-path"/>
     <keyword type="function" name="storaged_daemon_util_block_get_size ()" link="storaged-Utilities.html#storaged-daemon-util-block-get-size"/>
@@ -1425,7 +1860,7 @@
     <keyword type="function" name="storaged_daemon_util_hexdump ()" link="storaged-Utilities.html#storaged-daemon-util-hexdump"/>
     <keyword type="function" name="storaged_daemon_util_hexdump_debug ()" link="storaged-Utilities.html#storaged-daemon-util-hexdump-debug"/>
     <keyword type="function" name="storaged_daemon_util_file_set_contents ()" link="storaged-Utilities.html#storaged-daemon-util-file-set-contents"/>
-    <keyword type="function" name="storaged_daemon_util_on_same_seat ()" link="storaged-Utilities.html#storaged-daemon-util-on-same-seat"/>
+    <keyword type="function" name="storaged_daemon_util_on_user_seat ()" link="storaged-Utilities.html#storaged-daemon-util-on-user-seat"/>
     <keyword type="function" name="storaged_daemon_util_get_free_mdraid_device ()" link="storaged-Utilities.html#storaged-daemon-util-get-free-mdraid-device"/>
     <keyword type="function" name="storaged_ata_identify_get_word ()" link="storaged-Utilities.html#storaged-ata-identify-get-word"/>
     <keyword type="typedef" name="StoragedInhibitCookie" link="storaged-Utilities.html#StoragedInhibitCookie"/>
@@ -1657,5 +2092,36 @@
     <keyword type="struct" name="StoragedLinuxBlockObject" link="StoragedLinuxBlockObject.html#StoragedLinuxBlockObject-struct"/>
     <keyword type="property" name="The “daemon” property" link="StoragedLinuxBlockObject.html#StoragedLinuxBlockObject--daemon"/>
     <keyword type="property" name="The “device” property" link="StoragedLinuxBlockObject.html#StoragedLinuxBlockObject--device"/>
+    <keyword type="constant" name="STORAGED_PARTITION_TYPE_INFO_FLAGS_NONE" link="StoragedClient.html#STORAGED-PARTITION-TYPE-INFO-FLAGS-NONE:CAPS"/>
+    <keyword type="constant" name="STORAGED_PARTITION_TYPE_INFO_FLAGS_SWAP" link="StoragedClient.html#STORAGED-PARTITION-TYPE-INFO-FLAGS-SWAP:CAPS"/>
+    <keyword type="constant" name="STORAGED_PARTITION_TYPE_INFO_FLAGS_RAID" link="StoragedClient.html#STORAGED-PARTITION-TYPE-INFO-FLAGS-RAID:CAPS"/>
+    <keyword type="constant" name="STORAGED_PARTITION_TYPE_INFO_FLAGS_HIDDEN" link="StoragedClient.html#STORAGED-PARTITION-TYPE-INFO-FLAGS-HIDDEN:CAPS"/>
+    <keyword type="constant" name="STORAGED_PARTITION_TYPE_INFO_FLAGS_CREATE_ONLY" link="StoragedClient.html#STORAGED-PARTITION-TYPE-INFO-FLAGS-CREATE-ONLY:CAPS"/>
+    <keyword type="constant" name="STORAGED_PARTITION_TYPE_INFO_FLAGS_SYSTEM" link="StoragedClient.html#STORAGED-PARTITION-TYPE-INFO-FLAGS-SYSTEM:CAPS"/>
+    <keyword type="constant" name="STORAGED_ERROR_FAILED" link="storaged-StoragedError.html#STORAGED-ERROR-FAILED:CAPS"/>
+    <keyword type="constant" name="STORAGED_ERROR_CANCELLED" link="storaged-StoragedError.html#STORAGED-ERROR-CANCELLED:CAPS"/>
+    <keyword type="constant" name="STORAGED_ERROR_ALREADY_CANCELLED" link="storaged-StoragedError.html#STORAGED-ERROR-ALREADY-CANCELLED:CAPS"/>
+    <keyword type="constant" name="STORAGED_ERROR_NOT_AUTHORIZED" link="storaged-StoragedError.html#STORAGED-ERROR-NOT-AUTHORIZED:CAPS"/>
+    <keyword type="constant" name="STORAGED_ERROR_NOT_AUTHORIZED_CAN_OBTAIN" link="storaged-StoragedError.html#STORAGED-ERROR-NOT-AUTHORIZED-CAN-OBTAIN:CAPS"/>
+    <keyword type="constant" name="STORAGED_ERROR_NOT_AUTHORIZED_DISMISSED" link="storaged-StoragedError.html#STORAGED-ERROR-NOT-AUTHORIZED-DISMISSED:CAPS"/>
+    <keyword type="constant" name="STORAGED_ERROR_ALREADY_MOUNTED" link="storaged-StoragedError.html#STORAGED-ERROR-ALREADY-MOUNTED:CAPS"/>
+    <keyword type="constant" name="STORAGED_ERROR_NOT_MOUNTED" link="storaged-StoragedError.html#STORAGED-ERROR-NOT-MOUNTED:CAPS"/>
+    <keyword type="constant" name="STORAGED_ERROR_OPTION_NOT_PERMITTED" link="storaged-StoragedError.html#STORAGED-ERROR-OPTION-NOT-PERMITTED:CAPS"/>
+    <keyword type="constant" name="STORAGED_ERROR_MOUNTED_BY_OTHER_USER" link="storaged-StoragedError.html#STORAGED-ERROR-MOUNTED-BY-OTHER-USER:CAPS"/>
+    <keyword type="constant" name="STORAGED_ERROR_ALREADY_UNMOUNTING" link="storaged-StoragedError.html#STORAGED-ERROR-ALREADY-UNMOUNTING:CAPS"/>
+    <keyword type="constant" name="STORAGED_ERROR_NOT_SUPPORTED" link="storaged-StoragedError.html#STORAGED-ERROR-NOT-SUPPORTED:CAPS"/>
+    <keyword type="constant" name="STORAGED_ERROR_TIMED_OUT" link="storaged-StoragedError.html#STORAGED-ERROR-TIMED-OUT:CAPS"/>
+    <keyword type="constant" name="STORAGED_ERROR_WOULD_WAKEUP" link="storaged-StoragedError.html#STORAGED-ERROR-WOULD-WAKEUP:CAPS"/>
+    <keyword type="constant" name="STORAGED_ERROR_DEVICE_BUSY" link="storaged-StoragedError.html#STORAGED-ERROR-DEVICE-BUSY:CAPS"/>
+    <keyword type="constant" name="STORAGED_LOG_LEVEL_DEBUG" link="storaged-Logging.html#STORAGED-LOG-LEVEL-DEBUG:CAPS"/>
+    <keyword type="constant" name="STORAGED_LOG_LEVEL_INFO" link="storaged-Logging.html#STORAGED-LOG-LEVEL-INFO:CAPS"/>
+    <keyword type="constant" name="STORAGED_LOG_LEVEL_NOTICE" link="storaged-Logging.html#STORAGED-LOG-LEVEL-NOTICE:CAPS"/>
+    <keyword type="constant" name="STORAGED_LOG_LEVEL_WARNING" link="storaged-Logging.html#STORAGED-LOG-LEVEL-WARNING:CAPS"/>
+    <keyword type="constant" name="STORAGED_LOG_LEVEL_ERROR" link="storaged-Logging.html#STORAGED-LOG-LEVEL-ERROR:CAPS"/>
+    <keyword type="constant" name="STORAGED_ATA_COMMAND_PROTOCOL_NONE" link="storaged-ATA-commands.html#STORAGED-ATA-COMMAND-PROTOCOL-NONE:CAPS"/>
+    <keyword type="constant" name="STORAGED_ATA_COMMAND_PROTOCOL_DRIVE_TO_HOST" link="storaged-ATA-commands.html#STORAGED-ATA-COMMAND-PROTOCOL-DRIVE-TO-HOST:CAPS"/>
+    <keyword type="constant" name="STORAGED_ATA_COMMAND_PROTOCOL_HOST_TO_DRIVE" link="storaged-ATA-commands.html#STORAGED-ATA-COMMAND-PROTOCOL-HOST-TO-DRIVE:CAPS"/>
+    <keyword type="constant" name="STORAGED_MOUNT_TYPE_FILESYSTEM" link="StoragedMountMonitor.html#STORAGED-MOUNT-TYPE-FILESYSTEM:CAPS"/>
+    <keyword type="constant" name="STORAGED_MOUNT_TYPE_SWAP" link="StoragedMountMonitor.html#STORAGED-MOUNT-TYPE-SWAP:CAPS"/>
   </functions>
 </book>

@@ -89,6 +89,38 @@
 </dt>
 <dt>org.storaged.Storaged.Block.UpdateConfigurationItem(), <a class="indexterm" href="gdbus-org.storaged.Storaged.Block.html#gdbus-method-org-storaged-Storaged-Block.UpdateConfigurationItem">The UpdateConfigurationItem() method</a>
 </dt>
+<dt>org.storaged.Storaged.Block.ZRAM, <a class="indexterm" href="gdbus-org.storaged.Storaged.Block.ZRAM.html#gdbus-interface-org-storaged-Storaged-Block-ZRAM.top_of_page">org.storaged.Storaged.Block.ZRAM</a>
+</dt>
+<dt>org.storaged.Storaged.Block.ZRAM.Activate(), <a class="indexterm" href="gdbus-org.storaged.Storaged.Block.ZRAM.html#gdbus-method-org-storaged-Storaged-Block-ZRAM.Activate">The Activate() method</a>
+</dt>
+<dt>org.storaged.Storaged.Block.ZRAM.ActivateLabeled(), <a class="indexterm" href="gdbus-org.storaged.Storaged.Block.ZRAM.html#gdbus-method-org-storaged-Storaged-Block-ZRAM.ActivateLabeled">The ActivateLabeled() method</a>
+</dt>
+<dt>org.storaged.Storaged.Block.ZRAM.Deactivate(), <a class="indexterm" href="gdbus-org.storaged.Storaged.Block.ZRAM.html#gdbus-method-org-storaged-Storaged-Block-ZRAM.Deactivate">The Deactivate() method</a>
+</dt>
+<dt>org.storaged.Storaged.Block.ZRAM.Refresh(), <a class="indexterm" href="gdbus-org.storaged.Storaged.Block.ZRAM.html#gdbus-method-org-storaged-Storaged-Block-ZRAM.Refresh">The Refresh() method</a>
+</dt>
+<dt>org.storaged.Storaged.Block.ZRAM:active, <a class="indexterm" href="gdbus-org.storaged.Storaged.Block.ZRAM.html#gdbus-property-org-storaged-Storaged-Block-ZRAM.active">The "active" property</a>
+</dt>
+<dt>org.storaged.Storaged.Block.ZRAM:compr_data_size, <a class="indexterm" href="gdbus-org.storaged.Storaged.Block.ZRAM.html#gdbus-property-org-storaged-Storaged-Block-ZRAM.compr_data_size">The "compr_data_size" property</a>
+</dt>
+<dt>org.storaged.Storaged.Block.ZRAM:comp_algorithm, <a class="indexterm" href="gdbus-org.storaged.Storaged.Block.ZRAM.html#gdbus-property-org-storaged-Storaged-Block-ZRAM.comp_algorithm">The "comp_algorithm" property</a>
+</dt>
+<dt>org.storaged.Storaged.Block.ZRAM:disksize, <a class="indexterm" href="gdbus-org.storaged.Storaged.Block.ZRAM.html#gdbus-property-org-storaged-Storaged-Block-ZRAM.disksize">The "disksize" property</a>
+</dt>
+<dt>org.storaged.Storaged.Block.ZRAM:invalid_io, <a class="indexterm" href="gdbus-org.storaged.Storaged.Block.ZRAM.html#gdbus-property-org-storaged-Storaged-Block-ZRAM.invalid_io">The "invalid_io" property</a>
+</dt>
+<dt>org.storaged.Storaged.Block.ZRAM:max_comp_streams, <a class="indexterm" href="gdbus-org.storaged.Storaged.Block.ZRAM.html#gdbus-property-org-storaged-Storaged-Block-ZRAM.max_comp_streams">The "max_comp_streams" property</a>
+</dt>
+<dt>org.storaged.Storaged.Block.ZRAM:mem_used_total, <a class="indexterm" href="gdbus-org.storaged.Storaged.Block.ZRAM.html#gdbus-property-org-storaged-Storaged-Block-ZRAM.mem_used_total">The "mem_used_total" property</a>
+</dt>
+<dt>org.storaged.Storaged.Block.ZRAM:num_reads, <a class="indexterm" href="gdbus-org.storaged.Storaged.Block.ZRAM.html#gdbus-property-org-storaged-Storaged-Block-ZRAM.num_reads">The "num_reads" property</a>
+</dt>
+<dt>org.storaged.Storaged.Block.ZRAM:num_writes, <a class="indexterm" href="gdbus-org.storaged.Storaged.Block.ZRAM.html#gdbus-property-org-storaged-Storaged-Block-ZRAM.num_writes">The "num_writes" property</a>
+</dt>
+<dt>org.storaged.Storaged.Block.ZRAM:orig_data_size, <a class="indexterm" href="gdbus-org.storaged.Storaged.Block.ZRAM.html#gdbus-property-org-storaged-Storaged-Block-ZRAM.orig_data_size">The "orig_data_size" property</a>
+</dt>
+<dt>org.storaged.Storaged.Block.ZRAM:zero_pages, <a class="indexterm" href="gdbus-org.storaged.Storaged.Block.ZRAM.html#gdbus-property-org-storaged-Storaged-Block-ZRAM.zero_pages">The "zero_pages" property</a>
+</dt>
 <dt>StoragedBlock::handle-add-configuration-item, <a class="indexterm" href="StoragedBlock.html#StoragedBlock-handle-add-configuration-item">The “handle-add-configuration-item” signal</a>
 </dt>
 <dt>StoragedBlock::handle-format, <a class="indexterm" href="StoragedBlock.html#StoragedBlock-handle-format">The “handle-format” signal</a>
@@ -224,6 +256,48 @@
 <dt>StoragedBlockSkeleton, <a class="indexterm" href="StoragedBlock.html#StoragedBlockSkeleton-struct">struct StoragedBlockSkeleton</a>
 </dt>
 <dt>StoragedBlockSkeletonClass, <a class="indexterm" href="StoragedBlock.html#StoragedBlockSkeletonClass">struct StoragedBlockSkeletonClass</a>
+</dt>
+<dt>StoragedBlockZRAM, <a class="indexterm" href="StoragedBlockZRAM.html#StoragedBlockZRAM-struct">StoragedBlockZRAM</a>
+</dt>
+<dt>StoragedBlockZRAM::handle-activate, <a class="indexterm" href="StoragedBlockZRAM.html#StoragedBlockZRAM-handle-activate">The “handle-activate” signal</a>
+</dt>
+<dt>StoragedBlockZRAM::handle-activate-labeled, <a class="indexterm" href="StoragedBlockZRAM.html#StoragedBlockZRAM-handle-activate-labeled">The “handle-activate-labeled” signal</a>
+</dt>
+<dt>StoragedBlockZRAM::handle-deactivate, <a class="indexterm" href="StoragedBlockZRAM.html#StoragedBlockZRAM-handle-deactivate">The “handle-deactivate” signal</a>
+</dt>
+<dt>StoragedBlockZRAM::handle-refresh, <a class="indexterm" href="StoragedBlockZRAM.html#StoragedBlockZRAM-handle-refresh">The “handle-refresh” signal</a>
+</dt>
+<dt>StoragedBlockZRAM:active, <a class="indexterm" href="StoragedBlockZRAM.html#StoragedBlockZRAM--active">The “active” property</a>
+</dt>
+<dt>StoragedBlockZRAM:comp-algorithm, <a class="indexterm" href="StoragedBlockZRAM.html#StoragedBlockZRAM--comp-algorithm">The “comp-algorithm” property</a>
+</dt>
+<dt>StoragedBlockZRAM:compr-data-size, <a class="indexterm" href="StoragedBlockZRAM.html#StoragedBlockZRAM--compr-data-size">The “compr-data-size” property</a>
+</dt>
+<dt>StoragedBlockZRAM:disksize, <a class="indexterm" href="StoragedBlockZRAM.html#StoragedBlockZRAM--disksize">The “disksize” property</a>
+</dt>
+<dt>StoragedBlockZRAM:invalid-io, <a class="indexterm" href="StoragedBlockZRAM.html#StoragedBlockZRAM--invalid-io">The “invalid-io” property</a>
+</dt>
+<dt>StoragedBlockZRAM:max-comp-streams, <a class="indexterm" href="StoragedBlockZRAM.html#StoragedBlockZRAM--max-comp-streams">The “max-comp-streams” property</a>
+</dt>
+<dt>StoragedBlockZRAM:mem-used-total, <a class="indexterm" href="StoragedBlockZRAM.html#StoragedBlockZRAM--mem-used-total">The “mem-used-total” property</a>
+</dt>
+<dt>StoragedBlockZRAM:num-reads, <a class="indexterm" href="StoragedBlockZRAM.html#StoragedBlockZRAM--num-reads">The “num-reads” property</a>
+</dt>
+<dt>StoragedBlockZRAM:num-writes, <a class="indexterm" href="StoragedBlockZRAM.html#StoragedBlockZRAM--num-writes">The “num-writes” property</a>
+</dt>
+<dt>StoragedBlockZRAM:orig-data-size, <a class="indexterm" href="StoragedBlockZRAM.html#StoragedBlockZRAM--orig-data-size">The “orig-data-size” property</a>
+</dt>
+<dt>StoragedBlockZRAM:zero-pages, <a class="indexterm" href="StoragedBlockZRAM.html#StoragedBlockZRAM--zero-pages">The “zero-pages” property</a>
+</dt>
+<dt>StoragedBlockZRAMIface, <a class="indexterm" href="StoragedBlockZRAM.html#StoragedBlockZRAMIface">struct StoragedBlockZRAMIface</a>
+</dt>
+<dt>StoragedBlockZRAMProxy, <a class="indexterm" href="StoragedBlockZRAM.html#StoragedBlockZRAMProxy-struct">struct StoragedBlockZRAMProxy</a>
+</dt>
+<dt>StoragedBlockZRAMProxyClass, <a class="indexterm" href="StoragedBlockZRAM.html#StoragedBlockZRAMProxyClass">struct StoragedBlockZRAMProxyClass</a>
+</dt>
+<dt>StoragedBlockZRAMSkeleton, <a class="indexterm" href="StoragedBlockZRAM.html#StoragedBlockZRAMSkeleton-struct">struct StoragedBlockZRAMSkeleton</a>
+</dt>
+<dt>StoragedBlockZRAMSkeletonClass, <a class="indexterm" href="StoragedBlockZRAM.html#StoragedBlockZRAMSkeletonClass">struct StoragedBlockZRAMSkeletonClass</a>
 </dt>
 <dt>storaged_block_call_add_configuration_item, <a class="indexterm" href="StoragedBlock.html#storaged-block-call-add-configuration-item">storaged_block_call_add_configuration_item ()</a>
 </dt>
@@ -462,6 +536,102 @@
 <dt>storaged_block_set_symlinks, <a class="indexterm" href="StoragedBlock.html#storaged-block-set-symlinks">storaged_block_set_symlinks ()</a>
 </dt>
 <dt>storaged_block_skeleton_new, <a class="indexterm" href="StoragedBlock.html#storaged-block-skeleton-new">storaged_block_skeleton_new ()</a>
+</dt>
+<dt>storaged_block_zram_call_activate, <a class="indexterm" href="StoragedBlockZRAM.html#storaged-block-zram-call-activate">storaged_block_zram_call_activate ()</a>
+</dt>
+<dt>storaged_block_zram_call_activate_finish, <a class="indexterm" href="StoragedBlockZRAM.html#storaged-block-zram-call-activate-finish">storaged_block_zram_call_activate_finish ()</a>
+</dt>
+<dt>storaged_block_zram_call_activate_labeled, <a class="indexterm" href="StoragedBlockZRAM.html#storaged-block-zram-call-activate-labeled">storaged_block_zram_call_activate_labeled ()</a>
+</dt>
+<dt>storaged_block_zram_call_activate_labeled_finish, <a class="indexterm" href="StoragedBlockZRAM.html#storaged-block-zram-call-activate-labeled-finish">storaged_block_zram_call_activate_labeled_finish ()</a>
+</dt>
+<dt>storaged_block_zram_call_activate_labeled_sync, <a class="indexterm" href="StoragedBlockZRAM.html#storaged-block-zram-call-activate-labeled-sync">storaged_block_zram_call_activate_labeled_sync ()</a>
+</dt>
+<dt>storaged_block_zram_call_activate_sync, <a class="indexterm" href="StoragedBlockZRAM.html#storaged-block-zram-call-activate-sync">storaged_block_zram_call_activate_sync ()</a>
+</dt>
+<dt>storaged_block_zram_call_deactivate, <a class="indexterm" href="StoragedBlockZRAM.html#storaged-block-zram-call-deactivate">storaged_block_zram_call_deactivate ()</a>
+</dt>
+<dt>storaged_block_zram_call_deactivate_finish, <a class="indexterm" href="StoragedBlockZRAM.html#storaged-block-zram-call-deactivate-finish">storaged_block_zram_call_deactivate_finish ()</a>
+</dt>
+<dt>storaged_block_zram_call_deactivate_sync, <a class="indexterm" href="StoragedBlockZRAM.html#storaged-block-zram-call-deactivate-sync">storaged_block_zram_call_deactivate_sync ()</a>
+</dt>
+<dt>storaged_block_zram_call_refresh, <a class="indexterm" href="StoragedBlockZRAM.html#storaged-block-zram-call-refresh">storaged_block_zram_call_refresh ()</a>
+</dt>
+<dt>storaged_block_zram_call_refresh_finish, <a class="indexterm" href="StoragedBlockZRAM.html#storaged-block-zram-call-refresh-finish">storaged_block_zram_call_refresh_finish ()</a>
+</dt>
+<dt>storaged_block_zram_call_refresh_sync, <a class="indexterm" href="StoragedBlockZRAM.html#storaged-block-zram-call-refresh-sync">storaged_block_zram_call_refresh_sync ()</a>
+</dt>
+<dt>storaged_block_zram_complete_activate, <a class="indexterm" href="StoragedBlockZRAM.html#storaged-block-zram-complete-activate">storaged_block_zram_complete_activate ()</a>
+</dt>
+<dt>storaged_block_zram_complete_activate_labeled, <a class="indexterm" href="StoragedBlockZRAM.html#storaged-block-zram-complete-activate-labeled">storaged_block_zram_complete_activate_labeled ()</a>
+</dt>
+<dt>storaged_block_zram_complete_deactivate, <a class="indexterm" href="StoragedBlockZRAM.html#storaged-block-zram-complete-deactivate">storaged_block_zram_complete_deactivate ()</a>
+</dt>
+<dt>storaged_block_zram_complete_refresh, <a class="indexterm" href="StoragedBlockZRAM.html#storaged-block-zram-complete-refresh">storaged_block_zram_complete_refresh ()</a>
+</dt>
+<dt>storaged_block_zram_dup_comp_algorithm, <a class="indexterm" href="StoragedBlockZRAM.html#storaged-block-zram-dup-comp-algorithm">storaged_block_zram_dup_comp_algorithm ()</a>
+</dt>
+<dt>storaged_block_zram_get_active, <a class="indexterm" href="StoragedBlockZRAM.html#storaged-block-zram-get-active">storaged_block_zram_get_active ()</a>
+</dt>
+<dt>storaged_block_zram_get_compr_data_size, <a class="indexterm" href="StoragedBlockZRAM.html#storaged-block-zram-get-compr-data-size">storaged_block_zram_get_compr_data_size ()</a>
+</dt>
+<dt>storaged_block_zram_get_comp_algorithm, <a class="indexterm" href="StoragedBlockZRAM.html#storaged-block-zram-get-comp-algorithm">storaged_block_zram_get_comp_algorithm ()</a>
+</dt>
+<dt>storaged_block_zram_get_disksize, <a class="indexterm" href="StoragedBlockZRAM.html#storaged-block-zram-get-disksize">storaged_block_zram_get_disksize ()</a>
+</dt>
+<dt>storaged_block_zram_get_invalid_io, <a class="indexterm" href="StoragedBlockZRAM.html#storaged-block-zram-get-invalid-io">storaged_block_zram_get_invalid_io ()</a>
+</dt>
+<dt>storaged_block_zram_get_max_comp_streams, <a class="indexterm" href="StoragedBlockZRAM.html#storaged-block-zram-get-max-comp-streams">storaged_block_zram_get_max_comp_streams ()</a>
+</dt>
+<dt>storaged_block_zram_get_mem_used_total, <a class="indexterm" href="StoragedBlockZRAM.html#storaged-block-zram-get-mem-used-total">storaged_block_zram_get_mem_used_total ()</a>
+</dt>
+<dt>storaged_block_zram_get_num_reads, <a class="indexterm" href="StoragedBlockZRAM.html#storaged-block-zram-get-num-reads">storaged_block_zram_get_num_reads ()</a>
+</dt>
+<dt>storaged_block_zram_get_num_writes, <a class="indexterm" href="StoragedBlockZRAM.html#storaged-block-zram-get-num-writes">storaged_block_zram_get_num_writes ()</a>
+</dt>
+<dt>storaged_block_zram_get_orig_data_size, <a class="indexterm" href="StoragedBlockZRAM.html#storaged-block-zram-get-orig-data-size">storaged_block_zram_get_orig_data_size ()</a>
+</dt>
+<dt>storaged_block_zram_get_zero_pages, <a class="indexterm" href="StoragedBlockZRAM.html#storaged-block-zram-get-zero-pages">storaged_block_zram_get_zero_pages ()</a>
+</dt>
+<dt>storaged_block_zram_interface_info, <a class="indexterm" href="StoragedBlockZRAM.html#storaged-block-zram-interface-info">storaged_block_zram_interface_info ()</a>
+</dt>
+<dt>storaged_block_zram_override_properties, <a class="indexterm" href="StoragedBlockZRAM.html#storaged-block-zram-override-properties">storaged_block_zram_override_properties ()</a>
+</dt>
+<dt>storaged_block_zram_proxy_new, <a class="indexterm" href="StoragedBlockZRAM.html#storaged-block-zram-proxy-new">storaged_block_zram_proxy_new ()</a>
+</dt>
+<dt>storaged_block_zram_proxy_new_finish, <a class="indexterm" href="StoragedBlockZRAM.html#storaged-block-zram-proxy-new-finish">storaged_block_zram_proxy_new_finish ()</a>
+</dt>
+<dt>storaged_block_zram_proxy_new_for_bus, <a class="indexterm" href="StoragedBlockZRAM.html#storaged-block-zram-proxy-new-for-bus">storaged_block_zram_proxy_new_for_bus ()</a>
+</dt>
+<dt>storaged_block_zram_proxy_new_for_bus_finish, <a class="indexterm" href="StoragedBlockZRAM.html#storaged-block-zram-proxy-new-for-bus-finish">storaged_block_zram_proxy_new_for_bus_finish ()</a>
+</dt>
+<dt>storaged_block_zram_proxy_new_for_bus_sync, <a class="indexterm" href="StoragedBlockZRAM.html#storaged-block-zram-proxy-new-for-bus-sync">storaged_block_zram_proxy_new_for_bus_sync ()</a>
+</dt>
+<dt>storaged_block_zram_proxy_new_sync, <a class="indexterm" href="StoragedBlockZRAM.html#storaged-block-zram-proxy-new-sync">storaged_block_zram_proxy_new_sync ()</a>
+</dt>
+<dt>storaged_block_zram_set_active, <a class="indexterm" href="StoragedBlockZRAM.html#storaged-block-zram-set-active">storaged_block_zram_set_active ()</a>
+</dt>
+<dt>storaged_block_zram_set_compr_data_size, <a class="indexterm" href="StoragedBlockZRAM.html#storaged-block-zram-set-compr-data-size">storaged_block_zram_set_compr_data_size ()</a>
+</dt>
+<dt>storaged_block_zram_set_comp_algorithm, <a class="indexterm" href="StoragedBlockZRAM.html#storaged-block-zram-set-comp-algorithm">storaged_block_zram_set_comp_algorithm ()</a>
+</dt>
+<dt>storaged_block_zram_set_disksize, <a class="indexterm" href="StoragedBlockZRAM.html#storaged-block-zram-set-disksize">storaged_block_zram_set_disksize ()</a>
+</dt>
+<dt>storaged_block_zram_set_invalid_io, <a class="indexterm" href="StoragedBlockZRAM.html#storaged-block-zram-set-invalid-io">storaged_block_zram_set_invalid_io ()</a>
+</dt>
+<dt>storaged_block_zram_set_max_comp_streams, <a class="indexterm" href="StoragedBlockZRAM.html#storaged-block-zram-set-max-comp-streams">storaged_block_zram_set_max_comp_streams ()</a>
+</dt>
+<dt>storaged_block_zram_set_mem_used_total, <a class="indexterm" href="StoragedBlockZRAM.html#storaged-block-zram-set-mem-used-total">storaged_block_zram_set_mem_used_total ()</a>
+</dt>
+<dt>storaged_block_zram_set_num_reads, <a class="indexterm" href="StoragedBlockZRAM.html#storaged-block-zram-set-num-reads">storaged_block_zram_set_num_reads ()</a>
+</dt>
+<dt>storaged_block_zram_set_num_writes, <a class="indexterm" href="StoragedBlockZRAM.html#storaged-block-zram-set-num-writes">storaged_block_zram_set_num_writes ()</a>
+</dt>
+<dt>storaged_block_zram_set_orig_data_size, <a class="indexterm" href="StoragedBlockZRAM.html#storaged-block-zram-set-orig-data-size">storaged_block_zram_set_orig_data_size ()</a>
+</dt>
+<dt>storaged_block_zram_set_zero_pages, <a class="indexterm" href="StoragedBlockZRAM.html#storaged-block-zram-set-zero-pages">storaged_block_zram_set_zero_pages ()</a>
+</dt>
+<dt>storaged_block_zram_skeleton_new, <a class="indexterm" href="StoragedBlockZRAM.html#storaged-block-zram-skeleton-new">storaged_block_zram_skeleton_new ()</a>
 </dt>
 </dl>
 </div>
@@ -749,6 +919,28 @@
 </dt>
 <dt>org.storaged.Storaged.Drive.Eject(), <a class="indexterm" href="gdbus-org.storaged.Storaged.Drive.html#gdbus-method-org-storaged-Storaged-Drive.Eject">The Eject() method</a>
 </dt>
+<dt>org.storaged.Storaged.Drive.LSM, <a class="indexterm" href="gdbus-org.storaged.Storaged.Drive.LSM.html#gdbus-interface-org-storaged-Storaged-Drive-LSM.top_of_page">org.storaged.Storaged.Drive.LSM</a>
+</dt>
+<dt>org.storaged.Storaged.Drive.LSM:IsOK, <a class="indexterm" href="gdbus-org.storaged.Storaged.Drive.LSM.html#gdbus-property-org-storaged-Storaged-Drive-LSM.IsOK">The "IsOK" property</a>
+</dt>
+<dt>org.storaged.Storaged.Drive.LSM:IsRaidDegraded, <a class="indexterm" href="gdbus-org.storaged.Storaged.Drive.LSM.html#gdbus-property-org-storaged-Storaged-Drive-LSM.IsRaidDegraded">The "IsRaidDegraded" property</a>
+</dt>
+<dt>org.storaged.Storaged.Drive.LSM:IsRaidError, <a class="indexterm" href="gdbus-org.storaged.Storaged.Drive.LSM.html#gdbus-property-org-storaged-Storaged-Drive-LSM.IsRaidError">The "IsRaidError" property</a>
+</dt>
+<dt>org.storaged.Storaged.Drive.LSM:IsRaidReconstructing, <a class="indexterm" href="gdbus-org.storaged.Storaged.Drive.LSM.html#gdbus-property-org-storaged-Storaged-Drive-LSM.IsRaidReconstructing">The "IsRaidReconstructing" property</a>
+</dt>
+<dt>org.storaged.Storaged.Drive.LSM:IsRaidVerifying, <a class="indexterm" href="gdbus-org.storaged.Storaged.Drive.LSM.html#gdbus-property-org-storaged-Storaged-Drive-LSM.IsRaidVerifying">The "IsRaidVerifying" property</a>
+</dt>
+<dt>org.storaged.Storaged.Drive.LSM:MinIoSize, <a class="indexterm" href="gdbus-org.storaged.Storaged.Drive.LSM.html#gdbus-property-org-storaged-Storaged-Drive-LSM.MinIoSize">The "MinIoSize" property</a>
+</dt>
+<dt>org.storaged.Storaged.Drive.LSM:OptIoSize, <a class="indexterm" href="gdbus-org.storaged.Storaged.Drive.LSM.html#gdbus-property-org-storaged-Storaged-Drive-LSM.OptIoSize">The "OptIoSize" property</a>
+</dt>
+<dt>org.storaged.Storaged.Drive.LSM:RaidDiskCount, <a class="indexterm" href="gdbus-org.storaged.Storaged.Drive.LSM.html#gdbus-property-org-storaged-Storaged-Drive-LSM.RaidDiskCount">The "RaidDiskCount" property</a>
+</dt>
+<dt>org.storaged.Storaged.Drive.LSM:RaidType, <a class="indexterm" href="gdbus-org.storaged.Storaged.Drive.LSM.html#gdbus-property-org-storaged-Storaged-Drive-LSM.RaidType">The "RaidType" property</a>
+</dt>
+<dt>org.storaged.Storaged.Drive.LSM:StatusInfo, <a class="indexterm" href="gdbus-org.storaged.Storaged.Drive.LSM.html#gdbus-property-org-storaged-Storaged-Drive-LSM.StatusInfo">The "StatusInfo" property</a>
+</dt>
 <dt>org.storaged.Storaged.Drive.PowerOff(), <a class="indexterm" href="gdbus-org.storaged.Storaged.Drive.html#gdbus-method-org-storaged-Storaged-Drive.PowerOff">The PowerOff() method</a>
 </dt>
 <dt>org.storaged.Storaged.Drive.SetConfiguration(), <a class="indexterm" href="gdbus-org.storaged.Storaged.Drive.html#gdbus-method-org-storaged-Storaged-Drive.SetConfiguration">The SetConfiguration() method</a>
@@ -952,6 +1144,18 @@
 <dt>StoragedDriveAtaSkeletonClass, <a class="indexterm" href="StoragedDriveAta.html#StoragedDriveAtaSkeletonClass">struct StoragedDriveAtaSkeletonClass</a>
 </dt>
 <dt>StoragedDriveIface, <a class="indexterm" href="StoragedDrive.html#StoragedDriveIface">struct StoragedDriveIface</a>
+</dt>
+<dt>StoragedDriveLSM, <a class="indexterm" href="storaged-StoragedDriveLSM.html#StoragedDriveLSM">StoragedDriveLSM</a>
+</dt>
+<dt>StoragedDriveLSMIface, <a class="indexterm" href="storaged-StoragedDriveLSM.html#StoragedDriveLSMIface">struct StoragedDriveLSMIface</a>
+</dt>
+<dt>StoragedDriveLSMProxy, <a class="indexterm" href="storaged-StoragedDriveLSM.html#StoragedDriveLSMProxy">struct StoragedDriveLSMProxy</a>
+</dt>
+<dt>StoragedDriveLSMProxyClass, <a class="indexterm" href="storaged-StoragedDriveLSM.html#StoragedDriveLSMProxyClass">struct StoragedDriveLSMProxyClass</a>
+</dt>
+<dt>StoragedDriveLSMSkeleton, <a class="indexterm" href="storaged-StoragedDriveLSM.html#StoragedDriveLSMSkeleton">struct StoragedDriveLSMSkeleton</a>
+</dt>
+<dt>StoragedDriveLSMSkeletonClass, <a class="indexterm" href="storaged-StoragedDriveLSM.html#StoragedDriveLSMSkeletonClass">struct StoragedDriveLSMSkeletonClass</a>
 </dt>
 <dt>StoragedDriveProxy, <a class="indexterm" href="StoragedDrive.html#StoragedDriveProxy-struct">struct StoragedDriveProxy</a>
 </dt>
@@ -1255,6 +1459,68 @@
 </dt>
 <dt>storaged_drive_interface_info, <a class="indexterm" href="StoragedDrive.html#storaged-drive-interface-info">storaged_drive_interface_info ()</a>
 </dt>
+<dt>storaged_drive_lsm_dup_raid_type, <a class="indexterm" href="storaged-StoragedDriveLSM.html#storaged-drive-lsm-dup-raid-type">storaged_drive_lsm_dup_raid_type ()</a>
+</dt>
+<dt>storaged_drive_lsm_dup_status_info, <a class="indexterm" href="storaged-StoragedDriveLSM.html#storaged-drive-lsm-dup-status-info">storaged_drive_lsm_dup_status_info ()</a>
+</dt>
+<dt>storaged_drive_lsm_get_is_ok, <a class="indexterm" href="storaged-StoragedDriveLSM.html#storaged-drive-lsm-get-is-ok">storaged_drive_lsm_get_is_ok ()</a>
+</dt>
+<dt>storaged_drive_lsm_get_is_raid_degraded, <a class="indexterm" href="storaged-StoragedDriveLSM.html#storaged-drive-lsm-get-is-raid-degraded">storaged_drive_lsm_get_is_raid_degraded ()</a>
+</dt>
+<dt>storaged_drive_lsm_get_is_raid_error, <a class="indexterm" href="storaged-StoragedDriveLSM.html#storaged-drive-lsm-get-is-raid-error">storaged_drive_lsm_get_is_raid_error ()</a>
+</dt>
+<dt>storaged_drive_lsm_get_is_raid_reconstructing, <a class="indexterm" href="storaged-StoragedDriveLSM.html#storaged-drive-lsm-get-is-raid-reconstructing">storaged_drive_lsm_get_is_raid_reconstructing ()</a>
+</dt>
+<dt>storaged_drive_lsm_get_is_raid_verifying, <a class="indexterm" href="storaged-StoragedDriveLSM.html#storaged-drive-lsm-get-is-raid-verifying">storaged_drive_lsm_get_is_raid_verifying ()</a>
+</dt>
+<dt>storaged_drive_lsm_get_min_io_size, <a class="indexterm" href="storaged-StoragedDriveLSM.html#storaged-drive-lsm-get-min-io-size">storaged_drive_lsm_get_min_io_size ()</a>
+</dt>
+<dt>storaged_drive_lsm_get_opt_io_size, <a class="indexterm" href="storaged-StoragedDriveLSM.html#storaged-drive-lsm-get-opt-io-size">storaged_drive_lsm_get_opt_io_size ()</a>
+</dt>
+<dt>storaged_drive_lsm_get_raid_disk_count, <a class="indexterm" href="storaged-StoragedDriveLSM.html#storaged-drive-lsm-get-raid-disk-count">storaged_drive_lsm_get_raid_disk_count ()</a>
+</dt>
+<dt>storaged_drive_lsm_get_raid_type, <a class="indexterm" href="storaged-StoragedDriveLSM.html#storaged-drive-lsm-get-raid-type">storaged_drive_lsm_get_raid_type ()</a>
+</dt>
+<dt>storaged_drive_lsm_get_status_info, <a class="indexterm" href="storaged-StoragedDriveLSM.html#storaged-drive-lsm-get-status-info">storaged_drive_lsm_get_status_info ()</a>
+</dt>
+<dt>storaged_drive_lsm_interface_info, <a class="indexterm" href="storaged-StoragedDriveLSM.html#storaged-drive-lsm-interface-info">storaged_drive_lsm_interface_info ()</a>
+</dt>
+<dt>storaged_drive_lsm_override_properties, <a class="indexterm" href="storaged-StoragedDriveLSM.html#storaged-drive-lsm-override-properties">storaged_drive_lsm_override_properties ()</a>
+</dt>
+<dt>storaged_drive_lsm_proxy_new, <a class="indexterm" href="storaged-StoragedDriveLSM.html#storaged-drive-lsm-proxy-new">storaged_drive_lsm_proxy_new ()</a>
+</dt>
+<dt>storaged_drive_lsm_proxy_new_finish, <a class="indexterm" href="storaged-StoragedDriveLSM.html#storaged-drive-lsm-proxy-new-finish">storaged_drive_lsm_proxy_new_finish ()</a>
+</dt>
+<dt>storaged_drive_lsm_proxy_new_for_bus, <a class="indexterm" href="storaged-StoragedDriveLSM.html#storaged-drive-lsm-proxy-new-for-bus">storaged_drive_lsm_proxy_new_for_bus ()</a>
+</dt>
+<dt>storaged_drive_lsm_proxy_new_for_bus_finish, <a class="indexterm" href="storaged-StoragedDriveLSM.html#storaged-drive-lsm-proxy-new-for-bus-finish">storaged_drive_lsm_proxy_new_for_bus_finish ()</a>
+</dt>
+<dt>storaged_drive_lsm_proxy_new_for_bus_sync, <a class="indexterm" href="storaged-StoragedDriveLSM.html#storaged-drive-lsm-proxy-new-for-bus-sync">storaged_drive_lsm_proxy_new_for_bus_sync ()</a>
+</dt>
+<dt>storaged_drive_lsm_proxy_new_sync, <a class="indexterm" href="storaged-StoragedDriveLSM.html#storaged-drive-lsm-proxy-new-sync">storaged_drive_lsm_proxy_new_sync ()</a>
+</dt>
+<dt>storaged_drive_lsm_set_is_ok, <a class="indexterm" href="storaged-StoragedDriveLSM.html#storaged-drive-lsm-set-is-ok">storaged_drive_lsm_set_is_ok ()</a>
+</dt>
+<dt>storaged_drive_lsm_set_is_raid_degraded, <a class="indexterm" href="storaged-StoragedDriveLSM.html#storaged-drive-lsm-set-is-raid-degraded">storaged_drive_lsm_set_is_raid_degraded ()</a>
+</dt>
+<dt>storaged_drive_lsm_set_is_raid_error, <a class="indexterm" href="storaged-StoragedDriveLSM.html#storaged-drive-lsm-set-is-raid-error">storaged_drive_lsm_set_is_raid_error ()</a>
+</dt>
+<dt>storaged_drive_lsm_set_is_raid_reconstructing, <a class="indexterm" href="storaged-StoragedDriveLSM.html#storaged-drive-lsm-set-is-raid-reconstructing">storaged_drive_lsm_set_is_raid_reconstructing ()</a>
+</dt>
+<dt>storaged_drive_lsm_set_is_raid_verifying, <a class="indexterm" href="storaged-StoragedDriveLSM.html#storaged-drive-lsm-set-is-raid-verifying">storaged_drive_lsm_set_is_raid_verifying ()</a>
+</dt>
+<dt>storaged_drive_lsm_set_min_io_size, <a class="indexterm" href="storaged-StoragedDriveLSM.html#storaged-drive-lsm-set-min-io-size">storaged_drive_lsm_set_min_io_size ()</a>
+</dt>
+<dt>storaged_drive_lsm_set_opt_io_size, <a class="indexterm" href="storaged-StoragedDriveLSM.html#storaged-drive-lsm-set-opt-io-size">storaged_drive_lsm_set_opt_io_size ()</a>
+</dt>
+<dt>storaged_drive_lsm_set_raid_disk_count, <a class="indexterm" href="storaged-StoragedDriveLSM.html#storaged-drive-lsm-set-raid-disk-count">storaged_drive_lsm_set_raid_disk_count ()</a>
+</dt>
+<dt>storaged_drive_lsm_set_raid_type, <a class="indexterm" href="storaged-StoragedDriveLSM.html#storaged-drive-lsm-set-raid-type">storaged_drive_lsm_set_raid_type ()</a>
+</dt>
+<dt>storaged_drive_lsm_set_status_info, <a class="indexterm" href="storaged-StoragedDriveLSM.html#storaged-drive-lsm-set-status-info">storaged_drive_lsm_set_status_info ()</a>
+</dt>
+<dt>storaged_drive_lsm_skeleton_new, <a class="indexterm" href="storaged-StoragedDriveLSM.html#storaged-drive-lsm-skeleton-new">storaged_drive_lsm_skeleton_new ()</a>
+</dt>
 <dt>storaged_drive_override_properties, <a class="indexterm" href="StoragedDrive.html#storaged-drive-override-properties">storaged_drive_override_properties ()</a>
 </dt>
 <dt>storaged_drive_proxy_new, <a class="indexterm" href="StoragedDrive.html#storaged-drive-proxy-new">storaged_drive_proxy_new ()</a>
@@ -1423,6 +1689,22 @@
 </dt>
 <dt>org.storaged.Storaged.Filesystem.BTRFS, <a class="indexterm" href="gdbus-org.storaged.Storaged.Filesystem.BTRFS.html#gdbus-interface-org-storaged-Storaged-Filesystem-BTRFS.top_of_page">org.storaged.Storaged.Filesystem.BTRFS</a>
 </dt>
+<dt>org.storaged.Storaged.Filesystem.BTRFS.AddDevice(), <a class="indexterm" href="gdbus-org.storaged.Storaged.Filesystem.BTRFS.html#gdbus-method-org-storaged-Storaged-Filesystem-BTRFS.AddDevice">The AddDevice() method</a>
+</dt>
+<dt>org.storaged.Storaged.Filesystem.BTRFS.CreateSnapshot(), <a class="indexterm" href="gdbus-org.storaged.Storaged.Filesystem.BTRFS.html#gdbus-method-org-storaged-Storaged-Filesystem-BTRFS.CreateSnapshot">The CreateSnapshot() method</a>
+</dt>
+<dt>org.storaged.Storaged.Filesystem.BTRFS.CreateSubvolume(), <a class="indexterm" href="gdbus-org.storaged.Storaged.Filesystem.BTRFS.html#gdbus-method-org-storaged-Storaged-Filesystem-BTRFS.CreateSubvolume">The CreateSubvolume() method</a>
+</dt>
+<dt>org.storaged.Storaged.Filesystem.BTRFS.GetSubvolumes(), <a class="indexterm" href="gdbus-org.storaged.Storaged.Filesystem.BTRFS.html#gdbus-method-org-storaged-Storaged-Filesystem-BTRFS.GetSubvolumes">The GetSubvolumes() method</a>
+</dt>
+<dt>org.storaged.Storaged.Filesystem.BTRFS.RemoveDevice(), <a class="indexterm" href="gdbus-org.storaged.Storaged.Filesystem.BTRFS.html#gdbus-method-org-storaged-Storaged-Filesystem-BTRFS.RemoveDevice">The RemoveDevice() method</a>
+</dt>
+<dt>org.storaged.Storaged.Filesystem.BTRFS.RemoveSubvolume(), <a class="indexterm" href="gdbus-org.storaged.Storaged.Filesystem.BTRFS.html#gdbus-method-org-storaged-Storaged-Filesystem-BTRFS.RemoveSubvolume">The RemoveSubvolume() method</a>
+</dt>
+<dt>org.storaged.Storaged.Filesystem.BTRFS.Repair(), <a class="indexterm" href="gdbus-org.storaged.Storaged.Filesystem.BTRFS.html#gdbus-method-org-storaged-Storaged-Filesystem-BTRFS.Repair">The Repair() method</a>
+</dt>
+<dt>org.storaged.Storaged.Filesystem.BTRFS.Resize(), <a class="indexterm" href="gdbus-org.storaged.Storaged.Filesystem.BTRFS.html#gdbus-method-org-storaged-Storaged-Filesystem-BTRFS.Resize">The Resize() method</a>
+</dt>
 <dt>org.storaged.Storaged.Filesystem.BTRFS.SetLabel(), <a class="indexterm" href="gdbus-org.storaged.Storaged.Filesystem.BTRFS.html#gdbus-method-org-storaged-Storaged-Filesystem-BTRFS.SetLabel">The SetLabel() method</a>
 </dt>
 <dt>org.storaged.Storaged.Filesystem.BTRFS:label, <a class="indexterm" href="gdbus-org.storaged.Storaged.Filesystem.BTRFS.html#gdbus-property-org-storaged-Storaged-Filesystem-BTRFS.label">The "label" property</a>
@@ -1449,6 +1731,44 @@
 </dt>
 <dt>org.storaged.Storaged.Filesystem:MountPoints, <a class="indexterm" href="gdbus-org.storaged.Storaged.Filesystem.html#gdbus-property-org-storaged-Storaged-Filesystem.MountPoints">The "MountPoints" property</a>
 </dt>
+<dt>StoragedFilesystemBTRFS, <a class="indexterm" href="StoragedFilesystemBTRFS.html#StoragedFilesystemBTRFS-struct">StoragedFilesystemBTRFS</a>
+</dt>
+<dt>StoragedFilesystemBTRFS::handle-add-device, <a class="indexterm" href="StoragedFilesystemBTRFS.html#StoragedFilesystemBTRFS-handle-add-device">The “handle-add-device” signal</a>
+</dt>
+<dt>StoragedFilesystemBTRFS::handle-create-snapshot, <a class="indexterm" href="StoragedFilesystemBTRFS.html#StoragedFilesystemBTRFS-handle-create-snapshot">The “handle-create-snapshot” signal</a>
+</dt>
+<dt>StoragedFilesystemBTRFS::handle-create-subvolume, <a class="indexterm" href="StoragedFilesystemBTRFS.html#StoragedFilesystemBTRFS-handle-create-subvolume">The “handle-create-subvolume” signal</a>
+</dt>
+<dt>StoragedFilesystemBTRFS::handle-get-subvolumes, <a class="indexterm" href="StoragedFilesystemBTRFS.html#StoragedFilesystemBTRFS-handle-get-subvolumes">The “handle-get-subvolumes” signal</a>
+</dt>
+<dt>StoragedFilesystemBTRFS::handle-remove-device, <a class="indexterm" href="StoragedFilesystemBTRFS.html#StoragedFilesystemBTRFS-handle-remove-device">The “handle-remove-device” signal</a>
+</dt>
+<dt>StoragedFilesystemBTRFS::handle-remove-subvolume, <a class="indexterm" href="StoragedFilesystemBTRFS.html#StoragedFilesystemBTRFS-handle-remove-subvolume">The “handle-remove-subvolume” signal</a>
+</dt>
+<dt>StoragedFilesystemBTRFS::handle-repair, <a class="indexterm" href="StoragedFilesystemBTRFS.html#StoragedFilesystemBTRFS-handle-repair">The “handle-repair” signal</a>
+</dt>
+<dt>StoragedFilesystemBTRFS::handle-resize, <a class="indexterm" href="StoragedFilesystemBTRFS.html#StoragedFilesystemBTRFS-handle-resize">The “handle-resize” signal</a>
+</dt>
+<dt>StoragedFilesystemBTRFS::handle-set-label, <a class="indexterm" href="StoragedFilesystemBTRFS.html#StoragedFilesystemBTRFS-handle-set-label">The “handle-set-label” signal</a>
+</dt>
+<dt>StoragedFilesystemBTRFS:label, <a class="indexterm" href="StoragedFilesystemBTRFS.html#StoragedFilesystemBTRFS--label">The “label” property</a>
+</dt>
+<dt>StoragedFilesystemBTRFS:num-devices, <a class="indexterm" href="StoragedFilesystemBTRFS.html#StoragedFilesystemBTRFS--num-devices">The “num-devices” property</a>
+</dt>
+<dt>StoragedFilesystemBTRFS:used, <a class="indexterm" href="StoragedFilesystemBTRFS.html#StoragedFilesystemBTRFS--used">The “used” property</a>
+</dt>
+<dt>StoragedFilesystemBTRFS:uuid, <a class="indexterm" href="StoragedFilesystemBTRFS.html#StoragedFilesystemBTRFS--uuid">The “uuid” property</a>
+</dt>
+<dt>StoragedFilesystemBTRFSIface, <a class="indexterm" href="StoragedFilesystemBTRFS.html#StoragedFilesystemBTRFSIface">struct StoragedFilesystemBTRFSIface</a>
+</dt>
+<dt>StoragedFilesystemBTRFSProxy, <a class="indexterm" href="StoragedFilesystemBTRFS.html#StoragedFilesystemBTRFSProxy-struct">struct StoragedFilesystemBTRFSProxy</a>
+</dt>
+<dt>StoragedFilesystemBTRFSProxyClass, <a class="indexterm" href="StoragedFilesystemBTRFS.html#StoragedFilesystemBTRFSProxyClass">struct StoragedFilesystemBTRFSProxyClass</a>
+</dt>
+<dt>StoragedFilesystemBTRFSSkeleton, <a class="indexterm" href="StoragedFilesystemBTRFS.html#StoragedFilesystemBTRFSSkeleton-struct">struct StoragedFilesystemBTRFSSkeleton</a>
+</dt>
+<dt>StoragedFilesystemBTRFSSkeletonClass, <a class="indexterm" href="StoragedFilesystemBTRFS.html#StoragedFilesystemBTRFSSkeletonClass">struct StoragedFilesystemBTRFSSkeletonClass</a>
+</dt>
 <dt>StoragedFilesystemIface, <a class="indexterm" href="StoragedFilesystem.html#StoragedFilesystemIface">struct StoragedFilesystemIface</a>
 </dt>
 <dt>StoragedFilesystemProxy, <a class="indexterm" href="StoragedFilesystem.html#StoragedFilesystemProxy-struct">struct StoragedFilesystemProxy</a>
@@ -1459,51 +1779,115 @@
 </dt>
 <dt>StoragedFilesystemSkeletonClass, <a class="indexterm" href="StoragedFilesystem.html#StoragedFilesystemSkeletonClass">struct StoragedFilesystemSkeletonClass</a>
 </dt>
-<dt>storaged_filesystem_btrfs_call_set_label, <a class="indexterm" href="storaged-StoragedFilesystemBTRFS.html#storaged-filesystem-btrfs-call-set-label">storaged_filesystem_btrfs_call_set_label ()</a>
+<dt>storaged_filesystem_btrfs_call_add_device, <a class="indexterm" href="StoragedFilesystemBTRFS.html#storaged-filesystem-btrfs-call-add-device">storaged_filesystem_btrfs_call_add_device ()</a>
 </dt>
-<dt>storaged_filesystem_btrfs_call_set_label_finish, <a class="indexterm" href="storaged-StoragedFilesystemBTRFS.html#storaged-filesystem-btrfs-call-set-label-finish">storaged_filesystem_btrfs_call_set_label_finish ()</a>
+<dt>storaged_filesystem_btrfs_call_add_device_finish, <a class="indexterm" href="StoragedFilesystemBTRFS.html#storaged-filesystem-btrfs-call-add-device-finish">storaged_filesystem_btrfs_call_add_device_finish ()</a>
 </dt>
-<dt>storaged_filesystem_btrfs_call_set_label_sync, <a class="indexterm" href="storaged-StoragedFilesystemBTRFS.html#storaged-filesystem-btrfs-call-set-label-sync">storaged_filesystem_btrfs_call_set_label_sync ()</a>
+<dt>storaged_filesystem_btrfs_call_add_device_sync, <a class="indexterm" href="StoragedFilesystemBTRFS.html#storaged-filesystem-btrfs-call-add-device-sync">storaged_filesystem_btrfs_call_add_device_sync ()</a>
 </dt>
-<dt>storaged_filesystem_btrfs_complete_set_label, <a class="indexterm" href="storaged-StoragedFilesystemBTRFS.html#storaged-filesystem-btrfs-complete-set-label">storaged_filesystem_btrfs_complete_set_label ()</a>
+<dt>storaged_filesystem_btrfs_call_create_snapshot, <a class="indexterm" href="StoragedFilesystemBTRFS.html#storaged-filesystem-btrfs-call-create-snapshot">storaged_filesystem_btrfs_call_create_snapshot ()</a>
 </dt>
-<dt>storaged_filesystem_btrfs_dup_label, <a class="indexterm" href="storaged-StoragedFilesystemBTRFS.html#storaged-filesystem-btrfs-dup-label">storaged_filesystem_btrfs_dup_label ()</a>
+<dt>storaged_filesystem_btrfs_call_create_snapshot_finish, <a class="indexterm" href="StoragedFilesystemBTRFS.html#storaged-filesystem-btrfs-call-create-snapshot-finish">storaged_filesystem_btrfs_call_create_snapshot_finish ()</a>
 </dt>
-<dt>storaged_filesystem_btrfs_dup_uuid, <a class="indexterm" href="storaged-StoragedFilesystemBTRFS.html#storaged-filesystem-btrfs-dup-uuid">storaged_filesystem_btrfs_dup_uuid ()</a>
+<dt>storaged_filesystem_btrfs_call_create_snapshot_sync, <a class="indexterm" href="StoragedFilesystemBTRFS.html#storaged-filesystem-btrfs-call-create-snapshot-sync">storaged_filesystem_btrfs_call_create_snapshot_sync ()</a>
 </dt>
-<dt>storaged_filesystem_btrfs_get_label, <a class="indexterm" href="storaged-StoragedFilesystemBTRFS.html#storaged-filesystem-btrfs-get-label">storaged_filesystem_btrfs_get_label ()</a>
+<dt>storaged_filesystem_btrfs_call_create_subvolume, <a class="indexterm" href="StoragedFilesystemBTRFS.html#storaged-filesystem-btrfs-call-create-subvolume">storaged_filesystem_btrfs_call_create_subvolume ()</a>
 </dt>
-<dt>storaged_filesystem_btrfs_get_num_devices, <a class="indexterm" href="storaged-StoragedFilesystemBTRFS.html#storaged-filesystem-btrfs-get-num-devices">storaged_filesystem_btrfs_get_num_devices ()</a>
+<dt>storaged_filesystem_btrfs_call_create_subvolume_finish, <a class="indexterm" href="StoragedFilesystemBTRFS.html#storaged-filesystem-btrfs-call-create-subvolume-finish">storaged_filesystem_btrfs_call_create_subvolume_finish ()</a>
 </dt>
-<dt>storaged_filesystem_btrfs_get_used, <a class="indexterm" href="storaged-StoragedFilesystemBTRFS.html#storaged-filesystem-btrfs-get-used">storaged_filesystem_btrfs_get_used ()</a>
+<dt>storaged_filesystem_btrfs_call_create_subvolume_sync, <a class="indexterm" href="StoragedFilesystemBTRFS.html#storaged-filesystem-btrfs-call-create-subvolume-sync">storaged_filesystem_btrfs_call_create_subvolume_sync ()</a>
 </dt>
-<dt>storaged_filesystem_btrfs_get_uuid, <a class="indexterm" href="storaged-StoragedFilesystemBTRFS.html#storaged-filesystem-btrfs-get-uuid">storaged_filesystem_btrfs_get_uuid ()</a>
+<dt>storaged_filesystem_btrfs_call_get_subvolumes, <a class="indexterm" href="StoragedFilesystemBTRFS.html#storaged-filesystem-btrfs-call-get-subvolumes">storaged_filesystem_btrfs_call_get_subvolumes ()</a>
 </dt>
-<dt>storaged_filesystem_btrfs_interface_info, <a class="indexterm" href="storaged-StoragedFilesystemBTRFS.html#storaged-filesystem-btrfs-interface-info">storaged_filesystem_btrfs_interface_info ()</a>
+<dt>storaged_filesystem_btrfs_call_get_subvolumes_finish, <a class="indexterm" href="StoragedFilesystemBTRFS.html#storaged-filesystem-btrfs-call-get-subvolumes-finish">storaged_filesystem_btrfs_call_get_subvolumes_finish ()</a>
 </dt>
-<dt>storaged_filesystem_btrfs_override_properties, <a class="indexterm" href="storaged-StoragedFilesystemBTRFS.html#storaged-filesystem-btrfs-override-properties">storaged_filesystem_btrfs_override_properties ()</a>
+<dt>storaged_filesystem_btrfs_call_get_subvolumes_sync, <a class="indexterm" href="StoragedFilesystemBTRFS.html#storaged-filesystem-btrfs-call-get-subvolumes-sync">storaged_filesystem_btrfs_call_get_subvolumes_sync ()</a>
 </dt>
-<dt>storaged_filesystem_btrfs_proxy_new, <a class="indexterm" href="storaged-StoragedFilesystemBTRFS.html#storaged-filesystem-btrfs-proxy-new">storaged_filesystem_btrfs_proxy_new ()</a>
+<dt>storaged_filesystem_btrfs_call_remove_device, <a class="indexterm" href="StoragedFilesystemBTRFS.html#storaged-filesystem-btrfs-call-remove-device">storaged_filesystem_btrfs_call_remove_device ()</a>
 </dt>
-<dt>storaged_filesystem_btrfs_proxy_new_finish, <a class="indexterm" href="storaged-StoragedFilesystemBTRFS.html#storaged-filesystem-btrfs-proxy-new-finish">storaged_filesystem_btrfs_proxy_new_finish ()</a>
+<dt>storaged_filesystem_btrfs_call_remove_device_finish, <a class="indexterm" href="StoragedFilesystemBTRFS.html#storaged-filesystem-btrfs-call-remove-device-finish">storaged_filesystem_btrfs_call_remove_device_finish ()</a>
 </dt>
-<dt>storaged_filesystem_btrfs_proxy_new_for_bus, <a class="indexterm" href="storaged-StoragedFilesystemBTRFS.html#storaged-filesystem-btrfs-proxy-new-for-bus">storaged_filesystem_btrfs_proxy_new_for_bus ()</a>
+<dt>storaged_filesystem_btrfs_call_remove_device_sync, <a class="indexterm" href="StoragedFilesystemBTRFS.html#storaged-filesystem-btrfs-call-remove-device-sync">storaged_filesystem_btrfs_call_remove_device_sync ()</a>
 </dt>
-<dt>storaged_filesystem_btrfs_proxy_new_for_bus_finish, <a class="indexterm" href="storaged-StoragedFilesystemBTRFS.html#storaged-filesystem-btrfs-proxy-new-for-bus-finish">storaged_filesystem_btrfs_proxy_new_for_bus_finish ()</a>
+<dt>storaged_filesystem_btrfs_call_remove_subvolume, <a class="indexterm" href="StoragedFilesystemBTRFS.html#storaged-filesystem-btrfs-call-remove-subvolume">storaged_filesystem_btrfs_call_remove_subvolume ()</a>
 </dt>
-<dt>storaged_filesystem_btrfs_proxy_new_for_bus_sync, <a class="indexterm" href="storaged-StoragedFilesystemBTRFS.html#storaged-filesystem-btrfs-proxy-new-for-bus-sync">storaged_filesystem_btrfs_proxy_new_for_bus_sync ()</a>
+<dt>storaged_filesystem_btrfs_call_remove_subvolume_finish, <a class="indexterm" href="StoragedFilesystemBTRFS.html#storaged-filesystem-btrfs-call-remove-subvolume-finish">storaged_filesystem_btrfs_call_remove_subvolume_finish ()</a>
 </dt>
-<dt>storaged_filesystem_btrfs_proxy_new_sync, <a class="indexterm" href="storaged-StoragedFilesystemBTRFS.html#storaged-filesystem-btrfs-proxy-new-sync">storaged_filesystem_btrfs_proxy_new_sync ()</a>
+<dt>storaged_filesystem_btrfs_call_remove_subvolume_sync, <a class="indexterm" href="StoragedFilesystemBTRFS.html#storaged-filesystem-btrfs-call-remove-subvolume-sync">storaged_filesystem_btrfs_call_remove_subvolume_sync ()</a>
 </dt>
-<dt>storaged_filesystem_btrfs_set_label, <a class="indexterm" href="storaged-StoragedFilesystemBTRFS.html#storaged-filesystem-btrfs-set-label">storaged_filesystem_btrfs_set_label ()</a>
+<dt>storaged_filesystem_btrfs_call_repair, <a class="indexterm" href="StoragedFilesystemBTRFS.html#storaged-filesystem-btrfs-call-repair">storaged_filesystem_btrfs_call_repair ()</a>
 </dt>
-<dt>storaged_filesystem_btrfs_set_num_devices, <a class="indexterm" href="storaged-StoragedFilesystemBTRFS.html#storaged-filesystem-btrfs-set-num-devices">storaged_filesystem_btrfs_set_num_devices ()</a>
+<dt>storaged_filesystem_btrfs_call_repair_finish, <a class="indexterm" href="StoragedFilesystemBTRFS.html#storaged-filesystem-btrfs-call-repair-finish">storaged_filesystem_btrfs_call_repair_finish ()</a>
 </dt>
-<dt>storaged_filesystem_btrfs_set_used, <a class="indexterm" href="storaged-StoragedFilesystemBTRFS.html#storaged-filesystem-btrfs-set-used">storaged_filesystem_btrfs_set_used ()</a>
+<dt>storaged_filesystem_btrfs_call_repair_sync, <a class="indexterm" href="StoragedFilesystemBTRFS.html#storaged-filesystem-btrfs-call-repair-sync">storaged_filesystem_btrfs_call_repair_sync ()</a>
 </dt>
-<dt>storaged_filesystem_btrfs_set_uuid, <a class="indexterm" href="storaged-StoragedFilesystemBTRFS.html#storaged-filesystem-btrfs-set-uuid">storaged_filesystem_btrfs_set_uuid ()</a>
+<dt>storaged_filesystem_btrfs_call_resize, <a class="indexterm" href="StoragedFilesystemBTRFS.html#storaged-filesystem-btrfs-call-resize">storaged_filesystem_btrfs_call_resize ()</a>
 </dt>
-<dt>storaged_filesystem_btrfs_skeleton_new, <a class="indexterm" href="storaged-StoragedFilesystemBTRFS.html#storaged-filesystem-btrfs-skeleton-new">storaged_filesystem_btrfs_skeleton_new ()</a>
+<dt>storaged_filesystem_btrfs_call_resize_finish, <a class="indexterm" href="StoragedFilesystemBTRFS.html#storaged-filesystem-btrfs-call-resize-finish">storaged_filesystem_btrfs_call_resize_finish ()</a>
+</dt>
+<dt>storaged_filesystem_btrfs_call_resize_sync, <a class="indexterm" href="StoragedFilesystemBTRFS.html#storaged-filesystem-btrfs-call-resize-sync">storaged_filesystem_btrfs_call_resize_sync ()</a>
+</dt>
+<dt>storaged_filesystem_btrfs_call_set_label, <a class="indexterm" href="StoragedFilesystemBTRFS.html#storaged-filesystem-btrfs-call-set-label">storaged_filesystem_btrfs_call_set_label ()</a>
+</dt>
+<dt>storaged_filesystem_btrfs_call_set_label_finish, <a class="indexterm" href="StoragedFilesystemBTRFS.html#storaged-filesystem-btrfs-call-set-label-finish">storaged_filesystem_btrfs_call_set_label_finish ()</a>
+</dt>
+<dt>storaged_filesystem_btrfs_call_set_label_sync, <a class="indexterm" href="StoragedFilesystemBTRFS.html#storaged-filesystem-btrfs-call-set-label-sync">storaged_filesystem_btrfs_call_set_label_sync ()</a>
+</dt>
+<dt>storaged_filesystem_btrfs_complete_add_device, <a class="indexterm" href="StoragedFilesystemBTRFS.html#storaged-filesystem-btrfs-complete-add-device">storaged_filesystem_btrfs_complete_add_device ()</a>
+</dt>
+<dt>storaged_filesystem_btrfs_complete_create_snapshot, <a class="indexterm" href="StoragedFilesystemBTRFS.html#storaged-filesystem-btrfs-complete-create-snapshot">storaged_filesystem_btrfs_complete_create_snapshot ()</a>
+</dt>
+<dt>storaged_filesystem_btrfs_complete_create_subvolume, <a class="indexterm" href="StoragedFilesystemBTRFS.html#storaged-filesystem-btrfs-complete-create-subvolume">storaged_filesystem_btrfs_complete_create_subvolume ()</a>
+</dt>
+<dt>storaged_filesystem_btrfs_complete_get_subvolumes, <a class="indexterm" href="StoragedFilesystemBTRFS.html#storaged-filesystem-btrfs-complete-get-subvolumes">storaged_filesystem_btrfs_complete_get_subvolumes ()</a>
+</dt>
+<dt>storaged_filesystem_btrfs_complete_remove_device, <a class="indexterm" href="StoragedFilesystemBTRFS.html#storaged-filesystem-btrfs-complete-remove-device">storaged_filesystem_btrfs_complete_remove_device ()</a>
+</dt>
+<dt>storaged_filesystem_btrfs_complete_remove_subvolume, <a class="indexterm" href="StoragedFilesystemBTRFS.html#storaged-filesystem-btrfs-complete-remove-subvolume">storaged_filesystem_btrfs_complete_remove_subvolume ()</a>
+</dt>
+<dt>storaged_filesystem_btrfs_complete_repair, <a class="indexterm" href="StoragedFilesystemBTRFS.html#storaged-filesystem-btrfs-complete-repair">storaged_filesystem_btrfs_complete_repair ()</a>
+</dt>
+<dt>storaged_filesystem_btrfs_complete_resize, <a class="indexterm" href="StoragedFilesystemBTRFS.html#storaged-filesystem-btrfs-complete-resize">storaged_filesystem_btrfs_complete_resize ()</a>
+</dt>
+<dt>storaged_filesystem_btrfs_complete_set_label, <a class="indexterm" href="StoragedFilesystemBTRFS.html#storaged-filesystem-btrfs-complete-set-label">storaged_filesystem_btrfs_complete_set_label ()</a>
+</dt>
+<dt>storaged_filesystem_btrfs_dup_label, <a class="indexterm" href="StoragedFilesystemBTRFS.html#storaged-filesystem-btrfs-dup-label">storaged_filesystem_btrfs_dup_label ()</a>
+</dt>
+<dt>storaged_filesystem_btrfs_dup_uuid, <a class="indexterm" href="StoragedFilesystemBTRFS.html#storaged-filesystem-btrfs-dup-uuid">storaged_filesystem_btrfs_dup_uuid ()</a>
+</dt>
+<dt>storaged_filesystem_btrfs_get_label, <a class="indexterm" href="StoragedFilesystemBTRFS.html#storaged-filesystem-btrfs-get-label">storaged_filesystem_btrfs_get_label ()</a>
+</dt>
+<dt>storaged_filesystem_btrfs_get_num_devices, <a class="indexterm" href="StoragedFilesystemBTRFS.html#storaged-filesystem-btrfs-get-num-devices">storaged_filesystem_btrfs_get_num_devices ()</a>
+</dt>
+<dt>storaged_filesystem_btrfs_get_used, <a class="indexterm" href="StoragedFilesystemBTRFS.html#storaged-filesystem-btrfs-get-used">storaged_filesystem_btrfs_get_used ()</a>
+</dt>
+<dt>storaged_filesystem_btrfs_get_uuid, <a class="indexterm" href="StoragedFilesystemBTRFS.html#storaged-filesystem-btrfs-get-uuid">storaged_filesystem_btrfs_get_uuid ()</a>
+</dt>
+<dt>storaged_filesystem_btrfs_interface_info, <a class="indexterm" href="StoragedFilesystemBTRFS.html#storaged-filesystem-btrfs-interface-info">storaged_filesystem_btrfs_interface_info ()</a>
+</dt>
+<dt>storaged_filesystem_btrfs_override_properties, <a class="indexterm" href="StoragedFilesystemBTRFS.html#storaged-filesystem-btrfs-override-properties">storaged_filesystem_btrfs_override_properties ()</a>
+</dt>
+<dt>storaged_filesystem_btrfs_proxy_new, <a class="indexterm" href="StoragedFilesystemBTRFS.html#storaged-filesystem-btrfs-proxy-new">storaged_filesystem_btrfs_proxy_new ()</a>
+</dt>
+<dt>storaged_filesystem_btrfs_proxy_new_finish, <a class="indexterm" href="StoragedFilesystemBTRFS.html#storaged-filesystem-btrfs-proxy-new-finish">storaged_filesystem_btrfs_proxy_new_finish ()</a>
+</dt>
+<dt>storaged_filesystem_btrfs_proxy_new_for_bus, <a class="indexterm" href="StoragedFilesystemBTRFS.html#storaged-filesystem-btrfs-proxy-new-for-bus">storaged_filesystem_btrfs_proxy_new_for_bus ()</a>
+</dt>
+<dt>storaged_filesystem_btrfs_proxy_new_for_bus_finish, <a class="indexterm" href="StoragedFilesystemBTRFS.html#storaged-filesystem-btrfs-proxy-new-for-bus-finish">storaged_filesystem_btrfs_proxy_new_for_bus_finish ()</a>
+</dt>
+<dt>storaged_filesystem_btrfs_proxy_new_for_bus_sync, <a class="indexterm" href="StoragedFilesystemBTRFS.html#storaged-filesystem-btrfs-proxy-new-for-bus-sync">storaged_filesystem_btrfs_proxy_new_for_bus_sync ()</a>
+</dt>
+<dt>storaged_filesystem_btrfs_proxy_new_sync, <a class="indexterm" href="StoragedFilesystemBTRFS.html#storaged-filesystem-btrfs-proxy-new-sync">storaged_filesystem_btrfs_proxy_new_sync ()</a>
+</dt>
+<dt>storaged_filesystem_btrfs_set_label, <a class="indexterm" href="StoragedFilesystemBTRFS.html#storaged-filesystem-btrfs-set-label">storaged_filesystem_btrfs_set_label ()</a>
+</dt>
+<dt>storaged_filesystem_btrfs_set_num_devices, <a class="indexterm" href="StoragedFilesystemBTRFS.html#storaged-filesystem-btrfs-set-num-devices">storaged_filesystem_btrfs_set_num_devices ()</a>
+</dt>
+<dt>storaged_filesystem_btrfs_set_used, <a class="indexterm" href="StoragedFilesystemBTRFS.html#storaged-filesystem-btrfs-set-used">storaged_filesystem_btrfs_set_used ()</a>
+</dt>
+<dt>storaged_filesystem_btrfs_set_uuid, <a class="indexterm" href="StoragedFilesystemBTRFS.html#storaged-filesystem-btrfs-set-uuid">storaged_filesystem_btrfs_set_uuid ()</a>
+</dt>
+<dt>storaged_filesystem_btrfs_skeleton_new, <a class="indexterm" href="StoragedFilesystemBTRFS.html#storaged-filesystem-btrfs-skeleton-new">storaged_filesystem_btrfs_skeleton_new ()</a>
 </dt>
 <dt>storaged_filesystem_call_mount, <a class="indexterm" href="StoragedFilesystem.html#storaged-filesystem-call-mount">storaged_filesystem_call_mount ()</a>
 </dt>
@@ -1590,11 +1974,31 @@
 </dt>
 <dt>org.storaged.Storaged.ISCSI.Session, <a class="indexterm" href="gdbus-org.storaged.Storaged.ISCSI.Session.html#gdbus-interface-org-storaged-Storaged-ISCSI-Session.top_of_page">org.storaged.Storaged.ISCSI.Session</a>
 </dt>
+<dt>StoragedISCSISession, <a class="indexterm" href="StoragedISCSISession.html#StoragedISCSISession-struct">StoragedISCSISession</a>
+</dt>
+<dt>org.storaged.Storaged.ISCSI.Session.Logout(), <a class="indexterm" href="gdbus-org.storaged.Storaged.ISCSI.Session.html#gdbus-method-org-storaged-Storaged-ISCSI-Session.Logout">The Logout() method</a>
+</dt>
+<dt>org.storaged.Storaged.ISCSI.Session.LogoutInterface(), <a class="indexterm" href="gdbus-org.storaged.Storaged.ISCSI.Session.html#gdbus-method-org-storaged-Storaged-ISCSI-Session.LogoutInterface">The LogoutInterface() method</a>
+</dt>
+<dt>StoragedISCSISession::handle-logout, <a class="indexterm" href="StoragedISCSISession.html#StoragedISCSISession-handle-logout">The “handle-logout” signal</a>
+</dt>
+<dt>StoragedISCSISession::handle-logout-interface, <a class="indexterm" href="StoragedISCSISession.html#StoragedISCSISession-handle-logout-interface">The “handle-logout-interface” signal</a>
+</dt>
+<dt>StoragedISCSISession:abort-timeout, <a class="indexterm" href="StoragedISCSISession.html#StoragedISCSISession--abort-timeout">The “abort-timeout” property</a>
+</dt>
 <dt>org.storaged.Storaged.ISCSI.Session:abort_timeout, <a class="indexterm" href="gdbus-org.storaged.Storaged.ISCSI.Session.html#gdbus-property-org-storaged-Storaged-ISCSI-Session.abort_timeout">The "abort_timeout" property</a>
 </dt>
 <dt>org.storaged.Storaged.ISCSI.Session:address, <a class="indexterm" href="gdbus-org.storaged.Storaged.ISCSI.Session.html#gdbus-property-org-storaged-Storaged-ISCSI-Session.address">The "address" property</a>
 </dt>
+<dt>StoragedISCSISession:address, <a class="indexterm" href="StoragedISCSISession.html#StoragedISCSISession--address">The “address” property</a>
+</dt>
+<dt>StoragedISCSISession:lu-reset-timeout, <a class="indexterm" href="StoragedISCSISession.html#StoragedISCSISession--lu-reset-timeout">The “lu-reset-timeout” property</a>
+</dt>
 <dt>org.storaged.Storaged.ISCSI.Session:lu_reset_timeout, <a class="indexterm" href="gdbus-org.storaged.Storaged.ISCSI.Session.html#gdbus-property-org-storaged-Storaged-ISCSI-Session.lu_reset_timeout">The "lu_reset_timeout" property</a>
+</dt>
+<dt>StoragedISCSISession:persistent-address, <a class="indexterm" href="StoragedISCSISession.html#StoragedISCSISession--persistent-address">The “persistent-address” property</a>
+</dt>
+<dt>StoragedISCSISession:persistent-port, <a class="indexterm" href="StoragedISCSISession.html#StoragedISCSISession--persistent-port">The “persistent-port” property</a>
 </dt>
 <dt>org.storaged.Storaged.ISCSI.Session:persistent_address, <a class="indexterm" href="gdbus-org.storaged.Storaged.ISCSI.Session.html#gdbus-property-org-storaged-Storaged-ISCSI-Session.persistent_address">The "persistent_address" property</a>
 </dt>
@@ -1602,77 +2006,97 @@
 </dt>
 <dt>org.storaged.Storaged.ISCSI.Session:port, <a class="indexterm" href="gdbus-org.storaged.Storaged.ISCSI.Session.html#gdbus-property-org-storaged-Storaged-ISCSI-Session.port">The "port" property</a>
 </dt>
+<dt>StoragedISCSISession:port, <a class="indexterm" href="StoragedISCSISession.html#StoragedISCSISession--port">The “port” property</a>
+</dt>
+<dt>StoragedISCSISession:recovery-timeout, <a class="indexterm" href="StoragedISCSISession.html#StoragedISCSISession--recovery-timeout">The “recovery-timeout” property</a>
+</dt>
 <dt>org.storaged.Storaged.ISCSI.Session:recovery_timeout, <a class="indexterm" href="gdbus-org.storaged.Storaged.ISCSI.Session.html#gdbus-property-org-storaged-Storaged-ISCSI-Session.recovery_timeout">The "recovery_timeout" property</a>
 </dt>
+<dt>StoragedISCSISession:target-name, <a class="indexterm" href="StoragedISCSISession.html#StoragedISCSISession--target-name">The “target-name” property</a>
+</dt>
 <dt>org.storaged.Storaged.ISCSI.Session:target_name, <a class="indexterm" href="gdbus-org.storaged.Storaged.ISCSI.Session.html#gdbus-property-org-storaged-Storaged-ISCSI-Session.target_name">The "target_name" property</a>
+</dt>
+<dt>StoragedISCSISession:tgt-reset-timeout, <a class="indexterm" href="StoragedISCSISession.html#StoragedISCSISession--tgt-reset-timeout">The “tgt-reset-timeout” property</a>
 </dt>
 <dt>org.storaged.Storaged.ISCSI.Session:tgt_reset_timeout, <a class="indexterm" href="gdbus-org.storaged.Storaged.ISCSI.Session.html#gdbus-property-org-storaged-Storaged-ISCSI-Session.tgt_reset_timeout">The "tgt_reset_timeout" property</a>
 </dt>
 <dt>org.storaged.Storaged.ISCSI.Session:tpgt, <a class="indexterm" href="gdbus-org.storaged.Storaged.ISCSI.Session.html#gdbus-property-org-storaged-Storaged-ISCSI-Session.tpgt">The "tpgt" property</a>
 </dt>
-<dt>storaged_iscsi_session_dup_address, <a class="indexterm" href="storaged-StoragedISCSISession.html#storaged-iscsi-session-dup-address">storaged_iscsi_session_dup_address ()</a>
+<dt>StoragedISCSISession:tpgt, <a class="indexterm" href="StoragedISCSISession.html#StoragedISCSISession--tpgt">The “tpgt” property</a>
 </dt>
-<dt>storaged_iscsi_session_dup_persistent_address, <a class="indexterm" href="storaged-StoragedISCSISession.html#storaged-iscsi-session-dup-persistent-address">storaged_iscsi_session_dup_persistent_address ()</a>
+<dt>StoragedISCSISessionIface, <a class="indexterm" href="StoragedISCSISession.html#StoragedISCSISessionIface">struct StoragedISCSISessionIface</a>
 </dt>
-<dt>storaged_iscsi_session_dup_target_name, <a class="indexterm" href="storaged-StoragedISCSISession.html#storaged-iscsi-session-dup-target-name">storaged_iscsi_session_dup_target_name ()</a>
+<dt>StoragedISCSISessionProxy, <a class="indexterm" href="StoragedISCSISession.html#StoragedISCSISessionProxy-struct">struct StoragedISCSISessionProxy</a>
 </dt>
-<dt>storaged_iscsi_session_get_abort_timeout, <a class="indexterm" href="storaged-StoragedISCSISession.html#storaged-iscsi-session-get-abort-timeout">storaged_iscsi_session_get_abort_timeout ()</a>
+<dt>StoragedISCSISessionProxyClass, <a class="indexterm" href="StoragedISCSISession.html#StoragedISCSISessionProxyClass">struct StoragedISCSISessionProxyClass</a>
 </dt>
-<dt>storaged_iscsi_session_get_address, <a class="indexterm" href="storaged-StoragedISCSISession.html#storaged-iscsi-session-get-address">storaged_iscsi_session_get_address ()</a>
+<dt>StoragedISCSISessionSkeleton, <a class="indexterm" href="StoragedISCSISession.html#StoragedISCSISessionSkeleton-struct">struct StoragedISCSISessionSkeleton</a>
 </dt>
-<dt>storaged_iscsi_session_get_lu_reset_timeout, <a class="indexterm" href="storaged-StoragedISCSISession.html#storaged-iscsi-session-get-lu-reset-timeout">storaged_iscsi_session_get_lu_reset_timeout ()</a>
+<dt>StoragedISCSISessionSkeletonClass, <a class="indexterm" href="StoragedISCSISession.html#StoragedISCSISessionSkeletonClass">struct StoragedISCSISessionSkeletonClass</a>
 </dt>
-<dt>storaged_iscsi_session_get_persistent_address, <a class="indexterm" href="storaged-StoragedISCSISession.html#storaged-iscsi-session-get-persistent-address">storaged_iscsi_session_get_persistent_address ()</a>
+<dt>storaged_iscsi_session_dup_address, <a class="indexterm" href="StoragedISCSISession.html#storaged-iscsi-session-dup-address">storaged_iscsi_session_dup_address ()</a>
 </dt>
-<dt>storaged_iscsi_session_get_persistent_port, <a class="indexterm" href="storaged-StoragedISCSISession.html#storaged-iscsi-session-get-persistent-port">storaged_iscsi_session_get_persistent_port ()</a>
+<dt>storaged_iscsi_session_dup_persistent_address, <a class="indexterm" href="StoragedISCSISession.html#storaged-iscsi-session-dup-persistent-address">storaged_iscsi_session_dup_persistent_address ()</a>
 </dt>
-<dt>storaged_iscsi_session_get_port, <a class="indexterm" href="storaged-StoragedISCSISession.html#storaged-iscsi-session-get-port">storaged_iscsi_session_get_port ()</a>
+<dt>storaged_iscsi_session_dup_target_name, <a class="indexterm" href="StoragedISCSISession.html#storaged-iscsi-session-dup-target-name">storaged_iscsi_session_dup_target_name ()</a>
 </dt>
-<dt>storaged_iscsi_session_get_recovery_timeout, <a class="indexterm" href="storaged-StoragedISCSISession.html#storaged-iscsi-session-get-recovery-timeout">storaged_iscsi_session_get_recovery_timeout ()</a>
+<dt>storaged_iscsi_session_get_abort_timeout, <a class="indexterm" href="StoragedISCSISession.html#storaged-iscsi-session-get-abort-timeout">storaged_iscsi_session_get_abort_timeout ()</a>
 </dt>
-<dt>storaged_iscsi_session_get_target_name, <a class="indexterm" href="storaged-StoragedISCSISession.html#storaged-iscsi-session-get-target-name">storaged_iscsi_session_get_target_name ()</a>
+<dt>storaged_iscsi_session_get_address, <a class="indexterm" href="StoragedISCSISession.html#storaged-iscsi-session-get-address">storaged_iscsi_session_get_address ()</a>
 </dt>
-<dt>storaged_iscsi_session_get_tgt_reset_timeout, <a class="indexterm" href="storaged-StoragedISCSISession.html#storaged-iscsi-session-get-tgt-reset-timeout">storaged_iscsi_session_get_tgt_reset_timeout ()</a>
+<dt>storaged_iscsi_session_get_lu_reset_timeout, <a class="indexterm" href="StoragedISCSISession.html#storaged-iscsi-session-get-lu-reset-timeout">storaged_iscsi_session_get_lu_reset_timeout ()</a>
 </dt>
-<dt>storaged_iscsi_session_get_tpgt, <a class="indexterm" href="storaged-StoragedISCSISession.html#storaged-iscsi-session-get-tpgt">storaged_iscsi_session_get_tpgt ()</a>
+<dt>storaged_iscsi_session_get_persistent_address, <a class="indexterm" href="StoragedISCSISession.html#storaged-iscsi-session-get-persistent-address">storaged_iscsi_session_get_persistent_address ()</a>
 </dt>
-<dt>storaged_iscsi_session_interface_info, <a class="indexterm" href="storaged-StoragedISCSISession.html#storaged-iscsi-session-interface-info">storaged_iscsi_session_interface_info ()</a>
+<dt>storaged_iscsi_session_get_persistent_port, <a class="indexterm" href="StoragedISCSISession.html#storaged-iscsi-session-get-persistent-port">storaged_iscsi_session_get_persistent_port ()</a>
 </dt>
-<dt>storaged_iscsi_session_override_properties, <a class="indexterm" href="storaged-StoragedISCSISession.html#storaged-iscsi-session-override-properties">storaged_iscsi_session_override_properties ()</a>
+<dt>storaged_iscsi_session_get_port, <a class="indexterm" href="StoragedISCSISession.html#storaged-iscsi-session-get-port">storaged_iscsi_session_get_port ()</a>
 </dt>
-<dt>storaged_iscsi_session_proxy_new, <a class="indexterm" href="storaged-StoragedISCSISession.html#storaged-iscsi-session-proxy-new">storaged_iscsi_session_proxy_new ()</a>
+<dt>storaged_iscsi_session_get_recovery_timeout, <a class="indexterm" href="StoragedISCSISession.html#storaged-iscsi-session-get-recovery-timeout">storaged_iscsi_session_get_recovery_timeout ()</a>
 </dt>
-<dt>storaged_iscsi_session_proxy_new_finish, <a class="indexterm" href="storaged-StoragedISCSISession.html#storaged-iscsi-session-proxy-new-finish">storaged_iscsi_session_proxy_new_finish ()</a>
+<dt>storaged_iscsi_session_get_target_name, <a class="indexterm" href="StoragedISCSISession.html#storaged-iscsi-session-get-target-name">storaged_iscsi_session_get_target_name ()</a>
 </dt>
-<dt>storaged_iscsi_session_proxy_new_for_bus, <a class="indexterm" href="storaged-StoragedISCSISession.html#storaged-iscsi-session-proxy-new-for-bus">storaged_iscsi_session_proxy_new_for_bus ()</a>
+<dt>storaged_iscsi_session_get_tgt_reset_timeout, <a class="indexterm" href="StoragedISCSISession.html#storaged-iscsi-session-get-tgt-reset-timeout">storaged_iscsi_session_get_tgt_reset_timeout ()</a>
 </dt>
-<dt>storaged_iscsi_session_proxy_new_for_bus_finish, <a class="indexterm" href="storaged-StoragedISCSISession.html#storaged-iscsi-session-proxy-new-for-bus-finish">storaged_iscsi_session_proxy_new_for_bus_finish ()</a>
+<dt>storaged_iscsi_session_get_tpgt, <a class="indexterm" href="StoragedISCSISession.html#storaged-iscsi-session-get-tpgt">storaged_iscsi_session_get_tpgt ()</a>
 </dt>
-<dt>storaged_iscsi_session_proxy_new_for_bus_sync, <a class="indexterm" href="storaged-StoragedISCSISession.html#storaged-iscsi-session-proxy-new-for-bus-sync">storaged_iscsi_session_proxy_new_for_bus_sync ()</a>
+<dt>storaged_iscsi_session_interface_info, <a class="indexterm" href="StoragedISCSISession.html#storaged-iscsi-session-interface-info">storaged_iscsi_session_interface_info ()</a>
 </dt>
-<dt>storaged_iscsi_session_proxy_new_sync, <a class="indexterm" href="storaged-StoragedISCSISession.html#storaged-iscsi-session-proxy-new-sync">storaged_iscsi_session_proxy_new_sync ()</a>
+<dt>storaged_iscsi_session_override_properties, <a class="indexterm" href="StoragedISCSISession.html#storaged-iscsi-session-override-properties">storaged_iscsi_session_override_properties ()</a>
 </dt>
-<dt>storaged_iscsi_session_set_abort_timeout, <a class="indexterm" href="storaged-StoragedISCSISession.html#storaged-iscsi-session-set-abort-timeout">storaged_iscsi_session_set_abort_timeout ()</a>
+<dt>storaged_iscsi_session_proxy_new, <a class="indexterm" href="StoragedISCSISession.html#storaged-iscsi-session-proxy-new">storaged_iscsi_session_proxy_new ()</a>
 </dt>
-<dt>storaged_iscsi_session_set_address, <a class="indexterm" href="storaged-StoragedISCSISession.html#storaged-iscsi-session-set-address">storaged_iscsi_session_set_address ()</a>
+<dt>storaged_iscsi_session_proxy_new_finish, <a class="indexterm" href="StoragedISCSISession.html#storaged-iscsi-session-proxy-new-finish">storaged_iscsi_session_proxy_new_finish ()</a>
 </dt>
-<dt>storaged_iscsi_session_set_lu_reset_timeout, <a class="indexterm" href="storaged-StoragedISCSISession.html#storaged-iscsi-session-set-lu-reset-timeout">storaged_iscsi_session_set_lu_reset_timeout ()</a>
+<dt>storaged_iscsi_session_proxy_new_for_bus, <a class="indexterm" href="StoragedISCSISession.html#storaged-iscsi-session-proxy-new-for-bus">storaged_iscsi_session_proxy_new_for_bus ()</a>
 </dt>
-<dt>storaged_iscsi_session_set_persistent_address, <a class="indexterm" href="storaged-StoragedISCSISession.html#storaged-iscsi-session-set-persistent-address">storaged_iscsi_session_set_persistent_address ()</a>
+<dt>storaged_iscsi_session_proxy_new_for_bus_finish, <a class="indexterm" href="StoragedISCSISession.html#storaged-iscsi-session-proxy-new-for-bus-finish">storaged_iscsi_session_proxy_new_for_bus_finish ()</a>
 </dt>
-<dt>storaged_iscsi_session_set_persistent_port, <a class="indexterm" href="storaged-StoragedISCSISession.html#storaged-iscsi-session-set-persistent-port">storaged_iscsi_session_set_persistent_port ()</a>
+<dt>storaged_iscsi_session_proxy_new_for_bus_sync, <a class="indexterm" href="StoragedISCSISession.html#storaged-iscsi-session-proxy-new-for-bus-sync">storaged_iscsi_session_proxy_new_for_bus_sync ()</a>
 </dt>
-<dt>storaged_iscsi_session_set_port, <a class="indexterm" href="storaged-StoragedISCSISession.html#storaged-iscsi-session-set-port">storaged_iscsi_session_set_port ()</a>
+<dt>storaged_iscsi_session_proxy_new_sync, <a class="indexterm" href="StoragedISCSISession.html#storaged-iscsi-session-proxy-new-sync">storaged_iscsi_session_proxy_new_sync ()</a>
 </dt>
-<dt>storaged_iscsi_session_set_recovery_timeout, <a class="indexterm" href="storaged-StoragedISCSISession.html#storaged-iscsi-session-set-recovery-timeout">storaged_iscsi_session_set_recovery_timeout ()</a>
+<dt>storaged_iscsi_session_set_abort_timeout, <a class="indexterm" href="StoragedISCSISession.html#storaged-iscsi-session-set-abort-timeout">storaged_iscsi_session_set_abort_timeout ()</a>
 </dt>
-<dt>storaged_iscsi_session_set_target_name, <a class="indexterm" href="storaged-StoragedISCSISession.html#storaged-iscsi-session-set-target-name">storaged_iscsi_session_set_target_name ()</a>
+<dt>storaged_iscsi_session_set_address, <a class="indexterm" href="StoragedISCSISession.html#storaged-iscsi-session-set-address">storaged_iscsi_session_set_address ()</a>
 </dt>
-<dt>storaged_iscsi_session_set_tgt_reset_timeout, <a class="indexterm" href="storaged-StoragedISCSISession.html#storaged-iscsi-session-set-tgt-reset-timeout">storaged_iscsi_session_set_tgt_reset_timeout ()</a>
+<dt>storaged_iscsi_session_set_lu_reset_timeout, <a class="indexterm" href="StoragedISCSISession.html#storaged-iscsi-session-set-lu-reset-timeout">storaged_iscsi_session_set_lu_reset_timeout ()</a>
 </dt>
-<dt>storaged_iscsi_session_set_tpgt, <a class="indexterm" href="storaged-StoragedISCSISession.html#storaged-iscsi-session-set-tpgt">storaged_iscsi_session_set_tpgt ()</a>
+<dt>storaged_iscsi_session_set_persistent_address, <a class="indexterm" href="StoragedISCSISession.html#storaged-iscsi-session-set-persistent-address">storaged_iscsi_session_set_persistent_address ()</a>
 </dt>
-<dt>storaged_iscsi_session_skeleton_new, <a class="indexterm" href="storaged-StoragedISCSISession.html#storaged-iscsi-session-skeleton-new">storaged_iscsi_session_skeleton_new ()</a>
+<dt>storaged_iscsi_session_set_persistent_port, <a class="indexterm" href="StoragedISCSISession.html#storaged-iscsi-session-set-persistent-port">storaged_iscsi_session_set_persistent_port ()</a>
+</dt>
+<dt>storaged_iscsi_session_set_port, <a class="indexterm" href="StoragedISCSISession.html#storaged-iscsi-session-set-port">storaged_iscsi_session_set_port ()</a>
+</dt>
+<dt>storaged_iscsi_session_set_recovery_timeout, <a class="indexterm" href="StoragedISCSISession.html#storaged-iscsi-session-set-recovery-timeout">storaged_iscsi_session_set_recovery_timeout ()</a>
+</dt>
+<dt>storaged_iscsi_session_set_target_name, <a class="indexterm" href="StoragedISCSISession.html#storaged-iscsi-session-set-target-name">storaged_iscsi_session_set_target_name ()</a>
+</dt>
+<dt>storaged_iscsi_session_set_tgt_reset_timeout, <a class="indexterm" href="StoragedISCSISession.html#storaged-iscsi-session-set-tgt-reset-timeout">storaged_iscsi_session_set_tgt_reset_timeout ()</a>
+</dt>
+<dt>storaged_iscsi_session_set_tpgt, <a class="indexterm" href="StoragedISCSISession.html#storaged-iscsi-session-set-tpgt">storaged_iscsi_session_set_tpgt ()</a>
+</dt>
+<dt>storaged_iscsi_session_skeleton_new, <a class="indexterm" href="StoragedISCSISession.html#storaged-iscsi-session-skeleton-new">storaged_iscsi_session_skeleton_new ()</a>
 </dt>
 </dl>
 </div>
@@ -1980,6 +2404,10 @@
 </dt>
 <dt>org.storaged.Storaged.LogicalVolume.Activate(), <a class="indexterm" href="gdbus-org.storaged.Storaged.LogicalVolume.html#gdbus-method-org-storaged-Storaged-LogicalVolume.Activate">The Activate() method</a>
 </dt>
+<dt>org.storaged.Storaged.LogicalVolume.CacheAttach(), <a class="indexterm" href="gdbus-org.storaged.Storaged.LogicalVolume.html#gdbus-method-org-storaged-Storaged-LogicalVolume.CacheAttach">The CacheAttach() method</a>
+</dt>
+<dt>org.storaged.Storaged.LogicalVolume.CacheSplit(), <a class="indexterm" href="gdbus-org.storaged.Storaged.LogicalVolume.html#gdbus-method-org-storaged-Storaged-LogicalVolume.CacheSplit">The CacheSplit() method</a>
+</dt>
 <dt>org.storaged.Storaged.LogicalVolume.CreateSnapshot(), <a class="indexterm" href="gdbus-org.storaged.Storaged.LogicalVolume.html#gdbus-method-org-storaged-Storaged-LogicalVolume.CreateSnapshot">The CreateSnapshot() method</a>
 </dt>
 <dt>org.storaged.Storaged.LogicalVolume.Deactivate(), <a class="indexterm" href="gdbus-org.storaged.Storaged.LogicalVolume.html#gdbus-method-org-storaged-Storaged-LogicalVolume.Deactivate">The Deactivate() method</a>
@@ -2028,6 +2456,18 @@
 </dt>
 <dt>storaged_logical_volume_call_activate_sync, <a class="indexterm" href="storaged-StoragedLogicalVolume.html#storaged-logical-volume-call-activate-sync">storaged_logical_volume_call_activate_sync ()</a>
 </dt>
+<dt>storaged_logical_volume_call_cache_attach, <a class="indexterm" href="storaged-StoragedLogicalVolume.html#storaged-logical-volume-call-cache-attach">storaged_logical_volume_call_cache_attach ()</a>
+</dt>
+<dt>storaged_logical_volume_call_cache_attach_finish, <a class="indexterm" href="storaged-StoragedLogicalVolume.html#storaged-logical-volume-call-cache-attach-finish">storaged_logical_volume_call_cache_attach_finish ()</a>
+</dt>
+<dt>storaged_logical_volume_call_cache_attach_sync, <a class="indexterm" href="storaged-StoragedLogicalVolume.html#storaged-logical-volume-call-cache-attach-sync">storaged_logical_volume_call_cache_attach_sync ()</a>
+</dt>
+<dt>storaged_logical_volume_call_cache_split, <a class="indexterm" href="storaged-StoragedLogicalVolume.html#storaged-logical-volume-call-cache-split">storaged_logical_volume_call_cache_split ()</a>
+</dt>
+<dt>storaged_logical_volume_call_cache_split_finish, <a class="indexterm" href="storaged-StoragedLogicalVolume.html#storaged-logical-volume-call-cache-split-finish">storaged_logical_volume_call_cache_split_finish ()</a>
+</dt>
+<dt>storaged_logical_volume_call_cache_split_sync, <a class="indexterm" href="storaged-StoragedLogicalVolume.html#storaged-logical-volume-call-cache-split-sync">storaged_logical_volume_call_cache_split_sync ()</a>
+</dt>
 <dt>storaged_logical_volume_call_create_snapshot, <a class="indexterm" href="storaged-StoragedLogicalVolume.html#storaged-logical-volume-call-create-snapshot">storaged_logical_volume_call_create_snapshot ()</a>
 </dt>
 <dt>storaged_logical_volume_call_create_snapshot_finish, <a class="indexterm" href="storaged-StoragedLogicalVolume.html#storaged-logical-volume-call-create-snapshot-finish">storaged_logical_volume_call_create_snapshot_finish ()</a>
@@ -2060,6 +2500,10 @@
 </dt>
 <dt>storaged_logical_volume_complete_activate, <a class="indexterm" href="storaged-StoragedLogicalVolume.html#storaged-logical-volume-complete-activate">storaged_logical_volume_complete_activate ()</a>
 </dt>
+<dt>storaged_logical_volume_complete_cache_attach, <a class="indexterm" href="storaged-StoragedLogicalVolume.html#storaged-logical-volume-complete-cache-attach">storaged_logical_volume_complete_cache_attach ()</a>
+</dt>
+<dt>storaged_logical_volume_complete_cache_split, <a class="indexterm" href="storaged-StoragedLogicalVolume.html#storaged-logical-volume-complete-cache-split">storaged_logical_volume_complete_cache_split ()</a>
+</dt>
 <dt>storaged_logical_volume_complete_create_snapshot, <a class="indexterm" href="storaged-StoragedLogicalVolume.html#storaged-logical-volume-complete-create-snapshot">storaged_logical_volume_complete_create_snapshot ()</a>
 </dt>
 <dt>storaged_logical_volume_complete_deactivate, <a class="indexterm" href="storaged-StoragedLogicalVolume.html#storaged-logical-volume-complete-deactivate">storaged_logical_volume_complete_deactivate ()</a>
@@ -2069,6 +2513,40 @@
 <dt>storaged_logical_volume_complete_rename, <a class="indexterm" href="storaged-StoragedLogicalVolume.html#storaged-logical-volume-complete-rename">storaged_logical_volume_complete_rename ()</a>
 </dt>
 <dt>storaged_logical_volume_complete_resize, <a class="indexterm" href="storaged-StoragedLogicalVolume.html#storaged-logical-volume-complete-resize">storaged_logical_volume_complete_resize ()</a>
+</dt>
+<dt>storaged_logical_volume_dup_child_configuration, <a class="indexterm" href="storaged-StoragedLogicalVolume.html#storaged-logical-volume-dup-child-configuration">storaged_logical_volume_dup_child_configuration ()</a>
+</dt>
+<dt>storaged_logical_volume_dup_name, <a class="indexterm" href="storaged-StoragedLogicalVolume.html#storaged-logical-volume-dup-name">storaged_logical_volume_dup_name ()</a>
+</dt>
+<dt>storaged_logical_volume_dup_origin, <a class="indexterm" href="storaged-StoragedLogicalVolume.html#storaged-logical-volume-dup-origin">storaged_logical_volume_dup_origin ()</a>
+</dt>
+<dt>storaged_logical_volume_dup_thin_pool, <a class="indexterm" href="storaged-StoragedLogicalVolume.html#storaged-logical-volume-dup-thin-pool">storaged_logical_volume_dup_thin_pool ()</a>
+</dt>
+<dt>storaged_logical_volume_dup_type_, <a class="indexterm" href="storaged-StoragedLogicalVolume.html#storaged-logical-volume-dup-type-">storaged_logical_volume_dup_type_ ()</a>
+</dt>
+<dt>storaged_logical_volume_dup_uuid, <a class="indexterm" href="storaged-StoragedLogicalVolume.html#storaged-logical-volume-dup-uuid">storaged_logical_volume_dup_uuid ()</a>
+</dt>
+<dt>storaged_logical_volume_dup_volume_group, <a class="indexterm" href="storaged-StoragedLogicalVolume.html#storaged-logical-volume-dup-volume-group">storaged_logical_volume_dup_volume_group ()</a>
+</dt>
+<dt>storaged_logical_volume_get_active, <a class="indexterm" href="storaged-StoragedLogicalVolume.html#storaged-logical-volume-get-active">storaged_logical_volume_get_active ()</a>
+</dt>
+<dt>storaged_logical_volume_get_child_configuration, <a class="indexterm" href="storaged-StoragedLogicalVolume.html#storaged-logical-volume-get-child-configuration">storaged_logical_volume_get_child_configuration ()</a>
+</dt>
+<dt>storaged_logical_volume_get_data_allocated_ratio, <a class="indexterm" href="storaged-StoragedLogicalVolume.html#storaged-logical-volume-get-data-allocated-ratio">storaged_logical_volume_get_data_allocated_ratio ()</a>
+</dt>
+<dt>storaged_logical_volume_get_metadata_allocated_ratio, <a class="indexterm" href="storaged-StoragedLogicalVolume.html#storaged-logical-volume-get-metadata-allocated-ratio">storaged_logical_volume_get_metadata_allocated_ratio ()</a>
+</dt>
+<dt>storaged_logical_volume_get_name, <a class="indexterm" href="storaged-StoragedLogicalVolume.html#storaged-logical-volume-get-name">storaged_logical_volume_get_name ()</a>
+</dt>
+<dt>storaged_logical_volume_get_origin, <a class="indexterm" href="storaged-StoragedLogicalVolume.html#storaged-logical-volume-get-origin">storaged_logical_volume_get_origin ()</a>
+</dt>
+<dt>storaged_logical_volume_get_size, <a class="indexterm" href="storaged-StoragedLogicalVolume.html#storaged-logical-volume-get-size">storaged_logical_volume_get_size ()</a>
+</dt>
+<dt>storaged_logical_volume_get_thin_pool, <a class="indexterm" href="storaged-StoragedLogicalVolume.html#storaged-logical-volume-get-thin-pool">storaged_logical_volume_get_thin_pool ()</a>
+</dt>
+<dt>storaged_logical_volume_get_uuid, <a class="indexterm" href="storaged-StoragedLogicalVolume.html#storaged-logical-volume-get-uuid">storaged_logical_volume_get_uuid ()</a>
+</dt>
+<dt>storaged_logical_volume_get_volume_group, <a class="indexterm" href="storaged-StoragedLogicalVolume.html#storaged-logical-volume-get-volume-group">storaged_logical_volume_get_volume_group ()</a>
 </dt>
 <dt>storaged_logical_volume_interface_info, <a class="indexterm" href="storaged-StoragedLogicalVolume.html#storaged-logical-volume-interface-info">storaged_logical_volume_interface_info ()</a>
 </dt>
@@ -2085,6 +2563,28 @@
 <dt>storaged_logical_volume_proxy_new_for_bus_sync, <a class="indexterm" href="storaged-StoragedLogicalVolume.html#storaged-logical-volume-proxy-new-for-bus-sync">storaged_logical_volume_proxy_new_for_bus_sync ()</a>
 </dt>
 <dt>storaged_logical_volume_proxy_new_sync, <a class="indexterm" href="storaged-StoragedLogicalVolume.html#storaged-logical-volume-proxy-new-sync">storaged_logical_volume_proxy_new_sync ()</a>
+</dt>
+<dt>storaged_logical_volume_set_active, <a class="indexterm" href="storaged-StoragedLogicalVolume.html#storaged-logical-volume-set-active">storaged_logical_volume_set_active ()</a>
+</dt>
+<dt>storaged_logical_volume_set_child_configuration, <a class="indexterm" href="storaged-StoragedLogicalVolume.html#storaged-logical-volume-set-child-configuration">storaged_logical_volume_set_child_configuration ()</a>
+</dt>
+<dt>storaged_logical_volume_set_data_allocated_ratio, <a class="indexterm" href="storaged-StoragedLogicalVolume.html#storaged-logical-volume-set-data-allocated-ratio">storaged_logical_volume_set_data_allocated_ratio ()</a>
+</dt>
+<dt>storaged_logical_volume_set_metadata_allocated_ratio, <a class="indexterm" href="storaged-StoragedLogicalVolume.html#storaged-logical-volume-set-metadata-allocated-ratio">storaged_logical_volume_set_metadata_allocated_ratio ()</a>
+</dt>
+<dt>storaged_logical_volume_set_name, <a class="indexterm" href="storaged-StoragedLogicalVolume.html#storaged-logical-volume-set-name">storaged_logical_volume_set_name ()</a>
+</dt>
+<dt>storaged_logical_volume_set_origin, <a class="indexterm" href="storaged-StoragedLogicalVolume.html#storaged-logical-volume-set-origin">storaged_logical_volume_set_origin ()</a>
+</dt>
+<dt>storaged_logical_volume_set_size, <a class="indexterm" href="storaged-StoragedLogicalVolume.html#storaged-logical-volume-set-size">storaged_logical_volume_set_size ()</a>
+</dt>
+<dt>storaged_logical_volume_set_thin_pool, <a class="indexterm" href="storaged-StoragedLogicalVolume.html#storaged-logical-volume-set-thin-pool">storaged_logical_volume_set_thin_pool ()</a>
+</dt>
+<dt>storaged_logical_volume_set_type_, <a class="indexterm" href="storaged-StoragedLogicalVolume.html#storaged-logical-volume-set-type-">storaged_logical_volume_set_type_ ()</a>
+</dt>
+<dt>storaged_logical_volume_set_uuid, <a class="indexterm" href="storaged-StoragedLogicalVolume.html#storaged-logical-volume-set-uuid">storaged_logical_volume_set_uuid ()</a>
+</dt>
+<dt>storaged_logical_volume_set_volume_group, <a class="indexterm" href="storaged-StoragedLogicalVolume.html#storaged-logical-volume-set-volume-group">storaged_logical_volume_set_volume_group ()</a>
 </dt>
 <dt>storaged_logical_volume_skeleton_new, <a class="indexterm" href="storaged-StoragedLogicalVolume.html#storaged-logical-volume-skeleton-new">storaged_logical_volume_skeleton_new ()</a>
 </dt>
@@ -2185,15 +2685,25 @@
 </dt>
 <dt>org.storaged.Storaged.Manager.BTRFS, <a class="indexterm" href="gdbus-org.storaged.Storaged.Manager.BTRFS.html#gdbus-interface-org-storaged-Storaged-Manager-BTRFS.top_of_page">org.storaged.Storaged.Manager.BTRFS</a>
 </dt>
+<dt>org.storaged.Storaged.Manager.BTRFS.CreateVolume(), <a class="indexterm" href="gdbus-org.storaged.Storaged.Manager.BTRFS.html#gdbus-method-org-storaged-Storaged-Manager-BTRFS.CreateVolume">The CreateVolume() method</a>
+</dt>
 <dt>org.storaged.Storaged.Manager.EnableModules(), <a class="indexterm" href="gdbus-org.storaged.Storaged.Manager.html#gdbus-method-org-storaged-Storaged-Manager.EnableModules">The EnableModules() method</a>
 </dt>
 <dt>org.storaged.Storaged.Manager.LoopSetup(), <a class="indexterm" href="gdbus-org.storaged.Storaged.Manager.html#gdbus-method-org-storaged-Storaged-Manager.LoopSetup">The LoopSetup() method</a>
+</dt>
+<dt>org.storaged.Storaged.Manager.LSM, <a class="indexterm" href="gdbus-org.storaged.Storaged.Manager.LSM.html#gdbus-interface-org-storaged-Storaged-Manager-LSM.top_of_page">org.storaged.Storaged.Manager.LSM</a>
 </dt>
 <dt>org.storaged.Storaged.Manager.LVM2, <a class="indexterm" href="gdbus-org.storaged.Storaged.Manager.LVM2.html#gdbus-interface-org-storaged-Storaged-Manager-LVM2.top_of_page">org.storaged.Storaged.Manager.LVM2</a>
 </dt>
 <dt>org.storaged.Storaged.Manager.LVM2.VolumeGroupCreate(), <a class="indexterm" href="gdbus-org.storaged.Storaged.Manager.LVM2.html#gdbus-method-org-storaged-Storaged-Manager-LVM2.VolumeGroupCreate">The VolumeGroupCreate() method</a>
 </dt>
 <dt>org.storaged.Storaged.Manager.MDRaidCreate(), <a class="indexterm" href="gdbus-org.storaged.Storaged.Manager.html#gdbus-method-org-storaged-Storaged-Manager.MDRaidCreate">The MDRaidCreate() method</a>
+</dt>
+<dt>org.storaged.Storaged.Manager.ZRAM, <a class="indexterm" href="gdbus-org.storaged.Storaged.Manager.ZRAM.html#gdbus-interface-org-storaged-Storaged-Manager-ZRAM.top_of_page">org.storaged.Storaged.Manager.ZRAM</a>
+</dt>
+<dt>org.storaged.Storaged.Manager.ZRAM.CreateDevices(), <a class="indexterm" href="gdbus-org.storaged.Storaged.Manager.ZRAM.html#gdbus-method-org-storaged-Storaged-Manager-ZRAM.CreateDevices">The CreateDevices() method</a>
+</dt>
+<dt>org.storaged.Storaged.Manager.ZRAM.DestroyDevices(), <a class="indexterm" href="gdbus-org.storaged.Storaged.Manager.ZRAM.html#gdbus-method-org-storaged-Storaged-Manager-ZRAM.DestroyDevices">The DestroyDevices() method</a>
 </dt>
 <dt>StoragedManager::handle-enable-modules, <a class="indexterm" href="StoragedManager.html#StoragedManager-handle-enable-modules">The “handle-enable-modules” signal</a>
 </dt>
@@ -2205,9 +2715,25 @@
 </dt>
 <dt>StoragedManager:version, <a class="indexterm" href="StoragedManager.html#StoragedManager--version">The “version” property</a>
 </dt>
+<dt>StoragedManagerBTRFS, <a class="indexterm" href="StoragedManagerBTRFS.html#StoragedManagerBTRFS-struct">StoragedManagerBTRFS</a>
+</dt>
+<dt>StoragedManagerBTRFS::handle-create-volume, <a class="indexterm" href="StoragedManagerBTRFS.html#StoragedManagerBTRFS-handle-create-volume">The “handle-create-volume” signal</a>
+</dt>
+<dt>StoragedManagerBTRFSIface, <a class="indexterm" href="StoragedManagerBTRFS.html#StoragedManagerBTRFSIface">struct StoragedManagerBTRFSIface</a>
+</dt>
+<dt>StoragedManagerBTRFSProxy, <a class="indexterm" href="StoragedManagerBTRFS.html#StoragedManagerBTRFSProxy-struct">struct StoragedManagerBTRFSProxy</a>
+</dt>
+<dt>StoragedManagerBTRFSProxyClass, <a class="indexterm" href="StoragedManagerBTRFS.html#StoragedManagerBTRFSProxyClass">struct StoragedManagerBTRFSProxyClass</a>
+</dt>
+<dt>StoragedManagerBTRFSSkeleton, <a class="indexterm" href="StoragedManagerBTRFS.html#StoragedManagerBTRFSSkeleton-struct">struct StoragedManagerBTRFSSkeleton</a>
+</dt>
+<dt>StoragedManagerBTRFSSkeletonClass, <a class="indexterm" href="StoragedManagerBTRFS.html#StoragedManagerBTRFSSkeletonClass">struct StoragedManagerBTRFSSkeletonClass</a>
+</dt>
 <dt>StoragedManagerIface, <a class="indexterm" href="StoragedManager.html#StoragedManagerIface">struct StoragedManagerIface</a>
 </dt>
 <dt>org.storaged.Storaged.Manager.ISCSI.Initiator, <a class="indexterm" href="gdbus-org.storaged.Storaged.Manager.ISCSI.Initiator.html#gdbus-interface-org-storaged-Storaged-Manager-ISCSI-Initiator.top_of_page">org.storaged.Storaged.Manager.ISCSI.Initiator</a>
+</dt>
+<dt>StoragedManagerISCSIInitiator, <a class="indexterm" href="StoragedManagerISCSIInitiator.html#StoragedManagerISCSIInitiator-struct">StoragedManagerISCSIInitiator</a>
 </dt>
 <dt>org.storaged.Storaged.Manager.ISCSI.Initiator.DiscoverFirmware(), <a class="indexterm" href="gdbus-org.storaged.Storaged.Manager.ISCSI.Initiator.html#gdbus-method-org-storaged-Storaged-Manager-ISCSI-Initiator.DiscoverFirmware">The DiscoverFirmware() method</a>
 </dt>
@@ -2222,6 +2748,42 @@
 <dt>org.storaged.Storaged.Manager.ISCSI.Initiator.Logout(), <a class="indexterm" href="gdbus-org.storaged.Storaged.Manager.ISCSI.Initiator.html#gdbus-method-org-storaged-Storaged-Manager-ISCSI-Initiator.Logout">The Logout() method</a>
 </dt>
 <dt>org.storaged.Storaged.Manager.ISCSI.Initiator.SetInitiatorName(), <a class="indexterm" href="gdbus-org.storaged.Storaged.Manager.ISCSI.Initiator.html#gdbus-method-org-storaged-Storaged-Manager-ISCSI-Initiator.SetInitiatorName">The SetInitiatorName() method</a>
+</dt>
+<dt>StoragedManagerISCSIInitiator::handle-discover-firmware, <a class="indexterm" href="StoragedManagerISCSIInitiator.html#StoragedManagerISCSIInitiator-handle-discover-firmware">The “handle-discover-firmware” signal</a>
+</dt>
+<dt>StoragedManagerISCSIInitiator::handle-discover-send-targets-chap, <a class="indexterm" href="StoragedManagerISCSIInitiator.html#StoragedManagerISCSIInitiator-handle-discover-send-targets-chap">The “handle-discover-send-targets-chap” signal</a>
+</dt>
+<dt>StoragedManagerISCSIInitiator::handle-discover-send-targets-no-auth, <a class="indexterm" href="StoragedManagerISCSIInitiator.html#StoragedManagerISCSIInitiator-handle-discover-send-targets-no-auth">The “handle-discover-send-targets-no-auth” signal</a>
+</dt>
+<dt>StoragedManagerISCSIInitiator::handle-get-initiator-name, <a class="indexterm" href="StoragedManagerISCSIInitiator.html#StoragedManagerISCSIInitiator-handle-get-initiator-name">The “handle-get-initiator-name” signal</a>
+</dt>
+<dt>StoragedManagerISCSIInitiator::handle-login, <a class="indexterm" href="StoragedManagerISCSIInitiator.html#StoragedManagerISCSIInitiator-handle-login">The “handle-login” signal</a>
+</dt>
+<dt>StoragedManagerISCSIInitiator::handle-logout, <a class="indexterm" href="StoragedManagerISCSIInitiator.html#StoragedManagerISCSIInitiator-handle-logout">The “handle-logout” signal</a>
+</dt>
+<dt>StoragedManagerISCSIInitiator::handle-set-initiator-name, <a class="indexterm" href="StoragedManagerISCSIInitiator.html#StoragedManagerISCSIInitiator-handle-set-initiator-name">The “handle-set-initiator-name” signal</a>
+</dt>
+<dt>StoragedManagerISCSIInitiatorIface, <a class="indexterm" href="StoragedManagerISCSIInitiator.html#StoragedManagerISCSIInitiatorIface">struct StoragedManagerISCSIInitiatorIface</a>
+</dt>
+<dt>StoragedManagerISCSIInitiatorProxy, <a class="indexterm" href="StoragedManagerISCSIInitiator.html#StoragedManagerISCSIInitiatorProxy-struct">struct StoragedManagerISCSIInitiatorProxy</a>
+</dt>
+<dt>StoragedManagerISCSIInitiatorProxyClass, <a class="indexterm" href="StoragedManagerISCSIInitiator.html#StoragedManagerISCSIInitiatorProxyClass">struct StoragedManagerISCSIInitiatorProxyClass</a>
+</dt>
+<dt>StoragedManagerISCSIInitiatorSkeleton, <a class="indexterm" href="StoragedManagerISCSIInitiator.html#StoragedManagerISCSIInitiatorSkeleton-struct">struct StoragedManagerISCSIInitiatorSkeleton</a>
+</dt>
+<dt>StoragedManagerISCSIInitiatorSkeletonClass, <a class="indexterm" href="StoragedManagerISCSIInitiator.html#StoragedManagerISCSIInitiatorSkeletonClass">struct StoragedManagerISCSIInitiatorSkeletonClass</a>
+</dt>
+<dt>StoragedManagerLSM, <a class="indexterm" href="storaged-StoragedManagerLSM.html#StoragedManagerLSM">StoragedManagerLSM</a>
+</dt>
+<dt>StoragedManagerLSMIface, <a class="indexterm" href="storaged-StoragedManagerLSM.html#StoragedManagerLSMIface">struct StoragedManagerLSMIface</a>
+</dt>
+<dt>StoragedManagerLSMProxy, <a class="indexterm" href="storaged-StoragedManagerLSM.html#StoragedManagerLSMProxy">struct StoragedManagerLSMProxy</a>
+</dt>
+<dt>StoragedManagerLSMProxyClass, <a class="indexterm" href="storaged-StoragedManagerLSM.html#StoragedManagerLSMProxyClass">struct StoragedManagerLSMProxyClass</a>
+</dt>
+<dt>StoragedManagerLSMSkeleton, <a class="indexterm" href="storaged-StoragedManagerLSM.html#StoragedManagerLSMSkeleton">struct StoragedManagerLSMSkeleton</a>
+</dt>
+<dt>StoragedManagerLSMSkeletonClass, <a class="indexterm" href="storaged-StoragedManagerLSM.html#StoragedManagerLSMSkeletonClass">struct StoragedManagerLSMSkeletonClass</a>
 </dt>
 <dt>StoragedManagerLVM2, <a class="indexterm" href="StoragedManagerLVM2.html#StoragedManagerLVM2-struct">StoragedManagerLVM2</a>
 </dt>
@@ -2243,23 +2805,47 @@
 </dt>
 <dt>StoragedManagerSkeletonClass, <a class="indexterm" href="StoragedManager.html#StoragedManagerSkeletonClass">struct StoragedManagerSkeletonClass</a>
 </dt>
-<dt>storaged_manager_btrfs_interface_info, <a class="indexterm" href="storaged-StoragedManagerBTRFS.html#storaged-manager-btrfs-interface-info">storaged_manager_btrfs_interface_info ()</a>
+<dt>StoragedManagerZRAM, <a class="indexterm" href="StoragedManagerZRAM.html#StoragedManagerZRAM-struct">StoragedManagerZRAM</a>
 </dt>
-<dt>storaged_manager_btrfs_override_properties, <a class="indexterm" href="storaged-StoragedManagerBTRFS.html#storaged-manager-btrfs-override-properties">storaged_manager_btrfs_override_properties ()</a>
+<dt>StoragedManagerZRAM::handle-create-devices, <a class="indexterm" href="StoragedManagerZRAM.html#StoragedManagerZRAM-handle-create-devices">The “handle-create-devices” signal</a>
 </dt>
-<dt>storaged_manager_btrfs_proxy_new, <a class="indexterm" href="storaged-StoragedManagerBTRFS.html#storaged-manager-btrfs-proxy-new">storaged_manager_btrfs_proxy_new ()</a>
+<dt>StoragedManagerZRAM::handle-destroy-devices, <a class="indexterm" href="StoragedManagerZRAM.html#StoragedManagerZRAM-handle-destroy-devices">The “handle-destroy-devices” signal</a>
 </dt>
-<dt>storaged_manager_btrfs_proxy_new_finish, <a class="indexterm" href="storaged-StoragedManagerBTRFS.html#storaged-manager-btrfs-proxy-new-finish">storaged_manager_btrfs_proxy_new_finish ()</a>
+<dt>StoragedManagerZRAMIface, <a class="indexterm" href="StoragedManagerZRAM.html#StoragedManagerZRAMIface">struct StoragedManagerZRAMIface</a>
 </dt>
-<dt>storaged_manager_btrfs_proxy_new_for_bus, <a class="indexterm" href="storaged-StoragedManagerBTRFS.html#storaged-manager-btrfs-proxy-new-for-bus">storaged_manager_btrfs_proxy_new_for_bus ()</a>
+<dt>StoragedManagerZRAMProxy, <a class="indexterm" href="StoragedManagerZRAM.html#StoragedManagerZRAMProxy-struct">struct StoragedManagerZRAMProxy</a>
 </dt>
-<dt>storaged_manager_btrfs_proxy_new_for_bus_finish, <a class="indexterm" href="storaged-StoragedManagerBTRFS.html#storaged-manager-btrfs-proxy-new-for-bus-finish">storaged_manager_btrfs_proxy_new_for_bus_finish ()</a>
+<dt>StoragedManagerZRAMProxyClass, <a class="indexterm" href="StoragedManagerZRAM.html#StoragedManagerZRAMProxyClass">struct StoragedManagerZRAMProxyClass</a>
 </dt>
-<dt>storaged_manager_btrfs_proxy_new_for_bus_sync, <a class="indexterm" href="storaged-StoragedManagerBTRFS.html#storaged-manager-btrfs-proxy-new-for-bus-sync">storaged_manager_btrfs_proxy_new_for_bus_sync ()</a>
+<dt>StoragedManagerZRAMSkeleton, <a class="indexterm" href="StoragedManagerZRAM.html#StoragedManagerZRAMSkeleton-struct">struct StoragedManagerZRAMSkeleton</a>
 </dt>
-<dt>storaged_manager_btrfs_proxy_new_sync, <a class="indexterm" href="storaged-StoragedManagerBTRFS.html#storaged-manager-btrfs-proxy-new-sync">storaged_manager_btrfs_proxy_new_sync ()</a>
+<dt>StoragedManagerZRAMSkeletonClass, <a class="indexterm" href="StoragedManagerZRAM.html#StoragedManagerZRAMSkeletonClass">struct StoragedManagerZRAMSkeletonClass</a>
 </dt>
-<dt>storaged_manager_btrfs_skeleton_new, <a class="indexterm" href="storaged-StoragedManagerBTRFS.html#storaged-manager-btrfs-skeleton-new">storaged_manager_btrfs_skeleton_new ()</a>
+<dt>storaged_manager_btrfs_call_create_volume, <a class="indexterm" href="StoragedManagerBTRFS.html#storaged-manager-btrfs-call-create-volume">storaged_manager_btrfs_call_create_volume ()</a>
+</dt>
+<dt>storaged_manager_btrfs_call_create_volume_finish, <a class="indexterm" href="StoragedManagerBTRFS.html#storaged-manager-btrfs-call-create-volume-finish">storaged_manager_btrfs_call_create_volume_finish ()</a>
+</dt>
+<dt>storaged_manager_btrfs_call_create_volume_sync, <a class="indexterm" href="StoragedManagerBTRFS.html#storaged-manager-btrfs-call-create-volume-sync">storaged_manager_btrfs_call_create_volume_sync ()</a>
+</dt>
+<dt>storaged_manager_btrfs_complete_create_volume, <a class="indexterm" href="StoragedManagerBTRFS.html#storaged-manager-btrfs-complete-create-volume">storaged_manager_btrfs_complete_create_volume ()</a>
+</dt>
+<dt>storaged_manager_btrfs_interface_info, <a class="indexterm" href="StoragedManagerBTRFS.html#storaged-manager-btrfs-interface-info">storaged_manager_btrfs_interface_info ()</a>
+</dt>
+<dt>storaged_manager_btrfs_override_properties, <a class="indexterm" href="StoragedManagerBTRFS.html#storaged-manager-btrfs-override-properties">storaged_manager_btrfs_override_properties ()</a>
+</dt>
+<dt>storaged_manager_btrfs_proxy_new, <a class="indexterm" href="StoragedManagerBTRFS.html#storaged-manager-btrfs-proxy-new">storaged_manager_btrfs_proxy_new ()</a>
+</dt>
+<dt>storaged_manager_btrfs_proxy_new_finish, <a class="indexterm" href="StoragedManagerBTRFS.html#storaged-manager-btrfs-proxy-new-finish">storaged_manager_btrfs_proxy_new_finish ()</a>
+</dt>
+<dt>storaged_manager_btrfs_proxy_new_for_bus, <a class="indexterm" href="StoragedManagerBTRFS.html#storaged-manager-btrfs-proxy-new-for-bus">storaged_manager_btrfs_proxy_new_for_bus ()</a>
+</dt>
+<dt>storaged_manager_btrfs_proxy_new_for_bus_finish, <a class="indexterm" href="StoragedManagerBTRFS.html#storaged-manager-btrfs-proxy-new-for-bus-finish">storaged_manager_btrfs_proxy_new_for_bus_finish ()</a>
+</dt>
+<dt>storaged_manager_btrfs_proxy_new_for_bus_sync, <a class="indexterm" href="StoragedManagerBTRFS.html#storaged-manager-btrfs-proxy-new-for-bus-sync">storaged_manager_btrfs_proxy_new_for_bus_sync ()</a>
+</dt>
+<dt>storaged_manager_btrfs_proxy_new_sync, <a class="indexterm" href="StoragedManagerBTRFS.html#storaged-manager-btrfs-proxy-new-sync">storaged_manager_btrfs_proxy_new_sync ()</a>
+</dt>
+<dt>storaged_manager_btrfs_skeleton_new, <a class="indexterm" href="StoragedManagerBTRFS.html#storaged-manager-btrfs-skeleton-new">storaged_manager_btrfs_skeleton_new ()</a>
 </dt>
 <dt>storaged_manager_call_enable_modules, <a class="indexterm" href="StoragedManager.html#storaged-manager-call-enable-modules">storaged_manager_call_enable_modules ()</a>
 </dt>
@@ -2291,79 +2877,97 @@
 </dt>
 <dt>storaged_manager_interface_info, <a class="indexterm" href="StoragedManager.html#storaged-manager-interface-info">storaged_manager_interface_info ()</a>
 </dt>
-<dt>storaged_manager_iscsi_initiator_call_discover_firmware, <a class="indexterm" href="storaged-StoragedManagerISCSIInitiator.html#storaged-manager-iscsi-initiator-call-discover-firmware">storaged_manager_iscsi_initiator_call_discover_firmware ()</a>
+<dt>storaged_manager_iscsi_initiator_call_discover_firmware, <a class="indexterm" href="StoragedManagerISCSIInitiator.html#storaged-manager-iscsi-initiator-call-discover-firmware">storaged_manager_iscsi_initiator_call_discover_firmware ()</a>
 </dt>
-<dt>storaged_manager_iscsi_initiator_call_discover_firmware_finish, <a class="indexterm" href="storaged-StoragedManagerISCSIInitiator.html#storaged-manager-iscsi-initiator-call-discover-firmware-finish">storaged_manager_iscsi_initiator_call_discover_firmware_finish ()</a>
+<dt>storaged_manager_iscsi_initiator_call_discover_firmware_finish, <a class="indexterm" href="StoragedManagerISCSIInitiator.html#storaged-manager-iscsi-initiator-call-discover-firmware-finish">storaged_manager_iscsi_initiator_call_discover_firmware_finish ()</a>
 </dt>
-<dt>storaged_manager_iscsi_initiator_call_discover_firmware_sync, <a class="indexterm" href="storaged-StoragedManagerISCSIInitiator.html#storaged-manager-iscsi-initiator-call-discover-firmware-sync">storaged_manager_iscsi_initiator_call_discover_firmware_sync ()</a>
+<dt>storaged_manager_iscsi_initiator_call_discover_firmware_sync, <a class="indexterm" href="StoragedManagerISCSIInitiator.html#storaged-manager-iscsi-initiator-call-discover-firmware-sync">storaged_manager_iscsi_initiator_call_discover_firmware_sync ()</a>
 </dt>
-<dt>storaged_manager_iscsi_initiator_call_discover_send_targets_chap, <a class="indexterm" href="storaged-StoragedManagerISCSIInitiator.html#storaged-manager-iscsi-initiator-call-discover-send-targets-chap">storaged_manager_iscsi_initiator_call_discover_send_targets_chap ()</a>
+<dt>storaged_manager_iscsi_initiator_call_discover_send_targets_chap, <a class="indexterm" href="StoragedManagerISCSIInitiator.html#storaged-manager-iscsi-initiator-call-discover-send-targets-chap">storaged_manager_iscsi_initiator_call_discover_send_targets_chap ()</a>
 </dt>
-<dt>storaged_manager_iscsi_initiator_call_discover_send_targets_chap_finish, <a class="indexterm" href="storaged-StoragedManagerISCSIInitiator.html#storaged-manager-iscsi-initiator-call-discover-send-targets-chap-finish">storaged_manager_iscsi_initiator_call_discover_send_targets_chap_finish ()</a>
+<dt>storaged_manager_iscsi_initiator_call_discover_send_targets_chap_finish, <a class="indexterm" href="StoragedManagerISCSIInitiator.html#storaged-manager-iscsi-initiator-call-discover-send-targets-chap-finish">storaged_manager_iscsi_initiator_call_discover_send_targets_chap_finish ()</a>
 </dt>
-<dt>storaged_manager_iscsi_initiator_call_discover_send_targets_chap_sync, <a class="indexterm" href="storaged-StoragedManagerISCSIInitiator.html#storaged-manager-iscsi-initiator-call-discover-send-targets-chap-sync">storaged_manager_iscsi_initiator_call_discover_send_targets_chap_sync ()</a>
+<dt>storaged_manager_iscsi_initiator_call_discover_send_targets_chap_sync, <a class="indexterm" href="StoragedManagerISCSIInitiator.html#storaged-manager-iscsi-initiator-call-discover-send-targets-chap-sync">storaged_manager_iscsi_initiator_call_discover_send_targets_chap_sync ()</a>
 </dt>
-<dt>storaged_manager_iscsi_initiator_call_discover_send_targets_no_auth, <a class="indexterm" href="storaged-StoragedManagerISCSIInitiator.html#storaged-manager-iscsi-initiator-call-discover-send-targets-no-auth">storaged_manager_iscsi_initiator_call_discover_send_targets_no_auth ()</a>
+<dt>storaged_manager_iscsi_initiator_call_discover_send_targets_no_auth, <a class="indexterm" href="StoragedManagerISCSIInitiator.html#storaged-manager-iscsi-initiator-call-discover-send-targets-no-auth">storaged_manager_iscsi_initiator_call_discover_send_targets_no_auth ()</a>
 </dt>
-<dt>storaged_manager_iscsi_initiator_call_discover_send_targets_no_auth_finish, <a class="indexterm" href="storaged-StoragedManagerISCSIInitiator.html#storaged-manager-iscsi-initiator-call-discover-send-targets-no-auth-finish">storaged_manager_iscsi_initiator_call_discover_send_targets_no_auth_finish ()</a>
+<dt>storaged_manager_iscsi_initiator_call_discover_send_targets_no_auth_finish, <a class="indexterm" href="StoragedManagerISCSIInitiator.html#storaged-manager-iscsi-initiator-call-discover-send-targets-no-auth-finish">storaged_manager_iscsi_initiator_call_discover_send_targets_no_auth_finish ()</a>
 </dt>
-<dt>storaged_manager_iscsi_initiator_call_discover_send_targets_no_auth_sync, <a class="indexterm" href="storaged-StoragedManagerISCSIInitiator.html#storaged-manager-iscsi-initiator-call-discover-send-targets-no-auth-sync">storaged_manager_iscsi_initiator_call_discover_send_targets_no_auth_sync ()</a>
+<dt>storaged_manager_iscsi_initiator_call_discover_send_targets_no_auth_sync, <a class="indexterm" href="StoragedManagerISCSIInitiator.html#storaged-manager-iscsi-initiator-call-discover-send-targets-no-auth-sync">storaged_manager_iscsi_initiator_call_discover_send_targets_no_auth_sync ()</a>
 </dt>
-<dt>storaged_manager_iscsi_initiator_call_get_initiator_name, <a class="indexterm" href="storaged-StoragedManagerISCSIInitiator.html#storaged-manager-iscsi-initiator-call-get-initiator-name">storaged_manager_iscsi_initiator_call_get_initiator_name ()</a>
+<dt>storaged_manager_iscsi_initiator_call_get_initiator_name, <a class="indexterm" href="StoragedManagerISCSIInitiator.html#storaged-manager-iscsi-initiator-call-get-initiator-name">storaged_manager_iscsi_initiator_call_get_initiator_name ()</a>
 </dt>
-<dt>storaged_manager_iscsi_initiator_call_get_initiator_name_finish, <a class="indexterm" href="storaged-StoragedManagerISCSIInitiator.html#storaged-manager-iscsi-initiator-call-get-initiator-name-finish">storaged_manager_iscsi_initiator_call_get_initiator_name_finish ()</a>
+<dt>storaged_manager_iscsi_initiator_call_get_initiator_name_finish, <a class="indexterm" href="StoragedManagerISCSIInitiator.html#storaged-manager-iscsi-initiator-call-get-initiator-name-finish">storaged_manager_iscsi_initiator_call_get_initiator_name_finish ()</a>
 </dt>
-<dt>storaged_manager_iscsi_initiator_call_get_initiator_name_sync, <a class="indexterm" href="storaged-StoragedManagerISCSIInitiator.html#storaged-manager-iscsi-initiator-call-get-initiator-name-sync">storaged_manager_iscsi_initiator_call_get_initiator_name_sync ()</a>
+<dt>storaged_manager_iscsi_initiator_call_get_initiator_name_sync, <a class="indexterm" href="StoragedManagerISCSIInitiator.html#storaged-manager-iscsi-initiator-call-get-initiator-name-sync">storaged_manager_iscsi_initiator_call_get_initiator_name_sync ()</a>
 </dt>
-<dt>storaged_manager_iscsi_initiator_call_login, <a class="indexterm" href="storaged-StoragedManagerISCSIInitiator.html#storaged-manager-iscsi-initiator-call-login">storaged_manager_iscsi_initiator_call_login ()</a>
+<dt>storaged_manager_iscsi_initiator_call_login, <a class="indexterm" href="StoragedManagerISCSIInitiator.html#storaged-manager-iscsi-initiator-call-login">storaged_manager_iscsi_initiator_call_login ()</a>
 </dt>
-<dt>storaged_manager_iscsi_initiator_call_login_finish, <a class="indexterm" href="storaged-StoragedManagerISCSIInitiator.html#storaged-manager-iscsi-initiator-call-login-finish">storaged_manager_iscsi_initiator_call_login_finish ()</a>
+<dt>storaged_manager_iscsi_initiator_call_login_finish, <a class="indexterm" href="StoragedManagerISCSIInitiator.html#storaged-manager-iscsi-initiator-call-login-finish">storaged_manager_iscsi_initiator_call_login_finish ()</a>
 </dt>
-<dt>storaged_manager_iscsi_initiator_call_login_sync, <a class="indexterm" href="storaged-StoragedManagerISCSIInitiator.html#storaged-manager-iscsi-initiator-call-login-sync">storaged_manager_iscsi_initiator_call_login_sync ()</a>
+<dt>storaged_manager_iscsi_initiator_call_login_sync, <a class="indexterm" href="StoragedManagerISCSIInitiator.html#storaged-manager-iscsi-initiator-call-login-sync">storaged_manager_iscsi_initiator_call_login_sync ()</a>
 </dt>
-<dt>storaged_manager_iscsi_initiator_call_logout, <a class="indexterm" href="storaged-StoragedManagerISCSIInitiator.html#storaged-manager-iscsi-initiator-call-logout">storaged_manager_iscsi_initiator_call_logout ()</a>
+<dt>storaged_manager_iscsi_initiator_call_logout, <a class="indexterm" href="StoragedManagerISCSIInitiator.html#storaged-manager-iscsi-initiator-call-logout">storaged_manager_iscsi_initiator_call_logout ()</a>
 </dt>
-<dt>storaged_manager_iscsi_initiator_call_logout_finish, <a class="indexterm" href="storaged-StoragedManagerISCSIInitiator.html#storaged-manager-iscsi-initiator-call-logout-finish">storaged_manager_iscsi_initiator_call_logout_finish ()</a>
+<dt>storaged_manager_iscsi_initiator_call_logout_finish, <a class="indexterm" href="StoragedManagerISCSIInitiator.html#storaged-manager-iscsi-initiator-call-logout-finish">storaged_manager_iscsi_initiator_call_logout_finish ()</a>
 </dt>
-<dt>storaged_manager_iscsi_initiator_call_logout_sync, <a class="indexterm" href="storaged-StoragedManagerISCSIInitiator.html#storaged-manager-iscsi-initiator-call-logout-sync">storaged_manager_iscsi_initiator_call_logout_sync ()</a>
+<dt>storaged_manager_iscsi_initiator_call_logout_sync, <a class="indexterm" href="StoragedManagerISCSIInitiator.html#storaged-manager-iscsi-initiator-call-logout-sync">storaged_manager_iscsi_initiator_call_logout_sync ()</a>
 </dt>
-<dt>storaged_manager_iscsi_initiator_call_set_initiator_name, <a class="indexterm" href="storaged-StoragedManagerISCSIInitiator.html#storaged-manager-iscsi-initiator-call-set-initiator-name">storaged_manager_iscsi_initiator_call_set_initiator_name ()</a>
+<dt>storaged_manager_iscsi_initiator_call_set_initiator_name, <a class="indexterm" href="StoragedManagerISCSIInitiator.html#storaged-manager-iscsi-initiator-call-set-initiator-name">storaged_manager_iscsi_initiator_call_set_initiator_name ()</a>
 </dt>
-<dt>storaged_manager_iscsi_initiator_call_set_initiator_name_finish, <a class="indexterm" href="storaged-StoragedManagerISCSIInitiator.html#storaged-manager-iscsi-initiator-call-set-initiator-name-finish">storaged_manager_iscsi_initiator_call_set_initiator_name_finish ()</a>
+<dt>storaged_manager_iscsi_initiator_call_set_initiator_name_finish, <a class="indexterm" href="StoragedManagerISCSIInitiator.html#storaged-manager-iscsi-initiator-call-set-initiator-name-finish">storaged_manager_iscsi_initiator_call_set_initiator_name_finish ()</a>
 </dt>
-<dt>storaged_manager_iscsi_initiator_call_set_initiator_name_sync, <a class="indexterm" href="storaged-StoragedManagerISCSIInitiator.html#storaged-manager-iscsi-initiator-call-set-initiator-name-sync">storaged_manager_iscsi_initiator_call_set_initiator_name_sync ()</a>
+<dt>storaged_manager_iscsi_initiator_call_set_initiator_name_sync, <a class="indexterm" href="StoragedManagerISCSIInitiator.html#storaged-manager-iscsi-initiator-call-set-initiator-name-sync">storaged_manager_iscsi_initiator_call_set_initiator_name_sync ()</a>
 </dt>
-<dt>storaged_manager_iscsi_initiator_complete_discover_firmware, <a class="indexterm" href="storaged-StoragedManagerISCSIInitiator.html#storaged-manager-iscsi-initiator-complete-discover-firmware">storaged_manager_iscsi_initiator_complete_discover_firmware ()</a>
+<dt>storaged_manager_iscsi_initiator_complete_discover_firmware, <a class="indexterm" href="StoragedManagerISCSIInitiator.html#storaged-manager-iscsi-initiator-complete-discover-firmware">storaged_manager_iscsi_initiator_complete_discover_firmware ()</a>
 </dt>
-<dt>storaged_manager_iscsi_initiator_complete_discover_send_targets_chap, <a class="indexterm" href="storaged-StoragedManagerISCSIInitiator.html#storaged-manager-iscsi-initiator-complete-discover-send-targets-chap">storaged_manager_iscsi_initiator_complete_discover_send_targets_chap ()</a>
+<dt>storaged_manager_iscsi_initiator_complete_discover_send_targets_chap, <a class="indexterm" href="StoragedManagerISCSIInitiator.html#storaged-manager-iscsi-initiator-complete-discover-send-targets-chap">storaged_manager_iscsi_initiator_complete_discover_send_targets_chap ()</a>
 </dt>
-<dt>storaged_manager_iscsi_initiator_complete_discover_send_targets_no_auth, <a class="indexterm" href="storaged-StoragedManagerISCSIInitiator.html#storaged-manager-iscsi-initiator-complete-discover-send-targets-no-auth">storaged_manager_iscsi_initiator_complete_discover_send_targets_no_auth ()</a>
+<dt>storaged_manager_iscsi_initiator_complete_discover_send_targets_no_auth, <a class="indexterm" href="StoragedManagerISCSIInitiator.html#storaged-manager-iscsi-initiator-complete-discover-send-targets-no-auth">storaged_manager_iscsi_initiator_complete_discover_send_targets_no_auth ()</a>
 </dt>
-<dt>storaged_manager_iscsi_initiator_complete_get_initiator_name, <a class="indexterm" href="storaged-StoragedManagerISCSIInitiator.html#storaged-manager-iscsi-initiator-complete-get-initiator-name">storaged_manager_iscsi_initiator_complete_get_initiator_name ()</a>
+<dt>storaged_manager_iscsi_initiator_complete_get_initiator_name, <a class="indexterm" href="StoragedManagerISCSIInitiator.html#storaged-manager-iscsi-initiator-complete-get-initiator-name">storaged_manager_iscsi_initiator_complete_get_initiator_name ()</a>
 </dt>
-<dt>storaged_manager_iscsi_initiator_complete_login, <a class="indexterm" href="storaged-StoragedManagerISCSIInitiator.html#storaged-manager-iscsi-initiator-complete-login">storaged_manager_iscsi_initiator_complete_login ()</a>
+<dt>storaged_manager_iscsi_initiator_complete_login, <a class="indexterm" href="StoragedManagerISCSIInitiator.html#storaged-manager-iscsi-initiator-complete-login">storaged_manager_iscsi_initiator_complete_login ()</a>
 </dt>
-<dt>storaged_manager_iscsi_initiator_complete_logout, <a class="indexterm" href="storaged-StoragedManagerISCSIInitiator.html#storaged-manager-iscsi-initiator-complete-logout">storaged_manager_iscsi_initiator_complete_logout ()</a>
+<dt>storaged_manager_iscsi_initiator_complete_logout, <a class="indexterm" href="StoragedManagerISCSIInitiator.html#storaged-manager-iscsi-initiator-complete-logout">storaged_manager_iscsi_initiator_complete_logout ()</a>
 </dt>
-<dt>storaged_manager_iscsi_initiator_complete_set_initiator_name, <a class="indexterm" href="storaged-StoragedManagerISCSIInitiator.html#storaged-manager-iscsi-initiator-complete-set-initiator-name">storaged_manager_iscsi_initiator_complete_set_initiator_name ()</a>
+<dt>storaged_manager_iscsi_initiator_complete_set_initiator_name, <a class="indexterm" href="StoragedManagerISCSIInitiator.html#storaged-manager-iscsi-initiator-complete-set-initiator-name">storaged_manager_iscsi_initiator_complete_set_initiator_name ()</a>
 </dt>
-<dt>storaged_manager_iscsi_initiator_interface_info, <a class="indexterm" href="storaged-StoragedManagerISCSIInitiator.html#storaged-manager-iscsi-initiator-interface-info">storaged_manager_iscsi_initiator_interface_info ()</a>
+<dt>storaged_manager_iscsi_initiator_interface_info, <a class="indexterm" href="StoragedManagerISCSIInitiator.html#storaged-manager-iscsi-initiator-interface-info">storaged_manager_iscsi_initiator_interface_info ()</a>
 </dt>
-<dt>storaged_manager_iscsi_initiator_override_properties, <a class="indexterm" href="storaged-StoragedManagerISCSIInitiator.html#storaged-manager-iscsi-initiator-override-properties">storaged_manager_iscsi_initiator_override_properties ()</a>
+<dt>storaged_manager_iscsi_initiator_override_properties, <a class="indexterm" href="StoragedManagerISCSIInitiator.html#storaged-manager-iscsi-initiator-override-properties">storaged_manager_iscsi_initiator_override_properties ()</a>
 </dt>
-<dt>storaged_manager_iscsi_initiator_proxy_new, <a class="indexterm" href="storaged-StoragedManagerISCSIInitiator.html#storaged-manager-iscsi-initiator-proxy-new">storaged_manager_iscsi_initiator_proxy_new ()</a>
+<dt>storaged_manager_iscsi_initiator_proxy_new, <a class="indexterm" href="StoragedManagerISCSIInitiator.html#storaged-manager-iscsi-initiator-proxy-new">storaged_manager_iscsi_initiator_proxy_new ()</a>
 </dt>
-<dt>storaged_manager_iscsi_initiator_proxy_new_finish, <a class="indexterm" href="storaged-StoragedManagerISCSIInitiator.html#storaged-manager-iscsi-initiator-proxy-new-finish">storaged_manager_iscsi_initiator_proxy_new_finish ()</a>
+<dt>storaged_manager_iscsi_initiator_proxy_new_finish, <a class="indexterm" href="StoragedManagerISCSIInitiator.html#storaged-manager-iscsi-initiator-proxy-new-finish">storaged_manager_iscsi_initiator_proxy_new_finish ()</a>
 </dt>
-<dt>storaged_manager_iscsi_initiator_proxy_new_for_bus, <a class="indexterm" href="storaged-StoragedManagerISCSIInitiator.html#storaged-manager-iscsi-initiator-proxy-new-for-bus">storaged_manager_iscsi_initiator_proxy_new_for_bus ()</a>
+<dt>storaged_manager_iscsi_initiator_proxy_new_for_bus, <a class="indexterm" href="StoragedManagerISCSIInitiator.html#storaged-manager-iscsi-initiator-proxy-new-for-bus">storaged_manager_iscsi_initiator_proxy_new_for_bus ()</a>
 </dt>
-<dt>storaged_manager_iscsi_initiator_proxy_new_for_bus_finish, <a class="indexterm" href="storaged-StoragedManagerISCSIInitiator.html#storaged-manager-iscsi-initiator-proxy-new-for-bus-finish">storaged_manager_iscsi_initiator_proxy_new_for_bus_finish ()</a>
+<dt>storaged_manager_iscsi_initiator_proxy_new_for_bus_finish, <a class="indexterm" href="StoragedManagerISCSIInitiator.html#storaged-manager-iscsi-initiator-proxy-new-for-bus-finish">storaged_manager_iscsi_initiator_proxy_new_for_bus_finish ()</a>
 </dt>
-<dt>storaged_manager_iscsi_initiator_proxy_new_for_bus_sync, <a class="indexterm" href="storaged-StoragedManagerISCSIInitiator.html#storaged-manager-iscsi-initiator-proxy-new-for-bus-sync">storaged_manager_iscsi_initiator_proxy_new_for_bus_sync ()</a>
+<dt>storaged_manager_iscsi_initiator_proxy_new_for_bus_sync, <a class="indexterm" href="StoragedManagerISCSIInitiator.html#storaged-manager-iscsi-initiator-proxy-new-for-bus-sync">storaged_manager_iscsi_initiator_proxy_new_for_bus_sync ()</a>
 </dt>
-<dt>storaged_manager_iscsi_initiator_proxy_new_sync, <a class="indexterm" href="storaged-StoragedManagerISCSIInitiator.html#storaged-manager-iscsi-initiator-proxy-new-sync">storaged_manager_iscsi_initiator_proxy_new_sync ()</a>
+<dt>storaged_manager_iscsi_initiator_proxy_new_sync, <a class="indexterm" href="StoragedManagerISCSIInitiator.html#storaged-manager-iscsi-initiator-proxy-new-sync">storaged_manager_iscsi_initiator_proxy_new_sync ()</a>
 </dt>
-<dt>storaged_manager_iscsi_initiator_skeleton_new, <a class="indexterm" href="storaged-StoragedManagerISCSIInitiator.html#storaged-manager-iscsi-initiator-skeleton-new">storaged_manager_iscsi_initiator_skeleton_new ()</a>
+<dt>storaged_manager_iscsi_initiator_skeleton_new, <a class="indexterm" href="StoragedManagerISCSIInitiator.html#storaged-manager-iscsi-initiator-skeleton-new">storaged_manager_iscsi_initiator_skeleton_new ()</a>
+</dt>
+<dt>storaged_manager_lsm_interface_info, <a class="indexterm" href="storaged-StoragedManagerLSM.html#storaged-manager-lsm-interface-info">storaged_manager_lsm_interface_info ()</a>
+</dt>
+<dt>storaged_manager_lsm_override_properties, <a class="indexterm" href="storaged-StoragedManagerLSM.html#storaged-manager-lsm-override-properties">storaged_manager_lsm_override_properties ()</a>
+</dt>
+<dt>storaged_manager_lsm_proxy_new, <a class="indexterm" href="storaged-StoragedManagerLSM.html#storaged-manager-lsm-proxy-new">storaged_manager_lsm_proxy_new ()</a>
+</dt>
+<dt>storaged_manager_lsm_proxy_new_finish, <a class="indexterm" href="storaged-StoragedManagerLSM.html#storaged-manager-lsm-proxy-new-finish">storaged_manager_lsm_proxy_new_finish ()</a>
+</dt>
+<dt>storaged_manager_lsm_proxy_new_for_bus, <a class="indexterm" href="storaged-StoragedManagerLSM.html#storaged-manager-lsm-proxy-new-for-bus">storaged_manager_lsm_proxy_new_for_bus ()</a>
+</dt>
+<dt>storaged_manager_lsm_proxy_new_for_bus_finish, <a class="indexterm" href="storaged-StoragedManagerLSM.html#storaged-manager-lsm-proxy-new-for-bus-finish">storaged_manager_lsm_proxy_new_for_bus_finish ()</a>
+</dt>
+<dt>storaged_manager_lsm_proxy_new_for_bus_sync, <a class="indexterm" href="storaged-StoragedManagerLSM.html#storaged-manager-lsm-proxy-new-for-bus-sync">storaged_manager_lsm_proxy_new_for_bus_sync ()</a>
+</dt>
+<dt>storaged_manager_lsm_proxy_new_sync, <a class="indexterm" href="storaged-StoragedManagerLSM.html#storaged-manager-lsm-proxy-new-sync">storaged_manager_lsm_proxy_new_sync ()</a>
+</dt>
+<dt>storaged_manager_lsm_skeleton_new, <a class="indexterm" href="storaged-StoragedManagerLSM.html#storaged-manager-lsm-skeleton-new">storaged_manager_lsm_skeleton_new ()</a>
 </dt>
 <dt>storaged_manager_lvm2_call_volume_group_create, <a class="indexterm" href="StoragedManagerLVM2.html#storaged-manager-lvm2-call-volume-group-create">storaged_manager_lvm2_call_volume_group_create ()</a>, <a class="indexterm" href="StoragedManagerLVM2.html#storaged-manager-lvm2-call-volume-group-create">storaged_manager_lvm2_call_volume_group_create ()</a>
 </dt>
@@ -2408,6 +3012,40 @@
 <dt>storaged_manager_set_version, <a class="indexterm" href="StoragedManager.html#storaged-manager-set-version">storaged_manager_set_version ()</a>
 </dt>
 <dt>storaged_manager_skeleton_new, <a class="indexterm" href="StoragedManager.html#storaged-manager-skeleton-new">storaged_manager_skeleton_new ()</a>
+</dt>
+<dt>storaged_manager_zram_call_create_devices, <a class="indexterm" href="StoragedManagerZRAM.html#storaged-manager-zram-call-create-devices">storaged_manager_zram_call_create_devices ()</a>
+</dt>
+<dt>storaged_manager_zram_call_create_devices_finish, <a class="indexterm" href="StoragedManagerZRAM.html#storaged-manager-zram-call-create-devices-finish">storaged_manager_zram_call_create_devices_finish ()</a>
+</dt>
+<dt>storaged_manager_zram_call_create_devices_sync, <a class="indexterm" href="StoragedManagerZRAM.html#storaged-manager-zram-call-create-devices-sync">storaged_manager_zram_call_create_devices_sync ()</a>
+</dt>
+<dt>storaged_manager_zram_call_destroy_devices, <a class="indexterm" href="StoragedManagerZRAM.html#storaged-manager-zram-call-destroy-devices">storaged_manager_zram_call_destroy_devices ()</a>
+</dt>
+<dt>storaged_manager_zram_call_destroy_devices_finish, <a class="indexterm" href="StoragedManagerZRAM.html#storaged-manager-zram-call-destroy-devices-finish">storaged_manager_zram_call_destroy_devices_finish ()</a>
+</dt>
+<dt>storaged_manager_zram_call_destroy_devices_sync, <a class="indexterm" href="StoragedManagerZRAM.html#storaged-manager-zram-call-destroy-devices-sync">storaged_manager_zram_call_destroy_devices_sync ()</a>
+</dt>
+<dt>storaged_manager_zram_complete_create_devices, <a class="indexterm" href="StoragedManagerZRAM.html#storaged-manager-zram-complete-create-devices">storaged_manager_zram_complete_create_devices ()</a>
+</dt>
+<dt>storaged_manager_zram_complete_destroy_devices, <a class="indexterm" href="StoragedManagerZRAM.html#storaged-manager-zram-complete-destroy-devices">storaged_manager_zram_complete_destroy_devices ()</a>
+</dt>
+<dt>storaged_manager_zram_interface_info, <a class="indexterm" href="StoragedManagerZRAM.html#storaged-manager-zram-interface-info">storaged_manager_zram_interface_info ()</a>
+</dt>
+<dt>storaged_manager_zram_override_properties, <a class="indexterm" href="StoragedManagerZRAM.html#storaged-manager-zram-override-properties">storaged_manager_zram_override_properties ()</a>
+</dt>
+<dt>storaged_manager_zram_proxy_new, <a class="indexterm" href="StoragedManagerZRAM.html#storaged-manager-zram-proxy-new">storaged_manager_zram_proxy_new ()</a>
+</dt>
+<dt>storaged_manager_zram_proxy_new_finish, <a class="indexterm" href="StoragedManagerZRAM.html#storaged-manager-zram-proxy-new-finish">storaged_manager_zram_proxy_new_finish ()</a>
+</dt>
+<dt>storaged_manager_zram_proxy_new_for_bus, <a class="indexterm" href="StoragedManagerZRAM.html#storaged-manager-zram-proxy-new-for-bus">storaged_manager_zram_proxy_new_for_bus ()</a>
+</dt>
+<dt>storaged_manager_zram_proxy_new_for_bus_finish, <a class="indexterm" href="StoragedManagerZRAM.html#storaged-manager-zram-proxy-new-for-bus-finish">storaged_manager_zram_proxy_new_for_bus_finish ()</a>
+</dt>
+<dt>storaged_manager_zram_proxy_new_for_bus_sync, <a class="indexterm" href="StoragedManagerZRAM.html#storaged-manager-zram-proxy-new-for-bus-sync">storaged_manager_zram_proxy_new_for_bus_sync ()</a>
+</dt>
+<dt>storaged_manager_zram_proxy_new_sync, <a class="indexterm" href="StoragedManagerZRAM.html#storaged-manager-zram-proxy-new-sync">storaged_manager_zram_proxy_new_sync ()</a>
+</dt>
+<dt>storaged_manager_zram_skeleton_new, <a class="indexterm" href="StoragedManagerZRAM.html#storaged-manager-zram-skeleton-new">storaged_manager_zram_skeleton_new ()</a>
 </dt>
 <dt>org.storaged.Storaged.MDRaid, <a class="indexterm" href="gdbus-org.storaged.Storaged.MDRaid.html#gdbus-interface-org-storaged-Storaged-MDRaid.top_of_page">org.storaged.Storaged.MDRaid</a>
 </dt>
