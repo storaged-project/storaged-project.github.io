@@ -34,38 +34,29 @@
 <div class="refsynopsisdiv">
 <h2>Methods</h2>
 <pre class="synopsis">
-<a class="link" href="gdbus-org.storaged.Storaged.Manager.ISCSI.Initiator.html#gdbus-method-org-storaged-Storaged-Manager-ISCSI-Initiator.GetInitiatorName" title="The GetInitiatorName() method">GetInitiatorName</a>          (OUT s        result);
-<a class="link" href="gdbus-org.storaged.Storaged.Manager.ISCSI.Initiator.html#gdbus-method-org-storaged-Storaged-Manager-ISCSI-Initiator.SetInitiatorName" title="The SetInitiatorName() method">SetInitiatorName</a>          (IN  s        name,
-                           IN  a{sv}    options);
-<a class="link" href="gdbus-org.storaged.Storaged.Manager.ISCSI.Initiator.html#gdbus-method-org-storaged-Storaged-Manager-ISCSI-Initiator.DiscoverSendTargetsNoAuth" title="The DiscoverSendTargetsNoAuth() method">DiscoverSendTargetsNoAuth</a> (IN  s        address,
-                           IN  q        port,
-                           IN  a{sv}    options,
-                           OUT a(sisis) nodes,
-                           OUT i        nodes_cnt);
-<a class="link" href="gdbus-org.storaged.Storaged.Manager.ISCSI.Initiator.html#gdbus-method-org-storaged-Storaged-Manager-ISCSI-Initiator.DiscoverSendTargetsChap" title="The DiscoverSendTargetsChap() method">DiscoverSendTargetsChap</a>   (IN  s        address,
-                           IN  q        port,
-                           IN  s        username,
-                           IN  s        password,
-                           IN  s        reverse_username,
-                           IN  s        reverse_password,
-                           IN  a{sv}    options,
-                           OUT a(sisis) nodes,
-                           OUT i        nodes_cnt);
-<a class="link" href="gdbus-org.storaged.Storaged.Manager.ISCSI.Initiator.html#gdbus-method-org-storaged-Storaged-Manager-ISCSI-Initiator.DiscoverFirmware" title="The DiscoverFirmware() method">DiscoverFirmware</a>          (IN  a{sv}    options,
-                           OUT a(sisis) nodes,
-                           OUT i        nodes_cnt);
-<a class="link" href="gdbus-org.storaged.Storaged.Manager.ISCSI.Initiator.html#gdbus-method-org-storaged-Storaged-Manager-ISCSI-Initiator.Login" title="The Login() method">Login</a>                     (IN  s        name,
-                           IN  i        tpgt,
-                           IN  s        address,
-                           IN  i        port,
-                           IN  s        iface,
-                           IN  a{sv}    options);
-<a class="link" href="gdbus-org.storaged.Storaged.Manager.ISCSI.Initiator.html#gdbus-method-org-storaged-Storaged-Manager-ISCSI-Initiator.Logout" title="The Logout() method">Logout</a>                    (IN  s        name,
-                           IN  i        tpgt,
-                           IN  s        address,
-                           IN  i        port,
-                           IN  s        iface,
-                           IN  a{sv}    options);
+<a class="link" href="gdbus-org.storaged.Storaged.Manager.ISCSI.Initiator.html#gdbus-method-org-storaged-Storaged-Manager-ISCSI-Initiator.GetInitiatorName" title="The GetInitiatorName() method">GetInitiatorName</a>    (OUT s        result);
+<a class="link" href="gdbus-org.storaged.Storaged.Manager.ISCSI.Initiator.html#gdbus-method-org-storaged-Storaged-Manager-ISCSI-Initiator.SetInitiatorName" title="The SetInitiatorName() method">SetInitiatorName</a>    (IN  s        name,
+                     IN  a{sv}    options);
+<a class="link" href="gdbus-org.storaged.Storaged.Manager.ISCSI.Initiator.html#gdbus-method-org-storaged-Storaged-Manager-ISCSI-Initiator.DiscoverSendTargets" title="The DiscoverSendTargets() method">DiscoverSendTargets</a> (IN  s        address,
+                     IN  q        port,
+                     IN  a{sv}    options,
+                     OUT a(sisis) nodes,
+                     OUT i        nodes_cnt);
+<a class="link" href="gdbus-org.storaged.Storaged.Manager.ISCSI.Initiator.html#gdbus-method-org-storaged-Storaged-Manager-ISCSI-Initiator.DiscoverFirmware" title="The DiscoverFirmware() method">DiscoverFirmware</a>    (IN  a{sv}    options,
+                     OUT a(sisis) nodes,
+                     OUT i        nodes_cnt);
+<a class="link" href="gdbus-org.storaged.Storaged.Manager.ISCSI.Initiator.html#gdbus-method-org-storaged-Storaged-Manager-ISCSI-Initiator.Login" title="The Login() method">Login</a>               (IN  s        name,
+                     IN  i        tpgt,
+                     IN  s        address,
+                     IN  i        port,
+                     IN  s        iface,
+                     IN  a{sv}    options);
+<a class="link" href="gdbus-org.storaged.Storaged.Manager.ISCSI.Initiator.html#gdbus-method-org-storaged-Storaged-Manager-ISCSI-Initiator.Logout" title="The Logout() method">Logout</a>              (IN  s        name,
+                     IN  i        tpgt,
+                     IN  s        address,
+                     IN  i        port,
+                     IN  s        iface,
+                     IN  a{sv}    options);
 </pre>
 </div>
 <div class="refsect1">
@@ -128,17 +119,24 @@ SetInitiatorName (IN  s     name,
 </div>
 <hr>
 <div class="refsect2">
-<a name="gdbus-method-org-storaged-Storaged-Manager-ISCSI-Initiator.DiscoverSendTargetsNoAuth"></a><h3>The DiscoverSendTargetsNoAuth() method</h3>
+<a name="gdbus-method-org-storaged-Storaged-Manager-ISCSI-Initiator.DiscoverSendTargets"></a><h3>The DiscoverSendTargets() method</h3>
 <pre class="programlisting">
-DiscoverSendTargetsNoAuth (IN  s        address,
-                           IN  q        port,
-                           IN  a{sv}    options,
-                           OUT a(sisis) nodes,
-                           OUT i        nodes_cnt);
+DiscoverSendTargets (IN  s        address,
+                     IN  q        port,
+                     IN  a{sv}    options,
+                     OUT a(sisis) nodes,
+                     OUT i        nodes_cnt);
 </pre>
 <p>        Performs targets' discovery with no authentication data.
 </p>
-<p>        No additional options are currently defined.
+<p>        If the option <em class="parameter"><code>username</code></em> is provided, then
+        the <em class="parameter"><code>username</code></em> and <em class="parameter"><code>password</code></em>
+        will be used for CHAP authentication.
+</p>
+<p>        If the option <em class="parameter"><code>reverse-username</code></em> is provided,
+        the the <em class="parameter"><code>reverse-username</code></em> and
+        <em class="parameter"><code>reverse-password</code></em> will be used for CHAP
+        authentication.
 </p>
 <div class="variablelist"><table border="0" class="variablelist">
 <colgroup>
@@ -168,71 +166,7 @@ DiscoverSendTargetsNoAuth (IN  s        address,
 </tr>
 </tbody>
 </table></div>
-<p class="since">Since 2.1.3</p>
-</div>
-<hr>
-<div class="refsect2">
-<a name="gdbus-method-org-storaged-Storaged-Manager-ISCSI-Initiator.DiscoverSendTargetsChap"></a><h3>The DiscoverSendTargetsChap() method</h3>
-<pre class="programlisting">
-DiscoverSendTargetsChap (IN  s        address,
-                         IN  q        port,
-                         IN  s        username,
-                         IN  s        password,
-                         IN  s        reverse_username,
-                         IN  s        reverse_password,
-                         IN  a{sv}    options,
-                         OUT a(sisis) nodes,
-                         OUT i        nodes_cnt);
-</pre>
-<p>        Performs targets' discovery with CHAP authentication method.
-</p>
-<p>        No additional options are currently defined.
-</p>
-<div class="variablelist"><table border="0" class="variablelist">
-<colgroup>
-<col align="left" valign="top">
-<col>
-</colgroup>
-<tbody>
-<tr>
-<td><p><span class="term"><code class="literal">IN s <em class="parameter"><code>address</code></em></code>:</span></p></td>
-<td><p>Hostname or IP-address to connect to.</p></td>
-</tr>
-<tr>
-<td><p><span class="term"><code class="literal">IN q <em class="parameter"><code>port</code></em></code>:</span></p></td>
-<td><p>Port to connect to, or 0 for the default port.</p></td>
-</tr>
-<tr>
-<td><p><span class="term"><code class="literal">IN s <em class="parameter"><code>username</code></em></code>:</span></p></td>
-<td><p>Authentication username.</p></td>
-</tr>
-<tr>
-<td><p><span class="term"><code class="literal">IN s <em class="parameter"><code>password</code></em></code>:</span></p></td>
-<td><p>Authentication password.</p></td>
-</tr>
-<tr>
-<td><p><span class="term"><code class="literal">IN s <em class="parameter"><code>reverse_username</code></em></code>:</span></p></td>
-<td><p>Reverse authentication username. May be empty in which case only forward authentication will be done.</p></td>
-</tr>
-<tr>
-<td><p><span class="term"><code class="literal">IN s <em class="parameter"><code>reverse_password</code></em></code>:</span></p></td>
-<td><p>Reverse authentication password.</p></td>
-</tr>
-<tr>
-<td><p><span class="term"><code class="literal">IN a{sv} <em class="parameter"><code>options</code></em></code>:</span></p></td>
-<td><p>Additional options.</p></td>
-</tr>
-<tr>
-<td><p><span class="term"><code class="literal">OUT a(sisis) <em class="parameter"><code>nodes</code></em></code>:</span></p></td>
-<td><p>Discovered nodes.</p></td>
-</tr>
-<tr>
-<td><p><span class="term"><code class="literal">OUT i <em class="parameter"><code>nodes_cnt</code></em></code>:</span></p></td>
-<td><p>The number of found nodes.</p></td>
-</tr>
-</tbody>
-</table></div>
-<p class="since">Since 2.1.3</p>
+<p class="since">Since 2.3.1</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -281,7 +215,20 @@ Login (IN  s     name,
 </pre>
 <p>        Login to the iSCSI node described by the given node properties.
 </p>
-<p>        No additional options are currently defined.
+<p>        If the option <em class="parameter"><code>username</code></em> is provided, then
+        the <em class="parameter"><code>username</code></em> and <em class="parameter"><code>password</code></em>
+        will be used for CHAP authentication.
+</p>
+<p>        If the option <em class="parameter"><code>reverse-username</code></em> is provided,
+        the the <em class="parameter"><code>reverse-username</code></em> and
+        <em class="parameter"><code>reverse-password</code></em> will be used for CHAP
+        authentication.
+</p>
+<p>        All the additional options are transformed into the interface
+        parameters.  For example, if an automatic node startup is desired, the
+        <em class="parameter"><code>node.startup</code></em> needs to be set to
+        '<span class="emphasis"><em>automatic</em></span>' (default value is
+        '<span class="emphasis"><em>manual</em></span>').
 </p>
 <div class="variablelist"><table border="0" class="variablelist">
 <colgroup>
@@ -330,7 +277,10 @@ Logout (IN  s     name,
 </pre>
 <p>        Logout of the iSCSI node described by the given node properties.
 </p>
-<p>        No additional options are currently defined.
+<p>        All the additional options are transformed into the interface
+        parameters.  For example, if an automatic node startup is not desired,
+        the <em class="parameter"><code>node.startup</code></em> needs to be set to
+        '<span class="emphasis"><em>manual</em></span>'.
 </p>
 <div class="variablelist"><table border="0" class="variablelist">
 <colgroup>

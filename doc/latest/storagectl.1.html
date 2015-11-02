@@ -2,7 +2,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>storagedctl: Storaged Reference Manual</title>
+<title>storagectl: Storaged Reference Manual</title>
 <meta name="generator" content="DocBook XSL Stylesheets V1.78.1">
 <link rel="home" href="index.html" title="Storaged Reference Manual">
 <link rel="up" href="overview.html" title="Part I. Manual pages and Overview">
@@ -20,34 +20,34 @@
 <td><a accesskey="n" href="umount.storaged.8.html"><img src="right.png" width="16" height="16" border="0" alt="Next"></a></td>
 </tr></table>
 <div class="refentry">
-<a name="storagedctl.1"></a><div class="titlepage"></div>
+<a name="storagectl.1"></a><div class="titlepage"></div>
 <div class="refnamediv"><table width="100%"><tr>
 <td valign="top">
-<h2><span class="refentrytitle">storagedctl</span></h2>
-<p>storagedctl — The storaged command line tool</p>
+<h2><span class="refentrytitle">storagectl</span></h2>
+<p>storagectl — The storaged command line tool</p>
 </td>
 <td class="gallery_image" valign="top" align="right"></td>
 </tr></table></div>
 <div class="refsynopsisdiv">
 <h2>SYNOPSIS</h2>
-<div class="cmdsynopsis"><p><code class="command">storagedctl</code>   status </p></div>
-<div class="cmdsynopsis"><p><code class="command">storagedctl</code>   info  { --object-path <em class="replaceable"><code>OBJECT</code></em>  |   --block-device <em class="replaceable"><code>DEVICE</code></em> }</p></div>
-<div class="cmdsynopsis"><p><code class="command">storagedctl</code>   mount   { --object-path <em class="replaceable"><code>OBJECT</code></em>  |   --block-device <em class="replaceable"><code>DEVICE</code></em> } [ --filesystem-type <em class="replaceable"><code>TYPE</code></em> ] [--options <em class="replaceable"><code>OPTIONS</code></em>...] [--no-user-interaction]</p></div>
-<div class="cmdsynopsis"><p><code class="command">storagedctl</code>   unmount   { --object-path <em class="replaceable"><code>OBJECT</code></em>  |   --block-device <em class="replaceable"><code>DEVICE</code></em> } [--force] [--no-user-interaction]</p></div>
-<div class="cmdsynopsis"><p><code class="command">storagedctl</code>   unlock   { --object-path <em class="replaceable"><code>OBJECT</code></em>  |   --block-device <em class="replaceable"><code>DEVICE</code></em> } [--no-user-interaction]</p></div>
-<div class="cmdsynopsis"><p><code class="command">storagedctl</code>   lock   { --object-path <em class="replaceable"><code>OBJECT</code></em>  |   --block-device <em class="replaceable"><code>DEVICE</code></em> } [--no-user-interaction]</p></div>
-<div class="cmdsynopsis"><p><code class="command">storagedctl</code>   loop-setup    --file <em class="replaceable"><code>PATH</code></em>  [--read-only] [--offset <em class="replaceable"><code>OFFSET</code></em>] [--size <em class="replaceable"><code>SIZE</code></em>] [--no-user-interaction]</p></div>
-<div class="cmdsynopsis"><p><code class="command">storagedctl</code>   loop-delete   { --object-path <em class="replaceable"><code>OBJECT</code></em>  |   --block-device <em class="replaceable"><code>DEVICE</code></em> } [--no-user-interaction]</p></div>
-<div class="cmdsynopsis"><p><code class="command">storagedctl</code>   power-off   { --object-path <em class="replaceable"><code>OBJECT</code></em>  |   --block-device <em class="replaceable"><code>DEVICE</code></em> } [--no-user-interaction]</p></div>
-<div class="cmdsynopsis"><p><code class="command">storagedctl</code>   smart-simulate    --file <em class="replaceable"><code>PATH</code></em>  { --object-path <em class="replaceable"><code>OBJECT</code></em>  |   --block-device <em class="replaceable"><code>DEVICE</code></em> } [--no-user-interaction]</p></div>
-<div class="cmdsynopsis"><p><code class="command">storagedctl</code>   monitor </p></div>
-<div class="cmdsynopsis"><p><code class="command">storagedctl</code>   dump </p></div>
-<div class="cmdsynopsis"><p><code class="command">storagedctl</code>   help </p></div>
+<div class="cmdsynopsis"><p><code class="command">storagectl</code>   status </p></div>
+<div class="cmdsynopsis"><p><code class="command">storagectl</code>   info  { --object-path <em class="replaceable"><code>OBJECT</code></em>  |   --block-device <em class="replaceable"><code>DEVICE</code></em> }</p></div>
+<div class="cmdsynopsis"><p><code class="command">storagectl</code>   mount   { --object-path <em class="replaceable"><code>OBJECT</code></em>  |   --block-device <em class="replaceable"><code>DEVICE</code></em> } [ --filesystem-type <em class="replaceable"><code>TYPE</code></em> ] [--options <em class="replaceable"><code>OPTIONS</code></em>...] [--no-user-interaction]</p></div>
+<div class="cmdsynopsis"><p><code class="command">storagectl</code>   unmount   { --object-path <em class="replaceable"><code>OBJECT</code></em>  |   --block-device <em class="replaceable"><code>DEVICE</code></em> } [--force] [--no-user-interaction]</p></div>
+<div class="cmdsynopsis"><p><code class="command">storagectl</code>   unlock   { --object-path <em class="replaceable"><code>OBJECT</code></em>  |   --block-device <em class="replaceable"><code>DEVICE</code></em> } [--no-user-interaction]</p></div>
+<div class="cmdsynopsis"><p><code class="command">storagectl</code>   lock   { --object-path <em class="replaceable"><code>OBJECT</code></em>  |   --block-device <em class="replaceable"><code>DEVICE</code></em> } [--no-user-interaction]</p></div>
+<div class="cmdsynopsis"><p><code class="command">storagectl</code>   loop-setup    --file <em class="replaceable"><code>PATH</code></em>  [--read-only] [--offset <em class="replaceable"><code>OFFSET</code></em>] [--size <em class="replaceable"><code>SIZE</code></em>] [--no-user-interaction]</p></div>
+<div class="cmdsynopsis"><p><code class="command">storagectl</code>   loop-delete   { --object-path <em class="replaceable"><code>OBJECT</code></em>  |   --block-device <em class="replaceable"><code>DEVICE</code></em> } [--no-user-interaction]</p></div>
+<div class="cmdsynopsis"><p><code class="command">storagectl</code>   power-off   { --object-path <em class="replaceable"><code>OBJECT</code></em>  |   --block-device <em class="replaceable"><code>DEVICE</code></em> } [--no-user-interaction]</p></div>
+<div class="cmdsynopsis"><p><code class="command">storagectl</code>   smart-simulate    --file <em class="replaceable"><code>PATH</code></em>  { --object-path <em class="replaceable"><code>OBJECT</code></em>  |   --block-device <em class="replaceable"><code>DEVICE</code></em> } [--no-user-interaction]</p></div>
+<div class="cmdsynopsis"><p><code class="command">storagectl</code>   monitor </p></div>
+<div class="cmdsynopsis"><p><code class="command">storagectl</code>   dump </p></div>
+<div class="cmdsynopsis"><p><code class="command">storagectl</code>   help </p></div>
 </div>
 <div class="refsect1">
 <a name="id-1.2.5.5"></a><h2>DESCRIPTION</h2>
 <p>
-      <span class="command"><strong>storagedctl</strong></span> is a command-line program used
+      <span class="command"><strong>storagectl</strong></span> is a command-line program used
       to interact with the
       <span class="citerefentry"><span class="refentrytitle">storaged</span>(8)</span>
       daemon process.
@@ -220,14 +220,14 @@
 <div class="refsect1">
 <a name="id-1.2.5.9"></a><h2>BASH COMPLETION</h2>
 <p>
-      <span class="command"><strong>storagedctl</strong></span> ships with a bash completion script to
+      <span class="command"><strong>storagectl</strong></span> ships with a bash completion script to
       complete commands, objects, block devices and some options.
     </p>
 </div>
 <div class="refsect1">
 <a name="id-1.2.5.10"></a><h2>AUTHOR</h2>
 <p>
-      Written by David Zeuthen
+      This man page was originally written for UDisks2 by David Zeuthen
       <code class="email">&lt;<a class="email" href="mailto:zeuthen@gmail.com">zeuthen@gmail.com</a>&gt;</code> with a lot of help
       from many others.
     </p>

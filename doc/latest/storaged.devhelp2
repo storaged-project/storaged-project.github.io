@@ -5,7 +5,7 @@
       <sub name="storaged" link="storaged.8.html"/>
       <sub name="storaged-lvm" link="storaged-lvm.8.html"/>
       <sub name="storaged-project" link="storaged-project.8.html"/>
-      <sub name="storagedctl" link="storagedctl.1.html"/>
+      <sub name="storagectl" link="storagectl.1.html"/>
       <sub name="umount.storaged" link="umount.storaged.8.html"/>
     </sub>
     <sub name="D-Bus API Reference" link="ref-dbus.html">
@@ -131,7 +131,7 @@
     </sub>
     <sub name="Index" link="api-index.html"/>
     <sub name="Index of deprecated symbols" link="api-index-deprecated.html"/>
-    <sub name="Index of new symbols in 2.3.0" link="api-index-2.3.0.html"/>
+    <sub name="Index of new symbols in 2.3.1" link="api-index-2.3.1.html"/>
     <sub name="Annotation Glossary" link="annotation-glossary.html"/>
     <sub name="Object Hierarchy" link="gio-hierarchy.html"/>
   </chapters>
@@ -367,8 +367,7 @@
     <keyword type="property" name="The &quot;tgt_reset_timeout&quot; property" link="gdbus-org.storaged.Storaged.ISCSI.Session.html#gdbus-property-org-storaged-Storaged-ISCSI-Session.tgt_reset_timeout"/>
     <keyword type="method" name="The GetInitiatorName() method" link="gdbus-org.storaged.Storaged.Manager.ISCSI.Initiator.html#gdbus-method-org-storaged-Storaged-Manager-ISCSI-Initiator.GetInitiatorName"/>
     <keyword type="method" name="The SetInitiatorName() method" link="gdbus-org.storaged.Storaged.Manager.ISCSI.Initiator.html#gdbus-method-org-storaged-Storaged-Manager-ISCSI-Initiator.SetInitiatorName"/>
-    <keyword type="method" name="The DiscoverSendTargetsNoAuth() method" link="gdbus-org.storaged.Storaged.Manager.ISCSI.Initiator.html#gdbus-method-org-storaged-Storaged-Manager-ISCSI-Initiator.DiscoverSendTargetsNoAuth"/>
-    <keyword type="method" name="The DiscoverSendTargetsChap() method" link="gdbus-org.storaged.Storaged.Manager.ISCSI.Initiator.html#gdbus-method-org-storaged-Storaged-Manager-ISCSI-Initiator.DiscoverSendTargetsChap"/>
+    <keyword type="method" name="The DiscoverSendTargets() method" link="gdbus-org.storaged.Storaged.Manager.ISCSI.Initiator.html#gdbus-method-org-storaged-Storaged-Manager-ISCSI-Initiator.DiscoverSendTargets"/>
     <keyword type="method" name="The DiscoverFirmware() method" link="gdbus-org.storaged.Storaged.Manager.ISCSI.Initiator.html#gdbus-method-org-storaged-Storaged-Manager-ISCSI-Initiator.DiscoverFirmware"/>
     <keyword type="method" name="The Login() method" link="gdbus-org.storaged.Storaged.Manager.ISCSI.Initiator.html#gdbus-method-org-storaged-Storaged-Manager-ISCSI-Initiator.Login"/>
     <keyword type="method" name="The Logout() method" link="gdbus-org.storaged.Storaged.Manager.ISCSI.Initiator.html#gdbus-method-org-storaged-Storaged-Manager-ISCSI-Initiator.Logout"/>
@@ -1605,42 +1604,38 @@
     <keyword type="property" name="The “tpgt” property" link="StoragedISCSISession.html#StoragedISCSISession--tpgt"/>
     <keyword type="signal" name="The “handle-logout” signal" link="StoragedISCSISession.html#StoragedISCSISession-handle-logout"/>
     <keyword type="signal" name="The “handle-logout-interface” signal" link="StoragedISCSISession.html#StoragedISCSISession-handle-logout-interface"/>
-    <keyword type="function" name="storaged_manager_iscsi_initiator_interface_info ()" link="StoragedManagerISCSIInitiator.html#storaged-manager-iscsi-initiator-interface-info" since="2.0.1"/>
-    <keyword type="function" name="storaged_manager_iscsi_initiator_override_properties ()" link="StoragedManagerISCSIInitiator.html#storaged-manager-iscsi-initiator-override-properties" since="2.0.1"/>
-    <keyword type="function" name="storaged_manager_iscsi_initiator_complete_get_initiator_name ()" link="StoragedManagerISCSIInitiator.html#storaged-manager-iscsi-initiator-complete-get-initiator-name" since="2.0.1"/>
-    <keyword type="function" name="storaged_manager_iscsi_initiator_complete_set_initiator_name ()" link="StoragedManagerISCSIInitiator.html#storaged-manager-iscsi-initiator-complete-set-initiator-name" since="2.1.3"/>
-    <keyword type="function" name="storaged_manager_iscsi_initiator_complete_discover_send_targets_no_auth ()" link="StoragedManagerISCSIInitiator.html#storaged-manager-iscsi-initiator-complete-discover-send-targets-no-auth" since="2.1.3"/>
-    <keyword type="function" name="storaged_manager_iscsi_initiator_complete_discover_send_targets_chap ()" link="StoragedManagerISCSIInitiator.html#storaged-manager-iscsi-initiator-complete-discover-send-targets-chap" since="2.1.3"/>
-    <keyword type="function" name="storaged_manager_iscsi_initiator_complete_discover_firmware ()" link="StoragedManagerISCSIInitiator.html#storaged-manager-iscsi-initiator-complete-discover-firmware" since="2.1.3"/>
-    <keyword type="function" name="storaged_manager_iscsi_initiator_complete_login ()" link="StoragedManagerISCSIInitiator.html#storaged-manager-iscsi-initiator-complete-login" since="2.1.3"/>
-    <keyword type="function" name="storaged_manager_iscsi_initiator_complete_logout ()" link="StoragedManagerISCSIInitiator.html#storaged-manager-iscsi-initiator-complete-logout" since="2.1.3"/>
-    <keyword type="function" name="storaged_manager_iscsi_initiator_call_get_initiator_name ()" link="StoragedManagerISCSIInitiator.html#storaged-manager-iscsi-initiator-call-get-initiator-name" since="2.0.1"/>
-    <keyword type="function" name="storaged_manager_iscsi_initiator_call_get_initiator_name_finish ()" link="StoragedManagerISCSIInitiator.html#storaged-manager-iscsi-initiator-call-get-initiator-name-finish" since="2.0.1"/>
-    <keyword type="function" name="storaged_manager_iscsi_initiator_call_get_initiator_name_sync ()" link="StoragedManagerISCSIInitiator.html#storaged-manager-iscsi-initiator-call-get-initiator-name-sync" since="2.0.1"/>
-    <keyword type="function" name="storaged_manager_iscsi_initiator_call_set_initiator_name ()" link="StoragedManagerISCSIInitiator.html#storaged-manager-iscsi-initiator-call-set-initiator-name" since="2.1.3"/>
-    <keyword type="function" name="storaged_manager_iscsi_initiator_call_set_initiator_name_finish ()" link="StoragedManagerISCSIInitiator.html#storaged-manager-iscsi-initiator-call-set-initiator-name-finish" since="2.1.3"/>
-    <keyword type="function" name="storaged_manager_iscsi_initiator_call_set_initiator_name_sync ()" link="StoragedManagerISCSIInitiator.html#storaged-manager-iscsi-initiator-call-set-initiator-name-sync" since="2.1.3"/>
-    <keyword type="function" name="storaged_manager_iscsi_initiator_call_discover_send_targets_no_auth ()" link="StoragedManagerISCSIInitiator.html#storaged-manager-iscsi-initiator-call-discover-send-targets-no-auth" since="2.1.3"/>
-    <keyword type="function" name="storaged_manager_iscsi_initiator_call_discover_send_targets_no_auth_finish ()" link="StoragedManagerISCSIInitiator.html#storaged-manager-iscsi-initiator-call-discover-send-targets-no-auth-finish" since="2.1.3"/>
-    <keyword type="function" name="storaged_manager_iscsi_initiator_call_discover_send_targets_no_auth_sync ()" link="StoragedManagerISCSIInitiator.html#storaged-manager-iscsi-initiator-call-discover-send-targets-no-auth-sync" since="2.1.3"/>
-    <keyword type="function" name="storaged_manager_iscsi_initiator_call_discover_send_targets_chap ()" link="StoragedManagerISCSIInitiator.html#storaged-manager-iscsi-initiator-call-discover-send-targets-chap" since="2.1.3"/>
-    <keyword type="function" name="storaged_manager_iscsi_initiator_call_discover_send_targets_chap_finish ()" link="StoragedManagerISCSIInitiator.html#storaged-manager-iscsi-initiator-call-discover-send-targets-chap-finish" since="2.1.3"/>
-    <keyword type="function" name="storaged_manager_iscsi_initiator_call_discover_send_targets_chap_sync ()" link="StoragedManagerISCSIInitiator.html#storaged-manager-iscsi-initiator-call-discover-send-targets-chap-sync" since="2.1.3"/>
     <keyword type="function" name="storaged_manager_iscsi_initiator_call_discover_firmware ()" link="StoragedManagerISCSIInitiator.html#storaged-manager-iscsi-initiator-call-discover-firmware" since="2.1.3"/>
     <keyword type="function" name="storaged_manager_iscsi_initiator_call_discover_firmware_finish ()" link="StoragedManagerISCSIInitiator.html#storaged-manager-iscsi-initiator-call-discover-firmware-finish" since="2.1.3"/>
     <keyword type="function" name="storaged_manager_iscsi_initiator_call_discover_firmware_sync ()" link="StoragedManagerISCSIInitiator.html#storaged-manager-iscsi-initiator-call-discover-firmware-sync" since="2.1.3"/>
+    <keyword type="function" name="storaged_manager_iscsi_initiator_call_discover_send_targets ()" link="StoragedManagerISCSIInitiator.html#storaged-manager-iscsi-initiator-call-discover-send-targets" since="2.3.1"/>
+    <keyword type="function" name="storaged_manager_iscsi_initiator_call_discover_send_targets_finish ()" link="StoragedManagerISCSIInitiator.html#storaged-manager-iscsi-initiator-call-discover-send-targets-finish" since="2.3.1"/>
+    <keyword type="function" name="storaged_manager_iscsi_initiator_call_discover_send_targets_sync ()" link="StoragedManagerISCSIInitiator.html#storaged-manager-iscsi-initiator-call-discover-send-targets-sync" since="2.3.1"/>
+    <keyword type="function" name="storaged_manager_iscsi_initiator_call_get_initiator_name ()" link="StoragedManagerISCSIInitiator.html#storaged-manager-iscsi-initiator-call-get-initiator-name" since="2.0.1"/>
+    <keyword type="function" name="storaged_manager_iscsi_initiator_call_get_initiator_name_finish ()" link="StoragedManagerISCSIInitiator.html#storaged-manager-iscsi-initiator-call-get-initiator-name-finish" since="2.0.1"/>
+    <keyword type="function" name="storaged_manager_iscsi_initiator_call_get_initiator_name_sync ()" link="StoragedManagerISCSIInitiator.html#storaged-manager-iscsi-initiator-call-get-initiator-name-sync" since="2.0.1"/>
     <keyword type="function" name="storaged_manager_iscsi_initiator_call_login ()" link="StoragedManagerISCSIInitiator.html#storaged-manager-iscsi-initiator-call-login" since="2.1.3"/>
     <keyword type="function" name="storaged_manager_iscsi_initiator_call_login_finish ()" link="StoragedManagerISCSIInitiator.html#storaged-manager-iscsi-initiator-call-login-finish" since="2.1.3"/>
     <keyword type="function" name="storaged_manager_iscsi_initiator_call_login_sync ()" link="StoragedManagerISCSIInitiator.html#storaged-manager-iscsi-initiator-call-login-sync" since="2.1.3"/>
     <keyword type="function" name="storaged_manager_iscsi_initiator_call_logout ()" link="StoragedManagerISCSIInitiator.html#storaged-manager-iscsi-initiator-call-logout" since="2.1.3"/>
     <keyword type="function" name="storaged_manager_iscsi_initiator_call_logout_finish ()" link="StoragedManagerISCSIInitiator.html#storaged-manager-iscsi-initiator-call-logout-finish" since="2.1.3"/>
     <keyword type="function" name="storaged_manager_iscsi_initiator_call_logout_sync ()" link="StoragedManagerISCSIInitiator.html#storaged-manager-iscsi-initiator-call-logout-sync" since="2.1.3"/>
+    <keyword type="function" name="storaged_manager_iscsi_initiator_call_set_initiator_name ()" link="StoragedManagerISCSIInitiator.html#storaged-manager-iscsi-initiator-call-set-initiator-name" since="2.1.3"/>
+    <keyword type="function" name="storaged_manager_iscsi_initiator_call_set_initiator_name_finish ()" link="StoragedManagerISCSIInitiator.html#storaged-manager-iscsi-initiator-call-set-initiator-name-finish" since="2.1.3"/>
+    <keyword type="function" name="storaged_manager_iscsi_initiator_call_set_initiator_name_sync ()" link="StoragedManagerISCSIInitiator.html#storaged-manager-iscsi-initiator-call-set-initiator-name-sync" since="2.1.3"/>
+    <keyword type="function" name="storaged_manager_iscsi_initiator_complete_discover_firmware ()" link="StoragedManagerISCSIInitiator.html#storaged-manager-iscsi-initiator-complete-discover-firmware" since="2.1.3"/>
+    <keyword type="function" name="storaged_manager_iscsi_initiator_complete_discover_send_targets ()" link="StoragedManagerISCSIInitiator.html#storaged-manager-iscsi-initiator-complete-discover-send-targets" since="2.3.1"/>
+    <keyword type="function" name="storaged_manager_iscsi_initiator_complete_get_initiator_name ()" link="StoragedManagerISCSIInitiator.html#storaged-manager-iscsi-initiator-complete-get-initiator-name" since="2.0.1"/>
+    <keyword type="function" name="storaged_manager_iscsi_initiator_complete_login ()" link="StoragedManagerISCSIInitiator.html#storaged-manager-iscsi-initiator-complete-login" since="2.1.3"/>
+    <keyword type="function" name="storaged_manager_iscsi_initiator_complete_logout ()" link="StoragedManagerISCSIInitiator.html#storaged-manager-iscsi-initiator-complete-logout" since="2.1.3"/>
+    <keyword type="function" name="storaged_manager_iscsi_initiator_complete_set_initiator_name ()" link="StoragedManagerISCSIInitiator.html#storaged-manager-iscsi-initiator-complete-set-initiator-name" since="2.1.3"/>
+    <keyword type="function" name="storaged_manager_iscsi_initiator_interface_info ()" link="StoragedManagerISCSIInitiator.html#storaged-manager-iscsi-initiator-interface-info" since="2.0.1"/>
+    <keyword type="function" name="storaged_manager_iscsi_initiator_override_properties ()" link="StoragedManagerISCSIInitiator.html#storaged-manager-iscsi-initiator-override-properties" since="2.0.1"/>
     <keyword type="function" name="storaged_manager_iscsi_initiator_proxy_new ()" link="StoragedManagerISCSIInitiator.html#storaged-manager-iscsi-initiator-proxy-new" since="2.0.1"/>
     <keyword type="function" name="storaged_manager_iscsi_initiator_proxy_new_finish ()" link="StoragedManagerISCSIInitiator.html#storaged-manager-iscsi-initiator-proxy-new-finish" since="2.0.1"/>
-    <keyword type="function" name="storaged_manager_iscsi_initiator_proxy_new_sync ()" link="StoragedManagerISCSIInitiator.html#storaged-manager-iscsi-initiator-proxy-new-sync" since="2.0.1"/>
     <keyword type="function" name="storaged_manager_iscsi_initiator_proxy_new_for_bus ()" link="StoragedManagerISCSIInitiator.html#storaged-manager-iscsi-initiator-proxy-new-for-bus" since="2.0.1"/>
     <keyword type="function" name="storaged_manager_iscsi_initiator_proxy_new_for_bus_finish ()" link="StoragedManagerISCSIInitiator.html#storaged-manager-iscsi-initiator-proxy-new-for-bus-finish" since="2.0.1"/>
     <keyword type="function" name="storaged_manager_iscsi_initiator_proxy_new_for_bus_sync ()" link="StoragedManagerISCSIInitiator.html#storaged-manager-iscsi-initiator-proxy-new-for-bus-sync" since="2.0.1"/>
+    <keyword type="function" name="storaged_manager_iscsi_initiator_proxy_new_sync ()" link="StoragedManagerISCSIInitiator.html#storaged-manager-iscsi-initiator-proxy-new-sync" since="2.0.1"/>
     <keyword type="function" name="storaged_manager_iscsi_initiator_skeleton_new ()" link="StoragedManagerISCSIInitiator.html#storaged-manager-iscsi-initiator-skeleton-new" since="2.0.1"/>
     <keyword type="struct" name="StoragedManagerISCSIInitiator" link="StoragedManagerISCSIInitiator.html#StoragedManagerISCSIInitiator-struct"/>
     <keyword type="struct" name="struct StoragedManagerISCSIInitiatorIface" link="StoragedManagerISCSIInitiator.html#StoragedManagerISCSIInitiatorIface" since="2.0.1"/>
@@ -1649,8 +1644,7 @@
     <keyword type="struct" name="struct StoragedManagerISCSIInitiatorSkeleton" link="StoragedManagerISCSIInitiator.html#StoragedManagerISCSIInitiatorSkeleton-struct"/>
     <keyword type="struct" name="struct StoragedManagerISCSIInitiatorSkeletonClass" link="StoragedManagerISCSIInitiator.html#StoragedManagerISCSIInitiatorSkeletonClass" since="2.0.1"/>
     <keyword type="signal" name="The “handle-discover-firmware” signal" link="StoragedManagerISCSIInitiator.html#StoragedManagerISCSIInitiator-handle-discover-firmware"/>
-    <keyword type="signal" name="The “handle-discover-send-targets-chap” signal" link="StoragedManagerISCSIInitiator.html#StoragedManagerISCSIInitiator-handle-discover-send-targets-chap"/>
-    <keyword type="signal" name="The “handle-discover-send-targets-no-auth” signal" link="StoragedManagerISCSIInitiator.html#StoragedManagerISCSIInitiator-handle-discover-send-targets-no-auth"/>
+    <keyword type="signal" name="The “handle-discover-send-targets” signal" link="StoragedManagerISCSIInitiator.html#StoragedManagerISCSIInitiator-handle-discover-send-targets"/>
     <keyword type="signal" name="The “handle-get-initiator-name” signal" link="StoragedManagerISCSIInitiator.html#StoragedManagerISCSIInitiator-handle-get-initiator-name"/>
     <keyword type="signal" name="The “handle-login” signal" link="StoragedManagerISCSIInitiator.html#StoragedManagerISCSIInitiator-handle-login"/>
     <keyword type="signal" name="The “handle-logout” signal" link="StoragedManagerISCSIInitiator.html#StoragedManagerISCSIInitiator-handle-logout"/>

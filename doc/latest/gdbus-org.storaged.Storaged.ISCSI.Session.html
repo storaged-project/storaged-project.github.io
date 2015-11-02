@@ -70,7 +70,10 @@ Logout (IN  a{sv} options);
 </pre>
 <p>        Logout iSCSI node in this session; default interface is used.
 </p>
-<p>        No additional options are currently defined.
+<p>        All the additional options are transformed into the interface
+        parameters.  For example, if an automatic node startup is not desired,
+        the <em class="parameter"><code>node.startup</code></em> needs to be set to
+        '<span class="emphasis"><em>manual</em></span>'.
 </p>
 <div class="variablelist"><table border="0" class="variablelist">
 <colgroup>
@@ -93,7 +96,10 @@ LogoutInterface (IN  s     iface,
 </pre>
 <p>        Logout iSCSI node in this session; <em class="parameter"><code>iface</code></em> is used.
 </p>
-<p>        No additional options are currently defined.
+<p>        All the additional options are transformed into the interface
+        parameters.  For example, if an automatic node startup is not desired,
+        the <em class="parameter"><code>node.startup</code></em> needs to be set to
+        '<span class="emphasis"><em>manual</em></span>'.
 </p>
 <div class="variablelist"><table border="0" class="variablelist">
 <colgroup>
