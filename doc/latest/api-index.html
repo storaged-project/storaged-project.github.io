@@ -69,6 +69,30 @@
 </dt>
 <dt>org.storaged.Storaged.Block.AddConfigurationItem(), <a class="indexterm" href="gdbus-org.storaged.Storaged.Block.html#gdbus-method-org-storaged-Storaged-Block.AddConfigurationItem">The AddConfigurationItem() method</a>
 </dt>
+<dt>org.storaged.Storaged.Block.Bcache, <a class="indexterm" href="gdbus-org.storaged.Storaged.Block.Bcache.html#gdbus-interface-org-storaged-Storaged-Block-Bcache.top_of_page">org.storaged.Storaged.Block.Bcache</a>
+</dt>
+<dt>org.storaged.Storaged.Block.Bcache.BcacheDestroy(), <a class="indexterm" href="gdbus-org.storaged.Storaged.Block.Bcache.html#gdbus-method-org-storaged-Storaged-Block-Bcache.BcacheDestroy">The BcacheDestroy() method</a>
+</dt>
+<dt>org.storaged.Storaged.Block.Bcache.SetMode(), <a class="indexterm" href="gdbus-org.storaged.Storaged.Block.Bcache.html#gdbus-method-org-storaged-Storaged-Block-Bcache.SetMode">The SetMode() method</a>
+</dt>
+<dt>org.storaged.Storaged.Block.Bcache:block_size, <a class="indexterm" href="gdbus-org.storaged.Storaged.Block.Bcache.html#gdbus-property-org-storaged-Storaged-Block-Bcache.block_size">The "block_size" property</a>
+</dt>
+<dt>org.storaged.Storaged.Block.Bcache:bypass_hits, <a class="indexterm" href="gdbus-org.storaged.Storaged.Block.Bcache.html#gdbus-property-org-storaged-Storaged-Block-Bcache.bypass_hits">The "bypass_hits" property</a>
+</dt>
+<dt>org.storaged.Storaged.Block.Bcache:bypass_misses, <a class="indexterm" href="gdbus-org.storaged.Storaged.Block.Bcache.html#gdbus-property-org-storaged-Storaged-Block-Bcache.bypass_misses">The "bypass_misses" property</a>
+</dt>
+<dt>org.storaged.Storaged.Block.Bcache:cache_size, <a class="indexterm" href="gdbus-org.storaged.Storaged.Block.Bcache.html#gdbus-property-org-storaged-Storaged-Block-Bcache.cache_size">The "cache_size" property</a>
+</dt>
+<dt>org.storaged.Storaged.Block.Bcache:cache_used, <a class="indexterm" href="gdbus-org.storaged.Storaged.Block.Bcache.html#gdbus-property-org-storaged-Storaged-Block-Bcache.cache_used">The "cache_used" property</a>
+</dt>
+<dt>org.storaged.Storaged.Block.Bcache:hits, <a class="indexterm" href="gdbus-org.storaged.Storaged.Block.Bcache.html#gdbus-property-org-storaged-Storaged-Block-Bcache.hits">The "hits" property</a>
+</dt>
+<dt>org.storaged.Storaged.Block.Bcache:misses, <a class="indexterm" href="gdbus-org.storaged.Storaged.Block.Bcache.html#gdbus-property-org-storaged-Storaged-Block-Bcache.misses">The "misses" property</a>
+</dt>
+<dt>org.storaged.Storaged.Block.Bcache:mode, <a class="indexterm" href="gdbus-org.storaged.Storaged.Block.Bcache.html#gdbus-property-org-storaged-Storaged-Block-Bcache.mode">The "mode" property</a>
+</dt>
+<dt>org.storaged.Storaged.Block.Bcache:state, <a class="indexterm" href="gdbus-org.storaged.Storaged.Block.Bcache.html#gdbus-property-org-storaged-Storaged-Block-Bcache.state">The "state" property</a>
+</dt>
 <dt>org.storaged.Storaged.Block.Format(), <a class="indexterm" href="gdbus-org.storaged.Storaged.Block.html#gdbus-method-org-storaged-Storaged-Block.Format">The Format() method</a>
 </dt>
 <dt>org.storaged.Storaged.Block.GetSecretConfiguration(), <a class="indexterm" href="gdbus-org.storaged.Storaged.Block.html#gdbus-method-org-storaged-Storaged-Block.GetSecretConfiguration">The GetSecretConfiguration() method</a>
@@ -235,6 +259,40 @@
 </dt>
 <dt>StoragedBlock:symlinks, <a class="indexterm" href="StoragedBlock.html#StoragedBlock--symlinks">The “symlinks” property</a>
 </dt>
+<dt>StoragedBlockBcache, <a class="indexterm" href="StoragedBlockBcache.html#StoragedBlockBcache-struct">StoragedBlockBcache</a>
+</dt>
+<dt>StoragedBlockBcache::handle-bcache-destroy, <a class="indexterm" href="StoragedBlockBcache.html#StoragedBlockBcache-handle-bcache-destroy">The “handle-bcache-destroy” signal</a>
+</dt>
+<dt>StoragedBlockBcache::handle-set-mode, <a class="indexterm" href="StoragedBlockBcache.html#StoragedBlockBcache-handle-set-mode">The “handle-set-mode” signal</a>
+</dt>
+<dt>StoragedBlockBcache:block-size, <a class="indexterm" href="StoragedBlockBcache.html#StoragedBlockBcache--block-size">The “block-size” property</a>
+</dt>
+<dt>StoragedBlockBcache:bypass-hits, <a class="indexterm" href="StoragedBlockBcache.html#StoragedBlockBcache--bypass-hits">The “bypass-hits” property</a>
+</dt>
+<dt>StoragedBlockBcache:bypass-misses, <a class="indexterm" href="StoragedBlockBcache.html#StoragedBlockBcache--bypass-misses">The “bypass-misses” property</a>
+</dt>
+<dt>StoragedBlockBcache:cache-size, <a class="indexterm" href="StoragedBlockBcache.html#StoragedBlockBcache--cache-size">The “cache-size” property</a>
+</dt>
+<dt>StoragedBlockBcache:cache-used, <a class="indexterm" href="StoragedBlockBcache.html#StoragedBlockBcache--cache-used">The “cache-used” property</a>
+</dt>
+<dt>StoragedBlockBcache:hits, <a class="indexterm" href="StoragedBlockBcache.html#StoragedBlockBcache--hits">The “hits” property</a>
+</dt>
+<dt>StoragedBlockBcache:misses, <a class="indexterm" href="StoragedBlockBcache.html#StoragedBlockBcache--misses">The “misses” property</a>
+</dt>
+<dt>StoragedBlockBcache:mode, <a class="indexterm" href="StoragedBlockBcache.html#StoragedBlockBcache--mode">The “mode” property</a>
+</dt>
+<dt>StoragedBlockBcache:state, <a class="indexterm" href="StoragedBlockBcache.html#StoragedBlockBcache--state">The “state” property</a>
+</dt>
+<dt>StoragedBlockBcacheIface, <a class="indexterm" href="StoragedBlockBcache.html#StoragedBlockBcacheIface">struct StoragedBlockBcacheIface</a>
+</dt>
+<dt>StoragedBlockBcacheProxy, <a class="indexterm" href="StoragedBlockBcache.html#StoragedBlockBcacheProxy-struct">struct StoragedBlockBcacheProxy</a>
+</dt>
+<dt>StoragedBlockBcacheProxyClass, <a class="indexterm" href="StoragedBlockBcache.html#StoragedBlockBcacheProxyClass">struct StoragedBlockBcacheProxyClass</a>
+</dt>
+<dt>StoragedBlockBcacheSkeleton, <a class="indexterm" href="StoragedBlockBcache.html#StoragedBlockBcacheSkeleton-struct">struct StoragedBlockBcacheSkeleton</a>
+</dt>
+<dt>StoragedBlockBcacheSkeletonClass, <a class="indexterm" href="StoragedBlockBcache.html#StoragedBlockBcacheSkeletonClass">struct StoragedBlockBcacheSkeletonClass</a>
+</dt>
 <dt>StoragedBlockIface, <a class="indexterm" href="StoragedBlock.html#StoragedBlockIface">struct StoragedBlockIface</a>
 </dt>
 <dt>StoragedBlockLVM2, <a class="indexterm" href="storaged-StoragedBlockLVM2.html#StoragedBlockLVM2">StoragedBlockLVM2</a>
@@ -298,6 +356,80 @@
 <dt>StoragedBlockZRAMSkeleton, <a class="indexterm" href="StoragedBlockZRAM.html#StoragedBlockZRAMSkeleton-struct">struct StoragedBlockZRAMSkeleton</a>
 </dt>
 <dt>StoragedBlockZRAMSkeletonClass, <a class="indexterm" href="StoragedBlockZRAM.html#StoragedBlockZRAMSkeletonClass">struct StoragedBlockZRAMSkeletonClass</a>
+</dt>
+<dt>storaged_block_bcache_call_bcache_destroy, <a class="indexterm" href="StoragedBlockBcache.html#storaged-block-bcache-call-bcache-destroy">storaged_block_bcache_call_bcache_destroy ()</a>
+</dt>
+<dt>storaged_block_bcache_call_bcache_destroy_finish, <a class="indexterm" href="StoragedBlockBcache.html#storaged-block-bcache-call-bcache-destroy-finish">storaged_block_bcache_call_bcache_destroy_finish ()</a>
+</dt>
+<dt>storaged_block_bcache_call_bcache_destroy_sync, <a class="indexterm" href="StoragedBlockBcache.html#storaged-block-bcache-call-bcache-destroy-sync">storaged_block_bcache_call_bcache_destroy_sync ()</a>
+</dt>
+<dt>storaged_block_bcache_call_set_mode, <a class="indexterm" href="StoragedBlockBcache.html#storaged-block-bcache-call-set-mode">storaged_block_bcache_call_set_mode ()</a>
+</dt>
+<dt>storaged_block_bcache_call_set_mode_finish, <a class="indexterm" href="StoragedBlockBcache.html#storaged-block-bcache-call-set-mode-finish">storaged_block_bcache_call_set_mode_finish ()</a>
+</dt>
+<dt>storaged_block_bcache_call_set_mode_sync, <a class="indexterm" href="StoragedBlockBcache.html#storaged-block-bcache-call-set-mode-sync">storaged_block_bcache_call_set_mode_sync ()</a>
+</dt>
+<dt>storaged_block_bcache_complete_bcache_destroy, <a class="indexterm" href="StoragedBlockBcache.html#storaged-block-bcache-complete-bcache-destroy">storaged_block_bcache_complete_bcache_destroy ()</a>
+</dt>
+<dt>storaged_block_bcache_complete_set_mode, <a class="indexterm" href="StoragedBlockBcache.html#storaged-block-bcache-complete-set-mode">storaged_block_bcache_complete_set_mode ()</a>
+</dt>
+<dt>storaged_block_bcache_dup_mode, <a class="indexterm" href="StoragedBlockBcache.html#storaged-block-bcache-dup-mode">storaged_block_bcache_dup_mode ()</a>
+</dt>
+<dt>storaged_block_bcache_dup_state, <a class="indexterm" href="StoragedBlockBcache.html#storaged-block-bcache-dup-state">storaged_block_bcache_dup_state ()</a>
+</dt>
+<dt>storaged_block_bcache_get_block_size, <a class="indexterm" href="StoragedBlockBcache.html#storaged-block-bcache-get-block-size">storaged_block_bcache_get_block_size ()</a>
+</dt>
+<dt>storaged_block_bcache_get_bypass_hits, <a class="indexterm" href="StoragedBlockBcache.html#storaged-block-bcache-get-bypass-hits">storaged_block_bcache_get_bypass_hits ()</a>
+</dt>
+<dt>storaged_block_bcache_get_bypass_misses, <a class="indexterm" href="StoragedBlockBcache.html#storaged-block-bcache-get-bypass-misses">storaged_block_bcache_get_bypass_misses ()</a>
+</dt>
+<dt>storaged_block_bcache_get_cache_size, <a class="indexterm" href="StoragedBlockBcache.html#storaged-block-bcache-get-cache-size">storaged_block_bcache_get_cache_size ()</a>
+</dt>
+<dt>storaged_block_bcache_get_cache_used, <a class="indexterm" href="StoragedBlockBcache.html#storaged-block-bcache-get-cache-used">storaged_block_bcache_get_cache_used ()</a>
+</dt>
+<dt>storaged_block_bcache_get_hits, <a class="indexterm" href="StoragedBlockBcache.html#storaged-block-bcache-get-hits">storaged_block_bcache_get_hits ()</a>
+</dt>
+<dt>storaged_block_bcache_get_misses, <a class="indexterm" href="StoragedBlockBcache.html#storaged-block-bcache-get-misses">storaged_block_bcache_get_misses ()</a>
+</dt>
+<dt>storaged_block_bcache_get_mode, <a class="indexterm" href="StoragedBlockBcache.html#storaged-block-bcache-get-mode">storaged_block_bcache_get_mode ()</a>
+</dt>
+<dt>storaged_block_bcache_get_state, <a class="indexterm" href="StoragedBlockBcache.html#storaged-block-bcache-get-state">storaged_block_bcache_get_state ()</a>
+</dt>
+<dt>storaged_block_bcache_interface_info, <a class="indexterm" href="StoragedBlockBcache.html#storaged-block-bcache-interface-info">storaged_block_bcache_interface_info ()</a>
+</dt>
+<dt>storaged_block_bcache_override_properties, <a class="indexterm" href="StoragedBlockBcache.html#storaged-block-bcache-override-properties">storaged_block_bcache_override_properties ()</a>
+</dt>
+<dt>storaged_block_bcache_proxy_new, <a class="indexterm" href="StoragedBlockBcache.html#storaged-block-bcache-proxy-new">storaged_block_bcache_proxy_new ()</a>
+</dt>
+<dt>storaged_block_bcache_proxy_new_finish, <a class="indexterm" href="StoragedBlockBcache.html#storaged-block-bcache-proxy-new-finish">storaged_block_bcache_proxy_new_finish ()</a>
+</dt>
+<dt>storaged_block_bcache_proxy_new_for_bus, <a class="indexterm" href="StoragedBlockBcache.html#storaged-block-bcache-proxy-new-for-bus">storaged_block_bcache_proxy_new_for_bus ()</a>
+</dt>
+<dt>storaged_block_bcache_proxy_new_for_bus_finish, <a class="indexterm" href="StoragedBlockBcache.html#storaged-block-bcache-proxy-new-for-bus-finish">storaged_block_bcache_proxy_new_for_bus_finish ()</a>
+</dt>
+<dt>storaged_block_bcache_proxy_new_for_bus_sync, <a class="indexterm" href="StoragedBlockBcache.html#storaged-block-bcache-proxy-new-for-bus-sync">storaged_block_bcache_proxy_new_for_bus_sync ()</a>
+</dt>
+<dt>storaged_block_bcache_proxy_new_sync, <a class="indexterm" href="StoragedBlockBcache.html#storaged-block-bcache-proxy-new-sync">storaged_block_bcache_proxy_new_sync ()</a>
+</dt>
+<dt>storaged_block_bcache_set_block_size, <a class="indexterm" href="StoragedBlockBcache.html#storaged-block-bcache-set-block-size">storaged_block_bcache_set_block_size ()</a>
+</dt>
+<dt>storaged_block_bcache_set_bypass_hits, <a class="indexterm" href="StoragedBlockBcache.html#storaged-block-bcache-set-bypass-hits">storaged_block_bcache_set_bypass_hits ()</a>
+</dt>
+<dt>storaged_block_bcache_set_bypass_misses, <a class="indexterm" href="StoragedBlockBcache.html#storaged-block-bcache-set-bypass-misses">storaged_block_bcache_set_bypass_misses ()</a>
+</dt>
+<dt>storaged_block_bcache_set_cache_size, <a class="indexterm" href="StoragedBlockBcache.html#storaged-block-bcache-set-cache-size">storaged_block_bcache_set_cache_size ()</a>
+</dt>
+<dt>storaged_block_bcache_set_cache_used, <a class="indexterm" href="StoragedBlockBcache.html#storaged-block-bcache-set-cache-used">storaged_block_bcache_set_cache_used ()</a>
+</dt>
+<dt>storaged_block_bcache_set_hits, <a class="indexterm" href="StoragedBlockBcache.html#storaged-block-bcache-set-hits">storaged_block_bcache_set_hits ()</a>
+</dt>
+<dt>storaged_block_bcache_set_misses, <a class="indexterm" href="StoragedBlockBcache.html#storaged-block-bcache-set-misses">storaged_block_bcache_set_misses ()</a>
+</dt>
+<dt>storaged_block_bcache_set_mode, <a class="indexterm" href="StoragedBlockBcache.html#storaged-block-bcache-set-mode">storaged_block_bcache_set_mode ()</a>
+</dt>
+<dt>storaged_block_bcache_set_state, <a class="indexterm" href="StoragedBlockBcache.html#storaged-block-bcache-set-state">storaged_block_bcache_set_state ()</a>
+</dt>
+<dt>storaged_block_bcache_skeleton_new, <a class="indexterm" href="StoragedBlockBcache.html#storaged-block-bcache-skeleton-new">storaged_block_bcache_skeleton_new ()</a>
 </dt>
 <dt>storaged_block_call_add_configuration_item, <a class="indexterm" href="StoragedBlock.html#storaged-block-call-add-configuration-item">storaged_block_call_add_configuration_item ()</a>
 </dt>
@@ -2254,7 +2386,7 @@
 </dt>
 <dt>StoragedLinuxDrive, <a class="indexterm" href="StoragedLinuxDrive.html#StoragedLinuxDrive-struct">StoragedLinuxDrive</a>
 </dt>
-<dt>StoragedLinuxDriveAta, <a class="indexterm" href="storaged-DummyLinuxBlock.html#StoragedLinuxDriveAta-struct">StoragedLinuxDriveAta</a>
+<dt>StoragedLinuxDriveAta, <a class="indexterm" href="storaged-DummyLinuxDrive.html#StoragedLinuxDriveAta-struct">StoragedLinuxDriveAta</a>
 </dt>
 <dt>StoragedLinuxDriveObject, <a class="indexterm" href="StoragedLinuxDriveObject.html#StoragedLinuxDriveObject-struct">StoragedLinuxDriveObject</a>
 </dt>
@@ -2308,17 +2440,17 @@
 </dt>
 <dt>storaged_linux_device_reprobe_sync, <a class="indexterm" href="StoragedLinuxDevice.html#storaged-linux-device-reprobe-sync">storaged_linux_device_reprobe_sync ()</a>
 </dt>
-<dt>storaged_linux_drive_ata_apply_configuration, <a class="indexterm" href="storaged-DummyLinuxBlock.html#storaged-linux-drive-ata-apply-configuration">storaged_linux_drive_ata_apply_configuration ()</a>
+<dt>storaged_linux_drive_ata_apply_configuration, <a class="indexterm" href="storaged-DummyLinuxDrive.html#storaged-linux-drive-ata-apply-configuration">storaged_linux_drive_ata_apply_configuration ()</a>
 </dt>
-<dt>storaged_linux_drive_ata_new, <a class="indexterm" href="storaged-DummyLinuxBlock.html#storaged-linux-drive-ata-new">storaged_linux_drive_ata_new ()</a>
+<dt>storaged_linux_drive_ata_new, <a class="indexterm" href="storaged-DummyLinuxDrive.html#storaged-linux-drive-ata-new">storaged_linux_drive_ata_new ()</a>
 </dt>
-<dt>storaged_linux_drive_ata_refresh_smart_sync, <a class="indexterm" href="storaged-DummyLinuxBlock.html#storaged-linux-drive-ata-refresh-smart-sync">storaged_linux_drive_ata_refresh_smart_sync ()</a>
+<dt>storaged_linux_drive_ata_refresh_smart_sync, <a class="indexterm" href="storaged-DummyLinuxDrive.html#storaged-linux-drive-ata-refresh-smart-sync">storaged_linux_drive_ata_refresh_smart_sync ()</a>
 </dt>
-<dt>storaged_linux_drive_ata_secure_erase_sync, <a class="indexterm" href="storaged-DummyLinuxBlock.html#storaged-linux-drive-ata-secure-erase-sync">storaged_linux_drive_ata_secure_erase_sync ()</a>
+<dt>storaged_linux_drive_ata_secure_erase_sync, <a class="indexterm" href="storaged-DummyLinuxDrive.html#storaged-linux-drive-ata-secure-erase-sync">storaged_linux_drive_ata_secure_erase_sync ()</a>
 </dt>
-<dt>storaged_linux_drive_ata_smart_selftest_sync, <a class="indexterm" href="storaged-DummyLinuxBlock.html#storaged-linux-drive-ata-smart-selftest-sync">storaged_linux_drive_ata_smart_selftest_sync ()</a>
+<dt>storaged_linux_drive_ata_smart_selftest_sync, <a class="indexterm" href="storaged-DummyLinuxDrive.html#storaged-linux-drive-ata-smart-selftest-sync">storaged_linux_drive_ata_smart_selftest_sync ()</a>
 </dt>
-<dt>storaged_linux_drive_ata_update, <a class="indexterm" href="storaged-DummyLinuxBlock.html#storaged-linux-drive-ata-update">storaged_linux_drive_ata_update ()</a>
+<dt>storaged_linux_drive_ata_update, <a class="indexterm" href="storaged-DummyLinuxDrive.html#storaged-linux-drive-ata-update">storaged_linux_drive_ata_update ()</a>
 </dt>
 <dt>storaged_linux_drive_new, <a class="indexterm" href="StoragedLinuxDrive.html#storaged-linux-drive-new">storaged_linux_drive_new ()</a>
 </dt>
@@ -2683,6 +2815,10 @@
 </dt>
 <dt>StoragedManager, <a class="indexterm" href="StoragedManager.html#StoragedManager-struct">StoragedManager</a>
 </dt>
+<dt>org.storaged.Storaged.Manager.Bcache, <a class="indexterm" href="gdbus-org.storaged.Storaged.Manager.Bcache.html#gdbus-interface-org-storaged-Storaged-Manager-Bcache.top_of_page">org.storaged.Storaged.Manager.Bcache</a>
+</dt>
+<dt>org.storaged.Storaged.Manager.Bcache.BcacheCreate(), <a class="indexterm" href="gdbus-org.storaged.Storaged.Manager.Bcache.html#gdbus-method-org-storaged-Storaged-Manager-Bcache.BcacheCreate">The BcacheCreate() method</a>
+</dt>
 <dt>org.storaged.Storaged.Manager.BTRFS, <a class="indexterm" href="gdbus-org.storaged.Storaged.Manager.BTRFS.html#gdbus-interface-org-storaged-Storaged-Manager-BTRFS.top_of_page">org.storaged.Storaged.Manager.BTRFS</a>
 </dt>
 <dt>org.storaged.Storaged.Manager.BTRFS.CreateVolume(), <a class="indexterm" href="gdbus-org.storaged.Storaged.Manager.BTRFS.html#gdbus-method-org-storaged-Storaged-Manager-BTRFS.CreateVolume">The CreateVolume() method</a>
@@ -2715,6 +2851,20 @@
 </dt>
 <dt>StoragedManager:version, <a class="indexterm" href="StoragedManager.html#StoragedManager--version">The “version” property</a>
 </dt>
+<dt>StoragedManagerBcache, <a class="indexterm" href="StoragedManagerBcache.html#StoragedManagerBcache-struct">StoragedManagerBcache</a>
+</dt>
+<dt>StoragedManagerBcache::handle-bcache-create, <a class="indexterm" href="StoragedManagerBcache.html#StoragedManagerBcache-handle-bcache-create">The “handle-bcache-create” signal</a>
+</dt>
+<dt>StoragedManagerBcacheIface, <a class="indexterm" href="StoragedManagerBcache.html#StoragedManagerBcacheIface">struct StoragedManagerBcacheIface</a>
+</dt>
+<dt>StoragedManagerBcacheProxy, <a class="indexterm" href="StoragedManagerBcache.html#StoragedManagerBcacheProxy-struct">struct StoragedManagerBcacheProxy</a>
+</dt>
+<dt>StoragedManagerBcacheProxyClass, <a class="indexterm" href="StoragedManagerBcache.html#StoragedManagerBcacheProxyClass">struct StoragedManagerBcacheProxyClass</a>
+</dt>
+<dt>StoragedManagerBcacheSkeleton, <a class="indexterm" href="StoragedManagerBcache.html#StoragedManagerBcacheSkeleton-struct">struct StoragedManagerBcacheSkeleton</a>
+</dt>
+<dt>StoragedManagerBcacheSkeletonClass, <a class="indexterm" href="StoragedManagerBcache.html#StoragedManagerBcacheSkeletonClass">struct StoragedManagerBcacheSkeletonClass</a>
+</dt>
 <dt>StoragedManagerBTRFS, <a class="indexterm" href="StoragedManagerBTRFS.html#StoragedManagerBTRFS-struct">StoragedManagerBTRFS</a>
 </dt>
 <dt>StoragedManagerBTRFS::handle-create-volume, <a class="indexterm" href="StoragedManagerBTRFS.html#StoragedManagerBTRFS-handle-create-volume">The “handle-create-volume” signal</a>
@@ -2739,6 +2889,8 @@
 </dt>
 <dt>org.storaged.Storaged.Manager.ISCSI.Initiator.DiscoverSendTargets(), <a class="indexterm" href="gdbus-org.storaged.Storaged.Manager.ISCSI.Initiator.html#gdbus-method-org-storaged-Storaged-Manager-ISCSI-Initiator.DiscoverSendTargets">The DiscoverSendTargets() method</a>
 </dt>
+<dt>org.storaged.Storaged.Manager.ISCSI.Initiator.GetFirmwareInitiatorName(), <a class="indexterm" href="gdbus-org.storaged.Storaged.Manager.ISCSI.Initiator.html#gdbus-method-org-storaged-Storaged-Manager-ISCSI-Initiator.GetFirmwareInitiatorName">The GetFirmwareInitiatorName() method</a>
+</dt>
 <dt>org.storaged.Storaged.Manager.ISCSI.Initiator.GetInitiatorName(), <a class="indexterm" href="gdbus-org.storaged.Storaged.Manager.ISCSI.Initiator.html#gdbus-method-org-storaged-Storaged-Manager-ISCSI-Initiator.GetInitiatorName">The GetInitiatorName() method</a>
 </dt>
 <dt>org.storaged.Storaged.Manager.ISCSI.Initiator.Login(), <a class="indexterm" href="gdbus-org.storaged.Storaged.Manager.ISCSI.Initiator.html#gdbus-method-org-storaged-Storaged-Manager-ISCSI-Initiator.Login">The Login() method</a>
@@ -2750,6 +2902,8 @@
 <dt>StoragedManagerISCSIInitiator::handle-discover-firmware, <a class="indexterm" href="StoragedManagerISCSIInitiator.html#StoragedManagerISCSIInitiator-handle-discover-firmware">The “handle-discover-firmware” signal</a>
 </dt>
 <dt>StoragedManagerISCSIInitiator::handle-discover-send-targets, <a class="indexterm" href="StoragedManagerISCSIInitiator.html#StoragedManagerISCSIInitiator-handle-discover-send-targets">The “handle-discover-send-targets” signal</a>
+</dt>
+<dt>StoragedManagerISCSIInitiator::handle-get-firmware-initiator-name, <a class="indexterm" href="StoragedManagerISCSIInitiator.html#StoragedManagerISCSIInitiator-handle-get-firmware-initiator-name">The “handle-get-firmware-initiator-name” signal</a>
 </dt>
 <dt>StoragedManagerISCSIInitiator::handle-get-initiator-name, <a class="indexterm" href="StoragedManagerISCSIInitiator.html#StoragedManagerISCSIInitiator-handle-get-initiator-name">The “handle-get-initiator-name” signal</a>
 </dt>
@@ -2816,6 +2970,32 @@
 <dt>StoragedManagerZRAMSkeleton, <a class="indexterm" href="StoragedManagerZRAM.html#StoragedManagerZRAMSkeleton-struct">struct StoragedManagerZRAMSkeleton</a>
 </dt>
 <dt>StoragedManagerZRAMSkeletonClass, <a class="indexterm" href="StoragedManagerZRAM.html#StoragedManagerZRAMSkeletonClass">struct StoragedManagerZRAMSkeletonClass</a>
+</dt>
+<dt>storaged_manager_bcache_call_bcache_create, <a class="indexterm" href="StoragedManagerBcache.html#storaged-manager-bcache-call-bcache-create">storaged_manager_bcache_call_bcache_create ()</a>
+</dt>
+<dt>storaged_manager_bcache_call_bcache_create_finish, <a class="indexterm" href="StoragedManagerBcache.html#storaged-manager-bcache-call-bcache-create-finish">storaged_manager_bcache_call_bcache_create_finish ()</a>
+</dt>
+<dt>storaged_manager_bcache_call_bcache_create_sync, <a class="indexterm" href="StoragedManagerBcache.html#storaged-manager-bcache-call-bcache-create-sync">storaged_manager_bcache_call_bcache_create_sync ()</a>
+</dt>
+<dt>storaged_manager_bcache_complete_bcache_create, <a class="indexterm" href="StoragedManagerBcache.html#storaged-manager-bcache-complete-bcache-create">storaged_manager_bcache_complete_bcache_create ()</a>
+</dt>
+<dt>storaged_manager_bcache_interface_info, <a class="indexterm" href="StoragedManagerBcache.html#storaged-manager-bcache-interface-info">storaged_manager_bcache_interface_info ()</a>
+</dt>
+<dt>storaged_manager_bcache_override_properties, <a class="indexterm" href="StoragedManagerBcache.html#storaged-manager-bcache-override-properties">storaged_manager_bcache_override_properties ()</a>
+</dt>
+<dt>storaged_manager_bcache_proxy_new, <a class="indexterm" href="StoragedManagerBcache.html#storaged-manager-bcache-proxy-new">storaged_manager_bcache_proxy_new ()</a>
+</dt>
+<dt>storaged_manager_bcache_proxy_new_finish, <a class="indexterm" href="StoragedManagerBcache.html#storaged-manager-bcache-proxy-new-finish">storaged_manager_bcache_proxy_new_finish ()</a>
+</dt>
+<dt>storaged_manager_bcache_proxy_new_for_bus, <a class="indexterm" href="StoragedManagerBcache.html#storaged-manager-bcache-proxy-new-for-bus">storaged_manager_bcache_proxy_new_for_bus ()</a>
+</dt>
+<dt>storaged_manager_bcache_proxy_new_for_bus_finish, <a class="indexterm" href="StoragedManagerBcache.html#storaged-manager-bcache-proxy-new-for-bus-finish">storaged_manager_bcache_proxy_new_for_bus_finish ()</a>
+</dt>
+<dt>storaged_manager_bcache_proxy_new_for_bus_sync, <a class="indexterm" href="StoragedManagerBcache.html#storaged-manager-bcache-proxy-new-for-bus-sync">storaged_manager_bcache_proxy_new_for_bus_sync ()</a>
+</dt>
+<dt>storaged_manager_bcache_proxy_new_sync, <a class="indexterm" href="StoragedManagerBcache.html#storaged-manager-bcache-proxy-new-sync">storaged_manager_bcache_proxy_new_sync ()</a>
+</dt>
+<dt>storaged_manager_bcache_skeleton_new, <a class="indexterm" href="StoragedManagerBcache.html#storaged-manager-bcache-skeleton-new">storaged_manager_bcache_skeleton_new ()</a>
 </dt>
 <dt>storaged_manager_btrfs_call_create_volume, <a class="indexterm" href="StoragedManagerBTRFS.html#storaged-manager-btrfs-call-create-volume">storaged_manager_btrfs_call_create_volume ()</a>
 </dt>
@@ -2885,6 +3065,12 @@
 </dt>
 <dt>storaged_manager_iscsi_initiator_call_discover_send_targets_sync, <a class="indexterm" href="StoragedManagerISCSIInitiator.html#storaged-manager-iscsi-initiator-call-discover-send-targets-sync">storaged_manager_iscsi_initiator_call_discover_send_targets_sync ()</a>
 </dt>
+<dt>storaged_manager_iscsi_initiator_call_get_firmware_initiator_name, <a class="indexterm" href="StoragedManagerISCSIInitiator.html#storaged-manager-iscsi-initiator-call-get-firmware-initiator-name">storaged_manager_iscsi_initiator_call_get_firmware_initiator_name ()</a>
+</dt>
+<dt>storaged_manager_iscsi_initiator_call_get_firmware_initiator_name_finish, <a class="indexterm" href="StoragedManagerISCSIInitiator.html#storaged-manager-iscsi-initiator-call-get-firmware-initiator-name-finish">storaged_manager_iscsi_initiator_call_get_firmware_initiator_name_finish ()</a>
+</dt>
+<dt>storaged_manager_iscsi_initiator_call_get_firmware_initiator_name_sync, <a class="indexterm" href="StoragedManagerISCSIInitiator.html#storaged-manager-iscsi-initiator-call-get-firmware-initiator-name-sync">storaged_manager_iscsi_initiator_call_get_firmware_initiator_name_sync ()</a>
+</dt>
 <dt>storaged_manager_iscsi_initiator_call_get_initiator_name, <a class="indexterm" href="StoragedManagerISCSIInitiator.html#storaged-manager-iscsi-initiator-call-get-initiator-name">storaged_manager_iscsi_initiator_call_get_initiator_name ()</a>
 </dt>
 <dt>storaged_manager_iscsi_initiator_call_get_initiator_name_finish, <a class="indexterm" href="StoragedManagerISCSIInitiator.html#storaged-manager-iscsi-initiator-call-get-initiator-name-finish">storaged_manager_iscsi_initiator_call_get_initiator_name_finish ()</a>
@@ -2912,6 +3098,8 @@
 <dt>storaged_manager_iscsi_initiator_complete_discover_firmware, <a class="indexterm" href="StoragedManagerISCSIInitiator.html#storaged-manager-iscsi-initiator-complete-discover-firmware">storaged_manager_iscsi_initiator_complete_discover_firmware ()</a>
 </dt>
 <dt>storaged_manager_iscsi_initiator_complete_discover_send_targets, <a class="indexterm" href="StoragedManagerISCSIInitiator.html#storaged-manager-iscsi-initiator-complete-discover-send-targets">storaged_manager_iscsi_initiator_complete_discover_send_targets ()</a>
+</dt>
+<dt>storaged_manager_iscsi_initiator_complete_get_firmware_initiator_name, <a class="indexterm" href="StoragedManagerISCSIInitiator.html#storaged-manager-iscsi-initiator-complete-get-firmware-initiator-name">storaged_manager_iscsi_initiator_complete_get_firmware_initiator_name ()</a>
 </dt>
 <dt>storaged_manager_iscsi_initiator_complete_get_initiator_name, <a class="indexterm" href="StoragedManagerISCSIInitiator.html#storaged-manager-iscsi-initiator-complete-get-initiator-name">storaged_manager_iscsi_initiator_complete_get_initiator_name ()</a>
 </dt>

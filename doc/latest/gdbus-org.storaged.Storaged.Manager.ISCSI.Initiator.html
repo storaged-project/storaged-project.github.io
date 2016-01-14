@@ -34,29 +34,30 @@
 <div class="refsynopsisdiv">
 <h2>Methods</h2>
 <pre class="synopsis">
-<a class="link" href="gdbus-org.storaged.Storaged.Manager.ISCSI.Initiator.html#gdbus-method-org-storaged-Storaged-Manager-ISCSI-Initiator.GetInitiatorName" title="The GetInitiatorName() method">GetInitiatorName</a>    (OUT s        result);
-<a class="link" href="gdbus-org.storaged.Storaged.Manager.ISCSI.Initiator.html#gdbus-method-org-storaged-Storaged-Manager-ISCSI-Initiator.SetInitiatorName" title="The SetInitiatorName() method">SetInitiatorName</a>    (IN  s        name,
-                     IN  a{sv}    options);
-<a class="link" href="gdbus-org.storaged.Storaged.Manager.ISCSI.Initiator.html#gdbus-method-org-storaged-Storaged-Manager-ISCSI-Initiator.DiscoverSendTargets" title="The DiscoverSendTargets() method">DiscoverSendTargets</a> (IN  s        address,
-                     IN  q        port,
-                     IN  a{sv}    options,
-                     OUT a(sisis) nodes,
-                     OUT i        nodes_cnt);
-<a class="link" href="gdbus-org.storaged.Storaged.Manager.ISCSI.Initiator.html#gdbus-method-org-storaged-Storaged-Manager-ISCSI-Initiator.DiscoverFirmware" title="The DiscoverFirmware() method">DiscoverFirmware</a>    (IN  a{sv}    options,
-                     OUT a(sisis) nodes,
-                     OUT i        nodes_cnt);
-<a class="link" href="gdbus-org.storaged.Storaged.Manager.ISCSI.Initiator.html#gdbus-method-org-storaged-Storaged-Manager-ISCSI-Initiator.Login" title="The Login() method">Login</a>               (IN  s        name,
-                     IN  i        tpgt,
-                     IN  s        address,
-                     IN  i        port,
-                     IN  s        iface,
-                     IN  a{sv}    options);
-<a class="link" href="gdbus-org.storaged.Storaged.Manager.ISCSI.Initiator.html#gdbus-method-org-storaged-Storaged-Manager-ISCSI-Initiator.Logout" title="The Logout() method">Logout</a>              (IN  s        name,
-                     IN  i        tpgt,
-                     IN  s        address,
-                     IN  i        port,
-                     IN  s        iface,
-                     IN  a{sv}    options);
+<a class="link" href="gdbus-org.storaged.Storaged.Manager.ISCSI.Initiator.html#gdbus-method-org-storaged-Storaged-Manager-ISCSI-Initiator.GetFirmwareInitiatorName" title="The GetFirmwareInitiatorName() method">GetFirmwareInitiatorName</a> (OUT s        result);
+<a class="link" href="gdbus-org.storaged.Storaged.Manager.ISCSI.Initiator.html#gdbus-method-org-storaged-Storaged-Manager-ISCSI-Initiator.GetInitiatorName" title="The GetInitiatorName() method">GetInitiatorName</a>         (OUT s        result);
+<a class="link" href="gdbus-org.storaged.Storaged.Manager.ISCSI.Initiator.html#gdbus-method-org-storaged-Storaged-Manager-ISCSI-Initiator.SetInitiatorName" title="The SetInitiatorName() method">SetInitiatorName</a>         (IN  s        name,
+                          IN  a{sv}    options);
+<a class="link" href="gdbus-org.storaged.Storaged.Manager.ISCSI.Initiator.html#gdbus-method-org-storaged-Storaged-Manager-ISCSI-Initiator.DiscoverSendTargets" title="The DiscoverSendTargets() method">DiscoverSendTargets</a>      (IN  s        address,
+                          IN  q        port,
+                          IN  a{sv}    options,
+                          OUT a(sisis) nodes,
+                          OUT i        nodes_cnt);
+<a class="link" href="gdbus-org.storaged.Storaged.Manager.ISCSI.Initiator.html#gdbus-method-org-storaged-Storaged-Manager-ISCSI-Initiator.DiscoverFirmware" title="The DiscoverFirmware() method">DiscoverFirmware</a>         (IN  a{sv}    options,
+                          OUT a(sisis) nodes,
+                          OUT i        nodes_cnt);
+<a class="link" href="gdbus-org.storaged.Storaged.Manager.ISCSI.Initiator.html#gdbus-method-org-storaged-Storaged-Manager-ISCSI-Initiator.Login" title="The Login() method">Login</a>                    (IN  s        name,
+                          IN  i        tpgt,
+                          IN  s        address,
+                          IN  i        port,
+                          IN  s        iface,
+                          IN  a{sv}    options);
+<a class="link" href="gdbus-org.storaged.Storaged.Manager.ISCSI.Initiator.html#gdbus-method-org-storaged-Storaged-Manager-ISCSI-Initiator.Logout" title="The Logout() method">Logout</a>                   (IN  s        name,
+                          IN  i        tpgt,
+                          IN  s        address,
+                          IN  i        port,
+                          IN  s        iface,
+                          IN  a{sv}    options);
 </pre>
 </div>
 <div class="refsect1">
@@ -69,6 +70,26 @@
 </div>
 <div class="refsect1">
 <a name="gdbus-methods-org.storaged.Storaged.Manager.ISCSI.Initiator"></a><h2>Method Details</h2>
+<div class="refsect2">
+<a name="gdbus-method-org-storaged-Storaged-Manager-ISCSI-Initiator.GetFirmwareInitiatorName"></a><h3>The GetFirmwareInitiatorName() method</h3>
+<pre class="programlisting">
+GetFirmwareInitiatorName (OUT s result);
+</pre>
+<p>        Returns the iSCSI firmware initiator name.
+</p>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody><tr>
+<td><p><span class="term"><code class="literal">OUT s <em class="parameter"><code>result</code></em></code>:</span></p></td>
+<td><p>The iSCSI firmware initiator name.</p></td>
+</tr></tbody>
+</table></div>
+<p class="since">Since 2.4.0</p>
+</div>
+<hr>
 <div class="refsect2">
 <a name="gdbus-method-org-storaged-Storaged-Manager-ISCSI-Initiator.GetInitiatorName"></a><h3>The GetInitiatorName() method</h3>
 <pre class="programlisting">

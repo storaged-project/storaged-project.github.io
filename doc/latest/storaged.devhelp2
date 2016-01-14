@@ -47,6 +47,8 @@
         <sub name="org.storaged.Storaged.Filesystem.BTRFS" link="gdbus-org.storaged.Storaged.Filesystem.BTRFS.html"/>
         <sub name="org.storaged.Storaged.Manager.ZRAM" link="gdbus-org.storaged.Storaged.Manager.ZRAM.html"/>
         <sub name="org.storaged.Storaged.Block.ZRAM" link="gdbus-org.storaged.Storaged.Block.ZRAM.html"/>
+        <sub name="org.storaged.Storaged.Manager.Bcache" link="gdbus-org.storaged.Storaged.Manager.Bcache.html"/>
+        <sub name="org.storaged.Storaged.Block.Bcache" link="gdbus-org.storaged.Storaged.Block.Bcache.html"/>
       </sub>
     </sub>
     <sub name="Library API Reference" link="ref-library.html">
@@ -81,6 +83,8 @@
         <sub name="StoragedFilesystemBTRFS" link="StoragedFilesystemBTRFS.html"/>
         <sub name="StoragedManagerZRAM" link="StoragedManagerZRAM.html"/>
         <sub name="StoragedBlockZRAM" link="StoragedBlockZRAM.html"/>
+        <sub name="StoragedManagerBcache" link="StoragedManagerBcache.html"/>
+        <sub name="StoragedBlockBcache" link="StoragedBlockBcache.html"/>
       </sub>
     </sub>
     <sub name="Daemon Implementation Details" link="ref-daemon.html">
@@ -111,7 +115,7 @@
       </sub>
       <sub name="Drives on Linux" link="ref-daemon-drives.html">
         <sub name="StoragedLinuxDrive" link="StoragedLinuxDrive.html"/>
-        <sub name="DummyLinuxBlock" link="storaged-DummyLinuxBlock.html"/>
+        <sub name="DummyLinuxDrive" link="storaged-DummyLinuxDrive.html"/>
         <sub name="StoragedLinuxDriveObject" link="StoragedLinuxDriveObject.html"/>
       </sub>
       <sub name="Linux RAID" link="ref-daemon-mdraid.html">
@@ -131,7 +135,7 @@
     </sub>
     <sub name="Index" link="api-index.html"/>
     <sub name="Index of deprecated symbols" link="api-index-deprecated.html"/>
-    <sub name="Index of new symbols in 2.3.1" link="api-index-2.3.1.html"/>
+    <sub name="Index of new symbols in 2.4.0" link="api-index-2.4.0.html"/>
     <sub name="Annotation Glossary" link="annotation-glossary.html"/>
     <sub name="Object Hierarchy" link="gio-hierarchy.html"/>
   </chapters>
@@ -365,6 +369,7 @@
     <keyword type="property" name="The &quot;lu_reset_timeout&quot; property" link="gdbus-org.storaged.Storaged.ISCSI.Session.html#gdbus-property-org-storaged-Storaged-ISCSI-Session.lu_reset_timeout"/>
     <keyword type="property" name="The &quot;recovery_timeout&quot; property" link="gdbus-org.storaged.Storaged.ISCSI.Session.html#gdbus-property-org-storaged-Storaged-ISCSI-Session.recovery_timeout"/>
     <keyword type="property" name="The &quot;tgt_reset_timeout&quot; property" link="gdbus-org.storaged.Storaged.ISCSI.Session.html#gdbus-property-org-storaged-Storaged-ISCSI-Session.tgt_reset_timeout"/>
+    <keyword type="method" name="The GetFirmwareInitiatorName() method" link="gdbus-org.storaged.Storaged.Manager.ISCSI.Initiator.html#gdbus-method-org-storaged-Storaged-Manager-ISCSI-Initiator.GetFirmwareInitiatorName"/>
     <keyword type="method" name="The GetInitiatorName() method" link="gdbus-org.storaged.Storaged.Manager.ISCSI.Initiator.html#gdbus-method-org-storaged-Storaged-Manager-ISCSI-Initiator.GetInitiatorName"/>
     <keyword type="method" name="The SetInitiatorName() method" link="gdbus-org.storaged.Storaged.Manager.ISCSI.Initiator.html#gdbus-method-org-storaged-Storaged-Manager-ISCSI-Initiator.SetInitiatorName"/>
     <keyword type="method" name="The DiscoverSendTargets() method" link="gdbus-org.storaged.Storaged.Manager.ISCSI.Initiator.html#gdbus-method-org-storaged-Storaged-Manager-ISCSI-Initiator.DiscoverSendTargets"/>
@@ -402,6 +407,18 @@
     <keyword type="property" name="The &quot;orig_data_size&quot; property" link="gdbus-org.storaged.Storaged.Block.ZRAM.html#gdbus-property-org-storaged-Storaged-Block-ZRAM.orig_data_size"/>
     <keyword type="property" name="The &quot;compr_data_size&quot; property" link="gdbus-org.storaged.Storaged.Block.ZRAM.html#gdbus-property-org-storaged-Storaged-Block-ZRAM.compr_data_size"/>
     <keyword type="property" name="The &quot;mem_used_total&quot; property" link="gdbus-org.storaged.Storaged.Block.ZRAM.html#gdbus-property-org-storaged-Storaged-Block-ZRAM.mem_used_total"/>
+    <keyword type="method" name="The BcacheCreate() method" link="gdbus-org.storaged.Storaged.Manager.Bcache.html#gdbus-method-org-storaged-Storaged-Manager-Bcache.BcacheCreate"/>
+    <keyword type="method" name="The BcacheDestroy() method" link="gdbus-org.storaged.Storaged.Block.Bcache.html#gdbus-method-org-storaged-Storaged-Block-Bcache.BcacheDestroy"/>
+    <keyword type="method" name="The SetMode() method" link="gdbus-org.storaged.Storaged.Block.Bcache.html#gdbus-method-org-storaged-Storaged-Block-Bcache.SetMode"/>
+    <keyword type="property" name="The &quot;mode&quot; property" link="gdbus-org.storaged.Storaged.Block.Bcache.html#gdbus-property-org-storaged-Storaged-Block-Bcache.mode"/>
+    <keyword type="property" name="The &quot;state&quot; property" link="gdbus-org.storaged.Storaged.Block.Bcache.html#gdbus-property-org-storaged-Storaged-Block-Bcache.state"/>
+    <keyword type="property" name="The &quot;block_size&quot; property" link="gdbus-org.storaged.Storaged.Block.Bcache.html#gdbus-property-org-storaged-Storaged-Block-Bcache.block_size"/>
+    <keyword type="property" name="The &quot;cache_size&quot; property" link="gdbus-org.storaged.Storaged.Block.Bcache.html#gdbus-property-org-storaged-Storaged-Block-Bcache.cache_size"/>
+    <keyword type="property" name="The &quot;cache_used&quot; property" link="gdbus-org.storaged.Storaged.Block.Bcache.html#gdbus-property-org-storaged-Storaged-Block-Bcache.cache_used"/>
+    <keyword type="property" name="The &quot;hits&quot; property" link="gdbus-org.storaged.Storaged.Block.Bcache.html#gdbus-property-org-storaged-Storaged-Block-Bcache.hits"/>
+    <keyword type="property" name="The &quot;misses&quot; property" link="gdbus-org.storaged.Storaged.Block.Bcache.html#gdbus-property-org-storaged-Storaged-Block-Bcache.misses"/>
+    <keyword type="property" name="The &quot;bypass_hits&quot; property" link="gdbus-org.storaged.Storaged.Block.Bcache.html#gdbus-property-org-storaged-Storaged-Block-Bcache.bypass_hits"/>
+    <keyword type="property" name="The &quot;bypass_misses&quot; property" link="gdbus-org.storaged.Storaged.Block.Bcache.html#gdbus-property-org-storaged-Storaged-Block-Bcache.bypass_misses"/>
     <keyword type="macro" name="STORAGED_CHECK_VERSION()" link="StoragedClient.html#STORAGED-CHECK-VERSION:CAPS"/>
     <keyword type="function" name="storaged_client_new ()" link="StoragedClient.html#storaged-client-new"/>
     <keyword type="function" name="storaged_client_new_finish ()" link="StoragedClient.html#storaged-client-new-finish"/>
@@ -1610,6 +1627,9 @@
     <keyword type="function" name="storaged_manager_iscsi_initiator_call_discover_send_targets ()" link="StoragedManagerISCSIInitiator.html#storaged-manager-iscsi-initiator-call-discover-send-targets" since="2.3.1"/>
     <keyword type="function" name="storaged_manager_iscsi_initiator_call_discover_send_targets_finish ()" link="StoragedManagerISCSIInitiator.html#storaged-manager-iscsi-initiator-call-discover-send-targets-finish" since="2.3.1"/>
     <keyword type="function" name="storaged_manager_iscsi_initiator_call_discover_send_targets_sync ()" link="StoragedManagerISCSIInitiator.html#storaged-manager-iscsi-initiator-call-discover-send-targets-sync" since="2.3.1"/>
+    <keyword type="function" name="storaged_manager_iscsi_initiator_call_get_firmware_initiator_name ()" link="StoragedManagerISCSIInitiator.html#storaged-manager-iscsi-initiator-call-get-firmware-initiator-name" since="2.4.0"/>
+    <keyword type="function" name="storaged_manager_iscsi_initiator_call_get_firmware_initiator_name_finish ()" link="StoragedManagerISCSIInitiator.html#storaged-manager-iscsi-initiator-call-get-firmware-initiator-name-finish" since="2.4.0"/>
+    <keyword type="function" name="storaged_manager_iscsi_initiator_call_get_firmware_initiator_name_sync ()" link="StoragedManagerISCSIInitiator.html#storaged-manager-iscsi-initiator-call-get-firmware-initiator-name-sync" since="2.4.0"/>
     <keyword type="function" name="storaged_manager_iscsi_initiator_call_get_initiator_name ()" link="StoragedManagerISCSIInitiator.html#storaged-manager-iscsi-initiator-call-get-initiator-name" since="2.0.1"/>
     <keyword type="function" name="storaged_manager_iscsi_initiator_call_get_initiator_name_finish ()" link="StoragedManagerISCSIInitiator.html#storaged-manager-iscsi-initiator-call-get-initiator-name-finish" since="2.0.1"/>
     <keyword type="function" name="storaged_manager_iscsi_initiator_call_get_initiator_name_sync ()" link="StoragedManagerISCSIInitiator.html#storaged-manager-iscsi-initiator-call-get-initiator-name-sync" since="2.0.1"/>
@@ -1624,6 +1644,7 @@
     <keyword type="function" name="storaged_manager_iscsi_initiator_call_set_initiator_name_sync ()" link="StoragedManagerISCSIInitiator.html#storaged-manager-iscsi-initiator-call-set-initiator-name-sync" since="2.1.3"/>
     <keyword type="function" name="storaged_manager_iscsi_initiator_complete_discover_firmware ()" link="StoragedManagerISCSIInitiator.html#storaged-manager-iscsi-initiator-complete-discover-firmware" since="2.1.3"/>
     <keyword type="function" name="storaged_manager_iscsi_initiator_complete_discover_send_targets ()" link="StoragedManagerISCSIInitiator.html#storaged-manager-iscsi-initiator-complete-discover-send-targets" since="2.3.1"/>
+    <keyword type="function" name="storaged_manager_iscsi_initiator_complete_get_firmware_initiator_name ()" link="StoragedManagerISCSIInitiator.html#storaged-manager-iscsi-initiator-complete-get-firmware-initiator-name" since="2.4.0"/>
     <keyword type="function" name="storaged_manager_iscsi_initiator_complete_get_initiator_name ()" link="StoragedManagerISCSIInitiator.html#storaged-manager-iscsi-initiator-complete-get-initiator-name" since="2.0.1"/>
     <keyword type="function" name="storaged_manager_iscsi_initiator_complete_login ()" link="StoragedManagerISCSIInitiator.html#storaged-manager-iscsi-initiator-complete-login" since="2.1.3"/>
     <keyword type="function" name="storaged_manager_iscsi_initiator_complete_logout ()" link="StoragedManagerISCSIInitiator.html#storaged-manager-iscsi-initiator-complete-logout" since="2.1.3"/>
@@ -1645,6 +1666,7 @@
     <keyword type="struct" name="struct StoragedManagerISCSIInitiatorSkeletonClass" link="StoragedManagerISCSIInitiator.html#StoragedManagerISCSIInitiatorSkeletonClass" since="2.0.1"/>
     <keyword type="signal" name="The “handle-discover-firmware” signal" link="StoragedManagerISCSIInitiator.html#StoragedManagerISCSIInitiator-handle-discover-firmware"/>
     <keyword type="signal" name="The “handle-discover-send-targets” signal" link="StoragedManagerISCSIInitiator.html#StoragedManagerISCSIInitiator-handle-discover-send-targets"/>
+    <keyword type="signal" name="The “handle-get-firmware-initiator-name” signal" link="StoragedManagerISCSIInitiator.html#StoragedManagerISCSIInitiator-handle-get-firmware-initiator-name"/>
     <keyword type="signal" name="The “handle-get-initiator-name” signal" link="StoragedManagerISCSIInitiator.html#StoragedManagerISCSIInitiator-handle-get-initiator-name"/>
     <keyword type="signal" name="The “handle-login” signal" link="StoragedManagerISCSIInitiator.html#StoragedManagerISCSIInitiator-handle-login"/>
     <keyword type="signal" name="The “handle-logout” signal" link="StoragedManagerISCSIInitiator.html#StoragedManagerISCSIInitiator-handle-logout"/>
@@ -1837,6 +1859,80 @@
     <keyword type="signal" name="The “handle-activate-labeled” signal" link="StoragedBlockZRAM.html#StoragedBlockZRAM-handle-activate-labeled"/>
     <keyword type="signal" name="The “handle-deactivate” signal" link="StoragedBlockZRAM.html#StoragedBlockZRAM-handle-deactivate"/>
     <keyword type="signal" name="The “handle-refresh” signal" link="StoragedBlockZRAM.html#StoragedBlockZRAM-handle-refresh"/>
+    <keyword type="function" name="storaged_manager_bcache_call_bcache_create ()" link="StoragedManagerBcache.html#storaged-manager-bcache-call-bcache-create" since="2.4.0"/>
+    <keyword type="function" name="storaged_manager_bcache_call_bcache_create_finish ()" link="StoragedManagerBcache.html#storaged-manager-bcache-call-bcache-create-finish" since="2.4.0"/>
+    <keyword type="function" name="storaged_manager_bcache_call_bcache_create_sync ()" link="StoragedManagerBcache.html#storaged-manager-bcache-call-bcache-create-sync" since="2.4.0"/>
+    <keyword type="function" name="storaged_manager_bcache_complete_bcache_create ()" link="StoragedManagerBcache.html#storaged-manager-bcache-complete-bcache-create" since="2.4.0"/>
+    <keyword type="function" name="storaged_manager_bcache_interface_info ()" link="StoragedManagerBcache.html#storaged-manager-bcache-interface-info"/>
+    <keyword type="function" name="storaged_manager_bcache_override_properties ()" link="StoragedManagerBcache.html#storaged-manager-bcache-override-properties"/>
+    <keyword type="function" name="storaged_manager_bcache_proxy_new ()" link="StoragedManagerBcache.html#storaged-manager-bcache-proxy-new"/>
+    <keyword type="function" name="storaged_manager_bcache_proxy_new_finish ()" link="StoragedManagerBcache.html#storaged-manager-bcache-proxy-new-finish"/>
+    <keyword type="function" name="storaged_manager_bcache_proxy_new_for_bus ()" link="StoragedManagerBcache.html#storaged-manager-bcache-proxy-new-for-bus"/>
+    <keyword type="function" name="storaged_manager_bcache_proxy_new_for_bus_finish ()" link="StoragedManagerBcache.html#storaged-manager-bcache-proxy-new-for-bus-finish"/>
+    <keyword type="function" name="storaged_manager_bcache_proxy_new_for_bus_sync ()" link="StoragedManagerBcache.html#storaged-manager-bcache-proxy-new-for-bus-sync"/>
+    <keyword type="function" name="storaged_manager_bcache_proxy_new_sync ()" link="StoragedManagerBcache.html#storaged-manager-bcache-proxy-new-sync"/>
+    <keyword type="function" name="storaged_manager_bcache_skeleton_new ()" link="StoragedManagerBcache.html#storaged-manager-bcache-skeleton-new"/>
+    <keyword type="struct" name="StoragedManagerBcache" link="StoragedManagerBcache.html#StoragedManagerBcache-struct"/>
+    <keyword type="struct" name="struct StoragedManagerBcacheIface" link="StoragedManagerBcache.html#StoragedManagerBcacheIface"/>
+    <keyword type="struct" name="struct StoragedManagerBcacheProxy" link="StoragedManagerBcache.html#StoragedManagerBcacheProxy-struct"/>
+    <keyword type="struct" name="struct StoragedManagerBcacheProxyClass" link="StoragedManagerBcache.html#StoragedManagerBcacheProxyClass"/>
+    <keyword type="struct" name="struct StoragedManagerBcacheSkeleton" link="StoragedManagerBcache.html#StoragedManagerBcacheSkeleton-struct"/>
+    <keyword type="struct" name="struct StoragedManagerBcacheSkeletonClass" link="StoragedManagerBcache.html#StoragedManagerBcacheSkeletonClass"/>
+    <keyword type="signal" name="The “handle-bcache-create” signal" link="StoragedManagerBcache.html#StoragedManagerBcache-handle-bcache-create"/>
+    <keyword type="function" name="storaged_block_bcache_call_bcache_destroy ()" link="StoragedBlockBcache.html#storaged-block-bcache-call-bcache-destroy" since="2.4.0"/>
+    <keyword type="function" name="storaged_block_bcache_call_bcache_destroy_finish ()" link="StoragedBlockBcache.html#storaged-block-bcache-call-bcache-destroy-finish" since="2.4.0"/>
+    <keyword type="function" name="storaged_block_bcache_call_bcache_destroy_sync ()" link="StoragedBlockBcache.html#storaged-block-bcache-call-bcache-destroy-sync" since="2.4.0"/>
+    <keyword type="function" name="storaged_block_bcache_call_set_mode ()" link="StoragedBlockBcache.html#storaged-block-bcache-call-set-mode" since="2.4.0"/>
+    <keyword type="function" name="storaged_block_bcache_call_set_mode_finish ()" link="StoragedBlockBcache.html#storaged-block-bcache-call-set-mode-finish" since="2.4.0"/>
+    <keyword type="function" name="storaged_block_bcache_call_set_mode_sync ()" link="StoragedBlockBcache.html#storaged-block-bcache-call-set-mode-sync" since="2.4.0"/>
+    <keyword type="function" name="storaged_block_bcache_complete_bcache_destroy ()" link="StoragedBlockBcache.html#storaged-block-bcache-complete-bcache-destroy" since="2.4.0"/>
+    <keyword type="function" name="storaged_block_bcache_complete_set_mode ()" link="StoragedBlockBcache.html#storaged-block-bcache-complete-set-mode" since="2.4.0"/>
+    <keyword type="function" name="storaged_block_bcache_dup_mode ()" link="StoragedBlockBcache.html#storaged-block-bcache-dup-mode"/>
+    <keyword type="function" name="storaged_block_bcache_dup_state ()" link="StoragedBlockBcache.html#storaged-block-bcache-dup-state"/>
+    <keyword type="function" name="storaged_block_bcache_get_block_size ()" link="StoragedBlockBcache.html#storaged-block-bcache-get-block-size"/>
+    <keyword type="function" name="storaged_block_bcache_get_bypass_hits ()" link="StoragedBlockBcache.html#storaged-block-bcache-get-bypass-hits"/>
+    <keyword type="function" name="storaged_block_bcache_get_bypass_misses ()" link="StoragedBlockBcache.html#storaged-block-bcache-get-bypass-misses"/>
+    <keyword type="function" name="storaged_block_bcache_get_cache_size ()" link="StoragedBlockBcache.html#storaged-block-bcache-get-cache-size"/>
+    <keyword type="function" name="storaged_block_bcache_get_cache_used ()" link="StoragedBlockBcache.html#storaged-block-bcache-get-cache-used"/>
+    <keyword type="function" name="storaged_block_bcache_get_hits ()" link="StoragedBlockBcache.html#storaged-block-bcache-get-hits"/>
+    <keyword type="function" name="storaged_block_bcache_get_misses ()" link="StoragedBlockBcache.html#storaged-block-bcache-get-misses"/>
+    <keyword type="function" name="storaged_block_bcache_get_mode ()" link="StoragedBlockBcache.html#storaged-block-bcache-get-mode"/>
+    <keyword type="function" name="storaged_block_bcache_get_state ()" link="StoragedBlockBcache.html#storaged-block-bcache-get-state"/>
+    <keyword type="function" name="storaged_block_bcache_interface_info ()" link="StoragedBlockBcache.html#storaged-block-bcache-interface-info"/>
+    <keyword type="function" name="storaged_block_bcache_override_properties ()" link="StoragedBlockBcache.html#storaged-block-bcache-override-properties"/>
+    <keyword type="function" name="storaged_block_bcache_proxy_new ()" link="StoragedBlockBcache.html#storaged-block-bcache-proxy-new"/>
+    <keyword type="function" name="storaged_block_bcache_proxy_new_finish ()" link="StoragedBlockBcache.html#storaged-block-bcache-proxy-new-finish"/>
+    <keyword type="function" name="storaged_block_bcache_proxy_new_for_bus ()" link="StoragedBlockBcache.html#storaged-block-bcache-proxy-new-for-bus"/>
+    <keyword type="function" name="storaged_block_bcache_proxy_new_for_bus_finish ()" link="StoragedBlockBcache.html#storaged-block-bcache-proxy-new-for-bus-finish"/>
+    <keyword type="function" name="storaged_block_bcache_proxy_new_for_bus_sync ()" link="StoragedBlockBcache.html#storaged-block-bcache-proxy-new-for-bus-sync"/>
+    <keyword type="function" name="storaged_block_bcache_proxy_new_sync ()" link="StoragedBlockBcache.html#storaged-block-bcache-proxy-new-sync"/>
+    <keyword type="function" name="storaged_block_bcache_set_block_size ()" link="StoragedBlockBcache.html#storaged-block-bcache-set-block-size"/>
+    <keyword type="function" name="storaged_block_bcache_set_bypass_hits ()" link="StoragedBlockBcache.html#storaged-block-bcache-set-bypass-hits"/>
+    <keyword type="function" name="storaged_block_bcache_set_bypass_misses ()" link="StoragedBlockBcache.html#storaged-block-bcache-set-bypass-misses"/>
+    <keyword type="function" name="storaged_block_bcache_set_cache_size ()" link="StoragedBlockBcache.html#storaged-block-bcache-set-cache-size"/>
+    <keyword type="function" name="storaged_block_bcache_set_cache_used ()" link="StoragedBlockBcache.html#storaged-block-bcache-set-cache-used"/>
+    <keyword type="function" name="storaged_block_bcache_set_hits ()" link="StoragedBlockBcache.html#storaged-block-bcache-set-hits"/>
+    <keyword type="function" name="storaged_block_bcache_set_misses ()" link="StoragedBlockBcache.html#storaged-block-bcache-set-misses"/>
+    <keyword type="function" name="storaged_block_bcache_set_mode ()" link="StoragedBlockBcache.html#storaged-block-bcache-set-mode"/>
+    <keyword type="function" name="storaged_block_bcache_set_state ()" link="StoragedBlockBcache.html#storaged-block-bcache-set-state"/>
+    <keyword type="function" name="storaged_block_bcache_skeleton_new ()" link="StoragedBlockBcache.html#storaged-block-bcache-skeleton-new"/>
+    <keyword type="struct" name="StoragedBlockBcache" link="StoragedBlockBcache.html#StoragedBlockBcache-struct"/>
+    <keyword type="struct" name="struct StoragedBlockBcacheIface" link="StoragedBlockBcache.html#StoragedBlockBcacheIface"/>
+    <keyword type="struct" name="struct StoragedBlockBcacheProxy" link="StoragedBlockBcache.html#StoragedBlockBcacheProxy-struct"/>
+    <keyword type="struct" name="struct StoragedBlockBcacheProxyClass" link="StoragedBlockBcache.html#StoragedBlockBcacheProxyClass"/>
+    <keyword type="struct" name="struct StoragedBlockBcacheSkeleton" link="StoragedBlockBcache.html#StoragedBlockBcacheSkeleton-struct"/>
+    <keyword type="struct" name="struct StoragedBlockBcacheSkeletonClass" link="StoragedBlockBcache.html#StoragedBlockBcacheSkeletonClass"/>
+    <keyword type="property" name="The “block-size” property" link="StoragedBlockBcache.html#StoragedBlockBcache--block-size"/>
+    <keyword type="property" name="The “bypass-hits” property" link="StoragedBlockBcache.html#StoragedBlockBcache--bypass-hits"/>
+    <keyword type="property" name="The “bypass-misses” property" link="StoragedBlockBcache.html#StoragedBlockBcache--bypass-misses"/>
+    <keyword type="property" name="The “cache-size” property" link="StoragedBlockBcache.html#StoragedBlockBcache--cache-size"/>
+    <keyword type="property" name="The “cache-used” property" link="StoragedBlockBcache.html#StoragedBlockBcache--cache-used"/>
+    <keyword type="property" name="The “hits” property" link="StoragedBlockBcache.html#StoragedBlockBcache--hits"/>
+    <keyword type="property" name="The “misses” property" link="StoragedBlockBcache.html#StoragedBlockBcache--misses"/>
+    <keyword type="property" name="The “mode” property" link="StoragedBlockBcache.html#StoragedBlockBcache--mode"/>
+    <keyword type="property" name="The “state” property" link="StoragedBlockBcache.html#StoragedBlockBcache--state"/>
+    <keyword type="signal" name="The “handle-bcache-destroy” signal" link="StoragedBlockBcache.html#StoragedBlockBcache-handle-bcache-destroy"/>
+    <keyword type="signal" name="The “handle-set-mode” signal" link="StoragedBlockBcache.html#StoragedBlockBcache-handle-set-mode"/>
     <keyword type="function" name="storaged_decode_udev_string ()" link="storaged-Utilities.html#storaged-decode-udev-string"/>
     <keyword type="function" name="storaged_safe_append_to_object_path ()" link="storaged-Utilities.html#storaged-safe-append-to-object-path"/>
     <keyword type="function" name="storaged_daemon_util_block_get_size ()" link="storaged-Utilities.html#storaged-daemon-util-block-get-size"/>
@@ -2023,13 +2119,13 @@
     <keyword type="function" name="storaged_linux_drive_new ()" link="StoragedLinuxDrive.html#storaged-linux-drive-new"/>
     <keyword type="function" name="storaged_linux_drive_update ()" link="StoragedLinuxDrive.html#storaged-linux-drive-update"/>
     <keyword type="struct" name="StoragedLinuxDrive" link="StoragedLinuxDrive.html#StoragedLinuxDrive-struct"/>
-    <keyword type="function" name="storaged_linux_drive_ata_new ()" link="storaged-DummyLinuxBlock.html#storaged-linux-drive-ata-new"/>
-    <keyword type="function" name="storaged_linux_drive_ata_update ()" link="storaged-DummyLinuxBlock.html#storaged-linux-drive-ata-update"/>
-    <keyword type="function" name="storaged_linux_drive_ata_refresh_smart_sync ()" link="storaged-DummyLinuxBlock.html#storaged-linux-drive-ata-refresh-smart-sync"/>
-    <keyword type="function" name="storaged_linux_drive_ata_smart_selftest_sync ()" link="storaged-DummyLinuxBlock.html#storaged-linux-drive-ata-smart-selftest-sync"/>
-    <keyword type="function" name="storaged_linux_drive_ata_apply_configuration ()" link="storaged-DummyLinuxBlock.html#storaged-linux-drive-ata-apply-configuration"/>
-    <keyword type="function" name="storaged_linux_drive_ata_secure_erase_sync ()" link="storaged-DummyLinuxBlock.html#storaged-linux-drive-ata-secure-erase-sync"/>
-    <keyword type="struct" name="StoragedLinuxDriveAta" link="storaged-DummyLinuxBlock.html#StoragedLinuxDriveAta-struct"/>
+    <keyword type="function" name="storaged_linux_drive_ata_new ()" link="storaged-DummyLinuxDrive.html#storaged-linux-drive-ata-new"/>
+    <keyword type="function" name="storaged_linux_drive_ata_update ()" link="storaged-DummyLinuxDrive.html#storaged-linux-drive-ata-update"/>
+    <keyword type="function" name="storaged_linux_drive_ata_refresh_smart_sync ()" link="storaged-DummyLinuxDrive.html#storaged-linux-drive-ata-refresh-smart-sync"/>
+    <keyword type="function" name="storaged_linux_drive_ata_smart_selftest_sync ()" link="storaged-DummyLinuxDrive.html#storaged-linux-drive-ata-smart-selftest-sync"/>
+    <keyword type="function" name="storaged_linux_drive_ata_apply_configuration ()" link="storaged-DummyLinuxDrive.html#storaged-linux-drive-ata-apply-configuration"/>
+    <keyword type="function" name="storaged_linux_drive_ata_secure_erase_sync ()" link="storaged-DummyLinuxDrive.html#storaged-linux-drive-ata-secure-erase-sync"/>
+    <keyword type="struct" name="StoragedLinuxDriveAta" link="storaged-DummyLinuxDrive.html#StoragedLinuxDriveAta-struct"/>
     <keyword type="function" name="storaged_linux_drive_object_new ()" link="StoragedLinuxDriveObject.html#storaged-linux-drive-object-new"/>
     <keyword type="function" name="storaged_linux_drive_object_uevent ()" link="StoragedLinuxDriveObject.html#storaged-linux-drive-object-uevent"/>
     <keyword type="function" name="storaged_linux_drive_object_get_daemon ()" link="StoragedLinuxDriveObject.html#storaged-linux-drive-object-get-daemon"/>
@@ -2107,6 +2203,18 @@
     <keyword type="constant" name="STORAGED_ERROR_TIMED_OUT" link="storaged-StoragedError.html#STORAGED-ERROR-TIMED-OUT:CAPS"/>
     <keyword type="constant" name="STORAGED_ERROR_WOULD_WAKEUP" link="storaged-StoragedError.html#STORAGED-ERROR-WOULD-WAKEUP:CAPS"/>
     <keyword type="constant" name="STORAGED_ERROR_DEVICE_BUSY" link="storaged-StoragedError.html#STORAGED-ERROR-DEVICE-BUSY:CAPS"/>
+    <keyword type="constant" name="STORAGED_ERROR_ISCSI_DAEMON_TRANSPORT_FAILED" link="storaged-StoragedError.html#STORAGED-ERROR-ISCSI-DAEMON-TRANSPORT-FAILED:CAPS"/>
+    <keyword type="constant" name="STORAGED_ERROR_ISCSI_HOST_NOT_FOUND" link="storaged-StoragedError.html#STORAGED-ERROR-ISCSI-HOST-NOT-FOUND:CAPS"/>
+    <keyword type="constant" name="STORAGED_ERROR_ISCSI_IDMB" link="storaged-StoragedError.html#STORAGED-ERROR-ISCSI-IDMB:CAPS"/>
+    <keyword type="constant" name="STORAGED_ERROR_ISCSI_LOGIN_FAILED" link="storaged-StoragedError.html#STORAGED-ERROR-ISCSI-LOGIN-FAILED:CAPS"/>
+    <keyword type="constant" name="STORAGED_ERROR_ISCSI_LOGIN_AUTH_FAILED" link="storaged-StoragedError.html#STORAGED-ERROR-ISCSI-LOGIN-AUTH-FAILED:CAPS"/>
+    <keyword type="constant" name="STORAGED_ERROR_ISCSI_LOGIN_FATAL" link="storaged-StoragedError.html#STORAGED-ERROR-ISCSI-LOGIN-FATAL:CAPS"/>
+    <keyword type="constant" name="STORAGED_ERROR_ISCSI_LOGOUT_FAILED" link="storaged-StoragedError.html#STORAGED-ERROR-ISCSI-LOGOUT-FAILED:CAPS"/>
+    <keyword type="constant" name="STORAGED_ERROR_ISCSI_NO_FIRMWARE" link="storaged-StoragedError.html#STORAGED-ERROR-ISCSI-NO-FIRMWARE:CAPS"/>
+    <keyword type="constant" name="STORAGED_ERROR_ISCSI_NO_OBJECTS_FOUND" link="storaged-StoragedError.html#STORAGED-ERROR-ISCSI-NO-OBJECTS-FOUND:CAPS"/>
+    <keyword type="constant" name="STORAGED_ERROR_ISCSI_NOT_CONNECTED" link="storaged-StoragedError.html#STORAGED-ERROR-ISCSI-NOT-CONNECTED:CAPS"/>
+    <keyword type="constant" name="STORAGED_ERROR_ISCSI_TRANSPORT_FAILED" link="storaged-StoragedError.html#STORAGED-ERROR-ISCSI-TRANSPORT-FAILED:CAPS"/>
+    <keyword type="constant" name="STORAGED_ERROR_ISCSI_UNKNOWN_DISCOVERY_TYPE" link="storaged-StoragedError.html#STORAGED-ERROR-ISCSI-UNKNOWN-DISCOVERY-TYPE:CAPS"/>
     <keyword type="constant" name="STORAGED_LOG_LEVEL_DEBUG" link="storaged-Logging.html#STORAGED-LOG-LEVEL-DEBUG:CAPS"/>
     <keyword type="constant" name="STORAGED_LOG_LEVEL_INFO" link="storaged-Logging.html#STORAGED-LOG-LEVEL-INFO:CAPS"/>
     <keyword type="constant" name="STORAGED_LOG_LEVEL_NOTICE" link="storaged-Logging.html#STORAGED-LOG-LEVEL-NOTICE:CAPS"/>
