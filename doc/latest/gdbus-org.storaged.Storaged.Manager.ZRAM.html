@@ -34,8 +34,7 @@
 <div class="refsynopsisdiv">
 <h2>Methods</h2>
 <pre class="synopsis">
-<a class="link" href="gdbus-org.storaged.Storaged.Manager.ZRAM.html#gdbus-method-org-storaged-Storaged-Manager-ZRAM.CreateDevices" title="The CreateDevices() method">CreateDevices</a>  (IN  t     num_devices,
-                IN  at    sizes,
+<a class="link" href="gdbus-org.storaged.Storaged.Manager.ZRAM.html#gdbus-method-org-storaged-Storaged-Manager-ZRAM.CreateDevices" title="The CreateDevices() method">CreateDevices</a>  (IN  at    sizes,
                 IN  at    num_streams,
                 IN  a{sv} options);
 <a class="link" href="gdbus-org.storaged.Storaged.Manager.ZRAM.html#gdbus-method-org-storaged-Storaged-Manager-ZRAM.DestroyDevices" title="The DestroyDevices() method">DestroyDevices</a> (IN  a{sv} options);
@@ -54,8 +53,7 @@
 <div class="refsect2">
 <a name="gdbus-method-org-storaged-Storaged-Manager-ZRAM.CreateDevices"></a><h3>The CreateDevices() method</h3>
 <pre class="programlisting">
-CreateDevices (IN  t     num_devices,
-               IN  at    sizes,
+CreateDevices (IN  at    sizes,
                IN  at    num_streams,
                IN  a{sv} options);
 </pre>
@@ -69,10 +67,6 @@ CreateDevices (IN  t     num_devices,
 <col>
 </colgroup>
 <tbody>
-<tr>
-<td><p><span class="term"><code class="literal">IN t <em class="parameter"><code>num_devices</code></em></code>:</span></p></td>
-<td><p>Number of devices to create.</p></td>
-</tr>
 <tr>
 <td><p><span class="term"><code class="literal">IN at <em class="parameter"><code>sizes</code></em></code>:</span></p></td>
 <td><p>Requested sizes (in bytes) for created zRAM devices.</p></td>

@@ -73,6 +73,8 @@
 <a class="link" href="gdbus-org.storaged.Storaged.Drive.Ata.html#gdbus-property-org-storaged-Storaged-Drive-Ata.AamVendorRecommendedValue" title='The "AamVendorRecommendedValue" property'>AamVendorRecommendedValue</a>          readable   i
 <a class="link" href="gdbus-org.storaged.Storaged.Drive.Ata.html#gdbus-property-org-storaged-Storaged-Drive-Ata.WriteCacheSupported" title='The "WriteCacheSupported" property'>WriteCacheSupported</a>                readable   b
 <a class="link" href="gdbus-org.storaged.Storaged.Drive.Ata.html#gdbus-property-org-storaged-Storaged-Drive-Ata.WriteCacheEnabled" title='The "WriteCacheEnabled" property'>WriteCacheEnabled</a>                  readable   b
+<a class="link" href="gdbus-org.storaged.Storaged.Drive.Ata.html#gdbus-property-org-storaged-Storaged-Drive-Ata.ReadLookaheadSupported" title='The "ReadLookaheadSupported" property'>ReadLookaheadSupported</a>             readable   b
+<a class="link" href="gdbus-org.storaged.Storaged.Drive.Ata.html#gdbus-property-org-storaged-Storaged-Drive-Ata.ReadLookaheadEnabled" title='The "ReadLookaheadEnabled" property'>ReadLookaheadEnabled</a>               readable   b
 <a class="link" href="gdbus-org.storaged.Storaged.Drive.Ata.html#gdbus-property-org-storaged-Storaged-Drive-Ata.SecurityEraseUnitMinutes" title='The "SecurityEraseUnitMinutes" property'>SecurityEraseUnitMinutes</a>           readable   i
 <a class="link" href="gdbus-org.storaged.Storaged.Drive.Ata.html#gdbus-property-org-storaged-Storaged-Drive-Ata.SecurityEnhancedEraseUnitMinutes" title='The "SecurityEnhancedEraseUnitMinutes" property'>SecurityEnhancedEraseUnitMinutes</a>   readable   i
 <a class="link" href="gdbus-org.storaged.Storaged.Drive.Ata.html#gdbus-property-org-storaged-Storaged-Drive-Ata.SecurityFrozen" title='The "SecurityFrozen" property'>SecurityFrozen</a>                     readable   b
@@ -635,6 +637,26 @@ WriteCacheEnabled  readable   b
 <p>         Whether the write-cache is enabled (or <code class="constant">FALSE</code> if not supported).
 </p>
 <p class="since">Since 2.0.0</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="gdbus-property-org-storaged-Storaged-Drive-Ata.ReadLookaheadSupported"></a><h3>The "ReadLookaheadSupported" property</h3>
+<pre class="programlisting">
+ReadLookaheadSupported  readable   b
+</pre>
+<p>         Whether the drive supports configuring the read look-ahead.
+</p>
+<p class="since">Since 2.1.7</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="gdbus-property-org-storaged-Storaged-Drive-Ata.ReadLookaheadEnabled"></a><h3>The "ReadLookaheadEnabled" property</h3>
+<pre class="programlisting">
+ReadLookaheadEnabled  readable   b
+</pre>
+<p>         Whether the read look-ahead is enabled (or <code class="constant">FALSE</code> if not supported).
+</p>
+<p class="since">Since 2.1.7</p>
 </div>
 <hr>
 <div class="refsect2">

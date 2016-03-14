@@ -247,12 +247,19 @@
 <col width="300px" class="properties_name">
 <col width="200px" class="properties_flags">
 </colgroup>
-<tbody><tr>
+<tbody>
+<tr>
+<td class="property_type"><a href="/usr/share/gtk-doc/html/glib/glib-String-Utility-Functions.html#GStrv"><span class="type">GStrv</span></a></td>
+<td class="property_name"><a class="link" href="StoragedManager.html#StoragedManager--supported-filesystems" title="The “supported-filesystems” property">supported-filesystems</a></td>
+<td class="property_flags">Read / Write</td>
+</tr>
+<tr>
 <td class="property_type">
 <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *</td>
 <td class="property_name"><a class="link" href="StoragedManager.html#StoragedManager--version" title="The “version” property">version</a></td>
 <td class="property_flags">Read / Write</td>
-</tr></tbody>
+</tr>
+</tbody>
 </table></div>
 </div>
 <div class="refsect1">
@@ -1535,6 +1542,8 @@ storaged_manager_complete_enable_modules
     GVariant *arg_fd,
     GVariant *arg_options);
 
+  const gchar *const * (*get_supported_filesystems) (StoragedManager *object);
+
   const gchar * (*get_version) (StoragedManager *object);
 
   gboolean (*handle_mdraid_create) (
@@ -1570,6 +1579,11 @@ storaged_manager_complete_enable_modules
 <tr>
 <td class="struct_member_name"><p><em class="structfield"><code><a name="StoragedManagerIface.handle-loop-setup"></a>handle_loop_setup</code></em> ()</p></td>
 <td class="struct_member_description"><p>Handler for the <a class="link" href="StoragedManager.html#StoragedManager-handle-loop-setup" title="The “handle-loop-setup” signal"><span class="type">“handle-loop-setup”</span></a> signal.</p></td>
+<td class="struct_member_annotations"> </td>
+</tr>
+<tr>
+<td class="struct_member_name"><p><em class="structfield"><code><a name="StoragedManagerIface.get-supported-filesystems"></a>get_supported_filesystems</code></em> ()</p></td>
+<td class="struct_member_description"><p>Getter for the <a class="link" href="StoragedManager.html#StoragedManager--supported-filesystems" title="The “supported-filesystems” property"><span class="type">“supported-filesystems”</span></a> property.</p></td>
 <td class="struct_member_annotations"> </td>
 </tr>
 <tr>
@@ -1649,6 +1663,14 @@ storaged_manager_complete_enable_modules
 </div>
 <div class="refsect1">
 <a name="StoragedManager.property-details"></a><h2>Property Details</h2>
+<div class="refsect2">
+<a name="StoragedManager--supported-filesystems"></a><h3>The <code class="literal">“supported-filesystems”</code> property</h3>
+<pre class="programlisting">  “supported-filesystems”    <a href="/usr/share/gtk-doc/html/glib/glib-String-Utility-Functions.html#GStrv"><span class="type">GStrv</span></a></pre>
+<p>Represents the D-Bus property <a class="link" href="gdbus-org.storaged.Storaged.Manager.html#gdbus-property-org-storaged-Storaged-Manager.SupportedFilesystems" title='The "SupportedFilesystems" property'>"SupportedFilesystems"</a>.</p>
+<p>Since the D-Bus property for this <a href="/usr/share/gtk-doc/html/gobject/gobject-The-Base-Object-Type.html#GObject"><span class="type">GObject</span></a> property is readable but not writable, it is meaningful to read from it on both the client- and service-side. It is only meaningful, however, to write to it on the service-side.</p>
+<p>Flags: Read / Write</p>
+</div>
+<hr>
 <div class="refsect2">
 <a name="StoragedManager--version"></a><h3>The <code class="literal">“version”</code> property</h3>
 <pre class="programlisting">  “version”                  <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *</pre>

@@ -320,7 +320,11 @@ CreateThinPoolVolume (IN  s     name,
                       OUT o     result);
 </pre>
 <p>         Create a new logical volume that can be used to back
-         thinly-provisioned logical volumes.
+         thinly-provisioned logical volumes.  The <em class="parameter"><code>size</code></em> parameter is
+         the total amount of space taken out of the volume group.
+         That space will be used for data and metadata.  The actual
+         amount of data that can be stored in the pool will be
+         slightly smaller.
 </p>
 <p>         No additional options are currently defined.
 </p>
@@ -336,7 +340,7 @@ CreateThinPoolVolume (IN  s     name,
 </tr>
 <tr>
 <td><p><span class="term"><code class="literal">IN t <em class="parameter"><code>size</code></em></code>:</span></p></td>
-<td><p>The size.</p></td>
+<td><p>The total size.</p></td>
 </tr>
 <tr>
 <td><p><span class="term"><code class="literal">IN a{sv} <em class="parameter"><code>options</code></em></code>:</span></p></td>

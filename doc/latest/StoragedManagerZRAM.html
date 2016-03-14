@@ -283,7 +283,6 @@ StoragedManagerZRAM is implemented by
 <pre class="programlisting"><span class="returnvalue">void</span>
 storaged_manager_zram_call_create_devices
                                (<em class="parameter"><code><a class="link" href="StoragedManagerZRAM.html" title="StoragedManagerZRAM"><span class="type">StoragedManagerZRAM</span></a> *proxy</code></em>,
-                                <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#guint64"><span class="type">guint64</span></a> arg_num_devices</code></em>,
                                 <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glib/glib-GVariant.html#GVariant"><span class="type">GVariant</span></a> *arg_sizes</code></em>,
                                 <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glib/glib-GVariant.html#GVariant"><span class="type">GVariant</span></a> *arg_num_streams</code></em>,
                                 <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glib/glib-GVariant.html#GVariant"><span class="type">GVariant</span></a> *arg_options</code></em>,
@@ -308,11 +307,6 @@ You can then call <a class="link" href="StoragedManagerZRAM.html#storaged-manage
 <tr>
 <td class="parameter_name"><p>proxy</p></td>
 <td class="parameter_description"><p>A <a class="link" href="StoragedManagerZRAM.html#StoragedManagerZRAMProxy"><span class="type">StoragedManagerZRAMProxy</span></a>.</p></td>
-<td class="parameter_annotations"> </td>
-</tr>
-<tr>
-<td class="parameter_name"><p>arg_num_devices</p></td>
-<td class="parameter_description"><p>Argument to pass with the method invocation.</p></td>
 <td class="parameter_annotations"> </td>
 </tr>
 <tr>
@@ -401,7 +395,6 @@ is set. </p>
 <pre class="programlisting"><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
 storaged_manager_zram_call_create_devices_sync
                                (<em class="parameter"><code><a class="link" href="StoragedManagerZRAM.html" title="StoragedManagerZRAM"><span class="type">StoragedManagerZRAM</span></a> *proxy</code></em>,
-                                <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#guint64"><span class="type">guint64</span></a> arg_num_devices</code></em>,
                                 <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glib/glib-GVariant.html#GVariant"><span class="type">GVariant</span></a> *arg_sizes</code></em>,
                                 <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glib/glib-GVariant.html#GVariant"><span class="type">GVariant</span></a> *arg_num_streams</code></em>,
                                 <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glib/glib-GVariant.html#GVariant"><span class="type">GVariant</span></a> *arg_options</code></em>,
@@ -422,11 +415,6 @@ storaged_manager_zram_call_create_devices_sync
 <tr>
 <td class="parameter_name"><p>proxy</p></td>
 <td class="parameter_description"><p>A <a class="link" href="StoragedManagerZRAM.html#StoragedManagerZRAMProxy"><span class="type">StoragedManagerZRAMProxy</span></a>.</p></td>
-<td class="parameter_annotations"> </td>
-</tr>
-<tr>
-<td class="parameter_name"><p>arg_num_devices</p></td>
-<td class="parameter_description"><p>Argument to pass with the method invocation.</p></td>
 <td class="parameter_annotations"> </td>
 </tr>
 <tr>
@@ -1104,7 +1092,6 @@ storaged_manager_zram_skeleton_new (<em class="parameter"><code><span class="typ
   gboolean (*handle_create_devices) (
     StoragedManagerZRAM *object,
     GDBusMethodInvocation *invocation,
-    guint64 arg_num_devices,
     GVariant *arg_sizes,
     GVariant *arg_num_streams,
     GVariant *arg_options);
@@ -1217,7 +1204,6 @@ storaged_manager_zram_skeleton_new (<em class="parameter"><code><span class="typ
 <pre class="programlisting"><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
 user_function (<a class="link" href="StoragedManagerZRAM.html" title="StoragedManagerZRAM"><span class="type">StoragedManagerZRAM</span></a>   *object,
                <a href="/usr/share/gtk-doc/html/gio/GDBusMethodInvocation.html"><span class="type">GDBusMethodInvocation</span></a> *invocation,
-               <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#guint64"><span class="type">guint64</span></a>                arg_num_devices,
                <a href="/usr/share/gtk-doc/html/glib/glib-GVariant.html#GVariant"><span class="type">GVariant</span></a>              *arg_sizes,
                <a href="/usr/share/gtk-doc/html/glib/glib-GVariant.html#GVariant"><span class="type">GVariant</span></a>              *arg_num_streams,
                <a href="/usr/share/gtk-doc/html/glib/glib-GVariant.html#GVariant"><span class="type">GVariant</span></a>              *arg_options,
@@ -1242,11 +1228,6 @@ user_function (<a class="link" href="StoragedManagerZRAM.html" title="StoragedMa
 <tr>
 <td class="parameter_name"><p>invocation</p></td>
 <td class="parameter_description"><p>A <a href="/usr/share/gtk-doc/html/gio/GDBusMethodInvocation.html"><span class="type">GDBusMethodInvocation</span></a>.</p></td>
-<td class="parameter_annotations"> </td>
-</tr>
-<tr>
-<td class="parameter_name"><p>arg_num_devices</p></td>
-<td class="parameter_description"><p>Argument passed by remote caller.</p></td>
 <td class="parameter_annotations"> </td>
 </tr>
 <tr>

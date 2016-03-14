@@ -7,6 +7,8 @@
       <sub name="storaged-project" link="storaged-project.8.html"/>
       <sub name="storagectl" link="storagectl.1.html"/>
       <sub name="umount.storaged" link="umount.storaged.8.html"/>
+      <sub name="storaged.conf" link="storaged.conf.5.html"/>
+      <sub name="storaged_lsm.conf" link="storaged_lsm.conf.5.html"/>
     </sub>
     <sub name="D-Bus API Reference" link="ref-dbus.html">
       <sub name="Overview" link="ref-dbus-overview.html">
@@ -115,7 +117,7 @@
       </sub>
       <sub name="Drives on Linux" link="ref-daemon-drives.html">
         <sub name="StoragedLinuxDrive" link="StoragedLinuxDrive.html"/>
-        <sub name="DummyLinuxDrive" link="storaged-DummyLinuxDrive.html"/>
+        <sub name="DummyLinuxBlock" link="storaged-DummyLinuxBlock.html"/>
         <sub name="StoragedLinuxDriveObject" link="StoragedLinuxDriveObject.html"/>
       </sub>
       <sub name="Linux RAID" link="ref-daemon-mdraid.html">
@@ -135,7 +137,7 @@
     </sub>
     <sub name="Index" link="api-index.html"/>
     <sub name="Index of deprecated symbols" link="api-index-deprecated.html"/>
-    <sub name="Index of new symbols in 2.4.0" link="api-index-2.4.0.html"/>
+    <sub name="Index of new symbols in 2.5.0" link="api-index-2.5.0.html"/>
     <sub name="Annotation Glossary" link="annotation-glossary.html"/>
     <sub name="Object Hierarchy" link="gio-hierarchy.html"/>
   </chapters>
@@ -144,6 +146,7 @@
     <keyword type="method" name="The MDRaidCreate() method" link="gdbus-org.storaged.Storaged.Manager.html#gdbus-method-org-storaged-Storaged-Manager.MDRaidCreate"/>
     <keyword type="method" name="The EnableModules() method" link="gdbus-org.storaged.Storaged.Manager.html#gdbus-method-org-storaged-Storaged-Manager.EnableModules"/>
     <keyword type="property" name="The &quot;Version&quot; property" link="gdbus-org.storaged.Storaged.Manager.html#gdbus-property-org-storaged-Storaged-Manager.Version"/>
+    <keyword type="property" name="The &quot;SupportedFilesystems&quot; property" link="gdbus-org.storaged.Storaged.Manager.html#gdbus-property-org-storaged-Storaged-Manager.SupportedFilesystems"/>
     <keyword type="method" name="The Eject() method" link="gdbus-org.storaged.Storaged.Drive.html#gdbus-method-org-storaged-Storaged-Drive.Eject"/>
     <keyword type="method" name="The SetConfiguration() method" link="gdbus-org.storaged.Storaged.Drive.html#gdbus-method-org-storaged-Storaged-Drive.SetConfiguration"/>
     <keyword type="method" name="The PowerOff() method" link="gdbus-org.storaged.Storaged.Drive.html#gdbus-method-org-storaged-Storaged-Drive.PowerOff"/>
@@ -205,6 +208,8 @@
     <keyword type="property" name="The &quot;AamVendorRecommendedValue&quot; property" link="gdbus-org.storaged.Storaged.Drive.Ata.html#gdbus-property-org-storaged-Storaged-Drive-Ata.AamVendorRecommendedValue"/>
     <keyword type="property" name="The &quot;WriteCacheSupported&quot; property" link="gdbus-org.storaged.Storaged.Drive.Ata.html#gdbus-property-org-storaged-Storaged-Drive-Ata.WriteCacheSupported"/>
     <keyword type="property" name="The &quot;WriteCacheEnabled&quot; property" link="gdbus-org.storaged.Storaged.Drive.Ata.html#gdbus-property-org-storaged-Storaged-Drive-Ata.WriteCacheEnabled"/>
+    <keyword type="property" name="The &quot;ReadLookaheadSupported&quot; property" link="gdbus-org.storaged.Storaged.Drive.Ata.html#gdbus-property-org-storaged-Storaged-Drive-Ata.ReadLookaheadSupported"/>
+    <keyword type="property" name="The &quot;ReadLookaheadEnabled&quot; property" link="gdbus-org.storaged.Storaged.Drive.Ata.html#gdbus-property-org-storaged-Storaged-Drive-Ata.ReadLookaheadEnabled"/>
     <keyword type="property" name="The &quot;SecurityEraseUnitMinutes&quot; property" link="gdbus-org.storaged.Storaged.Drive.Ata.html#gdbus-property-org-storaged-Storaged-Drive-Ata.SecurityEraseUnitMinutes"/>
     <keyword type="property" name="The &quot;SecurityEnhancedEraseUnitMinutes&quot; property" link="gdbus-org.storaged.Storaged.Drive.Ata.html#gdbus-property-org-storaged-Storaged-Drive-Ata.SecurityEnhancedEraseUnitMinutes"/>
     <keyword type="property" name="The &quot;SecurityFrozen&quot; property" link="gdbus-org.storaged.Storaged.Drive.Ata.html#gdbus-property-org-storaged-Storaged-Drive-Ata.SecurityFrozen"/>
@@ -575,6 +580,7 @@
     <keyword type="struct" name="struct StoragedManagerProxyClass" link="StoragedManager.html#StoragedManagerProxyClass"/>
     <keyword type="struct" name="struct StoragedManagerSkeleton" link="StoragedManager.html#StoragedManagerSkeleton-struct"/>
     <keyword type="struct" name="struct StoragedManagerSkeletonClass" link="StoragedManager.html#StoragedManagerSkeletonClass"/>
+    <keyword type="property" name="The “supported-filesystems” property" link="StoragedManager.html#StoragedManager--supported-filesystems"/>
     <keyword type="property" name="The “version” property" link="StoragedManager.html#StoragedManager--version"/>
     <keyword type="signal" name="The “handle-enable-modules” signal" link="StoragedManager.html#StoragedManager-handle-enable-modules"/>
     <keyword type="signal" name="The “handle-loop-setup” signal" link="StoragedManager.html#StoragedManager-handle-loop-setup"/>
@@ -768,6 +774,8 @@
     <keyword type="function" name="storaged_drive_ata_get_pm_supported ()" link="StoragedDriveAta.html#storaged-drive-ata-get-pm-supported"/>
     <keyword type="function" name="storaged_drive_ata_get_write_cache_enabled ()" link="StoragedDriveAta.html#storaged-drive-ata-get-write-cache-enabled" since="2.0.0"/>
     <keyword type="function" name="storaged_drive_ata_get_write_cache_supported ()" link="StoragedDriveAta.html#storaged-drive-ata-get-write-cache-supported" since="2.0.0"/>
+    <keyword type="function" name="storaged_drive_ata_get_read_lookahead_enabled ()" link="StoragedDriveAta.html#storaged-drive-ata-get-read-lookahead-enabled" since="2.1.7"/>
+    <keyword type="function" name="storaged_drive_ata_get_read_lookahead_supported ()" link="StoragedDriveAta.html#storaged-drive-ata-get-read-lookahead-supported" since="2.1.7"/>
     <keyword type="function" name="storaged_drive_ata_get_security_enhanced_erase_unit_minutes ()" link="StoragedDriveAta.html#storaged-drive-ata-get-security-enhanced-erase-unit-minutes"/>
     <keyword type="function" name="storaged_drive_ata_get_security_erase_unit_minutes ()" link="StoragedDriveAta.html#storaged-drive-ata-get-security-erase-unit-minutes"/>
     <keyword type="function" name="storaged_drive_ata_get_security_frozen ()" link="StoragedDriveAta.html#storaged-drive-ata-get-security-frozen"/>
@@ -791,6 +799,8 @@
     <keyword type="function" name="storaged_drive_ata_set_pm_supported ()" link="StoragedDriveAta.html#storaged-drive-ata-set-pm-supported"/>
     <keyword type="function" name="storaged_drive_ata_set_write_cache_enabled ()" link="StoragedDriveAta.html#storaged-drive-ata-set-write-cache-enabled" since="2.0.0"/>
     <keyword type="function" name="storaged_drive_ata_set_write_cache_supported ()" link="StoragedDriveAta.html#storaged-drive-ata-set-write-cache-supported" since="2.0.0"/>
+    <keyword type="function" name="storaged_drive_ata_set_read_lookahead_enabled ()" link="StoragedDriveAta.html#storaged-drive-ata-set-read-lookahead-enabled" since="2.1.7"/>
+    <keyword type="function" name="storaged_drive_ata_set_read_lookahead_supported ()" link="StoragedDriveAta.html#storaged-drive-ata-set-read-lookahead-supported" since="2.1.7"/>
     <keyword type="function" name="storaged_drive_ata_set_security_enhanced_erase_unit_minutes ()" link="StoragedDriveAta.html#storaged-drive-ata-set-security-enhanced-erase-unit-minutes"/>
     <keyword type="function" name="storaged_drive_ata_set_security_erase_unit_minutes ()" link="StoragedDriveAta.html#storaged-drive-ata-set-security-erase-unit-minutes"/>
     <keyword type="function" name="storaged_drive_ata_set_security_frozen ()" link="StoragedDriveAta.html#storaged-drive-ata-set-security-frozen"/>
@@ -814,6 +824,8 @@
     <keyword type="property" name="The “apm-supported” property" link="StoragedDriveAta.html#StoragedDriveAta--apm-supported"/>
     <keyword type="property" name="The “pm-enabled” property" link="StoragedDriveAta.html#StoragedDriveAta--pm-enabled"/>
     <keyword type="property" name="The “pm-supported” property" link="StoragedDriveAta.html#StoragedDriveAta--pm-supported"/>
+    <keyword type="property" name="The “read-lookahead-enabled” property" link="StoragedDriveAta.html#StoragedDriveAta--read-lookahead-enabled"/>
+    <keyword type="property" name="The “read-lookahead-supported” property" link="StoragedDriveAta.html#StoragedDriveAta--read-lookahead-supported"/>
     <keyword type="property" name="The “security-enhanced-erase-unit-minutes” property" link="StoragedDriveAta.html#StoragedDriveAta--security-enhanced-erase-unit-minutes"/>
     <keyword type="property" name="The “security-erase-unit-minutes” property" link="StoragedDriveAta.html#StoragedDriveAta--security-erase-unit-minutes"/>
     <keyword type="property" name="The “security-frozen” property" link="StoragedDriveAta.html#StoragedDriveAta--security-frozen"/>
@@ -2119,13 +2131,13 @@
     <keyword type="function" name="storaged_linux_drive_new ()" link="StoragedLinuxDrive.html#storaged-linux-drive-new"/>
     <keyword type="function" name="storaged_linux_drive_update ()" link="StoragedLinuxDrive.html#storaged-linux-drive-update"/>
     <keyword type="struct" name="StoragedLinuxDrive" link="StoragedLinuxDrive.html#StoragedLinuxDrive-struct"/>
-    <keyword type="function" name="storaged_linux_drive_ata_new ()" link="storaged-DummyLinuxDrive.html#storaged-linux-drive-ata-new"/>
-    <keyword type="function" name="storaged_linux_drive_ata_update ()" link="storaged-DummyLinuxDrive.html#storaged-linux-drive-ata-update"/>
-    <keyword type="function" name="storaged_linux_drive_ata_refresh_smart_sync ()" link="storaged-DummyLinuxDrive.html#storaged-linux-drive-ata-refresh-smart-sync"/>
-    <keyword type="function" name="storaged_linux_drive_ata_smart_selftest_sync ()" link="storaged-DummyLinuxDrive.html#storaged-linux-drive-ata-smart-selftest-sync"/>
-    <keyword type="function" name="storaged_linux_drive_ata_apply_configuration ()" link="storaged-DummyLinuxDrive.html#storaged-linux-drive-ata-apply-configuration"/>
-    <keyword type="function" name="storaged_linux_drive_ata_secure_erase_sync ()" link="storaged-DummyLinuxDrive.html#storaged-linux-drive-ata-secure-erase-sync"/>
-    <keyword type="struct" name="StoragedLinuxDriveAta" link="storaged-DummyLinuxDrive.html#StoragedLinuxDriveAta-struct"/>
+    <keyword type="function" name="storaged_linux_drive_ata_new ()" link="storaged-DummyLinuxBlock.html#storaged-linux-drive-ata-new"/>
+    <keyword type="function" name="storaged_linux_drive_ata_update ()" link="storaged-DummyLinuxBlock.html#storaged-linux-drive-ata-update"/>
+    <keyword type="function" name="storaged_linux_drive_ata_refresh_smart_sync ()" link="storaged-DummyLinuxBlock.html#storaged-linux-drive-ata-refresh-smart-sync"/>
+    <keyword type="function" name="storaged_linux_drive_ata_smart_selftest_sync ()" link="storaged-DummyLinuxBlock.html#storaged-linux-drive-ata-smart-selftest-sync"/>
+    <keyword type="function" name="storaged_linux_drive_ata_apply_configuration ()" link="storaged-DummyLinuxBlock.html#storaged-linux-drive-ata-apply-configuration"/>
+    <keyword type="function" name="storaged_linux_drive_ata_secure_erase_sync ()" link="storaged-DummyLinuxBlock.html#storaged-linux-drive-ata-secure-erase-sync"/>
+    <keyword type="struct" name="StoragedLinuxDriveAta" link="storaged-DummyLinuxBlock.html#StoragedLinuxDriveAta-struct"/>
     <keyword type="function" name="storaged_linux_drive_object_new ()" link="StoragedLinuxDriveObject.html#storaged-linux-drive-object-new"/>
     <keyword type="function" name="storaged_linux_drive_object_uevent ()" link="StoragedLinuxDriveObject.html#storaged-linux-drive-object-uevent"/>
     <keyword type="function" name="storaged_linux_drive_object_get_daemon ()" link="StoragedLinuxDriveObject.html#storaged-linux-drive-object-get-daemon"/>

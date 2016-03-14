@@ -518,6 +518,22 @@
 </tr>
 <tr>
 <td class="function_type">
+<a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="StoragedDriveAta.html#storaged-drive-ata-get-read-lookahead-enabled" title="storaged_drive_ata_get_read_lookahead_enabled ()">storaged_drive_ata_get_read_lookahead_enabled</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="StoragedDriveAta.html#storaged-drive-ata-get-read-lookahead-supported" title="storaged_drive_ata_get_read_lookahead_supported ()">storaged_drive_ata_get_read_lookahead_supported</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
 <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gint"><span class="returnvalue">gint</span></a>
 </td>
 <td class="function_name">
@@ -705,6 +721,22 @@
 <span class="returnvalue">void</span>
 </td>
 <td class="function_name">
+<a class="link" href="StoragedDriveAta.html#storaged-drive-ata-set-read-lookahead-enabled" title="storaged_drive_ata_set_read_lookahead_enabled ()">storaged_drive_ata_set_read_lookahead_enabled</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="StoragedDriveAta.html#storaged-drive-ata-set-read-lookahead-supported" title="storaged_drive_ata_set_read_lookahead_supported ()">storaged_drive_ata_set_read_lookahead_supported</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
 <a class="link" href="StoragedDriveAta.html#storaged-drive-ata-set-security-enhanced-erase-unit-minutes" title="storaged_drive_ata_set_security_enhanced_erase_unit_minutes ()">storaged_drive_ata_set_security_enhanced_erase_unit_minutes</a> <span class="c_punctuation">()</span>
 </td>
 </tr>
@@ -825,6 +857,16 @@
 <tr>
 <td class="property_type"><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a></td>
 <td class="property_name"><a class="link" href="StoragedDriveAta.html#StoragedDriveAta--pm-supported" title="The “pm-supported” property">pm-supported</a></td>
+<td class="property_flags">Read / Write</td>
+</tr>
+<tr>
+<td class="property_type"><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a></td>
+<td class="property_name"><a class="link" href="StoragedDriveAta.html#StoragedDriveAta--read-lookahead-enabled" title="The “read-lookahead-enabled” property">read-lookahead-enabled</a></td>
+<td class="property_flags">Read / Write</td>
+</tr>
+<tr>
+<td class="property_type"><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a></td>
+<td class="property_name"><a class="link" href="StoragedDriveAta.html#StoragedDriveAta--read-lookahead-supported" title="The “read-lookahead-supported” property">read-lookahead-supported</a></td>
 <td class="property_flags">Read / Write</td>
 </tr>
 <tr>
@@ -1010,7 +1052,7 @@
     <a href="/usr/share/gtk-doc/html/gobject/gobject-The-Base-Object-Type.html#GObject">GObject</a>
     <span class="lineart">├──</span> <a href="/usr/share/gtk-doc/html/gio/GDBusInterfaceSkeleton.html">GDBusInterfaceSkeleton</a>
     <span class="lineart">│</span>   <span class="lineart">╰──</span> StoragedDriveAtaSkeleton
-    <span class="lineart">│</span>       <span class="lineart">╰──</span> <a class="link" href="storaged-DummyLinuxDrive.html#StoragedLinuxDriveAta">StoragedLinuxDriveAta</a>
+    <span class="lineart">│</span>       <span class="lineart">╰──</span> <a class="link" href="storaged-DummyLinuxBlock.html#StoragedLinuxDriveAta">StoragedLinuxDriveAta</a>
     <span class="lineart">╰──</span> <a href="/usr/share/gtk-doc/html/gio/GDBusProxy.html">GDBusProxy</a>
         <span class="lineart">╰──</span> StoragedDriveAtaProxy
 </pre>
@@ -1034,7 +1076,7 @@ StoragedDriveAtaSkeleton implements
 <a name="StoragedDriveAta.implementations"></a><h2>Known Implementations</h2>
 <p>
 StoragedDriveAta is implemented by
- <a class="link" href="StoragedDriveAta.html#StoragedDriveAtaProxy">StoragedDriveAtaProxy</a>,  <a class="link" href="StoragedDriveAta.html#StoragedDriveAtaSkeleton">StoragedDriveAtaSkeleton</a> and  <a class="link" href="storaged-DummyLinuxDrive.html#StoragedLinuxDriveAta">StoragedLinuxDriveAta</a>.</p>
+ <a class="link" href="StoragedDriveAta.html#StoragedDriveAtaProxy">StoragedDriveAtaProxy</a>,  <a class="link" href="StoragedDriveAta.html#StoragedDriveAtaSkeleton">StoragedDriveAtaSkeleton</a> and  <a class="link" href="storaged-DummyLinuxBlock.html#StoragedLinuxDriveAta">StoragedLinuxDriveAta</a>.</p>
 </div>
 <div class="refsect1">
 <a name="StoragedDriveAta.description"></a><h2>Description</h2>
@@ -3394,11 +3436,11 @@ storaged_drive_ata_get_write_cache_supported
 </div>
 <hr>
 <div class="refsect2">
-<a name="storaged-drive-ata-get-security-enhanced-erase-unit-minutes"></a><h3>storaged_drive_ata_get_security_enhanced_erase_unit_minutes ()</h3>
-<pre class="programlisting"><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gint"><span class="returnvalue">gint</span></a>
-storaged_drive_ata_get_security_enhanced_erase_unit_minutes
+<a name="storaged-drive-ata-get-read-lookahead-enabled"></a><h3>storaged_drive_ata_get_read_lookahead_enabled ()</h3>
+<pre class="programlisting"><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+storaged_drive_ata_get_read_lookahead_enabled
                                (<em class="parameter"><code><a class="link" href="StoragedDriveAta.html" title="StoragedDriveAta"><span class="type">StoragedDriveAta</span></a> *object</code></em>);</pre>
-<p>Gets the value of the <a class="link" href="gdbus-org.storaged.Storaged.Drive.Ata.html#gdbus-property-org-storaged-Storaged-Drive-Ata.SecurityEnhancedEraseUnitMinutes" title='The "SecurityEnhancedEraseUnitMinutes" property'>"SecurityEnhancedEraseUnitMinutes"</a> D-Bus property.</p>
+<p>Gets the value of the <a class="link" href="gdbus-org.storaged.Storaged.Drive.Ata.html#gdbus-property-org-storaged-Storaged-Drive-Ata.ReadLookaheadEnabled" title='The "ReadLookaheadEnabled" property'>"ReadLookaheadEnabled"</a> D-Bus property.</p>
 <p>Since this D-Bus property is readable, it is meaningful to use this function on both the client- and service-side.</p>
 <p><span class="annotation">[<acronym title="Exposed in C code, not necessarily available in other languages."><span class="acronym">skip</span></acronym>]</span></p>
 <div class="refsect3">
@@ -3420,14 +3462,15 @@ storaged_drive_ata_get_security_enhanced_erase_unit_minutes
 <a name="id-1.4.5.6.14.61.8"></a><h4>Returns</h4>
 <p> The property value.</p>
 </div>
+<p class="since">Since: 2.1.7</p>
 </div>
 <hr>
 <div class="refsect2">
-<a name="storaged-drive-ata-get-security-erase-unit-minutes"></a><h3>storaged_drive_ata_get_security_erase_unit_minutes ()</h3>
-<pre class="programlisting"><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gint"><span class="returnvalue">gint</span></a>
-storaged_drive_ata_get_security_erase_unit_minutes
+<a name="storaged-drive-ata-get-read-lookahead-supported"></a><h3>storaged_drive_ata_get_read_lookahead_supported ()</h3>
+<pre class="programlisting"><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+storaged_drive_ata_get_read_lookahead_supported
                                (<em class="parameter"><code><a class="link" href="StoragedDriveAta.html" title="StoragedDriveAta"><span class="type">StoragedDriveAta</span></a> *object</code></em>);</pre>
-<p>Gets the value of the <a class="link" href="gdbus-org.storaged.Storaged.Drive.Ata.html#gdbus-property-org-storaged-Storaged-Drive-Ata.SecurityEraseUnitMinutes" title='The "SecurityEraseUnitMinutes" property'>"SecurityEraseUnitMinutes"</a> D-Bus property.</p>
+<p>Gets the value of the <a class="link" href="gdbus-org.storaged.Storaged.Drive.Ata.html#gdbus-property-org-storaged-Storaged-Drive-Ata.ReadLookaheadSupported" title='The "ReadLookaheadSupported" property'>"ReadLookaheadSupported"</a> D-Bus property.</p>
 <p>Since this D-Bus property is readable, it is meaningful to use this function on both the client- and service-side.</p>
 <p><span class="annotation">[<acronym title="Exposed in C code, not necessarily available in other languages."><span class="acronym">skip</span></acronym>]</span></p>
 <div class="refsect3">
@@ -3449,14 +3492,15 @@ storaged_drive_ata_get_security_erase_unit_minutes
 <a name="id-1.4.5.6.14.62.8"></a><h4>Returns</h4>
 <p> The property value.</p>
 </div>
+<p class="since">Since: 2.1.7</p>
 </div>
 <hr>
 <div class="refsect2">
-<a name="storaged-drive-ata-get-security-frozen"></a><h3>storaged_drive_ata_get_security_frozen ()</h3>
-<pre class="programlisting"><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
-storaged_drive_ata_get_security_frozen
+<a name="storaged-drive-ata-get-security-enhanced-erase-unit-minutes"></a><h3>storaged_drive_ata_get_security_enhanced_erase_unit_minutes ()</h3>
+<pre class="programlisting"><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gint"><span class="returnvalue">gint</span></a>
+storaged_drive_ata_get_security_enhanced_erase_unit_minutes
                                (<em class="parameter"><code><a class="link" href="StoragedDriveAta.html" title="StoragedDriveAta"><span class="type">StoragedDriveAta</span></a> *object</code></em>);</pre>
-<p>Gets the value of the <a class="link" href="gdbus-org.storaged.Storaged.Drive.Ata.html#gdbus-property-org-storaged-Storaged-Drive-Ata.SecurityFrozen" title='The "SecurityFrozen" property'>"SecurityFrozen"</a> D-Bus property.</p>
+<p>Gets the value of the <a class="link" href="gdbus-org.storaged.Storaged.Drive.Ata.html#gdbus-property-org-storaged-Storaged-Drive-Ata.SecurityEnhancedEraseUnitMinutes" title='The "SecurityEnhancedEraseUnitMinutes" property'>"SecurityEnhancedEraseUnitMinutes"</a> D-Bus property.</p>
 <p>Since this D-Bus property is readable, it is meaningful to use this function on both the client- and service-side.</p>
 <p><span class="annotation">[<acronym title="Exposed in C code, not necessarily available in other languages."><span class="acronym">skip</span></acronym>]</span></p>
 <div class="refsect3">
@@ -3481,6 +3525,64 @@ storaged_drive_ata_get_security_frozen
 </div>
 <hr>
 <div class="refsect2">
+<a name="storaged-drive-ata-get-security-erase-unit-minutes"></a><h3>storaged_drive_ata_get_security_erase_unit_minutes ()</h3>
+<pre class="programlisting"><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gint"><span class="returnvalue">gint</span></a>
+storaged_drive_ata_get_security_erase_unit_minutes
+                               (<em class="parameter"><code><a class="link" href="StoragedDriveAta.html" title="StoragedDriveAta"><span class="type">StoragedDriveAta</span></a> *object</code></em>);</pre>
+<p>Gets the value of the <a class="link" href="gdbus-org.storaged.Storaged.Drive.Ata.html#gdbus-property-org-storaged-Storaged-Drive-Ata.SecurityEraseUnitMinutes" title='The "SecurityEraseUnitMinutes" property'>"SecurityEraseUnitMinutes"</a> D-Bus property.</p>
+<p>Since this D-Bus property is readable, it is meaningful to use this function on both the client- and service-side.</p>
+<p><span class="annotation">[<acronym title="Exposed in C code, not necessarily available in other languages."><span class="acronym">skip</span></acronym>]</span></p>
+<div class="refsect3">
+<a name="id-1.4.5.6.14.64.7"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>object</p></td>
+<td class="parameter_description"><p>A <a class="link" href="StoragedDriveAta.html" title="StoragedDriveAta"><span class="type">StoragedDriveAta</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="id-1.4.5.6.14.64.8"></a><h4>Returns</h4>
+<p> The property value.</p>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="storaged-drive-ata-get-security-frozen"></a><h3>storaged_drive_ata_get_security_frozen ()</h3>
+<pre class="programlisting"><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+storaged_drive_ata_get_security_frozen
+                               (<em class="parameter"><code><a class="link" href="StoragedDriveAta.html" title="StoragedDriveAta"><span class="type">StoragedDriveAta</span></a> *object</code></em>);</pre>
+<p>Gets the value of the <a class="link" href="gdbus-org.storaged.Storaged.Drive.Ata.html#gdbus-property-org-storaged-Storaged-Drive-Ata.SecurityFrozen" title='The "SecurityFrozen" property'>"SecurityFrozen"</a> D-Bus property.</p>
+<p>Since this D-Bus property is readable, it is meaningful to use this function on both the client- and service-side.</p>
+<p><span class="annotation">[<acronym title="Exposed in C code, not necessarily available in other languages."><span class="acronym">skip</span></acronym>]</span></p>
+<div class="refsect3">
+<a name="id-1.4.5.6.14.65.7"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>object</p></td>
+<td class="parameter_description"><p>A <a class="link" href="StoragedDriveAta.html" title="StoragedDriveAta"><span class="type">StoragedDriveAta</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="id-1.4.5.6.14.65.8"></a><h4>Returns</h4>
+<p> The property value.</p>
+</div>
+</div>
+<hr>
+<div class="refsect2">
 <a name="storaged-drive-ata-set-smart-supported"></a><h3>storaged_drive_ata_set_smart_supported ()</h3>
 <pre class="programlisting"><span class="returnvalue">void</span>
 storaged_drive_ata_set_smart_supported
@@ -3491,7 +3593,7 @@ storaged_drive_ata_set_smart_supported
 <p>Since this D-Bus property is not writable, it is only meaningful to use this function on the service-side.</p>
 <p><span class="annotation">[<acronym title="Exposed in C code, not necessarily available in other languages."><span class="acronym">skip</span></acronym>]</span></p>
 <div class="refsect3">
-<a name="id-1.4.5.6.14.64.7"></a><h4>Parameters</h4>
+<a name="id-1.4.5.6.14.66.7"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -3524,7 +3626,7 @@ storaged_drive_ata_set_smart_enabled (<em class="parameter"><code><a class="link
 <p>Since this D-Bus property is not writable, it is only meaningful to use this function on the service-side.</p>
 <p><span class="annotation">[<acronym title="Exposed in C code, not necessarily available in other languages."><span class="acronym">skip</span></acronym>]</span></p>
 <div class="refsect3">
-<a name="id-1.4.5.6.14.65.7"></a><h4>Parameters</h4>
+<a name="id-1.4.5.6.14.67.7"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -3557,7 +3659,7 @@ storaged_drive_ata_set_smart_updated (<em class="parameter"><code><a class="link
 <p>Since this D-Bus property is not writable, it is only meaningful to use this function on the service-side.</p>
 <p><span class="annotation">[<acronym title="Exposed in C code, not necessarily available in other languages."><span class="acronym">skip</span></acronym>]</span></p>
 <div class="refsect3">
-<a name="id-1.4.5.6.14.66.7"></a><h4>Parameters</h4>
+<a name="id-1.4.5.6.14.68.7"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -3590,7 +3692,7 @@ storaged_drive_ata_set_smart_failing (<em class="parameter"><code><a class="link
 <p>Since this D-Bus property is not writable, it is only meaningful to use this function on the service-side.</p>
 <p><span class="annotation">[<acronym title="Exposed in C code, not necessarily available in other languages."><span class="acronym">skip</span></acronym>]</span></p>
 <div class="refsect3">
-<a name="id-1.4.5.6.14.67.7"></a><h4>Parameters</h4>
+<a name="id-1.4.5.6.14.69.7"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -3624,7 +3726,7 @@ storaged_drive_ata_set_smart_temperature
 <p>Since this D-Bus property is not writable, it is only meaningful to use this function on the service-side.</p>
 <p><span class="annotation">[<acronym title="Exposed in C code, not necessarily available in other languages."><span class="acronym">skip</span></acronym>]</span></p>
 <div class="refsect3">
-<a name="id-1.4.5.6.14.68.7"></a><h4>Parameters</h4>
+<a name="id-1.4.5.6.14.70.7"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -3658,7 +3760,7 @@ storaged_drive_ata_set_smart_power_on_seconds
 <p>Since this D-Bus property is not writable, it is only meaningful to use this function on the service-side.</p>
 <p><span class="annotation">[<acronym title="Exposed in C code, not necessarily available in other languages."><span class="acronym">skip</span></acronym>]</span></p>
 <div class="refsect3">
-<a name="id-1.4.5.6.14.69.7"></a><h4>Parameters</h4>
+<a name="id-1.4.5.6.14.71.7"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -3692,7 +3794,7 @@ storaged_drive_ata_set_smart_num_attributes_failed_in_the_past
 <p>Since this D-Bus property is not writable, it is only meaningful to use this function on the service-side.</p>
 <p><span class="annotation">[<acronym title="Exposed in C code, not necessarily available in other languages."><span class="acronym">skip</span></acronym>]</span></p>
 <div class="refsect3">
-<a name="id-1.4.5.6.14.70.7"></a><h4>Parameters</h4>
+<a name="id-1.4.5.6.14.72.7"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -3726,7 +3828,7 @@ storaged_drive_ata_set_smart_num_attributes_failing
 <p>Since this D-Bus property is not writable, it is only meaningful to use this function on the service-side.</p>
 <p><span class="annotation">[<acronym title="Exposed in C code, not necessarily available in other languages."><span class="acronym">skip</span></acronym>]</span></p>
 <div class="refsect3">
-<a name="id-1.4.5.6.14.71.7"></a><h4>Parameters</h4>
+<a name="id-1.4.5.6.14.73.7"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -3760,7 +3862,7 @@ storaged_drive_ata_set_smart_num_bad_sectors
 <p>Since this D-Bus property is not writable, it is only meaningful to use this function on the service-side.</p>
 <p><span class="annotation">[<acronym title="Exposed in C code, not necessarily available in other languages."><span class="acronym">skip</span></acronym>]</span></p>
 <div class="refsect3">
-<a name="id-1.4.5.6.14.72.7"></a><h4>Parameters</h4>
+<a name="id-1.4.5.6.14.74.7"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -3794,7 +3896,7 @@ storaged_drive_ata_set_smart_selftest_percent_remaining
 <p>Since this D-Bus property is not writable, it is only meaningful to use this function on the service-side.</p>
 <p><span class="annotation">[<acronym title="Exposed in C code, not necessarily available in other languages."><span class="acronym">skip</span></acronym>]</span></p>
 <div class="refsect3">
-<a name="id-1.4.5.6.14.73.7"></a><h4>Parameters</h4>
+<a name="id-1.4.5.6.14.75.7"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -3828,7 +3930,7 @@ storaged_drive_ata_set_smart_selftest_status
 <p>Since this D-Bus property is not writable, it is only meaningful to use this function on the service-side.</p>
 <p><span class="annotation">[<acronym title="Exposed in C code, not necessarily available in other languages."><span class="acronym">skip</span></acronym>]</span></p>
 <div class="refsect3">
-<a name="id-1.4.5.6.14.74.7"></a><h4>Parameters</h4>
+<a name="id-1.4.5.6.14.76.7"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -3861,7 +3963,7 @@ storaged_drive_ata_set_aam_enabled (<em class="parameter"><code><a class="link" 
 <p>Since this D-Bus property is not writable, it is only meaningful to use this function on the service-side.</p>
 <p><span class="annotation">[<acronym title="Exposed in C code, not necessarily available in other languages."><span class="acronym">skip</span></acronym>]</span></p>
 <div class="refsect3">
-<a name="id-1.4.5.6.14.75.7"></a><h4>Parameters</h4>
+<a name="id-1.4.5.6.14.77.7"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -3894,7 +3996,7 @@ storaged_drive_ata_set_aam_supported (<em class="parameter"><code><a class="link
 <p>Since this D-Bus property is not writable, it is only meaningful to use this function on the service-side.</p>
 <p><span class="annotation">[<acronym title="Exposed in C code, not necessarily available in other languages."><span class="acronym">skip</span></acronym>]</span></p>
 <div class="refsect3">
-<a name="id-1.4.5.6.14.76.7"></a><h4>Parameters</h4>
+<a name="id-1.4.5.6.14.78.7"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -3928,7 +4030,7 @@ storaged_drive_ata_set_aam_vendor_recommended_value
 <p>Since this D-Bus property is not writable, it is only meaningful to use this function on the service-side.</p>
 <p><span class="annotation">[<acronym title="Exposed in C code, not necessarily available in other languages."><span class="acronym">skip</span></acronym>]</span></p>
 <div class="refsect3">
-<a name="id-1.4.5.6.14.77.7"></a><h4>Parameters</h4>
+<a name="id-1.4.5.6.14.79.7"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -3961,7 +4063,7 @@ storaged_drive_ata_set_apm_enabled (<em class="parameter"><code><a class="link" 
 <p>Since this D-Bus property is not writable, it is only meaningful to use this function on the service-side.</p>
 <p><span class="annotation">[<acronym title="Exposed in C code, not necessarily available in other languages."><span class="acronym">skip</span></acronym>]</span></p>
 <div class="refsect3">
-<a name="id-1.4.5.6.14.78.7"></a><h4>Parameters</h4>
+<a name="id-1.4.5.6.14.80.7"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -3994,7 +4096,7 @@ storaged_drive_ata_set_apm_supported (<em class="parameter"><code><a class="link
 <p>Since this D-Bus property is not writable, it is only meaningful to use this function on the service-side.</p>
 <p><span class="annotation">[<acronym title="Exposed in C code, not necessarily available in other languages."><span class="acronym">skip</span></acronym>]</span></p>
 <div class="refsect3">
-<a name="id-1.4.5.6.14.79.7"></a><h4>Parameters</h4>
+<a name="id-1.4.5.6.14.81.7"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -4027,7 +4129,7 @@ storaged_drive_ata_set_pm_enabled (<em class="parameter"><code><a class="link" h
 <p>Since this D-Bus property is not writable, it is only meaningful to use this function on the service-side.</p>
 <p><span class="annotation">[<acronym title="Exposed in C code, not necessarily available in other languages."><span class="acronym">skip</span></acronym>]</span></p>
 <div class="refsect3">
-<a name="id-1.4.5.6.14.80.7"></a><h4>Parameters</h4>
+<a name="id-1.4.5.6.14.82.7"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -4060,7 +4162,7 @@ storaged_drive_ata_set_pm_supported (<em class="parameter"><code><a class="link"
 <p>Since this D-Bus property is not writable, it is only meaningful to use this function on the service-side.</p>
 <p><span class="annotation">[<acronym title="Exposed in C code, not necessarily available in other languages."><span class="acronym">skip</span></acronym>]</span></p>
 <div class="refsect3">
-<a name="id-1.4.5.6.14.81.7"></a><h4>Parameters</h4>
+<a name="id-1.4.5.6.14.83.7"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -4094,7 +4196,7 @@ storaged_drive_ata_set_write_cache_enabled
 <p>Since this D-Bus property is not writable, it is only meaningful to use this function on the service-side.</p>
 <p><span class="annotation">[<acronym title="Exposed in C code, not necessarily available in other languages."><span class="acronym">skip</span></acronym>]</span></p>
 <div class="refsect3">
-<a name="id-1.4.5.6.14.82.7"></a><h4>Parameters</h4>
+<a name="id-1.4.5.6.14.84.7"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -4129,7 +4231,7 @@ storaged_drive_ata_set_write_cache_supported
 <p>Since this D-Bus property is not writable, it is only meaningful to use this function on the service-side.</p>
 <p><span class="annotation">[<acronym title="Exposed in C code, not necessarily available in other languages."><span class="acronym">skip</span></acronym>]</span></p>
 <div class="refsect3">
-<a name="id-1.4.5.6.14.83.7"></a><h4>Parameters</h4>
+<a name="id-1.4.5.6.14.85.7"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -4154,6 +4256,76 @@ storaged_drive_ata_set_write_cache_supported
 </div>
 <hr>
 <div class="refsect2">
+<a name="storaged-drive-ata-set-read-lookahead-enabled"></a><h3>storaged_drive_ata_set_read_lookahead_enabled ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+storaged_drive_ata_set_read_lookahead_enabled
+                               (<em class="parameter"><code><a class="link" href="StoragedDriveAta.html" title="StoragedDriveAta"><span class="type">StoragedDriveAta</span></a> *object</code></em>,
+                                <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a> value</code></em>);</pre>
+<p>Sets the <a class="link" href="gdbus-org.storaged.Storaged.Drive.Ata.html#gdbus-property-org-storaged-Storaged-Drive-Ata.ReadLookaheadEnabled" title='The "ReadLookaheadEnabled" property'>"ReadLookaheadEnabled"</a> D-Bus property to <em class="parameter"><code>value</code></em>
+.</p>
+<p>Since this D-Bus property is not writable, it is only meaningful to use this function on the service-side.</p>
+<p><span class="annotation">[<acronym title="Exposed in C code, not necessarily available in other languages."><span class="acronym">skip</span></acronym>]</span></p>
+<div class="refsect3">
+<a name="id-1.4.5.6.14.86.7"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>object</p></td>
+<td class="parameter_description"><p>A <a class="link" href="StoragedDriveAta.html" title="StoragedDriveAta"><span class="type">StoragedDriveAta</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>value</p></td>
+<td class="parameter_description"><p>The value to set.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<p class="since">Since: 2.1.7</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="storaged-drive-ata-set-read-lookahead-supported"></a><h3>storaged_drive_ata_set_read_lookahead_supported ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+storaged_drive_ata_set_read_lookahead_supported
+                               (<em class="parameter"><code><a class="link" href="StoragedDriveAta.html" title="StoragedDriveAta"><span class="type">StoragedDriveAta</span></a> *object</code></em>,
+                                <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a> value</code></em>);</pre>
+<p>Sets the <a class="link" href="gdbus-org.storaged.Storaged.Drive.Ata.html#gdbus-property-org-storaged-Storaged-Drive-Ata.ReadLookaheadSupported" title='The "ReadLookaheadSupported" property'>"ReadLookaheadSupported"</a> D-Bus property to <em class="parameter"><code>value</code></em>
+.</p>
+<p>Since this D-Bus property is not writable, it is only meaningful to use this function on the service-side.</p>
+<p><span class="annotation">[<acronym title="Exposed in C code, not necessarily available in other languages."><span class="acronym">skip</span></acronym>]</span></p>
+<div class="refsect3">
+<a name="id-1.4.5.6.14.87.7"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>object</p></td>
+<td class="parameter_description"><p>A <a class="link" href="StoragedDriveAta.html" title="StoragedDriveAta"><span class="type">StoragedDriveAta</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>value</p></td>
+<td class="parameter_description"><p>The value to set.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<p class="since">Since: 2.1.7</p>
+</div>
+<hr>
+<div class="refsect2">
 <a name="storaged-drive-ata-set-security-enhanced-erase-unit-minutes"></a><h3>storaged_drive_ata_set_security_enhanced_erase_unit_minutes ()</h3>
 <pre class="programlisting"><span class="returnvalue">void</span>
 storaged_drive_ata_set_security_enhanced_erase_unit_minutes
@@ -4164,7 +4336,7 @@ storaged_drive_ata_set_security_enhanced_erase_unit_minutes
 <p>Since this D-Bus property is not writable, it is only meaningful to use this function on the service-side.</p>
 <p><span class="annotation">[<acronym title="Exposed in C code, not necessarily available in other languages."><span class="acronym">skip</span></acronym>]</span></p>
 <div class="refsect3">
-<a name="id-1.4.5.6.14.84.7"></a><h4>Parameters</h4>
+<a name="id-1.4.5.6.14.88.7"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -4198,7 +4370,7 @@ storaged_drive_ata_set_security_erase_unit_minutes
 <p>Since this D-Bus property is not writable, it is only meaningful to use this function on the service-side.</p>
 <p><span class="annotation">[<acronym title="Exposed in C code, not necessarily available in other languages."><span class="acronym">skip</span></acronym>]</span></p>
 <div class="refsect3">
-<a name="id-1.4.5.6.14.85.7"></a><h4>Parameters</h4>
+<a name="id-1.4.5.6.14.89.7"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -4232,7 +4404,7 @@ storaged_drive_ata_set_security_frozen
 <p>Since this D-Bus property is not writable, it is only meaningful to use this function on the service-side.</p>
 <p><span class="annotation">[<acronym title="Exposed in C code, not necessarily available in other languages."><span class="acronym">skip</span></acronym>]</span></p>
 <div class="refsect3">
-<a name="id-1.4.5.6.14.86.7"></a><h4>Parameters</h4>
+<a name="id-1.4.5.6.14.90.7"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -4271,7 +4443,7 @@ storaged_drive_ata_proxy_new (<em class="parameter"><code><a href="/usr/share/gt
 You can then call <a class="link" href="StoragedDriveAta.html#storaged-drive-ata-proxy-new-finish" title="storaged_drive_ata_proxy_new_finish ()"><code class="function">storaged_drive_ata_proxy_new_finish()</code></a> to get the result of the operation.</p>
 <p>See <a class="link" href="StoragedDriveAta.html#storaged-drive-ata-proxy-new-sync" title="storaged_drive_ata_proxy_new_sync ()"><code class="function">storaged_drive_ata_proxy_new_sync()</code></a> for the synchronous, blocking version of this constructor.</p>
 <div class="refsect3">
-<a name="id-1.4.5.6.14.87.7"></a><h4>Parameters</h4>
+<a name="id-1.4.5.6.14.91.7"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -4328,7 +4500,7 @@ storaged_drive_ata_proxy_new_finish (<em class="parameter"><code><a href="/usr/s
                                      <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glib/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);</pre>
 <p>Finishes an operation started with <a class="link" href="StoragedDriveAta.html#storaged-drive-ata-proxy-new" title="storaged_drive_ata_proxy_new ()"><code class="function">storaged_drive_ata_proxy_new()</code></a>.</p>
 <div class="refsect3">
-<a name="id-1.4.5.6.14.88.5"></a><h4>Parameters</h4>
+<a name="id-1.4.5.6.14.92.5"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -4350,7 +4522,7 @@ storaged_drive_ata_proxy_new_finish (<em class="parameter"><code><a href="/usr/s
 </table></div>
 </div>
 <div class="refsect3">
-<a name="id-1.4.5.6.14.88.6"></a><h4>Returns</h4>
+<a name="id-1.4.5.6.14.92.6"></a><h4>Returns</h4>
 <p> The constructed proxy object or <a href="/usr/share/gtk-doc/html/glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a> if <em class="parameter"><code>error</code></em>
 is set. </p>
 <p><span class="annotation">[<acronym title="Free data after the code is done."><span class="acronym">transfer full</span></acronym>][<acronym title="Override the parsed C type with given type."><span class="acronym">type</span></acronym> StoragedDriveAtaProxy]</span></p>
@@ -4370,7 +4542,7 @@ storaged_drive_ata_proxy_new_sync (<em class="parameter"><code><a href="/usr/sha
 <p>The calling thread is blocked until a reply is received.</p>
 <p>See <a class="link" href="StoragedDriveAta.html#storaged-drive-ata-proxy-new" title="storaged_drive_ata_proxy_new ()"><code class="function">storaged_drive_ata_proxy_new()</code></a> for the asynchronous version of this constructor.</p>
 <div class="refsect3">
-<a name="id-1.4.5.6.14.89.7"></a><h4>Parameters</h4>
+<a name="id-1.4.5.6.14.93.7"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -4413,7 +4585,7 @@ is not a message bus connection. </p></td>
 </table></div>
 </div>
 <div class="refsect3">
-<a name="id-1.4.5.6.14.89.8"></a><h4>Returns</h4>
+<a name="id-1.4.5.6.14.93.8"></a><h4>Returns</h4>
 <p> The constructed proxy object or <a href="/usr/share/gtk-doc/html/glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a> if <em class="parameter"><code>error</code></em>
 is set. </p>
 <p><span class="annotation">[<acronym title="Free data after the code is done."><span class="acronym">transfer full</span></acronym>][<acronym title="Override the parsed C type with given type."><span class="acronym">type</span></acronym> StoragedDriveAtaProxy]</span></p>
@@ -4436,7 +4608,7 @@ storaged_drive_ata_proxy_new_for_bus (<em class="parameter"><code><a href="/usr/
 You can then call <a class="link" href="StoragedDriveAta.html#storaged-drive-ata-proxy-new-for-bus-finish" title="storaged_drive_ata_proxy_new_for_bus_finish ()"><code class="function">storaged_drive_ata_proxy_new_for_bus_finish()</code></a> to get the result of the operation.</p>
 <p>See <a class="link" href="StoragedDriveAta.html#storaged-drive-ata-proxy-new-for-bus-sync" title="storaged_drive_ata_proxy_new_for_bus_sync ()"><code class="function">storaged_drive_ata_proxy_new_for_bus_sync()</code></a> for the synchronous, blocking version of this constructor.</p>
 <div class="refsect3">
-<a name="id-1.4.5.6.14.90.7"></a><h4>Parameters</h4>
+<a name="id-1.4.5.6.14.94.7"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -4493,7 +4665,7 @@ storaged_drive_ata_proxy_new_for_bus_finish
                                 <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glib/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);</pre>
 <p>Finishes an operation started with <a class="link" href="StoragedDriveAta.html#storaged-drive-ata-proxy-new-for-bus" title="storaged_drive_ata_proxy_new_for_bus ()"><code class="function">storaged_drive_ata_proxy_new_for_bus()</code></a>.</p>
 <div class="refsect3">
-<a name="id-1.4.5.6.14.91.5"></a><h4>Parameters</h4>
+<a name="id-1.4.5.6.14.95.5"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -4515,7 +4687,7 @@ storaged_drive_ata_proxy_new_for_bus_finish
 </table></div>
 </div>
 <div class="refsect3">
-<a name="id-1.4.5.6.14.91.6"></a><h4>Returns</h4>
+<a name="id-1.4.5.6.14.95.6"></a><h4>Returns</h4>
 <p> The constructed proxy object or <a href="/usr/share/gtk-doc/html/glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a> if <em class="parameter"><code>error</code></em>
 is set. </p>
 <p><span class="annotation">[<acronym title="Free data after the code is done."><span class="acronym">transfer full</span></acronym>][<acronym title="Override the parsed C type with given type."><span class="acronym">type</span></acronym> StoragedDriveAtaProxy]</span></p>
@@ -4536,7 +4708,7 @@ storaged_drive_ata_proxy_new_for_bus_sync
 <p>The calling thread is blocked until a reply is received.</p>
 <p>See <a class="link" href="StoragedDriveAta.html#storaged-drive-ata-proxy-new-for-bus" title="storaged_drive_ata_proxy_new_for_bus ()"><code class="function">storaged_drive_ata_proxy_new_for_bus()</code></a> for the asynchronous version of this constructor.</p>
 <div class="refsect3">
-<a name="id-1.4.5.6.14.92.7"></a><h4>Parameters</h4>
+<a name="id-1.4.5.6.14.96.7"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -4578,7 +4750,7 @@ storaged_drive_ata_proxy_new_for_bus_sync
 </table></div>
 </div>
 <div class="refsect3">
-<a name="id-1.4.5.6.14.92.8"></a><h4>Returns</h4>
+<a name="id-1.4.5.6.14.96.8"></a><h4>Returns</h4>
 <p> The constructed proxy object or <a href="/usr/share/gtk-doc/html/glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a> if <em class="parameter"><code>error</code></em>
 is set. </p>
 <p><span class="annotation">[<acronym title="Free data after the code is done."><span class="acronym">transfer full</span></acronym>][<acronym title="Override the parsed C type with given type."><span class="acronym">type</span></acronym> StoragedDriveAtaProxy]</span></p>
@@ -4591,7 +4763,7 @@ is set. </p>
 storaged_drive_ata_skeleton_new (<em class="parameter"><code><span class="type">void</span></code></em>);</pre>
 <p>Creates a skeleton object for the D-Bus interface <a class="link" href="gdbus-org.storaged.Storaged.Drive.Ata.html#gdbus-interface-org-storaged-Storaged-Drive-Ata.top_of_page">org.storaged.Storaged.Drive.Ata</a>.</p>
 <div class="refsect3">
-<a name="id-1.4.5.6.14.93.5"></a><h4>Returns</h4>
+<a name="id-1.4.5.6.14.97.5"></a><h4>Returns</h4>
 <p> The skeleton object. </p>
 <p><span class="annotation">[<acronym title="Free data after the code is done."><span class="acronym">transfer full</span></acronym>][<acronym title="Override the parsed C type with given type."><span class="acronym">type</span></acronym> StoragedDriveAtaSkeleton]</span></p>
 </div>
@@ -4703,6 +4875,10 @@ storaged_drive_ata_skeleton_new (<em class="parameter"><code><span class="type">
   gboolean  (*get_write_cache_enabled) (StoragedDriveAta *object);
 
   gboolean  (*get_write_cache_supported) (StoragedDriveAta *object);
+
+  gboolean  (*get_read_lookahead_enabled) (StoragedDriveAta *object);
+
+  gboolean  (*get_read_lookahead_supported) (StoragedDriveAta *object);
 };
 </pre>
 <p>Virtual table for the D-Bus interface <a class="link" href="gdbus-org.storaged.Storaged.Drive.Ata.html#gdbus-interface-org-storaged-Storaged-Drive-Ata.top_of_page">org.storaged.Storaged.Drive.Ata</a>.</p>
@@ -4880,6 +5056,16 @@ storaged_drive_ata_skeleton_new (<em class="parameter"><code><span class="type">
 <td class="struct_member_description"><p>Getter for the <a class="link" href="StoragedDriveAta.html#StoragedDriveAta--write-cache-supported" title="The “write-cache-supported” property"><span class="type">“write-cache-supported”</span></a> property.</p></td>
 <td class="struct_member_annotations"> </td>
 </tr>
+<tr>
+<td class="struct_member_name"><p><em class="structfield"><code><a name="StoragedDriveAtaIface.get-read-lookahead-enabled"></a>get_read_lookahead_enabled</code></em> ()</p></td>
+<td class="struct_member_description"><p>Getter for the <a class="link" href="StoragedDriveAta.html#StoragedDriveAta--read-lookahead-enabled" title="The “read-lookahead-enabled” property"><span class="type">“read-lookahead-enabled”</span></a> property.</p></td>
+<td class="struct_member_annotations"> </td>
+</tr>
+<tr>
+<td class="struct_member_name"><p><em class="structfield"><code><a name="StoragedDriveAtaIface.get-read-lookahead-supported"></a>get_read_lookahead_supported</code></em> ()</p></td>
+<td class="struct_member_description"><p>Getter for the <a class="link" href="StoragedDriveAta.html#StoragedDriveAta--read-lookahead-supported" title="The “read-lookahead-supported” property"><span class="type">“read-lookahead-supported”</span></a> property.</p></td>
+<td class="struct_member_annotations"> </td>
+</tr>
 </tbody>
 </table></div>
 </div>
@@ -5008,6 +5194,26 @@ storaged_drive_ata_skeleton_new (<em class="parameter"><code><span class="type">
 <p>Since the D-Bus property for this <a href="/usr/share/gtk-doc/html/gobject/gobject-The-Base-Object-Type.html#GObject"><span class="type">GObject</span></a> property is readable but not writable, it is meaningful to read from it on both the client- and service-side. It is only meaningful, however, to write to it on the service-side.</p>
 <p>Flags: Read / Write</p>
 <p>Default value: FALSE</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="StoragedDriveAta--read-lookahead-enabled"></a><h3>The <code class="literal">“read-lookahead-enabled”</code> property</h3>
+<pre class="programlisting">  “read-lookahead-enabled”   <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a></pre>
+<p>Represents the D-Bus property <a class="link" href="gdbus-org.storaged.Storaged.Drive.Ata.html#gdbus-property-org-storaged-Storaged-Drive-Ata.ReadLookaheadEnabled" title='The "ReadLookaheadEnabled" property'>"ReadLookaheadEnabled"</a>.</p>
+<p>Since the D-Bus property for this <a href="/usr/share/gtk-doc/html/gobject/gobject-The-Base-Object-Type.html#GObject"><span class="type">GObject</span></a> property is readable but not writable, it is meaningful to read from it on both the client- and service-side. It is only meaningful, however, to write to it on the service-side.</p>
+<p>Flags: Read / Write</p>
+<p>Default value: FALSE</p>
+<p class="since">Since: 2.1.7</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="StoragedDriveAta--read-lookahead-supported"></a><h3>The <code class="literal">“read-lookahead-supported”</code> property</h3>
+<pre class="programlisting">  “read-lookahead-supported” <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a></pre>
+<p>Represents the D-Bus property <a class="link" href="gdbus-org.storaged.Storaged.Drive.Ata.html#gdbus-property-org-storaged-Storaged-Drive-Ata.ReadLookaheadSupported" title='The "ReadLookaheadSupported" property'>"ReadLookaheadSupported"</a>.</p>
+<p>Since the D-Bus property for this <a href="/usr/share/gtk-doc/html/gobject/gobject-The-Base-Object-Type.html#GObject"><span class="type">GObject</span></a> property is readable but not writable, it is meaningful to read from it on both the client- and service-side. It is only meaningful, however, to write to it on the service-side.</p>
+<p>Flags: Read / Write</p>
+<p>Default value: FALSE</p>
+<p class="since">Since: 2.1.7</p>
 </div>
 <hr>
 <div class="refsect2">
