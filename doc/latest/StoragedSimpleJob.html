@@ -8,7 +8,7 @@
 <link rel="up" href="ref-daemon-jobs.html" title="Jobs">
 <link rel="prev" href="StoragedBaseJob.html" title="StoragedBaseJob">
 <link rel="next" href="StoragedThreadedJob.html" title="StoragedThreadedJob">
-<meta name="generator" content="GTK-Doc V1.24 (XML mode)">
+<meta name="generator" content="GTK-Doc V1.25 (XML mode)">
 <link rel="stylesheet" href="style.css" type="text/css">
 </head>
 <body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
@@ -75,8 +75,8 @@
 </div>
 <div class="refsect1">
 <a name="StoragedSimpleJob.object-hierarchy"></a><h2>Object Hierarchy</h2>
-<pre class="screen">    <a href="/usr/share/gtk-doc/html/gobject/gobject-The-Base-Object-Type.html#GObject">GObject</a>
-    <span class="lineart">╰──</span> <a href="/usr/share/gtk-doc/html/gio/GDBusInterfaceSkeleton.html">GDBusInterfaceSkeleton</a>
+<pre class="screen">    GObject
+    <span class="lineart">╰──</span> GDBusInterfaceSkeleton
         <span class="lineart">╰──</span> <a class="link" href="StoragedJob.html#StoragedJobSkeleton">StoragedJobSkeleton</a>
             <span class="lineart">╰──</span> <a class="link" href="StoragedBaseJob.html" title="StoragedBaseJob">StoragedBaseJob</a>
                 <span class="lineart">╰──</span> StoragedSimpleJob
@@ -86,7 +86,7 @@
 <a name="StoragedSimpleJob.implemented-interfaces"></a><h2>Implemented Interfaces</h2>
 <p>
 StoragedSimpleJob implements
- <a href="/usr/share/gtk-doc/html/gio/GDBusInterface.html">GDBusInterface</a> and  <a class="link" href="StoragedJob.html" title="StoragedJob">StoragedJob</a>.</p>
+ GDBusInterface and  <a class="link" href="StoragedJob.html" title="StoragedJob">StoragedJob</a>.</p>
 </div>
 <div class="refsect1">
 <a name="StoragedSimpleJob.description"></a><h2>Description</h2>
@@ -99,11 +99,11 @@ for simple jobs.</p>
 <a name="storaged-simple-job-new"></a><h3>storaged_simple_job_new ()</h3>
 <pre class="programlisting"><a class="link" href="StoragedSimpleJob.html" title="StoragedSimpleJob"><span class="returnvalue">StoragedSimpleJob</span></a> *
 storaged_simple_job_new (<em class="parameter"><code><a class="link" href="StoragedDaemon.html" title="StoragedDaemon"><span class="type">StoragedDaemon</span></a> *daemon</code></em>,
-                         <em class="parameter"><code><a href="/usr/share/gtk-doc/html/gio/GCancellable.html"><span class="type">GCancellable</span></a> *cancellable</code></em>);</pre>
+                         <em class="parameter"><code><span class="type">GCancellable</span> *cancellable</code></em>);</pre>
 <p>Creates a new <a class="link" href="StoragedSimpleJob.html" title="StoragedSimpleJob"><span class="type">StoragedSimpleJob</span></a> instance.</p>
 <p>Call <a class="link" href="StoragedSimpleJob.html#storaged-simple-job-complete" title="storaged_simple_job_complete ()"><code class="function">storaged_simple_job_complete()</code></a> to compelte the returned job.</p>
 <div class="refsect3">
-<a name="id-1.5.4.3.8.2.6"></a><h4>Parameters</h4>
+<a name="storaged-simple-job-new.parameters"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -118,15 +118,15 @@ storaged_simple_job_new (<em class="parameter"><code><a class="link" href="Stora
 </tr>
 <tr>
 <td class="parameter_name"><p>cancellable</p></td>
-<td class="parameter_description"><p>A <a href="/usr/share/gtk-doc/html/gio/GCancellable.html"><span class="type">GCancellable</span></a> or <a href="/usr/share/gtk-doc/html/glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>.</p></td>
+<td class="parameter_description"><p>A <span class="type">GCancellable</span> or <code class="literal">NULL</code>.</p></td>
 <td class="parameter_annotations"> </td>
 </tr>
 </tbody>
 </table></div>
 </div>
 <div class="refsect3">
-<a name="id-1.5.4.3.8.2.7"></a><h4>Returns</h4>
-<p> A new <a class="link" href="StoragedSimpleJob.html" title="StoragedSimpleJob"><span class="type">StoragedSimpleJob</span></a>. Free with <a href="/usr/share/gtk-doc/html/gobject/gobject-The-Base-Object-Type.html#g-object-unref"><code class="function">g_object_unref()</code></a>.</p>
+<a name="storaged-simple-job-new.returns"></a><h4>Returns</h4>
+<p> A new <a class="link" href="StoragedSimpleJob.html" title="StoragedSimpleJob"><span class="type">StoragedSimpleJob</span></a>. Free with <code class="function">g_object_unref()</code>.</p>
 </div>
 </div>
 <hr>
@@ -134,12 +134,12 @@ storaged_simple_job_new (<em class="parameter"><code><a class="link" href="Stora
 <a name="storaged-simple-job-complete"></a><h3>storaged_simple_job_complete ()</h3>
 <pre class="programlisting"><span class="returnvalue">void</span>
 storaged_simple_job_complete (<em class="parameter"><code><a class="link" href="StoragedSimpleJob.html" title="StoragedSimpleJob"><span class="type">StoragedSimpleJob</span></a> *job</code></em>,
-                              <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a> succeess</code></em>,
-                              <em class="parameter"><code>const <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *message</code></em>);</pre>
+                              <em class="parameter"><code><span class="type">gboolean</span> succeess</code></em>,
+                              <em class="parameter"><code>const <span class="type">gchar</span> *message</code></em>);</pre>
 <p>Completes <em class="parameter"><code>job</code></em>
 .</p>
 <div class="refsect3">
-<a name="id-1.5.4.3.8.3.5"></a><h4>Parameters</h4>
+<a name="storaged-simple-job-complete.parameters"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -159,7 +159,7 @@ storaged_simple_job_complete (<em class="parameter"><code><a class="link" href="
 </tr>
 <tr>
 <td class="parameter_name"><p>message</p></td>
-<td class="parameter_description"><p>An error message or <a href="/usr/share/gtk-doc/html/glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>.</p></td>
+<td class="parameter_description"><p>An error message or <code class="literal">NULL</code>.</p></td>
 <td class="parameter_annotations"> </td>
 </tr>
 </tbody>
@@ -178,6 +178,6 @@ only be accessed using the provided API.</p>
 </div>
 </div>
 <div class="footer">
-<hr>Generated by GTK-Doc V1.24</div>
+<hr>Generated by GTK-Doc V1.25</div>
 </body>
 </html>

@@ -8,7 +8,7 @@
 <link rel="up" href="ref-daemon-monitoring.html" title="State and Configuration">
 <link rel="prev" href="ref-daemon-monitoring.html" title="State and Configuration">
 <link rel="next" href="StoragedFstabMonitor.html" title="StoragedFstabMonitor">
-<meta name="generator" content="GTK-Doc V1.24 (XML mode)">
+<meta name="generator" content="GTK-Doc V1.25 (XML mode)">
 <link rel="stylesheet" href="style.css" type="text/css">
 </head>
 <body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
@@ -58,7 +58,7 @@
 </td>
 </tr>
 <tr>
-<td class="function_type">const <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *
+<td class="function_type">const <span class="returnvalue">gchar</span> *
 </td>
 <td class="function_name">
 <a class="link" href="StoragedMountMonitor.html#storaged-mount-get-mount-path" title="storaged_mount_get_mount_path ()">storaged_mount_get_mount_path</a> <span class="c_punctuation">()</span>
@@ -66,7 +66,7 @@
 </tr>
 <tr>
 <td class="function_type">
-<a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gint"><span class="returnvalue">gint</span></a>
+<span class="returnvalue">gint</span>
 </td>
 <td class="function_name">
 <a class="link" href="StoragedMountMonitor.html#storaged-mount-compare" title="storaged_mount_compare ()">storaged_mount_compare</a> <span class="c_punctuation">()</span>
@@ -82,7 +82,7 @@
 </tr>
 <tr>
 <td class="function_type">
-<a href="/usr/share/gtk-doc/html/glib/glib-Doubly-Linked-Lists.html#GList"><span class="returnvalue">GList</span></a> *
+<span class="returnvalue">GList</span> *
 </td>
 <td class="function_name">
 <a class="link" href="StoragedMountMonitor.html#storaged-mount-monitor-get-mounts-for-dev" title="storaged_mount_monitor_get_mounts_for_dev ()">storaged_mount_monitor_get_mounts_for_dev</a> <span class="c_punctuation">()</span>
@@ -90,7 +90,7 @@
 </tr>
 <tr>
 <td class="function_type">
-<a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+<span class="returnvalue">gboolean</span>
 </td>
 <td class="function_name">
 <a class="link" href="StoragedMountMonitor.html#storaged-mount-monitor-is-dev-in-use" title="storaged_mount_monitor_is_dev_in_use ()">storaged_mount_monitor_is_dev_in_use</a> <span class="c_punctuation">()</span>
@@ -111,12 +111,12 @@
 <tr>
 <td class="signal_type"><span class="returnvalue">void</span></td>
 <td class="signal_name"><a class="link" href="StoragedMountMonitor.html#StoragedMountMonitor-mount-added" title="The “mount-added” signal">mount-added</a></td>
-<td class="signal_flags"><a href="/usr/share/gtk-doc/html/gobject/gobject-Signals.html#G-SIGNAL-DETAILED:CAPS">Has Details</a></td>
+<td class="signal_flags">Has Details</td>
 </tr>
 <tr>
 <td class="signal_type"><span class="returnvalue">void</span></td>
 <td class="signal_name"><a class="link" href="StoragedMountMonitor.html#StoragedMountMonitor-mount-removed" title="The “mount-removed” signal">mount-removed</a></td>
-<td class="signal_flags"><a href="/usr/share/gtk-doc/html/gobject/gobject-Signals.html#G-SIGNAL-DETAILED:CAPS">Has Details</a></td>
+<td class="signal_flags">Has Details</td>
 </tr>
 </tbody>
 </table></div>
@@ -146,7 +146,7 @@
 </div>
 <div class="refsect1">
 <a name="StoragedMountMonitor.object-hierarchy"></a><h2>Object Hierarchy</h2>
-<pre class="screen">    <a href="/usr/share/gtk-doc/html/gobject/gobject-The-Base-Object-Type.html#GObject">GObject</a>
+<pre class="screen">    GObject
     <span class="lineart">├──</span> StoragedMount
     <span class="lineart">╰──</span> StoragedMountMonitor
 </pre>
@@ -167,7 +167,7 @@ storaged_mount_get_dev (<em class="parameter"><code><a class="link" href="Storag
 <p>Gets the device number for <em class="parameter"><code>mount</code></em>
 .</p>
 <div class="refsect3">
-<a name="id-1.5.3.2.9.2.5"></a><h4>Parameters</h4>
+<a name="storaged-mount-get-dev.parameters"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -182,7 +182,7 @@ storaged_mount_get_dev (<em class="parameter"><code><a class="link" href="Storag
 </table></div>
 </div>
 <div class="refsect3">
-<a name="id-1.5.3.2.9.2.6"></a><h4>Returns</h4>
+<a name="storaged-mount-get-dev.returns"></a><h4>Returns</h4>
 <p> A <span class="type">dev_t</span>.</p>
 </div>
 </div>
@@ -194,7 +194,7 @@ storaged_mount_get_mount_type (<em class="parameter"><code><a class="link" href=
 <p>Gets the <a class="link" href="StoragedMountMonitor.html#StoragedMountType" title="enum StoragedMountType"><span class="type">StoragedMountType</span></a> for <em class="parameter"><code>mount</code></em>
 .</p>
 <div class="refsect3">
-<a name="id-1.5.3.2.9.3.5"></a><h4>Parameters</h4>
+<a name="storaged-mount-get-mount-type.parameters"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -209,19 +209,19 @@ storaged_mount_get_mount_type (<em class="parameter"><code><a class="link" href=
 </table></div>
 </div>
 <div class="refsect3">
-<a name="id-1.5.3.2.9.3.6"></a><h4>Returns</h4>
+<a name="storaged-mount-get-mount-type.returns"></a><h4>Returns</h4>
 <p> A value from the <a class="link" href="StoragedMountMonitor.html#StoragedMountType" title="enum StoragedMountType"><span class="type">StoragedMountType</span></a> enumeration.</p>
 </div>
 </div>
 <hr>
 <div class="refsect2">
 <a name="storaged-mount-get-mount-path"></a><h3>storaged_mount_get_mount_path ()</h3>
-<pre class="programlisting">const <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *
+<pre class="programlisting">const <span class="returnvalue">gchar</span> *
 storaged_mount_get_mount_path (<em class="parameter"><code><a class="link" href="StoragedMountMonitor.html#StoragedMount"><span class="type">StoragedMount</span></a> *mount</code></em>);</pre>
 <p>Gets the mount path for a <a class="link" href="StoragedMountMonitor.html#STORAGED-MOUNT-TYPE-FILESYSTEM:CAPS"><span class="type">STORAGED_MOUNT_TYPE_FILESYSTEM</span></a>-type mount.</p>
 <p>It is a programming error to call this on any other type of <a class="link" href="StoragedMountMonitor.html#StoragedMount"><span class="type">StoragedMount</span></a>.</p>
 <div class="refsect3">
-<a name="id-1.5.3.2.9.4.6"></a><h4>Parameters</h4>
+<a name="storaged-mount-get-mount-path.parameters"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -236,7 +236,7 @@ storaged_mount_get_mount_path (<em class="parameter"><code><a class="link" href=
 </table></div>
 </div>
 <div class="refsect3">
-<a name="id-1.5.3.2.9.4.7"></a><h4>Returns</h4>
+<a name="storaged-mount-get-mount-path.returns"></a><h4>Returns</h4>
 <p> A string owned by <em class="parameter"><code>mount</code></em>
 . Do not free.</p>
 </div>
@@ -244,12 +244,12 @@ storaged_mount_get_mount_path (<em class="parameter"><code><a class="link" href=
 <hr>
 <div class="refsect2">
 <a name="storaged-mount-compare"></a><h3>storaged_mount_compare ()</h3>
-<pre class="programlisting"><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gint"><span class="returnvalue">gint</span></a>
+<pre class="programlisting"><span class="returnvalue">gint</span>
 storaged_mount_compare (<em class="parameter"><code><a class="link" href="StoragedMountMonitor.html#StoragedMount"><span class="type">StoragedMount</span></a> *mount</code></em>,
                         <em class="parameter"><code><a class="link" href="StoragedMountMonitor.html#StoragedMount"><span class="type">StoragedMount</span></a> *other_mount</code></em>);</pre>
 <p>Comparison function for comparing two <a class="link" href="StoragedMountMonitor.html#StoragedMount"><span class="type">StoragedMount</span></a> objects.</p>
 <div class="refsect3">
-<a name="id-1.5.3.2.9.5.5"></a><h4>Parameters</h4>
+<a name="storaged-mount-compare.parameters"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -271,7 +271,7 @@ storaged_mount_compare (<em class="parameter"><code><a class="link" href="Storag
 </table></div>
 </div>
 <div class="refsect3">
-<a name="id-1.5.3.2.9.5.6"></a><h4>Returns</h4>
+<a name="storaged-mount-compare.returns"></a><h4>Returns</h4>
 <p> Negative value if <em class="parameter"><code>mount</code></em>
 &lt; <em class="parameter"><code>other_mount</code></em>
 ; zero if <em class="parameter"><code>mount</code></em>
@@ -290,21 +290,21 @@ storaged_mount_monitor_new (<em class="parameter"><code><span class="type">void<
 <p>Signals are emitted in the <GTKDOCLINK HREF="g-main-context-push-thread-default">thread-default main
 loop</GTKDOCLINK> that this function is called from.</p>
 <div class="refsect3">
-<a name="id-1.5.3.2.9.6.6"></a><h4>Returns</h4>
-<p> A <a class="link" href="StoragedMountMonitor.html" title="StoragedMountMonitor"><span class="type">StoragedMountMonitor</span></a>. Free with <a href="/usr/share/gtk-doc/html/gobject/gobject-The-Base-Object-Type.html#g-object-unref"><code class="function">g_object_unref()</code></a>.</p>
+<a name="storaged-mount-monitor-new.returns"></a><h4>Returns</h4>
+<p> A <a class="link" href="StoragedMountMonitor.html" title="StoragedMountMonitor"><span class="type">StoragedMountMonitor</span></a>. Free with <code class="function">g_object_unref()</code>.</p>
 </div>
 </div>
 <hr>
 <div class="refsect2">
 <a name="storaged-mount-monitor-get-mounts-for-dev"></a><h3>storaged_mount_monitor_get_mounts_for_dev ()</h3>
-<pre class="programlisting"><a href="/usr/share/gtk-doc/html/glib/glib-Doubly-Linked-Lists.html#GList"><span class="returnvalue">GList</span></a> *
+<pre class="programlisting"><span class="returnvalue">GList</span> *
 storaged_mount_monitor_get_mounts_for_dev
                                (<em class="parameter"><code><a class="link" href="StoragedMountMonitor.html" title="StoragedMountMonitor"><span class="type">StoragedMountMonitor</span></a> *monitor</code></em>,
                                 <em class="parameter"><code><span class="type">dev_t</span> dev</code></em>);</pre>
 <p>Gets all <a class="link" href="StoragedMountMonitor.html#StoragedMount"><span class="type">StoragedMount</span></a> objects for <em class="parameter"><code>dev</code></em>
 .</p>
 <div class="refsect3">
-<a name="id-1.5.3.2.9.7.5"></a><h4>Parameters</h4>
+<a name="storaged-mount-monitor-get-mounts-for-dev.parameters"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -326,23 +326,23 @@ storaged_mount_monitor_get_mounts_for_dev
 </table></div>
 </div>
 <div class="refsect3">
-<a name="id-1.5.3.2.9.7.6"></a><h4>Returns</h4>
-<p> A <a href="/usr/share/gtk-doc/html/glib/glib-Doubly-Linked-Lists.html#GList"><span class="type">GList</span></a> of <a class="link" href="StoragedMountMonitor.html#StoragedMount"><span class="type">StoragedMount</span></a> objects. The returned list must
-be freed with <a href="/usr/share/gtk-doc/html/glib/glib-Doubly-Linked-Lists.html#g-list-free"><code class="function">g_list_free()</code></a> after each element has been freed with
-<a href="/usr/share/gtk-doc/html/gobject/gobject-The-Base-Object-Type.html#g-object-unref"><code class="function">g_object_unref()</code></a>.</p>
+<a name="storaged-mount-monitor-get-mounts-for-dev.returns"></a><h4>Returns</h4>
+<p> A <span class="type">GList</span> of <a class="link" href="StoragedMountMonitor.html#StoragedMount"><span class="type">StoragedMount</span></a> objects. The returned list must
+be freed with <code class="function">g_list_free()</code> after each element has been freed with
+<code class="function">g_object_unref()</code>.</p>
 </div>
 </div>
 <hr>
 <div class="refsect2">
 <a name="storaged-mount-monitor-is-dev-in-use"></a><h3>storaged_mount_monitor_is_dev_in_use ()</h3>
-<pre class="programlisting"><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+<pre class="programlisting"><span class="returnvalue">gboolean</span>
 storaged_mount_monitor_is_dev_in_use (<em class="parameter"><code><a class="link" href="StoragedMountMonitor.html" title="StoragedMountMonitor"><span class="type">StoragedMountMonitor</span></a> *monitor</code></em>,
                                       <em class="parameter"><code><span class="type">dev_t</span> dev</code></em>,
                                       <em class="parameter"><code><a class="link" href="StoragedMountMonitor.html#StoragedMountType" title="enum StoragedMountType"><span class="type">StoragedMountType</span></a> *out_type</code></em>);</pre>
 <p>Checks if <em class="parameter"><code>dev</code></em>
  is in use (e.g. mounted or swap-area in-use).</p>
 <div class="refsect3">
-<a name="id-1.5.3.2.9.8.5"></a><h4>Parameters</h4>
+<a name="storaged-mount-monitor-is-dev-in-use.parameters"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -362,15 +362,15 @@ storaged_mount_monitor_is_dev_in_use (<em class="parameter"><code><a class="link
 </tr>
 <tr>
 <td class="parameter_name"><p>out_type</p></td>
-<td class="parameter_description"><p> Return location for mount type, if in use or <a href="/usr/share/gtk-doc/html/glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>. </p></td>
+<td class="parameter_description"><p> Return location for mount type, if in use or <code class="literal">NULL</code>. </p></td>
 <td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for returning results. Default is transfer full."><span class="acronym">out</span></acronym> allow-none]</span></td>
 </tr>
 </tbody>
 </table></div>
 </div>
 <div class="refsect3">
-<a name="id-1.5.3.2.9.8.6"></a><h4>Returns</h4>
-<p> <a href="/usr/share/gtk-doc/html/glib/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> if in use, <a href="/usr/share/gtk-doc/html/glib/glib-Standard-Macros.html#FALSE:CAPS"><code class="literal">FALSE</code></a> otherwise.</p>
+<a name="storaged-mount-monitor-is-dev-in-use.returns"></a><h4>Returns</h4>
+<p> <code class="literal">TRUE</code> if in use, <code class="literal">FALSE</code> otherwise.</p>
 </div>
 </div>
 </div>
@@ -387,7 +387,7 @@ only be accessed using the provided API.</p>
 <a name="StoragedMountType"></a><h3>enum StoragedMountType</h3>
 <p>Types of a mount.</p>
 <div class="refsect3">
-<a name="id-1.5.3.2.10.3.4"></a><h4>Members</h4>
+<a name="StoragedMountType.members"></a><h4>Members</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="300px" class="enum_members_name">
@@ -428,13 +428,13 @@ should only be accessed using the provided API.</p>
 <pre class="programlisting"><span class="returnvalue">void</span>
 user_function (<a class="link" href="StoragedMountMonitor.html" title="StoragedMountMonitor"><span class="type">StoragedMountMonitor</span></a> *monitor,
                <a class="link" href="StoragedMountMonitor.html#StoragedMount"><span class="type">StoragedMount</span></a>        *mount,
-               <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a>              user_data)</pre>
+               <span class="type">gpointer</span>              user_data)</pre>
 <p>Emitted when a mount is added.</p>
 <p>This signal is emitted in the</p>
-<a href="/usr/share/gtk-doc/html/glib/glib-The-Main-Event-Loop.html#g-main-context-push-thread-default">thread-default main loop</a><p>that <em class="parameter"><code>monitor</code></em>
+thread-default main loop<p>that <em class="parameter"><code>monitor</code></em>
  was created in.</p>
 <div class="refsect3">
-<a name="id-1.5.3.2.11.2.8"></a><h4>Parameters</h4>
+<a name="StoragedMountMonitor-mount-added.parameters"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -460,7 +460,7 @@ user_function (<a class="link" href="StoragedMountMonitor.html" title="StoragedM
 </tbody>
 </table></div>
 </div>
-<p>Flags: <a href="/usr/share/gtk-doc/html/gobject/gobject-Signals.html#G-SIGNAL-DETAILED:CAPS">Has Details</a></p>
+<p>Flags: Has Details</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -468,13 +468,13 @@ user_function (<a class="link" href="StoragedMountMonitor.html" title="StoragedM
 <pre class="programlisting"><span class="returnvalue">void</span>
 user_function (<a class="link" href="StoragedMountMonitor.html" title="StoragedMountMonitor"><span class="type">StoragedMountMonitor</span></a> *monitor,
                <a class="link" href="StoragedMountMonitor.html#StoragedMount"><span class="type">StoragedMount</span></a>        *mount,
-               <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a>              user_data)</pre>
+               <span class="type">gpointer</span>              user_data)</pre>
 <p>Emitted when a mount is removed.</p>
 <p>This signal is emitted in the</p>
-<a href="/usr/share/gtk-doc/html/glib/glib-The-Main-Event-Loop.html#g-main-context-push-thread-default">thread-default main loop</a><p>that <em class="parameter"><code>monitor</code></em>
+thread-default main loop<p>that <em class="parameter"><code>monitor</code></em>
  was created in.</p>
 <div class="refsect3">
-<a name="id-1.5.3.2.11.3.8"></a><h4>Parameters</h4>
+<a name="StoragedMountMonitor-mount-removed.parameters"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -500,11 +500,11 @@ user_function (<a class="link" href="StoragedMountMonitor.html" title="StoragedM
 </tbody>
 </table></div>
 </div>
-<p>Flags: <a href="/usr/share/gtk-doc/html/gobject/gobject-Signals.html#G-SIGNAL-DETAILED:CAPS">Has Details</a></p>
+<p>Flags: Has Details</p>
 </div>
 </div>
 </div>
 <div class="footer">
-<hr>Generated by GTK-Doc V1.24</div>
+<hr>Generated by GTK-Doc V1.25</div>
 </body>
 </html>

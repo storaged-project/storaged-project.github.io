@@ -6,9 +6,9 @@
 <meta name="generator" content="DocBook XSL Stylesheets V1.78.1">
 <link rel="home" href="index.html" title="Storaged Reference Manual">
 <link rel="up" href="ref-daemon-drives.html" title="Drives on Linux">
-<link rel="prev" href="storaged-DummyLinuxBlock.html" title="DummyLinuxBlock">
+<link rel="prev" href="storaged-DummyLinuxDrive.html" title="DummyLinuxDrive">
 <link rel="next" href="ref-daemon-mdraid.html" title="Linux RAID">
-<meta name="generator" content="GTK-Doc V1.24 (XML mode)">
+<meta name="generator" content="GTK-Doc V1.25 (XML mode)">
 <link rel="stylesheet" href="style.css" type="text/css">
 </head>
 <body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
@@ -22,7 +22,7 @@
 </td>
 <td><a accesskey="h" href="index.html"><img src="home.png" width="16" height="16" border="0" alt="Home"></a></td>
 <td><a accesskey="u" href="ref-daemon-drives.html"><img src="up.png" width="16" height="16" border="0" alt="Up"></a></td>
-<td><a accesskey="p" href="storaged-DummyLinuxBlock.html"><img src="left.png" width="16" height="16" border="0" alt="Prev"></a></td>
+<td><a accesskey="p" href="storaged-DummyLinuxDrive.html"><img src="left.png" width="16" height="16" border="0" alt="Prev"></a></td>
 <td><a accesskey="n" href="ref-daemon-mdraid.html"><img src="right.png" width="16" height="16" border="0" alt="Next"></a></td>
 </tr></table>
 <div class="refentry">
@@ -84,7 +84,7 @@
 </tr>
 <tr>
 <td class="function_type">
-<a href="/usr/share/gtk-doc/html/glib/glib-Doubly-Linked-Lists.html#GList"><span class="returnvalue">GList</span></a> *
+<span class="returnvalue">GList</span> *
 </td>
 <td class="function_name">
 <a class="link" href="StoragedLinuxDriveObject.html#storaged-linux-drive-object-get-devices" title="storaged_linux_drive_object_get_devices ()">storaged_linux_drive_object_get_devices</a> <span class="c_punctuation">()</span>
@@ -92,7 +92,7 @@
 </tr>
 <tr>
 <td class="function_type">
-<a href="/usr/share/gtk-doc/html/glib/glib-Doubly-Linked-Lists.html#GList"><span class="returnvalue">GList</span></a> *
+<span class="returnvalue">GList</span> *
 </td>
 <td class="function_name">
 <a class="link" href="StoragedLinuxDriveObject.html#storaged-linux-drive-object-get-siblings" title="storaged_linux_drive_object_get_siblings ()">storaged_linux_drive_object_get_siblings</a> <span class="c_punctuation">()</span>
@@ -100,7 +100,7 @@
 </tr>
 <tr>
 <td class="function_type">
-<a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+<span class="returnvalue">gboolean</span>
 </td>
 <td class="function_name">
 <a class="link" href="StoragedLinuxDriveObject.html#storaged-linux-drive-object-housekeeping" title="storaged_linux_drive_object_housekeeping ()">storaged_linux_drive_object_housekeeping</a> <span class="c_punctuation">()</span>
@@ -108,7 +108,7 @@
 </tr>
 <tr>
 <td class="function_type">
-<a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+<span class="returnvalue">gboolean</span>
 </td>
 <td class="function_name">
 <a class="link" href="StoragedLinuxDriveObject.html#storaged-linux-drive-object-is-not-in-use" title="storaged_linux_drive_object_is_not_in_use ()">storaged_linux_drive_object_is_not_in_use</a> <span class="c_punctuation">()</span>
@@ -156,8 +156,8 @@
 </div>
 <div class="refsect1">
 <a name="StoragedLinuxDriveObject.object-hierarchy"></a><h2>Object Hierarchy</h2>
-<pre class="screen">    <a href="/usr/share/gtk-doc/html/gobject/gobject-The-Base-Object-Type.html#GObject">GObject</a>
-    <span class="lineart">╰──</span> <a href="/usr/share/gtk-doc/html/gio/GDBusObjectSkeleton.html">GDBusObjectSkeleton</a>
+<pre class="screen">    GObject
+    <span class="lineart">╰──</span> GDBusObjectSkeleton
         <span class="lineart">╰──</span> <a class="link" href="StoragedObject.html#StoragedObjectSkeleton">StoragedObjectSkeleton</a>
             <span class="lineart">╰──</span> StoragedLinuxDriveObject
 </pre>
@@ -166,7 +166,7 @@
 <a name="StoragedLinuxDriveObject.implemented-interfaces"></a><h2>Implemented Interfaces</h2>
 <p>
 StoragedLinuxDriveObject implements
- <a href="/usr/share/gtk-doc/html/gio/GDBusObject.html">GDBusObject</a> and  <a class="link" href="StoragedObject.html" title="StoragedObject">StoragedObject</a>.</p>
+ GDBusObject and  <a class="link" href="StoragedObject.html" title="StoragedObject">StoragedObject</a>.</p>
 </div>
 <div class="refsect1">
 <a name="StoragedLinuxDriveObject.description"></a><h2>Description</h2>
@@ -181,7 +181,7 @@ storaged_linux_drive_object_new (<em class="parameter"><code><a class="link" hre
                                  <em class="parameter"><code><a class="link" href="StoragedLinuxDevice.html" title="StoragedLinuxDevice"><span class="type">StoragedLinuxDevice</span></a> *device</code></em>);</pre>
 <p>Create a new drive object.</p>
 <div class="refsect3">
-<a name="id-1.5.6.4.9.2.5"></a><h4>Parameters</h4>
+<a name="storaged-linux-drive-object-new.parameters"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -203,9 +203,9 @@ storaged_linux_drive_object_new (<em class="parameter"><code><a class="link" hre
 </table></div>
 </div>
 <div class="refsect3">
-<a name="id-1.5.6.4.9.2.6"></a><h4>Returns</h4>
-<p> A <a class="link" href="StoragedLinuxDriveObject.html" title="StoragedLinuxDriveObject"><span class="type">StoragedLinuxDriveObject</span></a> object or <a href="/usr/share/gtk-doc/html/glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a> if <em class="parameter"><code>device</code></em>
-does not represent a drive. Free with <a href="/usr/share/gtk-doc/html/gobject/gobject-The-Base-Object-Type.html#g-object-unref"><code class="function">g_object_unref()</code></a>.</p>
+<a name="storaged-linux-drive-object-new.returns"></a><h4>Returns</h4>
+<p> A <a class="link" href="StoragedLinuxDriveObject.html" title="StoragedLinuxDriveObject"><span class="type">StoragedLinuxDriveObject</span></a> object or <code class="literal">NULL</code> if <em class="parameter"><code>device</code></em>
+does not represent a drive. Free with <code class="function">g_object_unref()</code>.</p>
 </div>
 </div>
 <hr>
@@ -213,12 +213,12 @@ does not represent a drive. Free with <a href="/usr/share/gtk-doc/html/gobject/g
 <a name="storaged-linux-drive-object-uevent"></a><h3>storaged_linux_drive_object_uevent ()</h3>
 <pre class="programlisting"><span class="returnvalue">void</span>
 storaged_linux_drive_object_uevent (<em class="parameter"><code><a class="link" href="StoragedLinuxDriveObject.html" title="StoragedLinuxDriveObject"><span class="type">StoragedLinuxDriveObject</span></a> *object</code></em>,
-                                    <em class="parameter"><code>const <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *action</code></em>,
+                                    <em class="parameter"><code>const <span class="type">gchar</span> *action</code></em>,
                                     <em class="parameter"><code><a class="link" href="StoragedLinuxDevice.html" title="StoragedLinuxDevice"><span class="type">StoragedLinuxDevice</span></a> *device</code></em>);</pre>
 <p>Updates all information on interfaces on <em class="parameter"><code>drive</code></em>
 .</p>
 <div class="refsect3">
-<a name="id-1.5.6.4.9.3.5"></a><h4>Parameters</h4>
+<a name="storaged-linux-drive-object-uevent.parameters"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -233,12 +233,12 @@ storaged_linux_drive_object_uevent (<em class="parameter"><code><a class="link" 
 </tr>
 <tr>
 <td class="parameter_name"><p>action</p></td>
-<td class="parameter_description"><p>Uevent action or <a href="/usr/share/gtk-doc/html/glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a></p></td>
+<td class="parameter_description"><p>Uevent action or <code class="literal">NULL</code></p></td>
 <td class="parameter_annotations"> </td>
 </tr>
 <tr>
 <td class="parameter_name"><p>device</p></td>
-<td class="parameter_description"><p>A <a class="link" href="StoragedLinuxDevice.html" title="StoragedLinuxDevice"><span class="type">StoragedLinuxDevice</span></a> device object or <a href="/usr/share/gtk-doc/html/glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a> if the device hasn't changed.</p></td>
+<td class="parameter_description"><p>A <a class="link" href="StoragedLinuxDevice.html" title="StoragedLinuxDevice"><span class="type">StoragedLinuxDevice</span></a> device object or <code class="literal">NULL</code> if the device hasn't changed.</p></td>
 <td class="parameter_annotations"> </td>
 </tr>
 </tbody>
@@ -254,7 +254,7 @@ storaged_linux_drive_object_get_daemon
 <p>Gets the daemon used by <em class="parameter"><code>object</code></em>
 .</p>
 <div class="refsect3">
-<a name="id-1.5.6.4.9.4.5"></a><h4>Parameters</h4>
+<a name="storaged-linux-drive-object-get-daemon.parameters"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -269,7 +269,7 @@ storaged_linux_drive_object_get_daemon
 </table></div>
 </div>
 <div class="refsect3">
-<a name="id-1.5.6.4.9.4.6"></a><h4>Returns</h4>
+<a name="storaged-linux-drive-object-get-daemon.returns"></a><h4>Returns</h4>
 <p> A <a class="link" href="StoragedDaemon.html" title="StoragedDaemon"><span class="type">StoragedDaemon</span></a>. Do not free, the object is owned by <em class="parameter"><code>object</code></em>
 .</p>
 </div>
@@ -279,11 +279,11 @@ storaged_linux_drive_object_get_daemon
 <a name="storaged-linux-drive-object-get-block"></a><h3>storaged_linux_drive_object_get_block ()</h3>
 <pre class="programlisting"><a class="link" href="StoragedLinuxBlockObject.html" title="StoragedLinuxBlockObject"><span class="returnvalue">StoragedLinuxBlockObject</span></a> *
 storaged_linux_drive_object_get_block (<em class="parameter"><code><a class="link" href="StoragedLinuxDriveObject.html" title="StoragedLinuxDriveObject"><span class="type">StoragedLinuxDriveObject</span></a> *object</code></em>,
-                                       <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a> get_hw</code></em>);</pre>
+                                       <em class="parameter"><code><span class="type">gboolean</span> get_hw</code></em>);</pre>
 <p>Gets a <a class="link" href="StoragedLinuxBlockObject.html" title="StoragedLinuxBlockObject"><span class="type">StoragedLinuxBlockObject</span></a> representing a block device associated with <em class="parameter"><code>object</code></em>
 .</p>
 <div class="refsect3">
-<a name="id-1.5.6.4.9.5.5"></a><h4>Parameters</h4>
+<a name="storaged-linux-drive-object-get-block.parameters"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -298,16 +298,16 @@ storaged_linux_drive_object_get_block (<em class="parameter"><code><a class="lin
 </tr>
 <tr>
 <td class="parameter_name"><p>get_hw</p></td>
-<td class="parameter_description"><p>If the drive is multipath, set to <a href="/usr/share/gtk-doc/html/glib/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> to get a path device instead of the multipath device.</p></td>
+<td class="parameter_description"><p>If the drive is multipath, set to <code class="literal">TRUE</code> to get a path device instead of the multipath device.</p></td>
 <td class="parameter_annotations"> </td>
 </tr>
 </tbody>
 </table></div>
 </div>
 <div class="refsect3">
-<a name="id-1.5.6.4.9.5.6"></a><h4>Returns</h4>
-<p> A <a class="link" href="StoragedLinuxBlockObject.html" title="StoragedLinuxBlockObject"><span class="type">StoragedLinuxBlockObject</span></a> or <a href="/usr/share/gtk-doc/html/glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>. The returned object
-must be freed with <a href="/usr/share/gtk-doc/html/gobject/gobject-The-Base-Object-Type.html#g-object-unref"><code class="function">g_object_unref()</code></a>.</p>
+<a name="storaged-linux-drive-object-get-block.returns"></a><h4>Returns</h4>
+<p> A <a class="link" href="StoragedLinuxBlockObject.html" title="StoragedLinuxBlockObject"><span class="type">StoragedLinuxBlockObject</span></a> or <code class="literal">NULL</code>. The returned object
+must be freed with <code class="function">g_object_unref()</code>.</p>
 </div>
 </div>
 <hr>
@@ -316,16 +316,16 @@ must be freed with <a href="/usr/share/gtk-doc/html/gobject/gobject-The-Base-Obj
 <pre class="programlisting"><a class="link" href="StoragedLinuxDevice.html" title="StoragedLinuxDevice"><span class="returnvalue">StoragedLinuxDevice</span></a> *
 storaged_linux_drive_object_get_device
                                (<em class="parameter"><code><a class="link" href="StoragedLinuxDriveObject.html" title="StoragedLinuxDriveObject"><span class="type">StoragedLinuxDriveObject</span></a> *object</code></em>,
-                                <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a> get_hw</code></em>);</pre>
+                                <em class="parameter"><code><span class="type">gboolean</span> get_hw</code></em>);</pre>
 <p>Gets one of the <a class="link" href="StoragedLinuxDevice.html" title="StoragedLinuxDevice"><span class="type">StoragedLinuxDevice</span></a> object associated with <em class="parameter"><code>object</code></em>
 .</p>
 <p>If <em class="parameter"><code>get_hw</code></em>
- is <a href="/usr/share/gtk-doc/html/glib/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> and <em class="parameter"><code>object</code></em>
+ is <code class="literal">TRUE</code> and <em class="parameter"><code>object</code></em>
  represents a multipath device then
 one of the paths is returned rather than the multipath device. This
 is useful if you e.g. need to configure the physical hardware.</p>
 <div class="refsect3">
-<a name="id-1.5.6.4.9.6.6"></a><h4>Parameters</h4>
+<a name="storaged-linux-drive-object-get-device.parameters"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -340,28 +340,28 @@ is useful if you e.g. need to configure the physical hardware.</p>
 </tr>
 <tr>
 <td class="parameter_name"><p>get_hw</p></td>
-<td class="parameter_description"><p>If the drive is multipath, set to <a href="/usr/share/gtk-doc/html/glib/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> to get a path device instead of the multipath device.</p></td>
+<td class="parameter_description"><p>If the drive is multipath, set to <code class="literal">TRUE</code> to get a path device instead of the multipath device.</p></td>
 <td class="parameter_annotations"> </td>
 </tr>
 </tbody>
 </table></div>
 </div>
 <div class="refsect3">
-<a name="id-1.5.6.4.9.6.7"></a><h4>Returns</h4>
-<p> A <a class="link" href="StoragedLinuxDevice.html" title="StoragedLinuxDevice"><span class="type">StoragedLinuxDevice</span></a> or <a href="/usr/share/gtk-doc/html/glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>. The returned object must be freed
-with <a href="/usr/share/gtk-doc/html/gobject/gobject-The-Base-Object-Type.html#g-object-unref"><code class="function">g_object_unref()</code></a>.</p>
+<a name="storaged-linux-drive-object-get-device.returns"></a><h4>Returns</h4>
+<p> A <a class="link" href="StoragedLinuxDevice.html" title="StoragedLinuxDevice"><span class="type">StoragedLinuxDevice</span></a> or <code class="literal">NULL</code>. The returned object must be freed
+with <code class="function">g_object_unref()</code>.</p>
 </div>
 </div>
 <hr>
 <div class="refsect2">
 <a name="storaged-linux-drive-object-get-devices"></a><h3>storaged_linux_drive_object_get_devices ()</h3>
-<pre class="programlisting"><a href="/usr/share/gtk-doc/html/glib/glib-Doubly-Linked-Lists.html#GList"><span class="returnvalue">GList</span></a> *
+<pre class="programlisting"><span class="returnvalue">GList</span> *
 storaged_linux_drive_object_get_devices
                                (<em class="parameter"><code><a class="link" href="StoragedLinuxDriveObject.html" title="StoragedLinuxDriveObject"><span class="type">StoragedLinuxDriveObject</span></a> *object</code></em>);</pre>
 <p>Gets the current <a class="link" href="StoragedLinuxDevice.html" title="StoragedLinuxDevice"><span class="type">StoragedLinuxDevice</span></a> objects associated with <em class="parameter"><code>object</code></em>
 .</p>
 <div class="refsect3">
-<a name="id-1.5.6.4.9.7.5"></a><h4>Parameters</h4>
+<a name="storaged-linux-drive-object-get-devices.parameters"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -376,21 +376,21 @@ storaged_linux_drive_object_get_devices
 </table></div>
 </div>
 <div class="refsect3">
-<a name="id-1.5.6.4.9.7.6"></a><h4>Returns</h4>
+<a name="storaged-linux-drive-object-get-devices.returns"></a><h4>Returns</h4>
 <p> A list of <a class="link" href="StoragedLinuxDevice.html" title="StoragedLinuxDevice"><span class="type">StoragedLinuxDevice</span></a> objects. Free each element with
-<a href="/usr/share/gtk-doc/html/gobject/gobject-The-Base-Object-Type.html#g-object-unref"><code class="function">g_object_unref()</code></a>, then free the list with <a href="/usr/share/gtk-doc/html/glib/glib-Doubly-Linked-Lists.html#g-list-free"><code class="function">g_list_free()</code></a>.</p>
+<code class="function">g_object_unref()</code>, then free the list with <code class="function">g_list_free()</code>.</p>
 </div>
 </div>
 <hr>
 <div class="refsect2">
 <a name="storaged-linux-drive-object-get-siblings"></a><h3>storaged_linux_drive_object_get_siblings ()</h3>
-<pre class="programlisting"><a href="/usr/share/gtk-doc/html/glib/glib-Doubly-Linked-Lists.html#GList"><span class="returnvalue">GList</span></a> *
+<pre class="programlisting"><span class="returnvalue">GList</span> *
 storaged_linux_drive_object_get_siblings
                                (<em class="parameter"><code><a class="link" href="StoragedLinuxDriveObject.html" title="StoragedLinuxDriveObject"><span class="type">StoragedLinuxDriveObject</span></a> *object</code></em>);</pre>
 <p>Gets the siblings for <em class="parameter"><code>object</code></em>
 , if any.</p>
 <div class="refsect3">
-<a name="id-1.5.6.4.9.8.5"></a><h4>Parameters</h4>
+<a name="storaged-linux-drive-object-get-siblings.parameters"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -405,22 +405,22 @@ storaged_linux_drive_object_get_siblings
 </table></div>
 </div>
 <div class="refsect3">
-<a name="id-1.5.6.4.9.8.6"></a><h4>Returns</h4>
+<a name="storaged-linux-drive-object-get-siblings.returns"></a><h4>Returns</h4>
 <p> A list of <a class="link" href="StoragedLinuxDriveObject.html" title="StoragedLinuxDriveObject"><span class="type">StoragedLinuxDriveObject</span></a>
-instances. The returned list should be freed with <a href="/usr/share/gtk-doc/html/glib/glib-Doubly-Linked-Lists.html#g-list-free"><code class="function">g_list_free()</code></a> after each element has been
-freed with <a href="/usr/share/gtk-doc/html/gobject/gobject-The-Base-Object-Type.html#g-object-unref"><code class="function">g_object_unref()</code></a>. </p>
+instances. The returned list should be freed with <code class="function">g_list_free()</code> after each element has been
+freed with <code class="function">g_object_unref()</code>. </p>
 <p><span class="annotation">[<acronym title="Free data after the code is done."><span class="acronym">transfer full</span></acronym>][<acronym title="Generics and defining elements of containers and arrays."><span class="acronym">element-type</span></acronym> StoragedLinuxDriveObject]</span></p>
 </div>
 </div>
 <hr>
 <div class="refsect2">
 <a name="storaged-linux-drive-object-housekeeping"></a><h3>storaged_linux_drive_object_housekeeping ()</h3>
-<pre class="programlisting"><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+<pre class="programlisting"><span class="returnvalue">gboolean</span>
 storaged_linux_drive_object_housekeeping
                                (<em class="parameter"><code><a class="link" href="StoragedLinuxDriveObject.html" title="StoragedLinuxDriveObject"><span class="type">StoragedLinuxDriveObject</span></a> *object</code></em>,
-                                <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#guint"><span class="type">guint</span></a> secs_since_last</code></em>,
-                                <em class="parameter"><code><a href="/usr/share/gtk-doc/html/gio/GCancellable.html"><span class="type">GCancellable</span></a> *cancellable</code></em>,
-                                <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glib/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);</pre>
+                                <em class="parameter"><code><span class="type">guint</span> secs_since_last</code></em>,
+                                <em class="parameter"><code><span class="type">GCancellable</span> *cancellable</code></em>,
+                                <em class="parameter"><code><span class="type">GError</span> **error</code></em>);</pre>
 <p>Called periodically (every ten minutes or so) to perform
 housekeeping tasks such as refreshing ATA SMART data.</p>
 <p>The function runs in a dedicated thread and is allowed to perform
@@ -429,7 +429,7 @@ blocking I/O.</p>
  to see if
 they have been cancelled.</p>
 <div class="refsect3">
-<a name="id-1.5.6.4.9.9.7"></a><h4>Parameters</h4>
+<a name="storaged-linux-drive-object-housekeeping.parameters"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -449,37 +449,37 @@ they have been cancelled.</p>
 </tr>
 <tr>
 <td class="parameter_name"><p>cancellable</p></td>
-<td class="parameter_description"><p>A <a href="/usr/share/gtk-doc/html/gio/GCancellable.html"><code class="literal">GCancellable</code></a> or <a href="/usr/share/gtk-doc/html/glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>.</p></td>
+<td class="parameter_description"><p>A <code class="literal">GCancellable</code> or <code class="literal">NULL</code>.</p></td>
 <td class="parameter_annotations"> </td>
 </tr>
 <tr>
 <td class="parameter_name"><p>error</p></td>
-<td class="parameter_description"><p>Return location for error or <a href="/usr/share/gtk-doc/html/glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>.</p></td>
+<td class="parameter_description"><p>Return location for error or <code class="literal">NULL</code>.</p></td>
 <td class="parameter_annotations"> </td>
 </tr>
 </tbody>
 </table></div>
 </div>
 <div class="refsect3">
-<a name="id-1.5.6.4.9.9.8"></a><h4>Returns</h4>
-<p> <a href="/usr/share/gtk-doc/html/glib/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> if the operation succeeded, <a href="/usr/share/gtk-doc/html/glib/glib-Standard-Macros.html#FALSE:CAPS"><code class="literal">FALSE</code></a> if <em class="parameter"><code>error</code></em>
+<a name="storaged-linux-drive-object-housekeeping.returns"></a><h4>Returns</h4>
+<p> <code class="literal">TRUE</code> if the operation succeeded, <code class="literal">FALSE</code> if <em class="parameter"><code>error</code></em>
 is set.</p>
 </div>
 </div>
 <hr>
 <div class="refsect2">
 <a name="storaged-linux-drive-object-is-not-in-use"></a><h3>storaged_linux_drive_object_is_not_in_use ()</h3>
-<pre class="programlisting"><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+<pre class="programlisting"><span class="returnvalue">gboolean</span>
 storaged_linux_drive_object_is_not_in_use
                                (<em class="parameter"><code><a class="link" href="StoragedLinuxDriveObject.html" title="StoragedLinuxDriveObject"><span class="type">StoragedLinuxDriveObject</span></a> *object</code></em>,
-                                <em class="parameter"><code><a href="/usr/share/gtk-doc/html/gio/GCancellable.html"><span class="type">GCancellable</span></a> *cancellable</code></em>,
-                                <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glib/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);</pre>
+                                <em class="parameter"><code><span class="type">GCancellable</span> *cancellable</code></em>,
+                                <em class="parameter"><code><span class="type">GError</span> **error</code></em>);</pre>
 <p>Checks if the drive represented by <em class="parameter"><code>object</code></em>
  is in use and sets
 <em class="parameter"><code>error</code></em>
  if so.</p>
 <div class="refsect3">
-<a name="id-1.5.6.4.9.10.5"></a><h4>Parameters</h4>
+<a name="storaged-linux-drive-object-is-not-in-use.parameters"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -494,21 +494,21 @@ storaged_linux_drive_object_is_not_in_use
 </tr>
 <tr>
 <td class="parameter_name"><p>cancellable</p></td>
-<td class="parameter_description"><p> A <a href="/usr/share/gtk-doc/html/gio/GCancellable.html"><span class="type">GCancellable</span></a> or <a href="/usr/share/gtk-doc/html/glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>. </p></td>
+<td class="parameter_description"><p> A <span class="type">GCancellable</span> or <code class="literal">NULL</code>. </p></td>
 <td class="parameter_annotations"><span class="annotation">[<acronym title="NULL is OK, both for passing and for returning."><span class="acronym">allow-none</span></acronym>]</span></td>
 </tr>
 <tr>
 <td class="parameter_name"><p>error</p></td>
-<td class="parameter_description"><p>A <a href="/usr/share/gtk-doc/html/glib/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> or <a href="/usr/share/gtk-doc/html/glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>.</p></td>
+<td class="parameter_description"><p>A <span class="type">GError</span> or <code class="literal">NULL</code>.</p></td>
 <td class="parameter_annotations"> </td>
 </tr>
 </tbody>
 </table></div>
 </div>
 <div class="refsect3">
-<a name="id-1.5.6.4.9.10.6"></a><h4>Returns</h4>
-<p> <a href="/usr/share/gtk-doc/html/glib/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> if <em class="parameter"><code>object</code></em>
-is not is use, <a href="/usr/share/gtk-doc/html/glib/glib-Standard-Macros.html#FALSE:CAPS"><code class="literal">FALSE</code></a> if <em class="parameter"><code>error</code></em>
+<a name="storaged-linux-drive-object-is-not-in-use.returns"></a><h4>Returns</h4>
+<p> <code class="literal">TRUE</code> if <em class="parameter"><code>object</code></em>
+is not is use, <code class="literal">FALSE</code> if <em class="parameter"><code>error</code></em>
 is set.</p>
 </div>
 </div>
@@ -534,13 +534,13 @@ should only be accessed using the provided API.</p>
 <div class="refsect2">
 <a name="StoragedLinuxDriveObject--device"></a><h3>The <code class="literal">“device”</code> property</h3>
 <pre class="programlisting">  “device”                   <a class="link" href="StoragedLinuxDevice.html" title="StoragedLinuxDevice"><span class="type">StoragedLinuxDevice</span></a> *</pre>
-<p>The <a class="link" href="StoragedLinuxDevice.html" title="StoragedLinuxDevice"><span class="type">StoragedLinuxDevice</span></a> for the object. Connect to the <a href="/usr/share/gtk-doc/html/gobject/gobject-The-Base-Object-Type.html#GObject-notify"><span class="type">“notify”</span></a>
+<p>The <a class="link" href="StoragedLinuxDevice.html" title="StoragedLinuxDevice"><span class="type">StoragedLinuxDevice</span></a> for the object. Connect to the <span class="type">“notify”</span>
 signal to get notified whenever this is updated.</p>
 <p>Flags: Write / Construct Only</p>
 </div>
 </div>
 </div>
 <div class="footer">
-<hr>Generated by GTK-Doc V1.24</div>
+<hr>Generated by GTK-Doc V1.25</div>
 </body>
 </html>

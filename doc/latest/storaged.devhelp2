@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8" standalone="no"?>
-<book xmlns="http://www.devhelp.net/book" title="Storaged Reference Manual" link="index.html" author="" name="storaged" version="2" language="c">
+<book xmlns="http://www.devhelp.net/book" title="Storaged Reference Manual" link="index.html" author="" name="storaged" version="2" language="c" online="https://storaged-project.github.io/doc/latest/">
   <chapters>
     <sub name="Manual pages and Overview" link="overview.html">
       <sub name="storaged" link="storaged.8.html"/>
@@ -117,7 +117,7 @@
       </sub>
       <sub name="Drives on Linux" link="ref-daemon-drives.html">
         <sub name="StoragedLinuxDrive" link="StoragedLinuxDrive.html"/>
-        <sub name="DummyLinuxBlock" link="storaged-DummyLinuxBlock.html"/>
+        <sub name="DummyLinuxDrive" link="storaged-DummyLinuxDrive.html"/>
         <sub name="StoragedLinuxDriveObject" link="StoragedLinuxDriveObject.html"/>
       </sub>
       <sub name="Linux RAID" link="ref-daemon-mdraid.html">
@@ -137,7 +137,7 @@
     </sub>
     <sub name="Index" link="api-index.html"/>
     <sub name="Index of deprecated symbols" link="api-index-deprecated.html"/>
-    <sub name="Index of new symbols in 2.5.1" link="api-index-2.5.1.html"/>
+    <sub name="Index of new symbols in 2.5.2" link="api-index-2.5.2.html"/>
     <sub name="Annotation Glossary" link="annotation-glossary.html"/>
     <sub name="Object Hierarchy" link="gio-hierarchy.html"/>
   </chapters>
@@ -2131,13 +2131,13 @@
     <keyword type="function" name="storaged_linux_drive_new ()" link="StoragedLinuxDrive.html#storaged-linux-drive-new"/>
     <keyword type="function" name="storaged_linux_drive_update ()" link="StoragedLinuxDrive.html#storaged-linux-drive-update"/>
     <keyword type="struct" name="StoragedLinuxDrive" link="StoragedLinuxDrive.html#StoragedLinuxDrive-struct"/>
-    <keyword type="function" name="storaged_linux_drive_ata_new ()" link="storaged-DummyLinuxBlock.html#storaged-linux-drive-ata-new"/>
-    <keyword type="function" name="storaged_linux_drive_ata_update ()" link="storaged-DummyLinuxBlock.html#storaged-linux-drive-ata-update"/>
-    <keyword type="function" name="storaged_linux_drive_ata_refresh_smart_sync ()" link="storaged-DummyLinuxBlock.html#storaged-linux-drive-ata-refresh-smart-sync"/>
-    <keyword type="function" name="storaged_linux_drive_ata_smart_selftest_sync ()" link="storaged-DummyLinuxBlock.html#storaged-linux-drive-ata-smart-selftest-sync"/>
-    <keyword type="function" name="storaged_linux_drive_ata_apply_configuration ()" link="storaged-DummyLinuxBlock.html#storaged-linux-drive-ata-apply-configuration"/>
-    <keyword type="function" name="storaged_linux_drive_ata_secure_erase_sync ()" link="storaged-DummyLinuxBlock.html#storaged-linux-drive-ata-secure-erase-sync"/>
-    <keyword type="struct" name="StoragedLinuxDriveAta" link="storaged-DummyLinuxBlock.html#StoragedLinuxDriveAta-struct"/>
+    <keyword type="function" name="storaged_linux_drive_ata_new ()" link="storaged-DummyLinuxDrive.html#storaged-linux-drive-ata-new"/>
+    <keyword type="function" name="storaged_linux_drive_ata_update ()" link="storaged-DummyLinuxDrive.html#storaged-linux-drive-ata-update"/>
+    <keyword type="function" name="storaged_linux_drive_ata_refresh_smart_sync ()" link="storaged-DummyLinuxDrive.html#storaged-linux-drive-ata-refresh-smart-sync"/>
+    <keyword type="function" name="storaged_linux_drive_ata_smart_selftest_sync ()" link="storaged-DummyLinuxDrive.html#storaged-linux-drive-ata-smart-selftest-sync"/>
+    <keyword type="function" name="storaged_linux_drive_ata_apply_configuration ()" link="storaged-DummyLinuxDrive.html#storaged-linux-drive-ata-apply-configuration"/>
+    <keyword type="function" name="storaged_linux_drive_ata_secure_erase_sync ()" link="storaged-DummyLinuxDrive.html#storaged-linux-drive-ata-secure-erase-sync"/>
+    <keyword type="struct" name="StoragedLinuxDriveAta" link="storaged-DummyLinuxDrive.html#StoragedLinuxDriveAta-struct"/>
     <keyword type="function" name="storaged_linux_drive_object_new ()" link="StoragedLinuxDriveObject.html#storaged-linux-drive-object-new"/>
     <keyword type="function" name="storaged_linux_drive_object_uevent ()" link="StoragedLinuxDriveObject.html#storaged-linux-drive-object-uevent"/>
     <keyword type="function" name="storaged_linux_drive_object_get_daemon ()" link="StoragedLinuxDriveObject.html#storaged-linux-drive-object-get-daemon"/>
@@ -2237,5 +2237,341 @@
     <keyword type="constant" name="STORAGED_ATA_COMMAND_PROTOCOL_HOST_TO_DRIVE" link="storaged-ATA-commands.html#STORAGED-ATA-COMMAND-PROTOCOL-HOST-TO-DRIVE:CAPS"/>
     <keyword type="constant" name="STORAGED_MOUNT_TYPE_FILESYSTEM" link="StoragedMountMonitor.html#STORAGED-MOUNT-TYPE-FILESYSTEM:CAPS"/>
     <keyword type="constant" name="STORAGED_MOUNT_TYPE_SWAP" link="StoragedMountMonitor.html#STORAGED-MOUNT-TYPE-SWAP:CAPS"/>
+    <keyword type="member" name="StoragedPartitionTypeInfo-struct.table-type" link="StoragedClient.html#StoragedPartitionTypeInfo-struct.table-type"/>
+    <keyword type="member" name="StoragedPartitionTypeInfo-struct.table-subtype" link="StoragedClient.html#StoragedPartitionTypeInfo-struct.table-subtype"/>
+    <keyword type="member" name="StoragedPartitionTypeInfo-struct.type" link="StoragedClient.html#StoragedPartitionTypeInfo-struct.type"/>
+    <keyword type="member" name="StoragedPartitionTypeInfo-struct.flags" link="StoragedClient.html#StoragedPartitionTypeInfo-struct.flags"/>
+    <keyword type="member" name="StoragedObjectIface.parent-iface" link="StoragedObject.html#StoragedObjectIface.parent-iface"/>
+    <keyword type="member" name="StoragedManagerIface.parent-iface" link="StoragedManager.html#StoragedManagerIface.parent-iface"/>
+    <keyword type="member" name="StoragedManagerIface.handle-enable-modules" link="StoragedManager.html#StoragedManagerIface.handle-enable-modules"/>
+    <keyword type="member" name="StoragedManagerIface.handle-loop-setup" link="StoragedManager.html#StoragedManagerIface.handle-loop-setup"/>
+    <keyword type="member" name="StoragedManagerIface.get-supported-filesystems" link="StoragedManager.html#StoragedManagerIface.get-supported-filesystems"/>
+    <keyword type="member" name="StoragedManagerIface.get-version" link="StoragedManager.html#StoragedManagerIface.get-version"/>
+    <keyword type="member" name="StoragedManagerIface.handle-mdraid-create" link="StoragedManager.html#StoragedManagerIface.handle-mdraid-create"/>
+    <keyword type="member" name="StoragedDriveIface.parent-iface" link="StoragedDrive.html#StoragedDriveIface.parent-iface"/>
+    <keyword type="member" name="StoragedDriveIface.handle-eject" link="StoragedDrive.html#StoragedDriveIface.handle-eject"/>
+    <keyword type="member" name="StoragedDriveIface.handle-set-configuration" link="StoragedDrive.html#StoragedDriveIface.handle-set-configuration"/>
+    <keyword type="member" name="StoragedDriveIface.get-configuration" link="StoragedDrive.html#StoragedDriveIface.get-configuration"/>
+    <keyword type="member" name="StoragedDriveIface.get-connection-bus" link="StoragedDrive.html#StoragedDriveIface.get-connection-bus"/>
+    <keyword type="member" name="StoragedDriveIface.get-ejectable" link="StoragedDrive.html#StoragedDriveIface.get-ejectable"/>
+    <keyword type="member" name="StoragedDriveIface.get-id" link="StoragedDrive.html#StoragedDriveIface.get-id"/>
+    <keyword type="member" name="StoragedDriveIface.get-media" link="StoragedDrive.html#StoragedDriveIface.get-media"/>
+    <keyword type="member" name="StoragedDriveIface.get-media-available" link="StoragedDrive.html#StoragedDriveIface.get-media-available"/>
+    <keyword type="member" name="StoragedDriveIface.get-media-change-detected" link="StoragedDrive.html#StoragedDriveIface.get-media-change-detected"/>
+    <keyword type="member" name="StoragedDriveIface.get-media-compatibility" link="StoragedDrive.html#StoragedDriveIface.get-media-compatibility"/>
+    <keyword type="member" name="StoragedDriveIface.get-media-removable" link="StoragedDrive.html#StoragedDriveIface.get-media-removable"/>
+    <keyword type="member" name="StoragedDriveIface.get-model" link="StoragedDrive.html#StoragedDriveIface.get-model"/>
+    <keyword type="member" name="StoragedDriveIface.get-optical" link="StoragedDrive.html#StoragedDriveIface.get-optical"/>
+    <keyword type="member" name="StoragedDriveIface.get-optical-blank" link="StoragedDrive.html#StoragedDriveIface.get-optical-blank"/>
+    <keyword type="member" name="StoragedDriveIface.get-optical-num-audio-tracks" link="StoragedDrive.html#StoragedDriveIface.get-optical-num-audio-tracks"/>
+    <keyword type="member" name="StoragedDriveIface.get-optical-num-data-tracks" link="StoragedDrive.html#StoragedDriveIface.get-optical-num-data-tracks"/>
+    <keyword type="member" name="StoragedDriveIface.get-optical-num-sessions" link="StoragedDrive.html#StoragedDriveIface.get-optical-num-sessions"/>
+    <keyword type="member" name="StoragedDriveIface.get-optical-num-tracks" link="StoragedDrive.html#StoragedDriveIface.get-optical-num-tracks"/>
+    <keyword type="member" name="StoragedDriveIface.get-removable" link="StoragedDrive.html#StoragedDriveIface.get-removable"/>
+    <keyword type="member" name="StoragedDriveIface.get-revision" link="StoragedDrive.html#StoragedDriveIface.get-revision"/>
+    <keyword type="member" name="StoragedDriveIface.get-rotation-rate" link="StoragedDrive.html#StoragedDriveIface.get-rotation-rate"/>
+    <keyword type="member" name="StoragedDriveIface.get-seat" link="StoragedDrive.html#StoragedDriveIface.get-seat"/>
+    <keyword type="member" name="StoragedDriveIface.get-serial" link="StoragedDrive.html#StoragedDriveIface.get-serial"/>
+    <keyword type="member" name="StoragedDriveIface.get-size" link="StoragedDrive.html#StoragedDriveIface.get-size"/>
+    <keyword type="member" name="StoragedDriveIface.get-sort-key" link="StoragedDrive.html#StoragedDriveIface.get-sort-key"/>
+    <keyword type="member" name="StoragedDriveIface.get-time-detected" link="StoragedDrive.html#StoragedDriveIface.get-time-detected"/>
+    <keyword type="member" name="StoragedDriveIface.get-time-media-detected" link="StoragedDrive.html#StoragedDriveIface.get-time-media-detected"/>
+    <keyword type="member" name="StoragedDriveIface.get-vendor" link="StoragedDrive.html#StoragedDriveIface.get-vendor"/>
+    <keyword type="member" name="StoragedDriveIface.get-wwn" link="StoragedDrive.html#StoragedDriveIface.get-wwn"/>
+    <keyword type="member" name="StoragedDriveIface.handle-power-off" link="StoragedDrive.html#StoragedDriveIface.handle-power-off"/>
+    <keyword type="member" name="StoragedDriveIface.get-can-power-off" link="StoragedDrive.html#StoragedDriveIface.get-can-power-off"/>
+    <keyword type="member" name="StoragedDriveIface.get-sibling-id" link="StoragedDrive.html#StoragedDriveIface.get-sibling-id"/>
+    <keyword type="member" name="StoragedDriveAtaIface.parent-iface" link="StoragedDriveAta.html#StoragedDriveAtaIface.parent-iface"/>
+    <keyword type="member" name="StoragedDriveAtaIface.handle-pm-get-state" link="StoragedDriveAta.html#StoragedDriveAtaIface.handle-pm-get-state"/>
+    <keyword type="member" name="StoragedDriveAtaIface.handle-pm-standby" link="StoragedDriveAta.html#StoragedDriveAtaIface.handle-pm-standby"/>
+    <keyword type="member" name="StoragedDriveAtaIface.handle-pm-wakeup" link="StoragedDriveAta.html#StoragedDriveAtaIface.handle-pm-wakeup"/>
+    <keyword type="member" name="StoragedDriveAtaIface.handle-security-erase-unit" link="StoragedDriveAta.html#StoragedDriveAtaIface.handle-security-erase-unit"/>
+    <keyword type="member" name="StoragedDriveAtaIface.handle-smart-get-attributes" link="StoragedDriveAta.html#StoragedDriveAtaIface.handle-smart-get-attributes"/>
+    <keyword type="member" name="StoragedDriveAtaIface.handle-smart-selftest-abort" link="StoragedDriveAta.html#StoragedDriveAtaIface.handle-smart-selftest-abort"/>
+    <keyword type="member" name="StoragedDriveAtaIface.handle-smart-selftest-start" link="StoragedDriveAta.html#StoragedDriveAtaIface.handle-smart-selftest-start"/>
+    <keyword type="member" name="StoragedDriveAtaIface.handle-smart-update" link="StoragedDriveAta.html#StoragedDriveAtaIface.handle-smart-update"/>
+    <keyword type="member" name="StoragedDriveAtaIface.get-aam-enabled" link="StoragedDriveAta.html#StoragedDriveAtaIface.get-aam-enabled"/>
+    <keyword type="member" name="StoragedDriveAtaIface.get-aam-supported" link="StoragedDriveAta.html#StoragedDriveAtaIface.get-aam-supported"/>
+    <keyword type="member" name="StoragedDriveAtaIface.get-aam-vendor-recommended-value" link="StoragedDriveAta.html#StoragedDriveAtaIface.get-aam-vendor-recommended-value"/>
+    <keyword type="member" name="StoragedDriveAtaIface.get-apm-enabled" link="StoragedDriveAta.html#StoragedDriveAtaIface.get-apm-enabled"/>
+    <keyword type="member" name="StoragedDriveAtaIface.get-apm-supported" link="StoragedDriveAta.html#StoragedDriveAtaIface.get-apm-supported"/>
+    <keyword type="member" name="StoragedDriveAtaIface.get-pm-enabled" link="StoragedDriveAta.html#StoragedDriveAtaIface.get-pm-enabled"/>
+    <keyword type="member" name="StoragedDriveAtaIface.get-pm-supported" link="StoragedDriveAta.html#StoragedDriveAtaIface.get-pm-supported"/>
+    <keyword type="member" name="StoragedDriveAtaIface.get-security-enhanced-erase-unit-minutes" link="StoragedDriveAta.html#StoragedDriveAtaIface.get-security-enhanced-erase-unit-minutes"/>
+    <keyword type="member" name="StoragedDriveAtaIface.get-security-erase-unit-minutes" link="StoragedDriveAta.html#StoragedDriveAtaIface.get-security-erase-unit-minutes"/>
+    <keyword type="member" name="StoragedDriveAtaIface.get-security-frozen" link="StoragedDriveAta.html#StoragedDriveAtaIface.get-security-frozen"/>
+    <keyword type="member" name="StoragedDriveAtaIface.get-smart-enabled" link="StoragedDriveAta.html#StoragedDriveAtaIface.get-smart-enabled"/>
+    <keyword type="member" name="StoragedDriveAtaIface.get-smart-failing" link="StoragedDriveAta.html#StoragedDriveAtaIface.get-smart-failing"/>
+    <keyword type="member" name="StoragedDriveAtaIface.get-smart-num-attributes-failed-in-the-past" link="StoragedDriveAta.html#StoragedDriveAtaIface.get-smart-num-attributes-failed-in-the-past"/>
+    <keyword type="member" name="StoragedDriveAtaIface.get-smart-num-attributes-failing" link="StoragedDriveAta.html#StoragedDriveAtaIface.get-smart-num-attributes-failing"/>
+    <keyword type="member" name="StoragedDriveAtaIface.get-smart-num-bad-sectors" link="StoragedDriveAta.html#StoragedDriveAtaIface.get-smart-num-bad-sectors"/>
+    <keyword type="member" name="StoragedDriveAtaIface.get-smart-power-on-seconds" link="StoragedDriveAta.html#StoragedDriveAtaIface.get-smart-power-on-seconds"/>
+    <keyword type="member" name="StoragedDriveAtaIface.get-smart-selftest-percent-remaining" link="StoragedDriveAta.html#StoragedDriveAtaIface.get-smart-selftest-percent-remaining"/>
+    <keyword type="member" name="StoragedDriveAtaIface.get-smart-selftest-status" link="StoragedDriveAta.html#StoragedDriveAtaIface.get-smart-selftest-status"/>
+    <keyword type="member" name="StoragedDriveAtaIface.get-smart-supported" link="StoragedDriveAta.html#StoragedDriveAtaIface.get-smart-supported"/>
+    <keyword type="member" name="StoragedDriveAtaIface.get-smart-temperature" link="StoragedDriveAta.html#StoragedDriveAtaIface.get-smart-temperature"/>
+    <keyword type="member" name="StoragedDriveAtaIface.get-smart-updated" link="StoragedDriveAta.html#StoragedDriveAtaIface.get-smart-updated"/>
+    <keyword type="member" name="StoragedDriveAtaIface.handle-smart-set-enabled" link="StoragedDriveAta.html#StoragedDriveAtaIface.handle-smart-set-enabled"/>
+    <keyword type="member" name="StoragedDriveAtaIface.get-write-cache-enabled" link="StoragedDriveAta.html#StoragedDriveAtaIface.get-write-cache-enabled"/>
+    <keyword type="member" name="StoragedDriveAtaIface.get-write-cache-supported" link="StoragedDriveAta.html#StoragedDriveAtaIface.get-write-cache-supported"/>
+    <keyword type="member" name="StoragedDriveAtaIface.get-read-lookahead-enabled" link="StoragedDriveAta.html#StoragedDriveAtaIface.get-read-lookahead-enabled"/>
+    <keyword type="member" name="StoragedDriveAtaIface.get-read-lookahead-supported" link="StoragedDriveAta.html#StoragedDriveAtaIface.get-read-lookahead-supported"/>
+    <keyword type="member" name="StoragedMDRaidIface.parent-iface" link="StoragedMDRaid.html#StoragedMDRaidIface.parent-iface"/>
+    <keyword type="member" name="StoragedMDRaidIface.handle-add-device" link="StoragedMDRaid.html#StoragedMDRaidIface.handle-add-device"/>
+    <keyword type="member" name="StoragedMDRaidIface.handle-delete" link="StoragedMDRaid.html#StoragedMDRaidIface.handle-delete"/>
+    <keyword type="member" name="StoragedMDRaidIface.handle-remove-device" link="StoragedMDRaid.html#StoragedMDRaidIface.handle-remove-device"/>
+    <keyword type="member" name="StoragedMDRaidIface.handle-request-sync-action" link="StoragedMDRaid.html#StoragedMDRaidIface.handle-request-sync-action"/>
+    <keyword type="member" name="StoragedMDRaidIface.handle-set-bitmap-location" link="StoragedMDRaid.html#StoragedMDRaidIface.handle-set-bitmap-location"/>
+    <keyword type="member" name="StoragedMDRaidIface.handle-start" link="StoragedMDRaid.html#StoragedMDRaidIface.handle-start"/>
+    <keyword type="member" name="StoragedMDRaidIface.handle-stop" link="StoragedMDRaid.html#StoragedMDRaidIface.handle-stop"/>
+    <keyword type="member" name="StoragedMDRaidIface.get-active-devices" link="StoragedMDRaid.html#StoragedMDRaidIface.get-active-devices"/>
+    <keyword type="member" name="StoragedMDRaidIface.get-bitmap-location" link="StoragedMDRaid.html#StoragedMDRaidIface.get-bitmap-location"/>
+    <keyword type="member" name="StoragedMDRaidIface.get-child-configuration" link="StoragedMDRaid.html#StoragedMDRaidIface.get-child-configuration"/>
+    <keyword type="member" name="StoragedMDRaidIface.get-chunk-size" link="StoragedMDRaid.html#StoragedMDRaidIface.get-chunk-size"/>
+    <keyword type="member" name="StoragedMDRaidIface.get-degraded" link="StoragedMDRaid.html#StoragedMDRaidIface.get-degraded"/>
+    <keyword type="member" name="StoragedMDRaidIface.get-level" link="StoragedMDRaid.html#StoragedMDRaidIface.get-level"/>
+    <keyword type="member" name="StoragedMDRaidIface.get-name" link="StoragedMDRaid.html#StoragedMDRaidIface.get-name"/>
+    <keyword type="member" name="StoragedMDRaidIface.get-num-devices" link="StoragedMDRaid.html#StoragedMDRaidIface.get-num-devices"/>
+    <keyword type="member" name="StoragedMDRaidIface.get-running" link="StoragedMDRaid.html#StoragedMDRaidIface.get-running"/>
+    <keyword type="member" name="StoragedMDRaidIface.get-size" link="StoragedMDRaid.html#StoragedMDRaidIface.get-size"/>
+    <keyword type="member" name="StoragedMDRaidIface.get-sync-action" link="StoragedMDRaid.html#StoragedMDRaidIface.get-sync-action"/>
+    <keyword type="member" name="StoragedMDRaidIface.get-sync-completed" link="StoragedMDRaid.html#StoragedMDRaidIface.get-sync-completed"/>
+    <keyword type="member" name="StoragedMDRaidIface.get-sync-rate" link="StoragedMDRaid.html#StoragedMDRaidIface.get-sync-rate"/>
+    <keyword type="member" name="StoragedMDRaidIface.get-sync-remaining-time" link="StoragedMDRaid.html#StoragedMDRaidIface.get-sync-remaining-time"/>
+    <keyword type="member" name="StoragedMDRaidIface.get-uuid" link="StoragedMDRaid.html#StoragedMDRaidIface.get-uuid"/>
+    <keyword type="member" name="StoragedJobIface.parent-iface" link="StoragedJob.html#StoragedJobIface.parent-iface"/>
+    <keyword type="member" name="StoragedJobIface.handle-cancel" link="StoragedJob.html#StoragedJobIface.handle-cancel"/>
+    <keyword type="member" name="StoragedJobIface.get-cancelable" link="StoragedJob.html#StoragedJobIface.get-cancelable"/>
+    <keyword type="member" name="StoragedJobIface.get-expected-end-time" link="StoragedJob.html#StoragedJobIface.get-expected-end-time"/>
+    <keyword type="member" name="StoragedJobIface.get-objects" link="StoragedJob.html#StoragedJobIface.get-objects"/>
+    <keyword type="member" name="StoragedJobIface.get-operation" link="StoragedJob.html#StoragedJobIface.get-operation"/>
+    <keyword type="member" name="StoragedJobIface.get-progress" link="StoragedJob.html#StoragedJobIface.get-progress"/>
+    <keyword type="member" name="StoragedJobIface.get-progress-valid" link="StoragedJob.html#StoragedJobIface.get-progress-valid"/>
+    <keyword type="member" name="StoragedJobIface.get-start-time" link="StoragedJob.html#StoragedJobIface.get-start-time"/>
+    <keyword type="member" name="StoragedJobIface.get-started-by-uid" link="StoragedJob.html#StoragedJobIface.get-started-by-uid"/>
+    <keyword type="member" name="StoragedJobIface.completed" link="StoragedJob.html#StoragedJobIface.completed"/>
+    <keyword type="member" name="StoragedJobIface.get-bytes" link="StoragedJob.html#StoragedJobIface.get-bytes"/>
+    <keyword type="member" name="StoragedJobIface.get-rate" link="StoragedJob.html#StoragedJobIface.get-rate"/>
+    <keyword type="member" name="StoragedBlockIface.parent-iface" link="StoragedBlock.html#StoragedBlockIface.parent-iface"/>
+    <keyword type="member" name="StoragedBlockIface.handle-add-configuration-item" link="StoragedBlock.html#StoragedBlockIface.handle-add-configuration-item"/>
+    <keyword type="member" name="StoragedBlockIface.handle-format" link="StoragedBlock.html#StoragedBlockIface.handle-format"/>
+    <keyword type="member" name="StoragedBlockIface.handle-get-secret-configuration" link="StoragedBlock.html#StoragedBlockIface.handle-get-secret-configuration"/>
+    <keyword type="member" name="StoragedBlockIface.handle-open-for-backup" link="StoragedBlock.html#StoragedBlockIface.handle-open-for-backup"/>
+    <keyword type="member" name="StoragedBlockIface.handle-open-for-benchmark" link="StoragedBlock.html#StoragedBlockIface.handle-open-for-benchmark"/>
+    <keyword type="member" name="StoragedBlockIface.handle-open-for-restore" link="StoragedBlock.html#StoragedBlockIface.handle-open-for-restore"/>
+    <keyword type="member" name="StoragedBlockIface.handle-remove-configuration-item" link="StoragedBlock.html#StoragedBlockIface.handle-remove-configuration-item"/>
+    <keyword type="member" name="StoragedBlockIface.handle-rescan" link="StoragedBlock.html#StoragedBlockIface.handle-rescan"/>
+    <keyword type="member" name="StoragedBlockIface.handle-update-configuration-item" link="StoragedBlock.html#StoragedBlockIface.handle-update-configuration-item"/>
+    <keyword type="member" name="StoragedBlockIface.get-configuration" link="StoragedBlock.html#StoragedBlockIface.get-configuration"/>
+    <keyword type="member" name="StoragedBlockIface.get-crypto-backing-device" link="StoragedBlock.html#StoragedBlockIface.get-crypto-backing-device"/>
+    <keyword type="member" name="StoragedBlockIface.get-device" link="StoragedBlock.html#StoragedBlockIface.get-device"/>
+    <keyword type="member" name="StoragedBlockIface.get-device-number" link="StoragedBlock.html#StoragedBlockIface.get-device-number"/>
+    <keyword type="member" name="StoragedBlockIface.get-drive" link="StoragedBlock.html#StoragedBlockIface.get-drive"/>
+    <keyword type="member" name="StoragedBlockIface.get-hint-auto" link="StoragedBlock.html#StoragedBlockIface.get-hint-auto"/>
+    <keyword type="member" name="StoragedBlockIface.get-hint-icon-name" link="StoragedBlock.html#StoragedBlockIface.get-hint-icon-name"/>
+    <keyword type="member" name="StoragedBlockIface.get-hint-ignore" link="StoragedBlock.html#StoragedBlockIface.get-hint-ignore"/>
+    <keyword type="member" name="StoragedBlockIface.get-hint-name" link="StoragedBlock.html#StoragedBlockIface.get-hint-name"/>
+    <keyword type="member" name="StoragedBlockIface.get-hint-partitionable" link="StoragedBlock.html#StoragedBlockIface.get-hint-partitionable"/>
+    <keyword type="member" name="StoragedBlockIface.get-hint-system" link="StoragedBlock.html#StoragedBlockIface.get-hint-system"/>
+    <keyword type="member" name="StoragedBlockIface.get-id-label" link="StoragedBlock.html#StoragedBlockIface.get-id-label"/>
+    <keyword type="member" name="StoragedBlockIface.get-id-type" link="StoragedBlock.html#StoragedBlockIface.get-id-type"/>
+    <keyword type="member" name="StoragedBlockIface.get-id-usage" link="StoragedBlock.html#StoragedBlockIface.get-id-usage"/>
+    <keyword type="member" name="StoragedBlockIface.get-id-uuid" link="StoragedBlock.html#StoragedBlockIface.get-id-uuid"/>
+    <keyword type="member" name="StoragedBlockIface.get-id-version" link="StoragedBlock.html#StoragedBlockIface.get-id-version"/>
+    <keyword type="member" name="StoragedBlockIface.get-preferred-device" link="StoragedBlock.html#StoragedBlockIface.get-preferred-device"/>
+    <keyword type="member" name="StoragedBlockIface.get-read-only" link="StoragedBlock.html#StoragedBlockIface.get-read-only"/>
+    <keyword type="member" name="StoragedBlockIface.get-size" link="StoragedBlock.html#StoragedBlockIface.get-size"/>
+    <keyword type="member" name="StoragedBlockIface.get-symlinks" link="StoragedBlock.html#StoragedBlockIface.get-symlinks"/>
+    <keyword type="member" name="StoragedBlockIface.get-hint-symbolic-icon-name" link="StoragedBlock.html#StoragedBlockIface.get-hint-symbolic-icon-name"/>
+    <keyword type="member" name="StoragedBlockIface.get-id" link="StoragedBlock.html#StoragedBlockIface.get-id"/>
+    <keyword type="member" name="StoragedBlockIface.get-mdraid" link="StoragedBlock.html#StoragedBlockIface.get-mdraid"/>
+    <keyword type="member" name="StoragedBlockIface.get-mdraid-member" link="StoragedBlock.html#StoragedBlockIface.get-mdraid-member"/>
+    <keyword type="member" name="StoragedPartitionIface.parent-iface" link="StoragedPartition.html#StoragedPartitionIface.parent-iface"/>
+    <keyword type="member" name="StoragedPartitionIface.handle-delete" link="StoragedPartition.html#StoragedPartitionIface.handle-delete"/>
+    <keyword type="member" name="StoragedPartitionIface.handle-set-flags" link="StoragedPartition.html#StoragedPartitionIface.handle-set-flags"/>
+    <keyword type="member" name="StoragedPartitionIface.handle-set-name" link="StoragedPartition.html#StoragedPartitionIface.handle-set-name"/>
+    <keyword type="member" name="StoragedPartitionIface.handle-set-type" link="StoragedPartition.html#StoragedPartitionIface.handle-set-type"/>
+    <keyword type="member" name="StoragedPartitionIface.get-flags" link="StoragedPartition.html#StoragedPartitionIface.get-flags"/>
+    <keyword type="member" name="StoragedPartitionIface.get-is-contained" link="StoragedPartition.html#StoragedPartitionIface.get-is-contained"/>
+    <keyword type="member" name="StoragedPartitionIface.get-is-container" link="StoragedPartition.html#StoragedPartitionIface.get-is-container"/>
+    <keyword type="member" name="StoragedPartitionIface.get-name" link="StoragedPartition.html#StoragedPartitionIface.get-name"/>
+    <keyword type="member" name="StoragedPartitionIface.get-number" link="StoragedPartition.html#StoragedPartitionIface.get-number"/>
+    <keyword type="member" name="StoragedPartitionIface.get-offset" link="StoragedPartition.html#StoragedPartitionIface.get-offset"/>
+    <keyword type="member" name="StoragedPartitionIface.get-size" link="StoragedPartition.html#StoragedPartitionIface.get-size"/>
+    <keyword type="member" name="StoragedPartitionIface.get-table" link="StoragedPartition.html#StoragedPartitionIface.get-table"/>
+    <keyword type="member" name="StoragedPartitionIface.get-type-" link="StoragedPartition.html#StoragedPartitionIface.get-type-"/>
+    <keyword type="member" name="StoragedPartitionIface.get-uuid" link="StoragedPartition.html#StoragedPartitionIface.get-uuid"/>
+    <keyword type="member" name="StoragedPartitionTableIface.parent-iface" link="StoragedPartitionTable.html#StoragedPartitionTableIface.parent-iface"/>
+    <keyword type="member" name="StoragedPartitionTableIface.handle-create-partition" link="StoragedPartitionTable.html#StoragedPartitionTableIface.handle-create-partition"/>
+    <keyword type="member" name="StoragedPartitionTableIface.handle-create-partition-and-format" link="StoragedPartitionTable.html#StoragedPartitionTableIface.handle-create-partition-and-format"/>
+    <keyword type="member" name="StoragedPartitionTableIface.get-type-" link="StoragedPartitionTable.html#StoragedPartitionTableIface.get-type-"/>
+    <keyword type="member" name="StoragedFilesystemIface.parent-iface" link="StoragedFilesystem.html#StoragedFilesystemIface.parent-iface"/>
+    <keyword type="member" name="StoragedFilesystemIface.handle-mount" link="StoragedFilesystem.html#StoragedFilesystemIface.handle-mount"/>
+    <keyword type="member" name="StoragedFilesystemIface.handle-set-label" link="StoragedFilesystem.html#StoragedFilesystemIface.handle-set-label"/>
+    <keyword type="member" name="StoragedFilesystemIface.handle-unmount" link="StoragedFilesystem.html#StoragedFilesystemIface.handle-unmount"/>
+    <keyword type="member" name="StoragedFilesystemIface.get-mount-points" link="StoragedFilesystem.html#StoragedFilesystemIface.get-mount-points"/>
+    <keyword type="member" name="StoragedSwapspaceIface.parent-iface" link="StoragedSwapspace.html#StoragedSwapspaceIface.parent-iface"/>
+    <keyword type="member" name="StoragedSwapspaceIface.handle-start" link="StoragedSwapspace.html#StoragedSwapspaceIface.handle-start"/>
+    <keyword type="member" name="StoragedSwapspaceIface.handle-stop" link="StoragedSwapspace.html#StoragedSwapspaceIface.handle-stop"/>
+    <keyword type="member" name="StoragedSwapspaceIface.get-active" link="StoragedSwapspace.html#StoragedSwapspaceIface.get-active"/>
+    <keyword type="member" name="StoragedEncryptedIface.parent-iface" link="StoragedEncrypted.html#StoragedEncryptedIface.parent-iface"/>
+    <keyword type="member" name="StoragedEncryptedIface.handle-change-passphrase" link="StoragedEncrypted.html#StoragedEncryptedIface.handle-change-passphrase"/>
+    <keyword type="member" name="StoragedEncryptedIface.handle-lock" link="StoragedEncrypted.html#StoragedEncryptedIface.handle-lock"/>
+    <keyword type="member" name="StoragedEncryptedIface.handle-unlock" link="StoragedEncrypted.html#StoragedEncryptedIface.handle-unlock"/>
+    <keyword type="member" name="StoragedEncryptedIface.get-child-configuration" link="StoragedEncrypted.html#StoragedEncryptedIface.get-child-configuration"/>
+    <keyword type="member" name="StoragedLoopIface.parent-iface" link="StoragedLoop.html#StoragedLoopIface.parent-iface"/>
+    <keyword type="member" name="StoragedLoopIface.handle-delete" link="StoragedLoop.html#StoragedLoopIface.handle-delete"/>
+    <keyword type="member" name="StoragedLoopIface.handle-set-autoclear" link="StoragedLoop.html#StoragedLoopIface.handle-set-autoclear"/>
+    <keyword type="member" name="StoragedLoopIface.get-autoclear" link="StoragedLoop.html#StoragedLoopIface.get-autoclear"/>
+    <keyword type="member" name="StoragedLoopIface.get-backing-file" link="StoragedLoop.html#StoragedLoopIface.get-backing-file"/>
+    <keyword type="member" name="StoragedLoopIface.get-setup-by-uid" link="StoragedLoop.html#StoragedLoopIface.get-setup-by-uid"/>
+    <keyword type="member" name="StoragedManagerLSMIface.parent-iface" link="storaged-StoragedManagerLSM.html#StoragedManagerLSMIface.parent-iface"/>
+    <keyword type="member" name="StoragedDriveLSMIface.parent-iface" link="storaged-StoragedDriveLSM.html#StoragedDriveLSMIface.parent-iface"/>
+    <keyword type="member" name="StoragedDriveLSMIface.get-is-ok" link="storaged-StoragedDriveLSM.html#StoragedDriveLSMIface.get-is-ok"/>
+    <keyword type="member" name="StoragedDriveLSMIface.get-is-raid-degraded" link="storaged-StoragedDriveLSM.html#StoragedDriveLSMIface.get-is-raid-degraded"/>
+    <keyword type="member" name="StoragedDriveLSMIface.get-is-raid-error" link="storaged-StoragedDriveLSM.html#StoragedDriveLSMIface.get-is-raid-error"/>
+    <keyword type="member" name="StoragedDriveLSMIface.get-is-raid-reconstructing" link="storaged-StoragedDriveLSM.html#StoragedDriveLSMIface.get-is-raid-reconstructing"/>
+    <keyword type="member" name="StoragedDriveLSMIface.get-is-raid-verifying" link="storaged-StoragedDriveLSM.html#StoragedDriveLSMIface.get-is-raid-verifying"/>
+    <keyword type="member" name="StoragedDriveLSMIface.get-min-io-size" link="storaged-StoragedDriveLSM.html#StoragedDriveLSMIface.get-min-io-size"/>
+    <keyword type="member" name="StoragedDriveLSMIface.get-opt-io-size" link="storaged-StoragedDriveLSM.html#StoragedDriveLSMIface.get-opt-io-size"/>
+    <keyword type="member" name="StoragedDriveLSMIface.get-raid-disk-count" link="storaged-StoragedDriveLSM.html#StoragedDriveLSMIface.get-raid-disk-count"/>
+    <keyword type="member" name="StoragedDriveLSMIface.get-raid-type" link="storaged-StoragedDriveLSM.html#StoragedDriveLSMIface.get-raid-type"/>
+    <keyword type="member" name="StoragedDriveLSMIface.get-status-info" link="storaged-StoragedDriveLSM.html#StoragedDriveLSMIface.get-status-info"/>
+    <keyword type="member" name="StoragedManagerLVM2Iface.parent-iface" link="StoragedManagerLVM2.html#StoragedManagerLVM2Iface.parent-iface"/>
+    <keyword type="member" name="StoragedManagerLVM2Iface.handle-volume-group-create" link="StoragedManagerLVM2.html#StoragedManagerLVM2Iface.handle-volume-group-create"/>
+    <keyword type="member" name="StoragedBlockLVM2Iface.parent-iface" link="storaged-StoragedBlockLVM2.html#StoragedBlockLVM2Iface.parent-iface"/>
+    <keyword type="member" name="StoragedBlockLVM2Iface.get-logical-volume" link="storaged-StoragedBlockLVM2.html#StoragedBlockLVM2Iface.get-logical-volume"/>
+    <keyword type="member" name="StoragedPhysicalVolumeIface.parent-iface" link="storaged-StoragedPhysicalVolume.html#StoragedPhysicalVolumeIface.parent-iface"/>
+    <keyword type="member" name="StoragedPhysicalVolumeIface.get-free-size" link="storaged-StoragedPhysicalVolume.html#StoragedPhysicalVolumeIface.get-free-size"/>
+    <keyword type="member" name="StoragedPhysicalVolumeIface.get-size" link="storaged-StoragedPhysicalVolume.html#StoragedPhysicalVolumeIface.get-size"/>
+    <keyword type="member" name="StoragedPhysicalVolumeIface.get-volume-group" link="storaged-StoragedPhysicalVolume.html#StoragedPhysicalVolumeIface.get-volume-group"/>
+    <keyword type="member" name="StoragedVolumeGroupIface.parent-iface" link="storaged-StoragedVolumeGroup.html#StoragedVolumeGroupIface.parent-iface"/>
+    <keyword type="member" name="StoragedVolumeGroupIface.handle-add-device" link="storaged-StoragedVolumeGroup.html#StoragedVolumeGroupIface.handle-add-device"/>
+    <keyword type="member" name="StoragedVolumeGroupIface.handle-create-plain-volume" link="storaged-StoragedVolumeGroup.html#StoragedVolumeGroupIface.handle-create-plain-volume"/>
+    <keyword type="member" name="StoragedVolumeGroupIface.handle-create-thin-pool-volume" link="storaged-StoragedVolumeGroup.html#StoragedVolumeGroupIface.handle-create-thin-pool-volume"/>
+    <keyword type="member" name="StoragedVolumeGroupIface.handle-create-thin-volume" link="storaged-StoragedVolumeGroup.html#StoragedVolumeGroupIface.handle-create-thin-volume"/>
+    <keyword type="member" name="StoragedVolumeGroupIface.handle-delete" link="storaged-StoragedVolumeGroup.html#StoragedVolumeGroupIface.handle-delete"/>
+    <keyword type="member" name="StoragedVolumeGroupIface.handle-empty-device" link="storaged-StoragedVolumeGroup.html#StoragedVolumeGroupIface.handle-empty-device"/>
+    <keyword type="member" name="StoragedVolumeGroupIface.handle-poll" link="storaged-StoragedVolumeGroup.html#StoragedVolumeGroupIface.handle-poll"/>
+    <keyword type="member" name="StoragedVolumeGroupIface.handle-remove-device" link="storaged-StoragedVolumeGroup.html#StoragedVolumeGroupIface.handle-remove-device"/>
+    <keyword type="member" name="StoragedVolumeGroupIface.handle-rename" link="storaged-StoragedVolumeGroup.html#StoragedVolumeGroupIface.handle-rename"/>
+    <keyword type="member" name="StoragedVolumeGroupIface.get-extent-size" link="storaged-StoragedVolumeGroup.html#StoragedVolumeGroupIface.get-extent-size"/>
+    <keyword type="member" name="StoragedVolumeGroupIface.get-free-size" link="storaged-StoragedVolumeGroup.html#StoragedVolumeGroupIface.get-free-size"/>
+    <keyword type="member" name="StoragedVolumeGroupIface.get-name" link="storaged-StoragedVolumeGroup.html#StoragedVolumeGroupIface.get-name"/>
+    <keyword type="member" name="StoragedVolumeGroupIface.get-needs-polling" link="storaged-StoragedVolumeGroup.html#StoragedVolumeGroupIface.get-needs-polling"/>
+    <keyword type="member" name="StoragedVolumeGroupIface.get-size" link="storaged-StoragedVolumeGroup.html#StoragedVolumeGroupIface.get-size"/>
+    <keyword type="member" name="StoragedVolumeGroupIface.get-uuid" link="storaged-StoragedVolumeGroup.html#StoragedVolumeGroupIface.get-uuid"/>
+    <keyword type="member" name="StoragedLogicalVolumeIface.parent-iface" link="storaged-StoragedLogicalVolume.html#StoragedLogicalVolumeIface.parent-iface"/>
+    <keyword type="member" name="StoragedLogicalVolumeIface.handle-activate" link="storaged-StoragedLogicalVolume.html#StoragedLogicalVolumeIface.handle-activate"/>
+    <keyword type="member" name="StoragedLogicalVolumeIface.handle-create-snapshot" link="storaged-StoragedLogicalVolume.html#StoragedLogicalVolumeIface.handle-create-snapshot"/>
+    <keyword type="member" name="StoragedLogicalVolumeIface.handle-deactivate" link="storaged-StoragedLogicalVolume.html#StoragedLogicalVolumeIface.handle-deactivate"/>
+    <keyword type="member" name="StoragedLogicalVolumeIface.handle-delete" link="storaged-StoragedLogicalVolume.html#StoragedLogicalVolumeIface.handle-delete"/>
+    <keyword type="member" name="StoragedLogicalVolumeIface.handle-rename" link="storaged-StoragedLogicalVolume.html#StoragedLogicalVolumeIface.handle-rename"/>
+    <keyword type="member" name="StoragedLogicalVolumeIface.handle-resize" link="storaged-StoragedLogicalVolume.html#StoragedLogicalVolumeIface.handle-resize"/>
+    <keyword type="member" name="StoragedLogicalVolumeIface.get-active" link="storaged-StoragedLogicalVolume.html#StoragedLogicalVolumeIface.get-active"/>
+    <keyword type="member" name="StoragedLogicalVolumeIface.get-child-configuration" link="storaged-StoragedLogicalVolume.html#StoragedLogicalVolumeIface.get-child-configuration"/>
+    <keyword type="member" name="StoragedLogicalVolumeIface.get-data-allocated-ratio" link="storaged-StoragedLogicalVolume.html#StoragedLogicalVolumeIface.get-data-allocated-ratio"/>
+    <keyword type="member" name="StoragedLogicalVolumeIface.get-metadata-allocated-ratio" link="storaged-StoragedLogicalVolume.html#StoragedLogicalVolumeIface.get-metadata-allocated-ratio"/>
+    <keyword type="member" name="StoragedLogicalVolumeIface.get-name" link="storaged-StoragedLogicalVolume.html#StoragedLogicalVolumeIface.get-name"/>
+    <keyword type="member" name="StoragedLogicalVolumeIface.get-origin" link="storaged-StoragedLogicalVolume.html#StoragedLogicalVolumeIface.get-origin"/>
+    <keyword type="member" name="StoragedLogicalVolumeIface.get-size" link="storaged-StoragedLogicalVolume.html#StoragedLogicalVolumeIface.get-size"/>
+    <keyword type="member" name="StoragedLogicalVolumeIface.get-thin-pool" link="storaged-StoragedLogicalVolume.html#StoragedLogicalVolumeIface.get-thin-pool"/>
+    <keyword type="member" name="StoragedLogicalVolumeIface.get-type-" link="storaged-StoragedLogicalVolume.html#StoragedLogicalVolumeIface.get-type-"/>
+    <keyword type="member" name="StoragedLogicalVolumeIface.get-uuid" link="storaged-StoragedLogicalVolume.html#StoragedLogicalVolumeIface.get-uuid"/>
+    <keyword type="member" name="StoragedLogicalVolumeIface.get-volume-group" link="storaged-StoragedLogicalVolume.html#StoragedLogicalVolumeIface.get-volume-group"/>
+    <keyword type="member" name="StoragedLogicalVolumeIface.handle-cache-attach" link="storaged-StoragedLogicalVolume.html#StoragedLogicalVolumeIface.handle-cache-attach"/>
+    <keyword type="member" name="StoragedLogicalVolumeIface.handle-cache-split" link="storaged-StoragedLogicalVolume.html#StoragedLogicalVolumeIface.handle-cache-split"/>
+    <keyword type="member" name="StoragedISCSISessionIface.parent-iface" link="StoragedISCSISession.html#StoragedISCSISessionIface.parent-iface"/>
+    <keyword type="member" name="StoragedISCSISessionIface.get-abort-timeout" link="StoragedISCSISession.html#StoragedISCSISessionIface.get-abort-timeout"/>
+    <keyword type="member" name="StoragedISCSISessionIface.get-address" link="StoragedISCSISession.html#StoragedISCSISessionIface.get-address"/>
+    <keyword type="member" name="StoragedISCSISessionIface.get-lu-reset-timeout" link="StoragedISCSISession.html#StoragedISCSISessionIface.get-lu-reset-timeout"/>
+    <keyword type="member" name="StoragedISCSISessionIface.get-persistent-address" link="StoragedISCSISession.html#StoragedISCSISessionIface.get-persistent-address"/>
+    <keyword type="member" name="StoragedISCSISessionIface.get-persistent-port" link="StoragedISCSISession.html#StoragedISCSISessionIface.get-persistent-port"/>
+    <keyword type="member" name="StoragedISCSISessionIface.get-port" link="StoragedISCSISession.html#StoragedISCSISessionIface.get-port"/>
+    <keyword type="member" name="StoragedISCSISessionIface.get-recovery-timeout" link="StoragedISCSISession.html#StoragedISCSISessionIface.get-recovery-timeout"/>
+    <keyword type="member" name="StoragedISCSISessionIface.get-target-name" link="StoragedISCSISession.html#StoragedISCSISessionIface.get-target-name"/>
+    <keyword type="member" name="StoragedISCSISessionIface.get-tgt-reset-timeout" link="StoragedISCSISession.html#StoragedISCSISessionIface.get-tgt-reset-timeout"/>
+    <keyword type="member" name="StoragedISCSISessionIface.get-tpgt" link="StoragedISCSISession.html#StoragedISCSISessionIface.get-tpgt"/>
+    <keyword type="member" name="StoragedISCSISessionIface.handle-logout" link="StoragedISCSISession.html#StoragedISCSISessionIface.handle-logout"/>
+    <keyword type="member" name="StoragedISCSISessionIface.handle-logout-interface" link="StoragedISCSISession.html#StoragedISCSISessionIface.handle-logout-interface"/>
+    <keyword type="member" name="StoragedManagerISCSIInitiatorIface.parent-iface" link="StoragedManagerISCSIInitiator.html#StoragedManagerISCSIInitiatorIface.parent-iface"/>
+    <keyword type="member" name="StoragedManagerISCSIInitiatorIface.handle-get-initiator-name" link="StoragedManagerISCSIInitiator.html#StoragedManagerISCSIInitiatorIface.handle-get-initiator-name"/>
+    <keyword type="member" name="StoragedManagerISCSIInitiatorIface.handle-discover-firmware" link="StoragedManagerISCSIInitiator.html#StoragedManagerISCSIInitiatorIface.handle-discover-firmware"/>
+    <keyword type="member" name="StoragedManagerISCSIInitiatorIface.handle-login" link="StoragedManagerISCSIInitiator.html#StoragedManagerISCSIInitiatorIface.handle-login"/>
+    <keyword type="member" name="StoragedManagerISCSIInitiatorIface.handle-logout" link="StoragedManagerISCSIInitiator.html#StoragedManagerISCSIInitiatorIface.handle-logout"/>
+    <keyword type="member" name="StoragedManagerISCSIInitiatorIface.handle-set-initiator-name" link="StoragedManagerISCSIInitiator.html#StoragedManagerISCSIInitiatorIface.handle-set-initiator-name"/>
+    <keyword type="member" name="StoragedManagerISCSIInitiatorIface.handle-discover-send-targets" link="StoragedManagerISCSIInitiator.html#StoragedManagerISCSIInitiatorIface.handle-discover-send-targets"/>
+    <keyword type="member" name="StoragedManagerISCSIInitiatorIface.handle-get-firmware-initiator-name" link="StoragedManagerISCSIInitiator.html#StoragedManagerISCSIInitiatorIface.handle-get-firmware-initiator-name"/>
+    <keyword type="member" name="StoragedManagerBTRFSIface.parent-iface" link="StoragedManagerBTRFS.html#StoragedManagerBTRFSIface.parent-iface"/>
+    <keyword type="member" name="StoragedManagerBTRFSIface.handle-create-volume" link="StoragedManagerBTRFS.html#StoragedManagerBTRFSIface.handle-create-volume"/>
+    <keyword type="member" name="StoragedFilesystemBTRFSIface.parent-iface" link="StoragedFilesystemBTRFS.html#StoragedFilesystemBTRFSIface.parent-iface"/>
+    <keyword type="member" name="StoragedFilesystemBTRFSIface.handle-create-snapshot" link="StoragedFilesystemBTRFS.html#StoragedFilesystemBTRFSIface.handle-create-snapshot"/>
+    <keyword type="member" name="StoragedFilesystemBTRFSIface.handle-create-subvolume" link="StoragedFilesystemBTRFS.html#StoragedFilesystemBTRFSIface.handle-create-subvolume"/>
+    <keyword type="member" name="StoragedFilesystemBTRFSIface.handle-get-subvolumes" link="StoragedFilesystemBTRFS.html#StoragedFilesystemBTRFSIface.handle-get-subvolumes"/>
+    <keyword type="member" name="StoragedFilesystemBTRFSIface.handle-remove-subvolume" link="StoragedFilesystemBTRFS.html#StoragedFilesystemBTRFSIface.handle-remove-subvolume"/>
+    <keyword type="member" name="StoragedFilesystemBTRFSIface.handle-set-label" link="StoragedFilesystemBTRFS.html#StoragedFilesystemBTRFSIface.handle-set-label"/>
+    <keyword type="member" name="StoragedFilesystemBTRFSIface.get-label" link="StoragedFilesystemBTRFS.html#StoragedFilesystemBTRFSIface.get-label"/>
+    <keyword type="member" name="StoragedFilesystemBTRFSIface.get-num-devices" link="StoragedFilesystemBTRFS.html#StoragedFilesystemBTRFSIface.get-num-devices"/>
+    <keyword type="member" name="StoragedFilesystemBTRFSIface.get-used" link="StoragedFilesystemBTRFS.html#StoragedFilesystemBTRFSIface.get-used"/>
+    <keyword type="member" name="StoragedFilesystemBTRFSIface.get-uuid" link="StoragedFilesystemBTRFS.html#StoragedFilesystemBTRFSIface.get-uuid"/>
+    <keyword type="member" name="StoragedFilesystemBTRFSIface.handle-add-device" link="StoragedFilesystemBTRFS.html#StoragedFilesystemBTRFSIface.handle-add-device"/>
+    <keyword type="member" name="StoragedFilesystemBTRFSIface.handle-remove-device" link="StoragedFilesystemBTRFS.html#StoragedFilesystemBTRFSIface.handle-remove-device"/>
+    <keyword type="member" name="StoragedFilesystemBTRFSIface.handle-repair" link="StoragedFilesystemBTRFS.html#StoragedFilesystemBTRFSIface.handle-repair"/>
+    <keyword type="member" name="StoragedFilesystemBTRFSIface.handle-resize" link="StoragedFilesystemBTRFS.html#StoragedFilesystemBTRFSIface.handle-resize"/>
+    <keyword type="member" name="StoragedManagerZRAMIface.parent-iface" link="StoragedManagerZRAM.html#StoragedManagerZRAMIface.parent-iface"/>
+    <keyword type="member" name="StoragedManagerZRAMIface.handle-create-devices" link="StoragedManagerZRAM.html#StoragedManagerZRAMIface.handle-create-devices"/>
+    <keyword type="member" name="StoragedManagerZRAMIface.handle-destroy-devices" link="StoragedManagerZRAM.html#StoragedManagerZRAMIface.handle-destroy-devices"/>
+    <keyword type="member" name="StoragedBlockZRAMIface.parent-iface" link="StoragedBlockZRAM.html#StoragedBlockZRAMIface.parent-iface"/>
+    <keyword type="member" name="StoragedBlockZRAMIface.handle-activate" link="StoragedBlockZRAM.html#StoragedBlockZRAMIface.handle-activate"/>
+    <keyword type="member" name="StoragedBlockZRAMIface.handle-activate-labeled" link="StoragedBlockZRAM.html#StoragedBlockZRAMIface.handle-activate-labeled"/>
+    <keyword type="member" name="StoragedBlockZRAMIface.handle-deactivate" link="StoragedBlockZRAM.html#StoragedBlockZRAMIface.handle-deactivate"/>
+    <keyword type="member" name="StoragedBlockZRAMIface.handle-refresh" link="StoragedBlockZRAM.html#StoragedBlockZRAMIface.handle-refresh"/>
+    <keyword type="member" name="StoragedBlockZRAMIface.get-active" link="StoragedBlockZRAM.html#StoragedBlockZRAMIface.get-active"/>
+    <keyword type="member" name="StoragedBlockZRAMIface.get-comp-algorithm" link="StoragedBlockZRAM.html#StoragedBlockZRAMIface.get-comp-algorithm"/>
+    <keyword type="member" name="StoragedBlockZRAMIface.get-compr-data-size" link="StoragedBlockZRAM.html#StoragedBlockZRAMIface.get-compr-data-size"/>
+    <keyword type="member" name="StoragedBlockZRAMIface.get-disksize" link="StoragedBlockZRAM.html#StoragedBlockZRAMIface.get-disksize"/>
+    <keyword type="member" name="StoragedBlockZRAMIface.get-invalid-io" link="StoragedBlockZRAM.html#StoragedBlockZRAMIface.get-invalid-io"/>
+    <keyword type="member" name="StoragedBlockZRAMIface.get-max-comp-streams" link="StoragedBlockZRAM.html#StoragedBlockZRAMIface.get-max-comp-streams"/>
+    <keyword type="member" name="StoragedBlockZRAMIface.get-mem-used-total" link="StoragedBlockZRAM.html#StoragedBlockZRAMIface.get-mem-used-total"/>
+    <keyword type="member" name="StoragedBlockZRAMIface.get-num-reads" link="StoragedBlockZRAM.html#StoragedBlockZRAMIface.get-num-reads"/>
+    <keyword type="member" name="StoragedBlockZRAMIface.get-num-writes" link="StoragedBlockZRAM.html#StoragedBlockZRAMIface.get-num-writes"/>
+    <keyword type="member" name="StoragedBlockZRAMIface.get-orig-data-size" link="StoragedBlockZRAM.html#StoragedBlockZRAMIface.get-orig-data-size"/>
+    <keyword type="member" name="StoragedBlockZRAMIface.get-zero-pages" link="StoragedBlockZRAM.html#StoragedBlockZRAMIface.get-zero-pages"/>
+    <keyword type="member" name="StoragedManagerBcacheIface.parent-iface" link="StoragedManagerBcache.html#StoragedManagerBcacheIface.parent-iface"/>
+    <keyword type="member" name="StoragedManagerBcacheIface.handle-bcache-create" link="StoragedManagerBcache.html#StoragedManagerBcacheIface.handle-bcache-create"/>
+    <keyword type="member" name="StoragedBlockBcacheIface.parent-iface" link="StoragedBlockBcache.html#StoragedBlockBcacheIface.parent-iface"/>
+    <keyword type="member" name="StoragedBlockBcacheIface.get-block-size" link="StoragedBlockBcache.html#StoragedBlockBcacheIface.get-block-size"/>
+    <keyword type="member" name="StoragedBlockBcacheIface.get-bypass-hits" link="StoragedBlockBcache.html#StoragedBlockBcacheIface.get-bypass-hits"/>
+    <keyword type="member" name="StoragedBlockBcacheIface.get-bypass-misses" link="StoragedBlockBcache.html#StoragedBlockBcacheIface.get-bypass-misses"/>
+    <keyword type="member" name="StoragedBlockBcacheIface.get-cache-size" link="StoragedBlockBcache.html#StoragedBlockBcacheIface.get-cache-size"/>
+    <keyword type="member" name="StoragedBlockBcacheIface.get-cache-used" link="StoragedBlockBcache.html#StoragedBlockBcacheIface.get-cache-used"/>
+    <keyword type="member" name="StoragedBlockBcacheIface.get-hits" link="StoragedBlockBcache.html#StoragedBlockBcacheIface.get-hits"/>
+    <keyword type="member" name="StoragedBlockBcacheIface.get-misses" link="StoragedBlockBcache.html#StoragedBlockBcacheIface.get-misses"/>
+    <keyword type="member" name="StoragedBlockBcacheIface.get-mode" link="StoragedBlockBcache.html#StoragedBlockBcacheIface.get-mode"/>
+    <keyword type="member" name="StoragedBlockBcacheIface.get-state" link="StoragedBlockBcache.html#StoragedBlockBcacheIface.get-state"/>
+    <keyword type="member" name="StoragedBlockBcacheIface.handle-bcache-destroy" link="StoragedBlockBcache.html#StoragedBlockBcacheIface.handle-bcache-destroy"/>
+    <keyword type="member" name="StoragedBlockBcacheIface.handle-set-mode" link="StoragedBlockBcache.html#StoragedBlockBcacheIface.handle-set-mode"/>
+    <keyword type="member" name="StoragedProviderClass.start" link="StoragedProvider.html#StoragedProviderClass.start"/>
+    <keyword type="member" name="StoragedAtaCommandInput.command" link="storaged-ATA-commands.html#StoragedAtaCommandInput.command"/>
+    <keyword type="member" name="StoragedAtaCommandInput.feature" link="storaged-ATA-commands.html#StoragedAtaCommandInput.feature"/>
+    <keyword type="member" name="StoragedAtaCommandInput.count" link="storaged-ATA-commands.html#StoragedAtaCommandInput.count"/>
+    <keyword type="member" name="StoragedAtaCommandInput.device" link="storaged-ATA-commands.html#StoragedAtaCommandInput.device"/>
+    <keyword type="member" name="StoragedAtaCommandInput.lba" link="storaged-ATA-commands.html#StoragedAtaCommandInput.lba"/>
+    <keyword type="member" name="StoragedAtaCommandInput.buffer-size" link="storaged-ATA-commands.html#StoragedAtaCommandInput.buffer-size"/>
+    <keyword type="member" name="StoragedAtaCommandInput.buffer" link="storaged-ATA-commands.html#StoragedAtaCommandInput.buffer"/>
+    <keyword type="member" name="StoragedAtaCommandOutput.error" link="storaged-ATA-commands.html#StoragedAtaCommandOutput.error"/>
+    <keyword type="member" name="StoragedAtaCommandOutput.count" link="storaged-ATA-commands.html#StoragedAtaCommandOutput.count"/>
+    <keyword type="member" name="StoragedAtaCommandOutput.device" link="storaged-ATA-commands.html#StoragedAtaCommandOutput.device"/>
+    <keyword type="member" name="StoragedAtaCommandOutput.status" link="storaged-ATA-commands.html#StoragedAtaCommandOutput.status"/>
+    <keyword type="member" name="StoragedAtaCommandOutput.lba" link="storaged-ATA-commands.html#StoragedAtaCommandOutput.lba"/>
+    <keyword type="member" name="StoragedAtaCommandOutput.buffer-size" link="storaged-ATA-commands.html#StoragedAtaCommandOutput.buffer-size"/>
+    <keyword type="member" name="StoragedAtaCommandOutput.buffer" link="storaged-ATA-commands.html#StoragedAtaCommandOutput.buffer"/>
+    <keyword type="member" name="StoragedModuleInterfaceInfo.has-func" link="storaged-StoragedModuleManager.html#StoragedModuleInterfaceInfo.has-func"/>
+    <keyword type="member" name="StoragedModuleInterfaceInfo.connect-func" link="storaged-StoragedModuleManager.html#StoragedModuleInterfaceInfo.connect-func"/>
+    <keyword type="member" name="StoragedModuleInterfaceInfo.update-func" link="storaged-StoragedModuleManager.html#StoragedModuleInterfaceInfo.update-func"/>
+    <keyword type="member" name="StoragedModuleInterfaceInfo.skeleton-type" link="storaged-StoragedModuleManager.html#StoragedModuleInterfaceInfo.skeleton-type"/>
+    <keyword type="member" name="StoragedLinuxDevice-struct.udev-device" link="StoragedLinuxDevice.html#StoragedLinuxDevice-struct.udev-device"/>
+    <keyword type="member" name="StoragedLinuxDevice-struct.ata-identify-device-data" link="StoragedLinuxDevice.html#StoragedLinuxDevice-struct.ata-identify-device-data"/>
+    <keyword type="member" name="StoragedLinuxDevice-struct.ata-identify-packet-device-data" link="StoragedLinuxDevice.html#StoragedLinuxDevice-struct.ata-identify-packet-device-data"/>
   </functions>
 </book>

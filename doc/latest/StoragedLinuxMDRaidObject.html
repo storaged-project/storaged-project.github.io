@@ -8,7 +8,7 @@
 <link rel="up" href="ref-daemon-mdraid.html" title="Linux RAID">
 <link rel="prev" href="StoragedLinuxMDRaid.html" title="StoragedLinuxMDRaid">
 <link rel="next" href="ref-daemon-block-devices.html" title="Block devices on Linux">
-<meta name="generator" content="GTK-Doc V1.24 (XML mode)">
+<meta name="generator" content="GTK-Doc V1.25 (XML mode)">
 <link rel="stylesheet" href="style.css" type="text/css">
 </head>
 <body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
@@ -60,7 +60,7 @@
 </tr>
 <tr>
 <td class="function_type">
-<a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+<span class="returnvalue">gboolean</span>
 </td>
 <td class="function_name">
 <a class="link" href="StoragedLinuxMDRaidObject.html#storaged-linux-mdraid-object-have-devices" title="storaged_linux_mdraid_object_have_devices ()">storaged_linux_mdraid_object_have_devices</a> <span class="c_punctuation">()</span>
@@ -84,14 +84,14 @@
 </tr>
 <tr>
 <td class="function_type">
-<a href="/usr/share/gtk-doc/html/glib/glib-Doubly-Linked-Lists.html#GList"><span class="returnvalue">GList</span></a> *
+<span class="returnvalue">GList</span> *
 </td>
 <td class="function_name">
 <a class="link" href="StoragedLinuxMDRaidObject.html#storaged-linux-mdraid-object-get-members" title="storaged_linux_mdraid_object_get_members ()">storaged_linux_mdraid_object_get_members</a> <span class="c_punctuation">()</span>
 </td>
 </tr>
 <tr>
-<td class="function_type">const <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *
+<td class="function_type">const <span class="returnvalue">gchar</span> *
 </td>
 <td class="function_name">
 <a class="link" href="StoragedLinuxMDRaidObject.html#storaged-linux-mdraid-object-get-uuid" title="storaged_linux_mdraid_object_get_uuid ()">storaged_linux_mdraid_object_get_uuid</a> <span class="c_punctuation">()</span>
@@ -117,7 +117,7 @@
 </tr>
 <tr>
 <td class="property_type">
-<a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *</td>
+<span class="type">gchar</span> *</td>
 <td class="property_name"><a class="link" href="StoragedLinuxMDRaidObject.html#StoragedLinuxMDRaidObject--uuid" title="The “uuid” property">uuid</a></td>
 <td class="property_flags">Write / Construct Only</td>
 </tr>
@@ -139,8 +139,8 @@
 </div>
 <div class="refsect1">
 <a name="StoragedLinuxMDRaidObject.object-hierarchy"></a><h2>Object Hierarchy</h2>
-<pre class="screen">    <a href="/usr/share/gtk-doc/html/gobject/gobject-The-Base-Object-Type.html#GObject">GObject</a>
-    <span class="lineart">╰──</span> <a href="/usr/share/gtk-doc/html/gio/GDBusObjectSkeleton.html">GDBusObjectSkeleton</a>
+<pre class="screen">    GObject
+    <span class="lineart">╰──</span> GDBusObjectSkeleton
         <span class="lineart">╰──</span> <a class="link" href="StoragedObject.html#StoragedObjectSkeleton">StoragedObjectSkeleton</a>
             <span class="lineart">╰──</span> StoragedLinuxMDRaidObject
 </pre>
@@ -149,7 +149,7 @@
 <a name="StoragedLinuxMDRaidObject.implemented-interfaces"></a><h2>Implemented Interfaces</h2>
 <p>
 StoragedLinuxMDRaidObject implements
- <a href="/usr/share/gtk-doc/html/gio/GDBusObject.html">GDBusObject</a> and  <a class="link" href="StoragedObject.html" title="StoragedObject">StoragedObject</a>.</p>
+ GDBusObject and  <a class="link" href="StoragedObject.html" title="StoragedObject">StoragedObject</a>.</p>
 </div>
 <div class="refsect1">
 <a name="StoragedLinuxMDRaidObject.description"></a><h2>Description</h2>
@@ -161,10 +161,10 @@ StoragedLinuxMDRaidObject implements
 <a name="storaged-linux-mdraid-object-new"></a><h3>storaged_linux_mdraid_object_new ()</h3>
 <pre class="programlisting"><a class="link" href="StoragedLinuxMDRaidObject.html" title="StoragedLinuxMDRaidObject"><span class="returnvalue">StoragedLinuxMDRaidObject</span></a> *
 storaged_linux_mdraid_object_new (<em class="parameter"><code><a class="link" href="StoragedDaemon.html" title="StoragedDaemon"><span class="type">StoragedDaemon</span></a> *daemon</code></em>,
-                                  <em class="parameter"><code>const <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *uuid</code></em>);</pre>
+                                  <em class="parameter"><code>const <span class="type">gchar</span> *uuid</code></em>);</pre>
 <p>Create a new MDRaid object.</p>
 <div class="refsect3">
-<a name="id-1.5.7.3.9.2.5"></a><h4>Parameters</h4>
+<a name="storaged-linux-mdraid-object-new.parameters"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -186,8 +186,8 @@ storaged_linux_mdraid_object_new (<em class="parameter"><code><a class="link" hr
 </table></div>
 </div>
 <div class="refsect3">
-<a name="id-1.5.7.3.9.2.6"></a><h4>Returns</h4>
-<p> A <a class="link" href="StoragedLinuxMDRaidObject.html" title="StoragedLinuxMDRaidObject"><span class="type">StoragedLinuxMDRaidObject</span></a> object. Free with <a href="/usr/share/gtk-doc/html/gobject/gobject-The-Base-Object-Type.html#g-object-unref"><code class="function">g_object_unref()</code></a>.</p>
+<a name="storaged-linux-mdraid-object-new.returns"></a><h4>Returns</h4>
+<p> A <a class="link" href="StoragedLinuxMDRaidObject.html" title="StoragedLinuxMDRaidObject"><span class="type">StoragedLinuxMDRaidObject</span></a> object. Free with <code class="function">g_object_unref()</code>.</p>
 </div>
 </div>
 <hr>
@@ -195,13 +195,13 @@ storaged_linux_mdraid_object_new (<em class="parameter"><code><a class="link" hr
 <a name="storaged-linux-mdraid-object-uevent"></a><h3>storaged_linux_mdraid_object_uevent ()</h3>
 <pre class="programlisting"><span class="returnvalue">void</span>
 storaged_linux_mdraid_object_uevent (<em class="parameter"><code><a class="link" href="StoragedLinuxMDRaidObject.html" title="StoragedLinuxMDRaidObject"><span class="type">StoragedLinuxMDRaidObject</span></a> *object</code></em>,
-                                     <em class="parameter"><code>const <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *action</code></em>,
+                                     <em class="parameter"><code>const <span class="type">gchar</span> *action</code></em>,
                                      <em class="parameter"><code><a class="link" href="StoragedLinuxDevice.html" title="StoragedLinuxDevice"><span class="type">StoragedLinuxDevice</span></a> *device</code></em>,
-                                     <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a> is_member</code></em>);</pre>
+                                     <em class="parameter"><code><span class="type">gboolean</span> is_member</code></em>);</pre>
 <p>Updates all information on interfaces on <em class="parameter"><code>mdraid</code></em>
 .</p>
 <div class="refsect3">
-<a name="id-1.5.7.3.9.3.5"></a><h4>Parameters</h4>
+<a name="storaged-linux-mdraid-object-uevent.parameters"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -216,18 +216,18 @@ storaged_linux_mdraid_object_uevent (<em class="parameter"><code><a class="link"
 </tr>
 <tr>
 <td class="parameter_name"><p>action</p></td>
-<td class="parameter_description"><p>Uevent action or <a href="/usr/share/gtk-doc/html/glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a></p></td>
+<td class="parameter_description"><p>Uevent action or <code class="literal">NULL</code></p></td>
 <td class="parameter_annotations"> </td>
 </tr>
 <tr>
 <td class="parameter_name"><p>device</p></td>
-<td class="parameter_description"><p>A <a class="link" href="StoragedLinuxDevice.html" title="StoragedLinuxDevice"><span class="type">StoragedLinuxDevice</span></a> device object or <a href="/usr/share/gtk-doc/html/glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a> if the device hasn't changed.</p></td>
+<td class="parameter_description"><p>A <a class="link" href="StoragedLinuxDevice.html" title="StoragedLinuxDevice"><span class="type">StoragedLinuxDevice</span></a> device object or <code class="literal">NULL</code> if the device hasn't changed.</p></td>
 <td class="parameter_annotations"> </td>
 </tr>
 <tr>
 <td class="parameter_name"><p>is_member</p></td>
-<td class="parameter_description"><p><a href="/usr/share/gtk-doc/html/glib/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> if <em class="parameter"><code>device</code></em>
-is a member, <a href="/usr/share/gtk-doc/html/glib/glib-Standard-Macros.html#FALSE:CAPS"><code class="literal">FALSE</code></a> if it's the raid device.</p></td>
+<td class="parameter_description"><p><code class="literal">TRUE</code> if <em class="parameter"><code>device</code></em>
+is a member, <code class="literal">FALSE</code> if it's the raid device.</p></td>
 <td class="parameter_annotations"> </td>
 </tr>
 </tbody>
@@ -237,14 +237,14 @@ is a member, <a href="/usr/share/gtk-doc/html/glib/glib-Standard-Macros.html#FAL
 <hr>
 <div class="refsect2">
 <a name="storaged-linux-mdraid-object-have-devices"></a><h3>storaged_linux_mdraid_object_have_devices ()</h3>
-<pre class="programlisting"><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+<pre class="programlisting"><span class="returnvalue">gboolean</span>
 storaged_linux_mdraid_object_have_devices
                                (<em class="parameter"><code><a class="link" href="StoragedLinuxMDRaidObject.html" title="StoragedLinuxMDRaidObject"><span class="type">StoragedLinuxMDRaidObject</span></a> *object</code></em>);</pre>
 <p>Checks if there are any devices associated with <em class="parameter"><code>object</code></em>
  at
 all. This includes both member devices and the raid device.</p>
 <div class="refsect3">
-<a name="id-1.5.7.3.9.4.5"></a><h4>Parameters</h4>
+<a name="storaged-linux-mdraid-object-have-devices.parameters"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -259,9 +259,9 @@ all. This includes both member devices and the raid device.</p>
 </table></div>
 </div>
 <div class="refsect3">
-<a name="id-1.5.7.3.9.4.6"></a><h4>Returns</h4>
-<p> <a href="/usr/share/gtk-doc/html/glib/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> if at least one device is associated with <em class="parameter"><code>object</code></em>
-, <a href="/usr/share/gtk-doc/html/glib/glib-Standard-Macros.html#FALSE:CAPS"><code class="literal">FALSE</code></a> otherwise.</p>
+<a name="storaged-linux-mdraid-object-have-devices.returns"></a><h4>Returns</h4>
+<p> <code class="literal">TRUE</code> if at least one device is associated with <em class="parameter"><code>object</code></em>
+, <code class="literal">FALSE</code> otherwise.</p>
 </div>
 </div>
 <hr>
@@ -273,7 +273,7 @@ storaged_linux_mdraid_object_get_daemon
 <p>Gets the daemon used by <em class="parameter"><code>object</code></em>
 .</p>
 <div class="refsect3">
-<a name="id-1.5.7.3.9.5.5"></a><h4>Parameters</h4>
+<a name="storaged-linux-mdraid-object-get-daemon.parameters"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -288,7 +288,7 @@ storaged_linux_mdraid_object_get_daemon
 </table></div>
 </div>
 <div class="refsect3">
-<a name="id-1.5.7.3.9.5.6"></a><h4>Returns</h4>
+<a name="storaged-linux-mdraid-object-get-daemon.returns"></a><h4>Returns</h4>
 <p> A <a class="link" href="StoragedDaemon.html" title="StoragedDaemon"><span class="type">StoragedDaemon</span></a>. Do not free, the object is owned by <em class="parameter"><code>object</code></em>
 .</p>
 </div>
@@ -303,7 +303,7 @@ storaged_linux_mdraid_object_get_device
 (e.g. /dev/md0) associated with <em class="parameter"><code>object</code></em>
 , if any.</p>
 <div class="refsect3">
-<a name="id-1.5.7.3.9.6.5"></a><h4>Parameters</h4>
+<a name="storaged-linux-mdraid-object-get-device.parameters"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -318,21 +318,21 @@ storaged_linux_mdraid_object_get_device
 </table></div>
 </div>
 <div class="refsect3">
-<a name="id-1.5.7.3.9.6.6"></a><h4>Returns</h4>
-<p> A <a class="link" href="StoragedLinuxDevice.html" title="StoragedLinuxDevice"><span class="type">StoragedLinuxDevice</span></a> or <a href="/usr/share/gtk-doc/html/glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>. Free with <a href="/usr/share/gtk-doc/html/gobject/gobject-The-Base-Object-Type.html#g-object-unref"><code class="function">g_object_unref()</code></a>. </p>
+<a name="storaged-linux-mdraid-object-get-device.returns"></a><h4>Returns</h4>
+<p> A <a class="link" href="StoragedLinuxDevice.html" title="StoragedLinuxDevice"><span class="type">StoragedLinuxDevice</span></a> or <code class="literal">NULL</code>. Free with <code class="function">g_object_unref()</code>. </p>
 <p><span class="annotation">[<acronym title="Free data after the code is done."><span class="acronym">transfer full</span></acronym>]</span></p>
 </div>
 </div>
 <hr>
 <div class="refsect2">
 <a name="storaged-linux-mdraid-object-get-members"></a><h3>storaged_linux_mdraid_object_get_members ()</h3>
-<pre class="programlisting"><a href="/usr/share/gtk-doc/html/glib/glib-Doubly-Linked-Lists.html#GList"><span class="returnvalue">GList</span></a> *
+<pre class="programlisting"><span class="returnvalue">GList</span> *
 storaged_linux_mdraid_object_get_members
                                (<em class="parameter"><code><a class="link" href="StoragedLinuxMDRaidObject.html" title="StoragedLinuxMDRaidObject"><span class="type">StoragedLinuxMDRaidObject</span></a> *object</code></em>);</pre>
 <p>Gets the current <a class="link" href="StoragedLinuxDevice.html" title="StoragedLinuxDevice"><span class="type">StoragedLinuxDevice</span></a> objects for the RAID members associated with <em class="parameter"><code>object</code></em>
 .</p>
 <div class="refsect3">
-<a name="id-1.5.7.3.9.7.5"></a><h4>Parameters</h4>
+<a name="storaged-linux-mdraid-object-get-members.parameters"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -347,20 +347,20 @@ storaged_linux_mdraid_object_get_members
 </table></div>
 </div>
 <div class="refsect3">
-<a name="id-1.5.7.3.9.7.6"></a><h4>Returns</h4>
+<a name="storaged-linux-mdraid-object-get-members.returns"></a><h4>Returns</h4>
 <p> A list of <a class="link" href="StoragedLinuxDevice.html" title="StoragedLinuxDevice"><span class="type">StoragedLinuxDevice</span></a> objects. Free each element with
-<a href="/usr/share/gtk-doc/html/gobject/gobject-The-Base-Object-Type.html#g-object-unref"><code class="function">g_object_unref()</code></a>, then free the list with <a href="/usr/share/gtk-doc/html/glib/glib-Doubly-Linked-Lists.html#g-list-free"><code class="function">g_list_free()</code></a>.</p>
+<code class="function">g_object_unref()</code>, then free the list with <code class="function">g_list_free()</code>.</p>
 </div>
 </div>
 <hr>
 <div class="refsect2">
 <a name="storaged-linux-mdraid-object-get-uuid"></a><h3>storaged_linux_mdraid_object_get_uuid ()</h3>
-<pre class="programlisting">const <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *
+<pre class="programlisting">const <span class="returnvalue">gchar</span> *
 storaged_linux_mdraid_object_get_uuid (<em class="parameter"><code><a class="link" href="StoragedLinuxMDRaidObject.html" title="StoragedLinuxMDRaidObject"><span class="type">StoragedLinuxMDRaidObject</span></a> *object</code></em>);</pre>
 <p>Gets the UUID for <em class="parameter"><code>object</code></em>
 .</p>
 <div class="refsect3">
-<a name="id-1.5.7.3.9.8.5"></a><h4>Parameters</h4>
+<a name="storaged-linux-mdraid-object-get-uuid.parameters"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -375,7 +375,7 @@ storaged_linux_mdraid_object_get_uuid (<em class="parameter"><code><a class="lin
 </table></div>
 </div>
 <div class="refsect3">
-<a name="id-1.5.7.3.9.8.6"></a><h4>Returns</h4>
+<a name="storaged-linux-mdraid-object-get-uuid.returns"></a><h4>Returns</h4>
 <p> The UUID for object. Do not free, the string belongs to <em class="parameter"><code>object</code></em>
 . </p>
 <p><span class="annotation">[<acronym title="Don't free data after the code is done."><span class="acronym">transfer none</span></acronym>]</span></p>
@@ -402,7 +402,7 @@ should only be accessed using the provided API.</p>
 <hr>
 <div class="refsect2">
 <a name="StoragedLinuxMDRaidObject--uuid"></a><h3>The <code class="literal">“uuid”</code> property</h3>
-<pre class="programlisting">  “uuid”                     <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *</pre>
+<pre class="programlisting">  “uuid”                     <span class="type">gchar</span> *</pre>
 <p>The UUID for the array.</p>
 <p>Flags: Write / Construct Only</p>
 <p>Default value: NULL</p>
@@ -410,6 +410,6 @@ should only be accessed using the provided API.</p>
 </div>
 </div>
 <div class="footer">
-<hr>Generated by GTK-Doc V1.24</div>
+<hr>Generated by GTK-Doc V1.25</div>
 </body>
 </html>

@@ -8,7 +8,7 @@
 <link rel="up" href="ref-daemon-block-devices.html" title="Block devices on Linux">
 <link rel="prev" href="StoragedLinuxLoop.html" title="StoragedLinuxLoop">
 <link rel="next" href="api-index.html" title="Index">
-<meta name="generator" content="GTK-Doc V1.24 (XML mode)">
+<meta name="generator" content="GTK-Doc V1.25 (XML mode)">
 <link rel="stylesheet" href="style.css" type="text/css">
 </head>
 <body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
@@ -132,8 +132,8 @@
 </div>
 <div class="refsect1">
 <a name="StoragedLinuxBlockObject.object-hierarchy"></a><h2>Object Hierarchy</h2>
-<pre class="screen">    <a href="/usr/share/gtk-doc/html/gobject/gobject-The-Base-Object-Type.html#GObject">GObject</a>
-    <span class="lineart">╰──</span> <a href="/usr/share/gtk-doc/html/gio/GDBusObjectSkeleton.html">GDBusObjectSkeleton</a>
+<pre class="screen">    GObject
+    <span class="lineart">╰──</span> GDBusObjectSkeleton
         <span class="lineart">╰──</span> <a class="link" href="StoragedObject.html#StoragedObjectSkeleton">StoragedObjectSkeleton</a>
             <span class="lineart">╰──</span> StoragedLinuxBlockObject
 </pre>
@@ -142,7 +142,7 @@
 <a name="StoragedLinuxBlockObject.implemented-interfaces"></a><h2>Implemented Interfaces</h2>
 <p>
 StoragedLinuxBlockObject implements
- <a href="/usr/share/gtk-doc/html/gio/GDBusObject.html">GDBusObject</a> and  <a class="link" href="StoragedObject.html" title="StoragedObject">StoragedObject</a>.</p>
+ GDBusObject and  <a class="link" href="StoragedObject.html" title="StoragedObject">StoragedObject</a>.</p>
 </div>
 <div class="refsect1">
 <a name="StoragedLinuxBlockObject.description"></a><h2>Description</h2>
@@ -157,7 +157,7 @@ storaged_linux_block_object_new (<em class="parameter"><code><a class="link" hre
                                  <em class="parameter"><code><a class="link" href="StoragedLinuxDevice.html" title="StoragedLinuxDevice"><span class="type">StoragedLinuxDevice</span></a> *device</code></em>);</pre>
 <p>Create a new block object.</p>
 <div class="refsect3">
-<a name="id-1.5.8.9.9.2.5"></a><h4>Parameters</h4>
+<a name="storaged-linux-block-object-new.parameters"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -179,8 +179,8 @@ storaged_linux_block_object_new (<em class="parameter"><code><a class="link" hre
 </table></div>
 </div>
 <div class="refsect3">
-<a name="id-1.5.8.9.9.2.6"></a><h4>Returns</h4>
-<p> A <a class="link" href="StoragedLinuxBlockObject.html" title="StoragedLinuxBlockObject"><span class="type">StoragedLinuxBlockObject</span></a> object. Free with <a href="/usr/share/gtk-doc/html/gobject/gobject-The-Base-Object-Type.html#g-object-unref"><code class="function">g_object_unref()</code></a>.</p>
+<a name="storaged-linux-block-object-new.returns"></a><h4>Returns</h4>
+<p> A <a class="link" href="StoragedLinuxBlockObject.html" title="StoragedLinuxBlockObject"><span class="type">StoragedLinuxBlockObject</span></a> object. Free with <code class="function">g_object_unref()</code>.</p>
 </div>
 </div>
 <hr>
@@ -188,12 +188,12 @@ storaged_linux_block_object_new (<em class="parameter"><code><a class="link" hre
 <a name="storaged-linux-block-object-uevent"></a><h3>storaged_linux_block_object_uevent ()</h3>
 <pre class="programlisting"><span class="returnvalue">void</span>
 storaged_linux_block_object_uevent (<em class="parameter"><code><a class="link" href="StoragedLinuxBlockObject.html" title="StoragedLinuxBlockObject"><span class="type">StoragedLinuxBlockObject</span></a> *object</code></em>,
-                                    <em class="parameter"><code>const <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *action</code></em>,
+                                    <em class="parameter"><code>const <span class="type">gchar</span> *action</code></em>,
                                     <em class="parameter"><code><a class="link" href="StoragedLinuxDevice.html" title="StoragedLinuxDevice"><span class="type">StoragedLinuxDevice</span></a> *device</code></em>);</pre>
 <p>Updates all information on interfaces on <em class="parameter"><code>object</code></em>
 .</p>
 <div class="refsect3">
-<a name="id-1.5.8.9.9.3.5"></a><h4>Parameters</h4>
+<a name="storaged-linux-block-object-uevent.parameters"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -208,12 +208,12 @@ storaged_linux_block_object_uevent (<em class="parameter"><code><a class="link" 
 </tr>
 <tr>
 <td class="parameter_name"><p>action</p></td>
-<td class="parameter_description"><p>Uevent action or <a href="/usr/share/gtk-doc/html/glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a></p></td>
+<td class="parameter_description"><p>Uevent action or <code class="literal">NULL</code></p></td>
 <td class="parameter_annotations"> </td>
 </tr>
 <tr>
 <td class="parameter_name"><p>device</p></td>
-<td class="parameter_description"><p>A new <a class="link" href="StoragedLinuxDevice.html" title="StoragedLinuxDevice"><span class="type">StoragedLinuxDevice</span></a> device object or <a href="/usr/share/gtk-doc/html/glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a> if the device hasn't changed.</p></td>
+<td class="parameter_description"><p>A new <a class="link" href="StoragedLinuxDevice.html" title="StoragedLinuxDevice"><span class="type">StoragedLinuxDevice</span></a> device object or <code class="literal">NULL</code> if the device hasn't changed.</p></td>
 <td class="parameter_annotations"> </td>
 </tr>
 </tbody>
@@ -229,7 +229,7 @@ storaged_linux_block_object_get_daemon
 <p>Gets the daemon used by <em class="parameter"><code>object</code></em>
 .</p>
 <div class="refsect3">
-<a name="id-1.5.8.9.9.4.5"></a><h4>Parameters</h4>
+<a name="storaged-linux-block-object-get-daemon.parameters"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -244,7 +244,7 @@ storaged_linux_block_object_get_daemon
 </table></div>
 </div>
 <div class="refsect3">
-<a name="id-1.5.8.9.9.4.6"></a><h4>Returns</h4>
+<a name="storaged-linux-block-object-get-daemon.returns"></a><h4>Returns</h4>
 <p> A <a class="link" href="StoragedDaemon.html" title="StoragedDaemon"><span class="type">StoragedDaemon</span></a>. Do not free, the object is owned by <em class="parameter"><code>object</code></em>
 .</p>
 </div>
@@ -257,10 +257,10 @@ storaged_linux_block_object_get_device
                                (<em class="parameter"><code><a class="link" href="StoragedLinuxBlockObject.html" title="StoragedLinuxBlockObject"><span class="type">StoragedLinuxBlockObject</span></a> *object</code></em>);</pre>
 <p>Gets the current <a class="link" href="StoragedLinuxDevice.html" title="StoragedLinuxDevice"><span class="type">StoragedLinuxDevice</span></a> for <em class="parameter"><code>object</code></em>
 . Connect to
-<a href="/usr/share/gtk-doc/html/gobject/gobject-The-Base-Object-Type.html#GObject-notify"><span class="type">“notify”</span></a> to track changes to the <a class="link" href="StoragedLinuxBlockObject.html#StoragedLinuxBlockObject--device" title="The “device” property"><span class="type">“device”</span></a>
+<span class="type">“notify”</span> to track changes to the <a class="link" href="StoragedLinuxBlockObject.html#StoragedLinuxBlockObject--device" title="The “device” property"><span class="type">“device”</span></a>
 property.</p>
 <div class="refsect3">
-<a name="id-1.5.8.9.9.5.5"></a><h4>Parameters</h4>
+<a name="storaged-linux-block-object-get-device.parameters"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -275,8 +275,8 @@ property.</p>
 </table></div>
 </div>
 <div class="refsect3">
-<a name="id-1.5.8.9.9.5.6"></a><h4>Returns</h4>
-<p> A <a class="link" href="StoragedLinuxDevice.html" title="StoragedLinuxDevice"><span class="type">StoragedLinuxDevice</span></a>. Free with <a href="/usr/share/gtk-doc/html/gobject/gobject-The-Base-Object-Type.html#g-object-unref"><code class="function">g_object_unref()</code></a>.</p>
+<a name="storaged-linux-block-object-get-device.returns"></a><h4>Returns</h4>
+<p> A <a class="link" href="StoragedLinuxDevice.html" title="StoragedLinuxDevice"><span class="type">StoragedLinuxDevice</span></a>. Free with <code class="function">g_object_unref()</code>.</p>
 </div>
 </div>
 <hr>
@@ -290,7 +290,7 @@ storaged_linux_block_object_trigger_uevent
 stack and will eventually be received by the storaged daemon process
 itself. This method does not wait for the event to be received.</p>
 <div class="refsect3">
-<a name="id-1.5.8.9.9.6.6"></a><h4>Parameters</h4>
+<a name="storaged-linux-block-object-trigger-uevent.parameters"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -318,7 +318,7 @@ kernel through the udev stack and will eventually be received by
 the storaged daemon process itself. This method does not wait for the
 event to be received.</p>
 <div class="refsect3">
-<a name="id-1.5.8.9.9.7.6"></a><h4>Parameters</h4>
+<a name="storaged-linux-block-object-reread-partition-table.parameters"></a><h4>Parameters</h4>
 <div class="informaltable"><table width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -355,13 +355,13 @@ should only be accessed using the provided API.</p>
 <div class="refsect2">
 <a name="StoragedLinuxBlockObject--device"></a><h3>The <code class="literal">“device”</code> property</h3>
 <pre class="programlisting">  “device”                   <a class="link" href="StoragedLinuxDevice.html" title="StoragedLinuxDevice"><span class="type">StoragedLinuxDevice</span></a> *</pre>
-<p>The <a class="link" href="StoragedLinuxDevice.html" title="StoragedLinuxDevice"><span class="type">StoragedLinuxDevice</span></a> for the object. Connect to the <a href="/usr/share/gtk-doc/html/gobject/gobject-The-Base-Object-Type.html#GObject-notify"><span class="type">“notify”</span></a>
+<p>The <a class="link" href="StoragedLinuxDevice.html" title="StoragedLinuxDevice"><span class="type">StoragedLinuxDevice</span></a> for the object. Connect to the <span class="type">“notify”</span>
 signal to get notified whenever this is updated.</p>
 <p>Flags: Read / Write / Construct Only</p>
 </div>
 </div>
 </div>
 <div class="footer">
-<hr>Generated by GTK-Doc V1.24</div>
+<hr>Generated by GTK-Doc V1.25</div>
 </body>
 </html>
