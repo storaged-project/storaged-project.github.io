@@ -1,0 +1,1067 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>StoragedModuleManager: Storaged Reference Manual</title>
+<meta name="generator" content="DocBook XSL Stylesheets V1.78.1">
+<link rel="home" href="index.html" title="Storaged Reference Manual">
+<link rel="up" href="ref-daemon-core.html" title="Core">
+<link rel="prev" href="storaged-ATA-commands.html" title="ATA commands">
+<link rel="next" href="ref-daemon-monitoring.html" title="State and Configuration">
+<meta name="generator" content="GTK-Doc V1.25 (XML mode)">
+<link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<table class="navigation" id="top" width="100%" summary="Navigation header" cellpadding="2" cellspacing="5"><tr valign="middle">
+<td width="100%" align="left" class="shortcuts">
+<a href="#" class="shortcut">Top</a><span id="nav_description">  <span class="dim">|</span> 
+                  <a href="#storaged-StoragedModuleManager.description" class="shortcut">Description</a></span>
+</td>
+<td><a accesskey="h" href="index.html"><img src="home.png" width="16" height="16" border="0" alt="Home"></a></td>
+<td><a accesskey="u" href="ref-daemon-core.html"><img src="up.png" width="16" height="16" border="0" alt="Up"></a></td>
+<td><a accesskey="p" href="storaged-ATA-commands.html"><img src="left.png" width="16" height="16" border="0" alt="Prev"></a></td>
+<td><a accesskey="n" href="ref-daemon-monitoring.html"><img src="right.png" width="16" height="16" border="0" alt="Next"></a></td>
+</tr></table>
+<div class="refentry">
+<a name="storaged-StoragedModuleManager"></a><div class="titlepage"></div>
+<div class="refnamediv"><table width="100%"><tr>
+<td valign="top">
+<h2><span class="refentrytitle"><a name="storaged-StoragedModuleManager.top_of_page"></a>StoragedModuleManager</span></h2>
+<p>StoragedModuleManager — Manages daemon modules</p>
+</td>
+<td class="gallery_image" valign="top" align="right"></td>
+</tr></table></div>
+<div class="refsect1">
+<a name="storaged-StoragedModuleManager.functions"></a><h2>Functions</h2>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="functions_return">
+<col class="functions_name">
+</colgroup>
+<tbody>
+<tr>
+<td class="function_type">
+<span class="returnvalue">gboolean</span>
+</td>
+<td class="function_name">
+<span class="c_punctuation">(</span><a class="link" href="storaged-StoragedModuleManager.html#StoragedObjectHasInterfaceFunc" title="StoragedObjectHasInterfaceFunc ()">*StoragedObjectHasInterfaceFunc</a><span class="c_punctuation">)</span> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<span class="c_punctuation">(</span><a class="link" href="storaged-StoragedModuleManager.html#StoragedObjectConnectInterfaceFunc" title="StoragedObjectConnectInterfaceFunc ()">*StoragedObjectConnectInterfaceFunc</a><span class="c_punctuation">)</span> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">gboolean</span>
+</td>
+<td class="function_name">
+<span class="c_punctuation">(</span><a class="link" href="storaged-StoragedModuleManager.html#StoragedObjectUpdateInterfaceFunc" title="StoragedObjectUpdateInterfaceFunc ()">*StoragedObjectUpdateInterfaceFunc</a><span class="c_punctuation">)</span> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">GDBusObjectSkeleton</span> *
+</td>
+<td class="function_name">
+<span class="c_punctuation">(</span><a class="link" href="storaged-StoragedModuleManager.html#StoragedModuleObjectNewFunc" title="StoragedModuleObjectNewFunc ()">*StoragedModuleObjectNewFunc</a><span class="c_punctuation">)</span> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">GDBusInterfaceSkeleton</span> *
+</td>
+<td class="function_name">
+<span class="c_punctuation">(</span><a class="link" href="storaged-StoragedModuleManager.html#StoragedModuleNewManagerIfaceFunc" title="StoragedModuleNewManagerIfaceFunc ()">*StoragedModuleNewManagerIfaceFunc</a><span class="c_punctuation">)</span> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">gpointer</span>
+</td>
+<td class="function_name">
+<span class="c_punctuation">(</span><a class="link" href="storaged-StoragedModuleManager.html#StoragedModuleInitFunc" title="StoragedModuleInitFunc ()">*StoragedModuleInitFunc</a><span class="c_punctuation">)</span> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a class="link" href="storaged-StoragedModuleManager.html#StoragedModuleInterfaceInfo" title="StoragedModuleInterfaceInfo"><span class="returnvalue">StoragedModuleInterfaceInfo</span></a> **
+</td>
+<td class="function_name">
+<span class="c_punctuation">(</span><a class="link" href="storaged-StoragedModuleManager.html#StoragedModuleIfaceSetupFunc" title="StoragedModuleIfaceSetupFunc ()">*StoragedModuleIfaceSetupFunc</a><span class="c_punctuation">)</span> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a class="link" href="storaged-StoragedModuleManager.html#StoragedModuleObjectNewFunc" title="StoragedModuleObjectNewFunc ()"><span class="returnvalue">StoragedModuleObjectNewFunc</span></a> *
+</td>
+<td class="function_name">
+<span class="c_punctuation">(</span><a class="link" href="storaged-StoragedModuleManager.html#StoragedModuleObjectNewSetupFunc" title="StoragedModuleObjectNewSetupFunc ()">*StoragedModuleObjectNewSetupFunc</a><span class="c_punctuation">)</span> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a class="link" href="storaged-StoragedModuleManager.html#StoragedModuleNewManagerIfaceFunc" title="StoragedModuleNewManagerIfaceFunc ()"><span class="returnvalue">StoragedModuleNewManagerIfaceFunc</span></a> *
+</td>
+<td class="function_name">
+<span class="c_punctuation">(</span><a class="link" href="storaged-StoragedModuleManager.html#StoragedModuleNewManagerIfaceSetupFunc" title="StoragedModuleNewManagerIfaceSetupFunc ()">*StoragedModuleNewManagerIfaceSetupFunc</a><span class="c_punctuation">)</span> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a class="link" href="storaged-StoragedModuleManager.html#StoragedModuleManager" title="StoragedModuleManager"><span class="returnvalue">StoragedModuleManager</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="storaged-StoragedModuleManager.html#storaged-module-manager-new" title="storaged_module_manager_new ()">storaged_module_manager_new</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">gboolean</span>
+</td>
+<td class="function_name">
+<a class="link" href="storaged-StoragedModuleManager.html#storaged-module-manager-get-modules-available" title="storaged_module_manager_get_modules_available ()">storaged_module_manager_get_modules_available</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="storaged-StoragedModuleManager.html#storaged-module-manager-load-modules" title="storaged_module_manager_load_modules ()">storaged_module_manager_load_modules</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">gpointer</span>
+</td>
+<td class="function_name">
+<a class="link" href="storaged-StoragedModuleManager.html#storaged-module-manager-get-module-state-pointer" title="storaged_module_manager_get_module_state_pointer ()">storaged_module_manager_get_module_state_pointer</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="storaged-StoragedModuleManager.html#storaged-module-manager-set-module-state-pointer" title="storaged_module_manager_set_module_state_pointer ()">storaged_module_manager_set_module_state_pointer</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">GList</span> *
+</td>
+<td class="function_name">
+<a class="link" href="storaged-StoragedModuleManager.html#storaged-module-manager-get-block-object-iface-infos" title="storaged_module_manager_get_block_object_iface_infos ()">storaged_module_manager_get_block_object_iface_infos</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">GList</span> *
+</td>
+<td class="function_name">
+<a class="link" href="storaged-StoragedModuleManager.html#storaged-module-manager-get-drive-object-iface-infos" title="storaged_module_manager_get_drive_object_iface_infos ()">storaged_module_manager_get_drive_object_iface_infos</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">GList</span> *
+</td>
+<td class="function_name">
+<a class="link" href="storaged-StoragedModuleManager.html#storaged-module-manager-get-module-object-new-funcs" title="storaged_module_manager_get_module_object_new_funcs ()">storaged_module_manager_get_module_object_new_funcs</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">GList</span> *
+</td>
+<td class="function_name">
+<a class="link" href="storaged-StoragedModuleManager.html#storaged-module-manager-get-new-manager-iface-funcs" title="storaged_module_manager_get_new_manager_iface_funcs ()">storaged_module_manager_get_new_manager_iface_funcs</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">gboolean</span>
+</td>
+<td class="function_name">
+<a class="link" href="storaged-StoragedModuleManager.html#storaged-module-object-process-uevent" title="storaged_module_object_process_uevent ()">storaged_module_object_process_uevent</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">gboolean</span>
+</td>
+<td class="function_name">
+<a class="link" href="storaged-StoragedModuleManager.html#storaged-module-object-housekeeping" title="storaged_module_object_housekeeping ()">storaged_module_object_housekeeping</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect1">
+<a name="storaged-StoragedModuleManager.other"></a><h2>Types and Values</h2>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="name">
+<col class="description">
+</colgroup>
+<tbody>
+<tr>
+<td class="datatype_keyword"> </td>
+<td class="function_name"><a class="link" href="storaged-StoragedModuleManager.html#StoragedModuleManager" title="StoragedModuleManager">StoragedModuleManager</a></td>
+</tr>
+<tr>
+<td class="datatype_keyword"> </td>
+<td class="function_name"><a class="link" href="storaged-StoragedModuleManager.html#StoragedModuleInterfaceInfo" title="StoragedModuleInterfaceInfo">StoragedModuleInterfaceInfo</a></td>
+</tr>
+<tr>
+<td class="datatype_keyword"> </td>
+<td class="function_name"><a class="link" href="storaged-StoragedModuleManager.html#StoragedModuleObject" title="StoragedModuleObject">StoragedModuleObject</a></td>
+</tr>
+<tr>
+<td class="datatype_keyword">struct</td>
+<td class="function_name"><a class="link" href="storaged-StoragedModuleManager.html#StoragedModuleObjectIface" title="struct StoragedModuleObjectIface">StoragedModuleObjectIface</a></td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect1">
+<a name="storaged-StoragedModuleManager.description"></a><h2>Description</h2>
+<div class="refsect3">
+<a name="storaged-modular-design"></a><h4>Storaged modular approach</h4>
+<p>Storaged functionality can be extended by modules. It's not a fully
+pluggable system as we know it, in this case modules are almost integral
+parts of the source tree. Meaning that modules are free to use whatever
+internal objects they need as there is no universal module API (or a
+translation layer).</p>
+<p>This fact allows us to stay code-wise simple and transparent. It also means
+that there's no support for out-of-the-tree modules and care must be taken
+when changing Storaged internals. As a design decision, for sake of simplicity,
+once modules are loaded they stay active until the daemon exits (this may be
+a subject to change in the future).</p>
+<p>The primary motivation for this was to keep the daemon low on resource
+footprint for basic usage (typically desktop environments) and only
+activating the extended functionality when needed (e.g. enterprise storage
+applications). As the extra information comes in form of additional D-Bus
+objects and interfaces, no difference should be observed by legacy clients.</p>
+</div>
+<div class="refsect3">
+<a name="storaged-modular-design-dbus"></a><h4>D-Bus interface extensibility</h4>
+<p>The modular approach is fairly simple, there are basically two primary ways
+of extending the D-Bus API:</p>
+<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; ">
+<li class="listitem"><p>by attaching custom interfaces to existing objects (limited to block and
+drive objects for the moment)</p></li>
+<li class="listitem"><p>by exporting objects of its own type directly in the object manager root</p></li>
+</ul></div>
+<p>Besides that there are several other ways of extensibility such as attaching
+custom interfaces on the master /org/storaged/Storaged/Manager object.</p>
+</div>
+<div class="refsect3">
+<a name="storaged-modular-activation"></a><h4>Modules activation</h4>
+<p>The Storaged daemon constructs a <a class="link" href="storaged-StoragedModuleManager.html#StoragedModuleManager" title="StoragedModuleManager"><span class="type">StoragedModuleManager</span></a> singleton acting as
+a manager. This object tracks module usage and takes care of its activation.</p>
+<p>By default, module manager is constructed on daemon startup but module
+loading is delayed until requested. This can be overriden by the
+--force-load-modules and --disable-modules commandline switches that makes
+modules loaded right on startup or never loaded respectively.</p>
+<p>Upon successful activation, the "modules-ready" property on the <a class="link" href="storaged-StoragedModuleManager.html#StoragedModuleManager" title="StoragedModuleManager"><span class="type">StoragedModuleManager</span></a>
+instance is set to <code class="literal">TRUE</code>. Any daemon objects watching this property are
+responsible for performing "coldplug" on their exported objects to assure
+modules would pick up the devices they're interested in. See e.g.
+<a class="link" href="storaged-StoragedModuleManager.html#StoragedModuleObjectNewFunc" title="StoragedModuleObjectNewFunc ()"><code class="function">StoragedModuleObjectNewFunc()</code></a> to see how device binding works for
+<a class="link" href="storaged-StoragedModuleManager.html#StoragedModuleObject" title="StoragedModuleObject"><span class="type">StoragedModuleObject</span></a>.</p>
+<p>Modules are in fact separate shared objects (.so) that are loaded from the
+"$(libdir)/storaged/modules" path (usually "/usr/lib/storaged/modules"). No
+extra or service files are needed, the directory is enumerated and all files
+are attempted to be loaded.</p>
+<p>Clients are supposed to call the org.storaged.Storaged.Manager.EnableModules()
+D-Bus method as a "greeter" call. Please note that from asynchronous nature
+of uevents and the way modules are processing them the extra D-Bus interfaces
+may not be available right after this method call returns.</p>
+</div>
+<div class="refsect3">
+<a name="storaged-modular-api"></a><h4>Module API</h4>
+<p>The (strictly internal) module API is simple - only a couple of functions
+are needed. The following text contains brief description of individual
+parts of the module API with further links to detailed description within
+this API reference book.</p>
+<p>The <a class="link" href="storaged-StoragedModuleManager.html#StoragedModuleManager" title="StoragedModuleManager"><span class="type">StoragedModuleManager</span></a> first loads all module entry functions, i.e.
+symbols defined in the public facing header "storagedmoduleiface.h". Only
+those symbols should be exported from each module. The header file is only
+meant to be compiled in modules, not the daemon. If any of the symbols is
+missing in the module library, the whole module is skipped.</p>
+<p>Once module symbols are resolved, module manager activates each module by
+calling <code class="function">storaged_module_init()</code> on it. The returned so-called "state" pointer
+is stored in the <a class="link" href="storaged-StoragedModuleManager.html#StoragedModuleManager" title="StoragedModuleManager"><span class="type">StoragedModuleManager</span></a> and can be later retrieved by calling
+the <a class="link" href="storaged-StoragedModuleManager.html#storaged-module-manager-get-module-state-pointer" title="storaged_module_manager_get_module_state_pointer ()"><code class="function">storaged_module_manager_get_module_state_pointer()</code></a> method. This is typically
+used further in the module code to retrieve and store module-specific runtime
+data.</p>
+<p>Every one of the "storagedmoduleiface.h" header file symbols has its counterpart
+defined in the "storagedmoduleifacetypes.h" header file in form of function
+pointers. Those are used internally for symbol resolving purposes. However,
+they also carry detailed documentation. For illustration purposes, let's
+call these symbol pairs the "module setup entry functions". See
+<a class="link" href="storaged-StoragedModuleManager.html#StoragedModuleIfaceSetupFunc" title="StoragedModuleIfaceSetupFunc ()"><span class="type">StoragedModuleIfaceSetupFunc</span></a>, <a class="link" href="storaged-StoragedModuleManager.html#StoragedModuleObjectNewSetupFunc" title="StoragedModuleObjectNewSetupFunc ()"><span class="type">StoragedModuleObjectNewSetupFunc</span></a> and
+<a class="link" href="storaged-StoragedModuleManager.html#StoragedModuleNewManagerIfaceSetupFunc" title="StoragedModuleNewManagerIfaceSetupFunc ()"><span class="type">StoragedModuleNewManagerIfaceSetupFunc</span></a> for reference. These however are
+essentially auxiliary symbols only described for demonstrating the big
+picture; for the useful part of the module API please read on.</p>
+<p>Every module setup entry function (besides the very simple <code class="function">storaged_module_init()</code>)
+returns an array of setup structures or functions, containing either none
+(NULL result), one or more elements. The result is then mixed by
+<a class="link" href="storaged-StoragedModuleManager.html#StoragedModuleManager" title="StoragedModuleManager"><span class="type">StoragedModuleManager</span></a> from all modules and separate lists are created for
+each kind of Storaged way of extension. Such lists are then used in the daemon
+code at appropriate places, sequentially calling elements from the lists to
+obtain data or objects that are then typically exported on D-Bus.</p>
+<p>In short, have a look at the <a class="link" href="storaged-StoragedModuleManager.html#StoragedModuleInterfaceInfo" title="StoragedModuleInterfaceInfo"><span class="type">StoragedModuleInterfaceInfo</span></a>,
+<a class="link" href="storaged-StoragedModuleManager.html#StoragedModuleObjectNewFunc" title="StoragedModuleObjectNewFunc ()"><span class="type">StoragedModuleObjectNewFunc</span></a> and <a class="link" href="storaged-StoragedModuleManager.html#StoragedModuleNewManagerIfaceFunc" title="StoragedModuleNewManagerIfaceFunc ()"><span class="type">StoragedModuleNewManagerIfaceFunc</span></a> definitions
+to learn more about particular ways of extending Storaged.</p>
+</div>
+</div>
+<div class="refsect1">
+<a name="storaged-StoragedModuleManager.functions_details"></a><h2>Functions</h2>
+<div class="refsect2">
+<a name="StoragedObjectHasInterfaceFunc"></a><h3>StoragedObjectHasInterfaceFunc ()</h3>
+<pre class="programlisting"><span class="returnvalue">gboolean</span>
+<span class="c_punctuation">(</span>*StoragedObjectHasInterfaceFunc<span class="c_punctuation">)</span> (<em class="parameter"><code><a class="link" href="StoragedObject.html" title="StoragedObject"><span class="type">StoragedObject</span></a> *object</code></em>);</pre>
+<p>Function prototype that is used to determine whether the <em class="parameter"><code>object</code></em>
+ is applicable
+for carrying a particular D-Bus interface (determined by the callback function itself).</p>
+<p>Used typically over <a class="link" href="StoragedLinuxBlockObject.html" title="StoragedLinuxBlockObject"><span class="type">StoragedLinuxBlockObject</span></a> and <a class="link" href="StoragedLinuxDriveObject.html" title="StoragedLinuxDriveObject"><span class="type">StoragedLinuxDriveObject</span></a>
+objects for checking specific feature that leads to exporting extra D-Bus
+interface on the object.</p>
+<div class="refsect3">
+<a name="StoragedObjectHasInterfaceFunc.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>object</p></td>
+<td class="parameter_description"><p>A <a class="link" href="StoragedObject.html" title="StoragedObject"><span class="type">StoragedObject</span></a> to consider.</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="StoragedObjectHasInterfaceFunc.returns"></a><h4>Returns</h4>
+<p> <code class="literal">TRUE</code> if the <em class="parameter"><code>object</code></em>
+is a valid candidate for the particular D-Bus interface, <code class="literal">FALSE</code> otherwise.</p>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="StoragedObjectConnectInterfaceFunc"></a><h3>StoragedObjectConnectInterfaceFunc ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+<span class="c_punctuation">(</span>*StoragedObjectConnectInterfaceFunc<span class="c_punctuation">)</span> (<em class="parameter"><code><a class="link" href="StoragedObject.html" title="StoragedObject"><span class="type">StoragedObject</span></a> *object</code></em>);</pre>
+<p>Function prototype that is used once a new D-Bus interface is created (meaning
+the <a class="link" href="storaged-StoragedModuleManager.html#StoragedObjectHasInterfaceFunc" title="StoragedObjectHasInterfaceFunc ()"><span class="type">StoragedObjectHasInterfaceFunc</span></a> call was successful) to perform optional
+additional tasks before the interface is exported on the <em class="parameter"><code>object</code></em>
+.</p>
+<p>Used typically over <a class="link" href="StoragedLinuxBlockObject.html" title="StoragedLinuxBlockObject"><span class="type">StoragedLinuxBlockObject</span></a> and <a class="link" href="StoragedLinuxDriveObject.html" title="StoragedLinuxDriveObject"><span class="type">StoragedLinuxDriveObject</span></a> objects.</p>
+<div class="refsect3">
+<a name="StoragedObjectConnectInterfaceFunc.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>object</p></td>
+<td class="parameter_description"><p>A <a class="link" href="StoragedObject.html" title="StoragedObject"><span class="type">StoragedObject</span></a> to perform connection operation onto.</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="StoragedObjectUpdateInterfaceFunc"></a><h3>StoragedObjectUpdateInterfaceFunc ()</h3>
+<pre class="programlisting"><span class="returnvalue">gboolean</span>
+<span class="c_punctuation">(</span>*StoragedObjectUpdateInterfaceFunc<span class="c_punctuation">)</span> (<em class="parameter"><code><a class="link" href="StoragedObject.html" title="StoragedObject"><span class="type">StoragedObject</span></a> *object</code></em>,
+                                      <em class="parameter"><code>const <span class="type">gchar</span> *uevent_action</code></em>,
+                                      <em class="parameter"><code><span class="type">GDBusInterface</span> *interface</code></em>);</pre>
+<p>Function prototype that is used on existing <em class="parameter"><code>interface</code></em>
+ on the <em class="parameter"><code>object</code></em>
+ to process
+incoming uevents.</p>
+<p>Used typically over <a class="link" href="StoragedLinuxBlockObject.html" title="StoragedLinuxBlockObject"><span class="type">StoragedLinuxBlockObject</span></a> and <a class="link" href="StoragedLinuxDriveObject.html" title="StoragedLinuxDriveObject"><span class="type">StoragedLinuxDriveObject</span></a> objects.</p>
+<div class="refsect3">
+<a name="StoragedObjectUpdateInterfaceFunc.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>object</p></td>
+<td class="parameter_description"><p>A <a class="link" href="StoragedObject.html" title="StoragedObject"><span class="type">StoragedObject</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>uevent_action</p></td>
+<td class="parameter_description"><p>An uevent action string.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>interface</p></td>
+<td class="parameter_description"><p>Existing <span class="type">GDBusInterface</span> exported on the <em class="parameter"><code>object</code></em>
+.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="StoragedObjectUpdateInterfaceFunc.returns"></a><h4>Returns</h4>
+<p> <code class="literal">TRUE</code> if configuration (properties) on the interface have changed, <code class="literal">FALSE</code> otherwise.</p>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="StoragedModuleObjectNewFunc"></a><h3>StoragedModuleObjectNewFunc ()</h3>
+<pre class="programlisting"><span class="returnvalue">GDBusObjectSkeleton</span> *
+<span class="c_punctuation">(</span>*StoragedModuleObjectNewFunc<span class="c_punctuation">)</span> (<em class="parameter"><code><a class="link" href="StoragedDaemon.html" title="StoragedDaemon"><span class="type">StoragedDaemon</span></a> *daemon</code></em>,
+                                <em class="parameter"><code><a class="link" href="StoragedLinuxDevice.html" title="StoragedLinuxDevice"><span class="type">StoragedLinuxDevice</span></a> *device</code></em>);</pre>
+<p>Function prototype that creates new <span class="type">GDBusObjectSkeleton</span> instance that
+implements the <a class="link" href="storaged-StoragedModuleManager.html#StoragedModuleObject" title="StoragedModuleObject"><span class="type">StoragedModuleObject</span></a> interface.</p>
+<p>This is an another way of extending Storaged functionality. Objects in this
+scope are meant to be of virtual kind and are pretty flexible - not
+necessarily bound to any block device or perhaps representing a group of
+resources. For illustration this kind of object may represent e.g. a RAID
+array comprised of several block devices, all devices of the same kind such
+as loop devices or any higher level representation of something else.</p>
+<p>This function may be called quite often, for nearly any uevent received.
+It's done this way for broad flexibility and to give a chance to
+<a class="link" href="storaged-StoragedModuleManager.html#StoragedModuleObjectNewFunc" title="StoragedModuleObjectNewFunc ()"><span class="type">StoragedModuleObjectNewFunc</span></a> functions to claim any device needed.</p>
+<p>Every <span class="type">GDBusObjectSkeleton</span> can claim one or more devices and Storaged
+automatically manages uevent routing and instance lifecycle. A hierarchy of
+claimed devices is maintained for the combination of particular module and
+every <a class="link" href="storaged-StoragedModuleManager.html#StoragedModuleObjectNewFunc" title="StoragedModuleObjectNewFunc ()"><span class="type">StoragedModuleObjectNewFunc</span></a> - see below. This list lives in
+<a class="link" href="StoragedLinuxProvider.html" title="StoragedLinuxProvider"><span class="type">StoragedLinuxProvider</span></a> and is strictly internal. Every module can provide
+multiple <a class="link" href="storaged-StoragedModuleManager.html#StoragedModuleObjectNewFunc" title="StoragedModuleObjectNewFunc ()"><span class="type">StoragedModuleObjectNewFunc</span></a> functions for different kind of objects.</p>
+<p>Two scenarios are distinguished:</p>
+<div class="orderedlist"><ol class="orderedlist" type="1">
+<li class="listitem"><p>The <em class="parameter"><code>device</code></em>
+ is already claimed by existing <span class="type">GDBusObjectSkeleton</span>
+ instance for the current <a class="link" href="storaged-StoragedModuleManager.html#StoragedModuleObjectNewFunc" title="StoragedModuleObjectNewFunc ()"><span class="type">StoragedModuleObjectNewFunc</span></a>, it is guaranteed
+ that only that instance will receive further uevents for the particular
+ <em class="parameter"><code>device</code></em>
+. This is done by calling the <a class="link" href="storaged-StoragedModuleManager.html#storaged-module-object-process-uevent" title="storaged_module_object_process_uevent ()"><code class="function">storaged_module_object_process_uevent()</code></a>
+ method of the <a class="link" href="storaged-StoragedModuleManager.html#StoragedModuleObject" title="StoragedModuleObject"><span class="type">StoragedModuleObject</span></a> interface. Depending on the returning
+ value the device is either kept claimed by the object or removed. When
+ last claimed device has been removed from the instance, it is
+ automatically destroyed. In either case no further processing is done
+ at this cycle to prevent creating new bogus instances for a <em class="parameter"><code>device</code></em>
+
+ that has just given up.</p></li>
+<li class="listitem"><p>In case the <em class="parameter"><code>device</code></em>
+ is not claimed by any existing <span class="type">GDBusObjectSkeleton</span>
+ instance for the current <a class="link" href="storaged-StoragedModuleManager.html#StoragedModuleObjectNewFunc" title="StoragedModuleObjectNewFunc ()"><span class="type">StoragedModuleObjectNewFunc</span></a>. It now all depends
+ on the return value of the function called. If it returns a new
+ <span class="type">GDBusObjectSkeleton</span> instance, it also indicates to <a class="link" href="StoragedLinuxProvider.html" title="StoragedLinuxProvider"><span class="type">StoragedLinuxProvider</span></a>
+ that it claims the device. The <a class="link" href="StoragedLinuxProvider.html" title="StoragedLinuxProvider"><span class="type">StoragedLinuxProvider</span></a> then registers the
+ value with the current function and keeps track of it. If it returns
+ <code class="literal">NULL</code>, it inidcates that the current function is not interested in this
+ kind of device.</p></li>
+</ol></div>
+<p>It's guaranteed that existing <span class="type">GDBusObjectSkeleton</span> instances will receive
+uevents for devices they took and creating a new instance will take place
+only if the event was not processed by any of them.</p>
+<div class="refsect3">
+<a name="StoragedModuleObjectNewFunc.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>daemon</p></td>
+<td class="parameter_description"><p>A <a class="link" href="StoragedDaemon.html" title="StoragedDaemon"><span class="type">StoragedDaemon</span></a> instance.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>device</p></td>
+<td class="parameter_description"><p>A <a class="link" href="StoragedLinuxDevice.html" title="StoragedLinuxDevice"><span class="type">StoragedLinuxDevice</span></a> device object.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="StoragedModuleObjectNewFunc.returns"></a><h4>Returns</h4>
+<p> A new <span class="type">GDBusObjectSkeleton</span> or <code class="literal">NULL</code> when the module doesn't handle
+the device specified. Free with <code class="function">g_object_unref()</code>.</p>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="StoragedModuleNewManagerIfaceFunc"></a><h3>StoragedModuleNewManagerIfaceFunc ()</h3>
+<pre class="programlisting"><span class="returnvalue">GDBusInterfaceSkeleton</span> *
+<span class="c_punctuation">(</span>*StoragedModuleNewManagerIfaceFunc<span class="c_punctuation">)</span> (<em class="parameter"><code><a class="link" href="StoragedDaemon.html" title="StoragedDaemon"><span class="type">StoragedDaemon</span></a> *daemon</code></em>);</pre>
+<p>Function prototype that creates new <span class="type">GDBusInterfaceSkeleton</span> instance
+carrying an additional D-Bus interface to be exported on the Storaged manager
+object (on the "/org/storaged/Storaged/Manager" path). It is a fairly
+simple stateless object not related to any device and serves the purpose of
+performing general tasks or creating new resources.</p>
+<div class="refsect3">
+<a name="StoragedModuleNewManagerIfaceFunc.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>daemon</p></td>
+<td class="parameter_description"><p>A <a class="link" href="StoragedDaemon.html" title="StoragedDaemon"><span class="type">StoragedDaemon</span></a> instance.</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="StoragedModuleNewManagerIfaceFunc.returns"></a><h4>Returns</h4>
+<p> A new <span class="type">GDBusInterfaceSkeleton</span>. Free with <code class="function">g_object_unref()</code>.</p>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="StoragedModuleInitFunc"></a><h3>StoragedModuleInitFunc ()</h3>
+<pre class="programlisting"><span class="returnvalue">gpointer</span>
+<span class="c_punctuation">(</span>*StoragedModuleInitFunc<span class="c_punctuation">)</span> (<em class="parameter"><code><a class="link" href="StoragedDaemon.html" title="StoragedDaemon"><span class="type">StoragedDaemon</span></a> *daemon</code></em>);</pre>
+<p>Function prototype that is called upon module initialization. Its purpose is
+to perform internal initialization and allocate memory that is then used e.g.
+for saving state. See the <a class="link" href="storaged-StoragedModuleManager.html#storaged-module-manager-get-module-state-pointer" title="storaged_module_manager_get_module_state_pointer ()"><code class="function">storaged_module_manager_get_module_state_pointer()</code></a>
+method for how to work with state pointers.</p>
+<p>Corresponds with the <code class="function">storaged_module_init()</code> module symbol.
+Used internally by <a class="link" href="storaged-StoragedModuleManager.html#StoragedModuleManager" title="StoragedModuleManager"><span class="type">StoragedModuleManager</span></a>.</p>
+<div class="refsect3">
+<a name="StoragedModuleInitFunc.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>daemon</p></td>
+<td class="parameter_description"><p>A <a class="link" href="StoragedDaemon.html" title="StoragedDaemon"><span class="type">StoragedDaemon</span></a> instance.</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="StoragedModuleInitFunc.returns"></a><h4>Returns</h4>
+<p> Pointer to an opaque memory or <code class="literal">NULL</code> when module doesn't need to save
+its state.</p>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="StoragedModuleIfaceSetupFunc"></a><h3>StoragedModuleIfaceSetupFunc ()</h3>
+<pre class="programlisting"><a class="link" href="storaged-StoragedModuleManager.html#StoragedModuleInterfaceInfo" title="StoragedModuleInterfaceInfo"><span class="returnvalue">StoragedModuleInterfaceInfo</span></a> **
+<span class="c_punctuation">(</span>*StoragedModuleIfaceSetupFunc<span class="c_punctuation">)</span> (<em class="parameter"><code><span class="type">void</span></code></em>);</pre>
+<p>Type declaration of a module setup entry function.</p>
+<p>Corresponds with the <code class="function">storaged_module_get_block_object_iface_setup_entries()</code> and
+<code class="function">storaged_module_get_drive_object_iface_setup_entries()</code> module symbols.
+Used internally by <a class="link" href="storaged-StoragedModuleManager.html#StoragedModuleManager" title="StoragedModuleManager"><span class="type">StoragedModuleManager</span></a>.</p>
+<div class="refsect3">
+<a name="StoragedModuleIfaceSetupFunc.returns"></a><h4>Returns</h4>
+<p> An array of pointers to the <a class="link" href="storaged-StoragedModuleManager.html#StoragedModuleInterfaceInfo" title="StoragedModuleInterfaceInfo"><span class="type">StoragedModuleInterfaceInfo</span></a> structs. Free with <code class="function">g_free()</code>.</p>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="StoragedModuleObjectNewSetupFunc"></a><h3>StoragedModuleObjectNewSetupFunc ()</h3>
+<pre class="programlisting"><a class="link" href="storaged-StoragedModuleManager.html#StoragedModuleObjectNewFunc" title="StoragedModuleObjectNewFunc ()"><span class="returnvalue">StoragedModuleObjectNewFunc</span></a> *
+<span class="c_punctuation">(</span>*StoragedModuleObjectNewSetupFunc<span class="c_punctuation">)</span> (<em class="parameter"><code><span class="type">void</span></code></em>);</pre>
+<p>Type declaration of a module setup entry function.</p>
+<p>Corresponds with the <code class="function">storaged_module_get_object_new_funcs()</code> module symbol.
+Used internally by <a class="link" href="storaged-StoragedModuleManager.html#StoragedModuleManager" title="StoragedModuleManager"><span class="type">StoragedModuleManager</span></a>.</p>
+<div class="refsect3">
+<a name="StoragedModuleObjectNewSetupFunc.returns"></a><h4>Returns</h4>
+<p> An array of pointers to the <a class="link" href="storaged-StoragedModuleManager.html#StoragedModuleObjectNewFunc" title="StoragedModuleObjectNewFunc ()"><span class="type">StoragedModuleObjectNewFunc</span></a> functions. Free with <code class="function">g_free()</code>.</p>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="StoragedModuleNewManagerIfaceSetupFunc"></a><h3>StoragedModuleNewManagerIfaceSetupFunc ()</h3>
+<pre class="programlisting"><a class="link" href="storaged-StoragedModuleManager.html#StoragedModuleNewManagerIfaceFunc" title="StoragedModuleNewManagerIfaceFunc ()"><span class="returnvalue">StoragedModuleNewManagerIfaceFunc</span></a> *
+<span class="c_punctuation">(</span>*StoragedModuleNewManagerIfaceSetupFunc<span class="c_punctuation">)</span>
+                               (<em class="parameter"><code><span class="type">void</span></code></em>);</pre>
+<p>Type declaration of a module setup entry function.</p>
+<p>Corresponds with the <code class="function">storaged_module_get_new_manager_iface_funcs()</code> module symbol.
+Used internally by <a class="link" href="storaged-StoragedModuleManager.html#StoragedModuleManager" title="StoragedModuleManager"><span class="type">StoragedModuleManager</span></a>.</p>
+<div class="refsect3">
+<a name="StoragedModuleNewManagerIfaceSetupFunc.returns"></a><h4>Returns</h4>
+<p> An array of pointers to the <a class="link" href="storaged-StoragedModuleManager.html#StoragedModuleNewManagerIfaceFunc" title="StoragedModuleNewManagerIfaceFunc ()"><span class="type">StoragedModuleNewManagerIfaceFunc</span></a> functions. Free with <code class="function">g_free()</code>.</p>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="storaged-module-manager-new"></a><h3>storaged_module_manager_new ()</h3>
+<pre class="programlisting"><a class="link" href="storaged-StoragedModuleManager.html#StoragedModuleManager" title="StoragedModuleManager"><span class="returnvalue">StoragedModuleManager</span></a> *
+storaged_module_manager_new (<em class="parameter"><code><a class="link" href="StoragedDaemon.html" title="StoragedDaemon"><span class="type">StoragedDaemon</span></a> *daemon</code></em>);</pre>
+<p>Creates a new <a class="link" href="storaged-StoragedModuleManager.html#StoragedModuleManager" title="StoragedModuleManager"><span class="type">StoragedModuleManager</span></a> object.</p>
+<div class="refsect3">
+<a name="storaged-module-manager-new.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>daemon</p></td>
+<td class="parameter_description"><p>A <a class="link" href="StoragedDaemon.html" title="StoragedDaemon"><span class="type">StoragedDaemon</span></a> instance.</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="storaged-module-manager-new.returns"></a><h4>Returns</h4>
+<p> A <a class="link" href="storaged-StoragedModuleManager.html#StoragedModuleManager" title="StoragedModuleManager"><span class="type">StoragedModuleManager</span></a>. Free with <code class="function">g_object_unref()</code>.</p>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="storaged-module-manager-get-modules-available"></a><h3>storaged_module_manager_get_modules_available ()</h3>
+<pre class="programlisting"><span class="returnvalue">gboolean</span>
+storaged_module_manager_get_modules_available
+                               (<em class="parameter"><code><a class="link" href="storaged-StoragedModuleManager.html#StoragedModuleManager" title="StoragedModuleManager"><span class="type">StoragedModuleManager</span></a> *manager</code></em>);</pre>
+<p>Indicates whether modules have been loaded.</p>
+<div class="refsect3">
+<a name="storaged-module-manager-get-modules-available.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>manager</p></td>
+<td class="parameter_description"><p>A <a class="link" href="storaged-StoragedModuleManager.html#StoragedModuleManager" title="StoragedModuleManager"><span class="type">StoragedModuleManager</span></a> instance.</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="storaged-module-manager-get-modules-available.returns"></a><h4>Returns</h4>
+<p> <code class="literal">TRUE</code> if modules have been loaded, <code class="literal">FALSE</code> otherwise.</p>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="storaged-module-manager-load-modules"></a><h3>storaged_module_manager_load_modules ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+storaged_module_manager_load_modules (<em class="parameter"><code><a class="link" href="storaged-StoragedModuleManager.html#StoragedModuleManager" title="StoragedModuleManager"><span class="type">StoragedModuleManager</span></a> *manager</code></em>);</pre>
+<p>Loads all modules at a time and emits the "modules-ready" signal.
+Does nothing when called multiple times.</p>
+<div class="refsect3">
+<a name="storaged-module-manager-load-modules.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>manager</p></td>
+<td class="parameter_description"><p>A <a class="link" href="storaged-StoragedModuleManager.html#StoragedModuleManager" title="StoragedModuleManager"><span class="type">StoragedModuleManager</span></a> instance.</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="storaged-module-manager-get-module-state-pointer"></a><h3>storaged_module_manager_get_module_state_pointer ()</h3>
+<pre class="programlisting"><span class="returnvalue">gpointer</span>
+storaged_module_manager_get_module_state_pointer
+                               (<em class="parameter"><code><a class="link" href="storaged-StoragedModuleManager.html#StoragedModuleManager" title="StoragedModuleManager"><span class="type">StoragedModuleManager</span></a> *manager</code></em>,
+                                <em class="parameter"><code>const <span class="type">gchar</span> *module_name</code></em>);</pre>
+<p>Retrieves the stored module state pointer for the given <em class="parameter"><code>module_name</code></em>
+.</p>
+<div class="refsect3">
+<a name="storaged-module-manager-get-module-state-pointer.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>manager</p></td>
+<td class="parameter_description"><p>A <a class="link" href="storaged-StoragedModuleManager.html#StoragedModuleManager" title="StoragedModuleManager"><span class="type">StoragedModuleManager</span></a> instance.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>module_name</p></td>
+<td class="parameter_description"><p>A module name.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="storaged-module-manager-get-module-state-pointer.returns"></a><h4>Returns</h4>
+<p> A stored pointer to the private data or <code class="literal">NULL</code> if there is no state pointer for the given <em class="parameter"><code>module_name</code></em>
+.</p>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="storaged-module-manager-set-module-state-pointer"></a><h3>storaged_module_manager_set_module_state_pointer ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+storaged_module_manager_set_module_state_pointer
+                               (<em class="parameter"><code><a class="link" href="storaged-StoragedModuleManager.html#StoragedModuleManager" title="StoragedModuleManager"><span class="type">StoragedModuleManager</span></a> *manager</code></em>,
+                                <em class="parameter"><code>const <span class="type">gchar</span> *module_name</code></em>,
+                                <em class="parameter"><code><span class="type">gpointer</span> state</code></em>);</pre>
+<p>Stores the <em class="parameter"><code>state</code></em>
+ pointer for the given <em class="parameter"><code>module_name</code></em>
+.</p>
+<div class="refsect3">
+<a name="storaged-module-manager-set-module-state-pointer.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>manager</p></td>
+<td class="parameter_description"><p>A <a class="link" href="storaged-StoragedModuleManager.html#StoragedModuleManager" title="StoragedModuleManager"><span class="type">StoragedModuleManager</span></a> instance.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>module_name</p></td>
+<td class="parameter_description"><p>A module name.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>state</p></td>
+<td class="parameter_description"><p>Pointer to a private data.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="storaged-module-manager-get-block-object-iface-infos"></a><h3>storaged_module_manager_get_block_object_iface_infos ()</h3>
+<pre class="programlisting"><span class="returnvalue">GList</span> *
+storaged_module_manager_get_block_object_iface_infos
+                               (<em class="parameter"><code><a class="link" href="storaged-StoragedModuleManager.html#StoragedModuleManager" title="StoragedModuleManager"><span class="type">StoragedModuleManager</span></a> *manager</code></em>);</pre>
+<p>Returns a list of block object interface info structs that can be plugged in <a class="link" href="StoragedLinuxBlockObject.html" title="StoragedLinuxBlockObject"><span class="type">StoragedLinuxBlockObject</span></a> instances. See <a class="link" href="storaged-StoragedModuleManager.html#StoragedModuleIfaceSetupFunc" title="StoragedModuleIfaceSetupFunc ()"><span class="type">StoragedModuleIfaceSetupFunc</span></a> for details.</p>
+<div class="refsect3">
+<a name="storaged-module-manager-get-block-object-iface-infos.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>manager</p></td>
+<td class="parameter_description"><p>A <a class="link" href="storaged-StoragedModuleManager.html#StoragedModuleManager" title="StoragedModuleManager"><span class="type">StoragedModuleManager</span></a> instance.</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="storaged-module-manager-get-block-object-iface-infos.returns"></a><h4>Returns</h4>
+<p> A list of <a class="link" href="storaged-StoragedModuleManager.html#StoragedModuleIfaceSetupFunc" title="StoragedModuleIfaceSetupFunc ()"><span class="type">StoragedModuleIfaceSetupFunc</span></a> structs that belongs to the manager and must not be freed. </p>
+<p><span class="annotation">[<acronym title="Generics and defining elements of containers and arrays."><span class="acronym">element-type</span></acronym> StoragedModuleIfaceSetupFunc][<acronym title="Free data after the code is done."><span class="acronym">transfer full</span></acronym>]</span></p>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="storaged-module-manager-get-drive-object-iface-infos"></a><h3>storaged_module_manager_get_drive_object_iface_infos ()</h3>
+<pre class="programlisting"><span class="returnvalue">GList</span> *
+storaged_module_manager_get_drive_object_iface_infos
+                               (<em class="parameter"><code><a class="link" href="storaged-StoragedModuleManager.html#StoragedModuleManager" title="StoragedModuleManager"><span class="type">StoragedModuleManager</span></a> *manager</code></em>);</pre>
+<p>Returns a list of drive object interface info structs that can be plugged in <a class="link" href="StoragedLinuxDriveObject.html" title="StoragedLinuxDriveObject"><span class="type">StoragedLinuxDriveObject</span></a> instances. See <a class="link" href="storaged-StoragedModuleManager.html#StoragedModuleIfaceSetupFunc" title="StoragedModuleIfaceSetupFunc ()"><span class="type">StoragedModuleIfaceSetupFunc</span></a> for details.</p>
+<div class="refsect3">
+<a name="storaged-module-manager-get-drive-object-iface-infos.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>manager</p></td>
+<td class="parameter_description"><p>A <a class="link" href="storaged-StoragedModuleManager.html#StoragedModuleManager" title="StoragedModuleManager"><span class="type">StoragedModuleManager</span></a> instance.</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="storaged-module-manager-get-drive-object-iface-infos.returns"></a><h4>Returns</h4>
+<p> A list of <a class="link" href="storaged-StoragedModuleManager.html#StoragedModuleIfaceSetupFunc" title="StoragedModuleIfaceSetupFunc ()"><span class="type">StoragedModuleIfaceSetupFunc</span></a> structs that belongs to the manager and must not be freed. </p>
+<p><span class="annotation">[<acronym title="Generics and defining elements of containers and arrays."><span class="acronym">element-type</span></acronym> StoragedModuleIfaceSetupFunc][<acronym title="Free data after the code is done."><span class="acronym">transfer full</span></acronym>]</span></p>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="storaged-module-manager-get-module-object-new-funcs"></a><h3>storaged_module_manager_get_module_object_new_funcs ()</h3>
+<pre class="programlisting"><span class="returnvalue">GList</span> *
+storaged_module_manager_get_module_object_new_funcs
+                               (<em class="parameter"><code><a class="link" href="storaged-StoragedModuleManager.html#StoragedModuleManager" title="StoragedModuleManager"><span class="type">StoragedModuleManager</span></a> *manager</code></em>);</pre>
+<p>Returns a list of all module object new functions. See <a class="link" href="storaged-StoragedModuleManager.html#StoragedModuleObjectNewFunc" title="StoragedModuleObjectNewFunc ()"><span class="type">StoragedModuleObjectNewFunc</span></a> for details.</p>
+<div class="refsect3">
+<a name="storaged-module-manager-get-module-object-new-funcs.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>manager</p></td>
+<td class="parameter_description"><p>A <a class="link" href="storaged-StoragedModuleManager.html#StoragedModuleManager" title="StoragedModuleManager"><span class="type">StoragedModuleManager</span></a> instance.</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="storaged-module-manager-get-module-object-new-funcs.returns"></a><h4>Returns</h4>
+<p> A list of <a class="link" href="storaged-StoragedModuleManager.html#StoragedModuleObjectNewFunc" title="StoragedModuleObjectNewFunc ()"><span class="type">StoragedModuleObjectNewFunc</span></a> function pointers that belongs to the manager and must not be freed. </p>
+<p><span class="annotation">[<acronym title="Generics and defining elements of containers and arrays."><span class="acronym">element-type</span></acronym> StoragedModuleObjectNewFunc][<acronym title="Free data after the code is done."><span class="acronym">transfer full</span></acronym>]</span></p>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="storaged-module-manager-get-new-manager-iface-funcs"></a><h3>storaged_module_manager_get_new_manager_iface_funcs ()</h3>
+<pre class="programlisting"><span class="returnvalue">GList</span> *
+storaged_module_manager_get_new_manager_iface_funcs
+                               (<em class="parameter"><code><a class="link" href="storaged-StoragedModuleManager.html#StoragedModuleManager" title="StoragedModuleManager"><span class="type">StoragedModuleManager</span></a> *manager</code></em>);</pre>
+<p>Returns a list of all module new manager interface functions. See <a class="link" href="storaged-StoragedModuleManager.html#StoragedModuleNewManagerIfaceFunc" title="StoragedModuleNewManagerIfaceFunc ()"><span class="type">StoragedModuleNewManagerIfaceFunc</span></a> for details.</p>
+<div class="refsect3">
+<a name="storaged-module-manager-get-new-manager-iface-funcs.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>manager</p></td>
+<td class="parameter_description"><p>A <a class="link" href="storaged-StoragedModuleManager.html#StoragedModuleManager" title="StoragedModuleManager"><span class="type">StoragedModuleManager</span></a> instance.</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="storaged-module-manager-get-new-manager-iface-funcs.returns"></a><h4>Returns</h4>
+<p> A list of <a class="link" href="storaged-StoragedModuleManager.html#StoragedModuleNewManagerIfaceFunc" title="StoragedModuleNewManagerIfaceFunc ()"><span class="type">StoragedModuleNewManagerIfaceFunc</span></a> function pointers that belongs to the manager and must not be freed. </p>
+<p><span class="annotation">[<acronym title="Generics and defining elements of containers and arrays."><span class="acronym">element-type</span></acronym> StoragedModuleNewManagerIfaceFunc][<acronym title="Free data after the code is done."><span class="acronym">transfer full</span></acronym>]</span></p>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="storaged-module-object-process-uevent"></a><h3>storaged_module_object_process_uevent ()</h3>
+<pre class="programlisting"><span class="returnvalue">gboolean</span>
+storaged_module_object_process_uevent (<em class="parameter"><code><a class="link" href="storaged-StoragedModuleManager.html#StoragedModuleObject" title="StoragedModuleObject"><span class="type">StoragedModuleObject</span></a> *object</code></em>,
+                                       <em class="parameter"><code>const <span class="type">gchar</span> *action</code></em>,
+                                       <em class="parameter"><code><a class="link" href="StoragedLinuxDevice.html" title="StoragedLinuxDevice"><span class="type">StoragedLinuxDevice</span></a> *device</code></em>);</pre>
+<p>Virtual method that processes the uevent and updates all information on interfaces
+on <em class="parameter"><code>object</code></em>
+.</p>
+<p>See <a class="link" href="storaged-StoragedModuleManager.html#StoragedModuleObjectNewFunc" title="StoragedModuleObjectNewFunc ()"><span class="type">StoragedModuleObjectNewFunc</span></a> for detailed information on how to work with
+the events.</p>
+<div class="refsect3">
+<a name="storaged-module-object-process-uevent.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>object</p></td>
+<td class="parameter_description"><p>A <a class="link" href="storaged-StoragedModuleManager.html#StoragedModuleObject" title="StoragedModuleObject"><span class="type">StoragedModuleObject</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>action</p></td>
+<td class="parameter_description"><p>Uevent action, common values are "add", "changed" and "removed" or <code class="literal">NULL</code></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>device</p></td>
+<td class="parameter_description"><p>A <a class="link" href="StoragedLinuxDevice.html" title="StoragedLinuxDevice"><span class="type">StoragedLinuxDevice</span></a> device object or <code class="literal">NULL</code> if the device hasn't changed.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="storaged-module-object-process-uevent.returns"></a><h4>Returns</h4>
+<p> <code class="literal">FALSE</code> if the object should be unexported and removed, <code class="literal">TRUE</code> if the object
+has processed the information successfully and should be kept around.</p>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="storaged-module-object-housekeeping"></a><h3>storaged_module_object_housekeeping ()</h3>
+<pre class="programlisting"><span class="returnvalue">gboolean</span>
+storaged_module_object_housekeeping (<em class="parameter"><code><a class="link" href="storaged-StoragedModuleManager.html#StoragedModuleObject" title="StoragedModuleObject"><span class="type">StoragedModuleObject</span></a> *object</code></em>,
+                                     <em class="parameter"><code><span class="type">guint</span> secs_since_last</code></em>,
+                                     <em class="parameter"><code><span class="type">GCancellable</span> *cancellable</code></em>,
+                                     <em class="parameter"><code><span class="type">GError</span> **error</code></em>);</pre>
+<p>Virtual method that is called periodically (every ten minutes or so)
+to perform housekeeping tasks such as refreshing ATA SMART data.</p>
+<p>The function runs in a dedicated thread and is allowed to perform
+blocking I/O.</p>
+<p>Long-running tasks should periodically check <em class="parameter"><code>cancellable</code></em>
+ to see if
+they have been cancelled.</p>
+<div class="refsect3">
+<a name="storaged-module-object-housekeeping.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>object</p></td>
+<td class="parameter_description"><p>A <a class="link" href="storaged-StoragedModuleManager.html#StoragedModuleObject" title="StoragedModuleObject"><span class="type">StoragedModuleObject</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>secs_since_last</p></td>
+<td class="parameter_description"><p>Number of seconds since the last housekeeping or 0 if the first housekeeping ever.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>cancellable</p></td>
+<td class="parameter_description"><p>A <code class="literal">GCancellable</code> or <code class="literal">NULL</code>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>error</p></td>
+<td class="parameter_description"><p>Return location for error or <code class="literal">NULL</code>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="storaged-module-object-housekeeping.returns"></a><h4>Returns</h4>
+<p> <code class="literal">TRUE</code> if the operation succeeded, <code class="literal">FALSE</code> if <em class="parameter"><code>error</code></em>
+is set.</p>
+</div>
+</div>
+</div>
+<div class="refsect1">
+<a name="storaged-StoragedModuleManager.other_details"></a><h2>Types and Values</h2>
+<div class="refsect2">
+<a name="StoragedModuleManager"></a><h3>StoragedModuleManager</h3>
+<pre class="programlisting">typedef struct _StoragedModuleManager StoragedModuleManager;</pre>
+<p>The <a class="link" href="storaged-StoragedModuleManager.html#StoragedModuleManager" title="StoragedModuleManager"><span class="type">StoragedModuleManager</span></a> structure contains only private data and
+should only be accessed using the provided API.</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="StoragedModuleInterfaceInfo"></a><h3>StoragedModuleInterfaceInfo</h3>
+<pre class="programlisting">typedef struct {
+  StoragedObjectHasInterfaceFunc has_func;
+  StoragedObjectConnectInterfaceFunc connect_func;
+  StoragedObjectUpdateInterfaceFunc update_func;
+  GType skeleton_type;
+} StoragedModuleInterfaceInfo;
+</pre>
+<p>Structure containing interface setup functions used by modules for exporting
+custom interfaces on existing block and drive objects.</p>
+<p>Event processing is solely done by <a class="link" href="StoragedLinuxBlockObject.html" title="StoragedLinuxBlockObject"><span class="type">StoragedLinuxBlockObject</span></a> and <a class="link" href="StoragedLinuxDriveObject.html" title="StoragedLinuxDriveObject"><span class="type">StoragedLinuxDriveObject</span></a>
+themselves whose call the <em class="parameter"><code>has_func</code></em>
+, <em class="parameter"><code>connect_func</code></em>
+ and <em class="parameter"><code>update_func</code></em>
+ respectively
+as needed. Purpose of these member functions is to check whether the particular
+<a class="link" href="storaged-StoragedModuleManager.html#StoragedModuleInterfaceInfo" title="StoragedModuleInterfaceInfo"><span class="type">StoragedModuleInterfaceInfo</span></a> record is applicable to the current device and
+construct a new <span class="type">GDBusInterface</span> if so.</p>
+<p>See <a class="link" href="storaged-StoragedModuleManager.html#StoragedObjectHasInterfaceFunc" title="StoragedObjectHasInterfaceFunc ()"><span class="type">StoragedObjectHasInterfaceFunc</span></a>, <a class="link" href="storaged-StoragedModuleManager.html#StoragedObjectConnectInterfaceFunc" title="StoragedObjectConnectInterfaceFunc ()"><span class="type">StoragedObjectConnectInterfaceFunc</span></a> and
+<a class="link" href="storaged-StoragedModuleManager.html#StoragedObjectUpdateInterfaceFunc" title="StoragedObjectUpdateInterfaceFunc ()"><span class="type">StoragedObjectUpdateInterfaceFunc</span></a> for detailed description and return values.</p>
+<div class="refsect3">
+<a name="StoragedModuleInterfaceInfo.members"></a><h4>Members</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="300px" class="struct_members_name">
+<col class="struct_members_description">
+<col width="200px" class="struct_members_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="struct_member_name"><p><a class="link" href="storaged-StoragedModuleManager.html#StoragedObjectHasInterfaceFunc" title="StoragedObjectHasInterfaceFunc ()"><span class="type">StoragedObjectHasInterfaceFunc</span></a> <em class="structfield"><code><a name="StoragedModuleInterfaceInfo.has-func"></a>has_func</code></em>;</p></td>
+<td class="struct_member_description"><p>A <a class="link" href="storaged-StoragedModuleManager.html#StoragedObjectHasInterfaceFunc" title="StoragedObjectHasInterfaceFunc ()"><span class="type">StoragedObjectHasInterfaceFunc</span></a></p></td>
+<td class="struct_member_annotations"> </td>
+</tr>
+<tr>
+<td class="struct_member_name"><p><a class="link" href="storaged-StoragedModuleManager.html#StoragedObjectConnectInterfaceFunc" title="StoragedObjectConnectInterfaceFunc ()"><span class="type">StoragedObjectConnectInterfaceFunc</span></a> <em class="structfield"><code><a name="StoragedModuleInterfaceInfo.connect-func"></a>connect_func</code></em>;</p></td>
+<td class="struct_member_description"><p>A <a class="link" href="storaged-StoragedModuleManager.html#StoragedObjectConnectInterfaceFunc" title="StoragedObjectConnectInterfaceFunc ()"><span class="type">StoragedObjectConnectInterfaceFunc</span></a></p></td>
+<td class="struct_member_annotations"> </td>
+</tr>
+<tr>
+<td class="struct_member_name"><p><a class="link" href="storaged-StoragedModuleManager.html#StoragedObjectUpdateInterfaceFunc" title="StoragedObjectUpdateInterfaceFunc ()"><span class="type">StoragedObjectUpdateInterfaceFunc</span></a> <em class="structfield"><code><a name="StoragedModuleInterfaceInfo.update-func"></a>update_func</code></em>;</p></td>
+<td class="struct_member_description"><p>A <a class="link" href="storaged-StoragedModuleManager.html#StoragedObjectUpdateInterfaceFunc" title="StoragedObjectUpdateInterfaceFunc ()"><span class="type">StoragedObjectUpdateInterfaceFunc</span></a></p></td>
+<td class="struct_member_annotations"> </td>
+</tr>
+<tr>
+<td class="struct_member_name"><p><span class="type">GType</span> <em class="structfield"><code><a name="StoragedModuleInterfaceInfo.skeleton-type"></a>skeleton_type</code></em>;</p></td>
+<td class="struct_member_description"><p>A <span class="type">GType</span> of the instance that is created once <em class="parameter"><code>has_func</code></em>
+succeeds.</p></td>
+<td class="struct_member_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="StoragedModuleObject"></a><h3>StoragedModuleObject</h3>
+<pre class="programlisting">typedef struct _StoragedModuleObject StoragedModuleObject;</pre>
+<p>The <a class="link" href="storaged-StoragedModuleManager.html#StoragedModuleObject" title="StoragedModuleObject"><span class="type">StoragedModuleObject</span></a> structure contains only private data and
+should only be accessed using the provided API.</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="StoragedModuleObjectIface"></a><h3>struct StoragedModuleObjectIface</h3>
+<pre class="programlisting">struct StoragedModuleObjectIface {
+  GTypeInterface parent_iface;
+
+  gboolean (*process_uevent) (StoragedModuleObject  *object,
+                              const gchar           *action,
+                              StoragedLinuxDevice   *device);
+
+  gboolean (*housekeeping) (StoragedModuleObject  *object,
+                            guint                  secs_since_last,
+                            GCancellable          *cancellable,
+                            GError               **error);
+};
+</pre>
+</div>
+</div>
+</div>
+<div class="footer">
+<hr>Generated by GTK-Doc V1.25</div>
+</body>
+</html>

@@ -1,0 +1,192 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>org.storaged.Storaged.Block.Bcache: Storaged Reference Manual</title>
+<meta name="generator" content="DocBook XSL Stylesheets V1.78.1">
+<link rel="home" href="index.html" title="Storaged Reference Manual">
+<link rel="up" href="ch02.html" title="D-Bus Interfaces">
+<link rel="prev" href="gdbus-org.storaged.Storaged.Manager.Bcache.html" title="org.storaged.Storaged.Manager.Bcache">
+<link rel="next" href="ref-library.html" title="Part III. Library API Reference">
+<meta name="generator" content="GTK-Doc V1.25 (XML mode)">
+<link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<table class="navigation" id="top" width="100%" summary="Navigation header" cellpadding="2" cellspacing="5"><tr valign="middle">
+<td width="100%" align="left" class="shortcuts">
+<a href="#" class="shortcut">Top</a><span id="nav_description">  <span class="dim">|</span> 
+                  <a href="#gdbus-org.storaged.Storaged.Block.Bcache.description" class="shortcut">Description</a></span><span id="nav_properties">  <span class="dim">|</span> 
+                  <a href="#gdbus-org.storaged.Storaged.Block.Bcache.properties" class="shortcut">Properties</a></span>
+</td>
+<td><a accesskey="h" href="index.html"><img src="home.png" width="16" height="16" border="0" alt="Home"></a></td>
+<td><a accesskey="u" href="ch02.html"><img src="up.png" width="16" height="16" border="0" alt="Up"></a></td>
+<td><a accesskey="p" href="gdbus-org.storaged.Storaged.Manager.Bcache.html"><img src="left.png" width="16" height="16" border="0" alt="Prev"></a></td>
+<td><a accesskey="n" href="ref-library.html"><img src="right.png" width="16" height="16" border="0" alt="Next"></a></td>
+</tr></table>
+<div class="refentry">
+<a name="gdbus-org.storaged.Storaged.Block.Bcache"></a><div class="titlepage"></div>
+<div class="refnamediv"><table width="100%"><tr>
+<td valign="top">
+<h2><span class="refentrytitle"><a name="gdbus-interface-org-storaged-Storaged-Block-Bcache.top_of_page"></a>org.storaged.Storaged.Block.Bcache</span></h2>
+<p>org.storaged.Storaged.Block.Bcache</p>
+</td>
+<td class="gallery_image" valign="top" align="right"></td>
+</tr></table></div>
+<div class="refsynopsisdiv">
+<h2>Methods</h2>
+<pre class="synopsis">
+<a class="link" href="gdbus-org.storaged.Storaged.Block.Bcache.html#gdbus-method-org-storaged-Storaged-Block-Bcache.BcacheDestroy" title="The BcacheDestroy() method">BcacheDestroy</a> (IN  a{sv} options);
+<a class="link" href="gdbus-org.storaged.Storaged.Block.Bcache.html#gdbus-method-org-storaged-Storaged-Block-Bcache.SetMode" title="The SetMode() method">SetMode</a>       (IN  s     mode,
+               IN  a{sv} options);
+</pre>
+</div>
+<div class="refsect1">
+<a name="id-1.3.3.28.4"></a><h2>Properties</h2>
+<pre class="synopsis">
+<a class="link" href="gdbus-org.storaged.Storaged.Block.Bcache.html#gdbus-property-org-storaged-Storaged-Block-Bcache.mode" title='The "mode" property'>mode</a>           readable   s
+<a class="link" href="gdbus-org.storaged.Storaged.Block.Bcache.html#gdbus-property-org-storaged-Storaged-Block-Bcache.state" title='The "state" property'>state</a>          readable   s
+<a class="link" href="gdbus-org.storaged.Storaged.Block.Bcache.html#gdbus-property-org-storaged-Storaged-Block-Bcache.block_size" title='The "block_size" property'>block_size</a>     readable   t
+<a class="link" href="gdbus-org.storaged.Storaged.Block.Bcache.html#gdbus-property-org-storaged-Storaged-Block-Bcache.cache_size" title='The "cache_size" property'>cache_size</a>     readable   t
+<a class="link" href="gdbus-org.storaged.Storaged.Block.Bcache.html#gdbus-property-org-storaged-Storaged-Block-Bcache.cache_used" title='The "cache_used" property'>cache_used</a>     readable   t
+<a class="link" href="gdbus-org.storaged.Storaged.Block.Bcache.html#gdbus-property-org-storaged-Storaged-Block-Bcache.hits" title='The "hits" property'>hits</a>           readable   t
+<a class="link" href="gdbus-org.storaged.Storaged.Block.Bcache.html#gdbus-property-org-storaged-Storaged-Block-Bcache.misses" title='The "misses" property'>misses</a>         readable   t
+<a class="link" href="gdbus-org.storaged.Storaged.Block.Bcache.html#gdbus-property-org-storaged-Storaged-Block-Bcache.bypass_hits" title='The "bypass_hits" property'>bypass_hits</a>    readable   t
+<a class="link" href="gdbus-org.storaged.Storaged.Block.Bcache.html#gdbus-property-org-storaged-Storaged-Block-Bcache.bypass_misses" title='The "bypass_misses" property'>bypass_misses</a>  readable   t
+</pre>
+</div>
+<div class="refsect1">
+<a name="gdbus-interface-org-storaged-Storaged-Block-Bcache"></a><h2>Description</h2>
+<p></p>
+</div>
+<div class="refsect1">
+<a name="gdbus-methods-org.storaged.Storaged.Block.Bcache"></a><h2>Method Details</h2>
+<div class="refsect2">
+<a name="gdbus-method-org-storaged-Storaged-Block-Bcache.BcacheDestroy"></a><h3>The BcacheDestroy() method</h3>
+<pre class="programlisting">
+BcacheDestroy (IN  a{sv} options);
+</pre>
+<p>        Destroy bcache devices.
+</p>
+<p>        No additional options are currently defined.
+</p>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody><tr>
+<td><p><span class="term"><code class="literal">IN a{sv} <em class="parameter"><code>options</code></em></code>:</span></p></td>
+<td><p>Additional options.</p></td>
+</tr></tbody>
+</table></div>
+<p class="since">Since 2.4.0</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="gdbus-method-org-storaged-Storaged-Block-Bcache.SetMode"></a><h3>The SetMode() method</h3>
+<pre class="programlisting">
+SetMode (IN  s     mode,
+         IN  a{sv} options);
+</pre>
+<p>        Change cache mode.
+</p>
+<p>        No additional options are currently defined.
+</p>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><code class="literal">IN s <em class="parameter"><code>mode</code></em></code>:</span></p></td>
+<td><p>mode to set</p></td>
+</tr>
+<tr>
+<td><p><span class="term"><code class="literal">IN a{sv} <em class="parameter"><code>options</code></em></code>:</span></p></td>
+<td><p>Additional options.</p></td>
+</tr>
+</tbody>
+</table></div>
+<p class="since">Since 2.4.0</p>
+</div>
+</div>
+<div class="refsect1">
+<a name="gdbus-properties-org.storaged.Storaged.Block.Bcache"></a><h2>Property Details</h2>
+<div class="refsect2">
+<a name="gdbus-property-org-storaged-Storaged-Block-Bcache.mode"></a><h3>The "mode" property</h3>
+<pre class="programlisting">
+mode  readable   s
+</pre>
+<p></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="gdbus-property-org-storaged-Storaged-Block-Bcache.state"></a><h3>The "state" property</h3>
+<pre class="programlisting">
+state  readable   s
+</pre>
+<p></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="gdbus-property-org-storaged-Storaged-Block-Bcache.block_size"></a><h3>The "block_size" property</h3>
+<pre class="programlisting">
+block_size  readable   t
+</pre>
+<p></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="gdbus-property-org-storaged-Storaged-Block-Bcache.cache_size"></a><h3>The "cache_size" property</h3>
+<pre class="programlisting">
+cache_size  readable   t
+</pre>
+<p></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="gdbus-property-org-storaged-Storaged-Block-Bcache.cache_used"></a><h3>The "cache_used" property</h3>
+<pre class="programlisting">
+cache_used  readable   t
+</pre>
+<p></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="gdbus-property-org-storaged-Storaged-Block-Bcache.hits"></a><h3>The "hits" property</h3>
+<pre class="programlisting">
+hits  readable   t
+</pre>
+<p></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="gdbus-property-org-storaged-Storaged-Block-Bcache.misses"></a><h3>The "misses" property</h3>
+<pre class="programlisting">
+misses  readable   t
+</pre>
+<p></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="gdbus-property-org-storaged-Storaged-Block-Bcache.bypass_hits"></a><h3>The "bypass_hits" property</h3>
+<pre class="programlisting">
+bypass_hits  readable   t
+</pre>
+<p></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="gdbus-property-org-storaged-Storaged-Block-Bcache.bypass_misses"></a><h3>The "bypass_misses" property</h3>
+<pre class="programlisting">
+bypass_misses  readable   t
+</pre>
+<p></p>
+</div>
+</div>
+</div>
+<div class="footer">
+<hr>Generated by GTK-Doc V1.25</div>
+</body>
+</html>
