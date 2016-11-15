@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8" standalone="no"?>
-<book xmlns="http://www.devhelp.net/book" title="UDisks Reference Manual" link="index.html" author="" name="udisks2" version="2" language="c" online="https://storaged-project.github.io/doc/latest/">
+<book xmlns="http://www.devhelp.net/book" title="UDisks Reference Manual" link="index.html" author="" name="udisks2" version="2" language="c" online="http://storaged.org/doc/udisks2-api/">
   <chapters>
     <sub name="Manual pages and Overview" link="overview.html">
       <sub name="udisksd" link="udiskd.8.html"/>
@@ -137,7 +137,7 @@
     </sub>
     <sub name="Index" link="api-index.html"/>
     <sub name="Index of deprecated symbols" link="api-index-deprecated.html"/>
-    <sub name="Index of new symbols in 2.6.2" link="api-index-2.6.2.html"/>
+    <sub name="Index of new symbols in 2.6.3" link="api-index-2.6.3.html"/>
     <sub name="Annotation Glossary" link="annotation-glossary.html"/>
     <sub name="Object Hierarchy" link="gio-hierarchy.html"/>
   </chapters>
@@ -332,6 +332,7 @@
     <keyword type="method" name="The CreateSnapshot() method" link="gdbus-org.freedesktop.UDisks2.LogicalVolume.html#gdbus-method-org-freedesktop-UDisks2-LogicalVolume.CreateSnapshot"/>
     <keyword type="method" name="The CacheAttach() method" link="gdbus-org.freedesktop.UDisks2.LogicalVolume.html#gdbus-method-org-freedesktop-UDisks2-LogicalVolume.CacheAttach"/>
     <keyword type="method" name="The CacheSplit() method" link="gdbus-org.freedesktop.UDisks2.LogicalVolume.html#gdbus-method-org-freedesktop-UDisks2-LogicalVolume.CacheSplit"/>
+    <keyword type="method" name="The CacheDetach() method" link="gdbus-org.freedesktop.UDisks2.LogicalVolume.html#gdbus-method-org-freedesktop-UDisks2-LogicalVolume.CacheDetach"/>
     <keyword type="property" name="The &quot;VolumeGroup&quot; property" link="gdbus-org.freedesktop.UDisks2.LogicalVolume.html#gdbus-property-org-freedesktop-UDisks2-LogicalVolume.VolumeGroup"/>
     <keyword type="property" name="The &quot;Name&quot; property" link="gdbus-org.freedesktop.UDisks2.LogicalVolume.html#gdbus-property-org-freedesktop-UDisks2-LogicalVolume.Name"/>
     <keyword type="property" name="The &quot;Active&quot; property" link="gdbus-org.freedesktop.UDisks2.LogicalVolume.html#gdbus-property-org-freedesktop-UDisks2-LogicalVolume.Active"/>
@@ -381,6 +382,7 @@
     <keyword type="method" name="The DiscoverFirmware() method" link="gdbus-org.freedesktop.UDisks2.Manager.ISCSI.Initiator.html#gdbus-method-org-freedesktop-UDisks2-Manager-ISCSI-Initiator.DiscoverFirmware"/>
     <keyword type="method" name="The Login() method" link="gdbus-org.freedesktop.UDisks2.Manager.ISCSI.Initiator.html#gdbus-method-org-freedesktop-UDisks2-Manager-ISCSI-Initiator.Login"/>
     <keyword type="method" name="The Logout() method" link="gdbus-org.freedesktop.UDisks2.Manager.ISCSI.Initiator.html#gdbus-method-org-freedesktop-UDisks2-Manager-ISCSI-Initiator.Logout"/>
+    <keyword type="property" name="The &quot;SessionsSupported&quot; property" link="gdbus-org.freedesktop.UDisks2.Manager.ISCSI.Initiator.html#gdbus-property-org-freedesktop-UDisks2-Manager-ISCSI-Initiator.SessionsSupported"/>
     <keyword type="method" name="The CreateVolume() method" link="gdbus-org.freedesktop.UDisks2.Manager.BTRFS.html#gdbus-method-org-freedesktop-UDisks2-Manager-BTRFS.CreateVolume"/>
     <keyword type="method" name="The AddDevice() method" link="gdbus-org.freedesktop.UDisks2.Filesystem.BTRFS.html#gdbus-method-org-freedesktop-UDisks2-Filesystem-BTRFS.AddDevice"/>
     <keyword type="method" name="The RemoveDevice() method" link="gdbus-org.freedesktop.UDisks2.Filesystem.BTRFS.html#gdbus-method-org-freedesktop-UDisks2-Filesystem-BTRFS.RemoveDevice"/>
@@ -1676,6 +1678,7 @@
     <keyword type="struct" name="struct UDisksManagerISCSIInitiatorProxyClass" link="UDisksManagerISCSIInitiator.html#UDisksManagerISCSIInitiatorProxyClass" since="2.0.1"/>
     <keyword type="struct" name="struct UDisksManagerISCSIInitiatorSkeleton" link="UDisksManagerISCSIInitiator.html#UDisksManagerISCSIInitiatorSkeleton-struct"/>
     <keyword type="struct" name="struct UDisksManagerISCSIInitiatorSkeletonClass" link="UDisksManagerISCSIInitiator.html#UDisksManagerISCSIInitiatorSkeletonClass" since="2.0.1"/>
+    <keyword type="property" name="The “sessions-supported” property" link="UDisksManagerISCSIInitiator.html#UDisksManagerISCSIInitiator--sessions-supported"/>
     <keyword type="signal" name="The “handle-discover-firmware” signal" link="UDisksManagerISCSIInitiator.html#UDisksManagerISCSIInitiator-handle-discover-firmware"/>
     <keyword type="signal" name="The “handle-discover-send-targets” signal" link="UDisksManagerISCSIInitiator.html#UDisksManagerISCSIInitiator-handle-discover-send-targets"/>
     <keyword type="signal" name="The “handle-get-firmware-initiator-name” signal" link="UDisksManagerISCSIInitiator.html#UDisksManagerISCSIInitiator-handle-get-firmware-initiator-name"/>
@@ -2481,6 +2484,7 @@
     <keyword type="member" name="UDisksLogicalVolumeIface.get-volume-group" link="udisks2-UDisksLogicalVolume.html#UDisksLogicalVolumeIface.get-volume-group"/>
     <keyword type="member" name="UDisksLogicalVolumeIface.handle-cache-attach" link="udisks2-UDisksLogicalVolume.html#UDisksLogicalVolumeIface.handle-cache-attach"/>
     <keyword type="member" name="UDisksLogicalVolumeIface.handle-cache-split" link="udisks2-UDisksLogicalVolume.html#UDisksLogicalVolumeIface.handle-cache-split"/>
+    <keyword type="member" name="UDisksLogicalVolumeIface.handle-cache-detach" link="udisks2-UDisksLogicalVolume.html#UDisksLogicalVolumeIface.handle-cache-detach"/>
     <keyword type="member" name="UDisksISCSISessionIface.parent-iface" link="UDisksISCSISession.html#UDisksISCSISessionIface.parent-iface"/>
     <keyword type="member" name="UDisksISCSISessionIface.get-abort-timeout" link="UDisksISCSISession.html#UDisksISCSISessionIface.get-abort-timeout"/>
     <keyword type="member" name="UDisksISCSISessionIface.get-address" link="UDisksISCSISession.html#UDisksISCSISessionIface.get-address"/>
@@ -2496,6 +2500,7 @@
     <keyword type="member" name="UDisksISCSISessionIface.handle-logout-interface" link="UDisksISCSISession.html#UDisksISCSISessionIface.handle-logout-interface"/>
     <keyword type="member" name="UDisksManagerISCSIInitiatorIface.parent-iface" link="UDisksManagerISCSIInitiator.html#UDisksManagerISCSIInitiatorIface.parent-iface"/>
     <keyword type="member" name="UDisksManagerISCSIInitiatorIface.handle-get-initiator-name" link="UDisksManagerISCSIInitiator.html#UDisksManagerISCSIInitiatorIface.handle-get-initiator-name"/>
+    <keyword type="member" name="UDisksManagerISCSIInitiatorIface.get-sessions-supported" link="UDisksManagerISCSIInitiator.html#UDisksManagerISCSIInitiatorIface.get-sessions-supported"/>
     <keyword type="member" name="UDisksManagerISCSIInitiatorIface.handle-discover-firmware" link="UDisksManagerISCSIInitiator.html#UDisksManagerISCSIInitiatorIface.handle-discover-firmware"/>
     <keyword type="member" name="UDisksManagerISCSIInitiatorIface.handle-login" link="UDisksManagerISCSIInitiator.html#UDisksManagerISCSIInitiatorIface.handle-login"/>
     <keyword type="member" name="UDisksManagerISCSIInitiatorIface.handle-logout" link="UDisksManagerISCSIInitiator.html#UDisksManagerISCSIInitiatorIface.handle-logout"/>

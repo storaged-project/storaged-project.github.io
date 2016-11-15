@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>org.freedesktop.UDisks2.Block: UDisks Reference Manual</title>
-<meta name="generator" content="DocBook XSL Stylesheets V1.78.1">
+<meta name="generator" content="DocBook XSL Stylesheets V1.79.1">
 <link rel="home" href="index.html" title="UDisks Reference Manual">
 <link rel="up" href="ch02.html" title="D-Bus Interfaces">
 <link rel="prev" href="gdbus-org.freedesktop.UDisks2.MDRaid.html" title="org.freedesktop.UDisks2.MDRaid">
@@ -303,6 +303,12 @@ Format (IN  s     type,
         takes place but after authorization and other checks are
         done. This is useful for applications that want to format
         several devices in parallel.
+</p>
+<p>        If the option <em class="parameter"><code>dry-run-first</code></em> is set to
+        <code class="constant">TRUE</code> then a dry run of the formatting command is performed
+        first, if Storaged knows how to do that.  The idea is that
+        this allows a deeper check of the parameters even when
+        <em class="parameter"><code>no-block</code></em> is <code class="constant">TRUE</code>.
 </p>
 <p>        If the option <em class="parameter"><code>config-items</code></em> is set, it
         should be an array of configuration items suitable for

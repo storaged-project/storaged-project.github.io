@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>org.freedesktop.UDisks2.LogicalVolume: UDisks Reference Manual</title>
-<meta name="generator" content="DocBook XSL Stylesheets V1.78.1">
+<meta name="generator" content="DocBook XSL Stylesheets V1.79.1">
 <link rel="home" href="index.html" title="UDisks Reference Manual">
 <link rel="up" href="ch02.html" title="D-Bus Interfaces">
 <link rel="prev" href="gdbus-org.freedesktop.UDisks2.Block.LVM2.html" title="org.freedesktop.UDisks2.Block.LVM2">
@@ -51,6 +51,7 @@
 <a class="link" href="gdbus-org.freedesktop.UDisks2.LogicalVolume.html#gdbus-method-org-freedesktop-UDisks2-LogicalVolume.CacheAttach" title="The CacheAttach() method">CacheAttach</a>    (IN  s     cache_name,
                 IN  a{sv} options);
 <a class="link" href="gdbus-org.freedesktop.UDisks2.LogicalVolume.html#gdbus-method-org-freedesktop-UDisks2-LogicalVolume.CacheSplit" title="The CacheSplit() method">CacheSplit</a>     (IN  a{sv} options);
+<a class="link" href="gdbus-org.freedesktop.UDisks2.LogicalVolume.html#gdbus-method-org-freedesktop-UDisks2-LogicalVolume.CacheDetach" title="The CacheDetach() method">CacheDetach</a>    (IN  a{sv} options);
 </pre>
 </div>
 <div class="refsect1">
@@ -347,6 +348,28 @@ CacheSplit (IN  a{sv} options);
 </tr></tbody>
 </table></div>
 <p class="since">Since 2.3.0</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="gdbus-method-org-freedesktop-UDisks2-LogicalVolume.CacheDetach"></a><h3>The CacheDetach() method</h3>
+<pre class="programlisting">
+CacheDetach (IN  a{sv} options);
+</pre>
+<p>         Detaches the cached LV from its cache.
+</p>
+<p>         No additional options are currently defined.
+</p>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody><tr>
+<td><p><span class="term"><code class="literal">IN a{sv} <em class="parameter"><code>options</code></em></code>:</span></p></td>
+<td><p>Additional options.</p></td>
+</tr></tbody>
+</table></div>
+<p class="since">Since 2.6.3</p>
 </div>
 </div>
 <div class="refsect1">
