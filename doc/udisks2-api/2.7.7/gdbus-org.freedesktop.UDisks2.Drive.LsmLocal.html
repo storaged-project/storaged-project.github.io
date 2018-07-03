@@ -1,0 +1,151 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>org.freedesktop.UDisks2.Drive.LsmLocal: UDisks Reference Manual</title>
+<meta name="generator" content="DocBook XSL Stylesheets Vsnapshot">
+<link rel="home" href="index.html" title="UDisks Reference Manual">
+<link rel="up" href="ch02.html" title="D-Bus Interfaces">
+<link rel="prev" href="gdbus-org.freedesktop.UDisks2.Drive.LSM.html" title="org.freedesktop.UDisks2.Drive.LSM">
+<link rel="next" href="gdbus-org.freedesktop.UDisks2.Block.LVM2.html" title="org.freedesktop.UDisks2.Block.LVM2">
+<meta name="generator" content="GTK-Doc V1.28 (XML mode)">
+<link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<table class="navigation" id="top" width="100%" summary="Navigation header" cellpadding="2" cellspacing="5"><tr valign="middle">
+<td width="100%" align="left" class="shortcuts">
+<a href="#" class="shortcut">Top</a><span id="nav_description">  <span class="dim">|</span> 
+                  <a href="#gdbus-org.freedesktop.UDisks2.Drive.LsmLocal.description" class="shortcut">Description</a></span>
+</td>
+<td><a accesskey="h" href="index.html"><img src="home.png" width="16" height="16" border="0" alt="Home"></a></td>
+<td><a accesskey="u" href="ch02.html"><img src="up.png" width="16" height="16" border="0" alt="Up"></a></td>
+<td><a accesskey="p" href="gdbus-org.freedesktop.UDisks2.Drive.LSM.html"><img src="left.png" width="16" height="16" border="0" alt="Prev"></a></td>
+<td><a accesskey="n" href="gdbus-org.freedesktop.UDisks2.Block.LVM2.html"><img src="right.png" width="16" height="16" border="0" alt="Next"></a></td>
+</tr></table>
+<div class="refentry">
+<a name="gdbus-org.freedesktop.UDisks2.Drive.LsmLocal"></a><div class="titlepage"></div>
+<div class="refnamediv"><table width="100%"><tr>
+<td valign="top">
+<h2><span class="refentrytitle"><a name="gdbus-interface-org-freedesktop-UDisks2-Drive-LsmLocal.top_of_page"></a>org.freedesktop.UDisks2.Drive.LsmLocal</span></h2>
+<p>org.freedesktop.UDisks2.Drive.LsmLocal — Interface exported on disk drive objects for managing</p>
+</td>
+<td class="gallery_image" valign="top" align="right"></td>
+</tr></table></div>
+<div class="refsynopsisdiv">
+<h2>Methods</h2>
+<pre class="synopsis">
+<a class="link" href="gdbus-org.freedesktop.UDisks2.Drive.LsmLocal.html#gdbus-method-org-freedesktop-UDisks2-Drive-LsmLocal.TurnIdentLEDOn" title="The TurnIdentLEDOn() method">TurnIdentLEDOn</a>  (IN  a{sv} options);
+<a class="link" href="gdbus-org.freedesktop.UDisks2.Drive.LsmLocal.html#gdbus-method-org-freedesktop-UDisks2-Drive-LsmLocal.TurnIdentLEDOff" title="The TurnIdentLEDOff() method">TurnIdentLEDOff</a> (IN  a{sv} options);
+<a class="link" href="gdbus-org.freedesktop.UDisks2.Drive.LsmLocal.html#gdbus-method-org-freedesktop-UDisks2-Drive-LsmLocal.TurnFaultLEDOn" title="The TurnFaultLEDOn() method">TurnFaultLEDOn</a>  (IN  a{sv} options);
+<a class="link" href="gdbus-org.freedesktop.UDisks2.Drive.LsmLocal.html#gdbus-method-org-freedesktop-UDisks2-Drive-LsmLocal.TurnFaultLEDOff" title="The TurnFaultLEDOff() method">TurnFaultLEDOff</a> (IN  a{sv} options);
+</pre>
+</div>
+<div class="refsect1">
+<a name="gdbus-interface-org-freedesktop-UDisks2-Drive-LsmLocal"></a><h2>Description</h2>
+<p>                        local direct attached storage.
+    <em class="parameter"><code>since</code></em>: 2.6.3
+</p>
+<p>    Objects implementing this interface also implement the
+    #org.freedesktop.UDisks2.Drive interface.
+    This interface will exist on all disk drive objects.
+</p>
+</div>
+<div class="refsect1">
+<a name="gdbus-methods-org.freedesktop.UDisks2.Drive.LsmLocal"></a><h2>Method Details</h2>
+<div class="refsect2">
+<a name="gdbus-method-org-freedesktop-UDisks2-Drive-LsmLocal.TurnIdentLEDOn"></a><h3>The TurnIdentLEDOn() method</h3>
+<pre class="programlisting">
+TurnIdentLEDOn (IN  a{sv} options);
+</pre>
+<p>        Turn on the identification LED of disk.
+        This method only works on SCSI enclosure disks yet.
+        Error 'org.freedesktop.UDisks2.Error.NotSupported' will be raised
+        if not supported.
+</p>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody><tr>
+<td><p><span class="term"><code class="literal">IN a{sv} <em class="parameter"><code>options</code></em></code>:</span></p></td>
+<td><p>Options (currently unused except for <a class="link" href="udisks-std-options.html" title="The options parameter">standard options</a>).</p></td>
+</tr></tbody>
+</table></div>
+<p class="since">Since 2.6.3</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="gdbus-method-org-freedesktop-UDisks2-Drive-LsmLocal.TurnIdentLEDOff"></a><h3>The TurnIdentLEDOff() method</h3>
+<pre class="programlisting">
+TurnIdentLEDOff (IN  a{sv} options);
+</pre>
+<p>        Turn off the identification LED of disk.
+        This method only works on SCSI enclosure disks yet.
+        Error 'org.freedesktop.UDisks2.Error.NotSupported' will be raised
+        if not supported.
+</p>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody><tr>
+<td><p><span class="term"><code class="literal">IN a{sv} <em class="parameter"><code>options</code></em></code>:</span></p></td>
+<td><p>Options (currently unused except for <a class="link" href="udisks-std-options.html" title="The options parameter">standard options</a>).</p></td>
+</tr></tbody>
+</table></div>
+<p class="since">Since 2.6.3</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="gdbus-method-org-freedesktop-UDisks2-Drive-LsmLocal.TurnFaultLEDOn"></a><h3>The TurnFaultLEDOn() method</h3>
+<pre class="programlisting">
+TurnFaultLEDOn (IN  a{sv} options);
+</pre>
+<p>        Turn on the fault LED of disk.
+        This method only works on SCSI enclosure disks yet.
+        Error 'org.freedesktop.UDisks2.Error.NotSupported' will be raised
+        if not supported.
+</p>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody><tr>
+<td><p><span class="term"><code class="literal">IN a{sv} <em class="parameter"><code>options</code></em></code>:</span></p></td>
+<td><p>Options (currently unused except for <a class="link" href="udisks-std-options.html" title="The options parameter">standard options</a>).</p></td>
+</tr></tbody>
+</table></div>
+<p class="since">Since 2.6.3</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="gdbus-method-org-freedesktop-UDisks2-Drive-LsmLocal.TurnFaultLEDOff"></a><h3>The TurnFaultLEDOff() method</h3>
+<pre class="programlisting">
+TurnFaultLEDOff (IN  a{sv} options);
+</pre>
+<p>        Turn off the fault LED of disk.
+        This method only works on SCSI enclosure disks yet.
+        Error 'org.freedesktop.UDisks2.Error.NotSupported' will be raised
+        if not supported.
+</p>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody><tr>
+<td><p><span class="term"><code class="literal">IN a{sv} <em class="parameter"><code>options</code></em></code>:</span></p></td>
+<td><p>Options (currently unused except for <a class="link" href="udisks-std-options.html" title="The options parameter">standard options</a>).</p></td>
+</tr></tbody>
+</table></div>
+<p class="since">Since 2.6.3</p>
+</div>
+</div>
+</div>
+<div class="footer">
+<hr>Generated by GTK-Doc V1.28</div>
+</body>
+</html>

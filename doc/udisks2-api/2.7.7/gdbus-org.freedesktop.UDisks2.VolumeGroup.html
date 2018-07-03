@@ -1,0 +1,473 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>org.freedesktop.UDisks2.VolumeGroup: UDisks Reference Manual</title>
+<meta name="generator" content="DocBook XSL Stylesheets Vsnapshot">
+<link rel="home" href="index.html" title="UDisks Reference Manual">
+<link rel="up" href="ch02.html" title="D-Bus Interfaces">
+<link rel="prev" href="gdbus-org.freedesktop.UDisks2.PhysicalVolume.html" title="org.freedesktop.UDisks2.PhysicalVolume">
+<link rel="next" href="gdbus-org.freedesktop.UDisks2.ISCSI.Session.html" title="org.freedesktop.UDisks2.ISCSI.Session">
+<meta name="generator" content="GTK-Doc V1.28 (XML mode)">
+<link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<table class="navigation" id="top" width="100%" summary="Navigation header" cellpadding="2" cellspacing="5"><tr valign="middle">
+<td width="100%" align="left" class="shortcuts">
+<a href="#" class="shortcut">Top</a><span id="nav_description">  <span class="dim">|</span> 
+                  <a href="#gdbus-org.freedesktop.UDisks2.VolumeGroup.description" class="shortcut">Description</a></span><span id="nav_properties">  <span class="dim">|</span> 
+                  <a href="#gdbus-org.freedesktop.UDisks2.VolumeGroup.properties" class="shortcut">Properties</a></span>
+</td>
+<td><a accesskey="h" href="index.html"><img src="home.png" width="16" height="16" border="0" alt="Home"></a></td>
+<td><a accesskey="u" href="ch02.html"><img src="up.png" width="16" height="16" border="0" alt="Up"></a></td>
+<td><a accesskey="p" href="gdbus-org.freedesktop.UDisks2.PhysicalVolume.html"><img src="left.png" width="16" height="16" border="0" alt="Prev"></a></td>
+<td><a accesskey="n" href="gdbus-org.freedesktop.UDisks2.ISCSI.Session.html"><img src="right.png" width="16" height="16" border="0" alt="Next"></a></td>
+</tr></table>
+<div class="refentry">
+<a name="gdbus-org.freedesktop.UDisks2.VolumeGroup"></a><div class="titlepage"></div>
+<div class="refnamediv"><table width="100%"><tr>
+<td valign="top">
+<h2><span class="refentrytitle"><a name="gdbus-interface-org-freedesktop-UDisks2-VolumeGroup.top_of_page"></a>org.freedesktop.UDisks2.VolumeGroup</span></h2>
+<p>org.freedesktop.UDisks2.VolumeGroup — A volume group</p>
+</td>
+<td class="gallery_image" valign="top" align="right"></td>
+</tr></table></div>
+<div class="refsynopsisdiv">
+<h2>Methods</h2>
+<pre class="synopsis">
+<a class="link" href="gdbus-org.freedesktop.UDisks2.VolumeGroup.html#gdbus-method-org-freedesktop-UDisks2-VolumeGroup.Poll" title="The Poll() method">Poll</a>                 ();
+<a class="link" href="gdbus-org.freedesktop.UDisks2.VolumeGroup.html#gdbus-method-org-freedesktop-UDisks2-VolumeGroup.Delete" title="The Delete() method">Delete</a>               (IN  b     wipe,
+                      IN  a{sv} options);
+<a class="link" href="gdbus-org.freedesktop.UDisks2.VolumeGroup.html#gdbus-method-org-freedesktop-UDisks2-VolumeGroup.Rename" title="The Rename() method">Rename</a>               (IN  s     new_name,
+                      IN  a{sv} options,
+                      OUT o     result);
+<a class="link" href="gdbus-org.freedesktop.UDisks2.VolumeGroup.html#gdbus-method-org-freedesktop-UDisks2-VolumeGroup.AddDevice" title="The AddDevice() method">AddDevice</a>            (IN  o     block,
+                      IN  a{sv} options);
+<a class="link" href="gdbus-org.freedesktop.UDisks2.VolumeGroup.html#gdbus-method-org-freedesktop-UDisks2-VolumeGroup.EmptyDevice" title="The EmptyDevice() method">EmptyDevice</a>          (IN  o     block,
+                      IN  a{sv} options);
+<a class="link" href="gdbus-org.freedesktop.UDisks2.VolumeGroup.html#gdbus-method-org-freedesktop-UDisks2-VolumeGroup.RemoveDevice" title="The RemoveDevice() method">RemoveDevice</a>         (IN  o     block,
+                      IN  b     wipe,
+                      IN  a{sv} options);
+<a class="link" href="gdbus-org.freedesktop.UDisks2.VolumeGroup.html#gdbus-method-org-freedesktop-UDisks2-VolumeGroup.CreatePlainVolume" title="The CreatePlainVolume() method">CreatePlainVolume</a>    (IN  s     name,
+                      IN  t     size,
+                      IN  a{sv} options,
+                      OUT o     result);
+<a class="link" href="gdbus-org.freedesktop.UDisks2.VolumeGroup.html#gdbus-method-org-freedesktop-UDisks2-VolumeGroup.CreateThinPoolVolume" title="The CreateThinPoolVolume() method">CreateThinPoolVolume</a> (IN  s     name,
+                      IN  t     size,
+                      IN  a{sv} options,
+                      OUT o     result);
+<a class="link" href="gdbus-org.freedesktop.UDisks2.VolumeGroup.html#gdbus-method-org-freedesktop-UDisks2-VolumeGroup.CreateThinVolume" title="The CreateThinVolume() method">CreateThinVolume</a>     (IN  s     name,
+                      IN  t     size,
+                      IN  o     pool,
+                      IN  a{sv} options,
+                      OUT o     result);
+</pre>
+</div>
+<div class="refsect1">
+<a name="id-1.3.3.21.4"></a><h2>Properties</h2>
+<pre class="synopsis">
+<a class="link" href="gdbus-org.freedesktop.UDisks2.VolumeGroup.html#gdbus-property-org-freedesktop-UDisks2-VolumeGroup.Name" title='The "Name" property'>Name</a>          readable   s
+<a class="link" href="gdbus-org.freedesktop.UDisks2.VolumeGroup.html#gdbus-property-org-freedesktop-UDisks2-VolumeGroup.UUID" title='The "UUID" property'>UUID</a>          readable   s
+<a class="link" href="gdbus-org.freedesktop.UDisks2.VolumeGroup.html#gdbus-property-org-freedesktop-UDisks2-VolumeGroup.Size" title='The "Size" property'>Size</a>          readable   t
+<a class="link" href="gdbus-org.freedesktop.UDisks2.VolumeGroup.html#gdbus-property-org-freedesktop-UDisks2-VolumeGroup.FreeSize" title='The "FreeSize" property'>FreeSize</a>      readable   t
+<a class="link" href="gdbus-org.freedesktop.UDisks2.VolumeGroup.html#gdbus-property-org-freedesktop-UDisks2-VolumeGroup.ExtentSize" title='The "ExtentSize" property'>ExtentSize</a>    readable   t
+<a class="link" href="gdbus-org.freedesktop.UDisks2.VolumeGroup.html#gdbus-property-org-freedesktop-UDisks2-VolumeGroup.NeedsPolling" title='The "NeedsPolling" property'>NeedsPolling</a>  readable   b
+</pre>
+</div>
+<div class="refsect1">
+<a name="gdbus-interface-org-freedesktop-UDisks2-VolumeGroup"></a><h2>Description</h2>
+<p>      Objects implementing this interface represent LVM2 volume
+      groups.  They appear under /org/freedesktop/UDisks2/lvm/.
+</p>
+<p>      The logical volume objects of a volume group are the children of
+      the volume group objects in the D-Bus object hierarchy.  See the
+      <a class="link" href="gdbus-org.freedesktop.UDisks2.LogicalVolume.html#gdbus-interface-org-freedesktop-UDisks2-LogicalVolume.top_of_page">org.freedesktop.UDisks2.LogicalVolume</a> interface.
+</p>
+<p>      The physical volume objects of a volume group can be found by
+      looking for block devices with a
+      <a class="link" href="gdbus-org.freedesktop.UDisks2.PhysicalVolume.html#gdbus-interface-org-freedesktop-UDisks2-PhysicalVolume.top_of_page">org.freedesktop.UDisks2.PhysicalVolume</a>.VolumeGroup property
+      that points to the volume group object.
+</p>
+<p class="since">Since 2.0.0</p>
+</div>
+<div class="refsect1">
+<a name="gdbus-methods-org.freedesktop.UDisks2.VolumeGroup"></a><h2>Method Details</h2>
+<div class="refsect2">
+<a name="gdbus-method-org-freedesktop-UDisks2-VolumeGroup.Poll"></a><h3>The Poll() method</h3>
+<pre class="programlisting">
+Poll ();
+</pre>
+<p>         Make sure that all properties of this volume group and of all
+         their logical and physical volumes are up-to-date.
+</p>
+<p>         The properties are not guaranteed to be up-to-date yet when
+         this method returns.
+</p>
+<p class="since">Since 2.0.0</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="gdbus-method-org-freedesktop-UDisks2-VolumeGroup.Delete"></a><h3>The Delete() method</h3>
+<pre class="programlisting">
+Delete (IN  b     wipe,
+        IN  a{sv} options);
+</pre>
+<p>         Delete this volume group.  All its logical volumes will be
+         deleted, too.
+</p>
+<p>         If the option <em class="parameter"><code>tear-down</code></em> is set to
+         <code class="constant">TRUE</code>, then all logical volumes will be cleaned up before
+         deletion.  This cleanup consists of removing entries from
+         /etc/fstab and /etc/crypttab, and locking of encrypted block
+         devices.  Entries in /etc/fstab and /etc/crypttab that have
+         been created with the 'track-parents' options to
+         AddConfigurationItem will be removed even if their block
+         device is currently unavailable.
+</p>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><code class="literal">IN b <em class="parameter"><code>wipe</code></em></code>:</span></p></td>
+<td><p>Whether to wipe the volume group.</p></td>
+</tr>
+<tr>
+<td><p><span class="term"><code class="literal">IN a{sv} <em class="parameter"><code>options</code></em></code>:</span></p></td>
+<td><p>Additional options.</p></td>
+</tr>
+</tbody>
+</table></div>
+<p class="since">Since 2.0.0</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="gdbus-method-org-freedesktop-UDisks2-VolumeGroup.Rename"></a><h3>The Rename() method</h3>
+<pre class="programlisting">
+Rename (IN  s     new_name,
+        IN  a{sv} options,
+        OUT o     result);
+</pre>
+<p>         Rename this volume group.  This might cause the volume group
+         object to disappear from D-Bus and reappear with a different
+         path.
+</p>
+<p>         No additional options are currently defined.
+</p>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><code class="literal">IN s <em class="parameter"><code>new_name</code></em></code>:</span></p></td>
+<td><p>The new name.</p></td>
+</tr>
+<tr>
+<td><p><span class="term"><code class="literal">IN a{sv} <em class="parameter"><code>options</code></em></code>:</span></p></td>
+<td><p>Additional options.</p></td>
+</tr>
+<tr>
+<td><p><span class="term"><code class="literal">OUT o <em class="parameter"><code>result</code></em></code>:</span></p></td>
+<td><p>The new object path.</p></td>
+</tr>
+</tbody>
+</table></div>
+<p class="since">Since 2.0.0</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="gdbus-method-org-freedesktop-UDisks2-VolumeGroup.AddDevice"></a><h3>The AddDevice() method</h3>
+<pre class="programlisting">
+AddDevice (IN  o     block,
+           IN  a{sv} options);
+</pre>
+<p>         Add a new physical volume to the volume group.  The block
+         device will be wiped and all data on it will be lost.
+</p>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><code class="literal">IN o <em class="parameter"><code>block</code></em></code>:</span></p></td>
+<td><p>The block device to add, as a UDisks2 object path.</p></td>
+</tr>
+<tr>
+<td><p><span class="term"><code class="literal">IN a{sv} <em class="parameter"><code>options</code></em></code>:</span></p></td>
+<td><p>Additional options.</p></td>
+</tr>
+</tbody>
+</table></div>
+<p class="since">Since 2.0.0</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="gdbus-method-org-freedesktop-UDisks2-VolumeGroup.EmptyDevice"></a><h3>The EmptyDevice() method</h3>
+<pre class="programlisting">
+EmptyDevice (IN  o     block,
+             IN  a{sv} options);
+</pre>
+<p>         Move all data on the given block device somewhere else so
+         that the block device might be removed.
+</p>
+<p>         No additional options are currently defined.
+</p>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><code class="literal">IN o <em class="parameter"><code>block</code></em></code>:</span></p></td>
+<td><p>The block device to empty, as a UDisks2 object path.</p></td>
+</tr>
+<tr>
+<td><p><span class="term"><code class="literal">IN a{sv} <em class="parameter"><code>options</code></em></code>:</span></p></td>
+<td><p>Additional options.</p></td>
+</tr>
+</tbody>
+</table></div>
+<p class="since">Since 2.0.0</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="gdbus-method-org-freedesktop-UDisks2-VolumeGroup.RemoveDevice"></a><h3>The RemoveDevice() method</h3>
+<pre class="programlisting">
+RemoveDevice (IN  o     block,
+              IN  b     wipe,
+              IN  a{sv} options);
+</pre>
+<p>         Remove the indicated physical volume from the volume group.
+         The physical device must be unused.
+</p>
+<p>         No additional options are currently defined.
+</p>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><code class="literal">IN o <em class="parameter"><code>block</code></em></code>:</span></p></td>
+<td><p>The block device to remove, as a UDisks2 object path.</p></td>
+</tr>
+<tr>
+<td><p><span class="term"><code class="literal">IN b <em class="parameter"><code>wipe</code></em></code>:</span></p></td>
+<td><p>Whether to wipe the physical volume.</p></td>
+</tr>
+<tr>
+<td><p><span class="term"><code class="literal">IN a{sv} <em class="parameter"><code>options</code></em></code>:</span></p></td>
+<td><p>Additional options.</p></td>
+</tr>
+</tbody>
+</table></div>
+<p class="since">Since 2.0.0</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="gdbus-method-org-freedesktop-UDisks2-VolumeGroup.CreatePlainVolume"></a><h3>The CreatePlainVolume() method</h3>
+<pre class="programlisting">
+CreatePlainVolume (IN  s     name,
+                   IN  t     size,
+                   IN  a{sv} options,
+                   OUT o     result);
+</pre>
+<p>         Create a 'normal' new logical volume.
+</p>
+<p>         No additional options are currently defined.
+</p>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><code class="literal">IN s <em class="parameter"><code>name</code></em></code>:</span></p></td>
+<td><p>The name of the new logical volume.</p></td>
+</tr>
+<tr>
+<td><p><span class="term"><code class="literal">IN t <em class="parameter"><code>size</code></em></code>:</span></p></td>
+<td><p>The size.</p></td>
+</tr>
+<tr>
+<td><p><span class="term"><code class="literal">IN a{sv} <em class="parameter"><code>options</code></em></code>:</span></p></td>
+<td><p>Additional options.</p></td>
+</tr>
+<tr>
+<td><p><span class="term"><code class="literal">OUT o <em class="parameter"><code>result</code></em></code>:</span></p></td>
+<td><p>The object path of the new logical volume.</p></td>
+</tr>
+</tbody>
+</table></div>
+<p class="since">Since 2.0.0</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="gdbus-method-org-freedesktop-UDisks2-VolumeGroup.CreateThinPoolVolume"></a><h3>The CreateThinPoolVolume() method</h3>
+<pre class="programlisting">
+CreateThinPoolVolume (IN  s     name,
+                      IN  t     size,
+                      IN  a{sv} options,
+                      OUT o     result);
+</pre>
+<p>         Create a new logical volume that can be used to back
+         thinly-provisioned logical volumes.  The <em class="parameter"><code>size</code></em> parameter is
+         the total amount of space taken out of the volume group.
+         That space will be used for data and metadata.  The actual
+         amount of data that can be stored in the pool will be
+         slightly smaller.
+</p>
+<p>         No additional options are currently defined.
+</p>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><code class="literal">IN s <em class="parameter"><code>name</code></em></code>:</span></p></td>
+<td><p>The name of the new logical volume.</p></td>
+</tr>
+<tr>
+<td><p><span class="term"><code class="literal">IN t <em class="parameter"><code>size</code></em></code>:</span></p></td>
+<td><p>The total size.</p></td>
+</tr>
+<tr>
+<td><p><span class="term"><code class="literal">IN a{sv} <em class="parameter"><code>options</code></em></code>:</span></p></td>
+<td><p>Additional options.</p></td>
+</tr>
+<tr>
+<td><p><span class="term"><code class="literal">OUT o <em class="parameter"><code>result</code></em></code>:</span></p></td>
+<td><p>The object path of the new logical volume.</p></td>
+</tr>
+</tbody>
+</table></div>
+<p class="since">Since 2.0.0</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="gdbus-method-org-freedesktop-UDisks2-VolumeGroup.CreateThinVolume"></a><h3>The CreateThinVolume() method</h3>
+<pre class="programlisting">
+CreateThinVolume (IN  s     name,
+                  IN  t     size,
+                  IN  o     pool,
+                  IN  a{sv} options,
+                  OUT o     result);
+</pre>
+<p>         Create a new thinly provisioned logical volume in the given
+         pool.
+</p>
+<p>         No additional options are currently defined.
+</p>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><code class="literal">IN s <em class="parameter"><code>name</code></em></code>:</span></p></td>
+<td><p>The name of the new logical volume.</p></td>
+</tr>
+<tr>
+<td><p><span class="term"><code class="literal">IN t <em class="parameter"><code>size</code></em></code>:</span></p></td>
+<td><p>The virtual size.</p></td>
+</tr>
+<tr>
+<td><p><span class="term"><code class="literal">IN o <em class="parameter"><code>pool</code></em></code>:</span></p></td>
+<td><p>The thin pool to use.</p></td>
+</tr>
+<tr>
+<td><p><span class="term"><code class="literal">IN a{sv} <em class="parameter"><code>options</code></em></code>:</span></p></td>
+<td><p>Additional options.</p></td>
+</tr>
+<tr>
+<td><p><span class="term"><code class="literal">OUT o <em class="parameter"><code>result</code></em></code>:</span></p></td>
+<td><p>The object path of the new logical volume.</p></td>
+</tr>
+</tbody>
+</table></div>
+<p class="since">Since 2.0.0</p>
+</div>
+</div>
+<div class="refsect1">
+<a name="gdbus-properties-org.freedesktop.UDisks2.VolumeGroup"></a><h2>Property Details</h2>
+<div class="refsect2">
+<a name="gdbus-property-org-freedesktop-UDisks2-VolumeGroup.Name"></a><h3>The "Name" property</h3>
+<pre class="programlisting">
+Name  readable   s
+</pre>
+<p>         The name of this volume group, as known to LVM2.
+</p>
+<p class="since">Since 2.0.0</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="gdbus-property-org-freedesktop-UDisks2-VolumeGroup.UUID"></a><h3>The "UUID" property</h3>
+<pre class="programlisting">
+UUID  readable   s
+</pre>
+<p>         The UUID this volume group.  It is guaranteed to be unique,
+         but it might change over time.
+</p>
+<p class="since">Since 2.0.0</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="gdbus-property-org-freedesktop-UDisks2-VolumeGroup.Size"></a><h3>The "Size" property</h3>
+<pre class="programlisting">
+Size  readable   t
+</pre>
+<p>         The total capacity of this volume group, in bytes.
+</p>
+<p class="since">Since 2.0.0</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="gdbus-property-org-freedesktop-UDisks2-VolumeGroup.FreeSize"></a><h3>The "FreeSize" property</h3>
+<pre class="programlisting">
+FreeSize  readable   t
+</pre>
+<p>         The unused capacity of this volume group, in bytes.
+</p>
+<p class="since">Since 2.0.0</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="gdbus-property-org-freedesktop-UDisks2-VolumeGroup.ExtentSize"></a><h3>The "ExtentSize" property</h3>
+<pre class="programlisting">
+ExtentSize  readable   t
+</pre>
+<p>         The size of extents.  When creating and resizing logical
+         volumes, sizes are rounded up to multiples of the extent
+         size.
+</p>
+<p class="since">Since 2.0.0</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="gdbus-property-org-freedesktop-UDisks2-VolumeGroup.NeedsPolling"></a><h3>The "NeedsPolling" property</h3>
+<pre class="programlisting">
+NeedsPolling  readable   b
+</pre>
+<p>         Whether or not this volume group needs to be periodically
+         polled to guarantee updates.
+</p>
+<p class="since">Since 2.0.0</p>
+</div>
+</div>
+</div>
+<div class="footer">
+<hr>Generated by GTK-Doc V1.28</div>
+</body>
+</html>
