@@ -1,0 +1,287 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>org.freedesktop.UDisks2.Block.ZRAM: UDisks Reference Manual</title>
+<meta name="generator" content="DocBook XSL Stylesheets Vsnapshot">
+<link rel="home" href="index.html" title="UDisks Reference Manual">
+<link rel="up" href="ch02.html" title="D-Bus Interfaces">
+<link rel="prev" href="gdbus-org.freedesktop.UDisks2.Manager.ZRAM.html" title="org.freedesktop.UDisks2.Manager.ZRAM">
+<link rel="next" href="gdbus-org.freedesktop.UDisks2.Manager.Bcache.html" title="org.freedesktop.UDisks2.Manager.Bcache">
+<meta name="generator" content="GTK-Doc V1.28 (XML mode)">
+<link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<table class="navigation" id="top" width="100%" summary="Navigation header" cellpadding="2" cellspacing="5"><tr valign="middle">
+<td width="100%" align="left" class="shortcuts">
+<a href="#" class="shortcut">Top</a><span id="nav_description">  <span class="dim">|</span> 
+                  <a href="#gdbus-org.freedesktop.UDisks2.Block.ZRAM.description" class="shortcut">Description</a></span><span id="nav_properties">  <span class="dim">|</span> 
+                  <a href="#gdbus-org.freedesktop.UDisks2.Block.ZRAM.properties" class="shortcut">Properties</a></span>
+</td>
+<td><a accesskey="h" href="index.html"><img src="home.png" width="16" height="16" border="0" alt="Home"></a></td>
+<td><a accesskey="u" href="ch02.html"><img src="up.png" width="16" height="16" border="0" alt="Up"></a></td>
+<td><a accesskey="p" href="gdbus-org.freedesktop.UDisks2.Manager.ZRAM.html"><img src="left.png" width="16" height="16" border="0" alt="Prev"></a></td>
+<td><a accesskey="n" href="gdbus-org.freedesktop.UDisks2.Manager.Bcache.html"><img src="right.png" width="16" height="16" border="0" alt="Next"></a></td>
+</tr></table>
+<div class="refentry">
+<a name="gdbus-org.freedesktop.UDisks2.Block.ZRAM"></a><div class="titlepage"></div>
+<div class="refnamediv"><table width="100%"><tr>
+<td valign="top">
+<h2><span class="refentrytitle"><a name="gdbus-interface-org-freedesktop-UDisks2-Block-ZRAM.top_of_page"></a>org.freedesktop.UDisks2.Block.ZRAM</span></h2>
+<p>org.freedesktop.UDisks2.Block.ZRAM — ZRAM block device</p>
+</td>
+<td class="gallery_image" valign="top" align="right"></td>
+</tr></table></div>
+<div class="refsynopsisdiv">
+<h2>Methods</h2>
+<pre class="synopsis">
+<a class="link" href="gdbus-org.freedesktop.UDisks2.Block.ZRAM.html#gdbus-method-org-freedesktop-UDisks2-Block-ZRAM.Refresh" title="The Refresh() method">Refresh</a>         (IN  a{sv} options);
+<a class="link" href="gdbus-org.freedesktop.UDisks2.Block.ZRAM.html#gdbus-method-org-freedesktop-UDisks2-Block-ZRAM.Activate" title="The Activate() method">Activate</a>        (IN  i     priority,
+                 IN  a{sv} options);
+<a class="link" href="gdbus-org.freedesktop.UDisks2.Block.ZRAM.html#gdbus-method-org-freedesktop-UDisks2-Block-ZRAM.ActivateLabeled" title="The ActivateLabeled() method">ActivateLabeled</a> (IN  i     priority,
+                 IN  s     label,
+                 IN  a{sv} options);
+<a class="link" href="gdbus-org.freedesktop.UDisks2.Block.ZRAM.html#gdbus-method-org-freedesktop-UDisks2-Block-ZRAM.Deactivate" title="The Deactivate() method">Deactivate</a>      (IN  a{sv} options);
+</pre>
+</div>
+<div class="refsect1">
+<a name="id-1.3.3.27.4"></a><h2>Properties</h2>
+<pre class="synopsis">
+<a class="link" href="gdbus-org.freedesktop.UDisks2.Block.ZRAM.html#gdbus-property-org-freedesktop-UDisks2-Block-ZRAM.Disksize" title='The "Disksize" property'>Disksize</a>        readable   t
+<a class="link" href="gdbus-org.freedesktop.UDisks2.Block.ZRAM.html#gdbus-property-org-freedesktop-UDisks2-Block-ZRAM.MaxCompStreams" title='The "MaxCompStreams" property'>MaxCompStreams</a>  readable   t
+<a class="link" href="gdbus-org.freedesktop.UDisks2.Block.ZRAM.html#gdbus-property-org-freedesktop-UDisks2-Block-ZRAM.CompAlgorithm" title='The "CompAlgorithm" property'>CompAlgorithm</a>   readable   s
+<a class="link" href="gdbus-org.freedesktop.UDisks2.Block.ZRAM.html#gdbus-property-org-freedesktop-UDisks2-Block-ZRAM.Active" title='The "Active" property'>Active</a>          readable   b
+<a class="link" href="gdbus-org.freedesktop.UDisks2.Block.ZRAM.html#gdbus-property-org-freedesktop-UDisks2-Block-ZRAM.NumReads" title='The "NumReads" property'>NumReads</a>        readable   t
+<a class="link" href="gdbus-org.freedesktop.UDisks2.Block.ZRAM.html#gdbus-property-org-freedesktop-UDisks2-Block-ZRAM.NumWrites" title='The "NumWrites" property'>NumWrites</a>       readable   t
+<a class="link" href="gdbus-org.freedesktop.UDisks2.Block.ZRAM.html#gdbus-property-org-freedesktop-UDisks2-Block-ZRAM.InvalidIo" title='The "InvalidIo" property'>InvalidIo</a>       readable   t
+<a class="link" href="gdbus-org.freedesktop.UDisks2.Block.ZRAM.html#gdbus-property-org-freedesktop-UDisks2-Block-ZRAM.ZeroPages" title='The "ZeroPages" property'>ZeroPages</a>       readable   t
+<a class="link" href="gdbus-org.freedesktop.UDisks2.Block.ZRAM.html#gdbus-property-org-freedesktop-UDisks2-Block-ZRAM.OrigDataSize" title='The "OrigDataSize" property'>OrigDataSize</a>    readable   t
+<a class="link" href="gdbus-org.freedesktop.UDisks2.Block.ZRAM.html#gdbus-property-org-freedesktop-UDisks2-Block-ZRAM.ComprDataSize" title='The "ComprDataSize" property'>ComprDataSize</a>   readable   t
+<a class="link" href="gdbus-org.freedesktop.UDisks2.Block.ZRAM.html#gdbus-property-org-freedesktop-UDisks2-Block-ZRAM.MemUsedTotal" title='The "MemUsedTotal" property'>MemUsedTotal</a>    readable   t
+</pre>
+</div>
+<div class="refsect1">
+<a name="gdbus-interface-org-freedesktop-UDisks2-Block-ZRAM"></a><h2>Description</h2>
+<p>      One of zram devices created by manager.
+</p>
+<p>      <span class="emphasis"><em>Names of the properties where changed in version 2.7.0.</em></span>
+</p>
+<p class="since">Since 2.3.0</p>
+</div>
+<div class="refsect1">
+<a name="gdbus-methods-org.freedesktop.UDisks2.Block.ZRAM"></a><h2>Method Details</h2>
+<div class="refsect2">
+<a name="gdbus-method-org-freedesktop-UDisks2-Block-ZRAM.Refresh"></a><h3>The Refresh() method</h3>
+<pre class="programlisting">
+Refresh (IN  a{sv} options);
+</pre>
+<p>        Used to refresh properties changed over time.
+</p>
+<p>        No additional options are currently defined.
+</p>
+<p>        <span class="emphasis"><em>Changed in version 2.7.0.</em></span>
+</p>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody><tr>
+<td><p><span class="term"><code class="literal">IN a{sv} <em class="parameter"><code>options</code></em></code>:</span></p></td>
+<td><p>Additional options.</p></td>
+</tr></tbody>
+</table></div>
+<p class="since">Since 2.3.0</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="gdbus-method-org-freedesktop-UDisks2-Block-ZRAM.Activate"></a><h3>The Activate() method</h3>
+<pre class="programlisting">
+Activate (IN  i     priority,
+          IN  a{sv} options);
+</pre>
+<p>        Enables zram device for paging and swapping.
+</p>
+<p>        No additional options are currently defined.
+</p>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><code class="literal">IN i <em class="parameter"><code>priority</code></em></code>:</span></p></td>
+<td><p>Priority of swap device.</p></td>
+</tr>
+<tr>
+<td><p><span class="term"><code class="literal">IN a{sv} <em class="parameter"><code>options</code></em></code>:</span></p></td>
+<td><p>Additional options.</p></td>
+</tr>
+</tbody>
+</table></div>
+<p class="since">Since 2.3.0</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="gdbus-method-org-freedesktop-UDisks2-Block-ZRAM.ActivateLabeled"></a><h3>The ActivateLabeled() method</h3>
+<pre class="programlisting">
+ActivateLabeled (IN  i     priority,
+                 IN  s     label,
+                 IN  a{sv} options);
+</pre>
+<p>        Enables zram device for paging and swapping.
+</p>
+<p>        No additional options are currently defined.
+</p>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><code class="literal">IN i <em class="parameter"><code>priority</code></em></code>:</span></p></td>
+<td><p>Priority of swap device.</p></td>
+</tr>
+<tr>
+<td><p><span class="term"><code class="literal">IN s <em class="parameter"><code>label</code></em></code>:</span></p></td>
+<td><p>A label for the swap device.</p></td>
+</tr>
+<tr>
+<td><p><span class="term"><code class="literal">IN a{sv} <em class="parameter"><code>options</code></em></code>:</span></p></td>
+<td><p>Additional options.</p></td>
+</tr>
+</tbody>
+</table></div>
+<p class="since">Since 2.3.0</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="gdbus-method-org-freedesktop-UDisks2-Block-ZRAM.Deactivate"></a><h3>The Deactivate() method</h3>
+<pre class="programlisting">
+Deactivate (IN  a{sv} options);
+</pre>
+<p>        Disables zram device for paging and swapping.
+</p>
+<p>        No additional options are currently defined.
+</p>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody><tr>
+<td><p><span class="term"><code class="literal">IN a{sv} <em class="parameter"><code>options</code></em></code>:</span></p></td>
+<td><p>Additional options.</p></td>
+</tr></tbody>
+</table></div>
+<p class="since">Since 2.3.0</p>
+</div>
+</div>
+<div class="refsect1">
+<a name="gdbus-properties-org.freedesktop.UDisks2.Block.ZRAM"></a><h2>Property Details</h2>
+<div class="refsect2">
+<a name="gdbus-property-org-freedesktop-UDisks2-Block-ZRAM.Disksize"></a><h3>The "Disksize" property</h3>
+<pre class="programlisting">
+Disksize  readable   t
+</pre>
+<p></p>
+<p class="since">Since 2.3.0</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="gdbus-property-org-freedesktop-UDisks2-Block-ZRAM.MaxCompStreams"></a><h3>The "MaxCompStreams" property</h3>
+<pre class="programlisting">
+MaxCompStreams  readable   t
+</pre>
+<p></p>
+<p class="since">Since 2.3.0</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="gdbus-property-org-freedesktop-UDisks2-Block-ZRAM.CompAlgorithm"></a><h3>The "CompAlgorithm" property</h3>
+<pre class="programlisting">
+CompAlgorithm  readable   s
+</pre>
+<p></p>
+<p class="since">Since 2.3.0</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="gdbus-property-org-freedesktop-UDisks2-Block-ZRAM.Active"></a><h3>The "Active" property</h3>
+<pre class="programlisting">
+Active  readable   b
+</pre>
+<p></p>
+<p class="since">Since 2.3.0</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="gdbus-property-org-freedesktop-UDisks2-Block-ZRAM.NumReads"></a><h3>The "NumReads" property</h3>
+<pre class="programlisting">
+NumReads  readable   t
+</pre>
+<p></p>
+<p class="since">Since 2.3.0</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="gdbus-property-org-freedesktop-UDisks2-Block-ZRAM.NumWrites"></a><h3>The "NumWrites" property</h3>
+<pre class="programlisting">
+NumWrites  readable   t
+</pre>
+<p></p>
+<p class="since">Since 2.3.0</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="gdbus-property-org-freedesktop-UDisks2-Block-ZRAM.InvalidIo"></a><h3>The "InvalidIo" property</h3>
+<pre class="programlisting">
+InvalidIo  readable   t
+</pre>
+<p></p>
+<p class="since">Since 2.3.0</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="gdbus-property-org-freedesktop-UDisks2-Block-ZRAM.ZeroPages"></a><h3>The "ZeroPages" property</h3>
+<pre class="programlisting">
+ZeroPages  readable   t
+</pre>
+<p></p>
+<p class="since">Since 2.3.0</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="gdbus-property-org-freedesktop-UDisks2-Block-ZRAM.OrigDataSize"></a><h3>The "OrigDataSize" property</h3>
+<pre class="programlisting">
+OrigDataSize  readable   t
+</pre>
+<p></p>
+<p class="since">Since 2.3.0</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="gdbus-property-org-freedesktop-UDisks2-Block-ZRAM.ComprDataSize"></a><h3>The "ComprDataSize" property</h3>
+<pre class="programlisting">
+ComprDataSize  readable   t
+</pre>
+<p></p>
+<p class="since">Since 2.3.0</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="gdbus-property-org-freedesktop-UDisks2-Block-ZRAM.MemUsedTotal"></a><h3>The "MemUsedTotal" property</h3>
+<pre class="programlisting">
+MemUsedTotal  readable   t
+</pre>
+<p></p>
+<p class="since">Since 2.3.0</p>
+</div>
+</div>
+</div>
+<div class="footer">
+<hr>Generated by GTK-Doc V1.28</div>
+</body>
+</html>

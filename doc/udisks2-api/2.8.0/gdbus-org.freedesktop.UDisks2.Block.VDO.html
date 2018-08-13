@@ -1,0 +1,891 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>org.freedesktop.UDisks2.Block.VDO: UDisks Reference Manual</title>
+<meta name="generator" content="DocBook XSL Stylesheets Vsnapshot">
+<link rel="home" href="index.html" title="UDisks Reference Manual">
+<link rel="up" href="ch02.html" title="D-Bus Interfaces">
+<link rel="prev" href="gdbus-org.freedesktop.UDisks2.Manager.VDO.html" title="org.freedesktop.UDisks2.Manager.VDO">
+<link rel="next" href="ref-library.html" title="Part III. Library API Reference">
+<meta name="generator" content="GTK-Doc V1.28 (XML mode)">
+<link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<table class="navigation" id="top" width="100%" summary="Navigation header" cellpadding="2" cellspacing="5"><tr valign="middle">
+<td width="100%" align="left" class="shortcuts">
+<a href="#" class="shortcut">Top</a><span id="nav_description">  <span class="dim">|</span> 
+                  <a href="#gdbus-org.freedesktop.UDisks2.Block.VDO.description" class="shortcut">Description</a></span><span id="nav_properties">  <span class="dim">|</span> 
+                  <a href="#gdbus-org.freedesktop.UDisks2.Block.VDO.properties" class="shortcut">Properties</a></span>
+</td>
+<td><a accesskey="h" href="index.html"><img src="home.png" width="16" height="16" border="0" alt="Home"></a></td>
+<td><a accesskey="u" href="ch02.html"><img src="up.png" width="16" height="16" border="0" alt="Up"></a></td>
+<td><a accesskey="p" href="gdbus-org.freedesktop.UDisks2.Manager.VDO.html"><img src="left.png" width="16" height="16" border="0" alt="Prev"></a></td>
+<td><a accesskey="n" href="ref-library.html"><img src="right.png" width="16" height="16" border="0" alt="Next"></a></td>
+</tr></table>
+<div class="refentry">
+<a name="gdbus-org.freedesktop.UDisks2.Block.VDO"></a><div class="titlepage"></div>
+<div class="refnamediv"><table width="100%"><tr>
+<td valign="top">
+<h2><span class="refentrytitle"><a name="gdbus-interface-org-freedesktop-UDisks2-Block-VDO.top_of_page"></a>org.freedesktop.UDisks2.Block.VDO</span></h2>
+<p>org.freedesktop.UDisks2.Block.VDO — block object interface for managing a running VDO volume</p>
+</td>
+<td class="gallery_image" valign="top" align="right"></td>
+</tr></table></div>
+<div class="refsynopsisdiv">
+<h2>Methods</h2>
+<pre class="synopsis">
+<a class="link" href="gdbus-org.freedesktop.UDisks2.Block.VDO.html#gdbus-method-org-freedesktop-UDisks2-Block-VDO.Deactivate" title="The Deactivate() method">Deactivate</a>          (IN  a{sv} options);
+<a class="link" href="gdbus-org.freedesktop.UDisks2.Block.VDO.html#gdbus-method-org-freedesktop-UDisks2-Block-VDO.EnableCompression" title="The EnableCompression() method">EnableCompression</a>   (IN  b     enable,
+                     IN  a{sv} options);
+<a class="link" href="gdbus-org.freedesktop.UDisks2.Block.VDO.html#gdbus-method-org-freedesktop-UDisks2-Block-VDO.EnableDeduplication" title="The EnableDeduplication() method">EnableDeduplication</a> (IN  b     enable,
+                     IN  a{sv} options);
+<a class="link" href="gdbus-org.freedesktop.UDisks2.Block.VDO.html#gdbus-method-org-freedesktop-UDisks2-Block-VDO.ChangeWritePolicy" title="The ChangeWritePolicy() method">ChangeWritePolicy</a>   (IN  s     write_policy,
+                     IN  a{sv} options);
+<a class="link" href="gdbus-org.freedesktop.UDisks2.Block.VDO.html#gdbus-method-org-freedesktop-UDisks2-Block-VDO.Remove" title="The Remove() method">Remove</a>              (IN  b     force,
+                     IN  a{sv} options);
+<a class="link" href="gdbus-org.freedesktop.UDisks2.Block.VDO.html#gdbus-method-org-freedesktop-UDisks2-Block-VDO.Stop" title="The Stop() method">Stop</a>                (IN  b     force,
+                     IN  a{sv} options);
+<a class="link" href="gdbus-org.freedesktop.UDisks2.Block.VDO.html#gdbus-method-org-freedesktop-UDisks2-Block-VDO.GrowLogical" title="The GrowLogical() method">GrowLogical</a>         (IN  t     size,
+                     IN  a{sv} options);
+<a class="link" href="gdbus-org.freedesktop.UDisks2.Block.VDO.html#gdbus-method-org-freedesktop-UDisks2-Block-VDO.GrowPhysical" title="The GrowPhysical() method">GrowPhysical</a>        (IN  a{sv} options);
+<a class="link" href="gdbus-org.freedesktop.UDisks2.Block.VDO.html#gdbus-method-org-freedesktop-UDisks2-Block-VDO.GetStatistics" title="The GetStatistics() method">GetStatistics</a>       (IN  a{sv} options,
+                     OUT a{ss} stats);
+</pre>
+</div>
+<div class="refsect1">
+<a name="id-1.3.3.31.4"></a><h2>Properties</h2>
+<pre class="synopsis">
+<a class="link" href="gdbus-org.freedesktop.UDisks2.Block.VDO.html#gdbus-property-org-freedesktop-UDisks2-Block-VDO.Name" title='The "Name" property'>Name</a>           readable   s
+<a class="link" href="gdbus-org.freedesktop.UDisks2.Block.VDO.html#gdbus-property-org-freedesktop-UDisks2-Block-VDO.Active" title='The "Active" property'>Active</a>         readable   b
+<a class="link" href="gdbus-org.freedesktop.UDisks2.Block.VDO.html#gdbus-property-org-freedesktop-UDisks2-Block-VDO.Compression" title='The "Compression" property'>Compression</a>    readable   b
+<a class="link" href="gdbus-org.freedesktop.UDisks2.Block.VDO.html#gdbus-property-org-freedesktop-UDisks2-Block-VDO.Deduplication" title='The "Deduplication" property'>Deduplication</a>  readable   b
+<a class="link" href="gdbus-org.freedesktop.UDisks2.Block.VDO.html#gdbus-property-org-freedesktop-UDisks2-Block-VDO.LogicalSize" title='The "LogicalSize" property'>LogicalSize</a>    readable   t
+<a class="link" href="gdbus-org.freedesktop.UDisks2.Block.VDO.html#gdbus-property-org-freedesktop-UDisks2-Block-VDO.PhysicalSize" title='The "PhysicalSize" property'>PhysicalSize</a>   readable   t
+<a class="link" href="gdbus-org.freedesktop.UDisks2.Block.VDO.html#gdbus-property-org-freedesktop-UDisks2-Block-VDO.IndexMemory" title='The "IndexMemory" property'>IndexMemory</a>    readable   t
+<a class="link" href="gdbus-org.freedesktop.UDisks2.Block.VDO.html#gdbus-property-org-freedesktop-UDisks2-Block-VDO.WritePolicy" title='The "WritePolicy" property'>WritePolicy</a>    readable   s
+</pre>
+</div>
+<div class="refsect1">
+<a name="gdbus-interface-org-freedesktop-UDisks2-Block-VDO"></a><h2>Description</h2>
+<p>      This interface is exposed for block objects that represent existing and running VDO volumes.
+</p>
+<p>      Due to the VDO design not every change trigerred outside of udisks gets
+      propagated via <code class="literal">udev</code> and may go unnoticed. It's guaranteed
+      that changes made via udisks are properly reflected in the object properties
+      though.
+</p>
+<p class="since">Since 2.8.0</p>
+</div>
+<div class="refsect1">
+<a name="gdbus-methods-org.freedesktop.UDisks2.Block.VDO"></a><h2>Method Details</h2>
+<div class="refsect2">
+<a name="gdbus-method-org-freedesktop-UDisks2-Block-VDO.Deactivate"></a><h3>The Deactivate() method</h3>
+<pre class="programlisting">
+Deactivate (IN  a{sv} options);
+</pre>
+<p>        Deactivates the VDO volume. Deactivating a currently running volume does
+        not stop it.  Once a volume is deactivated it needs to be activated again
+        using the <a class="link" href="gdbus-org.freedesktop.UDisks2.Manager.VDO.html#gdbus-method-org-freedesktop-UDisks2-Manager-VDO.ActivateVolumeByName" title="The ActivateVolumeByName() method">ActivateVolumeByName()</a> method call
+        on the manager object.
+</p>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody><tr>
+<td><p><span class="term"><code class="literal">IN a{sv} <em class="parameter"><code>options</code></em></code>:</span></p></td>
+<td><p>Additional options (currently unused except for <a class="link" href="udisks-std-options.html" title="The options parameter">standard options</a>).</p></td>
+</tr></tbody>
+</table></div>
+<p class="since">Since 2.8.0</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="gdbus-method-org-freedesktop-UDisks2-Block-VDO.EnableCompression"></a><h3>The EnableCompression() method</h3>
+<pre class="programlisting">
+EnableCompression (IN  b     enable,
+                   IN  a{sv} options);
+</pre>
+<p>        Enables or disables compression on the VDO volume. If the VDO volume
+        is running, takes effect immediately.
+</p>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><code class="literal">IN b <em class="parameter"><code>enable</code></em></code>:</span></p></td>
+<td><p>A boolean value indicating whether compression should be enabled.</p></td>
+</tr>
+<tr>
+<td><p><span class="term"><code class="literal">IN a{sv} <em class="parameter"><code>options</code></em></code>:</span></p></td>
+<td><p>Additional options (currently unused except for <a class="link" href="udisks-std-options.html" title="The options parameter">standard options</a>).</p></td>
+</tr>
+</tbody>
+</table></div>
+<p class="since">Since 2.8.0</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="gdbus-method-org-freedesktop-UDisks2-Block-VDO.EnableDeduplication"></a><h3>The EnableDeduplication() method</h3>
+<pre class="programlisting">
+EnableDeduplication (IN  b     enable,
+                     IN  a{sv} options);
+</pre>
+<p>        Enables or disables deduplication on the VDO volume. If the VDO volume
+        is running, takes effect immediately.
+</p>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><code class="literal">IN b <em class="parameter"><code>enable</code></em></code>:</span></p></td>
+<td><p>A boolean value indicating whether deduplication should be enabled.</p></td>
+</tr>
+<tr>
+<td><p><span class="term"><code class="literal">IN a{sv} <em class="parameter"><code>options</code></em></code>:</span></p></td>
+<td><p>Additional options (currently unused except for <a class="link" href="udisks-std-options.html" title="The options parameter">standard options</a>).</p></td>
+</tr>
+</tbody>
+</table></div>
+<p class="since">Since 2.8.0</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="gdbus-method-org-freedesktop-UDisks2-Block-VDO.ChangeWritePolicy"></a><h3>The ChangeWritePolicy() method</h3>
+<pre class="programlisting">
+ChangeWritePolicy (IN  s     write_policy,
+                   IN  a{sv} options);
+</pre>
+<p>        Modifies the write policy of the running VDO volume. Known <em class="parameter"><code>write_policy</code></em>
+        values include:
+        </p>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term">sync</span></p></td>
+<td><p>Writes are acknowledged only after data is on stable storage. 'sync' policy is not supported if the underlying storage is not also synchronous.</p></td>
+</tr>
+<tr>
+<td><p><span class="term">async</span></p></td>
+<td><p>Writes are acknowledged when data has been cached for writing to stable storage; data which has not been flushed is not guaranteed to persist in this mode.</p></td>
+</tr>
+<tr>
+<td><p><span class="term">auto</span></p></td>
+<td><p>VDO will check the storage device and determine whether it supports flushes. If it does, VDO will run in async mode, otherwise it will run in sync mode.</p></td>
+</tr>
+</tbody>
+</table></div>
+<p>
+</p>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><code class="literal">IN s <em class="parameter"><code>write_policy</code></em></code>:</span></p></td>
+<td><p>The desired write policy.</p></td>
+</tr>
+<tr>
+<td><p><span class="term"><code class="literal">IN a{sv} <em class="parameter"><code>options</code></em></code>:</span></p></td>
+<td><p>Additional options (currently unused except for <a class="link" href="udisks-std-options.html" title="The options parameter">standard options</a>).</p></td>
+</tr>
+</tbody>
+</table></div>
+<p class="since">Since 2.8.0</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="gdbus-method-org-freedesktop-UDisks2-Block-VDO.Remove"></a><h3>The Remove() method</h3>
+<pre class="programlisting">
+Remove (IN  b     force,
+        IN  a{sv} options);
+</pre>
+<p>        Removes the VDO volume and associated indexes.
+</p>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><code class="literal">IN b <em class="parameter"><code>force</code></em></code>:</span></p></td>
+<td><p>A boolean value indicating whether an unmount attempt should be performed first.</p></td>
+</tr>
+<tr>
+<td><p><span class="term"><code class="literal">IN a{sv} <em class="parameter"><code>options</code></em></code>:</span></p></td>
+<td><p>Additional options (currently unused except for <a class="link" href="udisks-std-options.html" title="The options parameter">standard options</a>).</p></td>
+</tr>
+</tbody>
+</table></div>
+<p class="since">Since 2.8.0</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="gdbus-method-org-freedesktop-UDisks2-Block-VDO.Stop"></a><h3>The Stop() method</h3>
+<pre class="programlisting">
+Stop (IN  b     force,
+      IN  a{sv} options);
+</pre>
+<p>        Stops a running VDO volume and associated services. Once a volume is stopped
+        it needs to be started again using the <a class="link" href="gdbus-org.freedesktop.UDisks2.Manager.VDO.html#gdbus-method-org-freedesktop-UDisks2-Manager-VDO.StartVolumeByName" title="The StartVolumeByName() method">StartVolumeByName()</a>
+        method call on the manager object.
+</p>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><code class="literal">IN b <em class="parameter"><code>force</code></em></code>:</span></p></td>
+<td><p>A boolean value indicating whether an unmount attempt should be performed first.</p></td>
+</tr>
+<tr>
+<td><p><span class="term"><code class="literal">IN a{sv} <em class="parameter"><code>options</code></em></code>:</span></p></td>
+<td><p>Additional options (currently unused except for <a class="link" href="udisks-std-options.html" title="The options parameter">standard options</a>).</p></td>
+</tr>
+</tbody>
+</table></div>
+<p class="since">Since 2.8.0</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="gdbus-method-org-freedesktop-UDisks2-Block-VDO.GrowLogical"></a><h3>The GrowLogical() method</h3>
+<pre class="programlisting">
+GrowLogical (IN  t     size,
+             IN  a{sv} options);
+</pre>
+<p>        Grows the logical size of a VDO volume to a size specified by the <em class="parameter"><code>size</code></em> argument. The volume must be running.
+</p>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><code class="literal">IN t <em class="parameter"><code>size</code></em></code>:</span></p></td>
+<td><p>The logical VDO volume size in bytes. The maximum size supported is 4P.</p></td>
+</tr>
+<tr>
+<td><p><span class="term"><code class="literal">IN a{sv} <em class="parameter"><code>options</code></em></code>:</span></p></td>
+<td><p>Additional options (currently unused except for <a class="link" href="udisks-std-options.html" title="The options parameter">standard options</a>).</p></td>
+</tr>
+</tbody>
+</table></div>
+<p class="since">Since 2.8.0</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="gdbus-method-org-freedesktop-UDisks2-Block-VDO.GrowPhysical"></a><h3>The GrowPhysical() method</h3>
+<pre class="programlisting">
+GrowPhysical (IN  a{sv} options);
+</pre>
+<p>        Grows the physical size of a VDO volume to the size of underlying block device. The volume must be running.
+</p>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody><tr>
+<td><p><span class="term"><code class="literal">IN a{sv} <em class="parameter"><code>options</code></em></code>:</span></p></td>
+<td><p>Additional options (currently unused except for <a class="link" href="udisks-std-options.html" title="The options parameter">standard options</a>).</p></td>
+</tr></tbody>
+</table></div>
+<p class="since">Since 2.8.0</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="gdbus-method-org-freedesktop-UDisks2-Block-VDO.GetStatistics"></a><h3>The GetStatistics() method</h3>
+<pre class="programlisting">
+GetStatistics (IN  a{sv} options,
+               OUT a{ss} stats);
+</pre>
+<p>        Retrieves statistics for the specified VDO volume. Statistics are collected from the values exposed by the kernel <code class="literal">kvdo</code> module.
+</p>
+<p>        List of known keys:
+        </p>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term">writeAmplificationRatio</span></p></td>
+<td><p>The average number of block writes to the underlying storage per block written to the VDO device.</p></td>
+</tr>
+<tr>
+<td><p><span class="term">oneKBlocks</span></p></td>
+<td><p>The total number of 1K blocks allocated for a VDO volume (= physical volume size * block size / 1024).</p></td>
+</tr>
+<tr>
+<td><p><span class="term">oneKBlocksUsed</span></p></td>
+<td><p>The total number of 1K blocks used on a VDO volume (= physical blocks used * block size / 1024).</p></td>
+</tr>
+<tr>
+<td><p><span class="term">oneKBlocksAvailable</span></p></td>
+<td><p>The total number of 1K blocks available on a VDO volume (= physical blocks free * block size / 1024).</p></td>
+</tr>
+<tr>
+<td><p><span class="term">usedPercent</span></p></td>
+<td><p>The percentage of physical blocks used on a VDO volume (= used blocks / allocated blocks * 100).</p></td>
+</tr>
+<tr>
+<td><p><span class="term">savings, savingPercent</span></p></td>
+<td><p>The percentage of physical blocks saved on a VDO volume (= [logical blocks used - physical blocks used] / logical blocks used).</p></td>
+</tr>
+<tr>
+<td><p><span class="term">fiveTwelveByteEmulation</span></p></td>
+<td><p>Indicates whether 512 byte emulation is on or off for the volume.</p></td>
+</tr>
+<tr>
+<td><p><span class="term">allocator_slab_count</span></p></td>
+<td><p>The total number of slabs.</p></td>
+</tr>
+<tr>
+<td><p><span class="term">allocator_slabs_opened</span></p></td>
+<td><p> The total number of slabs from which blocks have ever been allocated.</p></td>
+</tr>
+<tr>
+<td><p><span class="term">allocator_slabs_reopened</span></p></td>
+<td><p>The number of times slabs have been re-opened since the VDO was started.</p></td>
+</tr>
+<tr>
+<td><p><span class="term">bios_acknowledged_discard, bios_acknowledged_flush, bios_acknowledged_fua, bios_acknowledged_read, bios_acknowledged_write</span></p></td>
+<td><p>The number of block I/O requests acknowledged by VDO.</p></td>
+</tr>
+<tr>
+<td><p><span class="term">bios_acknowledged_partial_discard, bios_acknowledged_partial_flush, bios_acknowledged_partial_fua, bios_acknowledged_partial_read, bios_acknowledged_partial_write</span></p></td>
+<td><p>The number of partial block I/O requests acknowledged by VDO. Applies only to 512-byte emulation mode.</p></td>
+</tr>
+<tr>
+<td><p><span class="term">bios_in_discard, bios_in_flush, bios_in_fua, bios_in_read, bios_in_write</span></p></td>
+<td><p>The number of block I/O requests received by VDO.</p></td>
+</tr>
+<tr>
+<td><p><span class="term">bios_in_partial_discard, bios_in_partial_flush, bios_in_partial_fua, bios_in_partial_read, bios_in_partial_write</span></p></td>
+<td><p>The number of partial block I/O requests received by VDO. Applies only to 512-byte emulation mode.</p></td>
+</tr>
+<tr>
+<td><p><span class="term">bios_in_progress_discard, bios_in_progress_flush, bios_in_progress_fua, bios_in_progress_read, bios_in_progress_write</span></p></td>
+<td><p>The number of bios submitted to the VDO which have not yet been acknowledged.</p></td>
+</tr>
+<tr>
+<td><p><span class="term">bios_journal_completed_discard, bios_journal_completed_flush, bios_journal_completed_fua, bios_journal_completed_read, bios_journal_completed_write</span></p></td>
+<td><p>The number of recovery journal block I/O requests completed by the storage device.</p></td>
+</tr>
+<tr>
+<td><p><span class="term">bios_journal_discard, bios_journal_flush, bios_journal_fua, bios_journal_read, bios_journal_write</span></p></td>
+<td><p>The number of recovery journal block I/O requests submitted by VDO to the storage device.</p></td>
+</tr>
+<tr>
+<td><p><span class="term">bios_meta_completed_discard, bios_meta_completed_flush, bios_meta_completed_fua, bios_meta_completed_read, bios_meta_completed_write</span></p></td>
+<td><p>The number of metadata block I/O requests completed by the storage device.</p></td>
+</tr>
+<tr>
+<td><p><span class="term">bios_meta_discard, bios_meta_flush, bios_meta_fua, bios_meta_read", bios_meta_write</span></p></td>
+<td><p>The number of metadata block I/O requests submitted by VDO to the storage device.</p></td>
+</tr>
+<tr>
+<td><p><span class="term">bios_out_completed_discard, bios_out_completed_flush, bios_out_completed_fua, bios_out_completed_read, bios_out_completed_write</span></p></td>
+<td><p>The number of non-metadata block I/O requests completed by the storage device.</p></td>
+</tr>
+<tr>
+<td><p><span class="term">bios_out_discard, bios_out_flush, bios_out_fua, bios_out_read, bios_out_write</span></p></td>
+<td><p>The number of non-metadata block I/O requests submitted by VDO to the storage device.</p></td>
+</tr>
+<tr>
+<td><p><span class="term">bios_page_cache_completed_discard, bios_page_cache_completed_flush, bios_page_cache_completed_fua, bios_page_cache_completed_read, bios_page_cache_completed_write</span></p></td>
+<td><p>The number of block map I/O requests completed by the storage device.</p></td>
+</tr>
+<tr>
+<td><p><span class="term">bios_page_cache_discard, bios_page_cache_flush, bios_page_cache_fua, bios_page_cache_read, bios_page_cache_write</span></p></td>
+<td><p>The number of block map I/O requests submitted by VDO to the storage device.</p></td>
+</tr>
+<tr>
+<td><p><span class="term">block_map_cache_pressure</span></p></td>
+<td><p>The number of times a free page was not available when needed.</p></td>
+</tr>
+<tr>
+<td><p><span class="term">block_map_cache_size</span></p></td>
+<td><p>The size of the block map cache, in bytes.</p></td>
+</tr>
+<tr>
+<td><p><span class="term">block_map_clean_pages</span></p></td>
+<td><p>The number of clean pages in the block map cache.</p></td>
+</tr>
+<tr>
+<td><p><span class="term">block_map_dirty_pages</span></p></td>
+<td><p>The number of dirty pages in the block map cache.</p></td>
+</tr>
+<tr>
+<td><p><span class="term">block_map_discard_required</span></p></td>
+<td><p>The total number of block map requests that required a page to be discarded.</p></td>
+</tr>
+<tr>
+<td><p><span class="term">block_map_failed_pages</span></p></td>
+<td><p>The number of block map cache pages that have write errors.</p></td>
+</tr>
+<tr>
+<td><p><span class="term">block_map_failed_reads</span></p></td>
+<td><p>The total number of block map read errors.</p></td>
+</tr>
+<tr>
+<td><p><span class="term">block_map_failed_writes</span></p></td>
+<td><p>The total number of block map write errors.</p></td>
+</tr>
+<tr>
+<td><p><span class="term">block_map_fetch_required</span></p></td>
+<td><p>The total number of requests that required a page fetch.</p></td>
+</tr>
+<tr>
+<td><p><span class="term">block_map_flush_count</span></p></td>
+<td><p>The total number of flushes issued by the block map.</p></td>
+</tr>
+<tr>
+<td><p><span class="term">block_map_found_in_cache</span></p></td>
+<td><p>The total number of block map cache hits.</p></td>
+</tr>
+<tr>
+<td><p><span class="term">block_map_free_pages</span></p></td>
+<td><p>The number of free pages in the block map cache.</p></td>
+</tr>
+<tr>
+<td><p><span class="term">block_map_incoming_pages</span></p></td>
+<td><p>The number of block map cache pages that are being read into the cache.</p></td>
+</tr>
+<tr>
+<td><p><span class="term">block_map_outgoing_pages</span></p></td>
+<td><p>The number of block map cache pages that are being written.</p></td>
+</tr>
+<tr>
+<td><p><span class="term">block_map_pages_loaded</span></p></td>
+<td><p>The total number of page fetches.</p></td>
+</tr>
+<tr>
+<td><p><span class="term">block_map_pages_saved</span></p></td>
+<td><p>The total number of page saves.</p></td>
+</tr>
+<tr>
+<td><p><span class="term">block_map_read_count</span></p></td>
+<td><p>The total number of block map page reads.</p></td>
+</tr>
+<tr>
+<td><p><span class="term">block_map_read_outgoing</span></p></td>
+<td><p>The total number of block map reads for pages that were being written.</p></td>
+</tr>
+<tr>
+<td><p><span class="term">block_map_reclaimed</span></p></td>
+<td><p>The total number of block map pages that were reclaimed.</p></td>
+</tr>
+<tr>
+<td><p><span class="term">block_map_wait_for_page</span></p></td>
+<td><p>The total number of requests that had to wait for a page.</p></td>
+</tr>
+<tr>
+<td><p><span class="term">block_map_write_count</span></p></td>
+<td><p>The total number of block map page writes.</p></td>
+</tr>
+<tr>
+<td><p><span class="term">block_size</span></p></td>
+<td><p>The block size of a VDO volume, in bytes.</p></td>
+</tr>
+<tr>
+<td><p><span class="term">complete_recoveries</span></p></td>
+<td><p>The number of times a VDO volume has recovered from an unclean shutdown.</p></td>
+</tr>
+<tr>
+<td><p><span class="term">currentVIOs_in_progress</span></p></td>
+<td><p>The number of I/O requests the VDO is current processing.</p></td>
+</tr>
+<tr>
+<td><p><span class="term">data_blocks_used</span></p></td>
+<td><p>The number of physical blocks currently in use by a VDO volume to store data.</p></td>
+</tr>
+<tr>
+<td><p><span class="term">dedupe_advice_timeouts</span></p></td>
+<td><p>The number of times deduplication queries timed out.</p></td>
+</tr>
+<tr>
+<td><p><span class="term">errors_invalid_advicePBNCount</span></p></td>
+<td><p>The number of times the index returned invalid advice.</p></td>
+</tr>
+<tr>
+<td><p><span class="term">errors_no_space_error_count</span></p></td>
+<td><p>The number of write requests which failed due to the VDO volume being out of space.</p></td>
+</tr>
+<tr>
+<td><p><span class="term">errors_read_only_error_count</span></p></td>
+<td><p>The number of write requests which failed due to the VDO volume being in read-only mode.</p></td>
+</tr>
+<tr>
+<td><p><span class="term">flush_out</span></p></td>
+<td><p>The number of flush requests submitted by VDO to the underlying storage.</p></td>
+</tr>
+<tr>
+<td><p><span class="term">hash_lock_concurrent_data_matches</span></p></td>
+<td><p></p></td>
+</tr>
+<tr>
+<td><p><span class="term">hash_lock_concurrent_hash_collisions</span></p></td>
+<td><p></p></td>
+</tr>
+<tr>
+<td><p><span class="term">hash_lock_dedupe_advice_stale</span></p></td>
+<td><p>The number of times deduplication advice was incorrect.</p></td>
+</tr>
+<tr>
+<td><p><span class="term">hash_lock_dedupe_advice_valid</span></p></td>
+<td><p>The number of times deduplication advice was correct.</p></td>
+</tr>
+<tr>
+<td><p><span class="term">index_curr_dedupe_queries</span></p></td>
+<td><p>The number of deduplication queries currently in flight.</p></td>
+</tr>
+<tr>
+<td><p><span class="term">index_entries_indexed</span></p></td>
+<td><p></p></td>
+</tr>
+<tr>
+<td><p><span class="term">index_max_dedupe_queries</span></p></td>
+<td><p>The maximum number of in-flight deduplication queries.</p></td>
+</tr>
+<tr>
+<td><p><span class="term">index_posts_found</span></p></td>
+<td><p></p></td>
+</tr>
+<tr>
+<td><p><span class="term">index_posts_not_found</span></p></td>
+<td><p></p></td>
+</tr>
+<tr>
+<td><p><span class="term">index_queries_found</span></p></td>
+<td><p></p></td>
+</tr>
+<tr>
+<td><p><span class="term">index_queries_not_found</span></p></td>
+<td><p></p></td>
+</tr>
+<tr>
+<td><p><span class="term">index_updates_found</span></p></td>
+<td><p></p></td>
+</tr>
+<tr>
+<td><p><span class="term">index_updates_not_found</span></p></td>
+<td><p></p></td>
+</tr>
+<tr>
+<td><p><span class="term">in_recovery_mode</span></p></td>
+<td><p></p></td>
+</tr>
+<tr>
+<td><p><span class="term">instance</span></p></td>
+<td><p>The VDO instance.</p></td>
+</tr>
+<tr>
+<td><p><span class="term">journal_blocks_batching</span></p></td>
+<td><p>The number of journal block writes started minus the number of journal blocks written.</p></td>
+</tr>
+<tr>
+<td><p><span class="term">journal_blocks_committed</span></p></td>
+<td><p>The number of journal blocks written to storage.</p></td>
+</tr>
+<tr>
+<td><p><span class="term">journal_blocks_started</span></p></td>
+<td><p>The number of journal blocks which have been touched in memory.</p></td>
+</tr>
+<tr>
+<td><p><span class="term">journal_blocks_writing</span></p></td>
+<td><p>The number of journal blocks written (with metadatata in active memory) minus the number of journal blocks committed.</p></td>
+</tr>
+<tr>
+<td><p><span class="term">journal_blocks_written</span></p></td>
+<td><p>The total number of journal blocks for which a write has been issued.</p></td>
+</tr>
+<tr>
+<td><p><span class="term">journal_disk_full</span></p></td>
+<td><p>The number of times a request could not make a recovery journal entry because the recovery journal was full.</p></td>
+</tr>
+<tr>
+<td><p><span class="term">journal_entries_batching</span></p></td>
+<td><p>The number of journal entry writes started minus the number of journal entries written.</p></td>
+</tr>
+<tr>
+<td><p><span class="term">journal_entries_committed</span></p></td>
+<td><p>The number of journal entries written to storage.</p></td>
+</tr>
+<tr>
+<td><p><span class="term">journal_entries_started</span></p></td>
+<td><p>The number of journal entries which have been made in memory.</p></td>
+</tr>
+<tr>
+<td><p><span class="term">journal_entries_writing</span></p></td>
+<td><p>The number of journal entries in submitted writes minus the number of journal entries committed to storage.</p></td>
+</tr>
+<tr>
+<td><p><span class="term">journal_entries_written</span></p></td>
+<td><p>The total number of journal entries for which a write has been issued.</p></td>
+</tr>
+<tr>
+<td><p><span class="term">journal_slab_journal_commits_requested</span></p></td>
+<td><p>The number of times the recovery journal requested slab journal commits.</p></td>
+</tr>
+<tr>
+<td><p><span class="term">logical_blocks</span></p></td>
+<td><p>The maximum number of logical blocks that can be mapped by a VDO volume.</p></td>
+</tr>
+<tr>
+<td><p><span class="term">logical_block_size</span></p></td>
+<td><p></p></td>
+</tr>
+<tr>
+<td><p><span class="term">logical_blocks_used</span></p></td>
+<td><p>The number of logical blocks currently mapped.</p></td>
+</tr>
+<tr>
+<td><p><span class="term">maxVIOs</span></p></td>
+<td><p>The maximum number of simultaneous I/O requests the VDO has processed.</p></td>
+</tr>
+<tr>
+<td><p><span class="term">memory_usage_bios_used</span></p></td>
+<td><p>KVDO module bios use.</p></td>
+</tr>
+<tr>
+<td><p><span class="term">memory_usage_bytes_used</span></p></td>
+<td><p>KVDO module bytes use.</p></td>
+</tr>
+<tr>
+<td><p><span class="term">memory_usage_peak_bio_count</span></p></td>
+<td><p>KVDO module peak bio coun.</p></td>
+</tr>
+<tr>
+<td><p><span class="term">memory_usage_peak_bytes_used</span></p></td>
+<td><p>KVDO module peak bytes use.</p></td>
+</tr>
+<tr>
+<td><p><span class="term">mode</span></p></td>
+<td><p>Indicates whether a VDO volume is operating normally, is in recovery mode, or is in read-only mode.</p></td>
+</tr>
+<tr>
+<td><p><span class="term">overhead_blocks_used</span></p></td>
+<td><p>The number of physical blocks currently in use by a VDO volume to store VDO metadata.</p></td>
+</tr>
+<tr>
+<td><p><span class="term">packer_compressed_blocks_written</span></p></td>
+<td><p>The number of physical blocks of compressed data that have been written since the VDO volume was last restarted. The remaining fields are primarily intended for software support and are subject to change in future releases; management tools should not rely upon them.</p></td>
+</tr>
+<tr>
+<td><p><span class="term">packer_compressed_fragments_in_packer</span></p></td>
+<td><p>The number of compressed fragments being processed that have not yet been written.</p></td>
+</tr>
+<tr>
+<td><p><span class="term">packer_compressed_fragments_written</span></p></td>
+<td><p>The number of compressed fragments that have been written since the VDO volume was last restarted.</p></td>
+</tr>
+<tr>
+<td><p><span class="term">physical_blocks</span></p></td>
+<td><p>The total number of physical blocks allocated for a VDO volume.</p></td>
+</tr>
+<tr>
+<td><p><span class="term">read_cache_accesses</span></p></td>
+<td><p>The number of times VDO searched the read cache.</p></td>
+</tr>
+<tr>
+<td><p><span class="term">read_cache_data_hits</span></p></td>
+<td><p>The number of times VDO found an entry in the read cache for the desired data block, where the block's contents had been read into memory.</p></td>
+</tr>
+<tr>
+<td><p><span class="term">read_cache_hits</span></p></td>
+<td><p>The number of times VDO found an entry in the read cache for the desired data block, whether or not the block's contents had yet been read into memory.</p></td>
+</tr>
+<tr>
+<td><p><span class="term">read_only_recoveries</span></p></td>
+<td><p>The number of times a VDO volume has been recovered from read-only mode.</p></td>
+</tr>
+<tr>
+<td><p><span class="term">recovery_percentage</span></p></td>
+<td><p>Indicates online recovery progress (\<code class="constant"></code>), or N/A if the volume is not in recovery mode.</p></td>
+</tr>
+<tr>
+<td><p><span class="term">ref_counts_blocks_written</span></p></td>
+<td><p>The number of reference block writes issued.</p></td>
+</tr>
+<tr>
+<td><p><span class="term">slab_journal_blocked_count</span></p></td>
+<td><p>The number of times an entry was added to a slab journal that was over the blocking threshold.</p></td>
+</tr>
+<tr>
+<td><p><span class="term">slab_journal_blocks_written</span></p></td>
+<td><p>The number of slab journal block writes issued.</p></td>
+</tr>
+<tr>
+<td><p><span class="term">slab_journal_disk_full_count</span></p></td>
+<td><p>The number of times an on-disk slab journal was full.</p></td>
+</tr>
+<tr>
+<td><p><span class="term">slab_journal_flush_count</span></p></td>
+<td><p>The number of times an entry was added to a slab journal that was over the flush threshold.</p></td>
+</tr>
+<tr>
+<td><p><span class="term">slab_journal_tail_busy_count</span></p></td>
+<td><p>The number of times write requests blocked waiting for a slab journal write.</p></td>
+</tr>
+<tr>
+<td><p><span class="term">slab_summary_blocks_written</span></p></td>
+<td><p>The number of slab summary block writes issued.</p></td>
+</tr>
+<tr>
+<td><p><span class="term">write_policy</span></p></td>
+<td><p>The write policy (sync or async).</p></td>
+</tr>
+</tbody>
+</table></div>
+<p>
+</p>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><code class="literal">IN a{sv} <em class="parameter"><code>options</code></em></code>:</span></p></td>
+<td><p>Additional options (currently unused except for <a class="link" href="udisks-std-options.html" title="The options parameter">standard options</a>).</p></td>
+</tr>
+<tr>
+<td><p><span class="term"><code class="literal">OUT a{ss} <em class="parameter"><code>stats</code></em></code>:</span></p></td>
+<td><p>Array of key-value string pairs</p></td>
+</tr>
+</tbody>
+</table></div>
+<p class="since">Since 2.8.0</p>
+</div>
+</div>
+<div class="refsect1">
+<a name="gdbus-properties-org.freedesktop.UDisks2.Block.VDO"></a><h2>Property Details</h2>
+<div class="refsect2">
+<a name="gdbus-property-org-freedesktop-UDisks2-Block-VDO.Name"></a><h3>The "Name" property</h3>
+<pre class="programlisting">
+Name  readable   s
+</pre>
+<p>         The name of the VDO device.
+</p>
+<p class="since">Since 2.8.0</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="gdbus-property-org-freedesktop-UDisks2-Block-VDO.Active"></a><h3>The "Active" property</h3>
+<pre class="programlisting">
+Active  readable   b
+</pre>
+<p>         Indicates whether the device is active.
+</p>
+<p class="since">Since 2.8.0</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="gdbus-property-org-freedesktop-UDisks2-Block-VDO.Compression"></a><h3>The "Compression" property</h3>
+<pre class="programlisting">
+Compression  readable   b
+</pre>
+<p>         Indicates whether compression is enabled.
+</p>
+<p class="since">Since 2.8.0</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="gdbus-property-org-freedesktop-UDisks2-Block-VDO.Deduplication"></a><h3>The "Deduplication" property</h3>
+<pre class="programlisting">
+Deduplication  readable   b
+</pre>
+<p>         Indicates whether deduplication is enabled.
+</p>
+<p class="since">Since 2.8.0</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="gdbus-property-org-freedesktop-UDisks2-Block-VDO.LogicalSize"></a><h3>The "LogicalSize" property</h3>
+<pre class="programlisting">
+LogicalSize  readable   t
+</pre>
+<p>         The logical size of the VDO volume.
+</p>
+<p class="since">Since 2.8.0</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="gdbus-property-org-freedesktop-UDisks2-Block-VDO.PhysicalSize"></a><h3>The "PhysicalSize" property</h3>
+<pre class="programlisting">
+PhysicalSize  readable   t
+</pre>
+<p>         The physical size of the VDO volume.
+</p>
+<p class="since">Since 2.8.0</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="gdbus-property-org-freedesktop-UDisks2-Block-VDO.IndexMemory"></a><h3>The "IndexMemory" property</h3>
+<pre class="programlisting">
+IndexMemory  readable   t
+</pre>
+<p>         The index memory size of the VDO volume.
+</p>
+<p class="since">Since 2.8.0</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="gdbus-property-org-freedesktop-UDisks2-Block-VDO.WritePolicy"></a><h3>The "WritePolicy" property</h3>
+<pre class="programlisting">
+WritePolicy  readable   s
+</pre>
+<p>         The current write policy of the VDO volume.
+</p>
+<p>        Known values include:
+        </p>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term">sync</span></p></td>
+<td><p>Writes are acknowledged only after data is on stable storage. 'sync' policy is not supported if the underlying storage is not also synchronous.</p></td>
+</tr>
+<tr>
+<td><p><span class="term">async</span></p></td>
+<td><p>Writes are acknowledged when data has been cached for writing to stable storage; data which has not been flushed is not guaranteed to persist in this mode.</p></td>
+</tr>
+<tr>
+<td><p><span class="term">auto</span></p></td>
+<td><p>VDO will check the storage device and determine whether it supports flushes. If it does, VDO will run in async mode, otherwise it will run in sync mode.</p></td>
+</tr>
+</tbody>
+</table></div>
+<p>
+</p>
+<p class="since">Since 2.8.0</p>
+</div>
+</div>
+</div>
+<div class="footer">
+<hr>Generated by GTK-Doc V1.28</div>
+</body>
+</html>
