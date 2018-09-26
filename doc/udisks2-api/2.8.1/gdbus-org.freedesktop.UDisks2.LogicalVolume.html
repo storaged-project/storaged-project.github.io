@@ -1,0 +1,519 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>org.freedesktop.UDisks2.LogicalVolume: UDisks Reference Manual</title>
+<meta name="generator" content="DocBook XSL Stylesheets Vsnapshot">
+<link rel="home" href="index.html" title="UDisks Reference Manual">
+<link rel="up" href="ch02.html" title="D-Bus Interfaces">
+<link rel="prev" href="gdbus-org.freedesktop.UDisks2.Block.LVM2.html" title="org.freedesktop.UDisks2.Block.LVM2">
+<link rel="next" href="gdbus-org.freedesktop.UDisks2.Manager.LVM2.html" title="org.freedesktop.UDisks2.Manager.LVM2">
+<meta name="generator" content="GTK-Doc V1.28 (XML mode)">
+<link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<table class="navigation" id="top" width="100%" summary="Navigation header" cellpadding="2" cellspacing="5"><tr valign="middle">
+<td width="100%" align="left" class="shortcuts">
+<a href="#" class="shortcut">Top</a><span id="nav_description">  <span class="dim">|</span> 
+                  <a href="#gdbus-org.freedesktop.UDisks2.LogicalVolume.description" class="shortcut">Description</a></span><span id="nav_properties">  <span class="dim">|</span> 
+                  <a href="#gdbus-org.freedesktop.UDisks2.LogicalVolume.properties" class="shortcut">Properties</a></span>
+</td>
+<td><a accesskey="h" href="index.html"><img src="home.png" width="16" height="16" border="0" alt="Home"></a></td>
+<td><a accesskey="u" href="ch02.html"><img src="up.png" width="16" height="16" border="0" alt="Up"></a></td>
+<td><a accesskey="p" href="gdbus-org.freedesktop.UDisks2.Block.LVM2.html"><img src="left.png" width="16" height="16" border="0" alt="Prev"></a></td>
+<td><a accesskey="n" href="gdbus-org.freedesktop.UDisks2.Manager.LVM2.html"><img src="right.png" width="16" height="16" border="0" alt="Next"></a></td>
+</tr></table>
+<div class="refentry">
+<a name="gdbus-org.freedesktop.UDisks2.LogicalVolume"></a><div class="titlepage"></div>
+<div class="refnamediv"><table width="100%"><tr>
+<td valign="top">
+<h2><span class="refentrytitle"><a name="gdbus-interface-org-freedesktop-UDisks2-LogicalVolume.top_of_page"></a>org.freedesktop.UDisks2.LogicalVolume</span></h2>
+<p>org.freedesktop.UDisks2.LogicalVolume — A logical volume</p>
+</td>
+<td class="gallery_image" valign="top" align="right"></td>
+</tr></table></div>
+<div class="refsynopsisdiv">
+<h2>Methods</h2>
+<pre class="synopsis">
+<a class="link" href="gdbus-org.freedesktop.UDisks2.LogicalVolume.html#gdbus-method-org-freedesktop-UDisks2-LogicalVolume.Activate" title="The Activate() method">Activate</a>       (IN  a{sv} options,
+                OUT o     result);
+<a class="link" href="gdbus-org.freedesktop.UDisks2.LogicalVolume.html#gdbus-method-org-freedesktop-UDisks2-LogicalVolume.Deactivate" title="The Deactivate() method">Deactivate</a>     (IN  a{sv} options);
+<a class="link" href="gdbus-org.freedesktop.UDisks2.LogicalVolume.html#gdbus-method-org-freedesktop-UDisks2-LogicalVolume.Delete" title="The Delete() method">Delete</a>         (IN  a{sv} options);
+<a class="link" href="gdbus-org.freedesktop.UDisks2.LogicalVolume.html#gdbus-method-org-freedesktop-UDisks2-LogicalVolume.Rename" title="The Rename() method">Rename</a>         (IN  s     new_name,
+                IN  a{sv} options,
+                OUT o     result);
+<a class="link" href="gdbus-org.freedesktop.UDisks2.LogicalVolume.html#gdbus-method-org-freedesktop-UDisks2-LogicalVolume.Resize" title="The Resize() method">Resize</a>         (IN  t     new_size,
+                IN  a{sv} options);
+<a class="link" href="gdbus-org.freedesktop.UDisks2.LogicalVolume.html#gdbus-method-org-freedesktop-UDisks2-LogicalVolume.CreateSnapshot" title="The CreateSnapshot() method">CreateSnapshot</a> (IN  s     name,
+                IN  t     size,
+                IN  a{sv} options,
+                OUT o     result);
+<a class="link" href="gdbus-org.freedesktop.UDisks2.LogicalVolume.html#gdbus-method-org-freedesktop-UDisks2-LogicalVolume.CacheAttach" title="The CacheAttach() method">CacheAttach</a>    (IN  s     cache_name,
+                IN  a{sv} options);
+<a class="link" href="gdbus-org.freedesktop.UDisks2.LogicalVolume.html#gdbus-method-org-freedesktop-UDisks2-LogicalVolume.CacheSplit" title="The CacheSplit() method">CacheSplit</a>     (IN  a{sv} options);
+<a class="link" href="gdbus-org.freedesktop.UDisks2.LogicalVolume.html#gdbus-method-org-freedesktop-UDisks2-LogicalVolume.CacheDetach" title="The CacheDetach() method">CacheDetach</a>    (IN  a{sv} options);
+</pre>
+</div>
+<div class="refsect1">
+<a name="id-1.3.3.18.4"></a><h2>Properties</h2>
+<pre class="synopsis">
+<a class="link" href="gdbus-org.freedesktop.UDisks2.LogicalVolume.html#gdbus-property-org-freedesktop-UDisks2-LogicalVolume.VolumeGroup" title='The "VolumeGroup" property'>VolumeGroup</a>             readable   o
+<a class="link" href="gdbus-org.freedesktop.UDisks2.LogicalVolume.html#gdbus-property-org-freedesktop-UDisks2-LogicalVolume.Name" title='The "Name" property'>Name</a>                    readable   s
+<a class="link" href="gdbus-org.freedesktop.UDisks2.LogicalVolume.html#gdbus-property-org-freedesktop-UDisks2-LogicalVolume.Active" title='The "Active" property'>Active</a>                  readable   b
+<a class="link" href="gdbus-org.freedesktop.UDisks2.LogicalVolume.html#gdbus-property-org-freedesktop-UDisks2-LogicalVolume.UUID" title='The "UUID" property'>UUID</a>                    readable   s
+<a class="link" href="gdbus-org.freedesktop.UDisks2.LogicalVolume.html#gdbus-property-org-freedesktop-UDisks2-LogicalVolume.Size" title='The "Size" property'>Size</a>                    readable   t
+<a class="link" href="gdbus-org.freedesktop.UDisks2.LogicalVolume.html#gdbus-property-org-freedesktop-UDisks2-LogicalVolume.DataAllocatedRatio" title='The "DataAllocatedRatio" property'>DataAllocatedRatio</a>      readable   d
+<a class="link" href="gdbus-org.freedesktop.UDisks2.LogicalVolume.html#gdbus-property-org-freedesktop-UDisks2-LogicalVolume.MetadataAllocatedRatio" title='The "MetadataAllocatedRatio" property'>MetadataAllocatedRatio</a>  readable   d
+<a class="link" href="gdbus-org.freedesktop.UDisks2.LogicalVolume.html#gdbus-property-org-freedesktop-UDisks2-LogicalVolume.Type" title='The "Type" property'>Type</a>                    readable   s
+<a class="link" href="gdbus-org.freedesktop.UDisks2.LogicalVolume.html#gdbus-property-org-freedesktop-UDisks2-LogicalVolume.ThinPool" title='The "ThinPool" property'>ThinPool</a>                readable   o
+<a class="link" href="gdbus-org.freedesktop.UDisks2.LogicalVolume.html#gdbus-property-org-freedesktop-UDisks2-LogicalVolume.Origin" title='The "Origin" property'>Origin</a>                  readable   o
+<a class="link" href="gdbus-org.freedesktop.UDisks2.LogicalVolume.html#gdbus-property-org-freedesktop-UDisks2-LogicalVolume.ChildConfiguration" title='The "ChildConfiguration" property'>ChildConfiguration</a>      readable   a(sa{sv})
+<a class="link" href="gdbus-org.freedesktop.UDisks2.LogicalVolume.html#gdbus-property-org-freedesktop-UDisks2-LogicalVolume.BlockDevice" title='The "BlockDevice" property'>BlockDevice</a>             readable   o
+</pre>
+</div>
+<div class="refsect1">
+<a name="gdbus-interface-org-freedesktop-UDisks2-LogicalVolume"></a><h2>Description</h2>
+<p>      Objects with this interface represent logical volumes in a
+      volume group.  Active logical volumes are associated with a
+      block device, which link back to the logical volume object via
+      their <a class="link" href="gdbus-org.freedesktop.UDisks2.Block.LVM2.html#gdbus-property-org-freedesktop-UDisks2-Block-LVM2.LogicalVolume" title='The "LogicalVolume" property'>"LogicalVolume"</a> property.
+</p>
+<p>      Logical volume objects are children of their volume group
+      object, and also link to it via the #VolumeGroup property.
+</p>
+<p class="since">Since 2.0.0</p>
+</div>
+<div class="refsect1">
+<a name="gdbus-methods-org.freedesktop.UDisks2.LogicalVolume"></a><h2>Method Details</h2>
+<div class="refsect2">
+<a name="gdbus-method-org-freedesktop-UDisks2-LogicalVolume.Activate"></a><h3>The Activate() method</h3>
+<pre class="programlisting">
+Activate (IN  a{sv} options,
+          OUT o     result);
+</pre>
+<p>         Activate this logical volume, which makes it appear as a
+         block device in the system.
+</p>
+<p>         Non-thin snapshots are always activated and deactivated
+         together with their origins.
+</p>
+<p>         No additional options are currently defined.
+</p>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><code class="literal">IN a{sv} <em class="parameter"><code>options</code></em></code>:</span></p></td>
+<td><p>Additional options.</p></td>
+</tr>
+<tr>
+<td><p><span class="term"><code class="literal">OUT o <em class="parameter"><code>result</code></em></code>:</span></p></td>
+<td><p>The UDisks2 object path of the block device.</p></td>
+</tr>
+</tbody>
+</table></div>
+<p class="since">Since 2.0.0</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="gdbus-method-org-freedesktop-UDisks2-LogicalVolume.Deactivate"></a><h3>The Deactivate() method</h3>
+<pre class="programlisting">
+Deactivate (IN  a{sv} options);
+</pre>
+<p>         Deactivate this logical volume, which makes its block device
+         disappear.
+</p>
+<p>         Non-thin snapshots are always activated and deactivated
+         together with their origins.
+</p>
+<p>         No additional options are currently defined.
+</p>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody><tr>
+<td><p><span class="term"><code class="literal">IN a{sv} <em class="parameter"><code>options</code></em></code>:</span></p></td>
+<td><p>Additional options.</p></td>
+</tr></tbody>
+</table></div>
+<p class="since">Since 2.0.0</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="gdbus-method-org-freedesktop-UDisks2-LogicalVolume.Delete"></a><h3>The Delete() method</h3>
+<pre class="programlisting">
+Delete (IN  a{sv} options);
+</pre>
+<p>         Delete this logical volume.
+</p>
+<p>         If there are any non-thin snapshots of this logical volume,
+         they will be deleted as well.
+</p>
+<p>         If this is a thin pool, all its contained thin volumes will
+         be deleted as well.
+</p>
+<p>         If the option <em class="parameter"><code>tear-down</code></em> is set to
+         <code class="constant">TRUE</code>, then the logical volume and all its children will be
+         cleaned up before deletion.  This cleanup consists of
+         removing entries from /etc/fstab and /etc/crypttab, and
+         locking of encrypted block devices.  Entries in /etc/fstab
+         and /etc/crypttab that have been created with the
+         'track-parents' options to AddConfigurationItem will be
+         removed even if their block device is currently unavailable.
+</p>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody><tr>
+<td><p><span class="term"><code class="literal">IN a{sv} <em class="parameter"><code>options</code></em></code>:</span></p></td>
+<td><p>Additional options.</p></td>
+</tr></tbody>
+</table></div>
+<p class="since">Since 2.0.0</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="gdbus-method-org-freedesktop-UDisks2-LogicalVolume.Rename"></a><h3>The Rename() method</h3>
+<pre class="programlisting">
+Rename (IN  s     new_name,
+        IN  a{sv} options,
+        OUT o     result);
+</pre>
+<p>         Rename this logical volume.  This might cause the logical
+         volume object to disappear from D-Bus and reappear with a
+         different path.
+</p>
+<p>         No additional options are currently defined.
+</p>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><code class="literal">IN s <em class="parameter"><code>new_name</code></em></code>:</span></p></td>
+<td><p>The new name.</p></td>
+</tr>
+<tr>
+<td><p><span class="term"><code class="literal">IN a{sv} <em class="parameter"><code>options</code></em></code>:</span></p></td>
+<td><p>Additional options.</p></td>
+</tr>
+<tr>
+<td><p><span class="term"><code class="literal">OUT o <em class="parameter"><code>result</code></em></code>:</span></p></td>
+<td><p>The new object path.</p></td>
+</tr>
+</tbody>
+</table></div>
+<p class="since">Since 2.0.0</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="gdbus-method-org-freedesktop-UDisks2-LogicalVolume.Resize"></a><h3>The Resize() method</h3>
+<pre class="programlisting">
+Resize (IN  t     new_size,
+        IN  a{sv} options);
+</pre>
+<p>         Resize this logical volume.
+</p>
+<p>         Additional options:
+</p>
+<p>         resize_fsys (b):  Whether to resize the filesystem on the
+                           logical volume as well. Default to 'false'.
+</p>
+<p>         force (b):        Whether to force the resize even if it might
+                           destroy data.
+</p>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><code class="literal">IN t <em class="parameter"><code>new_size</code></em></code>:</span></p></td>
+<td><p>The new size, in bytes.</p></td>
+</tr>
+<tr>
+<td><p><span class="term"><code class="literal">IN a{sv} <em class="parameter"><code>options</code></em></code>:</span></p></td>
+<td><p>Additional options.</p></td>
+</tr>
+</tbody>
+</table></div>
+<p class="since">Since 2.0.0</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="gdbus-method-org-freedesktop-UDisks2-LogicalVolume.CreateSnapshot"></a><h3>The CreateSnapshot() method</h3>
+<pre class="programlisting">
+CreateSnapshot (IN  s     name,
+                IN  t     size,
+                IN  a{sv} options,
+                OUT o     result);
+</pre>
+<p>         Create a snapshot of this logical volume.
+</p>
+<p>         When creating a snapshot of a non-thin volume, a non-zero
+         size must be specified.  A non-thin snapshot is created in
+         this case.
+</p>
+<p>         When creating a snapshot of a thin volume, specifying a <em class="parameter"><code>size</code></em>
+         of zero will create a thin snapshot in the same pool.
+</p>
+<p>         When creating a snapshot of a thin volume, specifying a
+         non-zero <em class="parameter"><code>size</code></em> will create a non-thin snapshot.
+</p>
+<p>         No additional options are currently defined.
+</p>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><code class="literal">IN s <em class="parameter"><code>name</code></em></code>:</span></p></td>
+<td><p>The name of the snapshot.</p></td>
+</tr>
+<tr>
+<td><p><span class="term"><code class="literal">IN t <em class="parameter"><code>size</code></em></code>:</span></p></td>
+<td><p>The size of the backing store for the snapshot, in bytes.</p></td>
+</tr>
+<tr>
+<td><p><span class="term"><code class="literal">IN a{sv} <em class="parameter"><code>options</code></em></code>:</span></p></td>
+<td><p>Additional options.</p></td>
+</tr>
+<tr>
+<td><p><span class="term"><code class="literal">OUT o <em class="parameter"><code>result</code></em></code>:</span></p></td>
+<td><p></p></td>
+</tr>
+</tbody>
+</table></div>
+<p class="since">Since 2.0.0</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="gdbus-method-org-freedesktop-UDisks2-LogicalVolume.CacheAttach"></a><h3>The CacheAttach() method</h3>
+<pre class="programlisting">
+CacheAttach (IN  s     cache_name,
+             IN  a{sv} options);
+</pre>
+<p>         Creates cache LV. Logical volume which name is provided, will be formated, converted to cache type
+         and attached to origin logical volume as a cache pool LV. Logical volumes must be in the same volume group.
+</p>
+<p>         No additional options are currently defined.
+</p>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><code class="literal">IN s <em class="parameter"><code>cache_name</code></em></code>:</span></p></td>
+<td><p>The name of an existing volume.</p></td>
+</tr>
+<tr>
+<td><p><span class="term"><code class="literal">IN a{sv} <em class="parameter"><code>options</code></em></code>:</span></p></td>
+<td><p>Additional options.</p></td>
+</tr>
+</tbody>
+</table></div>
+<p class="since">Since 2.3.0</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="gdbus-method-org-freedesktop-UDisks2-LogicalVolume.CacheSplit"></a><h3>The CacheSplit() method</h3>
+<pre class="programlisting">
+CacheSplit (IN  a{sv} options);
+</pre>
+<p>         Splits Cache LV to Cache pool LV and Origin LV, not afeecting its content.
+</p>
+<p>         No additional options are currently defined.
+</p>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody><tr>
+<td><p><span class="term"><code class="literal">IN a{sv} <em class="parameter"><code>options</code></em></code>:</span></p></td>
+<td><p>Additional options.</p></td>
+</tr></tbody>
+</table></div>
+<p class="since">Since 2.3.0</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="gdbus-method-org-freedesktop-UDisks2-LogicalVolume.CacheDetach"></a><h3>The CacheDetach() method</h3>
+<pre class="programlisting">
+CacheDetach (IN  a{sv} options);
+</pre>
+<p>         Detaches the cached LV from its cache.
+</p>
+<p>         No additional options are currently defined.
+</p>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody><tr>
+<td><p><span class="term"><code class="literal">IN a{sv} <em class="parameter"><code>options</code></em></code>:</span></p></td>
+<td><p>Additional options.</p></td>
+</tr></tbody>
+</table></div>
+<p class="since">Since 2.6.3</p>
+</div>
+</div>
+<div class="refsect1">
+<a name="gdbus-properties-org.freedesktop.UDisks2.LogicalVolume"></a><h2>Property Details</h2>
+<div class="refsect2">
+<a name="gdbus-property-org-freedesktop-UDisks2-LogicalVolume.VolumeGroup"></a><h3>The "VolumeGroup" property</h3>
+<pre class="programlisting">
+VolumeGroup  readable   o
+</pre>
+<p>         The path of the volume group object that this logical volume
+         belongs to.
+</p>
+<p class="since">Since 2.0.0</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="gdbus-property-org-freedesktop-UDisks2-LogicalVolume.Name"></a><h3>The "Name" property</h3>
+<pre class="programlisting">
+Name  readable   s
+</pre>
+<p>         The name of this logical volume, as it is known to LVM2.
+</p>
+<p class="since">Since 2.0.0</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="gdbus-property-org-freedesktop-UDisks2-LogicalVolume.Active"></a><h3>The "Active" property</h3>
+<pre class="programlisting">
+Active  readable   b
+</pre>
+<p>         Whether or not this volume is active.
+</p>
+<p class="since">Since 2.0.0</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="gdbus-property-org-freedesktop-UDisks2-LogicalVolume.UUID"></a><h3>The "UUID" property</h3>
+<pre class="programlisting">
+UUID  readable   s
+</pre>
+<p>         The UUID of this logical volume.  It is guaranteed to be
+         unique within the group, but it might change over time.
+</p>
+<p class="since">Since 2.0.0</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="gdbus-property-org-freedesktop-UDisks2-LogicalVolume.Size"></a><h3>The "Size" property</h3>
+<pre class="programlisting">
+Size  readable   t
+</pre>
+<p>         The total size of this logical volume in bytes, including the
+         size of the metadata.
+</p>
+<p class="since">Since 2.0.0</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="gdbus-property-org-freedesktop-UDisks2-LogicalVolume.DataAllocatedRatio"></a><h3>The "DataAllocatedRatio" property</h3>
+<pre class="programlisting">
+DataAllocatedRatio  readable   d
+</pre>
+<p>         For a thin pool or a non-thin snapshot, indicates how full
+         the area for storing data is.  A value of 1.0 corresponds to
+         100<code class="constant"></code>.
+</p>
+<p class="since">Since 2.0.0</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="gdbus-property-org-freedesktop-UDisks2-LogicalVolume.MetadataAllocatedRatio"></a><h3>The "MetadataAllocatedRatio" property</h3>
+<pre class="programlisting">
+MetadataAllocatedRatio  readable   d
+</pre>
+<p>         For a thin pool or a non-thin snapshot, indicates how full
+         the area for storing meta data is.  A value of 1.0
+         corresponds to 100<code class="constant"></code>.
+</p>
+<p class="since">Since 2.0.0</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="gdbus-property-org-freedesktop-UDisks2-LogicalVolume.Type"></a><h3>The "Type" property</h3>
+<pre class="programlisting">
+Type  readable   s
+</pre>
+<p>         The general type of a logical volume. One of "block" or
+         "pool". More types might be defined in the future.
+</p>
+<p>         A volume of type "block" can be used as a block device. A
+         volume of type "pool" can be used to create thin volumes.
+</p>
+<p class="since">Since 2.0.0</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="gdbus-property-org-freedesktop-UDisks2-LogicalVolume.ThinPool"></a><h3>The "ThinPool" property</h3>
+<pre class="programlisting">
+ThinPool  readable   o
+</pre>
+<p>         For a thin volume, the object path of its pool.
+</p>
+<p class="since">Since 2.0.0</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="gdbus-property-org-freedesktop-UDisks2-LogicalVolume.Origin"></a><h3>The "Origin" property</h3>
+<pre class="programlisting">
+Origin  readable   o
+</pre>
+<p>         For a snapshot, the object path of its origin.
+</p>
+<p class="since">Since 2.0.0</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="gdbus-property-org-freedesktop-UDisks2-LogicalVolume.ChildConfiguration"></a><h3>The "ChildConfiguration" property</h3>
+<pre class="programlisting">
+ChildConfiguration  readable   a(sa{sv})
+</pre>
+<p>Configuration items belonging to the</p>
+<p>         block device of this logical volume and its children.  This
+         is also valid when this logical volume is not currently
+         active and there is no block device for it.  It works via the
+         'track-parents' options of
+         org.freedesktop.UDisks2.Block.AddConfigurationItem(), which
+         see.
+</p>
+<p class="since">Since 2.0.0</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="gdbus-property-org-freedesktop-UDisks2-LogicalVolume.BlockDevice"></a><h3>The "BlockDevice" property</h3>
+<pre class="programlisting">
+BlockDevice  readable   o
+</pre>
+<p>         For an active LV, the object path of its block device.
+</p>
+<p class="since">Since 2.7.1</p>
+</div>
+</div>
+</div>
+<div class="footer">
+<hr>Generated by GTK-Doc V1.28</div>
+</body>
+</html>

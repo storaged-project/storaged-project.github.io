@@ -1,0 +1,1067 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>UDisksModuleManager: UDisks Reference Manual</title>
+<meta name="generator" content="DocBook XSL Stylesheets Vsnapshot">
+<link rel="home" href="index.html" title="UDisks Reference Manual">
+<link rel="up" href="ref-daemon-core.html" title="Core">
+<link rel="prev" href="udisks2-ATA-commands.html" title="ATA commands">
+<link rel="next" href="ref-daemon-monitoring.html" title="State and Configuration">
+<meta name="generator" content="GTK-Doc V1.28 (XML mode)">
+<link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<table class="navigation" id="top" width="100%" summary="Navigation header" cellpadding="2" cellspacing="5"><tr valign="middle">
+<td width="100%" align="left" class="shortcuts">
+<a href="#" class="shortcut">Top</a><span id="nav_description">  <span class="dim">|</span> 
+                  <a href="#udisks2-UDisksModuleManager.description" class="shortcut">Description</a></span>
+</td>
+<td><a accesskey="h" href="index.html"><img src="home.png" width="16" height="16" border="0" alt="Home"></a></td>
+<td><a accesskey="u" href="ref-daemon-core.html"><img src="up.png" width="16" height="16" border="0" alt="Up"></a></td>
+<td><a accesskey="p" href="udisks2-ATA-commands.html"><img src="left.png" width="16" height="16" border="0" alt="Prev"></a></td>
+<td><a accesskey="n" href="ref-daemon-monitoring.html"><img src="right.png" width="16" height="16" border="0" alt="Next"></a></td>
+</tr></table>
+<div class="refentry">
+<a name="udisks2-UDisksModuleManager"></a><div class="titlepage"></div>
+<div class="refnamediv"><table width="100%"><tr>
+<td valign="top">
+<h2><span class="refentrytitle"><a name="udisks2-UDisksModuleManager.top_of_page"></a>UDisksModuleManager</span></h2>
+<p>UDisksModuleManager — Manages daemon modules</p>
+</td>
+<td class="gallery_image" valign="top" align="right"></td>
+</tr></table></div>
+<div class="refsect1">
+<a name="udisks2-UDisksModuleManager.functions"></a><h2>Functions</h2>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="functions_return">
+<col class="functions_name">
+</colgroup>
+<tbody>
+<tr>
+<td class="function_type">
+<a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+</td>
+<td class="function_name">
+<span class="c_punctuation">(</span><a class="link" href="udisks2-UDisksModuleManager.html#UDisksObjectHasInterfaceFunc" title="UDisksObjectHasInterfaceFunc ()">*UDisksObjectHasInterfaceFunc</a><span class="c_punctuation">)</span> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<span class="c_punctuation">(</span><a class="link" href="udisks2-UDisksModuleManager.html#UDisksObjectConnectInterfaceFunc" title="UDisksObjectConnectInterfaceFunc ()">*UDisksObjectConnectInterfaceFunc</a><span class="c_punctuation">)</span> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+</td>
+<td class="function_name">
+<span class="c_punctuation">(</span><a class="link" href="udisks2-UDisksModuleManager.html#UDisksObjectUpdateInterfaceFunc" title="UDisksObjectUpdateInterfaceFunc ()">*UDisksObjectUpdateInterfaceFunc</a><span class="c_punctuation">)</span> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="/usr/share/gtk-doc/html/gio/GDBusObjectSkeleton.html#GDBusObjectSkeleton-struct"><span class="returnvalue">GDBusObjectSkeleton</span></a> *
+</td>
+<td class="function_name">
+<span class="c_punctuation">(</span><a class="link" href="udisks2-UDisksModuleManager.html#UDisksModuleObjectNewFunc" title="UDisksModuleObjectNewFunc ()">*UDisksModuleObjectNewFunc</a><span class="c_punctuation">)</span> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="/usr/share/gtk-doc/html/gio/GDBusInterfaceSkeleton.html#GDBusInterfaceSkeleton-struct"><span class="returnvalue">GDBusInterfaceSkeleton</span></a> *
+</td>
+<td class="function_name">
+<span class="c_punctuation">(</span><a class="link" href="udisks2-UDisksModuleManager.html#UDisksModuleNewManagerIfaceFunc" title="UDisksModuleNewManagerIfaceFunc ()">*UDisksModuleNewManagerIfaceFunc</a><span class="c_punctuation">)</span> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gpointer"><span class="returnvalue">gpointer</span></a>
+</td>
+<td class="function_name">
+<span class="c_punctuation">(</span><a class="link" href="udisks2-UDisksModuleManager.html#UDisksModuleInitFunc" title="UDisksModuleInitFunc ()">*UDisksModuleInitFunc</a><span class="c_punctuation">)</span> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a class="link" href="udisks2-UDisksModuleManager.html#UDisksModuleInterfaceInfo" title="UDisksModuleInterfaceInfo"><span class="returnvalue">UDisksModuleInterfaceInfo</span></a> **
+</td>
+<td class="function_name">
+<span class="c_punctuation">(</span><a class="link" href="udisks2-UDisksModuleManager.html#UDisksModuleIfaceSetupFunc" title="UDisksModuleIfaceSetupFunc ()">*UDisksModuleIfaceSetupFunc</a><span class="c_punctuation">)</span> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a class="link" href="udisks2-UDisksModuleManager.html#UDisksModuleObjectNewFunc" title="UDisksModuleObjectNewFunc ()"><span class="returnvalue">UDisksModuleObjectNewFunc</span></a> *
+</td>
+<td class="function_name">
+<span class="c_punctuation">(</span><a class="link" href="udisks2-UDisksModuleManager.html#UDisksModuleObjectNewSetupFunc" title="UDisksModuleObjectNewSetupFunc ()">*UDisksModuleObjectNewSetupFunc</a><span class="c_punctuation">)</span> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a class="link" href="udisks2-UDisksModuleManager.html#UDisksModuleNewManagerIfaceFunc" title="UDisksModuleNewManagerIfaceFunc ()"><span class="returnvalue">UDisksModuleNewManagerIfaceFunc</span></a> *
+</td>
+<td class="function_name">
+<span class="c_punctuation">(</span><a class="link" href="udisks2-UDisksModuleManager.html#UDisksModuleNewManagerIfaceSetupFunc" title="UDisksModuleNewManagerIfaceSetupFunc ()">*UDisksModuleNewManagerIfaceSetupFunc</a><span class="c_punctuation">)</span> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a class="link" href="udisks2-UDisksModuleManager.html#UDisksModuleManager" title="UDisksModuleManager"><span class="returnvalue">UDisksModuleManager</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="udisks2-UDisksModuleManager.html#udisks-module-manager-new" title="udisks_module_manager_new ()">udisks_module_manager_new</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="udisks2-UDisksModuleManager.html#udisks-module-manager-get-modules-available" title="udisks_module_manager_get_modules_available ()">udisks_module_manager_get_modules_available</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="udisks2-UDisksModuleManager.html#udisks-module-manager-load-modules" title="udisks_module_manager_load_modules ()">udisks_module_manager_load_modules</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gpointer"><span class="returnvalue">gpointer</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="udisks2-UDisksModuleManager.html#udisks-module-manager-get-module-state-pointer" title="udisks_module_manager_get_module_state_pointer ()">udisks_module_manager_get_module_state_pointer</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="udisks2-UDisksModuleManager.html#udisks-module-manager-set-module-state-pointer" title="udisks_module_manager_set_module_state_pointer ()">udisks_module_manager_set_module_state_pointer</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="/usr/share/gtk-doc/html/glib/glib-Doubly-Linked-Lists.html#GList"><span class="returnvalue">GList</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="udisks2-UDisksModuleManager.html#udisks-module-manager-get-block-object-iface-infos" title="udisks_module_manager_get_block_object_iface_infos ()">udisks_module_manager_get_block_object_iface_infos</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="/usr/share/gtk-doc/html/glib/glib-Doubly-Linked-Lists.html#GList"><span class="returnvalue">GList</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="udisks2-UDisksModuleManager.html#udisks-module-manager-get-drive-object-iface-infos" title="udisks_module_manager_get_drive_object_iface_infos ()">udisks_module_manager_get_drive_object_iface_infos</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="/usr/share/gtk-doc/html/glib/glib-Doubly-Linked-Lists.html#GList"><span class="returnvalue">GList</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="udisks2-UDisksModuleManager.html#udisks-module-manager-get-module-object-new-funcs" title="udisks_module_manager_get_module_object_new_funcs ()">udisks_module_manager_get_module_object_new_funcs</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="/usr/share/gtk-doc/html/glib/glib-Doubly-Linked-Lists.html#GList"><span class="returnvalue">GList</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="udisks2-UDisksModuleManager.html#udisks-module-manager-get-new-manager-iface-funcs" title="udisks_module_manager_get_new_manager_iface_funcs ()">udisks_module_manager_get_new_manager_iface_funcs</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="udisks2-UDisksModuleManager.html#udisks-module-object-process-uevent" title="udisks_module_object_process_uevent ()">udisks_module_object_process_uevent</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="udisks2-UDisksModuleManager.html#udisks-module-object-housekeeping" title="udisks_module_object_housekeeping ()">udisks_module_object_housekeeping</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect1">
+<a name="udisks2-UDisksModuleManager.other"></a><h2>Types and Values</h2>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="name">
+<col class="description">
+</colgroup>
+<tbody>
+<tr>
+<td class="datatype_keyword"> </td>
+<td class="function_name"><a class="link" href="udisks2-UDisksModuleManager.html#UDisksModuleManager" title="UDisksModuleManager">UDisksModuleManager</a></td>
+</tr>
+<tr>
+<td class="datatype_keyword"> </td>
+<td class="function_name"><a class="link" href="udisks2-UDisksModuleManager.html#UDisksModuleInterfaceInfo" title="UDisksModuleInterfaceInfo">UDisksModuleInterfaceInfo</a></td>
+</tr>
+<tr>
+<td class="datatype_keyword"> </td>
+<td class="function_name"><a class="link" href="udisks2-UDisksModuleManager.html#UDisksModuleObject" title="UDisksModuleObject">UDisksModuleObject</a></td>
+</tr>
+<tr>
+<td class="datatype_keyword">struct</td>
+<td class="function_name"><a class="link" href="udisks2-UDisksModuleManager.html#UDisksModuleObjectIface" title="struct UDisksModuleObjectIface">UDisksModuleObjectIface</a></td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect1">
+<a name="udisks2-UDisksModuleManager.description"></a><h2>Description</h2>
+<div class="refsect3">
+<a name="udisks-modular-design"></a><h4>UDisks modular approach</h4>
+<p>UDisks functionality can be extended by modules. It's not a fully
+pluggable system as we know it, in this case modules are almost integral
+parts of the source tree. Meaning that modules are free to use whatever
+internal objects they need as there is no universal module API (or a
+translation layer).</p>
+<p>This fact allows us to stay code-wise simple and transparent. It also means
+that there's no support for out-of-the-tree modules and care must be taken
+when changing UDisks internals. As a design decision, for sake of simplicity,
+once modules are loaded they stay active until the daemon exits (this may be
+a subject to change in the future).</p>
+<p>The primary motivation for this was to keep the daemon low on resource
+footprint for basic usage (typically desktop environments) and only
+activating the extended functionality when needed (e.g. enterprise storage
+applications). As the extra information comes in form of additional D-Bus
+objects and interfaces, no difference should be observed by legacy clients.</p>
+</div>
+<div class="refsect3">
+<a name="udisks-modular-design-dbus"></a><h4>D-Bus interface extensibility</h4>
+<p>The modular approach is fairly simple, there are basically two primary ways
+of extending the D-Bus API:</p>
+<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; ">
+<li class="listitem"><p>by attaching custom interfaces to existing objects (limited to block and
+drive objects for the moment)</p></li>
+<li class="listitem"><p>by exporting objects of its own type directly in the object manager root</p></li>
+</ul></div>
+<p>Besides that there are several other ways of extensibility such as attaching
+custom interfaces on the master /org/freedesktop/UDisks2/Manager object.</p>
+</div>
+<div class="refsect3">
+<a name="udisks-modular-activation"></a><h4>Modules activation</h4>
+<p>The UDisks daemon constructs a <a class="link" href="udisks2-UDisksModuleManager.html#UDisksModuleManager" title="UDisksModuleManager"><span class="type">UDisksModuleManager</span></a> singleton acting as
+a manager. This object tracks module usage and takes care of its activation.</p>
+<p>By default, module manager is constructed on daemon startup but module
+loading is delayed until requested. This can be overriden by the
+--force-load-modules and --disable-modules commandline switches that makes
+modules loaded right on startup or never loaded respectively.</p>
+<p>Upon successful activation, the "modules-ready" property on the <a class="link" href="udisks2-UDisksModuleManager.html#UDisksModuleManager" title="UDisksModuleManager"><span class="type">UDisksModuleManager</span></a>
+instance is set to <a href="/usr/share/gtk-doc/html/glib/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a>. Any daemon objects watching this property are
+responsible for performing "coldplug" on their exported objects to assure
+modules would pick up the devices they're interested in. See e.g.
+<a class="link" href="udisks2-UDisksModuleManager.html#UDisksModuleObjectNewFunc" title="UDisksModuleObjectNewFunc ()"><code class="function">UDisksModuleObjectNewFunc()</code></a> to see how device binding works for
+<a class="link" href="udisks2-UDisksModuleManager.html#UDisksModuleObject" title="UDisksModuleObject"><span class="type">UDisksModuleObject</span></a>.</p>
+<p>Modules are in fact separate shared objects (.so) that are loaded from the
+"$(libdir)/udisks2/modules" path (usually "/usr/lib/udisks2/modules"). No
+extra or service files are needed, the directory is enumerated and all files
+are attempted to be loaded.</p>
+<p>Clients are supposed to call the org.freedesktop.UDisks2.Manager.EnableModules()
+D-Bus method as a "greeter" call. Please note that from asynchronous nature
+of uevents and the way modules are processing them the extra D-Bus interfaces
+may not be available right after this method call returns.</p>
+</div>
+<div class="refsect3">
+<a name="udisks-modular-api"></a><h4>Module API</h4>
+<p>The (strictly internal) module API is simple - only a couple of functions
+are needed. The following text contains brief description of individual
+parts of the module API with further links to detailed description within
+this API reference book.</p>
+<p>The <a class="link" href="udisks2-UDisksModuleManager.html#UDisksModuleManager" title="UDisksModuleManager"><span class="type">UDisksModuleManager</span></a> first loads all module entry functions, i.e.
+symbols defined in the public facing header "udisksmoduleiface.h". Only
+those symbols should be exported from each module. The header file is only
+meant to be compiled in modules, not the daemon. If any of the symbols is
+missing in the module library, the whole module is skipped.</p>
+<p>Once module symbols are resolved, module manager activates each module by
+calling <code class="function">udisks_module_init()</code> on it. The returned so-called "state" pointer
+is stored in the <a class="link" href="udisks2-UDisksModuleManager.html#UDisksModuleManager" title="UDisksModuleManager"><span class="type">UDisksModuleManager</span></a> and can be later retrieved by calling
+the <a class="link" href="udisks2-UDisksModuleManager.html#udisks-module-manager-get-module-state-pointer" title="udisks_module_manager_get_module_state_pointer ()"><code class="function">udisks_module_manager_get_module_state_pointer()</code></a> method. This is typically
+used further in the module code to retrieve and store module-specific runtime
+data.</p>
+<p>Every one of the "udisksmoduleiface.h" header file symbols has its counterpart
+defined in the "udisksmoduleifacetypes.h" header file in form of function
+pointers. Those are used internally for symbol resolving purposes. However,
+they also carry detailed documentation. For illustration purposes, let's
+call these symbol pairs the "module setup entry functions". See
+<a class="link" href="udisks2-UDisksModuleManager.html#UDisksModuleIfaceSetupFunc" title="UDisksModuleIfaceSetupFunc ()"><span class="type">UDisksModuleIfaceSetupFunc</span></a>, <a class="link" href="udisks2-UDisksModuleManager.html#UDisksModuleObjectNewSetupFunc" title="UDisksModuleObjectNewSetupFunc ()"><span class="type">UDisksModuleObjectNewSetupFunc</span></a> and
+<a class="link" href="udisks2-UDisksModuleManager.html#UDisksModuleNewManagerIfaceSetupFunc" title="UDisksModuleNewManagerIfaceSetupFunc ()"><span class="type">UDisksModuleNewManagerIfaceSetupFunc</span></a> for reference. These however are
+essentially auxiliary symbols only described for demonstrating the big
+picture; for the useful part of the module API please read on.</p>
+<p>Every module setup entry function (besides the very simple <code class="function">udisks_module_init()</code>)
+returns an array of setup structures or functions, containing either none
+(NULL result), one or more elements. The result is then mixed by
+<a class="link" href="udisks2-UDisksModuleManager.html#UDisksModuleManager" title="UDisksModuleManager"><span class="type">UDisksModuleManager</span></a> from all modules and separate lists are created for
+each kind of UDisks way of extension. Such lists are then used in the daemon
+code at appropriate places, sequentially calling elements from the lists to
+obtain data or objects that are then typically exported on D-Bus.</p>
+<p>In short, have a look at the <a class="link" href="udisks2-UDisksModuleManager.html#UDisksModuleInterfaceInfo" title="UDisksModuleInterfaceInfo"><span class="type">UDisksModuleInterfaceInfo</span></a>,
+<a class="link" href="udisks2-UDisksModuleManager.html#UDisksModuleObjectNewFunc" title="UDisksModuleObjectNewFunc ()"><span class="type">UDisksModuleObjectNewFunc</span></a> and <a class="link" href="udisks2-UDisksModuleManager.html#UDisksModuleNewManagerIfaceFunc" title="UDisksModuleNewManagerIfaceFunc ()"><span class="type">UDisksModuleNewManagerIfaceFunc</span></a> definitions
+to learn more about particular ways of extending UDisks.</p>
+</div>
+</div>
+<div class="refsect1">
+<a name="udisks2-UDisksModuleManager.functions_details"></a><h2>Functions</h2>
+<div class="refsect2">
+<a name="UDisksObjectHasInterfaceFunc"></a><h3>UDisksObjectHasInterfaceFunc ()</h3>
+<pre class="programlisting"><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+<span class="c_punctuation">(</span>*UDisksObjectHasInterfaceFunc<span class="c_punctuation">)</span> (<em class="parameter"><code><a class="link" href="UDisksObject.html" title="UDisksObject"><span class="type">UDisksObject</span></a> *object</code></em>);</pre>
+<p>Function prototype that is used to determine whether the <em class="parameter"><code>object</code></em>
+ is applicable
+for carrying a particular D-Bus interface (determined by the callback function itself).</p>
+<p>Used typically over <a class="link" href="UDisksLinuxBlockObject.html" title="UDisksLinuxBlockObject"><span class="type">UDisksLinuxBlockObject</span></a> and <a class="link" href="UDisksLinuxDriveObject.html" title="UDisksLinuxDriveObject"><span class="type">UDisksLinuxDriveObject</span></a>
+objects for checking specific feature that leads to exporting extra D-Bus
+interface on the object.</p>
+<div class="refsect3">
+<a name="UDisksObjectHasInterfaceFunc.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>object</p></td>
+<td class="parameter_description"><p>A <a class="link" href="UDisksObject.html" title="UDisksObject"><span class="type">UDisksObject</span></a> to consider.</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="UDisksObjectHasInterfaceFunc.returns"></a><h4>Returns</h4>
+<p> <a href="/usr/share/gtk-doc/html/glib/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> if the <em class="parameter"><code>object</code></em>
+is a valid candidate for the particular D-Bus interface, <a href="/usr/share/gtk-doc/html/glib/glib-Standard-Macros.html#FALSE:CAPS"><code class="literal">FALSE</code></a> otherwise.</p>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="UDisksObjectConnectInterfaceFunc"></a><h3>UDisksObjectConnectInterfaceFunc ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+<span class="c_punctuation">(</span>*UDisksObjectConnectInterfaceFunc<span class="c_punctuation">)</span> (<em class="parameter"><code><a class="link" href="UDisksObject.html" title="UDisksObject"><span class="type">UDisksObject</span></a> *object</code></em>);</pre>
+<p>Function prototype that is used once a new D-Bus interface is created (meaning
+the <a class="link" href="udisks2-UDisksModuleManager.html#UDisksObjectHasInterfaceFunc" title="UDisksObjectHasInterfaceFunc ()"><span class="type">UDisksObjectHasInterfaceFunc</span></a> call was successful) to perform optional
+additional tasks before the interface is exported on the <em class="parameter"><code>object</code></em>
+.</p>
+<p>Used typically over <a class="link" href="UDisksLinuxBlockObject.html" title="UDisksLinuxBlockObject"><span class="type">UDisksLinuxBlockObject</span></a> and <a class="link" href="UDisksLinuxDriveObject.html" title="UDisksLinuxDriveObject"><span class="type">UDisksLinuxDriveObject</span></a> objects.</p>
+<div class="refsect3">
+<a name="UDisksObjectConnectInterfaceFunc.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>object</p></td>
+<td class="parameter_description"><p>A <a class="link" href="UDisksObject.html" title="UDisksObject"><span class="type">UDisksObject</span></a> to perform connection operation onto.</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="UDisksObjectUpdateInterfaceFunc"></a><h3>UDisksObjectUpdateInterfaceFunc ()</h3>
+<pre class="programlisting"><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+<span class="c_punctuation">(</span>*UDisksObjectUpdateInterfaceFunc<span class="c_punctuation">)</span> (<em class="parameter"><code><a class="link" href="UDisksObject.html" title="UDisksObject"><span class="type">UDisksObject</span></a> *object</code></em>,
+                                    <em class="parameter"><code>const <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *uevent_action</code></em>,
+                                    <em class="parameter"><code><a href="/usr/share/gtk-doc/html/gio/GDBusInterface.html#GDBusInterface-struct"><span class="type">GDBusInterface</span></a> *interface</code></em>);</pre>
+<p>Function prototype that is used on existing <em class="parameter"><code>interface</code></em>
+ on the <em class="parameter"><code>object</code></em>
+ to process
+incoming uevents.</p>
+<p>Used typically over <a class="link" href="UDisksLinuxBlockObject.html" title="UDisksLinuxBlockObject"><span class="type">UDisksLinuxBlockObject</span></a> and <a class="link" href="UDisksLinuxDriveObject.html" title="UDisksLinuxDriveObject"><span class="type">UDisksLinuxDriveObject</span></a> objects.</p>
+<div class="refsect3">
+<a name="UDisksObjectUpdateInterfaceFunc.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>object</p></td>
+<td class="parameter_description"><p>A <a class="link" href="UDisksObject.html" title="UDisksObject"><span class="type">UDisksObject</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>uevent_action</p></td>
+<td class="parameter_description"><p>An uevent action string.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>interface</p></td>
+<td class="parameter_description"><p>Existing <a href="/usr/share/gtk-doc/html/gio/GDBusInterface.html#GDBusInterface-struct"><span class="type">GDBusInterface</span></a> exported on the <em class="parameter"><code>object</code></em>
+.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="UDisksObjectUpdateInterfaceFunc.returns"></a><h4>Returns</h4>
+<p> <a href="/usr/share/gtk-doc/html/glib/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> if configuration (properties) on the interface have changed, <a href="/usr/share/gtk-doc/html/glib/glib-Standard-Macros.html#FALSE:CAPS"><code class="literal">FALSE</code></a> otherwise.</p>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="UDisksModuleObjectNewFunc"></a><h3>UDisksModuleObjectNewFunc ()</h3>
+<pre class="programlisting"><a href="/usr/share/gtk-doc/html/gio/GDBusObjectSkeleton.html#GDBusObjectSkeleton-struct"><span class="returnvalue">GDBusObjectSkeleton</span></a> *
+<span class="c_punctuation">(</span>*UDisksModuleObjectNewFunc<span class="c_punctuation">)</span> (<em class="parameter"><code><a class="link" href="UDisksDaemon.html" title="UDisksDaemon"><span class="type">UDisksDaemon</span></a> *daemon</code></em>,
+                              <em class="parameter"><code><a class="link" href="UDisksLinuxDevice.html" title="UDisksLinuxDevice"><span class="type">UDisksLinuxDevice</span></a> *device</code></em>);</pre>
+<p>Function prototype that creates new <a href="/usr/share/gtk-doc/html/gio/GDBusObjectSkeleton.html#GDBusObjectSkeleton-struct"><span class="type">GDBusObjectSkeleton</span></a> instance that
+implements the <a class="link" href="udisks2-UDisksModuleManager.html#UDisksModuleObject" title="UDisksModuleObject"><span class="type">UDisksModuleObject</span></a> interface.</p>
+<p>This is an another way of extending UDisks functionality. Objects in this
+scope are meant to be of virtual kind and are pretty flexible - not
+necessarily bound to any block device or perhaps representing a group of
+resources. For illustration this kind of object may represent e.g. a RAID
+array comprised of several block devices, all devices of the same kind such
+as loop devices or any higher level representation of something else.</p>
+<p>This function may be called quite often, for nearly any uevent received.
+It's done this way for broad flexibility and to give a chance to
+<a class="link" href="udisks2-UDisksModuleManager.html#UDisksModuleObjectNewFunc" title="UDisksModuleObjectNewFunc ()"><span class="type">UDisksModuleObjectNewFunc</span></a> functions to claim any device needed.</p>
+<p>Every <a href="/usr/share/gtk-doc/html/gio/GDBusObjectSkeleton.html#GDBusObjectSkeleton-struct"><span class="type">GDBusObjectSkeleton</span></a> can claim one or more devices and UDisks
+automatically manages uevent routing and instance lifecycle. A hierarchy of
+claimed devices is maintained for the combination of particular module and
+every <a class="link" href="udisks2-UDisksModuleManager.html#UDisksModuleObjectNewFunc" title="UDisksModuleObjectNewFunc ()"><span class="type">UDisksModuleObjectNewFunc</span></a> - see below. This list lives in
+<a class="link" href="UDisksLinuxProvider.html" title="UDisksLinuxProvider"><span class="type">UDisksLinuxProvider</span></a> and is strictly internal. Every module can provide
+multiple <a class="link" href="udisks2-UDisksModuleManager.html#UDisksModuleObjectNewFunc" title="UDisksModuleObjectNewFunc ()"><span class="type">UDisksModuleObjectNewFunc</span></a> functions for different kind of objects.</p>
+<p>Two scenarios are distinguished:</p>
+<div class="orderedlist"><ol class="orderedlist" type="1">
+<li class="listitem"><p>The <em class="parameter"><code>device</code></em>
+ is already claimed by existing <a href="/usr/share/gtk-doc/html/gio/GDBusObjectSkeleton.html#GDBusObjectSkeleton-struct"><span class="type">GDBusObjectSkeleton</span></a>
+ instance for the current <a class="link" href="udisks2-UDisksModuleManager.html#UDisksModuleObjectNewFunc" title="UDisksModuleObjectNewFunc ()"><span class="type">UDisksModuleObjectNewFunc</span></a>, it is guaranteed
+ that only that instance will receive further uevents for the particular
+ <em class="parameter"><code>device</code></em>
+. This is done by calling the <a class="link" href="udisks2-UDisksModuleManager.html#udisks-module-object-process-uevent" title="udisks_module_object_process_uevent ()"><code class="function">udisks_module_object_process_uevent()</code></a>
+ method of the <a class="link" href="udisks2-UDisksModuleManager.html#UDisksModuleObject" title="UDisksModuleObject"><span class="type">UDisksModuleObject</span></a> interface. Depending on the returning
+ value the device is either kept claimed by the object or removed. When
+ last claimed device has been removed from the instance, it is
+ automatically destroyed. In either case no further processing is done
+ at this cycle to prevent creating new bogus instances for a <em class="parameter"><code>device</code></em>
+
+ that has just given up.</p></li>
+<li class="listitem"><p>In case the <em class="parameter"><code>device</code></em>
+ is not claimed by any existing <a href="/usr/share/gtk-doc/html/gio/GDBusObjectSkeleton.html#GDBusObjectSkeleton-struct"><span class="type">GDBusObjectSkeleton</span></a>
+ instance for the current <a class="link" href="udisks2-UDisksModuleManager.html#UDisksModuleObjectNewFunc" title="UDisksModuleObjectNewFunc ()"><span class="type">UDisksModuleObjectNewFunc</span></a>. It now all depends
+ on the return value of the function called. If it returns a new
+ <a href="/usr/share/gtk-doc/html/gio/GDBusObjectSkeleton.html#GDBusObjectSkeleton-struct"><span class="type">GDBusObjectSkeleton</span></a> instance, it also indicates to <a class="link" href="UDisksLinuxProvider.html" title="UDisksLinuxProvider"><span class="type">UDisksLinuxProvider</span></a>
+ that it claims the device. The <a class="link" href="UDisksLinuxProvider.html" title="UDisksLinuxProvider"><span class="type">UDisksLinuxProvider</span></a> then registers the
+ value with the current function and keeps track of it. If it returns
+ <a href="/usr/share/gtk-doc/html/glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>, it inidcates that the current function is not interested in this
+ kind of device.</p></li>
+</ol></div>
+<p>It's guaranteed that existing <a href="/usr/share/gtk-doc/html/gio/GDBusObjectSkeleton.html#GDBusObjectSkeleton-struct"><span class="type">GDBusObjectSkeleton</span></a> instances will receive
+uevents for devices they took and creating a new instance will take place
+only if the event was not processed by any of them.</p>
+<div class="refsect3">
+<a name="UDisksModuleObjectNewFunc.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>daemon</p></td>
+<td class="parameter_description"><p>A <a class="link" href="UDisksDaemon.html" title="UDisksDaemon"><span class="type">UDisksDaemon</span></a> instance.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>device</p></td>
+<td class="parameter_description"><p>A <a class="link" href="UDisksLinuxDevice.html" title="UDisksLinuxDevice"><span class="type">UDisksLinuxDevice</span></a> device object.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="UDisksModuleObjectNewFunc.returns"></a><h4>Returns</h4>
+<p> A new <a href="/usr/share/gtk-doc/html/gio/GDBusObjectSkeleton.html#GDBusObjectSkeleton-struct"><span class="type">GDBusObjectSkeleton</span></a> or <a href="/usr/share/gtk-doc/html/glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a> when the module doesn't handle
+the device specified. Free with <a href="/usr/share/gtk-doc/html/gobject/gobject-The-Base-Object-Type.html#g-object-unref"><code class="function">g_object_unref()</code></a>.</p>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="UDisksModuleNewManagerIfaceFunc"></a><h3>UDisksModuleNewManagerIfaceFunc ()</h3>
+<pre class="programlisting"><a href="/usr/share/gtk-doc/html/gio/GDBusInterfaceSkeleton.html#GDBusInterfaceSkeleton-struct"><span class="returnvalue">GDBusInterfaceSkeleton</span></a> *
+<span class="c_punctuation">(</span>*UDisksModuleNewManagerIfaceFunc<span class="c_punctuation">)</span> (<em class="parameter"><code><a class="link" href="UDisksDaemon.html" title="UDisksDaemon"><span class="type">UDisksDaemon</span></a> *daemon</code></em>);</pre>
+<p>Function prototype that creates new <a href="/usr/share/gtk-doc/html/gio/GDBusInterfaceSkeleton.html#GDBusInterfaceSkeleton-struct"><span class="type">GDBusInterfaceSkeleton</span></a> instance
+carrying an additional D-Bus interface to be exported on the UDisks manager
+object (on the "/org/freedesktop/UDisks2/Manager" path). It is a fairly
+simple stateless object not related to any device and serves the purpose of
+performing general tasks or creating new resources.</p>
+<div class="refsect3">
+<a name="UDisksModuleNewManagerIfaceFunc.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>daemon</p></td>
+<td class="parameter_description"><p>A <a class="link" href="UDisksDaemon.html" title="UDisksDaemon"><span class="type">UDisksDaemon</span></a> instance.</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="UDisksModuleNewManagerIfaceFunc.returns"></a><h4>Returns</h4>
+<p> A new <a href="/usr/share/gtk-doc/html/gio/GDBusInterfaceSkeleton.html#GDBusInterfaceSkeleton-struct"><span class="type">GDBusInterfaceSkeleton</span></a>. Free with <a href="/usr/share/gtk-doc/html/gobject/gobject-The-Base-Object-Type.html#g-object-unref"><code class="function">g_object_unref()</code></a>.</p>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="UDisksModuleInitFunc"></a><h3>UDisksModuleInitFunc ()</h3>
+<pre class="programlisting"><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gpointer"><span class="returnvalue">gpointer</span></a>
+<span class="c_punctuation">(</span>*UDisksModuleInitFunc<span class="c_punctuation">)</span> (<em class="parameter"><code><a class="link" href="UDisksDaemon.html" title="UDisksDaemon"><span class="type">UDisksDaemon</span></a> *daemon</code></em>);</pre>
+<p>Function prototype that is called upon module initialization. Its purpose is
+to perform internal initialization and allocate memory that is then used e.g.
+for saving state. See the <a class="link" href="udisks2-UDisksModuleManager.html#udisks-module-manager-get-module-state-pointer" title="udisks_module_manager_get_module_state_pointer ()"><code class="function">udisks_module_manager_get_module_state_pointer()</code></a>
+method for how to work with state pointers.</p>
+<p>Corresponds with the <code class="function">udisks_module_init()</code> module symbol.
+Used internally by <a class="link" href="udisks2-UDisksModuleManager.html#UDisksModuleManager" title="UDisksModuleManager"><span class="type">UDisksModuleManager</span></a>.</p>
+<div class="refsect3">
+<a name="UDisksModuleInitFunc.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>daemon</p></td>
+<td class="parameter_description"><p>A <a class="link" href="UDisksDaemon.html" title="UDisksDaemon"><span class="type">UDisksDaemon</span></a> instance.</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="UDisksModuleInitFunc.returns"></a><h4>Returns</h4>
+<p> Pointer to an opaque memory or <a href="/usr/share/gtk-doc/html/glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a> when module doesn't need to save
+its state.</p>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="UDisksModuleIfaceSetupFunc"></a><h3>UDisksModuleIfaceSetupFunc ()</h3>
+<pre class="programlisting"><a class="link" href="udisks2-UDisksModuleManager.html#UDisksModuleInterfaceInfo" title="UDisksModuleInterfaceInfo"><span class="returnvalue">UDisksModuleInterfaceInfo</span></a> **
+<span class="c_punctuation">(</span>*UDisksModuleIfaceSetupFunc<span class="c_punctuation">)</span> (<em class="parameter"><code><span class="type">void</span></code></em>);</pre>
+<p>Type declaration of a module setup entry function.</p>
+<p>Corresponds with the <code class="function">udisks_module_get_block_object_iface_setup_entries()</code> and
+<code class="function">udisks_module_get_drive_object_iface_setup_entries()</code> module symbols.
+Used internally by <a class="link" href="udisks2-UDisksModuleManager.html#UDisksModuleManager" title="UDisksModuleManager"><span class="type">UDisksModuleManager</span></a>.</p>
+<div class="refsect3">
+<a name="UDisksModuleIfaceSetupFunc.returns"></a><h4>Returns</h4>
+<p> An array of pointers to the <a class="link" href="udisks2-UDisksModuleManager.html#UDisksModuleInterfaceInfo" title="UDisksModuleInterfaceInfo"><span class="type">UDisksModuleInterfaceInfo</span></a> structs. Free with <a href="/usr/share/gtk-doc/html/glib/glib-Memory-Allocation.html#g-free"><code class="function">g_free()</code></a>.</p>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="UDisksModuleObjectNewSetupFunc"></a><h3>UDisksModuleObjectNewSetupFunc ()</h3>
+<pre class="programlisting"><a class="link" href="udisks2-UDisksModuleManager.html#UDisksModuleObjectNewFunc" title="UDisksModuleObjectNewFunc ()"><span class="returnvalue">UDisksModuleObjectNewFunc</span></a> *
+<span class="c_punctuation">(</span>*UDisksModuleObjectNewSetupFunc<span class="c_punctuation">)</span> (<em class="parameter"><code><span class="type">void</span></code></em>);</pre>
+<p>Type declaration of a module setup entry function.</p>
+<p>Corresponds with the <code class="function">udisks_module_get_object_new_funcs()</code> module symbol.
+Used internally by <a class="link" href="udisks2-UDisksModuleManager.html#UDisksModuleManager" title="UDisksModuleManager"><span class="type">UDisksModuleManager</span></a>.</p>
+<div class="refsect3">
+<a name="UDisksModuleObjectNewSetupFunc.returns"></a><h4>Returns</h4>
+<p> An array of pointers to the <a class="link" href="udisks2-UDisksModuleManager.html#UDisksModuleObjectNewFunc" title="UDisksModuleObjectNewFunc ()"><span class="type">UDisksModuleObjectNewFunc</span></a> functions. Free with <a href="/usr/share/gtk-doc/html/glib/glib-Memory-Allocation.html#g-free"><code class="function">g_free()</code></a>.</p>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="UDisksModuleNewManagerIfaceSetupFunc"></a><h3>UDisksModuleNewManagerIfaceSetupFunc ()</h3>
+<pre class="programlisting"><a class="link" href="udisks2-UDisksModuleManager.html#UDisksModuleNewManagerIfaceFunc" title="UDisksModuleNewManagerIfaceFunc ()"><span class="returnvalue">UDisksModuleNewManagerIfaceFunc</span></a> *
+<span class="c_punctuation">(</span>*UDisksModuleNewManagerIfaceSetupFunc<span class="c_punctuation">)</span>
+                               (<em class="parameter"><code><span class="type">void</span></code></em>);</pre>
+<p>Type declaration of a module setup entry function.</p>
+<p>Corresponds with the <code class="function">udisks_module_get_new_manager_iface_funcs()</code> module symbol.
+Used internally by <a class="link" href="udisks2-UDisksModuleManager.html#UDisksModuleManager" title="UDisksModuleManager"><span class="type">UDisksModuleManager</span></a>.</p>
+<div class="refsect3">
+<a name="UDisksModuleNewManagerIfaceSetupFunc.returns"></a><h4>Returns</h4>
+<p> An array of pointers to the <a class="link" href="udisks2-UDisksModuleManager.html#UDisksModuleNewManagerIfaceFunc" title="UDisksModuleNewManagerIfaceFunc ()"><span class="type">UDisksModuleNewManagerIfaceFunc</span></a> functions. Free with <a href="/usr/share/gtk-doc/html/glib/glib-Memory-Allocation.html#g-free"><code class="function">g_free()</code></a>.</p>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="udisks-module-manager-new"></a><h3>udisks_module_manager_new ()</h3>
+<pre class="programlisting"><a class="link" href="udisks2-UDisksModuleManager.html#UDisksModuleManager" title="UDisksModuleManager"><span class="returnvalue">UDisksModuleManager</span></a> *
+udisks_module_manager_new (<em class="parameter"><code><a class="link" href="UDisksDaemon.html" title="UDisksDaemon"><span class="type">UDisksDaemon</span></a> *daemon</code></em>);</pre>
+<p>Creates a new <a class="link" href="udisks2-UDisksModuleManager.html#UDisksModuleManager" title="UDisksModuleManager"><span class="type">UDisksModuleManager</span></a> object.</p>
+<div class="refsect3">
+<a name="udisks-module-manager-new.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>daemon</p></td>
+<td class="parameter_description"><p>A <a class="link" href="UDisksDaemon.html" title="UDisksDaemon"><span class="type">UDisksDaemon</span></a> instance.</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="udisks-module-manager-new.returns"></a><h4>Returns</h4>
+<p> A <a class="link" href="udisks2-UDisksModuleManager.html#UDisksModuleManager" title="UDisksModuleManager"><span class="type">UDisksModuleManager</span></a>. Free with <a href="/usr/share/gtk-doc/html/gobject/gobject-The-Base-Object-Type.html#g-object-unref"><code class="function">g_object_unref()</code></a>.</p>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="udisks-module-manager-get-modules-available"></a><h3>udisks_module_manager_get_modules_available ()</h3>
+<pre class="programlisting"><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+udisks_module_manager_get_modules_available
+                               (<em class="parameter"><code><a class="link" href="udisks2-UDisksModuleManager.html#UDisksModuleManager" title="UDisksModuleManager"><span class="type">UDisksModuleManager</span></a> *manager</code></em>);</pre>
+<p>Indicates whether modules have been loaded.</p>
+<div class="refsect3">
+<a name="udisks-module-manager-get-modules-available.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>manager</p></td>
+<td class="parameter_description"><p>A <a class="link" href="udisks2-UDisksModuleManager.html#UDisksModuleManager" title="UDisksModuleManager"><span class="type">UDisksModuleManager</span></a> instance.</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="udisks-module-manager-get-modules-available.returns"></a><h4>Returns</h4>
+<p> <a href="/usr/share/gtk-doc/html/glib/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> if modules have been loaded, <a href="/usr/share/gtk-doc/html/glib/glib-Standard-Macros.html#FALSE:CAPS"><code class="literal">FALSE</code></a> otherwise.</p>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="udisks-module-manager-load-modules"></a><h3>udisks_module_manager_load_modules ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+udisks_module_manager_load_modules (<em class="parameter"><code><a class="link" href="udisks2-UDisksModuleManager.html#UDisksModuleManager" title="UDisksModuleManager"><span class="type">UDisksModuleManager</span></a> *manager</code></em>);</pre>
+<p>Loads all modules at a time and emits the "modules-ready" signal.
+Does nothing when called multiple times.</p>
+<div class="refsect3">
+<a name="udisks-module-manager-load-modules.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>manager</p></td>
+<td class="parameter_description"><p>A <a class="link" href="udisks2-UDisksModuleManager.html#UDisksModuleManager" title="UDisksModuleManager"><span class="type">UDisksModuleManager</span></a> instance.</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="udisks-module-manager-get-module-state-pointer"></a><h3>udisks_module_manager_get_module_state_pointer ()</h3>
+<pre class="programlisting"><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gpointer"><span class="returnvalue">gpointer</span></a>
+udisks_module_manager_get_module_state_pointer
+                               (<em class="parameter"><code><a class="link" href="udisks2-UDisksModuleManager.html#UDisksModuleManager" title="UDisksModuleManager"><span class="type">UDisksModuleManager</span></a> *manager</code></em>,
+                                <em class="parameter"><code>const <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *module_name</code></em>);</pre>
+<p>Retrieves the stored module state pointer for the given <em class="parameter"><code>module_name</code></em>
+.</p>
+<div class="refsect3">
+<a name="udisks-module-manager-get-module-state-pointer.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>manager</p></td>
+<td class="parameter_description"><p>A <a class="link" href="udisks2-UDisksModuleManager.html#UDisksModuleManager" title="UDisksModuleManager"><span class="type">UDisksModuleManager</span></a> instance.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>module_name</p></td>
+<td class="parameter_description"><p>A module name.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="udisks-module-manager-get-module-state-pointer.returns"></a><h4>Returns</h4>
+<p> A stored pointer to the private data or <a href="/usr/share/gtk-doc/html/glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a> if there is no state pointer for the given <em class="parameter"><code>module_name</code></em>
+.</p>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="udisks-module-manager-set-module-state-pointer"></a><h3>udisks_module_manager_set_module_state_pointer ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+udisks_module_manager_set_module_state_pointer
+                               (<em class="parameter"><code><a class="link" href="udisks2-UDisksModuleManager.html#UDisksModuleManager" title="UDisksModuleManager"><span class="type">UDisksModuleManager</span></a> *manager</code></em>,
+                                <em class="parameter"><code>const <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *module_name</code></em>,
+                                <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a> state</code></em>);</pre>
+<p>Stores the <em class="parameter"><code>state</code></em>
+ pointer for the given <em class="parameter"><code>module_name</code></em>
+.</p>
+<div class="refsect3">
+<a name="udisks-module-manager-set-module-state-pointer.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>manager</p></td>
+<td class="parameter_description"><p>A <a class="link" href="udisks2-UDisksModuleManager.html#UDisksModuleManager" title="UDisksModuleManager"><span class="type">UDisksModuleManager</span></a> instance.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>module_name</p></td>
+<td class="parameter_description"><p>A module name.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>state</p></td>
+<td class="parameter_description"><p>Pointer to a private data.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="udisks-module-manager-get-block-object-iface-infos"></a><h3>udisks_module_manager_get_block_object_iface_infos ()</h3>
+<pre class="programlisting"><a href="/usr/share/gtk-doc/html/glib/glib-Doubly-Linked-Lists.html#GList"><span class="returnvalue">GList</span></a> *
+udisks_module_manager_get_block_object_iface_infos
+                               (<em class="parameter"><code><a class="link" href="udisks2-UDisksModuleManager.html#UDisksModuleManager" title="UDisksModuleManager"><span class="type">UDisksModuleManager</span></a> *manager</code></em>);</pre>
+<p>Returns a list of block object interface info structs that can be plugged in <a class="link" href="UDisksLinuxBlockObject.html" title="UDisksLinuxBlockObject"><span class="type">UDisksLinuxBlockObject</span></a> instances. See <a class="link" href="udisks2-UDisksModuleManager.html#UDisksModuleIfaceSetupFunc" title="UDisksModuleIfaceSetupFunc ()"><span class="type">UDisksModuleIfaceSetupFunc</span></a> for details.</p>
+<div class="refsect3">
+<a name="udisks-module-manager-get-block-object-iface-infos.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>manager</p></td>
+<td class="parameter_description"><p>A <a class="link" href="udisks2-UDisksModuleManager.html#UDisksModuleManager" title="UDisksModuleManager"><span class="type">UDisksModuleManager</span></a> instance.</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="udisks-module-manager-get-block-object-iface-infos.returns"></a><h4>Returns</h4>
+<p>A list of <a class="link" href="udisks2-UDisksModuleManager.html#UDisksModuleIfaceSetupFunc" title="UDisksModuleIfaceSetupFunc ()"><span class="type">UDisksModuleIfaceSetupFunc</span></a> structs that belongs to the manager and must not be freed. </p>
+<p><span class="annotation">[<acronym title="Generics and defining elements of containers and arrays."><span class="acronym">element-type</span></acronym> UDisksModuleIfaceSetupFunc][<acronym title="Free data after the code is done."><span class="acronym">transfer full</span></acronym>]</span></p>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="udisks-module-manager-get-drive-object-iface-infos"></a><h3>udisks_module_manager_get_drive_object_iface_infos ()</h3>
+<pre class="programlisting"><a href="/usr/share/gtk-doc/html/glib/glib-Doubly-Linked-Lists.html#GList"><span class="returnvalue">GList</span></a> *
+udisks_module_manager_get_drive_object_iface_infos
+                               (<em class="parameter"><code><a class="link" href="udisks2-UDisksModuleManager.html#UDisksModuleManager" title="UDisksModuleManager"><span class="type">UDisksModuleManager</span></a> *manager</code></em>);</pre>
+<p>Returns a list of drive object interface info structs that can be plugged in <a class="link" href="UDisksLinuxDriveObject.html" title="UDisksLinuxDriveObject"><span class="type">UDisksLinuxDriveObject</span></a> instances. See <a class="link" href="udisks2-UDisksModuleManager.html#UDisksModuleIfaceSetupFunc" title="UDisksModuleIfaceSetupFunc ()"><span class="type">UDisksModuleIfaceSetupFunc</span></a> for details.</p>
+<div class="refsect3">
+<a name="udisks-module-manager-get-drive-object-iface-infos.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>manager</p></td>
+<td class="parameter_description"><p>A <a class="link" href="udisks2-UDisksModuleManager.html#UDisksModuleManager" title="UDisksModuleManager"><span class="type">UDisksModuleManager</span></a> instance.</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="udisks-module-manager-get-drive-object-iface-infos.returns"></a><h4>Returns</h4>
+<p>A list of <a class="link" href="udisks2-UDisksModuleManager.html#UDisksModuleIfaceSetupFunc" title="UDisksModuleIfaceSetupFunc ()"><span class="type">UDisksModuleIfaceSetupFunc</span></a> structs that belongs to the manager and must not be freed. </p>
+<p><span class="annotation">[<acronym title="Generics and defining elements of containers and arrays."><span class="acronym">element-type</span></acronym> UDisksModuleIfaceSetupFunc][<acronym title="Free data after the code is done."><span class="acronym">transfer full</span></acronym>]</span></p>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="udisks-module-manager-get-module-object-new-funcs"></a><h3>udisks_module_manager_get_module_object_new_funcs ()</h3>
+<pre class="programlisting"><a href="/usr/share/gtk-doc/html/glib/glib-Doubly-Linked-Lists.html#GList"><span class="returnvalue">GList</span></a> *
+udisks_module_manager_get_module_object_new_funcs
+                               (<em class="parameter"><code><a class="link" href="udisks2-UDisksModuleManager.html#UDisksModuleManager" title="UDisksModuleManager"><span class="type">UDisksModuleManager</span></a> *manager</code></em>);</pre>
+<p>Returns a list of all module object new functions. See <a class="link" href="udisks2-UDisksModuleManager.html#UDisksModuleObjectNewFunc" title="UDisksModuleObjectNewFunc ()"><span class="type">UDisksModuleObjectNewFunc</span></a> for details.</p>
+<div class="refsect3">
+<a name="udisks-module-manager-get-module-object-new-funcs.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>manager</p></td>
+<td class="parameter_description"><p>A <a class="link" href="udisks2-UDisksModuleManager.html#UDisksModuleManager" title="UDisksModuleManager"><span class="type">UDisksModuleManager</span></a> instance.</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="udisks-module-manager-get-module-object-new-funcs.returns"></a><h4>Returns</h4>
+<p>A list of <a class="link" href="udisks2-UDisksModuleManager.html#UDisksModuleObjectNewFunc" title="UDisksModuleObjectNewFunc ()"><span class="type">UDisksModuleObjectNewFunc</span></a> function pointers that belongs to the manager and must not be freed. </p>
+<p><span class="annotation">[<acronym title="Generics and defining elements of containers and arrays."><span class="acronym">element-type</span></acronym> UDisksModuleObjectNewFunc][<acronym title="Free data after the code is done."><span class="acronym">transfer full</span></acronym>]</span></p>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="udisks-module-manager-get-new-manager-iface-funcs"></a><h3>udisks_module_manager_get_new_manager_iface_funcs ()</h3>
+<pre class="programlisting"><a href="/usr/share/gtk-doc/html/glib/glib-Doubly-Linked-Lists.html#GList"><span class="returnvalue">GList</span></a> *
+udisks_module_manager_get_new_manager_iface_funcs
+                               (<em class="parameter"><code><a class="link" href="udisks2-UDisksModuleManager.html#UDisksModuleManager" title="UDisksModuleManager"><span class="type">UDisksModuleManager</span></a> *manager</code></em>);</pre>
+<p>Returns a list of all module new manager interface functions. See <a class="link" href="udisks2-UDisksModuleManager.html#UDisksModuleNewManagerIfaceFunc" title="UDisksModuleNewManagerIfaceFunc ()"><span class="type">UDisksModuleNewManagerIfaceFunc</span></a> for details.</p>
+<div class="refsect3">
+<a name="udisks-module-manager-get-new-manager-iface-funcs.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>manager</p></td>
+<td class="parameter_description"><p>A <a class="link" href="udisks2-UDisksModuleManager.html#UDisksModuleManager" title="UDisksModuleManager"><span class="type">UDisksModuleManager</span></a> instance.</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="udisks-module-manager-get-new-manager-iface-funcs.returns"></a><h4>Returns</h4>
+<p>A list of <a class="link" href="udisks2-UDisksModuleManager.html#UDisksModuleNewManagerIfaceFunc" title="UDisksModuleNewManagerIfaceFunc ()"><span class="type">UDisksModuleNewManagerIfaceFunc</span></a> function pointers that belongs to the manager and must not be freed. </p>
+<p><span class="annotation">[<acronym title="Generics and defining elements of containers and arrays."><span class="acronym">element-type</span></acronym> UDisksModuleNewManagerIfaceFunc][<acronym title="Free data after the code is done."><span class="acronym">transfer full</span></acronym>]</span></p>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="udisks-module-object-process-uevent"></a><h3>udisks_module_object_process_uevent ()</h3>
+<pre class="programlisting"><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+udisks_module_object_process_uevent (<em class="parameter"><code><a class="link" href="udisks2-UDisksModuleManager.html#UDisksModuleObject" title="UDisksModuleObject"><span class="type">UDisksModuleObject</span></a> *object</code></em>,
+                                     <em class="parameter"><code>const <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *action</code></em>,
+                                     <em class="parameter"><code><a class="link" href="UDisksLinuxDevice.html" title="UDisksLinuxDevice"><span class="type">UDisksLinuxDevice</span></a> *device</code></em>);</pre>
+<p>Virtual method that processes the uevent and updates all information on interfaces
+on <em class="parameter"><code>object</code></em>
+.</p>
+<p>See <a class="link" href="udisks2-UDisksModuleManager.html#UDisksModuleObjectNewFunc" title="UDisksModuleObjectNewFunc ()"><span class="type">UDisksModuleObjectNewFunc</span></a> for detailed information on how to work with
+the events.</p>
+<div class="refsect3">
+<a name="udisks-module-object-process-uevent.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>object</p></td>
+<td class="parameter_description"><p>A <a class="link" href="udisks2-UDisksModuleManager.html#UDisksModuleObject" title="UDisksModuleObject"><span class="type">UDisksModuleObject</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>action</p></td>
+<td class="parameter_description"><p>Uevent action, common values are "add", "changed" and "removed" or <a href="/usr/share/gtk-doc/html/glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>device</p></td>
+<td class="parameter_description"><p>A <a class="link" href="UDisksLinuxDevice.html" title="UDisksLinuxDevice"><span class="type">UDisksLinuxDevice</span></a> device object or <a href="/usr/share/gtk-doc/html/glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a> if the device hasn't changed.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="udisks-module-object-process-uevent.returns"></a><h4>Returns</h4>
+<p> <a href="/usr/share/gtk-doc/html/glib/glib-Standard-Macros.html#FALSE:CAPS"><code class="literal">FALSE</code></a> if the object should be unexported and removed, <a href="/usr/share/gtk-doc/html/glib/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> if the object
+has processed the information successfully and should be kept around.</p>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="udisks-module-object-housekeeping"></a><h3>udisks_module_object_housekeeping ()</h3>
+<pre class="programlisting"><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+udisks_module_object_housekeeping (<em class="parameter"><code><a class="link" href="udisks2-UDisksModuleManager.html#UDisksModuleObject" title="UDisksModuleObject"><span class="type">UDisksModuleObject</span></a> *object</code></em>,
+                                   <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#guint"><span class="type">guint</span></a> secs_since_last</code></em>,
+                                   <em class="parameter"><code><a href="/usr/share/gtk-doc/html/gio/GCancellable.html#GCancellable-struct"><span class="type">GCancellable</span></a> *cancellable</code></em>,
+                                   <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glib/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);</pre>
+<p>Virtual method that is called periodically (every ten minutes or so)
+to perform housekeeping tasks such as refreshing ATA SMART data.</p>
+<p>The function runs in a dedicated thread and is allowed to perform
+blocking I/O.</p>
+<p>Long-running tasks should periodically check <em class="parameter"><code>cancellable</code></em>
+ to see if
+they have been cancelled.</p>
+<div class="refsect3">
+<a name="udisks-module-object-housekeeping.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>object</p></td>
+<td class="parameter_description"><p>A <a class="link" href="udisks2-UDisksModuleManager.html#UDisksModuleObject" title="UDisksModuleObject"><span class="type">UDisksModuleObject</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>secs_since_last</p></td>
+<td class="parameter_description"><p>Number of seconds since the last housekeeping or 0 if the first housekeeping ever.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>cancellable</p></td>
+<td class="parameter_description"><p>A <a href="/usr/share/gtk-doc/html/gio/GCancellable.html#GCancellable-struct"><code class="literal">GCancellable</code></a> or <a href="/usr/share/gtk-doc/html/glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>error</p></td>
+<td class="parameter_description"><p>Return location for error or <a href="/usr/share/gtk-doc/html/glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="udisks-module-object-housekeeping.returns"></a><h4>Returns</h4>
+<p> <a href="/usr/share/gtk-doc/html/glib/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> if the operation succeeded, <a href="/usr/share/gtk-doc/html/glib/glib-Standard-Macros.html#FALSE:CAPS"><code class="literal">FALSE</code></a> if <em class="parameter"><code>error</code></em>
+is set.</p>
+</div>
+</div>
+</div>
+<div class="refsect1">
+<a name="udisks2-UDisksModuleManager.other_details"></a><h2>Types and Values</h2>
+<div class="refsect2">
+<a name="UDisksModuleManager"></a><h3>UDisksModuleManager</h3>
+<pre class="programlisting">typedef struct _UDisksModuleManager UDisksModuleManager;</pre>
+<p>The <a class="link" href="udisks2-UDisksModuleManager.html#UDisksModuleManager" title="UDisksModuleManager"><span class="type">UDisksModuleManager</span></a> structure contains only private data and
+should only be accessed using the provided API.</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="UDisksModuleInterfaceInfo"></a><h3>UDisksModuleInterfaceInfo</h3>
+<pre class="programlisting">typedef struct {
+  UDisksObjectHasInterfaceFunc has_func;
+  UDisksObjectConnectInterfaceFunc connect_func;
+  UDisksObjectUpdateInterfaceFunc update_func;
+  GType skeleton_type;
+} UDisksModuleInterfaceInfo;
+</pre>
+<p>Structure containing interface setup functions used by modules for exporting
+custom interfaces on existing block and drive objects.</p>
+<p>Event processing is solely done by <a class="link" href="UDisksLinuxBlockObject.html" title="UDisksLinuxBlockObject"><span class="type">UDisksLinuxBlockObject</span></a> and <a class="link" href="UDisksLinuxDriveObject.html" title="UDisksLinuxDriveObject"><span class="type">UDisksLinuxDriveObject</span></a>
+themselves whose call the <em class="parameter"><code>has_func</code></em>
+, <em class="parameter"><code>connect_func</code></em>
+ and <em class="parameter"><code>update_func</code></em>
+ respectively
+as needed. Purpose of these member functions is to check whether the particular
+<a class="link" href="udisks2-UDisksModuleManager.html#UDisksModuleInterfaceInfo" title="UDisksModuleInterfaceInfo"><span class="type">UDisksModuleInterfaceInfo</span></a> record is applicable to the current device and
+construct a new <a href="/usr/share/gtk-doc/html/gio/GDBusInterface.html#GDBusInterface-struct"><span class="type">GDBusInterface</span></a> if so.</p>
+<p>See <a class="link" href="udisks2-UDisksModuleManager.html#UDisksObjectHasInterfaceFunc" title="UDisksObjectHasInterfaceFunc ()"><span class="type">UDisksObjectHasInterfaceFunc</span></a>, <a class="link" href="udisks2-UDisksModuleManager.html#UDisksObjectConnectInterfaceFunc" title="UDisksObjectConnectInterfaceFunc ()"><span class="type">UDisksObjectConnectInterfaceFunc</span></a> and
+<a class="link" href="udisks2-UDisksModuleManager.html#UDisksObjectUpdateInterfaceFunc" title="UDisksObjectUpdateInterfaceFunc ()"><span class="type">UDisksObjectUpdateInterfaceFunc</span></a> for detailed description and return values.</p>
+<div class="refsect3">
+<a name="UDisksModuleInterfaceInfo.members"></a><h4>Members</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="300px" class="struct_members_name">
+<col class="struct_members_description">
+<col width="200px" class="struct_members_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="struct_member_name"><p><a class="link" href="udisks2-UDisksModuleManager.html#UDisksObjectHasInterfaceFunc" title="UDisksObjectHasInterfaceFunc ()"><span class="type">UDisksObjectHasInterfaceFunc</span></a> <em class="structfield"><code><a name="UDisksModuleInterfaceInfo.has-func"></a>has_func</code></em>;</p></td>
+<td class="struct_member_description"><p>A <a class="link" href="udisks2-UDisksModuleManager.html#UDisksObjectHasInterfaceFunc" title="UDisksObjectHasInterfaceFunc ()"><span class="type">UDisksObjectHasInterfaceFunc</span></a></p></td>
+<td class="struct_member_annotations"> </td>
+</tr>
+<tr>
+<td class="struct_member_name"><p><a class="link" href="udisks2-UDisksModuleManager.html#UDisksObjectConnectInterfaceFunc" title="UDisksObjectConnectInterfaceFunc ()"><span class="type">UDisksObjectConnectInterfaceFunc</span></a> <em class="structfield"><code><a name="UDisksModuleInterfaceInfo.connect-func"></a>connect_func</code></em>;</p></td>
+<td class="struct_member_description"><p>A <a class="link" href="udisks2-UDisksModuleManager.html#UDisksObjectConnectInterfaceFunc" title="UDisksObjectConnectInterfaceFunc ()"><span class="type">UDisksObjectConnectInterfaceFunc</span></a></p></td>
+<td class="struct_member_annotations"> </td>
+</tr>
+<tr>
+<td class="struct_member_name"><p><a class="link" href="udisks2-UDisksModuleManager.html#UDisksObjectUpdateInterfaceFunc" title="UDisksObjectUpdateInterfaceFunc ()"><span class="type">UDisksObjectUpdateInterfaceFunc</span></a> <em class="structfield"><code><a name="UDisksModuleInterfaceInfo.update-func"></a>update_func</code></em>;</p></td>
+<td class="struct_member_description"><p>A <a class="link" href="udisks2-UDisksModuleManager.html#UDisksObjectUpdateInterfaceFunc" title="UDisksObjectUpdateInterfaceFunc ()"><span class="type">UDisksObjectUpdateInterfaceFunc</span></a></p></td>
+<td class="struct_member_annotations"> </td>
+</tr>
+<tr>
+<td class="struct_member_name"><p><a href="/usr/share/gtk-doc/html/gobject/gobject-Type-Information.html#GType"><span class="type">GType</span></a> <em class="structfield"><code><a name="UDisksModuleInterfaceInfo.skeleton-type"></a>skeleton_type</code></em>;</p></td>
+<td class="struct_member_description"><p>A <a href="/usr/share/gtk-doc/html/gobject/gobject-Type-Information.html#GType"><span class="type">GType</span></a> of the instance that is created once <em class="parameter"><code>has_func</code></em>
+succeeds.</p></td>
+<td class="struct_member_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="UDisksModuleObject"></a><h3>UDisksModuleObject</h3>
+<pre class="programlisting">typedef struct _UDisksModuleObject UDisksModuleObject;</pre>
+<p>The <a class="link" href="udisks2-UDisksModuleManager.html#UDisksModuleObject" title="UDisksModuleObject"><span class="type">UDisksModuleObject</span></a> structure contains only private data and
+should only be accessed using the provided API.</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="UDisksModuleObjectIface"></a><h3>struct UDisksModuleObjectIface</h3>
+<pre class="programlisting">struct UDisksModuleObjectIface {
+  GTypeInterface parent_iface;
+
+  gboolean (*process_uevent) (UDisksModuleObject  *object,
+                              const gchar         *action,
+                              UDisksLinuxDevice   *device);
+
+  gboolean (*housekeeping) (UDisksModuleObject  *object,
+                            guint                secs_since_last,
+                            GCancellable        *cancellable,
+                            GError             **error);
+};
+</pre>
+</div>
+</div>
+</div>
+<div class="footer">
+<hr>Generated by GTK-Doc V1.28</div>
+</body>
+</html>
