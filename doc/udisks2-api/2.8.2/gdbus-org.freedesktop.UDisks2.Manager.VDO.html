@@ -1,0 +1,234 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>org.freedesktop.UDisks2.Manager.VDO: UDisks Reference Manual</title>
+<meta name="generator" content="DocBook XSL Stylesheets Vsnapshot">
+<link rel="home" href="index.html" title="UDisks Reference Manual">
+<link rel="up" href="ch02.html" title="D-Bus Interfaces">
+<link rel="prev" href="gdbus-org.freedesktop.UDisks2.Block.Bcache.html" title="org.freedesktop.UDisks2.Block.Bcache">
+<link rel="next" href="gdbus-org.freedesktop.UDisks2.Block.VDO.html" title="org.freedesktop.UDisks2.Block.VDO">
+<meta name="generator" content="GTK-Doc V1.28 (XML mode)">
+<link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<table class="navigation" id="top" width="100%" summary="Navigation header" cellpadding="2" cellspacing="5"><tr valign="middle">
+<td width="100%" align="left" class="shortcuts">
+<a href="#" class="shortcut">Top</a><span id="nav_description">  <span class="dim">|</span> 
+                  <a href="#gdbus-org.freedesktop.UDisks2.Manager.VDO.description" class="shortcut">Description</a></span>
+</td>
+<td><a accesskey="h" href="index.html"><img src="home.png" width="16" height="16" border="0" alt="Home"></a></td>
+<td><a accesskey="u" href="ch02.html"><img src="up.png" width="16" height="16" border="0" alt="Up"></a></td>
+<td><a accesskey="p" href="gdbus-org.freedesktop.UDisks2.Block.Bcache.html"><img src="left.png" width="16" height="16" border="0" alt="Prev"></a></td>
+<td><a accesskey="n" href="gdbus-org.freedesktop.UDisks2.Block.VDO.html"><img src="right.png" width="16" height="16" border="0" alt="Next"></a></td>
+</tr></table>
+<div class="refentry">
+<a name="gdbus-org.freedesktop.UDisks2.Manager.VDO"></a><div class="titlepage"></div>
+<div class="refnamediv"><table width="100%"><tr>
+<td valign="top">
+<h2><span class="refentrytitle"><a name="gdbus-interface-org-freedesktop-UDisks2-Manager-VDO.top_of_page"></a>org.freedesktop.UDisks2.Manager.VDO</span></h2>
+<p>org.freedesktop.UDisks2.Manager.VDO — VDO volume management</p>
+</td>
+<td class="gallery_image" valign="top" align="right"></td>
+</tr></table></div>
+<div class="refsynopsisdiv">
+<h2>Methods</h2>
+<pre class="synopsis">
+<a class="link" href="gdbus-org.freedesktop.UDisks2.Manager.VDO.html#gdbus-method-org-freedesktop-UDisks2-Manager-VDO.CreateVolume" title="The CreateVolume() method">CreateVolume</a>         (IN  s     name,
+                      IN  o     device,
+                      IN  t     logical_size,
+                      IN  t     index_memory,
+                      IN  b     compression,
+                      IN  b     deduplication,
+                      IN  s     write_policy,
+                      IN  a{sv} options,
+                      OUT o     vdo);
+<a class="link" href="gdbus-org.freedesktop.UDisks2.Manager.VDO.html#gdbus-method-org-freedesktop-UDisks2-Manager-VDO.ActivateVolumeByName" title="The ActivateVolumeByName() method">ActivateVolumeByName</a> (IN  s     name,
+                      IN  a{sv} options);
+<a class="link" href="gdbus-org.freedesktop.UDisks2.Manager.VDO.html#gdbus-method-org-freedesktop-UDisks2-Manager-VDO.StartVolumeByName" title="The StartVolumeByName() method">StartVolumeByName</a>    (IN  s     name,
+                      IN  b     force_rebuild,
+                      IN  a{sv} options,
+                      OUT o     vdo);
+</pre>
+</div>
+<div class="refsect1">
+<a name="gdbus-interface-org-freedesktop-UDisks2-Manager-VDO"></a><h2>Description</h2>
+<p>      This interface provides a way to create new and activate or start existing
+      VDO volumes. Once a volume has been started an additional <a class="link" href="gdbus-org.freedesktop.UDisks2.Block.VDO.html#gdbus-interface-org-freedesktop-UDisks2-Block-VDO.top_of_page">org.freedesktop.UDisks2.Block.VDO</a>
+      interface will be exported on the related block object.
+</p>
+<p>      There are several limitations introduced by the backing <code class="literal">vdo</code>
+      tool that are reflected in the <a class="link" href="gdbus-org.freedesktop.UDisks2.Manager.VDO.html#gdbus-interface-org-freedesktop-UDisks2-Manager-VDO.top_of_page">org.freedesktop.UDisks2.Manager.VDO</a> interface.
+      The <code class="literal">vdo</code> tool operates on VDO names and can't take block
+      device path as an identifier. Volumes that are in stopped state don't expose
+      any <code class="literal">udev</code> attribute containing VDO name or any other information
+      that can be used for identification. That means that some of the
+      <a class="link" href="gdbus-org.freedesktop.UDisks2.Block.VDO.html#gdbus-interface-org-freedesktop-UDisks2-Block-VDO.top_of_page">org.freedesktop.UDisks2.Block.VDO</a> interface methods take VDO volume name
+      as an argument instead of an object path to the backing block device.
+</p>
+<p>      For the moment the VDO configuration file is not used to retrieve any extra
+      information.
+</p>
+<p class="since">Since 2.8.0</p>
+</div>
+<div class="refsect1">
+<a name="gdbus-methods-org.freedesktop.UDisks2.Manager.VDO"></a><h2>Method Details</h2>
+<div class="refsect2">
+<a name="gdbus-method-org-freedesktop-UDisks2-Manager-VDO.CreateVolume"></a><h3>The CreateVolume() method</h3>
+<pre class="programlisting">
+CreateVolume (IN  s     name,
+              IN  o     device,
+              IN  t     logical_size,
+              IN  t     index_memory,
+              IN  b     compression,
+              IN  b     deduplication,
+              IN  s     write_policy,
+              IN  a{sv} options,
+              OUT o     vdo);
+</pre>
+<p>        Creates a VDO volume from <em class="parameter"><code>device</code></em> and its associated index and makes it available.
+</p>
+<p>        Known <em class="parameter"><code>write_policy</code></em> values include:
+        </p>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term">sync</span></p></td>
+<td><p>Writes are acknowledged only after data is on stable storage. 'sync' policy is not supported if the underlying storage is not also synchronous.</p></td>
+</tr>
+<tr>
+<td><p><span class="term">async</span></p></td>
+<td><p>Writes are acknowledged when data has been cached for writing to stable storage; data which has not been flushed is not guaranteed to persist in this mode.</p></td>
+</tr>
+<tr>
+<td><p><span class="term">auto</span></p></td>
+<td><p>VDO will check the storage device and determine whether it supports flushes. If it does, VDO will run in async mode, otherwise it will run in sync mode.</p></td>
+</tr>
+</tbody>
+</table></div>
+<p>
+</p>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><code class="literal">IN s <em class="parameter"><code>name</code></em></code>:</span></p></td>
+<td><p>The VDO volume name.</p></td>
+</tr>
+<tr>
+<td><p><span class="term"><code class="literal">IN o <em class="parameter"><code>device</code></em></code>:</span></p></td>
+<td><p>Object path to an object implementing the #org.freedesktop.UDisks2.Block interface, used as an underlying storage device.</p></td>
+</tr>
+<tr>
+<td><p><span class="term"><code class="literal">IN t <em class="parameter"><code>logical_size</code></em></code>:</span></p></td>
+<td><p>Logical VDO volume size in bytes or 0 for default (size of <em class="parameter"><code>device</code></em>)</p></td>
+</tr>
+<tr>
+<td><p><span class="term"><code class="literal">IN t <em class="parameter"><code>index_memory</code></em></code>:</span></p></td>
+<td><p>Amount of index memory in bytes or 0 for default. Note that only some sizes are valid here (0.25, 0.5 and 0.75 GB and integer multiples of 1 GB). Invalid sizes will be rounded DOWN to nearest GB (or one of the allowed decimal values).</p></td>
+</tr>
+<tr>
+<td><p><span class="term"><code class="literal">IN b <em class="parameter"><code>compression</code></em></code>:</span></p></td>
+<td><p>Enables or disables compression when creating a VDO volume.</p></td>
+</tr>
+<tr>
+<td><p><span class="term"><code class="literal">IN b <em class="parameter"><code>deduplication</code></em></code>:</span></p></td>
+<td><p>Enables or disables deduplication when creating a VDO volume.</p></td>
+</tr>
+<tr>
+<td><p><span class="term"><code class="literal">IN s <em class="parameter"><code>write_policy</code></em></code>:</span></p></td>
+<td><p>Specifies the write policy.</p></td>
+</tr>
+<tr>
+<td><p><span class="term"><code class="literal">IN a{sv} <em class="parameter"><code>options</code></em></code>:</span></p></td>
+<td><p>Additional options (currently unused except for <a class="link" href="udisks-std-options.html" title="The options parameter">standard options</a>).</p></td>
+</tr>
+<tr>
+<td><p><span class="term"><code class="literal">OUT o <em class="parameter"><code>vdo</code></em></code>:</span></p></td>
+<td><p>An object path to the object implementing the <a class="link" href="gdbus-org.freedesktop.UDisks2.Block.VDO.html#gdbus-interface-org-freedesktop-UDisks2-Block-VDO.top_of_page">org.freedesktop.UDisks2.Block.VDO</a> interface.</p></td>
+</tr>
+</tbody>
+</table></div>
+<p class="since">Since 2.8.0</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="gdbus-method-org-freedesktop-UDisks2-Manager-VDO.ActivateVolumeByName"></a><h3>The ActivateVolumeByName() method</h3>
+<pre class="programlisting">
+ActivateVolumeByName (IN  s     name,
+                      IN  a{sv} options);
+</pre>
+<p>        Activates existing VDO volume. Activated volume can be started using the
+        <a class="link" href="gdbus-org.freedesktop.UDisks2.Manager.VDO.html#gdbus-method-org-freedesktop-UDisks2-Manager-VDO.StartVolumeByName" title="The StartVolumeByName() method">StartVolumeByName()</a> method call.
+</p>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><code class="literal">IN s <em class="parameter"><code>name</code></em></code>:</span></p></td>
+<td><p>Name of an existing VDO volume to activate.</p></td>
+</tr>
+<tr>
+<td><p><span class="term"><code class="literal">IN a{sv} <em class="parameter"><code>options</code></em></code>:</span></p></td>
+<td><p>Additional options (currently unused except for <a class="link" href="udisks-std-options.html" title="The options parameter">standard options</a>).</p></td>
+</tr>
+</tbody>
+</table></div>
+<p class="since">Since 2.8.0</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="gdbus-method-org-freedesktop-UDisks2-Manager-VDO.StartVolumeByName"></a><h3>The StartVolumeByName() method</h3>
+<pre class="programlisting">
+StartVolumeByName (IN  s     name,
+                   IN  b     force_rebuild,
+                   IN  a{sv} options,
+                   OUT o     vdo);
+</pre>
+<p>        Starts a stopped, activated VDO volume and associated services. Deactivated
+        volumes need to be activated using the <a class="link" href="gdbus-org.freedesktop.UDisks2.Manager.VDO.html#gdbus-method-org-freedesktop-UDisks2-Manager-VDO.ActivateVolumeByName" title="The ActivateVolumeByName() method">ActivateVolumeByName()</a>
+        method call prior to starting. Since a volume index rebuild may be required
+        a job object will be exposed for this operation.
+</p>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><code class="literal">IN s <em class="parameter"><code>name</code></em></code>:</span></p></td>
+<td><p>The VDO volume name.</p></td>
+</tr>
+<tr>
+<td><p><span class="term"><code class="literal">IN b <em class="parameter"><code>force_rebuild</code></em></code>:</span></p></td>
+<td><p>Forces an offline rebuild of a read-only VDO's metadata before starting so that it may be brought back online and made available. This option may result in data loss or corruption.</p></td>
+</tr>
+<tr>
+<td><p><span class="term"><code class="literal">IN a{sv} <em class="parameter"><code>options</code></em></code>:</span></p></td>
+<td><p>Additional options (currently unused except for <a class="link" href="udisks-std-options.html" title="The options parameter">standard options</a>).</p></td>
+</tr>
+<tr>
+<td><p><span class="term"><code class="literal">OUT o <em class="parameter"><code>vdo</code></em></code>:</span></p></td>
+<td><p>An object path to the object implementing the <a class="link" href="gdbus-org.freedesktop.UDisks2.Block.VDO.html#gdbus-interface-org-freedesktop-UDisks2-Block-VDO.top_of_page">org.freedesktop.UDisks2.Block.VDO</a> interface.</p></td>
+</tr>
+</tbody>
+</table></div>
+<p class="since">Since 2.8.0</p>
+</div>
+</div>
+</div>
+<div class="footer">
+<hr>Generated by GTK-Doc V1.28</div>
+</body>
+</html>
