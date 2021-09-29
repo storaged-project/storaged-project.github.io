@@ -1,0 +1,957 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>UDisksBlockVDO: UDisks Reference Manual</title>
+<meta name="generator" content="DocBook XSL Stylesheets Vsnapshot">
+<link rel="home" href="index.html" title="UDisks Reference Manual">
+<link rel="up" href="ref-library-generated.html" title="Generated Code">
+<link rel="prev" href="UDisksManagerVDO.html" title="UDisksManagerVDO">
+<link rel="next" href="ref-daemon.html" title="Part IV. Daemon Implementation Details">
+<meta name="generator" content="GTK-Doc V1.33.1 (XML mode)">
+<link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<table class="navigation" id="top" width="100%" summary="Navigation header" cellpadding="2" cellspacing="5"><tr valign="middle">
+<td width="100%" align="left" class="shortcuts">
+<a href="#" class="shortcut">Top</a><span id="nav_description">  <span class="dim">|</span> 
+                  <a href="#UDisksBlockVDO.description" class="shortcut">Description</a></span><span id="nav_hierarchy">  <span class="dim">|</span> 
+                  <a href="#UDisksBlockVDO.object-hierarchy" class="shortcut">Object Hierarchy</a></span><span id="nav_interfaces">  <span class="dim">|</span> 
+                  <a href="#UDisksBlockVDO.implemented-interfaces" class="shortcut">Implemented Interfaces</a></span><span id="nav_prerequisites">  <span class="dim">|</span> 
+                  <a href="#UDisksBlockVDO.prerequisites" class="shortcut">Prerequisites</a></span><span id="nav_implementations">  <span class="dim">|</span> 
+                  <a href="#UDisksBlockVDO.implementations" class="shortcut">Known Implementations</a></span><span id="nav_properties">  <span class="dim">|</span> 
+                  <a href="#UDisksBlockVDO.properties" class="shortcut">Properties</a></span><span id="nav_signals">  <span class="dim">|</span> 
+                  <a href="#UDisksBlockVDO.signals" class="shortcut">Signals</a></span>
+</td>
+<td><a accesskey="h" href="index.html"><img src="home.png" width="16" height="16" border="0" alt="Home"></a></td>
+<td><a accesskey="u" href="ref-library-generated.html"><img src="up.png" width="16" height="16" border="0" alt="Up"></a></td>
+<td><a accesskey="p" href="UDisksManagerVDO.html"><img src="left.png" width="16" height="16" border="0" alt="Prev"></a></td>
+<td><a accesskey="n" href="ref-daemon.html"><img src="right.png" width="16" height="16" border="0" alt="Next"></a></td>
+</tr></table>
+<div class="refentry">
+<a name="UDisksBlockVDO"></a><div class="titlepage"></div>
+<div class="refnamediv"><table width="100%"><tr>
+<td valign="top">
+<h2><span class="refentrytitle"><a name="UDisksBlockVDO.top_of_page"></a>UDisksBlockVDO</span></h2>
+<p>UDisksBlockVDO — Generated C code for the org.freedesktop.UDisks2.Block.VDO D-Bus interface</p>
+</td>
+<td class="gallery_image" valign="top" align="right"></td>
+</tr></table></div>
+<div class="refsect1">
+<a name="UDisksBlockVDO.properties"></a><h2>Properties</h2>
+<div class="informaltable"><table class="informaltable" border="0">
+<colgroup>
+<col width="150px" class="properties_type">
+<col width="300px" class="properties_name">
+<col width="200px" class="properties_flags">
+</colgroup>
+<tbody>
+<tr>
+<td class="property_type"><a href="../glib/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a></td>
+<td class="property_name"><a class="link" href="UDisksBlockVDO.html#UDisksBlockVDO--active" title="The “active” property">active</a></td>
+<td class="property_flags">Read / Write</td>
+</tr>
+<tr>
+<td class="property_type"><a href="../glib/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a></td>
+<td class="property_name"><a class="link" href="UDisksBlockVDO.html#UDisksBlockVDO--compression" title="The “compression” property">compression</a></td>
+<td class="property_flags">Read / Write</td>
+</tr>
+<tr>
+<td class="property_type"><a href="../glib/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a></td>
+<td class="property_name"><a class="link" href="UDisksBlockVDO.html#UDisksBlockVDO--deduplication" title="The “deduplication” property">deduplication</a></td>
+<td class="property_flags">Read / Write</td>
+</tr>
+<tr>
+<td class="property_type"><a href="../glib/glib-Basic-Types.html#guint64"><span class="type">guint64</span></a></td>
+<td class="property_name"><a class="link" href="UDisksBlockVDO.html#UDisksBlockVDO--index-memory" title="The “index-memory” property">index-memory</a></td>
+<td class="property_flags">Read / Write</td>
+</tr>
+<tr>
+<td class="property_type"><a href="../glib/glib-Basic-Types.html#guint64"><span class="type">guint64</span></a></td>
+<td class="property_name"><a class="link" href="UDisksBlockVDO.html#UDisksBlockVDO--logical-size" title="The “logical-size” property">logical-size</a></td>
+<td class="property_flags">Read / Write</td>
+</tr>
+<tr>
+<td class="property_type">
+<span class="type">char</span> *</td>
+<td class="property_name"><a class="link" href="UDisksBlockVDO.html#UDisksBlockVDO--name" title="The “name” property">name</a></td>
+<td class="property_flags">Read / Write</td>
+</tr>
+<tr>
+<td class="property_type"><a href="../glib/glib-Basic-Types.html#guint64"><span class="type">guint64</span></a></td>
+<td class="property_name"><a class="link" href="UDisksBlockVDO.html#UDisksBlockVDO--physical-size" title="The “physical-size” property">physical-size</a></td>
+<td class="property_flags">Read / Write</td>
+</tr>
+<tr>
+<td class="property_type">
+<span class="type">char</span> *</td>
+<td class="property_name"><a class="link" href="UDisksBlockVDO.html#UDisksBlockVDO--write-policy" title="The “write-policy” property">write-policy</a></td>
+<td class="property_flags">Read / Write</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect1">
+<a name="UDisksBlockVDO.signals"></a><h2>Signals</h2>
+<div class="informaltable"><table class="informaltable" border="0">
+<colgroup>
+<col width="150px" class="signal_proto_type">
+<col width="300px" class="signal_proto_name">
+<col width="200px" class="signal_proto_flags">
+</colgroup>
+<tbody>
+<tr>
+<td class="signal_type"><a href="../glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a></td>
+<td class="signal_name"><a class="link" href="UDisksBlockVDO.html#UDisksBlockVDO-handle-change-write-policy" title="The “handle-change-write-policy” signal">handle-change-write-policy</a></td>
+<td class="signal_flags"><a href="../gobject/gobject-Signals.html#G-SIGNAL-RUN-LAST:CAPS">Run Last</a></td>
+</tr>
+<tr>
+<td class="signal_type"><a href="../glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a></td>
+<td class="signal_name"><a class="link" href="UDisksBlockVDO.html#UDisksBlockVDO-handle-deactivate" title="The “handle-deactivate” signal">handle-deactivate</a></td>
+<td class="signal_flags"><a href="../gobject/gobject-Signals.html#G-SIGNAL-RUN-LAST:CAPS">Run Last</a></td>
+</tr>
+<tr>
+<td class="signal_type"><a href="../glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a></td>
+<td class="signal_name"><a class="link" href="UDisksBlockVDO.html#UDisksBlockVDO-handle-enable-compression" title="The “handle-enable-compression” signal">handle-enable-compression</a></td>
+<td class="signal_flags"><a href="../gobject/gobject-Signals.html#G-SIGNAL-RUN-LAST:CAPS">Run Last</a></td>
+</tr>
+<tr>
+<td class="signal_type"><a href="../glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a></td>
+<td class="signal_name"><a class="link" href="UDisksBlockVDO.html#UDisksBlockVDO-handle-enable-deduplication" title="The “handle-enable-deduplication” signal">handle-enable-deduplication</a></td>
+<td class="signal_flags"><a href="../gobject/gobject-Signals.html#G-SIGNAL-RUN-LAST:CAPS">Run Last</a></td>
+</tr>
+<tr>
+<td class="signal_type"><a href="../glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a></td>
+<td class="signal_name"><a class="link" href="UDisksBlockVDO.html#UDisksBlockVDO-handle-get-statistics" title="The “handle-get-statistics” signal">handle-get-statistics</a></td>
+<td class="signal_flags"><a href="../gobject/gobject-Signals.html#G-SIGNAL-RUN-LAST:CAPS">Run Last</a></td>
+</tr>
+<tr>
+<td class="signal_type"><a href="../glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a></td>
+<td class="signal_name"><a class="link" href="UDisksBlockVDO.html#UDisksBlockVDO-handle-grow-logical" title="The “handle-grow-logical” signal">handle-grow-logical</a></td>
+<td class="signal_flags"><a href="../gobject/gobject-Signals.html#G-SIGNAL-RUN-LAST:CAPS">Run Last</a></td>
+</tr>
+<tr>
+<td class="signal_type"><a href="../glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a></td>
+<td class="signal_name"><a class="link" href="UDisksBlockVDO.html#UDisksBlockVDO-handle-grow-physical" title="The “handle-grow-physical” signal">handle-grow-physical</a></td>
+<td class="signal_flags"><a href="../gobject/gobject-Signals.html#G-SIGNAL-RUN-LAST:CAPS">Run Last</a></td>
+</tr>
+<tr>
+<td class="signal_type"><a href="../glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a></td>
+<td class="signal_name"><a class="link" href="UDisksBlockVDO.html#UDisksBlockVDO-handle-remove" title="The “handle-remove” signal">handle-remove</a></td>
+<td class="signal_flags"><a href="../gobject/gobject-Signals.html#G-SIGNAL-RUN-LAST:CAPS">Run Last</a></td>
+</tr>
+<tr>
+<td class="signal_type"><a href="../glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a></td>
+<td class="signal_name"><a class="link" href="UDisksBlockVDO.html#UDisksBlockVDO-handle-stop" title="The “handle-stop” signal">handle-stop</a></td>
+<td class="signal_flags"><a href="../gobject/gobject-Signals.html#G-SIGNAL-RUN-LAST:CAPS">Run Last</a></td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<a name="UDisksBlockVDOProxy"></a><a name="UDisksBlockVDOSkeleton"></a><div class="refsect1">
+<a name="UDisksBlockVDO.other"></a><h2>Types and Values</h2>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="other_proto_type">
+<col class="other_proto_name">
+</colgroup>
+<tbody>
+<tr>
+<td class="datatype_keyword"> </td>
+<td class="function_name"><a class="link" href="UDisksBlockVDO.html#UDisksBlockVDO-struct" title="UDisksBlockVDO">UDisksBlockVDO</a></td>
+</tr>
+<tr>
+<td class="datatype_keyword">struct</td>
+<td class="function_name"><a class="link" href="UDisksBlockVDO.html#UDisksBlockVDOProxy-struct" title="struct UDisksBlockVDOProxy">UDisksBlockVDOProxy</a></td>
+</tr>
+<tr>
+<td class="datatype_keyword">struct</td>
+<td class="function_name"><a class="link" href="UDisksBlockVDO.html#UDisksBlockVDOProxyClass" title="struct UDisksBlockVDOProxyClass">UDisksBlockVDOProxyClass</a></td>
+</tr>
+<tr>
+<td class="datatype_keyword">struct</td>
+<td class="function_name"><a class="link" href="UDisksBlockVDO.html#UDisksBlockVDOSkeleton-struct" title="struct UDisksBlockVDOSkeleton">UDisksBlockVDOSkeleton</a></td>
+</tr>
+<tr>
+<td class="datatype_keyword">struct</td>
+<td class="function_name"><a class="link" href="UDisksBlockVDO.html#UDisksBlockVDOSkeletonClass" title="struct UDisksBlockVDOSkeletonClass">UDisksBlockVDOSkeletonClass</a></td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect1">
+<a name="UDisksBlockVDO.object-hierarchy"></a><h2>Object Hierarchy</h2>
+<pre class="screen">    <a href="/usr/share/gtk-doc/html/gobject/GTypeModule.html">GInterface</a>
+    <span class="lineart">╰──</span> UDisksBlockVDO
+    <a href="../gobject/gobject-The-Base-Object-Type.html#GObject-struct">GObject</a>
+    <span class="lineart">├──</span> <a href="../gio/GDBusInterfaceSkeleton.html#GDBusInterfaceSkeleton-struct">GDBusInterfaceSkeleton</a>
+    <span class="lineart">│</span>   <span class="lineart">╰──</span> UDisksBlockVDOSkeleton
+    <span class="lineart">╰──</span> <a href="../gio/GDBusProxy.html#GDBusProxy-struct">GDBusProxy</a>
+        <span class="lineart">╰──</span> UDisksBlockVDOProxy
+</pre>
+</div>
+<div class="refsect1">
+<a name="UDisksBlockVDO.prerequisites"></a><h2>Prerequisites</h2>
+<p>
+UDisksBlockVDO requires
+ <a href="../gobject/gobject-The-Base-Object-Type.html#GObject-struct">GObject</a>.</p>
+</div>
+<div class="refsect1">
+<a name="UDisksBlockVDO.implemented-interfaces"></a><h2>Implemented Interfaces</h2>
+<p>
+UDisksBlockVDOProxy implements
+ <a href="../gio/GDBusInterface.html#GDBusInterface-struct">GDBusInterface</a>,  <a href="../gio/GInitable.html#GInitable-struct">GInitable</a>,  <a href="../gio/GAsyncInitable.html#GAsyncInitable-struct">GAsyncInitable</a> and  <a class="link" href="UDisksBlockVDO.html" title="UDisksBlockVDO">UDisksBlockVDO</a>.</p>
+<p>
+UDisksBlockVDOSkeleton implements
+ <a href="../gio/GDBusInterface.html#GDBusInterface-struct">GDBusInterface</a> and  <a class="link" href="UDisksBlockVDO.html" title="UDisksBlockVDO">UDisksBlockVDO</a>.</p>
+</div>
+<div class="refsect1">
+<a name="UDisksBlockVDO.implementations"></a><h2>Known Implementations</h2>
+<p>
+UDisksBlockVDO is implemented by
+ <a class="link" href="UDisksBlockVDO.html#UDisksBlockVDOProxy">UDisksBlockVDOProxy</a> and  <a class="link" href="UDisksBlockVDO.html#UDisksBlockVDOSkeleton">UDisksBlockVDOSkeleton</a>.</p>
+</div>
+<div class="refsect1">
+<a name="UDisksBlockVDO.description"></a><h2>Description</h2>
+<p>This section contains code for working with the <a class="link" href="gdbus-org.freedesktop.UDisks2.Block.VDO.html#gdbus-interface-org-freedesktop-UDisks2-Block-VDO.top_of_page">org.freedesktop.UDisks2.Block.VDO</a> D-Bus interface in C.</p>
+</div>
+<div class="refsect1">
+<a name="UDisksBlockVDO.functions_details"></a><h2>Functions</h2>
+<p></p>
+</div>
+<div class="refsect1">
+<a name="UDisksBlockVDO.other_details"></a><h2>Types and Values</h2>
+<div class="refsect2">
+<a name="UDisksBlockVDO-struct"></a><h3>UDisksBlockVDO</h3>
+<pre class="programlisting">typedef struct _UDisksBlockVDO UDisksBlockVDO;</pre>
+<div class="warning">
+<p><code class="literal">UDisksBlockVDO</code> is deprecated and should not be used in newly-written code.</p>
+<p>The D-Bus interface has been deprecated.</p>
+</div>
+<p>Abstract interface type for the D-Bus interface <a class="link" href="gdbus-org.freedesktop.UDisks2.Block.VDO.html#gdbus-interface-org-freedesktop-UDisks2-Block-VDO.top_of_page">org.freedesktop.UDisks2.Block.VDO</a>.</p>
+<p class="since">Since: 2.8.0</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="UDisksBlockVDOProxy-struct"></a><h3>struct UDisksBlockVDOProxy</h3>
+<pre class="programlisting">struct UDisksBlockVDOProxy;</pre>
+<div class="warning">
+<p><code class="literal">UDisksBlockVDOProxy</code> is deprecated and should not be used in newly-written code.</p>
+<p>The D-Bus interface has been deprecated.</p>
+</div>
+<p>The <a class="link" href="UDisksBlockVDO.html#UDisksBlockVDOProxy"><span class="type">UDisksBlockVDOProxy</span></a> structure contains only private data and should only be accessed using the provided API.</p>
+<p class="since">Since: 2.8.0</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="UDisksBlockVDOProxyClass"></a><h3>struct UDisksBlockVDOProxyClass</h3>
+<pre class="programlisting">struct UDisksBlockVDOProxyClass {
+  GDBusProxyClass parent_class;
+};
+</pre>
+<div class="warning">
+<p><code class="literal">UDisksBlockVDOProxyClass</code> is deprecated and should not be used in newly-written code.</p>
+<p>The D-Bus interface has been deprecated.</p>
+</div>
+<p>Class structure for <a class="link" href="UDisksBlockVDO.html#UDisksBlockVDOProxy"><span class="type">UDisksBlockVDOProxy</span></a>.</p>
+<div class="refsect3">
+<a name="UDisksBlockVDOProxyClass.members"></a><h4>Members</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="300px" class="struct_members_name">
+<col class="struct_members_description">
+<col width="200px" class="struct_members_annotations">
+</colgroup>
+<tbody></tbody>
+</table></div>
+</div>
+<p class="since">Since: 2.8.0</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="UDisksBlockVDOSkeleton-struct"></a><h3>struct UDisksBlockVDOSkeleton</h3>
+<pre class="programlisting">struct UDisksBlockVDOSkeleton;</pre>
+<div class="warning">
+<p><code class="literal">UDisksBlockVDOSkeleton</code> is deprecated and should not be used in newly-written code.</p>
+<p>The D-Bus interface has been deprecated.</p>
+</div>
+<p>The <a class="link" href="UDisksBlockVDO.html#UDisksBlockVDOSkeleton"><span class="type">UDisksBlockVDOSkeleton</span></a> structure contains only private data and should only be accessed using the provided API.</p>
+<p class="since">Since: 2.8.0</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="UDisksBlockVDOSkeletonClass"></a><h3>struct UDisksBlockVDOSkeletonClass</h3>
+<pre class="programlisting">struct UDisksBlockVDOSkeletonClass {
+  GDBusInterfaceSkeletonClass parent_class;
+};
+</pre>
+<div class="warning">
+<p><code class="literal">UDisksBlockVDOSkeletonClass</code> is deprecated and should not be used in newly-written code.</p>
+<p>The D-Bus interface has been deprecated.</p>
+</div>
+<p>Class structure for <a class="link" href="UDisksBlockVDO.html#UDisksBlockVDOSkeleton"><span class="type">UDisksBlockVDOSkeleton</span></a>.</p>
+<div class="refsect3">
+<a name="UDisksBlockVDOSkeletonClass.members"></a><h4>Members</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="300px" class="struct_members_name">
+<col class="struct_members_description">
+<col width="200px" class="struct_members_annotations">
+</colgroup>
+<tbody></tbody>
+</table></div>
+</div>
+<p class="since">Since: 2.8.0</p>
+</div>
+</div>
+<div class="refsect1">
+<a name="UDisksBlockVDO.property-details"></a><h2>Property Details</h2>
+<div class="refsect2">
+<a name="UDisksBlockVDO--active"></a><h3>The <code class="literal">“active”</code> property</h3>
+<pre class="programlisting">  “active”                   <a href="../glib/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a></pre>
+<p>Represents the D-Bus property <a class="link" href="gdbus-org.freedesktop.UDisks2.Block.VDO.html#gdbus-property-org-freedesktop-UDisks2-Block-VDO.Active" title='The "Active" property'>"Active"</a>.</p>
+<p>Since the D-Bus property for this <a href="../gobject/gobject-The-Base-Object-Type.html#GObject-struct"><span class="type">GObject</span></a> property is readable but not writable, it is meaningful to read from it on both the client- and service-side. It is only meaningful, however, to write to it on the service-side.</p>
+<div class="warning">
+<p><code class="literal">UDisksBlockVDO:active</code> is deprecated and should not be used in newly-written code.</p>
+<p>The D-Bus property has been deprecated.</p>
+</div>
+<p>Owner: UDisksBlockVDO</p>
+<p>Flags: Read / Write</p>
+<p>Default value: FALSE</p>
+<p class="since">Since: 2.8.0</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="UDisksBlockVDO--compression"></a><h3>The <code class="literal">“compression”</code> property</h3>
+<pre class="programlisting">  “compression”              <a href="../glib/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a></pre>
+<p>Represents the D-Bus property <a class="link" href="gdbus-org.freedesktop.UDisks2.Block.VDO.html#gdbus-property-org-freedesktop-UDisks2-Block-VDO.Compression" title='The "Compression" property'>"Compression"</a>.</p>
+<p>Since the D-Bus property for this <a href="../gobject/gobject-The-Base-Object-Type.html#GObject-struct"><span class="type">GObject</span></a> property is readable but not writable, it is meaningful to read from it on both the client- and service-side. It is only meaningful, however, to write to it on the service-side.</p>
+<div class="warning">
+<p><code class="literal">UDisksBlockVDO:compression</code> is deprecated and should not be used in newly-written code.</p>
+<p>The D-Bus property has been deprecated.</p>
+</div>
+<p>Owner: UDisksBlockVDO</p>
+<p>Flags: Read / Write</p>
+<p>Default value: FALSE</p>
+<p class="since">Since: 2.8.0</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="UDisksBlockVDO--deduplication"></a><h3>The <code class="literal">“deduplication”</code> property</h3>
+<pre class="programlisting">  “deduplication”            <a href="../glib/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a></pre>
+<p>Represents the D-Bus property <a class="link" href="gdbus-org.freedesktop.UDisks2.Block.VDO.html#gdbus-property-org-freedesktop-UDisks2-Block-VDO.Deduplication" title='The "Deduplication" property'>"Deduplication"</a>.</p>
+<p>Since the D-Bus property for this <a href="../gobject/gobject-The-Base-Object-Type.html#GObject-struct"><span class="type">GObject</span></a> property is readable but not writable, it is meaningful to read from it on both the client- and service-side. It is only meaningful, however, to write to it on the service-side.</p>
+<div class="warning">
+<p><code class="literal">UDisksBlockVDO:deduplication</code> is deprecated and should not be used in newly-written code.</p>
+<p>The D-Bus property has been deprecated.</p>
+</div>
+<p>Owner: UDisksBlockVDO</p>
+<p>Flags: Read / Write</p>
+<p>Default value: FALSE</p>
+<p class="since">Since: 2.8.0</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="UDisksBlockVDO--index-memory"></a><h3>The <code class="literal">“index-memory”</code> property</h3>
+<pre class="programlisting">  “index-memory”             <a href="../glib/glib-Basic-Types.html#guint64"><span class="type">guint64</span></a></pre>
+<p>Represents the D-Bus property <a class="link" href="gdbus-org.freedesktop.UDisks2.Block.VDO.html#gdbus-property-org-freedesktop-UDisks2-Block-VDO.IndexMemory" title='The "IndexMemory" property'>"IndexMemory"</a>.</p>
+<p>Since the D-Bus property for this <a href="../gobject/gobject-The-Base-Object-Type.html#GObject-struct"><span class="type">GObject</span></a> property is readable but not writable, it is meaningful to read from it on both the client- and service-side. It is only meaningful, however, to write to it on the service-side.</p>
+<div class="warning">
+<p><code class="literal">UDisksBlockVDO:index-memory</code> is deprecated and should not be used in newly-written code.</p>
+<p>The D-Bus property has been deprecated.</p>
+</div>
+<p>Owner: UDisksBlockVDO</p>
+<p>Flags: Read / Write</p>
+<p>Default value: 0</p>
+<p class="since">Since: 2.8.0</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="UDisksBlockVDO--logical-size"></a><h3>The <code class="literal">“logical-size”</code> property</h3>
+<pre class="programlisting">  “logical-size”             <a href="../glib/glib-Basic-Types.html#guint64"><span class="type">guint64</span></a></pre>
+<p>Represents the D-Bus property <a class="link" href="gdbus-org.freedesktop.UDisks2.Block.VDO.html#gdbus-property-org-freedesktop-UDisks2-Block-VDO.LogicalSize" title='The "LogicalSize" property'>"LogicalSize"</a>.</p>
+<p>Since the D-Bus property for this <a href="../gobject/gobject-The-Base-Object-Type.html#GObject-struct"><span class="type">GObject</span></a> property is readable but not writable, it is meaningful to read from it on both the client- and service-side. It is only meaningful, however, to write to it on the service-side.</p>
+<div class="warning">
+<p><code class="literal">UDisksBlockVDO:logical-size</code> is deprecated and should not be used in newly-written code.</p>
+<p>The D-Bus property has been deprecated.</p>
+</div>
+<p>Owner: UDisksBlockVDO</p>
+<p>Flags: Read / Write</p>
+<p>Default value: 0</p>
+<p class="since">Since: 2.8.0</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="UDisksBlockVDO--name"></a><h3>The <code class="literal">“name”</code> property</h3>
+<pre class="programlisting">  “name”                     <span class="type">char</span> *</pre>
+<p>Represents the D-Bus property <a class="link" href="gdbus-org.freedesktop.UDisks2.Block.VDO.html#gdbus-property-org-freedesktop-UDisks2-Block-VDO.Name" title='The "Name" property'>"Name"</a>.</p>
+<p>Since the D-Bus property for this <a href="../gobject/gobject-The-Base-Object-Type.html#GObject-struct"><span class="type">GObject</span></a> property is readable but not writable, it is meaningful to read from it on both the client- and service-side. It is only meaningful, however, to write to it on the service-side.</p>
+<div class="warning">
+<p><code class="literal">UDisksBlockVDO:name</code> is deprecated and should not be used in newly-written code.</p>
+<p>The D-Bus property has been deprecated.</p>
+</div>
+<p>Owner: UDisksBlockVDO</p>
+<p>Flags: Read / Write</p>
+<p>Default value: NULL</p>
+<p class="since">Since: 2.8.0</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="UDisksBlockVDO--physical-size"></a><h3>The <code class="literal">“physical-size”</code> property</h3>
+<pre class="programlisting">  “physical-size”            <a href="../glib/glib-Basic-Types.html#guint64"><span class="type">guint64</span></a></pre>
+<p>Represents the D-Bus property <a class="link" href="gdbus-org.freedesktop.UDisks2.Block.VDO.html#gdbus-property-org-freedesktop-UDisks2-Block-VDO.PhysicalSize" title='The "PhysicalSize" property'>"PhysicalSize"</a>.</p>
+<p>Since the D-Bus property for this <a href="../gobject/gobject-The-Base-Object-Type.html#GObject-struct"><span class="type">GObject</span></a> property is readable but not writable, it is meaningful to read from it on both the client- and service-side. It is only meaningful, however, to write to it on the service-side.</p>
+<div class="warning">
+<p><code class="literal">UDisksBlockVDO:physical-size</code> is deprecated and should not be used in newly-written code.</p>
+<p>The D-Bus property has been deprecated.</p>
+</div>
+<p>Owner: UDisksBlockVDO</p>
+<p>Flags: Read / Write</p>
+<p>Default value: 0</p>
+<p class="since">Since: 2.8.0</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="UDisksBlockVDO--write-policy"></a><h3>The <code class="literal">“write-policy”</code> property</h3>
+<pre class="programlisting">  “write-policy”             <span class="type">char</span> *</pre>
+<p>Represents the D-Bus property <a class="link" href="gdbus-org.freedesktop.UDisks2.Block.VDO.html#gdbus-property-org-freedesktop-UDisks2-Block-VDO.WritePolicy" title='The "WritePolicy" property'>"WritePolicy"</a>.</p>
+<p>Since the D-Bus property for this <a href="../gobject/gobject-The-Base-Object-Type.html#GObject-struct"><span class="type">GObject</span></a> property is readable but not writable, it is meaningful to read from it on both the client- and service-side. It is only meaningful, however, to write to it on the service-side.</p>
+<div class="warning">
+<p><code class="literal">UDisksBlockVDO:write-policy</code> is deprecated and should not be used in newly-written code.</p>
+<p>The D-Bus property has been deprecated.</p>
+</div>
+<p>Owner: UDisksBlockVDO</p>
+<p>Flags: Read / Write</p>
+<p>Default value: NULL</p>
+<p class="since">Since: 2.8.0</p>
+</div>
+</div>
+<div class="refsect1">
+<a name="UDisksBlockVDO.signal-details"></a><h2>Signal Details</h2>
+<div class="refsect2">
+<a name="UDisksBlockVDO-handle-change-write-policy"></a><h3>The <code class="literal">“handle-change-write-policy”</code> signal</h3>
+<pre class="programlisting"><a href="../glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+user_function (<a class="link" href="UDisksBlockVDO.html" title="UDisksBlockVDO"><span class="type">UDisksBlockVDO</span></a>        *object,
+               <a href="../gio/GDBusMethodInvocation.html#GDBusMethodInvocation-struct"><span class="type">GDBusMethodInvocation</span></a> *invocation,
+               <span class="type">char</span>                  *arg_write_policy,
+               <a href="../glib/glib-GVariant.html#GVariant"><span class="type">GVariant</span></a>              *arg_options,
+               <a href="../glib/glib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a>               user_data)</pre>
+<p>Signal emitted when a remote caller is invoking the <a class="link" href="gdbus-org.freedesktop.UDisks2.Block.VDO.html#gdbus-method-org-freedesktop-UDisks2-Block-VDO.ChangeWritePolicy" title="The ChangeWritePolicy() method"><code class="function">ChangeWritePolicy()</code></a> D-Bus method.</p>
+<p>If a signal handler returns <a href="../glib/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a>, it means the signal handler will handle the invocation (e.g. take a reference to <em class="parameter"><code>invocation</code></em>
+ and eventually call <code class="function">udisks_block_vdo_complete_change_write_policy()</code> or e.g. <a href="../gio/GDBusMethodInvocation.html#g-dbus-method-invocation-return-error"><code class="function">g_dbus_method_invocation_return_error()</code></a> on it) and no order signal handlers will run. If no signal handler handles the invocation, the <a href="../gio/gio-GDBusError.html#G-DBUS-ERROR-UNKNOWN-METHOD:CAPS"><code class="literal">G_DBUS_ERROR_UNKNOWN_METHOD</code></a> error is returned.</p>
+<div class="warning">
+<p><code class="literal">UDisksBlockVDO::handle-change-write-policy</code> is deprecated and should not be used in newly-written code.</p>
+<p>The D-Bus method has been deprecated.</p>
+</div>
+<div class="refsect3">
+<a name="UDisksBlockVDO-handle-change-write-policy.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>object</p></td>
+<td class="parameter_description"><p>A <a class="link" href="UDisksBlockVDO.html" title="UDisksBlockVDO"><span class="type">UDisksBlockVDO</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>invocation</p></td>
+<td class="parameter_description"><p>A <a href="../gio/GDBusMethodInvocation.html#GDBusMethodInvocation-struct"><span class="type">GDBusMethodInvocation</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>arg_write_policy</p></td>
+<td class="parameter_description"><p>Argument passed by remote caller.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>arg_options</p></td>
+<td class="parameter_description"><p>Argument passed by remote caller.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>user_data</p></td>
+<td class="parameter_description"><p>user data set when the signal handler was connected.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="UDisksBlockVDO-handle-change-write-policy.returns"></a><h4>Returns</h4>
+<p> <a href="../gio/GDBusMethodInvocation.html#G-DBUS-METHOD-INVOCATION-HANDLED:CAPS"><code class="literal">G_DBUS_METHOD_INVOCATION_HANDLED</code></a> or <a href="../glib/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> if the invocation was handled, <a href="../gio/GDBusMethodInvocation.html#G-DBUS-METHOD-INVOCATION-UNHANDLED:CAPS"><code class="literal">G_DBUS_METHOD_INVOCATION_UNHANDLED</code></a> or <a href="../glib/glib-Standard-Macros.html#FALSE:CAPS"><code class="literal">FALSE</code></a> to let other signal handlers run.</p>
+</div>
+<p>Flags: <a href="../gobject/gobject-Signals.html#G-SIGNAL-RUN-LAST:CAPS">Run Last</a></p>
+<p class="since">Since: 2.8.0</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="UDisksBlockVDO-handle-deactivate"></a><h3>The <code class="literal">“handle-deactivate”</code> signal</h3>
+<pre class="programlisting"><a href="../glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+user_function (<a class="link" href="UDisksBlockVDO.html" title="UDisksBlockVDO"><span class="type">UDisksBlockVDO</span></a>        *object,
+               <a href="../gio/GDBusMethodInvocation.html#GDBusMethodInvocation-struct"><span class="type">GDBusMethodInvocation</span></a> *invocation,
+               <a href="../glib/glib-GVariant.html#GVariant"><span class="type">GVariant</span></a>              *arg_options,
+               <a href="../glib/glib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a>               user_data)</pre>
+<p>Signal emitted when a remote caller is invoking the <a class="link" href="gdbus-org.freedesktop.UDisks2.Block.VDO.html#gdbus-method-org-freedesktop-UDisks2-Block-VDO.Deactivate" title="The Deactivate() method"><code class="function">Deactivate()</code></a> D-Bus method.</p>
+<p>If a signal handler returns <a href="../glib/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a>, it means the signal handler will handle the invocation (e.g. take a reference to <em class="parameter"><code>invocation</code></em>
+ and eventually call <code class="function">udisks_block_vdo_complete_deactivate()</code> or e.g. <a href="../gio/GDBusMethodInvocation.html#g-dbus-method-invocation-return-error"><code class="function">g_dbus_method_invocation_return_error()</code></a> on it) and no order signal handlers will run. If no signal handler handles the invocation, the <a href="../gio/gio-GDBusError.html#G-DBUS-ERROR-UNKNOWN-METHOD:CAPS"><code class="literal">G_DBUS_ERROR_UNKNOWN_METHOD</code></a> error is returned.</p>
+<div class="warning">
+<p><code class="literal">UDisksBlockVDO::handle-deactivate</code> is deprecated and should not be used in newly-written code.</p>
+<p>The D-Bus method has been deprecated.</p>
+</div>
+<div class="refsect3">
+<a name="UDisksBlockVDO-handle-deactivate.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>object</p></td>
+<td class="parameter_description"><p>A <a class="link" href="UDisksBlockVDO.html" title="UDisksBlockVDO"><span class="type">UDisksBlockVDO</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>invocation</p></td>
+<td class="parameter_description"><p>A <a href="../gio/GDBusMethodInvocation.html#GDBusMethodInvocation-struct"><span class="type">GDBusMethodInvocation</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>arg_options</p></td>
+<td class="parameter_description"><p>Argument passed by remote caller.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>user_data</p></td>
+<td class="parameter_description"><p>user data set when the signal handler was connected.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="UDisksBlockVDO-handle-deactivate.returns"></a><h4>Returns</h4>
+<p> <a href="../gio/GDBusMethodInvocation.html#G-DBUS-METHOD-INVOCATION-HANDLED:CAPS"><code class="literal">G_DBUS_METHOD_INVOCATION_HANDLED</code></a> or <a href="../glib/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> if the invocation was handled, <a href="../gio/GDBusMethodInvocation.html#G-DBUS-METHOD-INVOCATION-UNHANDLED:CAPS"><code class="literal">G_DBUS_METHOD_INVOCATION_UNHANDLED</code></a> or <a href="../glib/glib-Standard-Macros.html#FALSE:CAPS"><code class="literal">FALSE</code></a> to let other signal handlers run.</p>
+</div>
+<p>Flags: <a href="../gobject/gobject-Signals.html#G-SIGNAL-RUN-LAST:CAPS">Run Last</a></p>
+<p class="since">Since: 2.8.0</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="UDisksBlockVDO-handle-enable-compression"></a><h3>The <code class="literal">“handle-enable-compression”</code> signal</h3>
+<pre class="programlisting"><a href="../glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+user_function (<a class="link" href="UDisksBlockVDO.html" title="UDisksBlockVDO"><span class="type">UDisksBlockVDO</span></a>        *object,
+               <a href="../gio/GDBusMethodInvocation.html#GDBusMethodInvocation-struct"><span class="type">GDBusMethodInvocation</span></a> *invocation,
+               <a href="../glib/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a>               arg_enable,
+               <a href="../glib/glib-GVariant.html#GVariant"><span class="type">GVariant</span></a>              *arg_options,
+               <a href="../glib/glib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a>               user_data)</pre>
+<p>Signal emitted when a remote caller is invoking the <a class="link" href="gdbus-org.freedesktop.UDisks2.Block.VDO.html#gdbus-method-org-freedesktop-UDisks2-Block-VDO.EnableCompression" title="The EnableCompression() method"><code class="function">EnableCompression()</code></a> D-Bus method.</p>
+<p>If a signal handler returns <a href="../glib/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a>, it means the signal handler will handle the invocation (e.g. take a reference to <em class="parameter"><code>invocation</code></em>
+ and eventually call <code class="function">udisks_block_vdo_complete_enable_compression()</code> or e.g. <a href="../gio/GDBusMethodInvocation.html#g-dbus-method-invocation-return-error"><code class="function">g_dbus_method_invocation_return_error()</code></a> on it) and no order signal handlers will run. If no signal handler handles the invocation, the <a href="../gio/gio-GDBusError.html#G-DBUS-ERROR-UNKNOWN-METHOD:CAPS"><code class="literal">G_DBUS_ERROR_UNKNOWN_METHOD</code></a> error is returned.</p>
+<div class="warning">
+<p><code class="literal">UDisksBlockVDO::handle-enable-compression</code> is deprecated and should not be used in newly-written code.</p>
+<p>The D-Bus method has been deprecated.</p>
+</div>
+<div class="refsect3">
+<a name="UDisksBlockVDO-handle-enable-compression.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>object</p></td>
+<td class="parameter_description"><p>A <a class="link" href="UDisksBlockVDO.html" title="UDisksBlockVDO"><span class="type">UDisksBlockVDO</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>invocation</p></td>
+<td class="parameter_description"><p>A <a href="../gio/GDBusMethodInvocation.html#GDBusMethodInvocation-struct"><span class="type">GDBusMethodInvocation</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>arg_enable</p></td>
+<td class="parameter_description"><p>Argument passed by remote caller.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>arg_options</p></td>
+<td class="parameter_description"><p>Argument passed by remote caller.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>user_data</p></td>
+<td class="parameter_description"><p>user data set when the signal handler was connected.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="UDisksBlockVDO-handle-enable-compression.returns"></a><h4>Returns</h4>
+<p> <a href="../gio/GDBusMethodInvocation.html#G-DBUS-METHOD-INVOCATION-HANDLED:CAPS"><code class="literal">G_DBUS_METHOD_INVOCATION_HANDLED</code></a> or <a href="../glib/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> if the invocation was handled, <a href="../gio/GDBusMethodInvocation.html#G-DBUS-METHOD-INVOCATION-UNHANDLED:CAPS"><code class="literal">G_DBUS_METHOD_INVOCATION_UNHANDLED</code></a> or <a href="../glib/glib-Standard-Macros.html#FALSE:CAPS"><code class="literal">FALSE</code></a> to let other signal handlers run.</p>
+</div>
+<p>Flags: <a href="../gobject/gobject-Signals.html#G-SIGNAL-RUN-LAST:CAPS">Run Last</a></p>
+<p class="since">Since: 2.8.0</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="UDisksBlockVDO-handle-enable-deduplication"></a><h3>The <code class="literal">“handle-enable-deduplication”</code> signal</h3>
+<pre class="programlisting"><a href="../glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+user_function (<a class="link" href="UDisksBlockVDO.html" title="UDisksBlockVDO"><span class="type">UDisksBlockVDO</span></a>        *object,
+               <a href="../gio/GDBusMethodInvocation.html#GDBusMethodInvocation-struct"><span class="type">GDBusMethodInvocation</span></a> *invocation,
+               <a href="../glib/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a>               arg_enable,
+               <a href="../glib/glib-GVariant.html#GVariant"><span class="type">GVariant</span></a>              *arg_options,
+               <a href="../glib/glib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a>               user_data)</pre>
+<p>Signal emitted when a remote caller is invoking the <a class="link" href="gdbus-org.freedesktop.UDisks2.Block.VDO.html#gdbus-method-org-freedesktop-UDisks2-Block-VDO.EnableDeduplication" title="The EnableDeduplication() method"><code class="function">EnableDeduplication()</code></a> D-Bus method.</p>
+<p>If a signal handler returns <a href="../glib/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a>, it means the signal handler will handle the invocation (e.g. take a reference to <em class="parameter"><code>invocation</code></em>
+ and eventually call <code class="function">udisks_block_vdo_complete_enable_deduplication()</code> or e.g. <a href="../gio/GDBusMethodInvocation.html#g-dbus-method-invocation-return-error"><code class="function">g_dbus_method_invocation_return_error()</code></a> on it) and no order signal handlers will run. If no signal handler handles the invocation, the <a href="../gio/gio-GDBusError.html#G-DBUS-ERROR-UNKNOWN-METHOD:CAPS"><code class="literal">G_DBUS_ERROR_UNKNOWN_METHOD</code></a> error is returned.</p>
+<div class="warning">
+<p><code class="literal">UDisksBlockVDO::handle-enable-deduplication</code> is deprecated and should not be used in newly-written code.</p>
+<p>The D-Bus method has been deprecated.</p>
+</div>
+<div class="refsect3">
+<a name="UDisksBlockVDO-handle-enable-deduplication.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>object</p></td>
+<td class="parameter_description"><p>A <a class="link" href="UDisksBlockVDO.html" title="UDisksBlockVDO"><span class="type">UDisksBlockVDO</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>invocation</p></td>
+<td class="parameter_description"><p>A <a href="../gio/GDBusMethodInvocation.html#GDBusMethodInvocation-struct"><span class="type">GDBusMethodInvocation</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>arg_enable</p></td>
+<td class="parameter_description"><p>Argument passed by remote caller.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>arg_options</p></td>
+<td class="parameter_description"><p>Argument passed by remote caller.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>user_data</p></td>
+<td class="parameter_description"><p>user data set when the signal handler was connected.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="UDisksBlockVDO-handle-enable-deduplication.returns"></a><h4>Returns</h4>
+<p> <a href="../gio/GDBusMethodInvocation.html#G-DBUS-METHOD-INVOCATION-HANDLED:CAPS"><code class="literal">G_DBUS_METHOD_INVOCATION_HANDLED</code></a> or <a href="../glib/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> if the invocation was handled, <a href="../gio/GDBusMethodInvocation.html#G-DBUS-METHOD-INVOCATION-UNHANDLED:CAPS"><code class="literal">G_DBUS_METHOD_INVOCATION_UNHANDLED</code></a> or <a href="../glib/glib-Standard-Macros.html#FALSE:CAPS"><code class="literal">FALSE</code></a> to let other signal handlers run.</p>
+</div>
+<p>Flags: <a href="../gobject/gobject-Signals.html#G-SIGNAL-RUN-LAST:CAPS">Run Last</a></p>
+<p class="since">Since: 2.8.0</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="UDisksBlockVDO-handle-get-statistics"></a><h3>The <code class="literal">“handle-get-statistics”</code> signal</h3>
+<pre class="programlisting"><a href="../glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+user_function (<a class="link" href="UDisksBlockVDO.html" title="UDisksBlockVDO"><span class="type">UDisksBlockVDO</span></a>        *object,
+               <a href="../gio/GDBusMethodInvocation.html#GDBusMethodInvocation-struct"><span class="type">GDBusMethodInvocation</span></a> *invocation,
+               <a href="../glib/glib-GVariant.html#GVariant"><span class="type">GVariant</span></a>              *arg_options,
+               <a href="../glib/glib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a>               user_data)</pre>
+<p>Signal emitted when a remote caller is invoking the <a class="link" href="gdbus-org.freedesktop.UDisks2.Block.VDO.html#gdbus-method-org-freedesktop-UDisks2-Block-VDO.GetStatistics" title="The GetStatistics() method"><code class="function">GetStatistics()</code></a> D-Bus method.</p>
+<p>If a signal handler returns <a href="../glib/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a>, it means the signal handler will handle the invocation (e.g. take a reference to <em class="parameter"><code>invocation</code></em>
+ and eventually call <code class="function">udisks_block_vdo_complete_get_statistics()</code> or e.g. <a href="../gio/GDBusMethodInvocation.html#g-dbus-method-invocation-return-error"><code class="function">g_dbus_method_invocation_return_error()</code></a> on it) and no order signal handlers will run. If no signal handler handles the invocation, the <a href="../gio/gio-GDBusError.html#G-DBUS-ERROR-UNKNOWN-METHOD:CAPS"><code class="literal">G_DBUS_ERROR_UNKNOWN_METHOD</code></a> error is returned.</p>
+<div class="warning">
+<p><code class="literal">UDisksBlockVDO::handle-get-statistics</code> is deprecated and should not be used in newly-written code.</p>
+<p>The D-Bus method has been deprecated.</p>
+</div>
+<div class="refsect3">
+<a name="UDisksBlockVDO-handle-get-statistics.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>object</p></td>
+<td class="parameter_description"><p>A <a class="link" href="UDisksBlockVDO.html" title="UDisksBlockVDO"><span class="type">UDisksBlockVDO</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>invocation</p></td>
+<td class="parameter_description"><p>A <a href="../gio/GDBusMethodInvocation.html#GDBusMethodInvocation-struct"><span class="type">GDBusMethodInvocation</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>arg_options</p></td>
+<td class="parameter_description"><p>Argument passed by remote caller.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>user_data</p></td>
+<td class="parameter_description"><p>user data set when the signal handler was connected.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="UDisksBlockVDO-handle-get-statistics.returns"></a><h4>Returns</h4>
+<p> <a href="../gio/GDBusMethodInvocation.html#G-DBUS-METHOD-INVOCATION-HANDLED:CAPS"><code class="literal">G_DBUS_METHOD_INVOCATION_HANDLED</code></a> or <a href="../glib/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> if the invocation was handled, <a href="../gio/GDBusMethodInvocation.html#G-DBUS-METHOD-INVOCATION-UNHANDLED:CAPS"><code class="literal">G_DBUS_METHOD_INVOCATION_UNHANDLED</code></a> or <a href="../glib/glib-Standard-Macros.html#FALSE:CAPS"><code class="literal">FALSE</code></a> to let other signal handlers run.</p>
+</div>
+<p>Flags: <a href="../gobject/gobject-Signals.html#G-SIGNAL-RUN-LAST:CAPS">Run Last</a></p>
+<p class="since">Since: 2.8.0</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="UDisksBlockVDO-handle-grow-logical"></a><h3>The <code class="literal">“handle-grow-logical”</code> signal</h3>
+<pre class="programlisting"><a href="../glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+user_function (<a class="link" href="UDisksBlockVDO.html" title="UDisksBlockVDO"><span class="type">UDisksBlockVDO</span></a>        *object,
+               <a href="../gio/GDBusMethodInvocation.html#GDBusMethodInvocation-struct"><span class="type">GDBusMethodInvocation</span></a> *invocation,
+               <a href="../glib/glib-Basic-Types.html#guint64"><span class="type">guint64</span></a>                arg_size,
+               <a href="../glib/glib-GVariant.html#GVariant"><span class="type">GVariant</span></a>              *arg_options,
+               <a href="../glib/glib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a>               user_data)</pre>
+<p>Signal emitted when a remote caller is invoking the <a class="link" href="gdbus-org.freedesktop.UDisks2.Block.VDO.html#gdbus-method-org-freedesktop-UDisks2-Block-VDO.GrowLogical" title="The GrowLogical() method"><code class="function">GrowLogical()</code></a> D-Bus method.</p>
+<p>If a signal handler returns <a href="../glib/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a>, it means the signal handler will handle the invocation (e.g. take a reference to <em class="parameter"><code>invocation</code></em>
+ and eventually call <code class="function">udisks_block_vdo_complete_grow_logical()</code> or e.g. <a href="../gio/GDBusMethodInvocation.html#g-dbus-method-invocation-return-error"><code class="function">g_dbus_method_invocation_return_error()</code></a> on it) and no order signal handlers will run. If no signal handler handles the invocation, the <a href="../gio/gio-GDBusError.html#G-DBUS-ERROR-UNKNOWN-METHOD:CAPS"><code class="literal">G_DBUS_ERROR_UNKNOWN_METHOD</code></a> error is returned.</p>
+<div class="warning">
+<p><code class="literal">UDisksBlockVDO::handle-grow-logical</code> is deprecated and should not be used in newly-written code.</p>
+<p>The D-Bus method has been deprecated.</p>
+</div>
+<div class="refsect3">
+<a name="UDisksBlockVDO-handle-grow-logical.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>object</p></td>
+<td class="parameter_description"><p>A <a class="link" href="UDisksBlockVDO.html" title="UDisksBlockVDO"><span class="type">UDisksBlockVDO</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>invocation</p></td>
+<td class="parameter_description"><p>A <a href="../gio/GDBusMethodInvocation.html#GDBusMethodInvocation-struct"><span class="type">GDBusMethodInvocation</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>arg_size</p></td>
+<td class="parameter_description"><p>Argument passed by remote caller.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>arg_options</p></td>
+<td class="parameter_description"><p>Argument passed by remote caller.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>user_data</p></td>
+<td class="parameter_description"><p>user data set when the signal handler was connected.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="UDisksBlockVDO-handle-grow-logical.returns"></a><h4>Returns</h4>
+<p> <a href="../gio/GDBusMethodInvocation.html#G-DBUS-METHOD-INVOCATION-HANDLED:CAPS"><code class="literal">G_DBUS_METHOD_INVOCATION_HANDLED</code></a> or <a href="../glib/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> if the invocation was handled, <a href="../gio/GDBusMethodInvocation.html#G-DBUS-METHOD-INVOCATION-UNHANDLED:CAPS"><code class="literal">G_DBUS_METHOD_INVOCATION_UNHANDLED</code></a> or <a href="../glib/glib-Standard-Macros.html#FALSE:CAPS"><code class="literal">FALSE</code></a> to let other signal handlers run.</p>
+</div>
+<p>Flags: <a href="../gobject/gobject-Signals.html#G-SIGNAL-RUN-LAST:CAPS">Run Last</a></p>
+<p class="since">Since: 2.8.0</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="UDisksBlockVDO-handle-grow-physical"></a><h3>The <code class="literal">“handle-grow-physical”</code> signal</h3>
+<pre class="programlisting"><a href="../glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+user_function (<a class="link" href="UDisksBlockVDO.html" title="UDisksBlockVDO"><span class="type">UDisksBlockVDO</span></a>        *object,
+               <a href="../gio/GDBusMethodInvocation.html#GDBusMethodInvocation-struct"><span class="type">GDBusMethodInvocation</span></a> *invocation,
+               <a href="../glib/glib-GVariant.html#GVariant"><span class="type">GVariant</span></a>              *arg_options,
+               <a href="../glib/glib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a>               user_data)</pre>
+<p>Signal emitted when a remote caller is invoking the <a class="link" href="gdbus-org.freedesktop.UDisks2.Block.VDO.html#gdbus-method-org-freedesktop-UDisks2-Block-VDO.GrowPhysical" title="The GrowPhysical() method"><code class="function">GrowPhysical()</code></a> D-Bus method.</p>
+<p>If a signal handler returns <a href="../glib/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a>, it means the signal handler will handle the invocation (e.g. take a reference to <em class="parameter"><code>invocation</code></em>
+ and eventually call <code class="function">udisks_block_vdo_complete_grow_physical()</code> or e.g. <a href="../gio/GDBusMethodInvocation.html#g-dbus-method-invocation-return-error"><code class="function">g_dbus_method_invocation_return_error()</code></a> on it) and no order signal handlers will run. If no signal handler handles the invocation, the <a href="../gio/gio-GDBusError.html#G-DBUS-ERROR-UNKNOWN-METHOD:CAPS"><code class="literal">G_DBUS_ERROR_UNKNOWN_METHOD</code></a> error is returned.</p>
+<div class="warning">
+<p><code class="literal">UDisksBlockVDO::handle-grow-physical</code> is deprecated and should not be used in newly-written code.</p>
+<p>The D-Bus method has been deprecated.</p>
+</div>
+<div class="refsect3">
+<a name="UDisksBlockVDO-handle-grow-physical.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>object</p></td>
+<td class="parameter_description"><p>A <a class="link" href="UDisksBlockVDO.html" title="UDisksBlockVDO"><span class="type">UDisksBlockVDO</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>invocation</p></td>
+<td class="parameter_description"><p>A <a href="../gio/GDBusMethodInvocation.html#GDBusMethodInvocation-struct"><span class="type">GDBusMethodInvocation</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>arg_options</p></td>
+<td class="parameter_description"><p>Argument passed by remote caller.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>user_data</p></td>
+<td class="parameter_description"><p>user data set when the signal handler was connected.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="UDisksBlockVDO-handle-grow-physical.returns"></a><h4>Returns</h4>
+<p> <a href="../gio/GDBusMethodInvocation.html#G-DBUS-METHOD-INVOCATION-HANDLED:CAPS"><code class="literal">G_DBUS_METHOD_INVOCATION_HANDLED</code></a> or <a href="../glib/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> if the invocation was handled, <a href="../gio/GDBusMethodInvocation.html#G-DBUS-METHOD-INVOCATION-UNHANDLED:CAPS"><code class="literal">G_DBUS_METHOD_INVOCATION_UNHANDLED</code></a> or <a href="../glib/glib-Standard-Macros.html#FALSE:CAPS"><code class="literal">FALSE</code></a> to let other signal handlers run.</p>
+</div>
+<p>Flags: <a href="../gobject/gobject-Signals.html#G-SIGNAL-RUN-LAST:CAPS">Run Last</a></p>
+<p class="since">Since: 2.8.0</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="UDisksBlockVDO-handle-remove"></a><h3>The <code class="literal">“handle-remove”</code> signal</h3>
+<pre class="programlisting"><a href="../glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+user_function (<a class="link" href="UDisksBlockVDO.html" title="UDisksBlockVDO"><span class="type">UDisksBlockVDO</span></a>        *object,
+               <a href="../gio/GDBusMethodInvocation.html#GDBusMethodInvocation-struct"><span class="type">GDBusMethodInvocation</span></a> *invocation,
+               <a href="../glib/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a>               arg_force,
+               <a href="../glib/glib-GVariant.html#GVariant"><span class="type">GVariant</span></a>              *arg_options,
+               <a href="../glib/glib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a>               user_data)</pre>
+<p>Signal emitted when a remote caller is invoking the <a class="link" href="gdbus-org.freedesktop.UDisks2.Block.VDO.html#gdbus-method-org-freedesktop-UDisks2-Block-VDO.Remove" title="The Remove() method"><code class="function">Remove()</code></a> D-Bus method.</p>
+<p>If a signal handler returns <a href="../glib/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a>, it means the signal handler will handle the invocation (e.g. take a reference to <em class="parameter"><code>invocation</code></em>
+ and eventually call <code class="function">udisks_block_vdo_complete_remove()</code> or e.g. <a href="../gio/GDBusMethodInvocation.html#g-dbus-method-invocation-return-error"><code class="function">g_dbus_method_invocation_return_error()</code></a> on it) and no order signal handlers will run. If no signal handler handles the invocation, the <a href="../gio/gio-GDBusError.html#G-DBUS-ERROR-UNKNOWN-METHOD:CAPS"><code class="literal">G_DBUS_ERROR_UNKNOWN_METHOD</code></a> error is returned.</p>
+<div class="warning">
+<p><code class="literal">UDisksBlockVDO::handle-remove</code> is deprecated and should not be used in newly-written code.</p>
+<p>The D-Bus method has been deprecated.</p>
+</div>
+<div class="refsect3">
+<a name="UDisksBlockVDO-handle-remove.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>object</p></td>
+<td class="parameter_description"><p>A <a class="link" href="UDisksBlockVDO.html" title="UDisksBlockVDO"><span class="type">UDisksBlockVDO</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>invocation</p></td>
+<td class="parameter_description"><p>A <a href="../gio/GDBusMethodInvocation.html#GDBusMethodInvocation-struct"><span class="type">GDBusMethodInvocation</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>arg_force</p></td>
+<td class="parameter_description"><p>Argument passed by remote caller.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>arg_options</p></td>
+<td class="parameter_description"><p>Argument passed by remote caller.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>user_data</p></td>
+<td class="parameter_description"><p>user data set when the signal handler was connected.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="UDisksBlockVDO-handle-remove.returns"></a><h4>Returns</h4>
+<p> <a href="../gio/GDBusMethodInvocation.html#G-DBUS-METHOD-INVOCATION-HANDLED:CAPS"><code class="literal">G_DBUS_METHOD_INVOCATION_HANDLED</code></a> or <a href="../glib/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> if the invocation was handled, <a href="../gio/GDBusMethodInvocation.html#G-DBUS-METHOD-INVOCATION-UNHANDLED:CAPS"><code class="literal">G_DBUS_METHOD_INVOCATION_UNHANDLED</code></a> or <a href="../glib/glib-Standard-Macros.html#FALSE:CAPS"><code class="literal">FALSE</code></a> to let other signal handlers run.</p>
+</div>
+<p>Flags: <a href="../gobject/gobject-Signals.html#G-SIGNAL-RUN-LAST:CAPS">Run Last</a></p>
+<p class="since">Since: 2.8.0</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="UDisksBlockVDO-handle-stop"></a><h3>The <code class="literal">“handle-stop”</code> signal</h3>
+<pre class="programlisting"><a href="../glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+user_function (<a class="link" href="UDisksBlockVDO.html" title="UDisksBlockVDO"><span class="type">UDisksBlockVDO</span></a>        *object,
+               <a href="../gio/GDBusMethodInvocation.html#GDBusMethodInvocation-struct"><span class="type">GDBusMethodInvocation</span></a> *invocation,
+               <a href="../glib/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a>               arg_force,
+               <a href="../glib/glib-GVariant.html#GVariant"><span class="type">GVariant</span></a>              *arg_options,
+               <a href="../glib/glib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a>               user_data)</pre>
+<p>Signal emitted when a remote caller is invoking the <a class="link" href="gdbus-org.freedesktop.UDisks2.Block.VDO.html#gdbus-method-org-freedesktop-UDisks2-Block-VDO.Stop" title="The Stop() method"><code class="function">Stop()</code></a> D-Bus method.</p>
+<p>If a signal handler returns <a href="../glib/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a>, it means the signal handler will handle the invocation (e.g. take a reference to <em class="parameter"><code>invocation</code></em>
+ and eventually call <code class="function">udisks_block_vdo_complete_stop()</code> or e.g. <a href="../gio/GDBusMethodInvocation.html#g-dbus-method-invocation-return-error"><code class="function">g_dbus_method_invocation_return_error()</code></a> on it) and no order signal handlers will run. If no signal handler handles the invocation, the <a href="../gio/gio-GDBusError.html#G-DBUS-ERROR-UNKNOWN-METHOD:CAPS"><code class="literal">G_DBUS_ERROR_UNKNOWN_METHOD</code></a> error is returned.</p>
+<div class="warning">
+<p><code class="literal">UDisksBlockVDO::handle-stop</code> is deprecated and should not be used in newly-written code.</p>
+<p>The D-Bus method has been deprecated.</p>
+</div>
+<div class="refsect3">
+<a name="UDisksBlockVDO-handle-stop.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>object</p></td>
+<td class="parameter_description"><p>A <a class="link" href="UDisksBlockVDO.html" title="UDisksBlockVDO"><span class="type">UDisksBlockVDO</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>invocation</p></td>
+<td class="parameter_description"><p>A <a href="../gio/GDBusMethodInvocation.html#GDBusMethodInvocation-struct"><span class="type">GDBusMethodInvocation</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>arg_force</p></td>
+<td class="parameter_description"><p>Argument passed by remote caller.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>arg_options</p></td>
+<td class="parameter_description"><p>Argument passed by remote caller.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>user_data</p></td>
+<td class="parameter_description"><p>user data set when the signal handler was connected.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="UDisksBlockVDO-handle-stop.returns"></a><h4>Returns</h4>
+<p> <a href="../gio/GDBusMethodInvocation.html#G-DBUS-METHOD-INVOCATION-HANDLED:CAPS"><code class="literal">G_DBUS_METHOD_INVOCATION_HANDLED</code></a> or <a href="../glib/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> if the invocation was handled, <a href="../gio/GDBusMethodInvocation.html#G-DBUS-METHOD-INVOCATION-UNHANDLED:CAPS"><code class="literal">G_DBUS_METHOD_INVOCATION_UNHANDLED</code></a> or <a href="../glib/glib-Standard-Macros.html#FALSE:CAPS"><code class="literal">FALSE</code></a> to let other signal handlers run.</p>
+</div>
+<p>Flags: <a href="../gobject/gobject-Signals.html#G-SIGNAL-RUN-LAST:CAPS">Run Last</a></p>
+<p class="since">Since: 2.8.0</p>
+</div>
+</div>
+</div>
+<div class="footer">
+<hr>Generated by GTK-Doc V1.33.1</div>
+</body>
+</html>
