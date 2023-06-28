@@ -1,0 +1,428 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>UDisksModuleManager: UDisks Reference Manual</title>
+<meta name="generator" content="DocBook XSL Stylesheets Vsnapshot">
+<link rel="home" href="index.html" title="UDisks Reference Manual">
+<link rel="up" href="ref-daemon-core.html" title="Core">
+<link rel="prev" href="udisks2-ATA-commands.html" title="ATA commands">
+<link rel="next" href="udisks2-UDisksModule.html" title="UDisksModule">
+<meta name="generator" content="GTK-Doc V1.33.1 (XML mode)">
+<link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<table class="navigation" id="top" width="100%" summary="Navigation header" cellpadding="2" cellspacing="5"><tr valign="middle">
+<td width="100%" align="left" class="shortcuts">
+<a href="#" class="shortcut">Top</a><span id="nav_description">  <span class="dim">|</span> 
+                  <a href="#udisks2-UDisksModuleManager.description" class="shortcut">Description</a></span>
+</td>
+<td><a accesskey="h" href="index.html"><img src="home.png" width="16" height="16" border="0" alt="Home"></a></td>
+<td><a accesskey="u" href="ref-daemon-core.html"><img src="up.png" width="16" height="16" border="0" alt="Up"></a></td>
+<td><a accesskey="p" href="udisks2-ATA-commands.html"><img src="left.png" width="16" height="16" border="0" alt="Prev"></a></td>
+<td><a accesskey="n" href="udisks2-UDisksModule.html"><img src="right.png" width="16" height="16" border="0" alt="Next"></a></td>
+</tr></table>
+<div class="refentry">
+<a name="udisks2-UDisksModuleManager"></a><div class="titlepage"></div>
+<div class="refnamediv"><table width="100%"><tr>
+<td valign="top">
+<h2><span class="refentrytitle"><a name="udisks2-UDisksModuleManager.top_of_page"></a>UDisksModuleManager</span></h2>
+<p>UDisksModuleManager — Manage daemon modules</p>
+</td>
+<td class="gallery_image" valign="top" align="right"></td>
+</tr></table></div>
+<div class="refsect1">
+<a name="udisks2-UDisksModuleManager.functions"></a><h2>Functions</h2>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="functions_proto_type">
+<col class="functions_proto_name">
+</colgroup>
+<tbody>
+<tr>
+<td class="function_type">
+<a class="link" href="udisks2-UDisksModuleManager.html#UDisksModuleManager" title="UDisksModuleManager"><span class="returnvalue">UDisksModuleManager</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="udisks2-UDisksModuleManager.html#udisks-module-manager-new" title="udisks_module_manager_new ()">udisks_module_manager_new</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a class="link" href="udisks2-UDisksModuleManager.html#UDisksModuleManager" title="UDisksModuleManager"><span class="returnvalue">UDisksModuleManager</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="udisks2-UDisksModuleManager.html#udisks-module-manager-new-uninstalled" title="udisks_module_manager_new_uninstalled ()">udisks_module_manager_new_uninstalled</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="../glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="udisks2-UDisksModuleManager.html#udisks-module-manager-load-single-module" title="udisks_module_manager_load_single_module ()">udisks_module_manager_load_single_module</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="udisks2-UDisksModuleManager.html#udisks-module-manager-load-modules" title="udisks_module_manager_load_modules ()">udisks_module_manager_load_modules</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="udisks2-UDisksModuleManager.html#udisks-module-manager-unload-modules" title="udisks_module_manager_unload_modules ()">udisks_module_manager_unload_modules</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="../glib/glib-Doubly-Linked-Lists.html#GList"><span class="returnvalue">GList</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="udisks2-UDisksModuleManager.html#udisks-module-manager-get-modules" title="udisks_module_manager_get_modules ()">udisks_module_manager_get_modules</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a class="link" href="UDisksDaemon.html" title="UDisksDaemon"><span class="returnvalue">UDisksDaemon</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="udisks2-UDisksModuleManager.html#udisks-module-manager-get-daemon" title="udisks_module_manager_get_daemon ()">udisks_module_manager_get_daemon</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="../glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="udisks2-UDisksModuleManager.html#udisks-module-manager-get-uninstalled" title="udisks_module_manager_get_uninstalled ()">udisks_module_manager_get_uninstalled</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect1">
+<a name="udisks2-UDisksModuleManager.other"></a><h2>Types and Values</h2>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="other_proto_type">
+<col class="other_proto_name">
+</colgroup>
+<tbody><tr>
+<td class="datatype_keyword"> </td>
+<td class="function_name"><a class="link" href="udisks2-UDisksModuleManager.html#UDisksModuleManager" title="UDisksModuleManager">UDisksModuleManager</a></td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect1">
+<a name="udisks2-UDisksModuleManager.description"></a><h2>Description</h2>
+<div class="refsect3">
+<a name="udisks-modular-design"></a><h4>UDisks modular approach</h4>
+<p>UDisks functionality can be extended by modules. It's not that traditional
+fully pluggable system as we all know it, modules are essentially just
+carved-out parts of the daemon code and are free to access whatever internal
+daemon objects they need. There's no universal module API other than a couple
+of module initialization functions and a stateful module object. Out-of-tree
+modules are not supported either and no ABI guarantee exists at all.</p>
+<p>This fact allows us to stay code-wise simple and transparent. It's also easier
+to adapt modules for any change done to the core daemon. As a design decision
+and leading from <a href="../gobject/gobject-Type-Information.html#GType"><span class="type">GType</span></a> system limitation modules can't be unloaded once
+initialized. This may be a subject to change in the future, though unlikely.</p>
+<p>The primary motivation for introducing the modular system was to keep the daemon
+low on resource footprint for basic usage (typically desktop environments) and
+activating extended functionality only as needed (e.g. enterprise storage
+applications). As the extra information comes in form of additional D-Bus
+objects and interfaces, no difference should be observed by ordinary clients.</p>
+</div>
+<div class="refsect3">
+<a name="udisks-modular-activation"></a><h4>Modules activation</h4>
+<p>The UDisks daemon constructs a <a class="link" href="udisks2-UDisksModuleManager.html#UDisksModuleManager" title="UDisksModuleManager"><span class="type">UDisksModuleManager</span></a> singleton acting as
+a module manager. This object tracks module usage and takes care of their
+activation.</p>
+<p>By default <a class="link" href="udisks2-UDisksModuleManager.html#UDisksModuleManager" title="UDisksModuleManager"><span class="type">UDisksModuleManager</span></a> is constructed on daemon startup with module
+loading delayed until requested. This can be overridden by the
+<code class="literal">--force-load-modules</code> and <code class="literal">--disable-modules</code>
+commandline switches that makes modules loaded right on startup or never loaded
+respectively.</p>
+<p>Clients are supposed to call the <a class="link" href="gdbus-org.freedesktop.UDisks2.Manager.html#gdbus-method-org-freedesktop-UDisks2-Manager.EnableModule" title="The EnableModule() method">org.freedesktop.UDisks2.Manager.EnableModule()</a>
+D-Bus method as a <span class="emphasis"><em>"greeter"</em></span> call for each module requested.
+Proper error is reported should the module initialization fail or the module
+is not available. Clients are supposed to act accordingly and make sure that all
+requested modules are available and loaded prior to using any of the extra API.</p>
+<p>Upon successful activation, a <code class="literal">modules-activated</code> signal is
+emitted internally on the <a class="link" href="udisks2-UDisksModuleManager.html#UDisksModuleManager" title="UDisksModuleManager"><span class="type">UDisksModuleManager</span></a> object. Any daemon objects
+connected to this signal are responsible for performing <span class="emphasis"><em>"coldplug"</em></span>
+on exported objects to assure modules would pick up the devices they're
+interested in.</p>
+</div>
+<div class="refsect3">
+<a name="udisks-modular-design-dbus"></a><h4>D-Bus interface extensibility</h4>
+<p>The modular approach is fairly simple, there are basically three primary ways
+of extending the D-Bus API:</p>
+<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; ">
+<li class="listitem"><p>by attaching custom interfaces to existing block and drive objects - see
+<a class="link" href="udisks2-UDisksModule.html#udisks-module-new-block-object-interface" title="udisks_module_new_block_object_interface ()"><code class="function">udisks_module_new_block_object_interface()</code></a> and
+<a class="link" href="udisks2-UDisksModule.html#udisks-module-new-drive-object-interface" title="udisks_module_new_drive_object_interface ()"><code class="function">udisks_module_new_drive_object_interface()</code></a>.</p></li>
+<li class="listitem"><p>by exporting objects of its own type (socalled <span class="emphasis"><em>"module objects"</em></span>)
+directly on the object manager root - see <a class="link" href="udisks2-UDisksModule.html#udisks-module-new-object" title="udisks_module_new_object ()"><code class="function">udisks_module_new_object()</code></a>.</p></li>
+<li class="listitem"><p>attaching a common manager interface on the master <code class="filename">/org/freedesktop/UDisks2/Manager</code>
+object - see <a class="link" href="udisks2-UDisksModule.html#udisks-module-new-manager" title="udisks_module_new_manager ()"><code class="function">udisks_module_new_manager()</code></a>.</p></li>
+</ul></div>
+<p>All these ways of extensibility are implemented as <a class="link" href="udisks2-UDisksModule.html#UDisksModule" title="struct UDisksModule"><span class="type">UDisksModule</span></a> methods and
+it is a <a class="link" href="udisks2-UDisksModuleManager.html#UDisksModuleManager" title="UDisksModuleManager"><span class="type">UDisksModuleManager</span></a> task to provide interconnection between <a class="link" href="udisks2-UDisksModule.html#UDisksModule" title="struct UDisksModule"><span class="type">UDisksModule</span></a>
+instances and daemon objects representing drives and block devices.</p>
+</div>
+</div>
+<div class="refsect1">
+<a name="udisks2-UDisksModuleManager.functions_details"></a><h2>Functions</h2>
+<div class="refsect2">
+<a name="udisks-module-manager-new"></a><h3>udisks_module_manager_new ()</h3>
+<pre class="programlisting"><a class="link" href="udisks2-UDisksModuleManager.html#UDisksModuleManager" title="UDisksModuleManager"><span class="returnvalue">UDisksModuleManager</span></a> *
+udisks_module_manager_new (<em class="parameter"><code><a class="link" href="UDisksDaemon.html" title="UDisksDaemon"><span class="type">UDisksDaemon</span></a> *daemon</code></em>);</pre>
+<p>Creates a new <a class="link" href="udisks2-UDisksModuleManager.html#UDisksModuleManager" title="UDisksModuleManager"><span class="type">UDisksModuleManager</span></a> object.</p>
+<div class="refsect3">
+<a name="udisks-module-manager-new.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>daemon</p></td>
+<td class="parameter_description"><p>A <a class="link" href="UDisksDaemon.html" title="UDisksDaemon"><span class="type">UDisksDaemon</span></a> instance.</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="udisks-module-manager-new.returns"></a><h4>Returns</h4>
+<p> A <a class="link" href="udisks2-UDisksModuleManager.html#UDisksModuleManager" title="UDisksModuleManager"><span class="type">UDisksModuleManager</span></a>. Free with <a href="../gobject/gobject-The-Base-Object-Type.html#g-object-unref"><code class="function">g_object_unref()</code></a>.</p>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="udisks-module-manager-new-uninstalled"></a><h3>udisks_module_manager_new_uninstalled ()</h3>
+<pre class="programlisting"><a class="link" href="udisks2-UDisksModuleManager.html#UDisksModuleManager" title="UDisksModuleManager"><span class="returnvalue">UDisksModuleManager</span></a> *
+udisks_module_manager_new_uninstalled (<em class="parameter"><code><a class="link" href="UDisksDaemon.html" title="UDisksDaemon"><span class="type">UDisksDaemon</span></a> *daemon</code></em>);</pre>
+<p>Creates a new <a class="link" href="udisks2-UDisksModuleManager.html#UDisksModuleManager" title="UDisksModuleManager"><span class="type">UDisksModuleManager</span></a> object with indication that
+the daemon runs from a source tree.</p>
+<div class="refsect3">
+<a name="udisks-module-manager-new-uninstalled.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>daemon</p></td>
+<td class="parameter_description"><p>A <a class="link" href="UDisksDaemon.html" title="UDisksDaemon"><span class="type">UDisksDaemon</span></a> instance.</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="udisks-module-manager-new-uninstalled.returns"></a><h4>Returns</h4>
+<p> A <a class="link" href="udisks2-UDisksModuleManager.html#UDisksModuleManager" title="UDisksModuleManager"><span class="type">UDisksModuleManager</span></a>. Free with <a href="../gobject/gobject-The-Base-Object-Type.html#g-object-notify"><code class="function">g_object_notify()</code></a>.</p>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="udisks-module-manager-load-single-module"></a><h3>udisks_module_manager_load_single_module ()</h3>
+<pre class="programlisting"><a href="../glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+udisks_module_manager_load_single_module
+                               (<em class="parameter"><code><a class="link" href="udisks2-UDisksModuleManager.html#UDisksModuleManager" title="UDisksModuleManager"><span class="type">UDisksModuleManager</span></a> *manager</code></em>,
+                                <em class="parameter"><code>const <a href="../glib/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *name</code></em>,
+                                <em class="parameter"><code><a href="../glib/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);</pre>
+<p>Loads single module and emits the <code class="literal">modules-activated</code> signal
+in case the module activation was successful. Already active module is not
+being reinitialized on subsequent calls to this method and <a href="../glib/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> is returned
+immediately.</p>
+<div class="refsect3">
+<a name="udisks-module-manager-load-single-module.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>manager</p></td>
+<td class="parameter_description"><p>A <a class="link" href="udisks2-UDisksModuleManager.html#UDisksModuleManager" title="UDisksModuleManager"><span class="type">UDisksModuleManager</span></a> instance.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>name</p></td>
+<td class="parameter_description"><p>Module name.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>error</p></td>
+<td class="parameter_description"><p>Return location for error or <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="udisks-module-manager-load-single-module.returns"></a><h4>Returns</h4>
+<p> <a href="../glib/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> if module was activated successfully, <a href="../glib/glib-Standard-Macros.html#FALSE:CAPS"><code class="literal">FALSE</code></a> otherwise with <em class="parameter"><code>error</code></em>
+being set.</p>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="udisks-module-manager-load-modules"></a><h3>udisks_module_manager_load_modules ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+udisks_module_manager_load_modules (<em class="parameter"><code><a class="link" href="udisks2-UDisksModuleManager.html#UDisksModuleManager" title="UDisksModuleManager"><span class="type">UDisksModuleManager</span></a> *manager</code></em>);</pre>
+<p>Loads all modules at a time and emits the <code class="literal">modules-activated</code>
+signal in case any new module has been activated. Modules that are already loaded
+are skipped on subsequent calls to this method.</p>
+<div class="refsect3">
+<a name="udisks-module-manager-load-modules.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>manager</p></td>
+<td class="parameter_description"><p>A <a class="link" href="udisks2-UDisksModuleManager.html#UDisksModuleManager" title="UDisksModuleManager"><span class="type">UDisksModuleManager</span></a> instance.</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="udisks-module-manager-unload-modules"></a><h3>udisks_module_manager_unload_modules ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+udisks_module_manager_unload_modules (<em class="parameter"><code><a class="link" href="udisks2-UDisksModuleManager.html#UDisksModuleManager" title="UDisksModuleManager"><span class="type">UDisksModuleManager</span></a> *manager</code></em>);</pre>
+<p>Unloads all modules at a time. A <code class="literal">modules-activated</code> signal
+is emitted if there are any modules staged for unload to give listeners room
+to unexport all module interfaces and objects. The <a class="link" href="udisks2-UDisksModuleManager.html#udisks-module-manager-get-modules" title="udisks_module_manager_get_modules ()"><code class="function">udisks_module_manager_get_modules()</code></a>
+would return <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a> at that time. Note that proper module unload is not fully
+supported, this is just a convenience call for cleanup.</p>
+<div class="refsect3">
+<a name="udisks-module-manager-unload-modules.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>manager</p></td>
+<td class="parameter_description"><p>A <a class="link" href="udisks2-UDisksModuleManager.html#UDisksModuleManager" title="UDisksModuleManager"><span class="type">UDisksModuleManager</span></a> instance.</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="udisks-module-manager-get-modules"></a><h3>udisks_module_manager_get_modules ()</h3>
+<pre class="programlisting"><a href="../glib/glib-Doubly-Linked-Lists.html#GList"><span class="returnvalue">GList</span></a> *
+udisks_module_manager_get_modules (<em class="parameter"><code><a class="link" href="udisks2-UDisksModuleManager.html#UDisksModuleManager" title="UDisksModuleManager"><span class="type">UDisksModuleManager</span></a> *manager</code></em>);</pre>
+<p>Gets list of active modules. Can be called from different threads.</p>
+<div class="refsect3">
+<a name="udisks-module-manager-get-modules.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>manager</p></td>
+<td class="parameter_description"><p>A <a class="link" href="udisks2-UDisksModuleManager.html#UDisksModuleManager" title="UDisksModuleManager"><span class="type">UDisksModuleManager</span></a> instance.</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="udisks-module-manager-get-modules.returns"></a><h4>Returns</h4>
+<p>A list of <a class="link" href="udisks2-UDisksModule.html#UDisksModule" title="struct UDisksModule"><span class="type">UDisksModule</span></a>
+or <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a> if no modules are presently loaded.  Free the elements
+with <a href="../gobject/gobject-The-Base-Object-Type.html#g-object-unref"><code class="function">g_object_unref()</code></a>. </p>
+<p><span class="annotation">[<acronym title="The caller owns the data, and is responsible for free it."><span class="acronym">transfer full</span></acronym>][<acronym title="NULL may be passed as the value in, out, in-out; or as a return value."><span class="acronym">nullable</span></acronym>][<acronym title="Generics and defining elements of containers and arrays."><span class="acronym">element-type</span></acronym> UDisksModule]</span></p>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="udisks-module-manager-get-daemon"></a><h3>udisks_module_manager_get_daemon ()</h3>
+<pre class="programlisting"><a class="link" href="UDisksDaemon.html" title="UDisksDaemon"><span class="returnvalue">UDisksDaemon</span></a> *
+udisks_module_manager_get_daemon (<em class="parameter"><code><a class="link" href="udisks2-UDisksModuleManager.html#UDisksModuleManager" title="UDisksModuleManager"><span class="type">UDisksModuleManager</span></a> *manager</code></em>);</pre>
+<p>Gets the daemon used by <em class="parameter"><code>manager</code></em>
+.</p>
+<div class="refsect3">
+<a name="udisks-module-manager-get-daemon.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>manager</p></td>
+<td class="parameter_description"><p>A <a class="link" href="udisks2-UDisksModuleManager.html#UDisksModuleManager" title="UDisksModuleManager"><span class="type">UDisksModuleManager</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="udisks-module-manager-get-daemon.returns"></a><h4>Returns</h4>
+<p> A <a class="link" href="UDisksDaemon.html" title="UDisksDaemon"><span class="type">UDisksDaemon</span></a>. Do not free, the object is owned by <em class="parameter"><code>manager</code></em>
+.</p>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="udisks-module-manager-get-uninstalled"></a><h3>udisks_module_manager_get_uninstalled ()</h3>
+<pre class="programlisting"><a href="../glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+udisks_module_manager_get_uninstalled (<em class="parameter"><code><a class="link" href="udisks2-UDisksModuleManager.html#UDisksModuleManager" title="UDisksModuleManager"><span class="type">UDisksModuleManager</span></a> *manager</code></em>);</pre>
+<p>Indicates whether the udisks daemon runs from a source tree
+rather than being a regular system instance.</p>
+<div class="refsect3">
+<a name="udisks-module-manager-get-uninstalled.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>manager</p></td>
+<td class="parameter_description"><p>A <a class="link" href="udisks2-UDisksModuleManager.html#UDisksModuleManager" title="UDisksModuleManager"><span class="type">UDisksModuleManager</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="udisks-module-manager-get-uninstalled.returns"></a><h4>Returns</h4>
+<p> <a href="../glib/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> when the daemon runs from a source tree, <a href="../glib/glib-Standard-Macros.html#FALSE:CAPS"><code class="literal">FALSE</code></a> otherwise.</p>
+</div>
+</div>
+</div>
+<div class="refsect1">
+<a name="udisks2-UDisksModuleManager.other_details"></a><h2>Types and Values</h2>
+<div class="refsect2">
+<a name="UDisksModuleManager"></a><h3>UDisksModuleManager</h3>
+<pre class="programlisting">typedef struct _UDisksModuleManager UDisksModuleManager;</pre>
+<p>The <a class="link" href="udisks2-UDisksModuleManager.html#UDisksModuleManager" title="UDisksModuleManager"><span class="type">UDisksModuleManager</span></a> structure contains only private data and
+should only be accessed using the provided API.</p>
+</div>
+</div>
+</div>
+<div class="footer">
+<hr>Generated by GTK-Doc V1.33.1</div>
+</body>
+</html>
