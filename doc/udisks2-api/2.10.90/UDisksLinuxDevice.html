@@ -1,0 +1,533 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>UDisksLinuxDevice: UDisks Reference Manual</title>
+<meta name="generator" content="DocBook XSL Stylesheets Vsnapshot">
+<link rel="home" href="index.html" title="UDisks Reference Manual">
+<link rel="up" href="ref-daemon-linux-types.html" title="Linux-specific types">
+<link rel="prev" href="UDisksLinuxProvider.html" title="UDisksLinuxProvider">
+<link rel="next" href="ref-daemon-drives.html" title="Drives on Linux">
+<meta name="generator" content="GTK-Doc V1.34.0 (XML mode)">
+<link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<table class="navigation" id="top" width="100%" summary="Navigation header" cellpadding="2" cellspacing="5"><tr valign="middle">
+<td width="100%" align="left" class="shortcuts">
+<a href="#" class="shortcut">Top</a><span id="nav_description">  <span class="dim">|</span> 
+                  <a href="#UDisksLinuxDevice.description" class="shortcut">Description</a></span><span id="nav_hierarchy">  <span class="dim">|</span> 
+                  <a href="#UDisksLinuxDevice.object-hierarchy" class="shortcut">Object Hierarchy</a></span>
+</td>
+<td><a accesskey="h" href="index.html"><img src="home.png" width="16" height="16" border="0" alt="Home"></a></td>
+<td><a accesskey="u" href="ref-daemon-linux-types.html"><img src="up.png" width="16" height="16" border="0" alt="Up"></a></td>
+<td><a accesskey="p" href="UDisksLinuxProvider.html"><img src="left.png" width="16" height="16" border="0" alt="Prev"></a></td>
+<td><a accesskey="n" href="ref-daemon-drives.html"><img src="right.png" width="16" height="16" border="0" alt="Next"></a></td>
+</tr></table>
+<div class="refentry">
+<a name="UDisksLinuxDevice"></a><div class="titlepage"></div>
+<div class="refnamediv"><table width="100%"><tr>
+<td valign="top">
+<h2><span class="refentrytitle"><a name="UDisksLinuxDevice.top_of_page"></a>UDisksLinuxDevice</span></h2>
+<p>UDisksLinuxDevice — Low-level devices on Linux</p>
+</td>
+<td class="gallery_image" valign="top" align="right"></td>
+</tr></table></div>
+<div class="refsect1">
+<a name="UDisksLinuxDevice.functions"></a><h2>Functions</h2>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="functions_proto_type">
+<col class="functions_proto_name">
+</colgroup>
+<tbody>
+<tr>
+<td class="function_type">
+<a class="link" href="UDisksLinuxDevice.html" title="UDisksLinuxDevice"><span class="returnvalue">UDisksLinuxDevice</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="UDisksLinuxDevice.html#udisks-linux-device-new-sync" title="udisks_linux_device_new_sync ()">udisks_linux_device_new_sync</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">gboolean</span>
+</td>
+<td class="function_name">
+<a class="link" href="UDisksLinuxDevice.html#udisks-linux-device-reprobe-sync" title="udisks_linux_device_reprobe_sync ()">udisks_linux_device_reprobe_sync</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">gchar</span> *
+</td>
+<td class="function_name">
+<a class="link" href="UDisksLinuxDevice.html#udisks-linux-device-read-sysfs-attr" title="udisks_linux_device_read_sysfs_attr ()">udisks_linux_device_read_sysfs_attr</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">gint</span>
+</td>
+<td class="function_name">
+<a class="link" href="UDisksLinuxDevice.html#udisks-linux-device-read-sysfs-attr-as-int" title="udisks_linux_device_read_sysfs_attr_as_int ()">udisks_linux_device_read_sysfs_attr_as_int</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">guint64</span>
+</td>
+<td class="function_name">
+<a class="link" href="UDisksLinuxDevice.html#udisks-linux-device-read-sysfs-attr-as-uint64" title="udisks_linux_device_read_sysfs_attr_as_uint64 ()">udisks_linux_device_read_sysfs_attr_as_uint64</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">gboolean</span>
+</td>
+<td class="function_name">
+<a class="link" href="UDisksLinuxDevice.html#udisks-linux-device-subsystem-is-nvme" title="udisks_linux_device_subsystem_is_nvme ()">udisks_linux_device_subsystem_is_nvme</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">gboolean</span>
+</td>
+<td class="function_name">
+<a class="link" href="UDisksLinuxDevice.html#udisks-linux-device-nvme-is-fabrics" title="udisks_linux_device_nvme_is_fabrics ()">udisks_linux_device_nvme_is_fabrics</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">gboolean</span>
+</td>
+<td class="function_name">
+<a class="link" href="UDisksLinuxDevice.html#udisks-linux-device-is-dm-multipath" title="udisks_linux_device_is_dm_multipath ()">udisks_linux_device_is_dm_multipath</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">gboolean</span>
+</td>
+<td class="function_name">
+<a class="link" href="UDisksLinuxDevice.html#udisks-linux-device-is-mpath-device-path" title="udisks_linux_device_is_mpath_device_path ()">udisks_linux_device_is_mpath_device_path</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect1">
+<a name="UDisksLinuxDevice.other"></a><h2>Types and Values</h2>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="other_proto_type">
+<col class="other_proto_name">
+</colgroup>
+<tbody><tr>
+<td class="datatype_keyword"> </td>
+<td class="function_name"><a class="link" href="UDisksLinuxDevice.html#UDisksLinuxDevice-struct" title="UDisksLinuxDevice">UDisksLinuxDevice</a></td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect1">
+<a name="UDisksLinuxDevice.object-hierarchy"></a><h2>Object Hierarchy</h2>
+<pre class="screen">    GObject
+    <span class="lineart">╰──</span> UDisksLinuxDevice
+</pre>
+</div>
+<div class="refsect1">
+<a name="UDisksLinuxDevice.description"></a><h2>Description</h2>
+<p>Types and functions used to record information obtained from the
+udev database as well as by probing the device.</p>
+</div>
+<div class="refsect1">
+<a name="UDisksLinuxDevice.functions_details"></a><h2>Functions</h2>
+<div class="refsect2">
+<a name="udisks-linux-device-new-sync"></a><h3>udisks_linux_device_new_sync ()</h3>
+<pre class="programlisting"><a class="link" href="UDisksLinuxDevice.html" title="UDisksLinuxDevice"><span class="returnvalue">UDisksLinuxDevice</span></a> *
+udisks_linux_device_new_sync (<em class="parameter"><code><a href="../gudev/GUdevDevice.html#GUdevDevice-struct"><span class="type">GUdevDevice</span></a> *udev_device</code></em>,
+                              <em class="parameter"><code><a href="../gudev/GUdevClient.html#GUdevClient-struct"><span class="type">GUdevClient</span></a> *udev_client</code></em>);</pre>
+<p>Creates a new <a class="link" href="UDisksLinuxDevice.html" title="UDisksLinuxDevice"><span class="type">UDisksLinuxDevice</span></a> from <em class="parameter"><code>udev_device</code></em>
+ which includes
+probing the device for more information, if applicable.</p>
+<p>The calling thread may be blocked for a non-trivial amount of time
+while the probing is underway.</p>
+<div class="refsect3">
+<a name="udisks-linux-device-new-sync.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>udev_device</p></td>
+<td class="parameter_description"><p>A <a href="../gudev/GUdevDevice.html#GUdevDevice-struct"><span class="type">GUdevDevice</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>udev_client</p></td>
+<td class="parameter_description"><p>A <a href="../gudev/GUdevClient.html#GUdevClient-struct"><span class="type">GUdevClient</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="udisks-linux-device-new-sync.returns"></a><h4>Returns</h4>
+<p> A <a class="link" href="UDisksLinuxDevice.html" title="UDisksLinuxDevice"><span class="type">UDisksLinuxDevice</span></a>.</p>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="udisks-linux-device-reprobe-sync"></a><h3>udisks_linux_device_reprobe_sync ()</h3>
+<pre class="programlisting"><span class="returnvalue">gboolean</span>
+udisks_linux_device_reprobe_sync (<em class="parameter"><code><a class="link" href="UDisksLinuxDevice.html" title="UDisksLinuxDevice"><span class="type">UDisksLinuxDevice</span></a> *device</code></em>,
+                                  <em class="parameter"><code><a href="../gudev/GUdevClient.html#GUdevClient-struct"><span class="type">GUdevClient</span></a> *udev_client</code></em>,
+                                  <em class="parameter"><code><span class="type">GCancellable</span> *cancellable</code></em>,
+                                  <em class="parameter"><code><span class="type">GError</span> **error</code></em>);</pre>
+<p>Forcibly reprobe information on <em class="parameter"><code>device</code></em>
+. The calling thread may be
+blocked for a non-trivial amount of time while the probing is
+underway.</p>
+<p>Probing is dm-multipath aware in which case an active path
+is looked up and udev attributes are fetched from there.</p>
+<div class="refsect3">
+<a name="udisks-linux-device-reprobe-sync.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>device</p></td>
+<td class="parameter_description"><p>A <a class="link" href="UDisksLinuxDevice.html" title="UDisksLinuxDevice"><span class="type">UDisksLinuxDevice</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>udev_client</p></td>
+<td class="parameter_description"><p>A <a href="../gudev/GUdevClient.html#GUdevClient-struct"><span class="type">GUdevClient</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>cancellable</p></td>
+<td class="parameter_description"><p>A <span class="type">GCancellable</span> or <code class="literal">NULL</code>. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="NULL is OK, both for passing and for returning."><span class="acronym">allow-none</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>error</p></td>
+<td class="parameter_description"><p>Return location for error or <code class="literal">NULL</code>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="udisks-linux-device-reprobe-sync.returns"></a><h4>Returns</h4>
+<p> <code class="literal">TRUE</code> if reprobing succeeded, <code class="literal">FALSE</code> otherwise.</p>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="udisks-linux-device-read-sysfs-attr"></a><h3>udisks_linux_device_read_sysfs_attr ()</h3>
+<pre class="programlisting"><span class="returnvalue">gchar</span> *
+udisks_linux_device_read_sysfs_attr (<em class="parameter"><code><a class="link" href="UDisksLinuxDevice.html" title="UDisksLinuxDevice"><span class="type">UDisksLinuxDevice</span></a> *device</code></em>,
+                                     <em class="parameter"><code>const <span class="type">gchar</span> *attr</code></em>,
+                                     <em class="parameter"><code><span class="type">GError</span> **error</code></em>);</pre>
+<p>Read a sysfs attribute within the device sysfs hierarchy.
+The <em class="parameter"><code>attr</code></em>
+ can be a path relative to the <em class="parameter"><code>device</code></em>
+ base sysfs path.</p>
+<div class="refsect3">
+<a name="udisks-linux-device-read-sysfs-attr.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>device</p></td>
+<td class="parameter_description"><p>A <a class="link" href="UDisksLinuxDevice.html" title="UDisksLinuxDevice"><span class="type">UDisksLinuxDevice</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>attr</p></td>
+<td class="parameter_description"><p>Attribute name (a path).</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>error</p></td>
+<td class="parameter_description"><p>Return location for error or <code class="literal">NULL</code>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="udisks-linux-device-read-sysfs-attr.returns"></a><h4>Returns</h4>
+<p>Attribute contents or <code class="literal">NULL</code> if unavailable. Free with <code class="function">g_free()</code>. </p>
+<p><span class="annotation">[<acronym title="The caller owns the data, and is responsible for free it."><span class="acronym">transfer full</span></acronym>]</span></p>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="udisks-linux-device-read-sysfs-attr-as-int"></a><h3>udisks_linux_device_read_sysfs_attr_as_int ()</h3>
+<pre class="programlisting"><span class="returnvalue">gint</span>
+udisks_linux_device_read_sysfs_attr_as_int
+                               (<em class="parameter"><code><a class="link" href="UDisksLinuxDevice.html" title="UDisksLinuxDevice"><span class="type">UDisksLinuxDevice</span></a> *device</code></em>,
+                                <em class="parameter"><code>const <span class="type">gchar</span> *attr</code></em>,
+                                <em class="parameter"><code><span class="type">GError</span> **error</code></em>);</pre>
+<p>Read a sysfs attribute within the device sysfs hierarchy.
+The <em class="parameter"><code>attr</code></em>
+ can be a path relative to the <em class="parameter"><code>device</code></em>
+ base sysfs path.</p>
+<div class="refsect3">
+<a name="udisks-linux-device-read-sysfs-attr-as-int.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>device</p></td>
+<td class="parameter_description"><p>A <a class="link" href="UDisksLinuxDevice.html" title="UDisksLinuxDevice"><span class="type">UDisksLinuxDevice</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>attr</p></td>
+<td class="parameter_description"><p>Attribute name (a path).</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>error</p></td>
+<td class="parameter_description"><p>Return location for error or <code class="literal">NULL</code>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="udisks-linux-device-read-sysfs-attr-as-int.returns"></a><h4>Returns</h4>
+<p> Numerical attribute value or 0 on error.</p>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="udisks-linux-device-read-sysfs-attr-as-uint64"></a><h3>udisks_linux_device_read_sysfs_attr_as_uint64 ()</h3>
+<pre class="programlisting"><span class="returnvalue">guint64</span>
+udisks_linux_device_read_sysfs_attr_as_uint64
+                               (<em class="parameter"><code><a class="link" href="UDisksLinuxDevice.html" title="UDisksLinuxDevice"><span class="type">UDisksLinuxDevice</span></a> *device</code></em>,
+                                <em class="parameter"><code>const <span class="type">gchar</span> *attr</code></em>,
+                                <em class="parameter"><code><span class="type">GError</span> **error</code></em>);</pre>
+<p>Read a sysfs attribute within the device sysfs hierarchy.
+The <em class="parameter"><code>attr</code></em>
+ can be a path relative to the <em class="parameter"><code>device</code></em>
+ base sysfs path.</p>
+<div class="refsect3">
+<a name="udisks-linux-device-read-sysfs-attr-as-uint64.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>device</p></td>
+<td class="parameter_description"><p>A <a class="link" href="UDisksLinuxDevice.html" title="UDisksLinuxDevice"><span class="type">UDisksLinuxDevice</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>attr</p></td>
+<td class="parameter_description"><p>Attribute name (a path).</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>error</p></td>
+<td class="parameter_description"><p>Return location for error or <code class="literal">NULL</code>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="udisks-linux-device-read-sysfs-attr-as-uint64.returns"></a><h4>Returns</h4>
+<p> Numerical attribute value or 0 on error.</p>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="udisks-linux-device-subsystem-is-nvme"></a><h3>udisks_linux_device_subsystem_is_nvme ()</h3>
+<pre class="programlisting"><span class="returnvalue">gboolean</span>
+udisks_linux_device_subsystem_is_nvme (<em class="parameter"><code><a class="link" href="UDisksLinuxDevice.html" title="UDisksLinuxDevice"><span class="type">UDisksLinuxDevice</span></a> *device</code></em>);</pre>
+<p>Walks up the device hierarchy and checks if <em class="parameter"><code>device</code></em>
+ is part of a NVMe topology.</p>
+<div class="refsect3">
+<a name="udisks-linux-device-subsystem-is-nvme.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>device</p></td>
+<td class="parameter_description"><p>A <a class="link" href="UDisksLinuxDevice.html" title="UDisksLinuxDevice"><span class="type">UDisksLinuxDevice</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="udisks-linux-device-subsystem-is-nvme.returns"></a><h4>Returns</h4>
+<p> <code class="literal">TRUE</code> in case of a NVMe device, <code class="literal">FALSE</code> otherwise.</p>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="udisks-linux-device-nvme-is-fabrics"></a><h3>udisks_linux_device_nvme_is_fabrics ()</h3>
+<pre class="programlisting"><span class="returnvalue">gboolean</span>
+udisks_linux_device_nvme_is_fabrics (<em class="parameter"><code><a class="link" href="UDisksLinuxDevice.html" title="UDisksLinuxDevice"><span class="type">UDisksLinuxDevice</span></a> *device</code></em>);</pre>
+<p>Determines whether <em class="parameter"><code>device</code></em>
+ is a NVMe over Fabrics device.</p>
+<div class="refsect3">
+<a name="udisks-linux-device-nvme-is-fabrics.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>device</p></td>
+<td class="parameter_description"><p>A <a class="link" href="UDisksLinuxDevice.html" title="UDisksLinuxDevice"><span class="type">UDisksLinuxDevice</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="udisks-linux-device-nvme-is-fabrics.returns"></a><h4>Returns</h4>
+<p> <code class="literal">TRUE</code> in case of a NVMeoF device, <code class="literal">FALSE</code> otherwise.</p>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="udisks-linux-device-is-dm-multipath"></a><h3>udisks_linux_device_is_dm_multipath ()</h3>
+<pre class="programlisting"><span class="returnvalue">gboolean</span>
+udisks_linux_device_is_dm_multipath (<em class="parameter"><code><a class="link" href="UDisksLinuxDevice.html" title="UDisksLinuxDevice"><span class="type">UDisksLinuxDevice</span></a> *device</code></em>);</pre>
+<div class="refsect3">
+<a name="udisks-linux-device-is-dm-multipath.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>device</p></td>
+<td class="parameter_description"><p>A <a class="link" href="UDisksLinuxDevice.html" title="UDisksLinuxDevice"><span class="type">UDisksLinuxDevice</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="udisks-linux-device-is-dm-multipath.returns"></a><h4>Returns</h4>
+<p> <code class="literal">TRUE</code> if <em class="parameter"><code>device</code></em>
+represents a dm-multipath block device,
+<code class="literal">FALSE</code> otherwise.</p>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="udisks-linux-device-is-mpath-device-path"></a><h3>udisks_linux_device_is_mpath_device_path ()</h3>
+<pre class="programlisting"><span class="returnvalue">gboolean</span>
+udisks_linux_device_is_mpath_device_path
+                               (<em class="parameter"><code><a class="link" href="UDisksLinuxDevice.html" title="UDisksLinuxDevice"><span class="type">UDisksLinuxDevice</span></a> *device</code></em>);</pre>
+<div class="refsect3">
+<a name="udisks-linux-device-is-mpath-device-path.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>device</p></td>
+<td class="parameter_description"><p>A <a class="link" href="UDisksLinuxDevice.html" title="UDisksLinuxDevice"><span class="type">UDisksLinuxDevice</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="udisks-linux-device-is-mpath-device-path.returns"></a><h4>Returns</h4>
+<p> <code class="literal">TRUE</code> if <em class="parameter"><code>device</code></em>
+is an I/O path that is part of a dm-multipath
+device, <code class="literal">FALSE</code> otherwise.</p>
+</div>
+</div>
+</div>
+<div class="refsect1">
+<a name="UDisksLinuxDevice.other_details"></a><h2>Types and Values</h2>
+<div class="refsect2">
+<a name="UDisksLinuxDevice-struct"></a><h3>UDisksLinuxDevice</h3>
+<pre class="programlisting">typedef struct {
+  GUdevDevice *udev_device;
+  guchar *ata_identify_device_data;
+  guchar *ata_identify_packet_device_data;
+  BDNVMEControllerInfo *nvme_ctrl_info;
+  BDNVMENamespaceInfo *nvme_ns_info;
+} UDisksLinuxDevice;
+</pre>
+<p>Object containing information about a device on Linux. This is
+essentially an instance of <a href="../gudev/GUdevDevice.html#GUdevDevice-struct"><span class="type">GUdevDevice</span></a> plus additional data - such
+as ATA IDENTIFY data - obtained via probing the device at discovery
+and uevent "change" time.</p>
+<div class="refsect3">
+<a name="UDisksLinuxDevice.members"></a><h4>Members</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="300px" class="struct_members_name">
+<col class="struct_members_description">
+<col width="200px" class="struct_members_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="struct_member_name"><p><a href="../gudev/GUdevDevice.html#GUdevDevice-struct"><span class="type">GUdevDevice</span></a> *<em class="structfield"><code><a name="UDisksLinuxDevice-struct.udev-device"></a>udev_device</code></em>;</p></td>
+<td class="struct_member_description"><p>A <a href="../gudev/GUdevDevice.html#GUdevDevice-struct"><span class="type">GUdevDevice</span></a>.</p></td>
+<td class="struct_member_annotations"> </td>
+</tr>
+<tr>
+<td class="struct_member_name"><p><span class="type">guchar</span> *<em class="structfield"><code><a name="UDisksLinuxDevice-struct.ata-identify-device-data"></a>ata_identify_device_data</code></em>;</p></td>
+<td class="struct_member_description"><p>512-byte array containing the result of the IDENTIFY DEVICE command or <code class="literal">NULL</code>.</p></td>
+<td class="struct_member_annotations"> </td>
+</tr>
+<tr>
+<td class="struct_member_name"><p><span class="type">guchar</span> *<em class="structfield"><code><a name="UDisksLinuxDevice-struct.ata-identify-packet-device-data"></a>ata_identify_packet_device_data</code></em>;</p></td>
+<td class="struct_member_description"><p>512-byte array containing the result of the IDENTIFY PACKET DEVICE command or <code class="literal">NULL</code>.</p></td>
+<td class="struct_member_annotations"> </td>
+</tr>
+<tr>
+<td class="struct_member_name"><p><a href="../libblockdev/libblockdev-NVMe.html#BDNVMEControllerInfo"><span class="type">BDNVMEControllerInfo</span></a> *<em class="structfield"><code><a name="UDisksLinuxDevice-struct.nvme-ctrl-info"></a>nvme_ctrl_info</code></em>;</p></td>
+<td class="struct_member_description"><p>A <a href="../libblockdev/libblockdev-NVMe.html#BDNVMEControllerInfo"><span class="type">BDNVMEControllerInfo</span></a> data in case of a NVMe Controller.</p></td>
+<td class="struct_member_annotations"> </td>
+</tr>
+<tr>
+<td class="struct_member_name"><p><a href="../libblockdev/libblockdev-NVMe.html#BDNVMENamespaceInfo"><span class="type">BDNVMENamespaceInfo</span></a> *<em class="structfield"><code><a name="UDisksLinuxDevice-struct.nvme-ns-info"></a>nvme_ns_info</code></em>;</p></td>
+<td class="struct_member_description"><p>A <a href="../libblockdev/libblockdev-NVMe.html#BDNVMENamespaceInfo"><span class="type">BDNVMENamespaceInfo</span></a> data in case of a NVMe Namespace.</p></td>
+<td class="struct_member_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+</div>
+</div>
+<div class="footer">
+<hr>Generated by GTK-Doc V1.34.0</div>
+</body>
+</html>
