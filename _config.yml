@@ -56,3 +56,4 @@ markdown: kramdown
 
 include:
   - _static
+  - _*.html

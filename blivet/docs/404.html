@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]> <html class="no-js lt-ie10 lt-ie9 lt-ie8 lt-ie7" lang="en-us"> <![endif]-->
+<!--[if IE 7]> <html class="no-js lt-ie10 lt-ie9 lt-ie8" lang="en-us"> <![endif]-->
+<!--[if IE 8]> <html class="no-js lt-ie10 lt-ie9" lang="en-us"> <![endif]-->
+<!--[if IE 9]> <html class="no-js lt-ie10 lt-ie9" lang="en-us"> <![endif]-->
+<!--[if lt IE 10]> <html class="no-js lt-ie10" lang="en-us"> <![endif]-->
+<!--[if !IE]> > <![endif]-->
+<html class='no-js' lang='en'>
+<!-- <![endif] -->
+<head>
+<title>
+Page not found &mdash;
+Blivet
+</title>
+<meta charset='utf-8'>
+<meta content='' name='description'>
+<meta content='' name='author'>
+<meta content='initial-scale=1.0,user-scalable=no,maximum-scale=1,width=device-width' name='viewport'>
+
+<link href='/images/favicon.ico' rel='shortcut icon'>
+<link href='/images/apple-touch-icon-precomposed.png' rel='apple-touch-icon-precomposed'>
+<link href='/images/apple-touch-icon-57x57-precomposed.png' rel='apple-touch-icon-precomposed' sizes='57x57'>
+<link href='/images/apple-touch-icon-72x72-precomposed.png' rel='apple-touch-icon-precomposed' sizes='72x72'>
+<link href='/images/apple-touch-icon-114x114-precomposed.png' rel='apple-touch-icon-precomposed' sizes='114x114'>
+<link href="/blivet/stylesheets/application.css?1436385144" rel="stylesheet" type="text/css" />
+<link href="/blivet/stylesheets/print.css?1436385142" rel="stylesheet" type="text/css" media="print" />
+</head>
+<body class=' x404 source-haml'>
+<header class='masthead hidden-print' id='branding' role='banner'>
+<section>
+<h1>
+<a href="/blivet/"><img id="rhlogo" class="logo" alt="Blivet" width="222" height="55" src="/blivet/images/blivet-logo.png?1405103565" />
+</a></h1>
+<nav role='navigation'>
+<ul class=''>
+<li class='nav-link-home' role='menuitem'>
+<a href='/blivet/'>Home</a>
+</li>
+
+<li class='nav-link-about' role='menuitem'>
+<a href='/blivet/about'>About</a>
+</li>
+
+<li class='nav-link-development' role='menuitem'>
+<a href='/blivet/development'>Development</a>
+</li>
+
+<li class='nav-link-blog' role='menuitem'>
+<a href='/blivet/blog'>Blog</a>
+</li>
+
+</ul>
+</nav>
+
+</section>
+</header>
+<header id='subhead'>
+<section>
+<h2 id='page-title'>
+Page not found
+</h2>
+</section>
+</header>
+
+
+<section class='container' id='page-wrap'>
+<section id='page'>
+<section class='container content' id='content'>
+<!--[if lt IE 7]>
+<p class="chromeframe">You are using an outdated browser.
+<a href="http://browsehappy.com/">Upgrade your browser today</a> or
+<a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to better experience this site.</p>
+<![endif]-->
+<h1>
+Not found
+<span>:(</span>
+</h1>
+<p>Sorry, but the page you were trying to view does not exist.</p>
+<p>It looks like this was the result of either:</p>
+<ul>
+<li>a mistyped address</li>
+<li>an out-of-date link</li>
+</ul>
+<div class='search-page'>
+<form class='form-horizontal' id='search-form' role='form'>
+<div class='form-group'>
+<div class='col-sm-10'>
+<input autocomplete='off' class='form-control col-sm-8' id='search-input' name='entry'>
+</div>
+<button class='btn col-sm-2'>Search</button>
+</div>
+</form>
+<div class='progress-container'>
+<i class='spinner fa fa-circle-o-notch fa-spin hidden' id='progress'></i>
+</div>
+<div class='similar hidden' id='similar'>
+Possibly related:
+<span id='similar-list'></span>
+</div>
+<section class='articles' id='results'></section>
+<section class='hidden' id='results-none'>
+<h2>No results found.</h2>
+Sorry; try again.
+</section>
+<div class='hidden' id='template'>
+<article class='post hentry'>
+<h2 class='post-title entry-title'>
+<a class='title'></a>
+</h2>
+<header class='post-meta'>
+<time class='published date'></time>
+</header>
+<section class='post-content entry-content summary'></section>
+</article>
+</div>
+</div>
+
+
+</section>
+</section>
+</section>
+<footer class='text-center' id='footer'>
+<hr class='visible-print'>
+
+&copy; 2014 Red Hat, Inc.
+<div class='last-modified'>
+Page last modified
+Fri 17 Apr 2015 13:02 UTC
+</div>
+</footer>
+
+
+<script src="/blivet/javascripts/application.js?1436385144" type="text/javascript"></script>
+<script>
+  (function() {
+    var $form, $input, $progress, $results, $similar, $similarList, $template, ajax, displayResults, loadsearchIndex, parseForm, selectForm, typeTimer, updateHash, wordsplit;
+  
+    $form = $('#search-form');
+  
+    $input = $('#search-input');
+  
+    $similar = $('#similar');
+  
+    $similarList = $('#similar-list');
+  
+    $results = $('#results');
+  
+    $progress = $('#progress');
+  
+    $template = $('#template');
+  
+    this.searchIndex = null;
+  
+    ajax = new $.Deferred();
+  
+    wordsplit = /[\s.,;!?=\-"'\\\/]+/;
+  
+    typeTimer = null;
+  
+    loadsearchIndex = function() {
+      if (ajax.state() === "resolved" && ajax.state() === "pending") {
+        return;
+      }
+      return $.get('/search-results.json', (function(_this) {
+        return function(data) {
+          _this.searchIndex = data;
+          return ajax.resolve(data);
+        };
+      })(this));
+    };
+  
+    displayResults = function(matches, similar) {
+      var $pending, $snippet, i, len, match, page, pages;
+      $pending = $('<div class="pending"/>');
+      pages = searchIndex.pages;
+      $('#results-none').hide();
+      if (matches.length > 0) {
+        matches.sort(function(a, b) {
+          var ref;
+          return (ref = pages[a]['date'] < pages[b]['date']) != null ? ref : {
+            a: b
+          };
+        });
+        for (i = 0, len = matches.length; i < len; i++) {
+          match = matches[i];
+          page = pages[match];
+          $snippet = $template.children().clone();
+          $snippet.removeClass('hidden').find('.title').html(page.title).attr('href', page.url).end().find('.summary').html(page.summary).end();
+          if (page.date) {
+            $snippet.find('.date').text(page.datestring).end();
+          }
+          $pending.append($snippet);
+        }
+      } else {
+        if ($input.val() !== '') {
+          $('#results-none').removeClass('hidden').show();
+        }
+      }
+      $results.html($pending.children());
+      if (similar.length > 0) {
+        $similar.removeClass('hidden').hide();
+        $similarList.html(function() {
+          var result;
+          result = '';
+          $.each(similar, function(k, v) {
+            var rating;
+            rating = "Score: " + Math.round(v.score * 50) / 10;
+            return result += '<a href="#%" title="$">%</a> '.replace(/%/g, v.word).replace(/\$/, rating);
+          });
+          return result;
+        });
+        $similar.show();
+      } else {
+        $similar.hide();
+        $similarList.html('');
+      }
+      $progress.hide();
+      return $input.focus();
+    };
+  
+    parseForm = function() {
+      $progress.removeClass('hidden').show();
+      return $.when(ajax).done(function(data) {
+        var i, len, matches, similar, text, word, wordMatch, words;
+        text = $input.val();
+        words = text.toLowerCase().trim().split(wordsplit);
+        matches = [];
+        similar = [];
+        for (i = 0, len = words.length; i < len; i++) {
+          word = words[i];
+          wordMatch = data.words[word];
+          if (wordMatch) {
+            if (matches.length < 1) {
+              matches = wordMatch;
+            } else {
+              matches = $.map(matches, function(a) {
+                if ($.inArray(a, wordMatch) > 0) {
+                  return a;
+                }
+              });
+            }
+          }
+          $.map(searchIndex.words, function(data, key) {
+            var matchscore;
+            matchscore = key.score(word, 0.5);
+            if ((matchscore > 0.7) && !similar[key] && word !== key) {
+              return similar.push({
+                word: key,
+                score: matchscore
+              });
+            }
+          });
+        }
+        similar.sort(function(a, b) {
+          var ref;
+          return (ref = a.score < b.score) != null ? ref : {
+            a: b
+          };
+        });
+        return displayResults(matches, similar.slice(0, 21));
+      });
+    };
+  
+    selectForm = function() {
+      return setTimeout(function() {
+        return $input.focus().select();
+      }, 0);
+    };
+  
+    updateHash = function() {
+      return window.location.hash = "#" + $input.val().trim();
+    };
+  
+    loadsearchIndex();
+  
+    $(function() {
+      $form.on('keypress', function(e) {
+        switch (e.key) {
+          case "Tab":
+          case "Down":
+            $('#similar a:first,#results a').first().focus();
+            return e.preventDefault();
+          case "Left":
+          case "Right":
+          case "Home":
+          case "End":
+          case "Esc":
+          case "Enter":
+            break;
+          default:
+            if (!(e.ctrlKey || e.altKey)) {
+              clearTimeout(typeTimer);
+              return typeTimer = setTimeout(updateHash, 500);
+            }
+        }
+      }).on('submit', function(e) {
+        updateHash();
+        return e.preventDefault();
+      });
+      $similar.on('keypress', 'a', function(e) {
+        switch (e.key) {
+          case "Right":
+            return $(this).next().focus();
+          case "Left":
+            return $(this).prev().focus();
+          case "Up":
+            return selectForm();
+          case "Down":
+            return $('#results a:first').focus();
+          case " ":
+            return $(this).click();
+          case "Enter":
+            return selectForm();
+        }
+      });
+      $results.on('keypress', 'a', function(e) {
+        var $article, firstChild;
+        $article = $(this).parentsUntil('#results');
+        switch (e.key) {
+          case "Down":
+            return $article.next().find('a').focus();
+          case "Up":
+            firstChild = $article.filter(':first-child').length !== 1;
+            if (firstChild) {
+              return selectForm();
+            } else {
+              return $article.prev().find('a').focus();
+            }
+        }
+      }).on('focus', 'a', function(e) {
+        return $(this).parentsUntil('#results').addClass('highlight');
+      }).on('blur', 'a', function(e) {
+        return $(this).parentsUntil('#results').removeClass('highlight');
+      });
+      $(document).on('keypress', function(e) {
+        switch (e.key) {
+          case "Esc":
+            $input.val('');
+            return updateHash();
+        }
+      });
+      $.when(ajax).done(function(data) {
+        return parseForm();
+      });
+      $(window).on('hashchange', function(e) {
+        $input.val(this.location.hash.substr(1));
+        return parseForm();
+      });
+      if (window.location.hash) {
+        $(window).trigger('hashchange');
+      }
+      return selectForm();
+    });
+  
+  }).call(this);
+</script>
+<script>
+  jQuery(function($){
+    var missing_words = document.location.pathname.replace(/[\/\+:\s\-]+/g, ' ').trim()
+    $('#search-input').val(missing_words).trigger('keypress')
+  });
+</script>
+
+</body>
+</html>
