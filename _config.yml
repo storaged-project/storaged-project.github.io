@@ -1,8 +1,7 @@
 title: Storaged Project
 description: >-
-  Write an awesome description for your new site here. You can edit this
-  line in _config.yml. It will appear in your document head meta (for
-  Google search results) and in your feed.xml site description.
+  Storaged project is a collection of storage management tools, libraries and APIs
+  used for creating, managing and monitoring storage across the GNU/Linux ecosystem.
 
 theme: minima
 plugins:
