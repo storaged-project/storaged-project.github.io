@@ -53,3 +53,6 @@ plugins:
 #   - vendor/ruby/
 
 markdown: kramdown
+
+include:
+  - _static
