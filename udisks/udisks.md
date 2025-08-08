@@ -4,7 +4,7 @@ title: "udisks"
 permalink: /udisks/
 ---
 
-[Source code](https://github.com/storaged-project/udisks) | [API Documentation](/udisks/docs/latest) | [Developer Guide](https://github.com/storaged-project/udisks/blob/master/HACKING)
+[Source code](https://github.com/storaged-project/udisks) | [API Documentation](/udisks/docs) | [Developer Guide](https://github.com/storaged-project/udisks/blob/master/HACKING)
 
 UDisks provides multiple tools and libraries for storage configuration and manipulation:
 
