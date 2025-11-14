@@ -1,0 +1,26 @@
+title: Storaged Project
+description: >-
+  Storaged project is a collection of storage management tools, libraries and APIs
+  used for creating, managing and monitoring storage across the GNU/Linux ecosystem.
+
+theme: minima
+plugins:
+  - jekyll-feed
+
+show_excerpts: true
+
+github_username:  storaged-project
+rss: rss
+
+header_pages:
+  - blivet/blivet.md
+  - blivet-gui/blivet-gui.md
+  - libblockdev/libblockdev.md
+  - libbytesize/libbytesize.md
+  - udisks/udisks.md
+
+markdown: kramdown
+
+include:
+  - _static
+  - _*.html
