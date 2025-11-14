@@ -8,7 +8,7 @@
 <link rel="up" href="ref-daemon-jobs.html" title="Jobs">
 <link rel="prev" href="UDisksThreadedJob.html" title="UDisksThreadedJob">
 <link rel="next" href="ref-daemon-linux-types.html" title="Linux-specific types">
-<meta name="generator" content="GTK-Doc V1.34.0 (XML mode)">
+<meta name="generator" content="GTK-Doc V1.35.1 (XML mode)">
 <link rel="stylesheet" href="style.css" type="text/css">
 </head>
 <body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
@@ -251,98 +251,6 @@ udisks_spawned_job_get_command_line (<em class="parameter"><code><a class="link"
 udisks_spawned_job_start (<em class="parameter"><code><a class="link" href="UDisksSpawnedJob.html" title="UDisksSpawnedJob"><span class="type">UDisksSpawnedJob</span></a> *job</code></em>);</pre>
 <p>Connect to the <a class="link" href="UDisksSpawnedJob.html#UDisksSpawnedJob-spawned-job-completed" title="The “spawned-job-completed” signal"><span class="type">“spawned-job-completed”</span></a> or
 <a class="link" href="UDisksJob.html#UDisksJob-completed" title="The “completed” signal"><span class="type">“completed”</span></a> signals to get notified when the job is done.</p>
-<p>*/
-void udisks_spawned_job_start (UDisksSpawnedJob *job)
-{
-  GError *error;
-  gint child_argc;
-  gchar **child_argv = NULL;
-  struct passwd pwstruct;
-  gchar pwbuf[8192];
-  struct passwd *pw = NULL;
-  int rc;</p>
-<p>  job-&gt;main_context = <code class="function">g_main_context_get_thread_default()</code>;
-  if (job-&gt;main_context != NULL)
-    g_main_context_ref (job-&gt;main_context);</p>
-<p>  /* could already be cancelled */
-  error = NULL;
-  if (g_cancellable_set_error_if_cancelled (udisks_base_job_get_cancellable (UDISKS_BASE_JOB (job)), &amp;error))
-    {
-      emit_completed_with_error_in_idle (job, error);
-      g_clear_error (&amp;error);
-      goto out;
-    }</p>
-<p>  job-&gt;cancellable_handler_id = g_cancellable_connect (udisks_base_job_get_cancellable (UDISKS_BASE_JOB (job)),
-                                                       G_CALLBACK (on_cancelled),
-                                                       job,
-                                                       NULL);</p>
-<p>  error = NULL;
-  if (!g_shell_parse_argv (job-&gt;command_line,
-                           &amp;child_argc,
-                           &amp;child_argv,
-                           &amp;error))
-    {
-      g_prefix_error (&amp;error,
-                      "Error parsing command-line `<code class="literal">s</code>': ",
-                      job-&gt;command_line);
-      emit_completed_with_error_in_idle (job, error);
-      g_clear_error (&amp;error);
-      goto out;
-    }</p>
-<p>  /* Save real egid and gid info for the child process */
-  if (job-&gt;run_as_uid != <code class="function">getuid()</code> || job-&gt;run_as_euid != <code class="function">geteuid()</code>)
-    {
-      rc = getpwuid_r (job-&gt;run_as_euid, &amp;pwstruct, pwbuf, sizeof pwbuf, &amp;pw);
-      if (rc != 0 || pw == NULL)
-        {
-          g_set_error(&amp;error, G_IO_ERROR, G_IO_ERROR_FAILED,
-                      "No password record for uid <code class="literal">d</code>: <code class="literal">m</code>\n", (gint) job-&gt;run_as_euid);
-          emit_completed_with_error_in_idle (job, error);
-          g_clear_error (&amp;error);
-          goto out;
-        }
-      job-&gt;real_egid = pw-&gt;pw_gid;</p>
-<p>      rc = getpwuid_r (job-&gt;run_as_uid, &amp;pwstruct, pwbuf, sizeof pwbuf, &amp;pw);
-      if (rc != 0 || pw == NULL)
-        {
-          g_set_error(&amp;error, G_IO_ERROR, G_IO_ERROR_FAILED,
-                      "No password record for uid <code class="literal">d</code>: <code class="literal">m</code>\n", (gint) job-&gt;run_as_uid);
-          emit_completed_with_error_in_idle (job, error);
-          g_clear_error (&amp;error);
-          goto out;
-        }
-      job-&gt;real_gid = pw-&gt;pw_gid;
-      job-&gt;real_uid = pw-&gt;pw_uid;
-      job-&gt;real_pwname = strdup (pw-&gt;pw_name);
-    }</p>
-<p>  error = NULL;
-  if (!g_spawn_async_with_pipes (NULL, /* working directory */
-                                 child_argv,
-                                 NULL, /* envp */
-                                 G_SPAWN_SEARCH_PATH | G_SPAWN_DO_NOT_REAP_CHILD,
-                                 child_setup, /* child_setup */
-                                 job, /* child_setup's user_data */
-                                 &amp;(job-&gt;child_pid),
-                                 job-&gt;input_string != NULL ? &amp;(job-&gt;child_stdin_fd) : NULL,
-                                 &amp;(job-&gt;child_stdout_fd),
-                                 &amp;(job-&gt;child_stderr_fd),
-                                 &amp;error))
-    {
-      g_prefix_error (&amp;error,
-                      "Error spawning command-line `<code class="literal">s</code>': ",
-                      job-&gt;command_line);
-      emit_completed_with_error_in_idle (job, error);
-      g_clear_error (&amp;error);
-      goto out;
-    }</p>
-<p>  job-&gt;child_watch_source = g_child_watch_source_new (job-&gt;child_pid);
-#if __GNUC__ &gt;= 8
-#pragma GCC diagnostic push
-#pragma GCC diagnostic ignored "-Wcast-function-type"
-#endif
-/* parameters of the callback depend on the source and can be different
-from the required "generic" GSourceFunc, see:
-https://developer.gnome.org/glib/stable/glib-The-Main-Event-Loop.html<span class="type">g-source-set-callback</span></p>
 <div class="refsect3">
 <a name="udisks-spawned-job-start.parameters"></a><h4>Parameters</h4>
 <div class="informaltable"><table class="informaltable" width="100%" border="0">
@@ -493,6 +401,6 @@ handlers run.</p>
 </div>
 </div>
 <div class="footer">
-<hr>Generated by GTK-Doc V1.34.0</div>
+<hr>Generated by GTK-Doc V1.35.1</div>
 </body>
 </html>

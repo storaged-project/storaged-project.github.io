@@ -87,8 +87,8 @@
         <sub name="UDisksVDOVolume" link="UDisksVDOVolume.html"/>
         <sub name="UDisksISCSISession" link="UDisksISCSISession.html"/>
         <sub name="UDisksManagerISCSIInitiator" link="UDisksManagerISCSIInitiator.html"/>
-        <sub name="UDisksManagerBTRFS" link="UDisksManagerBTRFS.html"/>
-        <sub name="UDisksFilesystemBTRFS" link="UDisksFilesystemBTRFS.html"/>
+        <sub name="UDisksManagerBTRFS" link="udisks2-UDisksManagerBTRFS.html"/>
+        <sub name="UDisksFilesystemBTRFS" link="udisks2-UDisksFilesystemBTRFS.html"/>
       </sub>
     </sub>
     <sub name="Daemon Implementation Details" link="ref-daemon.html">
@@ -145,7 +145,7 @@
     </sub>
     <sub name="Index" link="api-index.html"/>
     <sub name="Index of deprecated symbols" link="api-index-deprecated.html"/>
-    <sub name="Index of new symbols in 2.10.90" link="api-index-2.10.90.html"/>
+    <sub name="Index of new symbols in 2.11.0" link="api-index-2.11.0.html"/>
     <sub name="Annotation Glossary" link="annotation-glossary.html"/>
     <sub name="Object Hierarchy" link="gio-hierarchy.html"/>
   </chapters>
@@ -159,6 +159,7 @@
     <keyword type="method" name="The EnableModules() method" link="gdbus-org.freedesktop.UDisks2.Manager.html#gdbus-method-org-freedesktop-UDisks2-Manager.EnableModules"/>
     <keyword type="method" name="The EnableModule() method" link="gdbus-org.freedesktop.UDisks2.Manager.html#gdbus-method-org-freedesktop-UDisks2-Manager.EnableModule"/>
     <keyword type="method" name="The GetBlockDevices() method" link="gdbus-org.freedesktop.UDisks2.Manager.html#gdbus-method-org-freedesktop-UDisks2-Manager.GetBlockDevices"/>
+    <keyword type="method" name="The GetDrives() method" link="gdbus-org.freedesktop.UDisks2.Manager.html#gdbus-method-org-freedesktop-UDisks2-Manager.GetDrives"/>
     <keyword type="method" name="The ResolveDevice() method" link="gdbus-org.freedesktop.UDisks2.Manager.html#gdbus-method-org-freedesktop-UDisks2-Manager.ResolveDevice"/>
     <keyword type="property" name="The &quot;Version&quot; property" link="gdbus-org.freedesktop.UDisks2.Manager.html#gdbus-property-org-freedesktop-UDisks2-Manager.Version"/>
     <keyword type="property" name="The &quot;SupportedFilesystems&quot; property" link="gdbus-org.freedesktop.UDisks2.Manager.html#gdbus-property-org-freedesktop-UDisks2-Manager.SupportedFilesystems"/>
@@ -336,6 +337,7 @@
     <keyword type="property" name="The &quot;CleartextDevice&quot; property" link="gdbus-org.freedesktop.UDisks2.Encrypted.html#gdbus-property-org-freedesktop-UDisks2-Encrypted.CleartextDevice"/>
     <keyword type="method" name="The Delete() method" link="gdbus-org.freedesktop.UDisks2.Loop.html#gdbus-method-org-freedesktop-UDisks2-Loop.Delete"/>
     <keyword type="method" name="The SetAutoclear() method" link="gdbus-org.freedesktop.UDisks2.Loop.html#gdbus-method-org-freedesktop-UDisks2-Loop.SetAutoclear"/>
+    <keyword type="method" name="The SetCapacity() method" link="gdbus-org.freedesktop.UDisks2.Loop.html#gdbus-method-org-freedesktop-UDisks2-Loop.SetCapacity"/>
     <keyword type="property" name="The &quot;BackingFile&quot; property" link="gdbus-org.freedesktop.UDisks2.Loop.html#gdbus-property-org-freedesktop-UDisks2-Loop.BackingFile"/>
     <keyword type="property" name="The &quot;Autoclear&quot; property" link="gdbus-org.freedesktop.UDisks2.Loop.html#gdbus-property-org-freedesktop-UDisks2-Loop.Autoclear"/>
     <keyword type="property" name="The &quot;SetupByUID&quot; property" link="gdbus-org.freedesktop.UDisks2.Loop.html#gdbus-property-org-freedesktop-UDisks2-Loop.SetupByUID"/>
@@ -684,6 +686,10 @@
     <keyword type="function" name="udisks_manager_call_get_block_devices_finish ()" link="UDisksManager.html#udisks-manager-call-get-block-devices-finish" since="2.7.2"/>
     <keyword type="function" name="udisks_manager_call_get_block_devices_sync ()" link="UDisksManager.html#udisks-manager-call-get-block-devices-sync" since="2.7.2"/>
     <keyword type="function" name="udisks_manager_complete_get_block_devices ()" link="UDisksManager.html#udisks-manager-complete-get-block-devices" since="2.7.2"/>
+    <keyword type="function" name="udisks_manager_call_get_drives ()" link="UDisksManager.html#udisks-manager-call-get-drives" since="2.11"/>
+    <keyword type="function" name="udisks_manager_call_get_drives_finish ()" link="UDisksManager.html#udisks-manager-call-get-drives-finish" since="2.11"/>
+    <keyword type="function" name="udisks_manager_call_get_drives_sync ()" link="UDisksManager.html#udisks-manager-call-get-drives-sync" since="2.11"/>
+    <keyword type="function" name="udisks_manager_complete_get_drives ()" link="UDisksManager.html#udisks-manager-complete-get-drives" since="2.11"/>
     <keyword type="function" name="udisks_manager_call_can_resize ()" link="UDisksManager.html#udisks-manager-call-can-resize" since="2.7.2"/>
     <keyword type="function" name="udisks_manager_call_can_resize_finish ()" link="UDisksManager.html#udisks-manager-call-can-resize-finish" since="2.7.2"/>
     <keyword type="function" name="udisks_manager_call_can_resize_sync ()" link="UDisksManager.html#udisks-manager-call-can-resize-sync" since="2.7.2"/>
@@ -726,6 +732,7 @@
     <keyword type="signal" name="The “handle-enable-module” signal" link="UDisksManager.html#UDisksManager-handle-enable-module"/>
     <keyword type="signal" name="The “handle-enable-modules” signal" link="UDisksManager.html#UDisksManager-handle-enable-modules"/>
     <keyword type="signal" name="The “handle-get-block-devices” signal" link="UDisksManager.html#UDisksManager-handle-get-block-devices"/>
+    <keyword type="signal" name="The “handle-get-drives” signal" link="UDisksManager.html#UDisksManager-handle-get-drives"/>
     <keyword type="signal" name="The “handle-loop-setup” signal" link="UDisksManager.html#UDisksManager-handle-loop-setup"/>
     <keyword type="signal" name="The “handle-mdraid-create” signal" link="UDisksManager.html#UDisksManager-handle-mdraid-create"/>
     <keyword type="signal" name="The “handle-resolve-device” signal" link="UDisksManager.html#UDisksManager-handle-resolve-device"/>
@@ -1581,6 +1588,7 @@
     <keyword type="property" name="The “setup-by-uid” property" link="UDisksLoop.html#UDisksLoop--setup-by-uid"/>
     <keyword type="signal" name="The “handle-delete” signal" link="UDisksLoop.html#UDisksLoop-handle-delete"/>
     <keyword type="signal" name="The “handle-set-autoclear” signal" link="UDisksLoop.html#UDisksLoop-handle-set-autoclear"/>
+    <keyword type="signal" name="The “handle-set-capacity” signal" link="UDisksLoop.html#UDisksLoop-handle-set-capacity"/>
     <keyword type="function" name="udisks_nvme_controller_interface_info ()" link="UDisksNVMeController.html#udisks-nvme-controller-interface-info"/>
     <keyword type="function" name="udisks_nvme_controller_override_properties ()" link="UDisksNVMeController.html#udisks-nvme-controller-override-properties"/>
     <keyword type="function" name="udisks_nvme_controller_call_smart_get_attributes ()" link="UDisksNVMeController.html#udisks-nvme-controller-call-smart-get-attributes" since="2.10.0"/>
@@ -2180,96 +2188,96 @@
     <keyword type="signal" name="The “handle-login” signal" link="UDisksManagerISCSIInitiator.html#UDisksManagerISCSIInitiator-handle-login"/>
     <keyword type="signal" name="The “handle-logout” signal" link="UDisksManagerISCSIInitiator.html#UDisksManagerISCSIInitiator-handle-logout"/>
     <keyword type="signal" name="The “handle-set-initiator-name” signal" link="UDisksManagerISCSIInitiator.html#UDisksManagerISCSIInitiator-handle-set-initiator-name"/>
-    <keyword type="function" name="udisks_manager_btrfs_proxy_new ()" link="UDisksManagerBTRFS.html#udisks-manager-btrfs-proxy-new" since="2.1.3"/>
-    <keyword type="function" name="udisks_manager_btrfs_proxy_new_finish ()" link="UDisksManagerBTRFS.html#udisks-manager-btrfs-proxy-new-finish" since="2.1.3"/>
-    <keyword type="function" name="udisks_manager_btrfs_proxy_new_sync ()" link="UDisksManagerBTRFS.html#udisks-manager-btrfs-proxy-new-sync" since="2.1.3"/>
-    <keyword type="function" name="udisks_manager_btrfs_proxy_new_for_bus ()" link="UDisksManagerBTRFS.html#udisks-manager-btrfs-proxy-new-for-bus" since="2.1.3"/>
-    <keyword type="function" name="udisks_manager_btrfs_proxy_new_for_bus_finish ()" link="UDisksManagerBTRFS.html#udisks-manager-btrfs-proxy-new-for-bus-finish" since="2.1.3"/>
-    <keyword type="function" name="udisks_manager_btrfs_proxy_new_for_bus_sync ()" link="UDisksManagerBTRFS.html#udisks-manager-btrfs-proxy-new-for-bus-sync" since="2.1.3"/>
-    <keyword type="function" name="udisks_manager_btrfs_call_create_volume ()" link="UDisksManagerBTRFS.html#udisks-manager-btrfs-call-create-volume" since="2.3.0"/>
-    <keyword type="function" name="udisks_manager_btrfs_call_create_volume_finish ()" link="UDisksManagerBTRFS.html#udisks-manager-btrfs-call-create-volume-finish" since="2.3.0"/>
-    <keyword type="function" name="udisks_manager_btrfs_call_create_volume_sync ()" link="UDisksManagerBTRFS.html#udisks-manager-btrfs-call-create-volume-sync" since="2.3.0"/>
-    <keyword type="function" name="udisks_manager_btrfs_skeleton_new ()" link="UDisksManagerBTRFS.html#udisks-manager-btrfs-skeleton-new" since="2.1.3"/>
-    <keyword type="function" name="udisks_manager_btrfs_complete_create_volume ()" link="UDisksManagerBTRFS.html#udisks-manager-btrfs-complete-create-volume" since="2.3.0"/>
-    <keyword type="struct" name="UDisksManagerBTRFS" link="UDisksManagerBTRFS.html#UDisksManagerBTRFS-struct"/>
-    <keyword type="struct" name="struct UDisksManagerBTRFSProxy" link="UDisksManagerBTRFS.html#UDisksManagerBTRFSProxy-struct"/>
-    <keyword type="struct" name="struct UDisksManagerBTRFSProxyClass" link="UDisksManagerBTRFS.html#UDisksManagerBTRFSProxyClass" since="2.1.3"/>
-    <keyword type="struct" name="struct UDisksManagerBTRFSSkeleton" link="UDisksManagerBTRFS.html#UDisksManagerBTRFSSkeleton-struct"/>
-    <keyword type="struct" name="struct UDisksManagerBTRFSSkeletonClass" link="UDisksManagerBTRFS.html#UDisksManagerBTRFSSkeletonClass" since="2.1.3"/>
-    <keyword type="signal" name="The “handle-create-volume” signal" link="UDisksManagerBTRFS.html#UDisksManagerBTRFS-handle-create-volume"/>
-    <keyword type="function" name="udisks_filesystem_btrfs_proxy_new ()" link="UDisksFilesystemBTRFS.html#udisks-filesystem-btrfs-proxy-new" since="2.1.3"/>
-    <keyword type="function" name="udisks_filesystem_btrfs_proxy_new_finish ()" link="UDisksFilesystemBTRFS.html#udisks-filesystem-btrfs-proxy-new-finish" since="2.1.3"/>
-    <keyword type="function" name="udisks_filesystem_btrfs_proxy_new_sync ()" link="UDisksFilesystemBTRFS.html#udisks-filesystem-btrfs-proxy-new-sync" since="2.1.3"/>
-    <keyword type="function" name="udisks_filesystem_btrfs_proxy_new_for_bus ()" link="UDisksFilesystemBTRFS.html#udisks-filesystem-btrfs-proxy-new-for-bus" since="2.1.3"/>
-    <keyword type="function" name="udisks_filesystem_btrfs_proxy_new_for_bus_finish ()" link="UDisksFilesystemBTRFS.html#udisks-filesystem-btrfs-proxy-new-for-bus-finish" since="2.1.3"/>
-    <keyword type="function" name="udisks_filesystem_btrfs_proxy_new_for_bus_sync ()" link="UDisksFilesystemBTRFS.html#udisks-filesystem-btrfs-proxy-new-for-bus-sync" since="2.1.3"/>
-    <keyword type="function" name="udisks_filesystem_btrfs_get_label ()" link="UDisksFilesystemBTRFS.html#udisks-filesystem-btrfs-get-label" since="2.1.3"/>
-    <keyword type="function" name="udisks_filesystem_btrfs_dup_label ()" link="UDisksFilesystemBTRFS.html#udisks-filesystem-btrfs-dup-label" since="2.1.3"/>
-    <keyword type="function" name="udisks_filesystem_btrfs_set_label ()" link="UDisksFilesystemBTRFS.html#udisks-filesystem-btrfs-set-label" since="2.1.3"/>
-    <keyword type="function" name="udisks_filesystem_btrfs_get_uuid ()" link="UDisksFilesystemBTRFS.html#udisks-filesystem-btrfs-get-uuid" since="2.1.3"/>
-    <keyword type="function" name="udisks_filesystem_btrfs_dup_uuid ()" link="UDisksFilesystemBTRFS.html#udisks-filesystem-btrfs-dup-uuid" since="2.1.3"/>
-    <keyword type="function" name="udisks_filesystem_btrfs_set_uuid ()" link="UDisksFilesystemBTRFS.html#udisks-filesystem-btrfs-set-uuid" since="2.1.3"/>
-    <keyword type="function" name="udisks_filesystem_btrfs_get_num_devices ()" link="UDisksFilesystemBTRFS.html#udisks-filesystem-btrfs-get-num-devices" since="2.1.3"/>
-    <keyword type="function" name="udisks_filesystem_btrfs_set_num_devices ()" link="UDisksFilesystemBTRFS.html#udisks-filesystem-btrfs-set-num-devices" since="2.1.3"/>
-    <keyword type="function" name="udisks_filesystem_btrfs_get_used ()" link="UDisksFilesystemBTRFS.html#udisks-filesystem-btrfs-get-used" since="2.1.3"/>
-    <keyword type="function" name="udisks_filesystem_btrfs_set_used ()" link="UDisksFilesystemBTRFS.html#udisks-filesystem-btrfs-set-used" since="2.1.3"/>
-    <keyword type="function" name="udisks_filesystem_btrfs_call_add_device ()" link="UDisksFilesystemBTRFS.html#udisks-filesystem-btrfs-call-add-device" since="2.3.0"/>
-    <keyword type="function" name="udisks_filesystem_btrfs_call_add_device_finish ()" link="UDisksFilesystemBTRFS.html#udisks-filesystem-btrfs-call-add-device-finish" since="2.3.0"/>
-    <keyword type="function" name="udisks_filesystem_btrfs_call_add_device_sync ()" link="UDisksFilesystemBTRFS.html#udisks-filesystem-btrfs-call-add-device-sync" since="2.3.0"/>
-    <keyword type="function" name="udisks_filesystem_btrfs_call_create_snapshot ()" link="UDisksFilesystemBTRFS.html#udisks-filesystem-btrfs-call-create-snapshot" since="2.1.3"/>
-    <keyword type="function" name="udisks_filesystem_btrfs_call_create_snapshot_finish ()" link="UDisksFilesystemBTRFS.html#udisks-filesystem-btrfs-call-create-snapshot-finish" since="2.1.3"/>
-    <keyword type="function" name="udisks_filesystem_btrfs_call_create_snapshot_sync ()" link="UDisksFilesystemBTRFS.html#udisks-filesystem-btrfs-call-create-snapshot-sync" since="2.1.3"/>
-    <keyword type="function" name="udisks_filesystem_btrfs_call_create_subvolume ()" link="UDisksFilesystemBTRFS.html#udisks-filesystem-btrfs-call-create-subvolume" since="2.1.3"/>
-    <keyword type="function" name="udisks_filesystem_btrfs_call_create_subvolume_finish ()" link="UDisksFilesystemBTRFS.html#udisks-filesystem-btrfs-call-create-subvolume-finish" since="2.1.3"/>
-    <keyword type="function" name="udisks_filesystem_btrfs_call_create_subvolume_sync ()" link="UDisksFilesystemBTRFS.html#udisks-filesystem-btrfs-call-create-subvolume-sync" since="2.1.3"/>
-    <keyword type="function" name="udisks_filesystem_btrfs_call_get_subvolumes ()" link="UDisksFilesystemBTRFS.html#udisks-filesystem-btrfs-call-get-subvolumes" since="2.1.3"/>
-    <keyword type="function" name="udisks_filesystem_btrfs_call_get_subvolumes_finish ()" link="UDisksFilesystemBTRFS.html#udisks-filesystem-btrfs-call-get-subvolumes-finish" since="2.1.3"/>
-    <keyword type="function" name="udisks_filesystem_btrfs_call_get_subvolumes_sync ()" link="UDisksFilesystemBTRFS.html#udisks-filesystem-btrfs-call-get-subvolumes-sync" since="2.1.3"/>
-    <keyword type="function" name="udisks_filesystem_btrfs_call_remove_device ()" link="UDisksFilesystemBTRFS.html#udisks-filesystem-btrfs-call-remove-device" since="2.3.0"/>
-    <keyword type="function" name="udisks_filesystem_btrfs_call_remove_device_finish ()" link="UDisksFilesystemBTRFS.html#udisks-filesystem-btrfs-call-remove-device-finish" since="2.3.0"/>
-    <keyword type="function" name="udisks_filesystem_btrfs_call_remove_device_sync ()" link="UDisksFilesystemBTRFS.html#udisks-filesystem-btrfs-call-remove-device-sync" since="2.3.0"/>
-    <keyword type="function" name="udisks_filesystem_btrfs_call_remove_subvolume ()" link="UDisksFilesystemBTRFS.html#udisks-filesystem-btrfs-call-remove-subvolume" since="2.1.3"/>
-    <keyword type="function" name="udisks_filesystem_btrfs_call_remove_subvolume_finish ()" link="UDisksFilesystemBTRFS.html#udisks-filesystem-btrfs-call-remove-subvolume-finish" since="2.1.3"/>
-    <keyword type="function" name="udisks_filesystem_btrfs_call_remove_subvolume_sync ()" link="UDisksFilesystemBTRFS.html#udisks-filesystem-btrfs-call-remove-subvolume-sync" since="2.1.3"/>
-    <keyword type="function" name="udisks_filesystem_btrfs_call_repair ()" link="UDisksFilesystemBTRFS.html#udisks-filesystem-btrfs-call-repair" since="2.3.0"/>
-    <keyword type="function" name="udisks_filesystem_btrfs_call_repair_finish ()" link="UDisksFilesystemBTRFS.html#udisks-filesystem-btrfs-call-repair-finish" since="2.3.0"/>
-    <keyword type="function" name="udisks_filesystem_btrfs_call_repair_sync ()" link="UDisksFilesystemBTRFS.html#udisks-filesystem-btrfs-call-repair-sync" since="2.3.0"/>
-    <keyword type="function" name="udisks_filesystem_btrfs_call_resize ()" link="UDisksFilesystemBTRFS.html#udisks-filesystem-btrfs-call-resize" since="2.3.0"/>
-    <keyword type="function" name="udisks_filesystem_btrfs_call_resize_finish ()" link="UDisksFilesystemBTRFS.html#udisks-filesystem-btrfs-call-resize-finish" since="2.3.0"/>
-    <keyword type="function" name="udisks_filesystem_btrfs_call_resize_sync ()" link="UDisksFilesystemBTRFS.html#udisks-filesystem-btrfs-call-resize-sync" since="2.3.0"/>
-    <keyword type="function" name="udisks_filesystem_btrfs_call_set_label ()" link="UDisksFilesystemBTRFS.html#udisks-filesystem-btrfs-call-set-label" since="2.1.3"/>
-    <keyword type="function" name="udisks_filesystem_btrfs_call_set_label_finish ()" link="UDisksFilesystemBTRFS.html#udisks-filesystem-btrfs-call-set-label-finish" since="2.1.3"/>
-    <keyword type="function" name="udisks_filesystem_btrfs_call_set_label_sync ()" link="UDisksFilesystemBTRFS.html#udisks-filesystem-btrfs-call-set-label-sync" since="2.1.3"/>
-    <keyword type="function" name="udisks_filesystem_btrfs_skeleton_new ()" link="UDisksFilesystemBTRFS.html#udisks-filesystem-btrfs-skeleton-new" since="2.1.3"/>
-    <keyword type="function" name="udisks_filesystem_btrfs_complete_add_device ()" link="UDisksFilesystemBTRFS.html#udisks-filesystem-btrfs-complete-add-device" since="2.3.0"/>
-    <keyword type="function" name="udisks_filesystem_btrfs_complete_create_snapshot ()" link="UDisksFilesystemBTRFS.html#udisks-filesystem-btrfs-complete-create-snapshot" since="2.1.3"/>
-    <keyword type="function" name="udisks_filesystem_btrfs_complete_create_subvolume ()" link="UDisksFilesystemBTRFS.html#udisks-filesystem-btrfs-complete-create-subvolume" since="2.1.3"/>
-    <keyword type="function" name="udisks_filesystem_btrfs_complete_get_subvolumes ()" link="UDisksFilesystemBTRFS.html#udisks-filesystem-btrfs-complete-get-subvolumes" since="2.1.3"/>
-    <keyword type="function" name="udisks_filesystem_btrfs_complete_remove_device ()" link="UDisksFilesystemBTRFS.html#udisks-filesystem-btrfs-complete-remove-device" since="2.3.0"/>
-    <keyword type="function" name="udisks_filesystem_btrfs_complete_remove_subvolume ()" link="UDisksFilesystemBTRFS.html#udisks-filesystem-btrfs-complete-remove-subvolume" since="2.1.3"/>
-    <keyword type="function" name="udisks_filesystem_btrfs_complete_repair ()" link="UDisksFilesystemBTRFS.html#udisks-filesystem-btrfs-complete-repair" since="2.3.0"/>
-    <keyword type="function" name="udisks_filesystem_btrfs_complete_resize ()" link="UDisksFilesystemBTRFS.html#udisks-filesystem-btrfs-complete-resize" since="2.3.0"/>
-    <keyword type="function" name="udisks_filesystem_btrfs_complete_set_label ()" link="UDisksFilesystemBTRFS.html#udisks-filesystem-btrfs-complete-set-label" since="2.1.3"/>
-    <keyword type="struct" name="UDisksFilesystemBTRFS" link="UDisksFilesystemBTRFS.html#UDisksFilesystemBTRFS-struct"/>
-    <keyword type="struct" name="struct UDisksFilesystemBTRFSProxy" link="UDisksFilesystemBTRFS.html#UDisksFilesystemBTRFSProxy-struct"/>
-    <keyword type="struct" name="struct UDisksFilesystemBTRFSProxyClass" link="UDisksFilesystemBTRFS.html#UDisksFilesystemBTRFSProxyClass" since="2.1.3"/>
-    <keyword type="struct" name="struct UDisksFilesystemBTRFSSkeleton" link="UDisksFilesystemBTRFS.html#UDisksFilesystemBTRFSSkeleton-struct"/>
-    <keyword type="struct" name="struct UDisksFilesystemBTRFSSkeletonClass" link="UDisksFilesystemBTRFS.html#UDisksFilesystemBTRFSSkeletonClass" since="2.1.3"/>
-    <keyword type="property" name="The “label” property" link="UDisksFilesystemBTRFS.html#UDisksFilesystemBTRFS--label"/>
-    <keyword type="property" name="The “num-devices” property" link="UDisksFilesystemBTRFS.html#UDisksFilesystemBTRFS--num-devices"/>
-    <keyword type="property" name="The “used” property" link="UDisksFilesystemBTRFS.html#UDisksFilesystemBTRFS--used"/>
-    <keyword type="property" name="The “uuid” property" link="UDisksFilesystemBTRFS.html#UDisksFilesystemBTRFS--uuid"/>
-    <keyword type="signal" name="The “handle-add-device” signal" link="UDisksFilesystemBTRFS.html#UDisksFilesystemBTRFS-handle-add-device"/>
-    <keyword type="signal" name="The “handle-create-snapshot” signal" link="UDisksFilesystemBTRFS.html#UDisksFilesystemBTRFS-handle-create-snapshot"/>
-    <keyword type="signal" name="The “handle-create-subvolume” signal" link="UDisksFilesystemBTRFS.html#UDisksFilesystemBTRFS-handle-create-subvolume"/>
-    <keyword type="signal" name="The “handle-get-default-subvolume-id” signal" link="UDisksFilesystemBTRFS.html#UDisksFilesystemBTRFS-handle-get-default-subvolume-id"/>
-    <keyword type="signal" name="The “handle-get-subvolumes” signal" link="UDisksFilesystemBTRFS.html#UDisksFilesystemBTRFS-handle-get-subvolumes"/>
-    <keyword type="signal" name="The “handle-remove-device” signal" link="UDisksFilesystemBTRFS.html#UDisksFilesystemBTRFS-handle-remove-device"/>
-    <keyword type="signal" name="The “handle-remove-subvolume” signal" link="UDisksFilesystemBTRFS.html#UDisksFilesystemBTRFS-handle-remove-subvolume"/>
-    <keyword type="signal" name="The “handle-repair” signal" link="UDisksFilesystemBTRFS.html#UDisksFilesystemBTRFS-handle-repair"/>
-    <keyword type="signal" name="The “handle-resize” signal" link="UDisksFilesystemBTRFS.html#UDisksFilesystemBTRFS-handle-resize"/>
-    <keyword type="signal" name="The “handle-set-default-subvolume-id” signal" link="UDisksFilesystemBTRFS.html#UDisksFilesystemBTRFS-handle-set-default-subvolume-id"/>
-    <keyword type="signal" name="The “handle-set-label” signal" link="UDisksFilesystemBTRFS.html#UDisksFilesystemBTRFS-handle-set-label"/>
+    <keyword type="function" name="udisks_manager_btrfs_proxy_new ()" link="udisks2-UDisksManagerBTRFS.html#udisks-manager-btrfs-proxy-new" since="2.1.3"/>
+    <keyword type="function" name="udisks_manager_btrfs_proxy_new_finish ()" link="udisks2-UDisksManagerBTRFS.html#udisks-manager-btrfs-proxy-new-finish" since="2.1.3"/>
+    <keyword type="function" name="udisks_manager_btrfs_proxy_new_sync ()" link="udisks2-UDisksManagerBTRFS.html#udisks-manager-btrfs-proxy-new-sync" since="2.1.3"/>
+    <keyword type="function" name="udisks_manager_btrfs_proxy_new_for_bus ()" link="udisks2-UDisksManagerBTRFS.html#udisks-manager-btrfs-proxy-new-for-bus" since="2.1.3"/>
+    <keyword type="function" name="udisks_manager_btrfs_proxy_new_for_bus_finish ()" link="udisks2-UDisksManagerBTRFS.html#udisks-manager-btrfs-proxy-new-for-bus-finish" since="2.1.3"/>
+    <keyword type="function" name="udisks_manager_btrfs_proxy_new_for_bus_sync ()" link="udisks2-UDisksManagerBTRFS.html#udisks-manager-btrfs-proxy-new-for-bus-sync" since="2.1.3"/>
+    <keyword type="function" name="udisks_manager_btrfs_call_create_volume ()" link="udisks2-UDisksManagerBTRFS.html#udisks-manager-btrfs-call-create-volume" since="2.3.0"/>
+    <keyword type="function" name="udisks_manager_btrfs_call_create_volume_finish ()" link="udisks2-UDisksManagerBTRFS.html#udisks-manager-btrfs-call-create-volume-finish" since="2.3.0"/>
+    <keyword type="function" name="udisks_manager_btrfs_call_create_volume_sync ()" link="udisks2-UDisksManagerBTRFS.html#udisks-manager-btrfs-call-create-volume-sync" since="2.3.0"/>
+    <keyword type="function" name="udisks_manager_btrfs_skeleton_new ()" link="udisks2-UDisksManagerBTRFS.html#udisks-manager-btrfs-skeleton-new" since="2.1.3"/>
+    <keyword type="function" name="udisks_manager_btrfs_complete_create_volume ()" link="udisks2-UDisksManagerBTRFS.html#udisks-manager-btrfs-complete-create-volume" since="2.3.0"/>
+    <keyword type="struct" name="UDisksManagerBTRFS" link="udisks2-UDisksManagerBTRFS.html#UDisksManagerBTRFS" since="2.1.3"/>
+    <keyword type="struct" name="struct UDisksManagerBTRFSProxy" link="udisks2-UDisksManagerBTRFS.html#UDisksManagerBTRFSProxy" since="2.1.3"/>
+    <keyword type="struct" name="struct UDisksManagerBTRFSProxyClass" link="udisks2-UDisksManagerBTRFS.html#UDisksManagerBTRFSProxyClass" since="2.1.3"/>
+    <keyword type="struct" name="struct UDisksManagerBTRFSSkeleton" link="udisks2-UDisksManagerBTRFS.html#UDisksManagerBTRFSSkeleton" since="2.1.3"/>
+    <keyword type="struct" name="struct UDisksManagerBTRFSSkeletonClass" link="udisks2-UDisksManagerBTRFS.html#UDisksManagerBTRFSSkeletonClass" since="2.1.3"/>
+    <keyword type="signal" name="The “handle-create-volume” signal" link="udisks2-UDisksManagerBTRFS.html#UDisksManagerBTRFS-handle-create-volume"/>
+    <keyword type="function" name="udisks_filesystem_btrfs_proxy_new ()" link="udisks2-UDisksFilesystemBTRFS.html#udisks-filesystem-btrfs-proxy-new" since="2.1.3"/>
+    <keyword type="function" name="udisks_filesystem_btrfs_proxy_new_finish ()" link="udisks2-UDisksFilesystemBTRFS.html#udisks-filesystem-btrfs-proxy-new-finish" since="2.1.3"/>
+    <keyword type="function" name="udisks_filesystem_btrfs_proxy_new_sync ()" link="udisks2-UDisksFilesystemBTRFS.html#udisks-filesystem-btrfs-proxy-new-sync" since="2.1.3"/>
+    <keyword type="function" name="udisks_filesystem_btrfs_proxy_new_for_bus ()" link="udisks2-UDisksFilesystemBTRFS.html#udisks-filesystem-btrfs-proxy-new-for-bus" since="2.1.3"/>
+    <keyword type="function" name="udisks_filesystem_btrfs_proxy_new_for_bus_finish ()" link="udisks2-UDisksFilesystemBTRFS.html#udisks-filesystem-btrfs-proxy-new-for-bus-finish" since="2.1.3"/>
+    <keyword type="function" name="udisks_filesystem_btrfs_proxy_new_for_bus_sync ()" link="udisks2-UDisksFilesystemBTRFS.html#udisks-filesystem-btrfs-proxy-new-for-bus-sync" since="2.1.3"/>
+    <keyword type="function" name="udisks_filesystem_btrfs_get_label ()" link="udisks2-UDisksFilesystemBTRFS.html#udisks-filesystem-btrfs-get-label" since="2.1.3"/>
+    <keyword type="function" name="udisks_filesystem_btrfs_dup_label ()" link="udisks2-UDisksFilesystemBTRFS.html#udisks-filesystem-btrfs-dup-label" since="2.1.3"/>
+    <keyword type="function" name="udisks_filesystem_btrfs_set_label ()" link="udisks2-UDisksFilesystemBTRFS.html#udisks-filesystem-btrfs-set-label" since="2.1.3"/>
+    <keyword type="function" name="udisks_filesystem_btrfs_get_uuid ()" link="udisks2-UDisksFilesystemBTRFS.html#udisks-filesystem-btrfs-get-uuid" since="2.1.3"/>
+    <keyword type="function" name="udisks_filesystem_btrfs_dup_uuid ()" link="udisks2-UDisksFilesystemBTRFS.html#udisks-filesystem-btrfs-dup-uuid" since="2.1.3"/>
+    <keyword type="function" name="udisks_filesystem_btrfs_set_uuid ()" link="udisks2-UDisksFilesystemBTRFS.html#udisks-filesystem-btrfs-set-uuid" since="2.1.3"/>
+    <keyword type="function" name="udisks_filesystem_btrfs_get_num_devices ()" link="udisks2-UDisksFilesystemBTRFS.html#udisks-filesystem-btrfs-get-num-devices" since="2.1.3"/>
+    <keyword type="function" name="udisks_filesystem_btrfs_set_num_devices ()" link="udisks2-UDisksFilesystemBTRFS.html#udisks-filesystem-btrfs-set-num-devices" since="2.1.3"/>
+    <keyword type="function" name="udisks_filesystem_btrfs_get_used ()" link="udisks2-UDisksFilesystemBTRFS.html#udisks-filesystem-btrfs-get-used" since="2.1.3"/>
+    <keyword type="function" name="udisks_filesystem_btrfs_set_used ()" link="udisks2-UDisksFilesystemBTRFS.html#udisks-filesystem-btrfs-set-used" since="2.1.3"/>
+    <keyword type="function" name="udisks_filesystem_btrfs_call_add_device ()" link="udisks2-UDisksFilesystemBTRFS.html#udisks-filesystem-btrfs-call-add-device" since="2.3.0"/>
+    <keyword type="function" name="udisks_filesystem_btrfs_call_add_device_finish ()" link="udisks2-UDisksFilesystemBTRFS.html#udisks-filesystem-btrfs-call-add-device-finish" since="2.3.0"/>
+    <keyword type="function" name="udisks_filesystem_btrfs_call_add_device_sync ()" link="udisks2-UDisksFilesystemBTRFS.html#udisks-filesystem-btrfs-call-add-device-sync" since="2.3.0"/>
+    <keyword type="function" name="udisks_filesystem_btrfs_call_create_snapshot ()" link="udisks2-UDisksFilesystemBTRFS.html#udisks-filesystem-btrfs-call-create-snapshot" since="2.1.3"/>
+    <keyword type="function" name="udisks_filesystem_btrfs_call_create_snapshot_finish ()" link="udisks2-UDisksFilesystemBTRFS.html#udisks-filesystem-btrfs-call-create-snapshot-finish" since="2.1.3"/>
+    <keyword type="function" name="udisks_filesystem_btrfs_call_create_snapshot_sync ()" link="udisks2-UDisksFilesystemBTRFS.html#udisks-filesystem-btrfs-call-create-snapshot-sync" since="2.1.3"/>
+    <keyword type="function" name="udisks_filesystem_btrfs_call_create_subvolume ()" link="udisks2-UDisksFilesystemBTRFS.html#udisks-filesystem-btrfs-call-create-subvolume" since="2.1.3"/>
+    <keyword type="function" name="udisks_filesystem_btrfs_call_create_subvolume_finish ()" link="udisks2-UDisksFilesystemBTRFS.html#udisks-filesystem-btrfs-call-create-subvolume-finish" since="2.1.3"/>
+    <keyword type="function" name="udisks_filesystem_btrfs_call_create_subvolume_sync ()" link="udisks2-UDisksFilesystemBTRFS.html#udisks-filesystem-btrfs-call-create-subvolume-sync" since="2.1.3"/>
+    <keyword type="function" name="udisks_filesystem_btrfs_call_get_subvolumes ()" link="udisks2-UDisksFilesystemBTRFS.html#udisks-filesystem-btrfs-call-get-subvolumes" since="2.1.3"/>
+    <keyword type="function" name="udisks_filesystem_btrfs_call_get_subvolumes_finish ()" link="udisks2-UDisksFilesystemBTRFS.html#udisks-filesystem-btrfs-call-get-subvolumes-finish" since="2.1.3"/>
+    <keyword type="function" name="udisks_filesystem_btrfs_call_get_subvolumes_sync ()" link="udisks2-UDisksFilesystemBTRFS.html#udisks-filesystem-btrfs-call-get-subvolumes-sync" since="2.1.3"/>
+    <keyword type="function" name="udisks_filesystem_btrfs_call_remove_device ()" link="udisks2-UDisksFilesystemBTRFS.html#udisks-filesystem-btrfs-call-remove-device" since="2.3.0"/>
+    <keyword type="function" name="udisks_filesystem_btrfs_call_remove_device_finish ()" link="udisks2-UDisksFilesystemBTRFS.html#udisks-filesystem-btrfs-call-remove-device-finish" since="2.3.0"/>
+    <keyword type="function" name="udisks_filesystem_btrfs_call_remove_device_sync ()" link="udisks2-UDisksFilesystemBTRFS.html#udisks-filesystem-btrfs-call-remove-device-sync" since="2.3.0"/>
+    <keyword type="function" name="udisks_filesystem_btrfs_call_remove_subvolume ()" link="udisks2-UDisksFilesystemBTRFS.html#udisks-filesystem-btrfs-call-remove-subvolume" since="2.1.3"/>
+    <keyword type="function" name="udisks_filesystem_btrfs_call_remove_subvolume_finish ()" link="udisks2-UDisksFilesystemBTRFS.html#udisks-filesystem-btrfs-call-remove-subvolume-finish" since="2.1.3"/>
+    <keyword type="function" name="udisks_filesystem_btrfs_call_remove_subvolume_sync ()" link="udisks2-UDisksFilesystemBTRFS.html#udisks-filesystem-btrfs-call-remove-subvolume-sync" since="2.1.3"/>
+    <keyword type="function" name="udisks_filesystem_btrfs_call_repair ()" link="udisks2-UDisksFilesystemBTRFS.html#udisks-filesystem-btrfs-call-repair" since="2.3.0"/>
+    <keyword type="function" name="udisks_filesystem_btrfs_call_repair_finish ()" link="udisks2-UDisksFilesystemBTRFS.html#udisks-filesystem-btrfs-call-repair-finish" since="2.3.0"/>
+    <keyword type="function" name="udisks_filesystem_btrfs_call_repair_sync ()" link="udisks2-UDisksFilesystemBTRFS.html#udisks-filesystem-btrfs-call-repair-sync" since="2.3.0"/>
+    <keyword type="function" name="udisks_filesystem_btrfs_call_resize ()" link="udisks2-UDisksFilesystemBTRFS.html#udisks-filesystem-btrfs-call-resize" since="2.3.0"/>
+    <keyword type="function" name="udisks_filesystem_btrfs_call_resize_finish ()" link="udisks2-UDisksFilesystemBTRFS.html#udisks-filesystem-btrfs-call-resize-finish" since="2.3.0"/>
+    <keyword type="function" name="udisks_filesystem_btrfs_call_resize_sync ()" link="udisks2-UDisksFilesystemBTRFS.html#udisks-filesystem-btrfs-call-resize-sync" since="2.3.0"/>
+    <keyword type="function" name="udisks_filesystem_btrfs_call_set_label ()" link="udisks2-UDisksFilesystemBTRFS.html#udisks-filesystem-btrfs-call-set-label" since="2.1.3"/>
+    <keyword type="function" name="udisks_filesystem_btrfs_call_set_label_finish ()" link="udisks2-UDisksFilesystemBTRFS.html#udisks-filesystem-btrfs-call-set-label-finish" since="2.1.3"/>
+    <keyword type="function" name="udisks_filesystem_btrfs_call_set_label_sync ()" link="udisks2-UDisksFilesystemBTRFS.html#udisks-filesystem-btrfs-call-set-label-sync" since="2.1.3"/>
+    <keyword type="function" name="udisks_filesystem_btrfs_skeleton_new ()" link="udisks2-UDisksFilesystemBTRFS.html#udisks-filesystem-btrfs-skeleton-new" since="2.1.3"/>
+    <keyword type="function" name="udisks_filesystem_btrfs_complete_add_device ()" link="udisks2-UDisksFilesystemBTRFS.html#udisks-filesystem-btrfs-complete-add-device" since="2.3.0"/>
+    <keyword type="function" name="udisks_filesystem_btrfs_complete_create_snapshot ()" link="udisks2-UDisksFilesystemBTRFS.html#udisks-filesystem-btrfs-complete-create-snapshot" since="2.1.3"/>
+    <keyword type="function" name="udisks_filesystem_btrfs_complete_create_subvolume ()" link="udisks2-UDisksFilesystemBTRFS.html#udisks-filesystem-btrfs-complete-create-subvolume" since="2.1.3"/>
+    <keyword type="function" name="udisks_filesystem_btrfs_complete_get_subvolumes ()" link="udisks2-UDisksFilesystemBTRFS.html#udisks-filesystem-btrfs-complete-get-subvolumes" since="2.1.3"/>
+    <keyword type="function" name="udisks_filesystem_btrfs_complete_remove_device ()" link="udisks2-UDisksFilesystemBTRFS.html#udisks-filesystem-btrfs-complete-remove-device" since="2.3.0"/>
+    <keyword type="function" name="udisks_filesystem_btrfs_complete_remove_subvolume ()" link="udisks2-UDisksFilesystemBTRFS.html#udisks-filesystem-btrfs-complete-remove-subvolume" since="2.1.3"/>
+    <keyword type="function" name="udisks_filesystem_btrfs_complete_repair ()" link="udisks2-UDisksFilesystemBTRFS.html#udisks-filesystem-btrfs-complete-repair" since="2.3.0"/>
+    <keyword type="function" name="udisks_filesystem_btrfs_complete_resize ()" link="udisks2-UDisksFilesystemBTRFS.html#udisks-filesystem-btrfs-complete-resize" since="2.3.0"/>
+    <keyword type="function" name="udisks_filesystem_btrfs_complete_set_label ()" link="udisks2-UDisksFilesystemBTRFS.html#udisks-filesystem-btrfs-complete-set-label" since="2.1.3"/>
+    <keyword type="struct" name="UDisksFilesystemBTRFS" link="udisks2-UDisksFilesystemBTRFS.html#UDisksFilesystemBTRFS" since="2.1.3"/>
+    <keyword type="struct" name="struct UDisksFilesystemBTRFSProxy" link="udisks2-UDisksFilesystemBTRFS.html#UDisksFilesystemBTRFSProxy" since="2.1.3"/>
+    <keyword type="struct" name="struct UDisksFilesystemBTRFSProxyClass" link="udisks2-UDisksFilesystemBTRFS.html#UDisksFilesystemBTRFSProxyClass" since="2.1.3"/>
+    <keyword type="struct" name="struct UDisksFilesystemBTRFSSkeleton" link="udisks2-UDisksFilesystemBTRFS.html#UDisksFilesystemBTRFSSkeleton" since="2.1.3"/>
+    <keyword type="struct" name="struct UDisksFilesystemBTRFSSkeletonClass" link="udisks2-UDisksFilesystemBTRFS.html#UDisksFilesystemBTRFSSkeletonClass" since="2.1.3"/>
+    <keyword type="property" name="The “label” property" link="udisks2-UDisksFilesystemBTRFS.html#UDisksFilesystemBTRFS--label"/>
+    <keyword type="property" name="The “num-devices” property" link="udisks2-UDisksFilesystemBTRFS.html#UDisksFilesystemBTRFS--num-devices"/>
+    <keyword type="property" name="The “used” property" link="udisks2-UDisksFilesystemBTRFS.html#UDisksFilesystemBTRFS--used"/>
+    <keyword type="property" name="The “uuid” property" link="udisks2-UDisksFilesystemBTRFS.html#UDisksFilesystemBTRFS--uuid"/>
+    <keyword type="signal" name="The “handle-add-device” signal" link="udisks2-UDisksFilesystemBTRFS.html#UDisksFilesystemBTRFS-handle-add-device"/>
+    <keyword type="signal" name="The “handle-create-snapshot” signal" link="udisks2-UDisksFilesystemBTRFS.html#UDisksFilesystemBTRFS-handle-create-snapshot"/>
+    <keyword type="signal" name="The “handle-create-subvolume” signal" link="udisks2-UDisksFilesystemBTRFS.html#UDisksFilesystemBTRFS-handle-create-subvolume"/>
+    <keyword type="signal" name="The “handle-get-default-subvolume-id” signal" link="udisks2-UDisksFilesystemBTRFS.html#UDisksFilesystemBTRFS-handle-get-default-subvolume-id"/>
+    <keyword type="signal" name="The “handle-get-subvolumes” signal" link="udisks2-UDisksFilesystemBTRFS.html#UDisksFilesystemBTRFS-handle-get-subvolumes"/>
+    <keyword type="signal" name="The “handle-remove-device” signal" link="udisks2-UDisksFilesystemBTRFS.html#UDisksFilesystemBTRFS-handle-remove-device"/>
+    <keyword type="signal" name="The “handle-remove-subvolume” signal" link="udisks2-UDisksFilesystemBTRFS.html#UDisksFilesystemBTRFS-handle-remove-subvolume"/>
+    <keyword type="signal" name="The “handle-repair” signal" link="udisks2-UDisksFilesystemBTRFS.html#UDisksFilesystemBTRFS-handle-repair"/>
+    <keyword type="signal" name="The “handle-resize” signal" link="udisks2-UDisksFilesystemBTRFS.html#UDisksFilesystemBTRFS-handle-resize"/>
+    <keyword type="signal" name="The “handle-set-default-subvolume-id” signal" link="udisks2-UDisksFilesystemBTRFS.html#UDisksFilesystemBTRFS-handle-set-default-subvolume-id"/>
+    <keyword type="signal" name="The “handle-set-label” signal" link="udisks2-UDisksFilesystemBTRFS.html#UDisksFilesystemBTRFS-handle-set-label"/>
     <keyword type="function" name="udisks_decode_udev_string ()" link="udisks2-Utilities.html#udisks-decode-udev-string"/>
     <keyword type="function" name="udisks_safe_append_to_object_path ()" link="udisks2-Utilities.html#udisks-safe-append-to-object-path"/>
     <keyword type="function" name="udisks_daemon_util_block_get_size ()" link="udisks2-Utilities.html#udisks-daemon-util-block-get-size"/>
@@ -2640,6 +2648,7 @@
     <keyword type="member" name="UDisksManagerIface.get-default-encryption-type" link="UDisksManager.html#UDisksManagerIface.get-default-encryption-type"/>
     <keyword type="member" name="UDisksManagerIface.get-supported-encryption-types" link="UDisksManager.html#UDisksManagerIface.get-supported-encryption-types"/>
     <keyword type="member" name="UDisksManagerIface.handle-enable-module" link="UDisksManager.html#UDisksManagerIface.handle-enable-module"/>
+    <keyword type="member" name="UDisksManagerIface.handle-get-drives" link="UDisksManager.html#UDisksManagerIface.handle-get-drives"/>
     <keyword type="member" name="UDisksDriveIface.parent-iface" link="UDisksDrive.html#UDisksDriveIface.parent-iface"/>
     <keyword type="member" name="UDisksDriveIface.handle-eject" link="UDisksDrive.html#UDisksDriveIface.handle-eject"/>
     <keyword type="member" name="UDisksDriveIface.handle-set-configuration" link="UDisksDrive.html#UDisksDriveIface.handle-set-configuration"/>
@@ -2838,6 +2847,7 @@
     <keyword type="member" name="UDisksLoopIface.get-autoclear" link="UDisksLoop.html#UDisksLoopIface.get-autoclear"/>
     <keyword type="member" name="UDisksLoopIface.get-backing-file" link="UDisksLoop.html#UDisksLoopIface.get-backing-file"/>
     <keyword type="member" name="UDisksLoopIface.get-setup-by-uid" link="UDisksLoop.html#UDisksLoopIface.get-setup-by-uid"/>
+    <keyword type="member" name="UDisksLoopIface.handle-set-capacity" link="UDisksLoop.html#UDisksLoopIface.handle-set-capacity"/>
     <keyword type="member" name="UDisksNVMeControllerIface.parent-iface" link="UDisksNVMeController.html#UDisksNVMeControllerIface.parent-iface"/>
     <keyword type="member" name="UDisksNVMeControllerIface.get-controller-id" link="UDisksNVMeController.html#UDisksNVMeControllerIface.get-controller-id"/>
     <keyword type="member" name="UDisksNVMeControllerIface.get-fguid" link="UDisksNVMeController.html#UDisksNVMeControllerIface.get-fguid"/>

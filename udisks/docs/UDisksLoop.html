@@ -8,7 +8,7 @@
 <link rel="up" href="ref-library-generated.html" title="Generated Code">
 <link rel="prev" href="UDisksEncrypted.html" title="UDisksEncrypted">
 <link rel="next" href="UDisksNVMeController.html" title="UDisksNVMeController">
-<meta name="generator" content="GTK-Doc V1.34.0 (XML mode)">
+<meta name="generator" content="GTK-Doc V1.35.1 (XML mode)">
 <link rel="stylesheet" href="style.css" type="text/css">
 </head>
 <body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
@@ -284,6 +284,11 @@
 <tr>
 <td class="signal_type"><span class="returnvalue">gboolean</span></td>
 <td class="signal_name"><a class="link" href="UDisksLoop.html#UDisksLoop-handle-set-autoclear" title="The “handle-set-autoclear” signal">handle-set-autoclear</a></td>
+<td class="signal_flags">Run Last</td>
+</tr>
+<tr>
+<td class="signal_type"><span class="returnvalue">gboolean</span></td>
+<td class="signal_name"><a class="link" href="UDisksLoop.html#UDisksLoop-handle-set-capacity" title="The “handle-set-capacity” signal">handle-set-capacity</a></td>
 <td class="signal_flags">Run Last</td>
 </tr>
 </tbody>
@@ -1363,6 +1368,11 @@ udisks_loop_skeleton_new (<em class="parameter"><code><span class="type">void</s
   const gchar * (*get_backing_file) (UDisksLoop *object);
 
   guint  (*get_setup_by_uid) (UDisksLoop *object);
+
+  gboolean (*handle_set_capacity) (
+    UDisksLoop *object,
+    GDBusMethodInvocation *invocation,
+    GVariant *arg_options);
 };
 </pre>
 <p>Virtual table for the D-Bus interface <a class="link" href="gdbus-org.freedesktop.UDisks2.Loop.html#gdbus-interface-org-freedesktop-UDisks2-Loop.top_of_page">org.freedesktop.UDisks2.Loop</a>.</p>
@@ -1403,6 +1413,11 @@ udisks_loop_skeleton_new (<em class="parameter"><code><span class="type">void</s
 <tr>
 <td class="struct_member_name"><p><em class="structfield"><code><a name="UDisksLoopIface.get-setup-by-uid"></a>get_setup_by_uid</code></em> ()</p></td>
 <td class="struct_member_description"><p>Getter for the <a class="link" href="UDisksLoop.html#UDisksLoop--setup-by-uid" title="The “setup-by-uid” property"><span class="type">“setup-by-uid”</span></a> property.</p></td>
+<td class="struct_member_annotations"> </td>
+</tr>
+<tr>
+<td class="struct_member_name"><p><em class="structfield"><code><a name="UDisksLoopIface.handle-set-capacity"></a>handle_set_capacity</code></em> ()</p></td>
+<td class="struct_member_description"><p>Handler for the <a class="link" href="UDisksLoop.html#UDisksLoop-handle-set-capacity" title="The “handle-set-capacity” signal"><span class="type">“handle-set-capacity”</span></a> signal.</p></td>
 <td class="struct_member_annotations"> </td>
 </tr>
 </tbody>
@@ -1599,9 +1614,59 @@ user_function (<a class="link" href="UDisksLoop.html" title="UDisksLoop"><span c
 </div>
 <p>Flags: Run Last</p>
 </div>
+<hr>
+<div class="refsect2">
+<a name="UDisksLoop-handle-set-capacity"></a><h3>The <code class="literal">“handle-set-capacity”</code> signal</h3>
+<pre class="programlisting"><span class="returnvalue">gboolean</span>
+user_function (<a class="link" href="UDisksLoop.html" title="UDisksLoop"><span class="type">UDisksLoop</span></a>            *object,
+               <span class="type">GDBusMethodInvocation</span> *invocation,
+               <span class="type">GVariant</span>              *arg_options,
+               <span class="type">gpointer</span>               user_data)</pre>
+<p>Signal emitted when a remote caller is invoking the <a class="link" href="gdbus-org.freedesktop.UDisks2.Loop.html#gdbus-method-org-freedesktop-UDisks2-Loop.SetCapacity" title="The SetCapacity() method"><code class="function">SetCapacity()</code></a> D-Bus method.</p>
+<p>If a signal handler returns <code class="literal">TRUE</code>, it means the signal handler will handle the invocation (e.g. take a reference to <em class="parameter"><code>invocation</code></em>
+ and eventually call <code class="function">udisks_loop_complete_set_capacity()</code> or e.g. <code class="function">g_dbus_method_invocation_return_error()</code> on it) and no other signal handlers will run. If no signal handler handles the invocation, the <code class="literal">G_DBUS_ERROR_UNKNOWN_METHOD</code> error is returned.</p>
+<div class="refsect3">
+<a name="UDisksLoop-handle-set-capacity.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>object</p></td>
+<td class="parameter_description"><p>A <a class="link" href="UDisksLoop.html" title="UDisksLoop"><span class="type">UDisksLoop</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>invocation</p></td>
+<td class="parameter_description"><p>A <span class="type">GDBusMethodInvocation</span>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>arg_options</p></td>
+<td class="parameter_description"><p>Argument passed by remote caller.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>user_data</p></td>
+<td class="parameter_description"><p>user data set when the signal handler was connected.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="UDisksLoop-handle-set-capacity.returns"></a><h4>Returns</h4>
+<p> <code class="literal">G_DBUS_METHOD_INVOCATION_HANDLED</code> or <code class="literal">TRUE</code> if the invocation was handled, <code class="literal">G_DBUS_METHOD_INVOCATION_UNHANDLED</code> or <code class="literal">FALSE</code> to let other signal handlers run.</p>
+</div>
+<p>Flags: Run Last</p>
+<p class="since">Since: <a class="link" href="api-index-2.11.0.html" title="Index of new symbols in 2.11.0">2.11.0</a></p>
+</div>
 </div>
 </div>
 <div class="footer">
-<hr>Generated by GTK-Doc V1.34.0</div>
+<hr>Generated by GTK-Doc V1.35.1</div>
 </body>
 </html>

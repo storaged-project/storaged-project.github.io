@@ -8,7 +8,7 @@
 <link rel="up" href="ref-daemon-core.html" title="Core">
 <link rel="prev" href="udisks2-Logging.html" title="Logging">
 <link rel="next" href="UDisksProvider.html" title="UDisksProvider">
-<meta name="generator" content="GTK-Doc V1.34.0 (XML mode)">
+<meta name="generator" content="GTK-Doc V1.35.1 (XML mode)">
 <link rel="stylesheet" href="style.css" type="text/css">
 </head>
 <body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
@@ -1152,6 +1152,7 @@ udisks_daemon_launch_simple_job (<em class="parameter"><code><a class="link" hre
                                  <em class="parameter"><code><a class="link" href="UDisksObject.html" title="UDisksObject"><span class="type">UDisksObject</span></a> *object</code></em>,
                                  <em class="parameter"><code>const <span class="type">gchar</span> *job_operation</code></em>,
                                  <em class="parameter"><code><span class="type">uid_t</span> job_started_by_uid</code></em>,
+                                 <em class="parameter"><code><span class="type">gboolean</span> no_inhibit</code></em>,
                                  <em class="parameter"><code><span class="type">GCancellable</span> *cancellable</code></em>);</pre>
 <p>Launches a new simple job.</p>
 <p>The returned object will be exported on the bus until the
@@ -1187,6 +1188,11 @@ valid to use the returned object after this signal fires.</p>
 <td class="parameter_annotations"> </td>
 </tr>
 <tr>
+<td class="parameter_name"><p>no_inhibit</p></td>
+<td class="parameter_description"><p>Avoid placing system inhibitor lock.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
 <td class="parameter_name"><p>cancellable</p></td>
 <td class="parameter_description"><p>A <span class="type">GCancellable</span> or <code class="literal">NULL</code>.</p></td>
 <td class="parameter_annotations"> </td>
@@ -1209,6 +1215,7 @@ udisks_daemon_launch_spawned_job (<em class="parameter"><code><a class="link" hr
                                   <em class="parameter"><code><a class="link" href="UDisksObject.html" title="UDisksObject"><span class="type">UDisksObject</span></a> *object</code></em>,
                                   <em class="parameter"><code>const <span class="type">gchar</span> *job_operation</code></em>,
                                   <em class="parameter"><code><span class="type">uid_t</span> job_started_by_uid</code></em>,
+                                  <em class="parameter"><code><span class="type">gboolean</span> no_inhibit</code></em>,
                                   <em class="parameter"><code><span class="type">GCancellable</span> *cancellable</code></em>,
                                   <em class="parameter"><code><span class="type">uid_t</span> run_as_uid</code></em>,
                                   <em class="parameter"><code><span class="type">uid_t</span> run_as_euid</code></em>,
@@ -1253,6 +1260,11 @@ valid to use the returned object after this signal fires.</p>
 <tr>
 <td class="parameter_name"><p>job_started_by_uid</p></td>
 <td class="parameter_description"><p>The user who started the job.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>no_inhibit</p></td>
+<td class="parameter_description"><p>Avoid placing system inhibitor lock.</p></td>
 <td class="parameter_annotations"> </td>
 </tr>
 <tr>
@@ -1304,6 +1316,7 @@ udisks_daemon_launch_spawned_job_sync (<em class="parameter"><code><a class="lin
                                        <em class="parameter"><code><a class="link" href="UDisksObject.html" title="UDisksObject"><span class="type">UDisksObject</span></a> *object</code></em>,
                                        <em class="parameter"><code>const <span class="type">gchar</span> *job_operation</code></em>,
                                        <em class="parameter"><code><span class="type">uid_t</span> job_started_by_uid</code></em>,
+                                       <em class="parameter"><code><span class="type">gboolean</span> no_inhibit</code></em>,
                                        <em class="parameter"><code><span class="type">GCancellable</span> *cancellable</code></em>,
                                        <em class="parameter"><code><span class="type">uid_t</span> run_as_uid</code></em>,
                                        <em class="parameter"><code><span class="type">uid_t</span> run_as_euid</code></em>,
@@ -1341,6 +1354,11 @@ thread until the job completes.</p>
 <tr>
 <td class="parameter_name"><p>job_started_by_uid</p></td>
 <td class="parameter_description"><p>The user who started the job.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>no_inhibit</p></td>
+<td class="parameter_description"><p>Avoid placing system inhibitor lock.</p></td>
 <td class="parameter_annotations"> </td>
 </tr>
 <tr>
@@ -1404,6 +1422,7 @@ udisks_daemon_launch_spawned_job_gstring
                                 <em class="parameter"><code><a class="link" href="UDisksObject.html" title="UDisksObject"><span class="type">UDisksObject</span></a> *object</code></em>,
                                 <em class="parameter"><code>const <span class="type">gchar</span> *job_operation</code></em>,
                                 <em class="parameter"><code><span class="type">uid_t</span> job_started_by_uid</code></em>,
+                                <em class="parameter"><code><span class="type">gboolean</span> no_inhibit</code></em>,
                                 <em class="parameter"><code><span class="type">GCancellable</span> *cancellable</code></em>,
                                 <em class="parameter"><code><span class="type">uid_t</span> run_as_uid</code></em>,
                                 <em class="parameter"><code><span class="type">uid_t</span> run_as_euid</code></em>,
@@ -1451,6 +1470,11 @@ handle binary inputs that contain '\0' bytes.</p>
 <tr>
 <td class="parameter_name"><p>job_started_by_uid</p></td>
 <td class="parameter_description"><p>The user who started the job.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>no_inhibit</p></td>
+<td class="parameter_description"><p>Avoid placing system inhibitor lock.</p></td>
 <td class="parameter_annotations"> </td>
 </tr>
 <tr>
@@ -1503,6 +1527,7 @@ udisks_daemon_launch_spawned_job_gstring_sync
                                 <em class="parameter"><code><a class="link" href="UDisksObject.html" title="UDisksObject"><span class="type">UDisksObject</span></a> *object</code></em>,
                                 <em class="parameter"><code>const <span class="type">gchar</span> *job_operation</code></em>,
                                 <em class="parameter"><code><span class="type">uid_t</span> job_started_by_uid</code></em>,
+                                <em class="parameter"><code><span class="type">gboolean</span> no_inhibit</code></em>,
                                 <em class="parameter"><code><span class="type">GCancellable</span> *cancellable</code></em>,
                                 <em class="parameter"><code><span class="type">uid_t</span> run_as_uid</code></em>,
                                 <em class="parameter"><code><span class="type">uid_t</span> run_as_euid</code></em>,
@@ -1543,6 +1568,11 @@ handle binary inputs that contain '\0' bytes.</p>
 <tr>
 <td class="parameter_name"><p>job_started_by_uid</p></td>
 <td class="parameter_description"><p>The user who started the job.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>no_inhibit</p></td>
+<td class="parameter_description"><p>Avoid placing system inhibitor lock.</p></td>
 <td class="parameter_annotations"> </td>
 </tr>
 <tr>
@@ -1605,6 +1635,7 @@ udisks_daemon_launch_threaded_job (<em class="parameter"><code><a class="link" h
                                    <em class="parameter"><code><a class="link" href="UDisksObject.html" title="UDisksObject"><span class="type">UDisksObject</span></a> *object</code></em>,
                                    <em class="parameter"><code>const <span class="type">gchar</span> *job_operation</code></em>,
                                    <em class="parameter"><code><span class="type">uid_t</span> job_started_by_uid</code></em>,
+                                   <em class="parameter"><code><span class="type">gboolean</span> no_inhibit</code></em>,
                                    <em class="parameter"><code><a class="link" href="UDisksThreadedJob.html#UDisksThreadedJobFunc" title="UDisksThreadedJobFunc ()"><span class="type">UDisksThreadedJobFunc</span></a> job_func</code></em>,
                                    <em class="parameter"><code><span class="type">gpointer</span> user_data</code></em>,
                                    <em class="parameter"><code><span class="type">GDestroyNotify</span> user_data_free_func</code></em>,
@@ -1654,6 +1685,11 @@ valid to use the returned object after this signal fires.</p>
 <td class="parameter_annotations"> </td>
 </tr>
 <tr>
+<td class="parameter_name"><p>no_inhibit</p></td>
+<td class="parameter_description"><p>Avoid placing system inhibitor lock.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
 <td class="parameter_name"><p>job_func</p></td>
 <td class="parameter_description"><p>The function to run in another thread.</p></td>
 <td class="parameter_annotations"> </td>
@@ -1694,6 +1730,7 @@ udisks_daemon_launch_threaded_job_sync
                                 <em class="parameter"><code><a class="link" href="UDisksObject.html" title="UDisksObject"><span class="type">UDisksObject</span></a> *object</code></em>,
                                 <em class="parameter"><code>const <span class="type">gchar</span> *job_operation</code></em>,
                                 <em class="parameter"><code><span class="type">uid_t</span> job_started_by_uid</code></em>,
+                                <em class="parameter"><code><span class="type">gboolean</span> no_inhibit</code></em>,
                                 <em class="parameter"><code><a class="link" href="UDisksThreadedJob.html#UDisksThreadedJobFunc" title="UDisksThreadedJobFunc ()"><span class="type">UDisksThreadedJobFunc</span></a> job_func</code></em>,
                                 <em class="parameter"><code><span class="type">gpointer</span> user_data</code></em>,
                                 <em class="parameter"><code><span class="type">GDestroyNotify</span> user_data_free_func</code></em>,
@@ -1728,6 +1765,11 @@ thread until the job completes.</p>
 <tr>
 <td class="parameter_name"><p>job_started_by_uid</p></td>
 <td class="parameter_description"><p>The user who started the job.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>no_inhibit</p></td>
+<td class="parameter_description"><p>Avoid placing system inhibitor lock.</p></td>
 <td class="parameter_annotations"> </td>
 </tr>
 <tr>
@@ -1884,6 +1926,6 @@ only be accessed using the provided API.</p>
 </div>
 </div>
 <div class="footer">
-<hr>Generated by GTK-Doc V1.34.0</div>
+<hr>Generated by GTK-Doc V1.35.1</div>
 </body>
 </html>
