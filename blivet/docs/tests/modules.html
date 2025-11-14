@@ -5,11 +5,11 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>tests &#8212; Blivet 3.12.0 documentation</title>
+    <title>tests &#8212; Blivet 3.13.0 documentation</title>
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=fa44fd50" />
     <link rel="stylesheet" type="text/css" href="../_static/classic.css?v=def86cc0" />
     
-    <script src="../_static/documentation_options.js?v=1b7a0a1e"></script>
+    <script src="../_static/documentation_options.js?v=6aaf4047"></script>
     <script src="../_static/doctools.js?v=9a2dae69"></script>
     <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
     
@@ -25,7 +25,7 @@
         <li class="right" >
           <a href="../py-modindex.html" title="Python Module Index"
              >modules</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../index.html">Blivet 3.12.0 documentation</a> &#187;</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">Blivet 3.13.0 documentation</a> &#187;</li>
         <li class="nav-item nav-item-this"><a href="">tests</a></li> 
       </ul>
     </div>  
@@ -72,9 +72,10 @@
 </li>
 <li class="toctree-l2"><a class="reference internal" href="storage_tests.html#submodules">Submodules</a></li>
 <li class="toctree-l2"><a class="reference internal" href="storage_tests.html#storage-tests-fstab-test-module">storage_tests.fstab_test module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="storage_tests.html#storage-tests-imagebackedtestcase-module">storage_tests.imagebackedtestcase module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="storage_tests.html#storage-tests-gpt-test-module">storage_tests.gpt_test module</a></li>
 <li class="toctree-l2"><a class="reference internal" href="storage_tests.html#storage-tests-iscsi-test-module">storage_tests.iscsi_test module</a></li>
 <li class="toctree-l2"><a class="reference internal" href="storage_tests.html#storage-tests-partitioning-test-module">storage_tests.partitioning_test module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="storage_tests.html#storage-tests-reset-test-module">storage_tests.reset_test module</a></li>
 <li class="toctree-l2"><a class="reference internal" href="storage_tests.html#storage-tests-storagetestcase-module">storage_tests.storagetestcase module</a></li>
 <li class="toctree-l2"><a class="reference internal" href="storage_tests.html#storage-tests-unsupported-disklabel-test-module">storage_tests.unsupported_disklabel_test module</a></li>
 <li class="toctree-l2"><a class="reference internal" href="storage_tests.html#module-contents">Module contents</a></li>
@@ -145,6 +146,7 @@
 <li class="toctree-l2"><a class="reference internal" href="unit_tests.html#unit-tests-misc-test-module">unit_tests.misc_test module</a></li>
 <li class="toctree-l2"><a class="reference internal" href="unit_tests.html#unit-tests-nvme-test-module">unit_tests.nvme_test module</a></li>
 <li class="toctree-l2"><a class="reference internal" href="unit_tests.html#unit-tests-parentlist-test-module">unit_tests.parentlist_test module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="unit_tests.html#unit-tests-partitioning-test-module">unit_tests.partitioning_test module</a></li>
 <li class="toctree-l2"><a class="reference internal" href="unit_tests.html#unit-tests-populator-test-module">unit_tests.populator_test module</a></li>
 <li class="toctree-l2"><a class="reference internal" href="unit_tests.html#unit-tests-size-test-module">unit_tests.size_test module</a></li>
 <li class="toctree-l2"><a class="reference internal" href="unit_tests.html#unit-tests-tags-test-module">unit_tests.tags_test module</a></li>
@@ -153,15 +155,6 @@
 <li class="toctree-l2"><a class="reference internal" href="unit_tests.html#unit-tests-udev-test-module">unit_tests.udev_test module</a></li>
 <li class="toctree-l2"><a class="reference internal" href="unit_tests.html#unit-tests-util-test-module">unit_tests.util_test module</a></li>
 <li class="toctree-l2"><a class="reference internal" href="unit_tests.html#module-contents">Module contents</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="vmtests.html">vmtests package</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="vmtests.html#submodules">Submodules</a></li>
-<li class="toctree-l2"><a class="reference internal" href="vmtests.html#vmtests-blivet-reset-vmtest-module">vmtests.blivet_reset_vmtest module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="vmtests.html#vmtests-gpt-test-module">vmtests.gpt_test module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="vmtests.html#vmtests-runvmtests-module">vmtests.runvmtests module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="vmtests.html#vmtests-vmbackedtestcase-module">vmtests.vmbackedtestcase module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="vmtests.html#module-contents">Module contents</a></li>
 </ul>
 </li>
 </ul>
@@ -205,7 +198,7 @@
         <li class="right" >
           <a href="../py-modindex.html" title="Python Module Index"
              >modules</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../index.html">Blivet 3.12.0 documentation</a> &#187;</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">Blivet 3.13.0 documentation</a> &#187;</li>
         <li class="nav-item nav-item-this"><a href="">tests</a></li> 
       </ul>
     </div>
