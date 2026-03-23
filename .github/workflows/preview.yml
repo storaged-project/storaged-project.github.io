@@ -1,0 +1,44 @@
+name: HTML preview
+
+on:
+  pull_request:
+    branches: [master]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout the repository
+        uses: actions/checkout@v4
+
+      - name: Setup Ruby
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: '3.4'
+          bundler-cache: true
+
+      - name: Build the site
+        run: bundle exec jekyll build
+
+      - name: Upload the site as artifact
+        id: upload
+        uses: actions/upload-artifact@v4
+        with:
+          name: preview
+          path: _site/
+          retention-days: 7
+
+      - name: Print preview instructions
+        run: |
+          echo ""
+          echo "=== Site Preview ==="
+          echo ""
+          echo "Option 1: Using gh CLI (download, extract, and serve):"
+          echo "  rm -rf /tmp/site-preview && gh run download ${{ github.run_id }} -n preview -D /tmp/site-preview -R ${{ github.repository }} && (sleep 1 && python3 -m webbrowser http://localhost:8000) & python3 -m http.server -d /tmp/site-preview 8000"
+          echo ""
+          echo "Option 2: Manual download from:"
+          echo "  https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}/artifacts/${{ steps.upload.outputs.artifact-id }}"
+          echo ""
+          echo "  Then extract and serve:"
+          echo "  unzip -o preview.zip -d /tmp/site-preview && (sleep 1 && python3 -m webbrowser http://localhost:8000) & python3 -m http.server -d /tmp/site-preview 8000"
+          echo ""
