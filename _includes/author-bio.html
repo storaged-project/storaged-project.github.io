@@ -1,0 +1,13 @@
+{% if page.author %}
+  {% assign author = site.data.authors[page.author] %}
+  {% if author %}
+  <div class="author-bio">
+    <img class="author-bio-avatar" src="https://github.com/{{ author.github }}.png?size=80" alt="{{ author.name }}" />
+    <div class="author-bio-text">
+      <strong>{{ author.name }}</strong>
+      <p>{{ author.bio }}</p>
+      <a href="https://github.com/{{ author.github }}">GitHub</a>
+    </div>
+  </div>
+  {% endif %}
+{% endif %}
