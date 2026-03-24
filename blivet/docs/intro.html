@@ -5,11 +5,11 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Introduction to Blivet &#8212; Blivet 3.13.1 documentation</title>
-    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=fa44fd50" />
+    <title>Introduction to Blivet &#8212; Blivet 3.13.2 documentation</title>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=03e43079" />
     <link rel="stylesheet" type="text/css" href="_static/classic.css?v=2bf1fcf8" />
     
-    <script src="_static/documentation_options.js?v=ced7c45e"></script>
+    <script src="_static/documentation_options.js?v=f92f4e34"></script>
     <script src="_static/doctools.js?v=9bcbadda"></script>
     <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
     
@@ -33,7 +33,7 @@
         <li class="right" >
           <a href="index.html" title="Welcome to Blivet’s documentation!"
              accesskey="P">previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="index.html">Blivet 3.13.1 documentation</a> &#187;</li>
+        <li class="nav-item nav-item-0"><a href="index.html">Blivet 3.13.2 documentation</a> &#187;</li>
         <li class="nav-item nav-item-this"><a href="">Introduction to Blivet</a></li> 
       </ul>
     </div>  
@@ -95,7 +95,7 @@ that build upon a device (<a class="reference internal" href="blivet/blivet.html
 <section id="first-steps">
 <h3>First Steps<a class="headerlink" href="#first-steps" title="Link to this heading">¶</a></h3>
 <p>First, create an instance of the <a class="reference internal" href="blivet/blivet.html#blivet.blivet.Blivet" title="blivet.blivet.Blivet"><code class="xref py py-class docutils literal notranslate"><span class="pre">Blivet</span></code></a> class:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">blivet</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">blivet</span>
 <span class="n">b</span> <span class="o">=</span> <span class="n">blivet</span><span class="o">.</span><span class="n">Blivet</span><span class="p">()</span>
 </pre></div>
 </div>
@@ -130,7 +130,7 @@ following line:</p>
 <p>That’s it. Now you have actually removed /dev/sda3 from the disk.</p>
 <p>Here’s an alternative approach that uses the lower-level
 <a class="reference internal" href="blivet/blivet.html#blivet.devicetree.DeviceTree" title="blivet.devicetree.DeviceTree"><code class="xref py py-class docutils literal notranslate"><span class="pre">DeviceTree</span></code></a> class directly:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">blivet</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">blivet</span>
 <span class="n">dt</span> <span class="o">=</span> <span class="n">blivet</span><span class="o">.</span><span class="n">devicetree</span><span class="o">.</span><span class="n">DeviceTree</span><span class="p">()</span>
 <span class="n">dt</span><span class="o">.</span><span class="n">populate</span><span class="p">()</span>
 <span class="n">sda3</span> <span class="o">=</span> <span class="n">dt</span><span class="o">.</span><span class="n">get_device_by_name</span><span class="p">(</span><span class="s2">&quot;sda3&quot;</span><span class="p">)</span>
@@ -142,7 +142,7 @@ following line:</p>
 </pre></div>
 </div>
 <p>Here’s the Blivet approach again for comparison:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">blivet</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">blivet</span>
 <span class="n">b</span> <span class="o">=</span> <span class="n">blivet</span><span class="o">.</span><span class="n">Blivet</span><span class="p">()</span> <span class="c1"># contains a DeviceTree instance</span>
 <span class="n">b</span><span class="o">.</span><span class="n">reset</span><span class="p">()</span>   <span class="c1"># calls DeviceTree.populate()</span>
 <span class="n">sda3</span> <span class="o">=</span> <span class="n">b</span><span class="o">.</span><span class="n">devicetree</span><span class="o">.</span><span class="n">get_device_by_name</span><span class="p">(</span><span class="s2">&quot;sda3&quot;</span><span class="p">)</span>
@@ -154,8 +154,8 @@ following line:</p>
 <section id="scheduling-a-series-of-actions">
 <h3>Scheduling a Series of Actions<a class="headerlink" href="#scheduling-a-series-of-actions" title="Link to this heading">¶</a></h3>
 <p>Start out as before:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">blivet</span>
-<span class="kn">from</span> <span class="nn">blivet.size</span> <span class="kn">import</span> <span class="n">Size</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">blivet</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">blivet.size</span><span class="w"> </span><span class="kn">import</span> <span class="n">Size</span>
 <span class="n">b</span> <span class="o">=</span> <span class="n">blivet</span><span class="o">.</span><span class="n">Blivet</span><span class="p">()</span>
 <span class="n">b</span><span class="o">.</span><span class="n">reset</span><span class="p">()</span>
 <span class="n">sda3</span> <span class="o">=</span> <span class="n">b</span><span class="o">.</span><span class="n">devicetree</span><span class="o">.</span><span class="n">get_device_by_name</span><span class="p">(</span><span class="s2">&quot;sda3&quot;</span><span class="p">)</span>
@@ -293,13 +293,13 @@ from which to allocate the partition:</p>
         <li class="right" >
           <a href="index.html" title="Welcome to Blivet’s documentation!"
              >previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="index.html">Blivet 3.13.1 documentation</a> &#187;</li>
+        <li class="nav-item nav-item-0"><a href="index.html">Blivet 3.13.2 documentation</a> &#187;</li>
         <li class="nav-item nav-item-this"><a href="">Introduction to Blivet</a></li> 
       </ul>
     </div>
     <div class="footer" role="contentinfo">
     &#169; Copyright 2013-2025, Red Hat, Inc..
-      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 8.1.3.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 8.2.3.
     </div>
   </body>
 </html>
