@@ -1,14 +1,11 @@
 Vojtech Trefny:
   name: Vojtech Trefny
-  bio: Software engineer working on storage management tools for Linux.
+  bio: Senior Software Engineer at Red Hat working on blivet, libblockdev,
+       storage role and other storaged projects.
   github: vojtechtrefny
 
 Tomáš Bžatek:
   name: Tomáš Bžatek
-  bio: Software engineer working on storage management tools for Linux.
+  bio: Senior Software Engineer at Red Hat working on UDisks, NVMe and other
+       storage tools and technologies.
   github: tbzatek
-
-Jan Pokorny:
-  name: Jan Pokorny
-  bio: Software engineer working on storage management tools for Linux.
-  github: japokorn
