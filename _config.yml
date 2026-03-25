@@ -29,3 +29,4 @@ include:
 
 exclude:
   - README.md
+  - vendor
