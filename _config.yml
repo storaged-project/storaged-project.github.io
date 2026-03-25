@@ -11,6 +11,7 @@ show_excerpts: true
 
 github_username:  storaged-project
 rss: rss
+goatcounter: storaged
 
 header_pages:
   - blivet/blivet.md
