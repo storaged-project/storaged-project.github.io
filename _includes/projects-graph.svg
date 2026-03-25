@@ -1,0 +1,70 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 840 340" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif" font-size="13" role="img" aria-label="Diagram showing relationships between Storaged projects and external projects that use them">
+  <title>Storaged Project relationships</title>
+  <defs>
+    <marker id="arrow" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L8,3 L0,6" fill="#999" />
+    </marker>
+  </defs>
+
+  <!-- Arrows (uses / depends on) -->
+  <g stroke="#999" stroke-width="1.5" fill="none" marker-end="url(#arrow)">
+    <!-- External → Internal -->
+    <line x1="100" y1="68" x2="245" y2="140" />
+    <line x1="250" y1="68" x2="258" y2="140" />
+    <line x1="600" y1="68" x2="612" y2="140" />
+    <line x1="750" y1="68" x2="640" y2="140" />
+    <!-- blivet-gui → blivet -->
+    <line x1="420" y1="68" x2="275" y2="140" />
+    <!-- blivet → udisks -->
+    <line x1="305" y1="160" x2="573" y2="160" />
+    <!-- blivet → libblockdev -->
+    <line x1="275" y1="178" x2="510" y2="250" />
+    <!-- blivet → libbytesize -->
+    <line x1="245" y1="178" x2="360" y2="250" />
+    <!-- udisks → libblockdev -->
+    <line x1="620" y1="178" x2="550" y2="250" />
+    <!-- libblockdev → libbytesize -->
+    <line x1="465" y1="270" x2="427" y2="270" />
+  </g>
+
+  <!-- External projects (gray) -->
+  <g>
+    <rect x="45" y="32" width="110" height="36" rx="6" fill="#6c757d" />
+    <text x="100" y="55" text-anchor="middle" fill="white" font-weight="500">Anaconda</text>
+
+    <rect x="190" y="32" width="120" height="36" rx="6" fill="#6c757d" />
+    <text x="250" y="55" text-anchor="middle" fill="white" font-weight="500">Storage Role</text>
+
+    <rect x="545" y="32" width="110" height="36" rx="6" fill="#6c757d" />
+    <text x="600" y="55" text-anchor="middle" fill="white" font-weight="500">Cockpit</text>
+
+    <rect x="685" y="32" width="130" height="36" rx="6" fill="#6c757d" />
+    <text x="750" y="55" text-anchor="middle" fill="white" font-weight="500">GNOME Disks</text>
+  </g>
+
+  <!-- Internal projects (blue) -->
+  <g>
+    <rect x="365" y="32" width="110" height="36" rx="6" fill="#3572A5" />
+    <text x="420" y="55" text-anchor="middle" fill="white" font-weight="500">blivet-gui</text>
+
+    <rect x="215" y="142" width="90" height="36" rx="6" fill="#3572A5" />
+    <text x="260" y="165" text-anchor="middle" fill="white" font-weight="500">blivet</text>
+
+    <rect x="575" y="142" width="90" height="36" rx="6" fill="#3572A5" />
+    <text x="620" y="165" text-anchor="middle" fill="white" font-weight="500">UDisks</text>
+
+    <rect x="465" y="252" width="130" height="36" rx="6" fill="#3572A5" />
+    <text x="530" y="275" text-anchor="middle" fill="white" font-weight="500">libblockdev</text>
+
+    <rect x="295" y="252" width="130" height="36" rx="6" fill="#3572A5" />
+    <text x="360" y="275" text-anchor="middle" fill="white" font-weight="500">libbytesize</text>
+  </g>
+
+  <!-- Legend -->
+  <g transform="translate(270, 312)">
+    <rect x="0" y="0" width="14" height="14" rx="3" fill="#3572A5" />
+    <text x="20" y="12" fill="#333" font-size="12">Storaged projects</text>
+    <rect x="160" y="0" width="14" height="14" rx="3" fill="#6c757d" />
+    <text x="180" y="12" fill="#333" font-size="12">External projects</text>
+  </g>
+</svg>
