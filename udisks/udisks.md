@@ -18,7 +18,7 @@ UDisks provides multiple tools and libraries for storage configuration and manip
     A wrapper around UDisks DBus API allowing to use UDisks functionality directly from C or Python.
     libudisks is used for example by GNOME Disks.
 
- * **udiskctl**
+ * **udisksctl**
 
     A command line tool for storage manipulation. Allows for example (un)mounting of filesystems, (un)locking of encrypted devices, monitoring of storage events etc.
 
