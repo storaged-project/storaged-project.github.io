@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 840 340" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif" font-size="13" role="img" aria-label="Diagram showing relationships between Storaged projects and external projects that use them">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 950 340" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif" font-size="13" role="img" aria-label="Diagram showing relationships between Storaged projects and external projects that use them">
   <title>Storaged Project relationships</title>
   <defs>
     <marker id="arrow" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
@@ -13,6 +13,7 @@
     <line x1="250" y1="68" x2="258" y2="140" />
     <line x1="600" y1="68" x2="612" y2="140" />
     <line x1="750" y1="68" x2="640" y2="140" />
+    <line x1="870" y1="68" x2="655" y2="140" />
     <!-- blivet-gui → blivet -->
     <line x1="420" y1="68" x2="275" y2="140" />
     <!-- blivet → udisks -->
@@ -40,6 +41,9 @@
 
     <rect x="685" y="32" width="130" height="36" rx="6" fill="#6c757d" />
     <text x="750" y="55" text-anchor="middle" fill="white" font-weight="500">GNOME Disks</text>
+
+    <rect x="835" y="32" width="70" height="36" rx="6" fill="#6c757d" />
+    <text x="870" y="55" text-anchor="middle" fill="white" font-weight="500">GVfs</text>
   </g>
 
   <!-- Internal projects (blue) -->
@@ -61,7 +65,7 @@
   </g>
 
   <!-- Legend -->
-  <g transform="translate(270, 312)">
+  <g transform="translate(325, 312)">
     <rect x="0" y="0" width="14" height="14" rx="3" fill="#3572A5" />
     <text x="20" y="12" fill="#333" font-size="12">Storaged projects</text>
     <rect x="160" y="0" width="14" height="14" rx="3" fill="#6c757d" />
