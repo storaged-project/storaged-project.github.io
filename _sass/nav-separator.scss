@@ -1,0 +1,15 @@
+.nav-separator {
+  display: inline-block;
+  width: 1px;
+  height: 1.2em;
+  background-color: $grey-color-light;
+  vertical-align: middle;
+  margin: 0 10px 0 0;
+
+  @include media-query($on-palm) {
+    display: block;
+    width: auto;
+    height: 1px;
+    margin: 5px 10px 5px 20px;
+  }
+}

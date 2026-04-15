@@ -6,11 +6,13 @@ description: >-
 theme: minima
 plugins:
   - jekyll-feed
+  - jekyll-sitemap
 
 show_excerpts: true
 
 github_username:  storaged-project
 rss: rss
+goatcounter: storaged
 
 header_pages:
   - blivet/blivet.md
@@ -24,3 +26,7 @@ markdown: kramdown
 include:
   - _static
   - _*.html
+
+exclude:
+  - README.md
+  - vendor
