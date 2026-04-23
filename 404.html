@@ -23,3 +23,10 @@ layout: page
   <p><strong>Page not found :(</strong></p>
   <p>The requested page could not be found.</p>
 </div>
+
+{%- if site.goatcounter -%}
+<script>
+  window.goatcounter = window.goatcounter || {};
+  window.goatcounter.path = '/404 - ' + location.pathname + location.search;
+</script>
+{%- endif -%}
