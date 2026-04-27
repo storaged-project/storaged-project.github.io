@@ -2,13 +2,13 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>NVMe: libblockdev Reference Manual for libblockdev 3.4.0.</title>
+<title>NVMe: libblockdev Reference Manual for libblockdev 3.5.0.</title>
 <meta name="generator" content="DocBook XSL Stylesheets Vsnapshot">
-<link rel="home" href="index.html" title="libblockdev Reference Manual for libblockdev 3.4.0.">
+<link rel="home" href="index.html" title="libblockdev Reference Manual for libblockdev 3.5.0.">
 <link rel="up" href="ch01.html" title="libblockdev Reference Manual">
 <link rel="prev" href="libblockdev-NVDIMM.html" title="NVDIMM">
 <link rel="next" href="libblockdev-Plugins.html" title="Plugins">
-<meta name="generator" content="GTK-Doc V1.34.0 (XML mode)">
+<meta name="generator" content="GTK-Doc V1.36.1 (XML mode)">
 <link rel="stylesheet" href="style.css" type="text/css">
 </head>
 <body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
@@ -348,6 +348,14 @@
 </td>
 <td class="function_name">
 <a class="link" href="libblockdev-NVMe.html#bd-nvme-find-ctrls-for-ns" title="bd_nvme_find_ctrls_for_ns ()">bd_nvme_find_ctrls_for_ns</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">gchar</span> **
+</td>
+<td class="function_name">
+<a class="link" href="libblockdev-NVMe.html#bd-nvme-find-namespaces-for-ctrl" title="bd_nvme_find_namespaces_for_ctrl ()">bd_nvme_find_namespaces_for_ctrl</a> <span class="c_punctuation">()</span>
 </td>
 </tr>
 </tbody>
@@ -1402,7 +1410,7 @@ mode.</p>
 </div>
 <div class="refsect3">
 <a name="bd-nvme-sanitize.returns"></a><h4>Returns</h4>
-<p> <code class="literal">TRUE</code> if the format command finished successfully, <code class="literal">FALSE</code> otherwise with <em class="parameter"><code>error</code></em>
+<p> <code class="literal">TRUE</code> if the sanitize command was successfully submitted, <code class="literal">FALSE</code> otherwise with <em class="parameter"><code>error</code></em>
 set.</p>
 <p>Tech category: <a class="link" href="libblockdev-NVMe.html#BD-NVME-TECH-NVME:CAPS"><code class="literal">BD_NVME_TECH_NVME</code></a>-<a class="link" href="libblockdev-NVMe.html#BD-NVME-TECH-MODE-MANAGE:CAPS"><code class="literal">BD_NVME_TECH_MODE_MANAGE</code></a></p>
 </div>
@@ -1663,7 +1671,7 @@ Any <em class="parameter"><code>extra</code></em>
 </tr>
 <tr>
 <td class="parameter_name"><p>transport_svcid</p></td>
-<td class="parameter_description"><p>The transport service ID.  For transports using IP addressing (e.g. <code class="literal">tcp</code>, <code class="literal">rdma</code>) this field is the port number. The default port number for the <code class="literal">tcp</code> and <code class="literal">rdma</code> transports is <code class="literal">4420</code> and <code class="literal">8009</code> respectively when the well-known Discovery NQN is specified. </p></td>
+<td class="parameter_description"><p>The transport service ID. For transports using IP addressing (e.g. <code class="literal">tcp</code>, <code class="literal">rdma</code>) this field is the port number. The default port number for the <code class="literal">tcp</code> and <code class="literal">rdma</code> transports is <code class="literal">4420</code> and <code class="literal">8009</code> respectively when the well-known Discovery NQN is specified. </p></td>
 <td class="parameter_annotations"><span class="annotation">[<acronym title="NULL may be passed as the value in, out, in-out; or as a return value."><span class="acronym">nullable</span></acronym>]</span></td>
 </tr>
 <tr>
@@ -1806,7 +1814,7 @@ bd_nvme_find_ctrls_for_ns (<em class="parameter"><code>const <span class="type">
 <tbody>
 <tr>
 <td class="parameter_name"><p>ns_sysfs_path</p></td>
-<td class="parameter_description"><p>NVMe namespace device file.</p></td>
+<td class="parameter_description"><p>NVMe namespace sysfs path.</p></td>
 <td class="parameter_annotations"> </td>
 </tr>
 <tr>
@@ -1835,6 +1843,63 @@ bd_nvme_find_ctrls_for_ns (<em class="parameter"><code>const <span class="type">
 <div class="refsect3">
 <a name="bd-nvme-find-ctrls-for-ns.returns"></a><h4>Returns</h4>
 <p>list of controller sysfs paths
+or <code class="literal">NULL</code> in case of an error (with <em class="parameter"><code>error</code></em>
+set).</p>
+<p>Tech category: <a class="link" href="libblockdev-NVMe.html#BD-NVME-TECH-FABRICS:CAPS"><code class="literal">BD_NVME_TECH_FABRICS</code></a>-<a class="link" href="libblockdev-NVMe.html#BD-NVME-TECH-MODE-INITIATOR:CAPS"><code class="literal">BD_NVME_TECH_MODE_INITIATOR</code></a>. </p>
+<p><span class="annotation">[<acronym title="The caller owns the data, and is responsible for free it."><span class="acronym">transfer full</span></acronym>][<acronym title="Parameter points to an array of items."><span class="acronym">array</span></acronym> zero-terminated=1]</span></p>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="bd-nvme-find-namespaces-for-ctrl"></a><h3>bd_nvme_find_namespaces_for_ctrl ()</h3>
+<pre class="programlisting"><span class="returnvalue">gchar</span> **
+bd_nvme_find_namespaces_for_ctrl (<em class="parameter"><code>const <span class="type">gchar</span> *ctrl_sysfs_path</code></em>,
+                                  <em class="parameter"><code>const <span class="type">gchar</span> *subsysnqn</code></em>,
+                                  <em class="parameter"><code>const <span class="type">gchar</span> *host_nqn</code></em>,
+                                  <em class="parameter"><code>const <span class="type">gchar</span> *host_id</code></em>,
+                                  <em class="parameter"><code><span class="type">GError</span> **error</code></em>);</pre>
+<p>A convenient utility function to look up all namespaces associated
+ with the specified NVMe controller.</p>
+<div class="refsect3">
+<a name="bd-nvme-find-namespaces-for-ctrl.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>ctrl_sysfs_path</p></td>
+<td class="parameter_description"><p>NVMe controller sysfs path.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>subsysnqn</p></td>
+<td class="parameter_description"><p>Limit matching to the specified subsystem NQN. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="NULL may be passed as the value in, out, in-out; or as a return value."><span class="acronym">nullable</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>host_nqn</p></td>
+<td class="parameter_description"><p>Limit matching to the specified host NQN. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="NULL may be passed as the value in, out, in-out; or as a return value."><span class="acronym">nullable</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>host_id</p></td>
+<td class="parameter_description"><p>Limit matching to the specified host ID. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="NULL may be passed as the value in, out, in-out; or as a return value."><span class="acronym">nullable</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>error</p></td>
+<td class="parameter_description"><p>Place to store error (if any). </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for returning results. Default is transfer full."><span class="acronym">out</span></acronym>][<acronym title="NULL may be passed as the value in, out, in-out; or as a return value."><span class="acronym">nullable</span></acronym>]</span></td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="bd-nvme-find-namespaces-for-ctrl.returns"></a><h4>Returns</h4>
+<p>list of namespace sysfs paths
 or <code class="literal">NULL</code> in case of an error (with <em class="parameter"><code>error</code></em>
 set).</p>
 <p>Tech category: <a class="link" href="libblockdev-NVMe.html#BD-NVME-TECH-FABRICS:CAPS"><code class="literal">BD_NVME_TECH_FABRICS</code></a>-<a class="link" href="libblockdev-NVMe.html#BD-NVME-TECH-MODE-INITIATOR:CAPS"><code class="literal">BD_NVME_TECH_MODE_INITIATOR</code></a>. </p>
@@ -2632,7 +2697,7 @@ or less than or equal to an under temperature threshold.</p>
 <tr>
 <td class="enum_member_name"><p><a name="BD-NVME-SMART-CRITICAL-WARNING-DEGRADED:CAPS"></a>BD_NVME_SMART_CRITICAL_WARNING_DEGRADED</p></td>
 <td class="enum_member_description">
-<p>the NVM subsystem reliability has been degraded due to  significant media
+<p>the NVM subsystem reliability has been degraded due to significant media
 related errors or any internal error that degrades NVM subsystem reliability.</p>
 </td>
 <td class="enum_member_annotations"> </td>
@@ -3234,9 +3299,16 @@ user data is encrypted, then the controller is allowed to use a cryptographic er
 <td class="enum_member_annotations"> </td>
 </tr>
 <tr>
-<td class="enum_member_name"><p><a name="BD-NVME-SANITIZE-STATUS-IN-PROGESS:CAPS"></a>BD_NVME_SANITIZE_STATUS_IN_PROGESS</p></td>
+<td class="enum_member_name"><p><a name="BD-NVME-SANITIZE-STATUS-IN-PROGRESS:CAPS"></a>BD_NVME_SANITIZE_STATUS_IN_PROGRESS</p></td>
 <td class="enum_member_description">
 <p>A sanitize operation is currently in progress.</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="BD-NVME-SANITIZE-STATUS-IN-PROGESS:CAPS"></a>BD_NVME_SANITIZE_STATUS_IN_PROGESS</p></td>
+<td class="enum_member_description">
+<p>Deprecated alias for <a class="link" href="libblockdev-NVMe.html#BD-NVME-SANITIZE-STATUS-IN-PROGRESS:CAPS"><code class="literal">BD_NVME_SANITIZE_STATUS_IN_PROGRESS</code></a></p>
 </td>
 <td class="enum_member_annotations"> </td>
 </tr>
@@ -3404,6 +3476,6 @@ the No-Deallocate Modifies Media After Sanitize features have been requested.</p
 </div>
 </div>
 <div class="footer">
-<hr>Generated by GTK-Doc V1.34.0</div>
+<hr>Generated by GTK-Doc V1.36.1</div>
 </body>
 </html>

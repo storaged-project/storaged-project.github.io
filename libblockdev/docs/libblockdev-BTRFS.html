@@ -2,13 +2,13 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>BTRFS: libblockdev Reference Manual for libblockdev 3.4.0.</title>
+<title>BTRFS: libblockdev Reference Manual for libblockdev 3.5.0.</title>
 <meta name="generator" content="DocBook XSL Stylesheets Vsnapshot">
-<link rel="home" href="index.html" title="libblockdev Reference Manual for libblockdev 3.4.0.">
+<link rel="home" href="index.html" title="libblockdev Reference Manual for libblockdev 3.5.0.">
 <link rel="up" href="ch01.html" title="libblockdev Reference Manual">
 <link rel="prev" href="libblockdev-blockdev-library.html" title="blockdev library">
 <link rel="next" href="libblockdev-Crypto.html" title="Crypto">
-<meta name="generator" content="GTK-Doc V1.34.0 (XML mode)">
+<meta name="generator" content="GTK-Doc V1.36.1 (XML mode)">
 <link rel="stylesheet" href="style.css" type="text/css">
 </head>
 <body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
@@ -113,6 +113,22 @@
 </tr>
 <tr>
 <td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="libblockdev-BTRFS.html#bd-btrfs-device-stats-free" title="bd_btrfs_device_stats_free ()">bd_btrfs_device_stats_free</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a class="link" href="libblockdev-BTRFS.html#BDBtrfsDeviceStats" title="BDBtrfsDeviceStats"><span class="returnvalue">BDBtrfsDeviceStats</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="libblockdev-BTRFS.html#bd-btrfs-device-stats-copy" title="bd_btrfs_device_stats_copy ()">bd_btrfs_device_stats_copy</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
 <span class="returnvalue">gboolean</span>
 </td>
 <td class="function_name">
@@ -149,6 +165,14 @@
 </td>
 <td class="function_name">
 <a class="link" href="libblockdev-BTRFS.html#bd-btrfs-delete-subvolume" title="bd_btrfs_delete_subvolume ()">bd_btrfs_delete_subvolume</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">gboolean</span>
+</td>
+<td class="function_name">
+<a class="link" href="libblockdev-BTRFS.html#bd-btrfs-delete-subvolume-recursive" title="bd_btrfs_delete_subvolume_recursive ()">bd_btrfs_delete_subvolume_recursive</a> <span class="c_punctuation">()</span>
 </td>
 </tr>
 <tr>
@@ -241,6 +265,14 @@
 </tr>
 <tr>
 <td class="function_type">
+<a class="link" href="libblockdev-BTRFS.html#BDBtrfsDeviceStats" title="BDBtrfsDeviceStats"><span class="returnvalue">BDBtrfsDeviceStats</span></a> **
+</td>
+<td class="function_name">
+<a class="link" href="libblockdev-BTRFS.html#bd-btrfs-device-stats" title="bd_btrfs_device_stats ()">bd_btrfs_device_stats</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
 <span class="returnvalue">gboolean</span>
 </td>
 <td class="function_name">
@@ -285,6 +317,10 @@
 <tr>
 <td class="datatype_keyword"> </td>
 <td class="function_name"><a class="link" href="libblockdev-BTRFS.html#BDBtrfsFilesystemInfo" title="BDBtrfsFilesystemInfo">BDBtrfsFilesystemInfo</a></td>
+</tr>
+<tr>
+<td class="datatype_keyword"> </td>
+<td class="function_name"><a class="link" href="libblockdev-BTRFS.html#BDBtrfsDeviceStats" title="BDBtrfsDeviceStats">BDBtrfsDeviceStats</a></td>
 </tr>
 <tr>
 <td class="datatype_keyword">enum</td>
@@ -469,6 +505,54 @@ bd_btrfs_filesystem_info_copy (<em class="parameter"><code><a class="link" href=
 <tbody><tr>
 <td class="parameter_name"><p>info</p></td>
 <td class="parameter_description"><p><a class="link" href="libblockdev-BTRFS.html#BDBtrfsFilesystemInfo" title="BDBtrfsFilesystemInfo"><code class="literal">BDBtrfsFilesystemInfo</code></a> to copy. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="NULL may be passed as the value in, out, in-out; or as a return value."><span class="acronym">nullable</span></acronym>]</span></td>
+</tr></tbody>
+</table></div>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="bd-btrfs-device-stats-free"></a><h3>bd_btrfs_device_stats_free ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+bd_btrfs_device_stats_free (<em class="parameter"><code><a class="link" href="libblockdev-BTRFS.html#BDBtrfsDeviceStats" title="BDBtrfsDeviceStats"><span class="type">BDBtrfsDeviceStats</span></a> *stats</code></em>);</pre>
+<p>Frees <em class="parameter"><code>stats</code></em>
+.</p>
+<p><span class="annotation">[<acronym title="Exposed in C code, not necessarily available in other languages."><span class="acronym">skip</span></acronym>]</span></p>
+<div class="refsect3">
+<a name="bd-btrfs-device-stats-free.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>stats</p></td>
+<td class="parameter_description"><p><a class="link" href="libblockdev-BTRFS.html#BDBtrfsDeviceStats" title="BDBtrfsDeviceStats"><code class="literal">BDBtrfsDeviceStats</code></a> to free. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="NULL may be passed as the value in, out, in-out; or as a return value."><span class="acronym">nullable</span></acronym>]</span></td>
+</tr></tbody>
+</table></div>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="bd-btrfs-device-stats-copy"></a><h3>bd_btrfs_device_stats_copy ()</h3>
+<pre class="programlisting"><a class="link" href="libblockdev-BTRFS.html#BDBtrfsDeviceStats" title="BDBtrfsDeviceStats"><span class="returnvalue">BDBtrfsDeviceStats</span></a> *
+bd_btrfs_device_stats_copy (<em class="parameter"><code><a class="link" href="libblockdev-BTRFS.html#BDBtrfsDeviceStats" title="BDBtrfsDeviceStats"><span class="type">BDBtrfsDeviceStats</span></a> *stats</code></em>);</pre>
+<p>Creates a new copy of <em class="parameter"><code>stats</code></em>
+.</p>
+<p><span class="annotation">[<acronym title="Exposed in C code, not necessarily available in other languages."><span class="acronym">skip</span></acronym>]</span></p>
+<div class="refsect3">
+<a name="bd-btrfs-device-stats-copy.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>stats</p></td>
+<td class="parameter_description"><p><a class="link" href="libblockdev-BTRFS.html#BDBtrfsDeviceStats" title="BDBtrfsDeviceStats"><code class="literal">BDBtrfsDeviceStats</code></a> to copy. </p></td>
 <td class="parameter_annotations"><span class="annotation">[<acronym title="NULL may be passed as the value in, out, in-out; or as a return value."><span class="acronym">nullable</span></acronym>]</span></td>
 </tr></tbody>
 </table></div>
@@ -731,6 +815,67 @@ passed to the 'btrfs' utility). </p></td>
 /<em class="parameter"><code>name</code></em>
 subvolume was successfully deleted or not</p>
 <p>Tech category: <a class="link" href="libblockdev-BTRFS.html#BD-BTRFS-TECH-SUBVOL:CAPS"><code class="literal">BD_BTRFS_TECH_SUBVOL</code></a>-<a class="link" href="libblockdev-BTRFS.html#BD-BTRFS-TECH-MODE-DELETE:CAPS"><code class="literal">BD_BTRFS_TECH_MODE_DELETE</code></a></p>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="bd-btrfs-delete-subvolume-recursive"></a><h3>bd_btrfs_delete_subvolume_recursive ()</h3>
+<pre class="programlisting"><span class="returnvalue">gboolean</span>
+bd_btrfs_delete_subvolume_recursive (<em class="parameter"><code>const <span class="type">gchar</span> *mountpoint</code></em>,
+                                     <em class="parameter"><code>const <span class="type">gchar</span> *name</code></em>,
+                                     <em class="parameter"><code><span class="type">gboolean</span> recursive</code></em>,
+                                     <em class="parameter"><code>const <a class="link" href="libblockdev-Utils.html#BDExtraArg" title="BDExtraArg"><span class="type">BDExtraArg</span></a> **extra</code></em>,
+                                     <em class="parameter"><code><span class="type">GError</span> **error</code></em>);</pre>
+<div class="refsect3">
+<a name="bd-btrfs-delete-subvolume-recursive.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>mountpoint</p></td>
+<td class="parameter_description"><p>mountpoint of the btrfs volume to delete subvolume from</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>name</p></td>
+<td class="parameter_description"><p>name of the subvolume</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>recursive</p></td>
+<td class="parameter_description"><p>whether to delete child subvolumes recursively</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>extra</p></td>
+<td class="parameter_description"><p>extra options for the subvolume deletion (right now
+passed to the 'btrfs' utility). </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="NULL may be passed as the value in, out, in-out; or as a return value."><span class="acronym">nullable</span></acronym>][<acronym title="Parameter points to an array of items."><span class="acronym">array</span></acronym> zero-terminated=1]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>error</p></td>
+<td class="parameter_description"><p>place to store error (if any). </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for returning results. Default is transfer full."><span class="acronym">out</span></acronym>][<acronym title="NULL may be passed instead of a pointer to a location."><span class="acronym">optional</span></acronym>]</span></td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="bd-btrfs-delete-subvolume-recursive.returns"></a><h4>Returns</h4>
+<p> whether the <em class="parameter"><code>mountpoint</code></em>
+/<em class="parameter"><code>name</code></em>
+subvolume was successfully deleted or not</p>
+<p>If <em class="parameter"><code>recursive</code></em>
+is <code class="literal">TRUE</code>, all child subvolumes will be deleted before deleting
+the subvolume itself. This requires btrfs-progs &gt;= 6.12.</p>
+<p>Tech category: <a class="link" href="libblockdev-BTRFS.html#BD-BTRFS-TECH-SUBVOL:CAPS"><code class="literal">BD_BTRFS_TECH_SUBVOL</code></a>-<a class="link" href="libblockdev-BTRFS.html#BD-BTRFS-TECH-MODE-DELETE:CAPS"><code class="literal">BD_BTRFS_TECH_MODE_DELETE</code></a> if <em class="parameter"><code>recursive</code></em>
+is <code class="literal">FALSE</code>,
+<a class="link" href="libblockdev-BTRFS.html#BD-BTRFS-TECH-SUBVOL:CAPS"><code class="literal">BD_BTRFS_TECH_SUBVOL</code></a>-<a class="link" href="libblockdev-BTRFS.html#BD-BTRFS-TECH-MODE-DELETE-RECURSIVE:CAPS"><code class="literal">BD_BTRFS_TECH_MODE_DELETE_RECURSIVE</code></a> if <em class="parameter"><code>recursive</code></em>
+is <code class="literal">TRUE</code></p>
 </div>
 </div>
 <hr>
@@ -1231,6 +1376,43 @@ or not</p>
 </div>
 <hr>
 <div class="refsect2">
+<a name="bd-btrfs-device-stats"></a><h3>bd_btrfs_device_stats ()</h3>
+<pre class="programlisting"><a class="link" href="libblockdev-BTRFS.html#BDBtrfsDeviceStats" title="BDBtrfsDeviceStats"><span class="returnvalue">BDBtrfsDeviceStats</span></a> **
+bd_btrfs_device_stats (<em class="parameter"><code>const <span class="type">gchar</span> *mountpoint</code></em>,
+                       <em class="parameter"><code><span class="type">GError</span> **error</code></em>);</pre>
+<div class="refsect3">
+<a name="bd-btrfs-device-stats.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>mountpoint</p></td>
+<td class="parameter_description"><p>a mountpoint of the queried btrfs volume</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>error</p></td>
+<td class="parameter_description"><p>place to store error (if any). </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for returning results. Default is transfer full."><span class="acronym">out</span></acronym>][<acronym title="NULL may be passed instead of a pointer to a location."><span class="acronym">optional</span></acronym>]</span></td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="bd-btrfs-device-stats.returns"></a><h4>Returns</h4>
+<p>device stats for each device that is part of the btrfs volume
+mounted at <em class="parameter"><code>mountpoint</code></em>
+or <code class="literal">NULL</code> in case of error</p>
+<p>Tech category: <a class="link" href="libblockdev-BTRFS.html#BD-BTRFS-TECH-MULTI-DEV:CAPS"><code class="literal">BD_BTRFS_TECH_MULTI_DEV</code></a>-<a class="link" href="libblockdev-BTRFS.html#BD-BTRFS-TECH-MODE-QUERY:CAPS"><code class="literal">BD_BTRFS_TECH_MODE_QUERY</code></a>. </p>
+<p><span class="annotation">[<acronym title="Parameter points to an array of items."><span class="acronym">array</span></acronym> zero-terminated=1]</span></p>
+</div>
+</div>
+<hr>
+<div class="refsect2">
 <a name="bd-btrfs-is-tech-avail"></a><h3>bd_btrfs_is_tech_avail ()</h3>
 <pre class="programlisting"><span class="returnvalue">gboolean</span>
 bd_btrfs_is_tech_avail (<em class="parameter"><code><a class="link" href="libblockdev-BTRFS.html#BDBtrfsTech" title="enum BDBtrfsTech"><span class="type">BDBtrfsTech</span></a> tech</code></em>,
@@ -1447,6 +1629,67 @@ plugin implementation and having all the runtime dependencies available</p>
 </div>
 <hr>
 <div class="refsect2">
+<a name="BDBtrfsDeviceStats"></a><h3>BDBtrfsDeviceStats</h3>
+<pre class="programlisting">typedef struct {
+    guint64 id;
+    gchar *path;
+    guint64 write_io_errs;
+    guint64 read_io_errs;
+    guint64 flush_io_errs;
+    guint64 corruption_errs;
+    guint64 generation_errs;
+} BDBtrfsDeviceStats;
+</pre>
+<div class="refsect3">
+<a name="BDBtrfsDeviceStats.members"></a><h4>Members</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="300px" class="struct_members_name">
+<col class="struct_members_description">
+<col width="200px" class="struct_members_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="struct_member_name"><p><span class="type">guint64</span> <em class="structfield"><code><a name="BDBtrfsDeviceStats.id"></a>id</code></em>;</p></td>
+<td class="struct_member_description"><p>ID of the device</p></td>
+<td class="struct_member_annotations"> </td>
+</tr>
+<tr>
+<td class="struct_member_name"><p><span class="type">gchar</span> *<em class="structfield"><code><a name="BDBtrfsDeviceStats.path"></a>path</code></em>;</p></td>
+<td class="struct_member_description"><p>path of the device</p></td>
+<td class="struct_member_annotations"> </td>
+</tr>
+<tr>
+<td class="struct_member_name"><p><span class="type">guint64</span> <em class="structfield"><code><a name="BDBtrfsDeviceStats.write-io-errs"></a>write_io_errs</code></em>;</p></td>
+<td class="struct_member_description"><p>number of write I/O errors</p></td>
+<td class="struct_member_annotations"> </td>
+</tr>
+<tr>
+<td class="struct_member_name"><p><span class="type">guint64</span> <em class="structfield"><code><a name="BDBtrfsDeviceStats.read-io-errs"></a>read_io_errs</code></em>;</p></td>
+<td class="struct_member_description"><p>number of read I/O errors</p></td>
+<td class="struct_member_annotations"> </td>
+</tr>
+<tr>
+<td class="struct_member_name"><p><span class="type">guint64</span> <em class="structfield"><code><a name="BDBtrfsDeviceStats.flush-io-errs"></a>flush_io_errs</code></em>;</p></td>
+<td class="struct_member_description"><p>number of flush I/O errors</p></td>
+<td class="struct_member_annotations"> </td>
+</tr>
+<tr>
+<td class="struct_member_name"><p><span class="type">guint64</span> <em class="structfield"><code><a name="BDBtrfsDeviceStats.corruption-errs"></a>corruption_errs</code></em>;</p></td>
+<td class="struct_member_description"><p>number of corruption errors</p></td>
+<td class="struct_member_annotations"> </td>
+</tr>
+<tr>
+<td class="struct_member_name"><p><span class="type">guint64</span> <em class="structfield"><code><a name="BDBtrfsDeviceStats.generation-errs"></a>generation_errs</code></em>;</p></td>
+<td class="struct_member_description"><p>number of generation errors</p></td>
+<td class="struct_member_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr>
+<div class="refsect2">
 <a name="BDBtrfsTech"></a><h3>enum BDBtrfsTech</h3>
 <div class="refsect3">
 <a name="BDBtrfsTech.members"></a><h4>Members</h4>
@@ -1513,6 +1756,11 @@ plugin implementation and having all the runtime dependencies available</p>
 <td> </td>
 <td> </td>
 </tr>
+<tr>
+<td class="enum_member_name"><p><a name="BD-BTRFS-TECH-MODE-DELETE-RECURSIVE:CAPS"></a>BD_BTRFS_TECH_MODE_DELETE_RECURSIVE</p></td>
+<td> </td>
+<td> </td>
+</tr>
 </tbody>
 </table></div>
 </div>
@@ -1520,6 +1768,6 @@ plugin implementation and having all the runtime dependencies available</p>
 </div>
 </div>
 <div class="footer">
-<hr>Generated by GTK-Doc V1.34.0</div>
+<hr>Generated by GTK-Doc V1.36.1</div>
 </body>
 </html>
