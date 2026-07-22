@@ -5,11 +5,11 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>blivet.formats package &#8212; Blivet 3.13.2 documentation</title>
+    <title>blivet.formats package &#8212; Blivet 3.14.0 documentation</title>
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=03e43079" />
     <link rel="stylesheet" type="text/css" href="../_static/classic.css?v=2bf1fcf8" />
     
-    <script src="../_static/documentation_options.js?v=f92f4e34"></script>
+    <script src="../_static/documentation_options.js?v=e4f4b189"></script>
     <script src="../_static/doctools.js?v=9bcbadda"></script>
     <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
     
@@ -33,7 +33,7 @@
         <li class="right" >
           <a href="blivet.events.html" title="blivet.events package"
              accesskey="P">previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../index.html">Blivet 3.13.2 documentation</a> &#187;</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">Blivet 3.14.0 documentation</a> &#187;</li>
           <li class="nav-item nav-item-1"><a href="blivet.html" accesskey="U">blivet package</a> &#187;</li>
         <li class="nav-item nav-item-this"><a href="">blivet.formats package</a></li> 
       </ul>
@@ -2575,11 +2575,6 @@ it via the ‘device’ kwarg to the <code class="xref py py-meth docutils liter
 <li><p><strong>exists</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.14)"><em>bool</em></a>) – indicates whether this is an existing format</p></li>
 <li><p><strong>pool_name</strong> – the name of the pool this block device belongs to</p></li>
 <li><p><strong>pool_uuid</strong> – the UUID of the pool this block device belongs to</p></li>
-<li><p><strong>locked_pool</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.14)"><em>bool</em></a>) – whether this block device belongs to a locked pool or not</p></li>
-<li><p><strong>locked_pool_key_desc</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.14)"><em>str</em></a>) – kernel keyring description for locked pool</p></li>
-<li><p><strong>passphrase</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.14)"><em>str</em></a>) – passphrase for the locked pool</p></li>
-<li><p><strong>key_file</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.14)"><em>str</em></a>) – path to a file containing a key</p></li>
-<li><p><strong>locked_pool_clevis_pin</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.14)"><em>str</em></a>) – clevis PIN for locked pool (either ‘tang’ or ‘tpm’)</p></li>
 </ul>
 </dd>
 </dl>
@@ -2598,33 +2593,10 @@ it via the ‘device’ kwarg to the <code class="xref py py-meth docutils liter
 </dd></dl>
 
 <dl class="py property">
-<dt class="sig sig-object py" id="blivet.formats.stratis.StratisBlockdev.has_key">
-<em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">has_key</span></span><a class="headerlink" href="#blivet.formats.stratis.StratisBlockdev.has_key" title="Link to this definition">¶</a></dt>
-<dd><p>Return an attribute of instance, which is of type owner.</p>
-</dd></dl>
-
-<dl class="py property">
-<dt class="sig sig-object py" id="blivet.formats.stratis.StratisBlockdev.key_file">
-<em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">key_file</span></span><a class="headerlink" href="#blivet.formats.stratis.StratisBlockdev.key_file" title="Link to this definition">¶</a></dt>
-<dd><p>Path to key file to be used in /etc/crypttab</p>
-</dd></dl>
-
-<dl class="py property">
-<dt class="sig sig-object py" id="blivet.formats.stratis.StratisBlockdev.passphrase">
-<em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">passphrase</span></span><a class="headerlink" href="#blivet.formats.stratis.StratisBlockdev.passphrase" title="Link to this definition">¶</a></dt>
-<dd><p>Return an attribute of instance, which is of type owner.</p>
-</dd></dl>
-
-<dl class="py property">
 <dt class="sig sig-object py" id="blivet.formats.stratis.StratisBlockdev.status">
 <em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">status</span></span><a class="headerlink" href="#blivet.formats.stratis.StratisBlockdev.status" title="Link to this definition">¶</a></dt>
 <dd><p>Return an attribute of instance, which is of type owner.</p>
 </dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="blivet.formats.stratis.StratisBlockdev.unlock_pool">
-<span class="sig-name descname"><span class="pre">unlock_pool</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#blivet.formats.stratis.StratisBlockdev.unlock_pool" title="Link to this definition">¶</a></dt>
-<dd></dd></dl>
 
 </dd></dl>
 
@@ -3434,11 +3406,7 @@ for an exhaustive list of the arguments that can be passed.</p>
 <li><a class="reference internal" href="#module-blivet.formats.stratis">blivet.formats.stratis module</a><ul>
 <li><a class="reference internal" href="#blivet.formats.stratis.StratisBlockdev"><code class="docutils literal notranslate"><span class="pre">StratisBlockdev</span></code></a><ul>
 <li><a class="reference internal" href="#blivet.formats.stratis.StratisBlockdev.dict"><code class="docutils literal notranslate"><span class="pre">StratisBlockdev.dict</span></code></a></li>
-<li><a class="reference internal" href="#blivet.formats.stratis.StratisBlockdev.has_key"><code class="docutils literal notranslate"><span class="pre">StratisBlockdev.has_key</span></code></a></li>
-<li><a class="reference internal" href="#blivet.formats.stratis.StratisBlockdev.key_file"><code class="docutils literal notranslate"><span class="pre">StratisBlockdev.key_file</span></code></a></li>
-<li><a class="reference internal" href="#blivet.formats.stratis.StratisBlockdev.passphrase"><code class="docutils literal notranslate"><span class="pre">StratisBlockdev.passphrase</span></code></a></li>
 <li><a class="reference internal" href="#blivet.formats.stratis.StratisBlockdev.status"><code class="docutils literal notranslate"><span class="pre">StratisBlockdev.status</span></code></a></li>
-<li><a class="reference internal" href="#blivet.formats.stratis.StratisBlockdev.unlock_pool"><code class="docutils literal notranslate"><span class="pre">StratisBlockdev.unlock_pool()</span></code></a></li>
 </ul>
 </li>
 </ul>
@@ -3564,7 +3532,7 @@ for an exhaustive list of the arguments that can be passed.</p>
         <li class="right" >
           <a href="blivet.events.html" title="blivet.events package"
              >previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../index.html">Blivet 3.13.2 documentation</a> &#187;</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">Blivet 3.14.0 documentation</a> &#187;</li>
           <li class="nav-item nav-item-1"><a href="blivet.html" >blivet package</a> &#187;</li>
         <li class="nav-item nav-item-this"><a href="">blivet.formats package</a></li> 
       </ul>

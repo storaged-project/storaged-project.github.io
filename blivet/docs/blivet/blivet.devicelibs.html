@@ -5,11 +5,11 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>blivet.devicelibs package &#8212; Blivet 3.13.2 documentation</title>
+    <title>blivet.devicelibs package &#8212; Blivet 3.14.0 documentation</title>
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=03e43079" />
     <link rel="stylesheet" type="text/css" href="../_static/classic.css?v=2bf1fcf8" />
     
-    <script src="../_static/documentation_options.js?v=f92f4e34"></script>
+    <script src="../_static/documentation_options.js?v=e4f4b189"></script>
     <script src="../_static/doctools.js?v=9bcbadda"></script>
     <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
     
@@ -33,7 +33,7 @@
         <li class="right" >
           <a href="blivet.dbus.html" title="blivet.dbus package"
              accesskey="P">previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../index.html">Blivet 3.13.2 documentation</a> &#187;</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">Blivet 3.14.0 documentation</a> &#187;</li>
           <li class="nav-item nav-item-1"><a href="blivet.html" accesskey="U">blivet package</a> &#187;</li>
         <li class="nav-item nav-item-this"><a href="">blivet.devicelibs package</a></li> 
       </ul>
@@ -56,6 +56,11 @@
 <span class="sig-prename descclassname"><span class="pre">blivet.devicelibs.btrfs.</span></span><span class="sig-name descname"><span class="pre">get_mountpoint_subvolumes</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">mountpoint</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#blivet.devicelibs.btrfs.get_mountpoint_subvolumes" title="Link to this definition">¶</a></dt>
 <dd><p>Get list of subvolume names on given mounted btrfs filesystem</p>
 </dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="blivet.devicelibs.btrfs.get_raid_levels">
+<span class="sig-prename descclassname"><span class="pre">blivet.devicelibs.btrfs.</span></span><span class="sig-name descname"><span class="pre">get_raid_levels</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">uuid</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#blivet.devicelibs.btrfs.get_raid_levels" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="blivet.devicelibs.btrfs.is_btrfs_name_valid">
@@ -1129,7 +1134,7 @@ RAID level, including the RAID object itself.</p>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="blivet.devicelibs.stratis.create_pool">
-<span class="sig-prename descclassname"><span class="pre">blivet.devicelibs.stratis.</span></span><span class="sig-name descname"><span class="pre">create_pool</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">devices</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">encrypted</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">passphrase</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">key_file</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">clevis</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#blivet.devicelibs.stratis.create_pool" title="Link to this definition">¶</a></dt>
+<span class="sig-prename descclassname"><span class="pre">blivet.devicelibs.stratis.</span></span><span class="sig-name descname"><span class="pre">create_pool</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">devices</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">encrypted</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">passphrase</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">key_file</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">clevis</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">overprovisioning</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#blivet.devicelibs.stratis.create_pool" title="Link to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py function">
@@ -1169,7 +1174,7 @@ RAID level, including the RAID object itself.</p>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="blivet.devicelibs.stratis.unlock_pool">
-<span class="sig-prename descclassname"><span class="pre">blivet.devicelibs.stratis.</span></span><span class="sig-name descname"><span class="pre">unlock_pool</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">pool_uuid</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">method</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">desc</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">passphrase</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">keyfile</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#blivet.devicelibs.stratis.unlock_pool" title="Link to this definition">¶</a></dt>
+<span class="sig-prename descclassname"><span class="pre">blivet.devicelibs.stratis.</span></span><span class="sig-name descname"><span class="pre">unlock_pool</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">pool_uuid</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">method</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">passphrase</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">keyfile</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#blivet.devicelibs.stratis.unlock_pool" title="Link to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </section>
@@ -1192,6 +1197,7 @@ RAID level, including the RAID object itself.</p>
 <li><a class="reference internal" href="#submodules">Submodules</a></li>
 <li><a class="reference internal" href="#module-blivet.devicelibs.btrfs">blivet.devicelibs.btrfs module</a><ul>
 <li><a class="reference internal" href="#blivet.devicelibs.btrfs.get_mountpoint_subvolumes"><code class="docutils literal notranslate"><span class="pre">get_mountpoint_subvolumes()</span></code></a></li>
+<li><a class="reference internal" href="#blivet.devicelibs.btrfs.get_raid_levels"><code class="docutils literal notranslate"><span class="pre">get_raid_levels()</span></code></a></li>
 <li><a class="reference internal" href="#blivet.devicelibs.btrfs.is_btrfs_name_valid"><code class="docutils literal notranslate"><span class="pre">is_btrfs_name_valid()</span></code></a></li>
 </ul>
 </li>
@@ -1420,7 +1426,7 @@ RAID level, including the RAID object itself.</p>
         <li class="right" >
           <a href="blivet.dbus.html" title="blivet.dbus package"
              >previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../index.html">Blivet 3.13.2 documentation</a> &#187;</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">Blivet 3.14.0 documentation</a> &#187;</li>
           <li class="nav-item nav-item-1"><a href="blivet.html" >blivet package</a> &#187;</li>
         <li class="nav-item nav-item-this"><a href="">blivet.devicelibs package</a></li> 
       </ul>

@@ -5,11 +5,11 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>blivet &#8212; Blivet 3.13.2 documentation</title>
+    <title>blivet &#8212; Blivet 3.14.0 documentation</title>
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=03e43079" />
     <link rel="stylesheet" type="text/css" href="../_static/classic.css?v=2bf1fcf8" />
     
-    <script src="../_static/documentation_options.js?v=f92f4e34"></script>
+    <script src="../_static/documentation_options.js?v=e4f4b189"></script>
     <script src="../_static/doctools.js?v=9bcbadda"></script>
     <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
     
@@ -25,7 +25,7 @@
         <li class="right" >
           <a href="../py-modindex.html" title="Python Module Index"
              >modules</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../index.html">Blivet 3.13.2 documentation</a> &#187;</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">Blivet 3.14.0 documentation</a> &#187;</li>
         <li class="nav-item nav-item-this"><a href="">blivet</a></li> 
       </ul>
     </div>  
@@ -126,6 +126,7 @@
 </li>
 <li class="toctree-l3"><a class="reference internal" href="blivet.static_data.html">blivet.static_data package</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="blivet.static_data.html#submodules">Submodules</a></li>
+<li class="toctree-l4"><a class="reference internal" href="blivet.static_data.html#module-blivet.static_data.encryption_data">blivet.static_data.encryption_data module</a></li>
 <li class="toctree-l4"><a class="reference internal" href="blivet.static_data.html#module-blivet.static_data.luks_data">blivet.static_data.luks_data module</a></li>
 <li class="toctree-l4"><a class="reference internal" href="blivet.static_data.html#module-blivet.static_data.lvm_info">blivet.static_data.lvm_info module</a></li>
 <li class="toctree-l4"><a class="reference internal" href="blivet.static_data.html#module-blivet.static_data.mpath_info">blivet.static_data.mpath_info module</a></li>
@@ -183,6 +184,7 @@
 <li class="toctree-l3"><a class="reference internal" href="blivet.html#blivet.arch.is_alpha"><code class="docutils literal notranslate"><span class="pre">is_alpha()</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="blivet.html#blivet.arch.is_arm"><code class="docutils literal notranslate"><span class="pre">is_arm()</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="blivet.html#blivet.arch.is_cell"><code class="docutils literal notranslate"><span class="pre">is_cell()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="blivet.html#blivet.arch.is_e2k"><code class="docutils literal notranslate"><span class="pre">is_e2k()</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="blivet.html#blivet.arch.is_efi"><code class="docutils literal notranslate"><span class="pre">is_efi()</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="blivet.html#blivet.arch.is_ia64"><code class="docutils literal notranslate"><span class="pre">is_ia64()</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="blivet.html#blivet.arch.is_ipseries"><code class="docutils literal notranslate"><span class="pre">is_ipseries()</span></code></a></li>
@@ -800,6 +802,13 @@
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="blivet.html#blivet.partitioning.SameSizeSet"><code class="docutils literal notranslate"><span class="pre">SameSizeSet</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="blivet.html#blivet.partitioning.StratisPoolChunk"><code class="docutils literal notranslate"><span class="pre">StratisPoolChunk</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="blivet.html#blivet.partitioning.StratisPoolChunk.add_request"><code class="docutils literal notranslate"><span class="pre">StratisPoolChunk.add_request()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="blivet.html#blivet.partitioning.StratisPoolChunk.length_to_size"><code class="docutils literal notranslate"><span class="pre">StratisPoolChunk.length_to_size()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="blivet.html#blivet.partitioning.StratisPoolChunk.size_to_length"><code class="docutils literal notranslate"><span class="pre">StratisPoolChunk.size_to_length()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="blivet.html#blivet.partitioning.StratisRequest"><code class="docutils literal notranslate"><span class="pre">StratisRequest</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="blivet.html#blivet.partitioning.ThinPoolChunk"><code class="docutils literal notranslate"><span class="pre">ThinPoolChunk</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="blivet.html#blivet.partitioning.TotalSizeSet"><code class="docutils literal notranslate"><span class="pre">TotalSizeSet</span></code></a><ul>
 <li class="toctree-l4"><a class="reference internal" href="blivet.html#blivet.partitioning.TotalSizeSet.allocate"><code class="docutils literal notranslate"><span class="pre">TotalSizeSet.allocate()</span></code></a></li>
@@ -824,6 +833,7 @@
 <li class="toctree-l3"><a class="reference internal" href="blivet.html#blivet.partitioning.get_next_partition_type"><code class="docutils literal notranslate"><span class="pre">get_next_partition_type()</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="blivet.html#blivet.partitioning.grow_lvm"><code class="docutils literal notranslate"><span class="pre">grow_lvm()</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="blivet.html#blivet.partitioning.grow_partitions"><code class="docutils literal notranslate"><span class="pre">grow_partitions()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="blivet.html#blivet.partitioning.grow_stratis"><code class="docutils literal notranslate"><span class="pre">grow_stratis()</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="blivet.html#blivet.partitioning.lv_compare"><code class="docutils literal notranslate"><span class="pre">lv_compare()</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="blivet.html#blivet.partitioning.manage_size_sets"><code class="docutils literal notranslate"><span class="pre">manage_size_sets()</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="blivet.html#blivet.partitioning.partition_compare"><code class="docutils literal notranslate"><span class="pre">partition_compare()</span></code></a></li>
@@ -1120,7 +1130,7 @@
         <li class="right" >
           <a href="../py-modindex.html" title="Python Module Index"
              >modules</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../index.html">Blivet 3.13.2 documentation</a> &#187;</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">Blivet 3.14.0 documentation</a> &#187;</li>
         <li class="nav-item nav-item-this"><a href="">blivet</a></li> 
       </ul>
     </div>

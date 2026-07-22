@@ -5,11 +5,11 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>blivet package &#8212; Blivet 3.13.2 documentation</title>
+    <title>blivet package &#8212; Blivet 3.14.0 documentation</title>
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=03e43079" />
     <link rel="stylesheet" type="text/css" href="../_static/classic.css?v=2bf1fcf8" />
     
-    <script src="../_static/documentation_options.js?v=f92f4e34"></script>
+    <script src="../_static/documentation_options.js?v=e4f4b189"></script>
     <script src="../_static/doctools.js?v=9bcbadda"></script>
     <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
     
@@ -33,7 +33,7 @@
         <li class="right" >
           <a href="../testing.html" title="Testing Blivet"
              accesskey="P">previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../index.html">Blivet 3.13.2 documentation</a> &#187;</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">Blivet 3.14.0 documentation</a> &#187;</li>
         <li class="nav-item nav-item-this"><a href="">blivet package</a></li> 
       </ul>
     </div>  
@@ -144,6 +144,7 @@
 <li class="toctree-l2"><a class="reference internal" href="blivet.devicelibs.html#submodules">Submodules</a></li>
 <li class="toctree-l2"><a class="reference internal" href="blivet.devicelibs.html#module-blivet.devicelibs.btrfs">blivet.devicelibs.btrfs module</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="blivet.devicelibs.html#blivet.devicelibs.btrfs.get_mountpoint_subvolumes"><code class="docutils literal notranslate"><span class="pre">get_mountpoint_subvolumes()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="blivet.devicelibs.html#blivet.devicelibs.btrfs.get_raid_levels"><code class="docutils literal notranslate"><span class="pre">get_raid_levels()</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="blivet.devicelibs.html#blivet.devicelibs.btrfs.is_btrfs_name_valid"><code class="docutils literal notranslate"><span class="pre">is_btrfs_name_valid()</span></code></a></li>
 </ul>
 </li>
@@ -1112,6 +1113,7 @@
 <li class="toctree-l4"><a class="reference internal" href="blivet.devices.html#blivet.devices.stratis.StratisPoolDevice.free_space"><code class="docutils literal notranslate"><span class="pre">StratisPoolDevice.free_space</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="blivet.devices.html#blivet.devices.stratis.StratisPoolDevice.has_key"><code class="docutils literal notranslate"><span class="pre">StratisPoolDevice.has_key</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="blivet.devices.html#blivet.devices.stratis.StratisPoolDevice.key_file"><code class="docutils literal notranslate"><span class="pre">StratisPoolDevice.key_file</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="blivet.devices.html#blivet.devices.stratis.StratisPoolDevice.overprovisioning"><code class="docutils literal notranslate"><span class="pre">StratisPoolDevice.overprovisioning</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="blivet.devices.html#blivet.devices.stratis.StratisPoolDevice.passphrase"><code class="docutils literal notranslate"><span class="pre">StratisPoolDevice.passphrase</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="blivet.devices.html#blivet.devices.stratis.StratisPoolDevice.remove_hook"><code class="docutils literal notranslate"><span class="pre">StratisPoolDevice.remove_hook()</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="blivet.devices.html#blivet.devices.stratis.StratisPoolDevice.size"><code class="docutils literal notranslate"><span class="pre">StratisPoolDevice.size</span></code></a></li>
@@ -1471,11 +1473,7 @@
 <li class="toctree-l2"><a class="reference internal" href="blivet.formats.html#module-blivet.formats.stratis">blivet.formats.stratis module</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="blivet.formats.html#blivet.formats.stratis.StratisBlockdev"><code class="docutils literal notranslate"><span class="pre">StratisBlockdev</span></code></a><ul>
 <li class="toctree-l4"><a class="reference internal" href="blivet.formats.html#blivet.formats.stratis.StratisBlockdev.dict"><code class="docutils literal notranslate"><span class="pre">StratisBlockdev.dict</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="blivet.formats.html#blivet.formats.stratis.StratisBlockdev.has_key"><code class="docutils literal notranslate"><span class="pre">StratisBlockdev.has_key</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="blivet.formats.html#blivet.formats.stratis.StratisBlockdev.key_file"><code class="docutils literal notranslate"><span class="pre">StratisBlockdev.key_file</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="blivet.formats.html#blivet.formats.stratis.StratisBlockdev.passphrase"><code class="docutils literal notranslate"><span class="pre">StratisBlockdev.passphrase</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="blivet.formats.html#blivet.formats.stratis.StratisBlockdev.status"><code class="docutils literal notranslate"><span class="pre">StratisBlockdev.status</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="blivet.formats.html#blivet.formats.stratis.StratisBlockdev.unlock_pool"><code class="docutils literal notranslate"><span class="pre">StratisBlockdev.unlock_pool()</span></code></a></li>
 </ul>
 </li>
 </ul>
@@ -1600,22 +1598,24 @@
 </li>
 <li class="toctree-l1"><a class="reference internal" href="blivet.static_data.html">blivet.static_data package</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="blivet.static_data.html#submodules">Submodules</a></li>
-<li class="toctree-l2"><a class="reference internal" href="blivet.static_data.html#module-blivet.static_data.luks_data">blivet.static_data.luks_data module</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="blivet.static_data.html#blivet.static_data.luks_data.LUKS_Data"><code class="docutils literal notranslate"><span class="pre">LUKS_Data</span></code></a><ul>
-<li class="toctree-l4"><a class="reference internal" href="blivet.static_data.html#blivet.static_data.luks_data.LUKS_Data.add_passphrase"><code class="docutils literal notranslate"><span class="pre">LUKS_Data.add_passphrase()</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="blivet.static_data.html#blivet.static_data.luks_data.LUKS_Data.add_passphrases"><code class="docutils literal notranslate"><span class="pre">LUKS_Data.add_passphrases()</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="blivet.static_data.html#blivet.static_data.luks_data.LUKS_Data.clear_passphrases"><code class="docutils literal notranslate"><span class="pre">LUKS_Data.clear_passphrases()</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="blivet.static_data.html#blivet.static_data.luks_data.LUKS_Data.encryption_passphrase"><code class="docutils literal notranslate"><span class="pre">LUKS_Data.encryption_passphrase</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="blivet.static_data.html#blivet.static_data.luks_data.LUKS_Data.luks_devs"><code class="docutils literal notranslate"><span class="pre">LUKS_Data.luks_devs</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="blivet.static_data.html#blivet.static_data.luks_data.LUKS_Data.min_entropy"><code class="docutils literal notranslate"><span class="pre">LUKS_Data.min_entropy</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="blivet.static_data.html#blivet.static_data.luks_data.LUKS_Data.passphrases"><code class="docutils literal notranslate"><span class="pre">LUKS_Data.passphrases</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="blivet.static_data.html#blivet.static_data.luks_data.LUKS_Data.pbkdf_args"><code class="docutils literal notranslate"><span class="pre">LUKS_Data.pbkdf_args</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="blivet.static_data.html#blivet.static_data.luks_data.LUKS_Data.reset"><code class="docutils literal notranslate"><span class="pre">LUKS_Data.reset()</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="blivet.static_data.html#blivet.static_data.luks_data.LUKS_Data.save_passphrase"><code class="docutils literal notranslate"><span class="pre">LUKS_Data.save_passphrase()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="blivet.static_data.html#module-blivet.static_data.encryption_data">blivet.static_data.encryption_data module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="blivet.static_data.html#blivet.static_data.encryption_data.Encryption_Data"><code class="docutils literal notranslate"><span class="pre">Encryption_Data</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="blivet.static_data.html#blivet.static_data.encryption_data.Encryption_Data.add_passphrase"><code class="docutils literal notranslate"><span class="pre">Encryption_Data.add_passphrase()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="blivet.static_data.html#blivet.static_data.encryption_data.Encryption_Data.add_passphrases"><code class="docutils literal notranslate"><span class="pre">Encryption_Data.add_passphrases()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="blivet.static_data.html#blivet.static_data.encryption_data.Encryption_Data.clear_passphrases"><code class="docutils literal notranslate"><span class="pre">Encryption_Data.clear_passphrases()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="blivet.static_data.html#blivet.static_data.encryption_data.Encryption_Data.encryption_passphrase"><code class="docutils literal notranslate"><span class="pre">Encryption_Data.encryption_passphrase</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="blivet.static_data.html#blivet.static_data.encryption_data.Encryption_Data.luks_devs"><code class="docutils literal notranslate"><span class="pre">Encryption_Data.luks_devs</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="blivet.static_data.html#blivet.static_data.encryption_data.Encryption_Data.min_entropy"><code class="docutils literal notranslate"><span class="pre">Encryption_Data.min_entropy</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="blivet.static_data.html#blivet.static_data.encryption_data.Encryption_Data.passphrases"><code class="docutils literal notranslate"><span class="pre">Encryption_Data.passphrases</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="blivet.static_data.html#blivet.static_data.encryption_data.Encryption_Data.pbkdf_args"><code class="docutils literal notranslate"><span class="pre">Encryption_Data.pbkdf_args</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="blivet.static_data.html#blivet.static_data.encryption_data.Encryption_Data.reset"><code class="docutils literal notranslate"><span class="pre">Encryption_Data.reset()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="blivet.static_data.html#blivet.static_data.encryption_data.Encryption_Data.save_passphrase"><code class="docutils literal notranslate"><span class="pre">Encryption_Data.save_passphrase()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="blivet.static_data.html#blivet.static_data.encryption_data.Encryption_Data.stratis_devs"><code class="docutils literal notranslate"><span class="pre">Encryption_Data.stratis_devs</span></code></a></li>
 </ul>
 </li>
 </ul>
 </li>
+<li class="toctree-l2"><a class="reference internal" href="blivet.static_data.html#module-blivet.static_data.luks_data">blivet.static_data.luks_data module</a></li>
 <li class="toctree-l2"><a class="reference internal" href="blivet.static_data.html#module-blivet.static_data.lvm_info">blivet.static_data.lvm_info module</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="blivet.static_data.html#blivet.static_data.lvm_info.LVsInfo"><code class="docutils literal notranslate"><span class="pre">LVsInfo</span></code></a><ul>
 <li class="toctree-l4"><a class="reference internal" href="blivet.static_data.html#blivet.static_data.lvm_info.LVsInfo.cache"><code class="docutils literal notranslate"><span class="pre">LVsInfo.cache</span></code></a></li>
@@ -1668,16 +1668,8 @@
 <li class="toctree-l4"><a class="reference internal" href="blivet.static_data.html#blivet.static_data.stratis_info.StratisInfo.get_blockdev_info"><code class="docutils literal notranslate"><span class="pre">StratisInfo.get_blockdev_info()</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="blivet.static_data.html#blivet.static_data.stratis_info.StratisInfo.get_filesystem_info"><code class="docutils literal notranslate"><span class="pre">StratisInfo.get_filesystem_info()</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="blivet.static_data.html#blivet.static_data.stratis_info.StratisInfo.get_pool_info"><code class="docutils literal notranslate"><span class="pre">StratisInfo.get_pool_info()</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="blivet.static_data.html#blivet.static_data.stratis_info.StratisInfo.locked_pools"><code class="docutils literal notranslate"><span class="pre">StratisInfo.locked_pools</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="blivet.static_data.html#blivet.static_data.stratis_info.StratisInfo.pools"><code class="docutils literal notranslate"><span class="pre">StratisInfo.pools</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="blivet.static_data.html#blivet.static_data.stratis_info.StratisInfo.stopped_pools"><code class="docutils literal notranslate"><span class="pre">StratisInfo.stopped_pools</span></code></a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="blivet.static_data.html#blivet.static_data.stratis_info.StratisLockedPoolInfo"><code class="docutils literal notranslate"><span class="pre">StratisLockedPoolInfo</span></code></a><ul>
-<li class="toctree-l4"><a class="reference internal" href="blivet.static_data.html#blivet.static_data.stratis_info.StratisLockedPoolInfo.clevis"><code class="docutils literal notranslate"><span class="pre">StratisLockedPoolInfo.clevis</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="blivet.static_data.html#blivet.static_data.stratis_info.StratisLockedPoolInfo.devices"><code class="docutils literal notranslate"><span class="pre">StratisLockedPoolInfo.devices</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="blivet.static_data.html#blivet.static_data.stratis_info.StratisLockedPoolInfo.key_desc"><code class="docutils literal notranslate"><span class="pre">StratisLockedPoolInfo.key_desc</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="blivet.static_data.html#blivet.static_data.stratis_info.StratisLockedPoolInfo.uuid"><code class="docutils literal notranslate"><span class="pre">StratisLockedPoolInfo.uuid</span></code></a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="blivet.static_data.html#blivet.static_data.stratis_info.StratisPoolInfo"><code class="docutils literal notranslate"><span class="pre">StratisPoolInfo</span></code></a><ul>
@@ -1685,6 +1677,7 @@
 <li class="toctree-l4"><a class="reference internal" href="blivet.static_data.html#blivet.static_data.stratis_info.StratisPoolInfo.encrypted"><code class="docutils literal notranslate"><span class="pre">StratisPoolInfo.encrypted</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="blivet.static_data.html#blivet.static_data.stratis_info.StratisPoolInfo.name"><code class="docutils literal notranslate"><span class="pre">StratisPoolInfo.name</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="blivet.static_data.html#blivet.static_data.stratis_info.StratisPoolInfo.object_path"><code class="docutils literal notranslate"><span class="pre">StratisPoolInfo.object_path</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="blivet.static_data.html#blivet.static_data.stratis_info.StratisPoolInfo.overprovisioning"><code class="docutils literal notranslate"><span class="pre">StratisPoolInfo.overprovisioning</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="blivet.static_data.html#blivet.static_data.stratis_info.StratisPoolInfo.physical_size"><code class="docutils literal notranslate"><span class="pre">StratisPoolInfo.physical_size</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="blivet.static_data.html#blivet.static_data.stratis_info.StratisPoolInfo.physical_used"><code class="docutils literal notranslate"><span class="pre">StratisPoolInfo.physical_used</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="blivet.static_data.html#blivet.static_data.stratis_info.StratisPoolInfo.uuid"><code class="docutils literal notranslate"><span class="pre">StratisPoolInfo.uuid</span></code></a></li>
@@ -2516,6 +2509,19 @@ value is acceptable for that field.</p>
 <dd><dl class="field-list simple">
 <dt class="field-odd">Returns<span class="colon">:</span></dt>
 <dd class="field-odd"><p>True if the hardware is the Cell platform, False otherwise.</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>boolean</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="blivet.arch.is_e2k">
+<span class="sig-prename descclassname"><span class="pre">blivet.arch.</span></span><span class="sig-name descname"><span class="pre">is_e2k</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#blivet.arch.is_e2k" title="Link to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>True if the hardware supports Elbrus2000, False otherwise.</p>
 </dd>
 <dt class="field-even">Return type<span class="colon">:</span></dt>
 <dd class="field-even"><p>boolean</p>
@@ -4539,6 +4545,8 @@ factory class it is passed to</p>
 <li><p><strong>container_name</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.14)"><em>str</em></a>) – name of requested container</p></li>
 <li><p><strong>container_raid_level</strong> (<em>any valid RAID level descriptor</em>) – raid level for container</p></li>
 <li><p><strong>container_encrypted</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.14)"><em>bool</em></a>) – whether to encrypt the container</p></li>
+<li><p><strong>container_overprovisioned</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.14)"><em>bool</em></a>) – whether to enable overprovisioning
+on the container (Stratis only)</p></li>
 <li><p><strong>container_size</strong> (<a class="reference internal" href="#blivet.size.Size" title="blivet.size.Size"><code class="xref py py-class docutils literal notranslate"><span class="pre">Size</span></code></a>, <code class="xref py py-const docutils literal notranslate"><span class="pre">SIZE_POLICY_AUTO</span></code> (the default),
 or <code class="xref py py-const docutils literal notranslate"><span class="pre">SIZE_POLICY_MAX</span></code>) – requested container size</p></li>
 <li><p><strong>min_luks_entropy</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.14)"><em>int</em></a>) – minimum entropy in bits required for
@@ -4701,6 +4709,8 @@ factory class it is passed to</p>
 <li><p><strong>container_name</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.14)"><em>str</em></a>) – name of requested container</p></li>
 <li><p><strong>container_raid_level</strong> (<em>any valid RAID level descriptor</em>) – raid level for container</p></li>
 <li><p><strong>container_encrypted</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.14)"><em>bool</em></a>) – whether to encrypt the container</p></li>
+<li><p><strong>container_overprovisioned</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.14)"><em>bool</em></a>) – whether to enable overprovisioning
+on the container (Stratis only)</p></li>
 <li><p><strong>container_size</strong> (<a class="reference internal" href="#blivet.size.Size" title="blivet.size.Size"><code class="xref py py-class docutils literal notranslate"><span class="pre">Size</span></code></a>, <code class="xref py py-const docutils literal notranslate"><span class="pre">SIZE_POLICY_AUTO</span></code> (the default),
 or <code class="xref py py-const docutils literal notranslate"><span class="pre">SIZE_POLICY_MAX</span></code>) – requested container size</p></li>
 <li><p><strong>min_luks_entropy</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.14)"><em>int</em></a>) – minimum entropy in bits required for
@@ -4878,6 +4888,8 @@ factory class it is passed to</p>
 <li><p><strong>container_name</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.14)"><em>str</em></a>) – name of requested container</p></li>
 <li><p><strong>container_raid_level</strong> (<em>any valid RAID level descriptor</em>) – raid level for container</p></li>
 <li><p><strong>container_encrypted</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.14)"><em>bool</em></a>) – whether to encrypt the container</p></li>
+<li><p><strong>container_overprovisioned</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.14)"><em>bool</em></a>) – whether to enable overprovisioning
+on the container (Stratis only)</p></li>
 <li><p><strong>container_size</strong> (<a class="reference internal" href="#blivet.size.Size" title="blivet.size.Size"><code class="xref py py-class docutils literal notranslate"><span class="pre">Size</span></code></a>, <code class="xref py py-const docutils literal notranslate"><span class="pre">SIZE_POLICY_AUTO</span></code> (the default),
 or <code class="xref py py-const docutils literal notranslate"><span class="pre">SIZE_POLICY_MAX</span></code>) – requested container size</p></li>
 <li><p><strong>min_luks_entropy</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.14)"><em>int</em></a>) – minimum entropy in bits required for
@@ -4998,6 +5010,8 @@ factory class it is passed to</p>
 <li><p><strong>container_name</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.14)"><em>str</em></a>) – name of requested container</p></li>
 <li><p><strong>container_raid_level</strong> (<em>any valid RAID level descriptor</em>) – raid level for container</p></li>
 <li><p><strong>container_encrypted</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.14)"><em>bool</em></a>) – whether to encrypt the container</p></li>
+<li><p><strong>container_overprovisioned</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.14)"><em>bool</em></a>) – whether to enable overprovisioning
+on the container (Stratis only)</p></li>
 <li><p><strong>container_size</strong> (<a class="reference internal" href="#blivet.size.Size" title="blivet.size.Size"><code class="xref py py-class docutils literal notranslate"><span class="pre">Size</span></code></a>, <code class="xref py py-const docutils literal notranslate"><span class="pre">SIZE_POLICY_AUTO</span></code> (the default),
 or <code class="xref py py-const docutils literal notranslate"><span class="pre">SIZE_POLICY_MAX</span></code>) – requested container size</p></li>
 <li><p><strong>min_luks_entropy</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.14)"><em>int</em></a>) – minimum entropy in bits required for
@@ -5058,6 +5072,8 @@ factory class it is passed to</p>
 <li><p><strong>container_name</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.14)"><em>str</em></a>) – name of requested container</p></li>
 <li><p><strong>container_raid_level</strong> (<em>any valid RAID level descriptor</em>) – raid level for container</p></li>
 <li><p><strong>container_encrypted</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.14)"><em>bool</em></a>) – whether to encrypt the container</p></li>
+<li><p><strong>container_overprovisioned</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.14)"><em>bool</em></a>) – whether to enable overprovisioning
+on the container (Stratis only)</p></li>
 <li><p><strong>container_size</strong> (<a class="reference internal" href="#blivet.size.Size" title="blivet.size.Size"><code class="xref py py-class docutils literal notranslate"><span class="pre">Size</span></code></a>, <code class="xref py py-const docutils literal notranslate"><span class="pre">SIZE_POLICY_AUTO</span></code> (the default),
 or <code class="xref py py-const docutils literal notranslate"><span class="pre">SIZE_POLICY_MAX</span></code>) – requested container size</p></li>
 <li><p><strong>min_luks_entropy</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.14)"><em>int</em></a>) – minimum entropy in bits required for
@@ -5103,6 +5119,8 @@ factory class it is passed to</p>
 <li><p><strong>container_name</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.14)"><em>str</em></a>) – name of requested container</p></li>
 <li><p><strong>container_raid_level</strong> (<em>any valid RAID level descriptor</em>) – raid level for container</p></li>
 <li><p><strong>container_encrypted</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.14)"><em>bool</em></a>) – whether to encrypt the container</p></li>
+<li><p><strong>container_overprovisioned</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.14)"><em>bool</em></a>) – whether to enable overprovisioning
+on the container (Stratis only)</p></li>
 <li><p><strong>container_size</strong> (<a class="reference internal" href="#blivet.size.Size" title="blivet.size.Size"><code class="xref py py-class docutils literal notranslate"><span class="pre">Size</span></code></a>, <code class="xref py py-const docutils literal notranslate"><span class="pre">SIZE_POLICY_AUTO</span></code> (the default),
 or <code class="xref py py-const docutils literal notranslate"><span class="pre">SIZE_POLICY_MAX</span></code>) – requested container size</p></li>
 <li><p><strong>min_luks_entropy</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.14)"><em>int</em></a>) – minimum entropy in bits required for
@@ -5186,6 +5204,8 @@ factory class it is passed to</p>
 <li><p><strong>container_name</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.14)"><em>str</em></a>) – name of requested container</p></li>
 <li><p><strong>container_raid_level</strong> (<em>any valid RAID level descriptor</em>) – raid level for container</p></li>
 <li><p><strong>container_encrypted</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.14)"><em>bool</em></a>) – whether to encrypt the container</p></li>
+<li><p><strong>container_overprovisioned</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.14)"><em>bool</em></a>) – whether to enable overprovisioning
+on the container (Stratis only)</p></li>
 <li><p><strong>container_size</strong> (<a class="reference internal" href="#blivet.size.Size" title="blivet.size.Size"><code class="xref py py-class docutils literal notranslate"><span class="pre">Size</span></code></a>, <code class="xref py py-const docutils literal notranslate"><span class="pre">SIZE_POLICY_AUTO</span></code> (the default),
 or <code class="xref py py-const docutils literal notranslate"><span class="pre">SIZE_POLICY_MAX</span></code>) – requested container size</p></li>
 <li><p><strong>min_luks_entropy</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.14)"><em>int</em></a>) – minimum entropy in bits required for
@@ -5279,6 +5299,8 @@ factory class it is passed to</p>
 <li><p><strong>container_name</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.14)"><em>str</em></a>) – name of requested container</p></li>
 <li><p><strong>container_raid_level</strong> (<em>any valid RAID level descriptor</em>) – raid level for container</p></li>
 <li><p><strong>container_encrypted</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.14)"><em>bool</em></a>) – whether to encrypt the container</p></li>
+<li><p><strong>container_overprovisioned</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.14)"><em>bool</em></a>) – whether to enable overprovisioning
+on the container (Stratis only)</p></li>
 <li><p><strong>container_size</strong> (<a class="reference internal" href="#blivet.size.Size" title="blivet.size.Size"><code class="xref py py-class docutils literal notranslate"><span class="pre">Size</span></code></a>, <code class="xref py py-const docutils literal notranslate"><span class="pre">SIZE_POLICY_AUTO</span></code> (the default),
 or <code class="xref py py-const docutils literal notranslate"><span class="pre">SIZE_POLICY_MAX</span></code>) – requested container size</p></li>
 <li><p><strong>min_luks_entropy</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.14)"><em>int</em></a>) – minimum entropy in bits required for
@@ -5770,8 +5792,8 @@ something like ‘UUID=xyz-tuv-qrs’ or ‘LABEL=rootfs’.</p>
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>devspec</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.14)"><em>str</em></a>) – a string describing a block device</p></li>
-<li><p><strong>blkid_tab</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">BlkidTab</span></code>) – blkid info</p></li>
-<li><p><strong>crypt_tab</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">CryptTab</span></code>) – crypto info</p></li>
+<li><p><strong>blkid_tab</strong> – deprecated, ignored</p></li>
+<li><p><strong>crypt_tab</strong> – deprecated, ignored</p></li>
 <li><p><strong>options</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.14)"><em>str</em></a>) – mount options</p></li>
 <li><p><strong>subvolspec</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.14)"><em>str</em></a>) – btrfs subvolume specification</p></li>
 </ul>
@@ -6534,8 +6556,8 @@ If both entry and spec/mntopts are given, spec/mntopts are prioritized over entr
 <li><p><strong>devicetree</strong> – populated blivet.Devicetree instance</p></li>
 <li><p><strong>spec</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.14)"><em>str</em></a>) – searched device specs (see man fstab(5) fs_spec)</p></li>
 <li><p><strong>mntopts</strong> – list of mount option strings (see man fstab(5) fs_mntopts)</p></li>
-<li><p><strong>blkid_tab</strong> – Blkidtab object</p></li>
-<li><p><strong>crypt_tab</strong> – Crypttab object</p></li>
+<li><p><strong>blkid_tab</strong> – deprecated, ignored</p></li>
+<li><p><strong>crypt_tab</strong> – deprecated, ignored</p></li>
 <li><p><strong>entry</strong> – fstab entry with its spec (and mntopts) filled as an alternative input type</p></li>
 </ul>
 </dd>
@@ -6606,8 +6628,8 @@ Raises UnrecognizedFSTabError in case of invalid or incomplete data.</p>
 <li><p><strong>devicetree</strong> – populated blivet.Devicetree instance</p></li>
 <li><p><strong>spec</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.14)"><em>str</em></a>) – searched device specs (see man fstab(5) fs_spec)</p></li>
 <li><p><strong>mntopts</strong> – list of mount option strings (see man fstab(5) fs_mntopts)</p></li>
-<li><p><strong>blkid_tab</strong> – Blkidtab object</p></li>
-<li><p><strong>crypt_tab</strong> – Crypttab object</p></li>
+<li><p><strong>blkid_tab</strong> – deprecated, ignored</p></li>
+<li><p><strong>crypt_tab</strong> – deprecated, ignored</p></li>
 <li><p><strong>entry</strong> – fstab entry with its values filled as an alternative input type</p></li>
 </ul>
 </dd>
@@ -7286,6 +7308,53 @@ partitions.</p>
 </dd></dl>
 
 <dl class="py class">
+<dt class="sig sig-object py" id="blivet.partitioning.StratisPoolChunk">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">blivet.partitioning.</span></span><span class="sig-name descname"><span class="pre">StratisPoolChunk</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">pool</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">requests</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#blivet.partitioning.StratisPoolChunk" title="Link to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#blivet.partitioning.Chunk" title="blivet.partitioning.Chunk"><code class="xref py py-class docutils literal notranslate"><span class="pre">Chunk</span></code></a></p>
+<p>A free region in a Stratis pool from which filesystems will be allocated</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>pool</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">StratisPoolDevice</span></code>) – the stratis pool whose free space this chunk represents</p></li>
+<li><p><strong>requests</strong> (list of <a class="reference internal" href="#blivet.partitioning.StratisRequest" title="blivet.partitioning.StratisRequest"><code class="xref py py-class docutils literal notranslate"><span class="pre">StratisRequest</span></code></a>) – list of requests to add initially</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="blivet.partitioning.StratisPoolChunk.add_request">
+<span class="sig-name descname"><span class="pre">add_request</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">req</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#blivet.partitioning.StratisPoolChunk.add_request" title="Link to this definition">¶</a></dt>
+<dd><p>Add a request to this chunk.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>req</strong> (<a class="reference internal" href="#blivet.partitioning.StratisRequest" title="blivet.partitioning.StratisRequest"><code class="xref py py-class docutils literal notranslate"><span class="pre">StratisRequest</span></code></a>) – the request to add</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="blivet.partitioning.StratisPoolChunk.length_to_size">
+<span class="sig-name descname"><span class="pre">length_to_size</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">length</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#blivet.partitioning.StratisPoolChunk.length_to_size" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="blivet.partitioning.StratisPoolChunk.size_to_length">
+<span class="sig-name descname"><span class="pre">size_to_length</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">size</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#blivet.partitioning.StratisPoolChunk.size_to_length" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="blivet.partitioning.StratisRequest">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">blivet.partitioning.</span></span><span class="sig-name descname"><span class="pre">StratisRequest</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">fs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#blivet.partitioning.StratisRequest" title="Link to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#blivet.partitioning.Request" title="blivet.partitioning.Request"><code class="xref py py-class docutils literal notranslate"><span class="pre">Request</span></code></a></p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>fs</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">StratisFilesystemDevice</span></code>) – the stratis filesystem being requested</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py class">
 <dt class="sig sig-object py" id="blivet.partitioning.ThinPoolChunk">
 <em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">blivet.partitioning.</span></span><span class="sig-name descname"><span class="pre">ThinPoolChunk</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">pool</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">requests</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#blivet.partitioning.ThinPoolChunk" title="Link to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="#blivet.partitioning.VGChunk" title="blivet.partitioning.VGChunk"><code class="xref py py-class docutils literal notranslate"><span class="pre">VGChunk</span></code></a></p>
@@ -7608,6 +7677,12 @@ of all growable partitions allocated from the chunk.</p>
 <dd class="field-even"><p><code class="xref py py-const docutils literal notranslate"><span class="pre">None</span></code></p>
 </dd>
 </dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="blivet.partitioning.grow_stratis">
+<span class="sig-prename descclassname"><span class="pre">blivet.partitioning.</span></span><span class="sig-name descname"><span class="pre">grow_stratis</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">storage</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#blivet.partitioning.grow_stratis" title="Link to this definition">¶</a></dt>
+<dd><p>Grow Stratis filesystems according to the pool sizes.</p>
 </dd></dl>
 
 <dl class="py function">
@@ -9507,6 +9582,7 @@ discover.</p>
 <li><a class="reference internal" href="#blivet.arch.is_alpha"><code class="docutils literal notranslate"><span class="pre">is_alpha()</span></code></a></li>
 <li><a class="reference internal" href="#blivet.arch.is_arm"><code class="docutils literal notranslate"><span class="pre">is_arm()</span></code></a></li>
 <li><a class="reference internal" href="#blivet.arch.is_cell"><code class="docutils literal notranslate"><span class="pre">is_cell()</span></code></a></li>
+<li><a class="reference internal" href="#blivet.arch.is_e2k"><code class="docutils literal notranslate"><span class="pre">is_e2k()</span></code></a></li>
 <li><a class="reference internal" href="#blivet.arch.is_efi"><code class="docutils literal notranslate"><span class="pre">is_efi()</span></code></a></li>
 <li><a class="reference internal" href="#blivet.arch.is_ia64"><code class="docutils literal notranslate"><span class="pre">is_ia64()</span></code></a></li>
 <li><a class="reference internal" href="#blivet.arch.is_ipseries"><code class="docutils literal notranslate"><span class="pre">is_ipseries()</span></code></a></li>
@@ -10124,6 +10200,13 @@ discover.</p>
 </ul>
 </li>
 <li><a class="reference internal" href="#blivet.partitioning.SameSizeSet"><code class="docutils literal notranslate"><span class="pre">SameSizeSet</span></code></a></li>
+<li><a class="reference internal" href="#blivet.partitioning.StratisPoolChunk"><code class="docutils literal notranslate"><span class="pre">StratisPoolChunk</span></code></a><ul>
+<li><a class="reference internal" href="#blivet.partitioning.StratisPoolChunk.add_request"><code class="docutils literal notranslate"><span class="pre">StratisPoolChunk.add_request()</span></code></a></li>
+<li><a class="reference internal" href="#blivet.partitioning.StratisPoolChunk.length_to_size"><code class="docutils literal notranslate"><span class="pre">StratisPoolChunk.length_to_size()</span></code></a></li>
+<li><a class="reference internal" href="#blivet.partitioning.StratisPoolChunk.size_to_length"><code class="docutils literal notranslate"><span class="pre">StratisPoolChunk.size_to_length()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#blivet.partitioning.StratisRequest"><code class="docutils literal notranslate"><span class="pre">StratisRequest</span></code></a></li>
 <li><a class="reference internal" href="#blivet.partitioning.ThinPoolChunk"><code class="docutils literal notranslate"><span class="pre">ThinPoolChunk</span></code></a></li>
 <li><a class="reference internal" href="#blivet.partitioning.TotalSizeSet"><code class="docutils literal notranslate"><span class="pre">TotalSizeSet</span></code></a><ul>
 <li><a class="reference internal" href="#blivet.partitioning.TotalSizeSet.allocate"><code class="docutils literal notranslate"><span class="pre">TotalSizeSet.allocate()</span></code></a></li>
@@ -10148,6 +10231,7 @@ discover.</p>
 <li><a class="reference internal" href="#blivet.partitioning.get_next_partition_type"><code class="docutils literal notranslate"><span class="pre">get_next_partition_type()</span></code></a></li>
 <li><a class="reference internal" href="#blivet.partitioning.grow_lvm"><code class="docutils literal notranslate"><span class="pre">grow_lvm()</span></code></a></li>
 <li><a class="reference internal" href="#blivet.partitioning.grow_partitions"><code class="docutils literal notranslate"><span class="pre">grow_partitions()</span></code></a></li>
+<li><a class="reference internal" href="#blivet.partitioning.grow_stratis"><code class="docutils literal notranslate"><span class="pre">grow_stratis()</span></code></a></li>
 <li><a class="reference internal" href="#blivet.partitioning.lv_compare"><code class="docutils literal notranslate"><span class="pre">lv_compare()</span></code></a></li>
 <li><a class="reference internal" href="#blivet.partitioning.manage_size_sets"><code class="docutils literal notranslate"><span class="pre">manage_size_sets()</span></code></a></li>
 <li><a class="reference internal" href="#blivet.partitioning.partition_compare"><code class="docutils literal notranslate"><span class="pre">partition_compare()</span></code></a></li>
@@ -10452,7 +10536,7 @@ discover.</p>
         <li class="right" >
           <a href="../testing.html" title="Testing Blivet"
              >previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../index.html">Blivet 3.13.2 documentation</a> &#187;</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">Blivet 3.14.0 documentation</a> &#187;</li>
         <li class="nav-item nav-item-this"><a href="">blivet package</a></li> 
       </ul>
     </div>

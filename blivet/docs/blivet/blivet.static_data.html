@@ -5,11 +5,11 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>blivet.static_data package &#8212; Blivet 3.13.2 documentation</title>
+    <title>blivet.static_data package &#8212; Blivet 3.14.0 documentation</title>
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=03e43079" />
     <link rel="stylesheet" type="text/css" href="../_static/classic.css?v=2bf1fcf8" />
     
-    <script src="../_static/documentation_options.js?v=f92f4e34"></script>
+    <script src="../_static/documentation_options.js?v=e4f4b189"></script>
     <script src="../_static/doctools.js?v=9bcbadda"></script>
     <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
     
@@ -33,7 +33,7 @@
         <li class="right" >
           <a href="blivet.populator.helpers.html" title="blivet.populator.helpers package"
              accesskey="P">previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../index.html">Blivet 3.13.2 documentation</a> &#187;</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">Blivet 3.14.0 documentation</a> &#187;</li>
           <li class="nav-item nav-item-1"><a href="blivet.html" accesskey="U">blivet package</a> &#187;</li>
         <li class="nav-item nav-item-this"><a href="">blivet.static_data package</a></li> 
       </ul>
@@ -49,67 +49,75 @@
 <section id="submodules">
 <h2>Submodules<a class="headerlink" href="#submodules" title="Link to this heading">¶</a></h2>
 </section>
-<section id="module-blivet.static_data.luks_data">
-<span id="blivet-static-data-luks-data-module"></span><h2>blivet.static_data.luks_data module<a class="headerlink" href="#module-blivet.static_data.luks_data" title="Link to this heading">¶</a></h2>
+<section id="module-blivet.static_data.encryption_data">
+<span id="blivet-static-data-encryption-data-module"></span><h2>blivet.static_data.encryption_data module<a class="headerlink" href="#module-blivet.static_data.encryption_data" title="Link to this heading">¶</a></h2>
 <dl class="py class">
-<dt class="sig sig-object py" id="blivet.static_data.luks_data.LUKS_Data">
-<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">blivet.static_data.luks_data.</span></span><span class="sig-name descname"><span class="pre">LUKS_Data</span></span><a class="headerlink" href="#blivet.static_data.luks_data.LUKS_Data" title="Link to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="blivet.static_data.encryption_data.Encryption_Data">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">blivet.static_data.encryption_data.</span></span><span class="sig-name descname"><span class="pre">Encryption_Data</span></span><a class="headerlink" href="#blivet.static_data.encryption_data.Encryption_Data" title="Link to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference external" href="https://docs.python.org/3/library/functions.html#object" title="(in Python v3.14)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
 <p>Class to be used as a singleton.
-Maintains the LUKS data.</p>
+Maintains the encryption data.</p>
 <dl class="py method">
-<dt class="sig sig-object py" id="blivet.static_data.luks_data.LUKS_Data.add_passphrase">
-<span class="sig-name descname"><span class="pre">add_passphrase</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">passphrase</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#blivet.static_data.luks_data.LUKS_Data.add_passphrase" title="Link to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="blivet.static_data.luks_data.LUKS_Data.add_passphrases">
-<span class="sig-name descname"><span class="pre">add_passphrases</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">passphrases</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#blivet.static_data.luks_data.LUKS_Data.add_passphrases" title="Link to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="blivet.static_data.encryption_data.Encryption_Data.add_passphrase">
+<span class="sig-name descname"><span class="pre">add_passphrase</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">passphrase</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#blivet.static_data.encryption_data.Encryption_Data.add_passphrase" title="Link to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py" id="blivet.static_data.luks_data.LUKS_Data.clear_passphrases">
-<span class="sig-name descname"><span class="pre">clear_passphrases</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#blivet.static_data.luks_data.LUKS_Data.clear_passphrases" title="Link to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="py property">
-<dt class="sig sig-object py" id="blivet.static_data.luks_data.LUKS_Data.encryption_passphrase">
-<em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">encryption_passphrase</span></span><a class="headerlink" href="#blivet.static_data.luks_data.LUKS_Data.encryption_passphrase" title="Link to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="py property">
-<dt class="sig sig-object py" id="blivet.static_data.luks_data.LUKS_Data.luks_devs">
-<em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">luks_devs</span></span><a class="headerlink" href="#blivet.static_data.luks_data.LUKS_Data.luks_devs" title="Link to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="py property">
-<dt class="sig sig-object py" id="blivet.static_data.luks_data.LUKS_Data.min_entropy">
-<em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">min_entropy</span></span><a class="headerlink" href="#blivet.static_data.luks_data.LUKS_Data.min_entropy" title="Link to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="py property">
-<dt class="sig sig-object py" id="blivet.static_data.luks_data.LUKS_Data.passphrases">
-<em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">passphrases</span></span><a class="headerlink" href="#blivet.static_data.luks_data.LUKS_Data.passphrases" title="Link to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="py property">
-<dt class="sig sig-object py" id="blivet.static_data.luks_data.LUKS_Data.pbkdf_args">
-<em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">pbkdf_args</span></span><a class="headerlink" href="#blivet.static_data.luks_data.LUKS_Data.pbkdf_args" title="Link to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="blivet.static_data.encryption_data.Encryption_Data.add_passphrases">
+<span class="sig-name descname"><span class="pre">add_passphrases</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">passphrases</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#blivet.static_data.encryption_data.Encryption_Data.add_passphrases" title="Link to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py" id="blivet.static_data.luks_data.LUKS_Data.reset">
-<span class="sig-name descname"><span class="pre">reset</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">passphrase</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">luks_dict</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#blivet.static_data.luks_data.LUKS_Data.reset" title="Link to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="blivet.static_data.encryption_data.Encryption_Data.clear_passphrases">
+<span class="sig-name descname"><span class="pre">clear_passphrases</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#blivet.static_data.encryption_data.Encryption_Data.clear_passphrases" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="blivet.static_data.encryption_data.Encryption_Data.encryption_passphrase">
+<em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">encryption_passphrase</span></span><a class="headerlink" href="#blivet.static_data.encryption_data.Encryption_Data.encryption_passphrase" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="blivet.static_data.encryption_data.Encryption_Data.luks_devs">
+<em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">luks_devs</span></span><a class="headerlink" href="#blivet.static_data.encryption_data.Encryption_Data.luks_devs" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="blivet.static_data.encryption_data.Encryption_Data.min_entropy">
+<em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">min_entropy</span></span><a class="headerlink" href="#blivet.static_data.encryption_data.Encryption_Data.min_entropy" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="blivet.static_data.encryption_data.Encryption_Data.passphrases">
+<em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">passphrases</span></span><a class="headerlink" href="#blivet.static_data.encryption_data.Encryption_Data.passphrases" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="blivet.static_data.encryption_data.Encryption_Data.pbkdf_args">
+<em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">pbkdf_args</span></span><a class="headerlink" href="#blivet.static_data.encryption_data.Encryption_Data.pbkdf_args" title="Link to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py" id="blivet.static_data.luks_data.LUKS_Data.save_passphrase">
-<span class="sig-name descname"><span class="pre">save_passphrase</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">device</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#blivet.static_data.luks_data.LUKS_Data.save_passphrase" title="Link to this definition">¶</a></dt>
-<dd><p>Save a device’s LUKS passphrase in case of reset.</p>
+<dt class="sig sig-object py" id="blivet.static_data.encryption_data.Encryption_Data.reset">
+<span class="sig-name descname"><span class="pre">reset</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">passphrase</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">luks_dict</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">stratis_dict</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#blivet.static_data.encryption_data.Encryption_Data.reset" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="blivet.static_data.encryption_data.Encryption_Data.save_passphrase">
+<span class="sig-name descname"><span class="pre">save_passphrase</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">device</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#blivet.static_data.encryption_data.Encryption_Data.save_passphrase" title="Link to this definition">¶</a></dt>
+<dd><p>Save a device’s encryption passphrase in case of reset.</p>
 </dd></dl>
 
+<dl class="py property">
+<dt class="sig sig-object py" id="blivet.static_data.encryption_data.Encryption_Data.stratis_devs">
+<em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">stratis_devs</span></span><a class="headerlink" href="#blivet.static_data.encryption_data.Encryption_Data.stratis_devs" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
 </dd></dl>
 
+</section>
+<section id="module-blivet.static_data.luks_data">
+<span id="blivet-static-data-luks-data-module"></span><h2>blivet.static_data.luks_data module<a class="headerlink" href="#module-blivet.static_data.luks_data" title="Link to this heading">¶</a></h2>
 </section>
 <section id="module-blivet.static_data.lvm_info">
 <span id="blivet-static-data-lvm-info-module"></span><h2>blivet.static_data.lvm_info module<a class="headerlink" href="#module-blivet.static_data.lvm_info" title="Link to this heading">¶</a></h2>
@@ -324,11 +332,6 @@ Maintains the Stratis devices info cache.</p>
 <dd></dd></dl>
 
 <dl class="py property">
-<dt class="sig sig-object py" id="blivet.static_data.stratis_info.StratisInfo.locked_pools">
-<em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">locked_pools</span></span><a class="headerlink" href="#blivet.static_data.stratis_info.StratisInfo.locked_pools" title="Link to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="py property">
 <dt class="sig sig-object py" id="blivet.static_data.stratis_info.StratisInfo.pools">
 <em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">pools</span></span><a class="headerlink" href="#blivet.static_data.stratis_info.StratisInfo.pools" title="Link to this definition">¶</a></dt>
 <dd></dd></dl>
@@ -341,41 +344,10 @@ Maintains the Stratis devices info cache.</p>
 </dd></dl>
 
 <dl class="py class">
-<dt class="sig sig-object py" id="blivet.static_data.stratis_info.StratisLockedPoolInfo">
-<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">blivet.static_data.stratis_info.</span></span><span class="sig-name descname"><span class="pre">StratisLockedPoolInfo</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">uuid</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">key_desc</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">clevis</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">devices</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#blivet.static_data.stratis_info.StratisLockedPoolInfo" title="Link to this definition">¶</a></dt>
-<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#tuple" title="(in Python v3.14)"><code class="xref py py-class docutils literal notranslate"><span class="pre">tuple</span></code></a></p>
-<p>Create new instance of StratisLockedPoolInfo(uuid, key_desc, clevis, devices)</p>
-<dl class="py attribute">
-<dt class="sig sig-object py" id="blivet.static_data.stratis_info.StratisLockedPoolInfo.clevis">
-<span class="sig-name descname"><span class="pre">clevis</span></span><a class="headerlink" href="#blivet.static_data.stratis_info.StratisLockedPoolInfo.clevis" title="Link to this definition">¶</a></dt>
-<dd><p>Alias for field number 2</p>
-</dd></dl>
-
-<dl class="py attribute">
-<dt class="sig sig-object py" id="blivet.static_data.stratis_info.StratisLockedPoolInfo.devices">
-<span class="sig-name descname"><span class="pre">devices</span></span><a class="headerlink" href="#blivet.static_data.stratis_info.StratisLockedPoolInfo.devices" title="Link to this definition">¶</a></dt>
-<dd><p>Alias for field number 3</p>
-</dd></dl>
-
-<dl class="py attribute">
-<dt class="sig sig-object py" id="blivet.static_data.stratis_info.StratisLockedPoolInfo.key_desc">
-<span class="sig-name descname"><span class="pre">key_desc</span></span><a class="headerlink" href="#blivet.static_data.stratis_info.StratisLockedPoolInfo.key_desc" title="Link to this definition">¶</a></dt>
-<dd><p>Alias for field number 1</p>
-</dd></dl>
-
-<dl class="py attribute">
-<dt class="sig sig-object py" id="blivet.static_data.stratis_info.StratisLockedPoolInfo.uuid">
-<span class="sig-name descname"><span class="pre">uuid</span></span><a class="headerlink" href="#blivet.static_data.stratis_info.StratisLockedPoolInfo.uuid" title="Link to this definition">¶</a></dt>
-<dd><p>Alias for field number 0</p>
-</dd></dl>
-
-</dd></dl>
-
-<dl class="py class">
 <dt class="sig sig-object py" id="blivet.static_data.stratis_info.StratisPoolInfo">
-<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">blivet.static_data.stratis_info.</span></span><span class="sig-name descname"><span class="pre">StratisPoolInfo</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">uuid</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">physical_size</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">physical_used</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">object_path</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">encrypted</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">clevis</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#blivet.static_data.stratis_info.StratisPoolInfo" title="Link to this definition">¶</a></dt>
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">blivet.static_data.stratis_info.</span></span><span class="sig-name descname"><span class="pre">StratisPoolInfo</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">uuid</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">physical_size</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">physical_used</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">object_path</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">encrypted</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">clevis</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">overprovisioning</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#blivet.static_data.stratis_info.StratisPoolInfo" title="Link to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#tuple" title="(in Python v3.14)"><code class="xref py py-class docutils literal notranslate"><span class="pre">tuple</span></code></a></p>
-<p>Create new instance of StratisPoolInfo(name, uuid, physical_size, physical_used, object_path, encrypted, clevis)</p>
+<p>Create new instance of StratisPoolInfo(name, uuid, physical_size, physical_used, object_path, encrypted, clevis, overprovisioning)</p>
 <dl class="py attribute">
 <dt class="sig sig-object py" id="blivet.static_data.stratis_info.StratisPoolInfo.clevis">
 <span class="sig-name descname"><span class="pre">clevis</span></span><a class="headerlink" href="#blivet.static_data.stratis_info.StratisPoolInfo.clevis" title="Link to this definition">¶</a></dt>
@@ -398,6 +370,12 @@ Maintains the Stratis devices info cache.</p>
 <dt class="sig sig-object py" id="blivet.static_data.stratis_info.StratisPoolInfo.object_path">
 <span class="sig-name descname"><span class="pre">object_path</span></span><a class="headerlink" href="#blivet.static_data.stratis_info.StratisPoolInfo.object_path" title="Link to this definition">¶</a></dt>
 <dd><p>Alias for field number 4</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="blivet.static_data.stratis_info.StratisPoolInfo.overprovisioning">
+<span class="sig-name descname"><span class="pre">overprovisioning</span></span><a class="headerlink" href="#blivet.static_data.stratis_info.StratisPoolInfo.overprovisioning" title="Link to this definition">¶</a></dt>
+<dd><p>Alias for field number 7</p>
 </dd></dl>
 
 <dl class="py attribute">
@@ -469,22 +447,24 @@ Maintains the Stratis devices info cache.</p>
     <ul>
 <li><a class="reference internal" href="#">blivet.static_data package</a><ul>
 <li><a class="reference internal" href="#submodules">Submodules</a></li>
-<li><a class="reference internal" href="#module-blivet.static_data.luks_data">blivet.static_data.luks_data module</a><ul>
-<li><a class="reference internal" href="#blivet.static_data.luks_data.LUKS_Data"><code class="docutils literal notranslate"><span class="pre">LUKS_Data</span></code></a><ul>
-<li><a class="reference internal" href="#blivet.static_data.luks_data.LUKS_Data.add_passphrase"><code class="docutils literal notranslate"><span class="pre">LUKS_Data.add_passphrase()</span></code></a></li>
-<li><a class="reference internal" href="#blivet.static_data.luks_data.LUKS_Data.add_passphrases"><code class="docutils literal notranslate"><span class="pre">LUKS_Data.add_passphrases()</span></code></a></li>
-<li><a class="reference internal" href="#blivet.static_data.luks_data.LUKS_Data.clear_passphrases"><code class="docutils literal notranslate"><span class="pre">LUKS_Data.clear_passphrases()</span></code></a></li>
-<li><a class="reference internal" href="#blivet.static_data.luks_data.LUKS_Data.encryption_passphrase"><code class="docutils literal notranslate"><span class="pre">LUKS_Data.encryption_passphrase</span></code></a></li>
-<li><a class="reference internal" href="#blivet.static_data.luks_data.LUKS_Data.luks_devs"><code class="docutils literal notranslate"><span class="pre">LUKS_Data.luks_devs</span></code></a></li>
-<li><a class="reference internal" href="#blivet.static_data.luks_data.LUKS_Data.min_entropy"><code class="docutils literal notranslate"><span class="pre">LUKS_Data.min_entropy</span></code></a></li>
-<li><a class="reference internal" href="#blivet.static_data.luks_data.LUKS_Data.passphrases"><code class="docutils literal notranslate"><span class="pre">LUKS_Data.passphrases</span></code></a></li>
-<li><a class="reference internal" href="#blivet.static_data.luks_data.LUKS_Data.pbkdf_args"><code class="docutils literal notranslate"><span class="pre">LUKS_Data.pbkdf_args</span></code></a></li>
-<li><a class="reference internal" href="#blivet.static_data.luks_data.LUKS_Data.reset"><code class="docutils literal notranslate"><span class="pre">LUKS_Data.reset()</span></code></a></li>
-<li><a class="reference internal" href="#blivet.static_data.luks_data.LUKS_Data.save_passphrase"><code class="docutils literal notranslate"><span class="pre">LUKS_Data.save_passphrase()</span></code></a></li>
+<li><a class="reference internal" href="#module-blivet.static_data.encryption_data">blivet.static_data.encryption_data module</a><ul>
+<li><a class="reference internal" href="#blivet.static_data.encryption_data.Encryption_Data"><code class="docutils literal notranslate"><span class="pre">Encryption_Data</span></code></a><ul>
+<li><a class="reference internal" href="#blivet.static_data.encryption_data.Encryption_Data.add_passphrase"><code class="docutils literal notranslate"><span class="pre">Encryption_Data.add_passphrase()</span></code></a></li>
+<li><a class="reference internal" href="#blivet.static_data.encryption_data.Encryption_Data.add_passphrases"><code class="docutils literal notranslate"><span class="pre">Encryption_Data.add_passphrases()</span></code></a></li>
+<li><a class="reference internal" href="#blivet.static_data.encryption_data.Encryption_Data.clear_passphrases"><code class="docutils literal notranslate"><span class="pre">Encryption_Data.clear_passphrases()</span></code></a></li>
+<li><a class="reference internal" href="#blivet.static_data.encryption_data.Encryption_Data.encryption_passphrase"><code class="docutils literal notranslate"><span class="pre">Encryption_Data.encryption_passphrase</span></code></a></li>
+<li><a class="reference internal" href="#blivet.static_data.encryption_data.Encryption_Data.luks_devs"><code class="docutils literal notranslate"><span class="pre">Encryption_Data.luks_devs</span></code></a></li>
+<li><a class="reference internal" href="#blivet.static_data.encryption_data.Encryption_Data.min_entropy"><code class="docutils literal notranslate"><span class="pre">Encryption_Data.min_entropy</span></code></a></li>
+<li><a class="reference internal" href="#blivet.static_data.encryption_data.Encryption_Data.passphrases"><code class="docutils literal notranslate"><span class="pre">Encryption_Data.passphrases</span></code></a></li>
+<li><a class="reference internal" href="#blivet.static_data.encryption_data.Encryption_Data.pbkdf_args"><code class="docutils literal notranslate"><span class="pre">Encryption_Data.pbkdf_args</span></code></a></li>
+<li><a class="reference internal" href="#blivet.static_data.encryption_data.Encryption_Data.reset"><code class="docutils literal notranslate"><span class="pre">Encryption_Data.reset()</span></code></a></li>
+<li><a class="reference internal" href="#blivet.static_data.encryption_data.Encryption_Data.save_passphrase"><code class="docutils literal notranslate"><span class="pre">Encryption_Data.save_passphrase()</span></code></a></li>
+<li><a class="reference internal" href="#blivet.static_data.encryption_data.Encryption_Data.stratis_devs"><code class="docutils literal notranslate"><span class="pre">Encryption_Data.stratis_devs</span></code></a></li>
 </ul>
 </li>
 </ul>
 </li>
+<li><a class="reference internal" href="#module-blivet.static_data.luks_data">blivet.static_data.luks_data module</a></li>
 <li><a class="reference internal" href="#module-blivet.static_data.lvm_info">blivet.static_data.lvm_info module</a><ul>
 <li><a class="reference internal" href="#blivet.static_data.lvm_info.LVsInfo"><code class="docutils literal notranslate"><span class="pre">LVsInfo</span></code></a><ul>
 <li><a class="reference internal" href="#blivet.static_data.lvm_info.LVsInfo.cache"><code class="docutils literal notranslate"><span class="pre">LVsInfo.cache</span></code></a></li>
@@ -537,16 +517,8 @@ Maintains the Stratis devices info cache.</p>
 <li><a class="reference internal" href="#blivet.static_data.stratis_info.StratisInfo.get_blockdev_info"><code class="docutils literal notranslate"><span class="pre">StratisInfo.get_blockdev_info()</span></code></a></li>
 <li><a class="reference internal" href="#blivet.static_data.stratis_info.StratisInfo.get_filesystem_info"><code class="docutils literal notranslate"><span class="pre">StratisInfo.get_filesystem_info()</span></code></a></li>
 <li><a class="reference internal" href="#blivet.static_data.stratis_info.StratisInfo.get_pool_info"><code class="docutils literal notranslate"><span class="pre">StratisInfo.get_pool_info()</span></code></a></li>
-<li><a class="reference internal" href="#blivet.static_data.stratis_info.StratisInfo.locked_pools"><code class="docutils literal notranslate"><span class="pre">StratisInfo.locked_pools</span></code></a></li>
 <li><a class="reference internal" href="#blivet.static_data.stratis_info.StratisInfo.pools"><code class="docutils literal notranslate"><span class="pre">StratisInfo.pools</span></code></a></li>
 <li><a class="reference internal" href="#blivet.static_data.stratis_info.StratisInfo.stopped_pools"><code class="docutils literal notranslate"><span class="pre">StratisInfo.stopped_pools</span></code></a></li>
-</ul>
-</li>
-<li><a class="reference internal" href="#blivet.static_data.stratis_info.StratisLockedPoolInfo"><code class="docutils literal notranslate"><span class="pre">StratisLockedPoolInfo</span></code></a><ul>
-<li><a class="reference internal" href="#blivet.static_data.stratis_info.StratisLockedPoolInfo.clevis"><code class="docutils literal notranslate"><span class="pre">StratisLockedPoolInfo.clevis</span></code></a></li>
-<li><a class="reference internal" href="#blivet.static_data.stratis_info.StratisLockedPoolInfo.devices"><code class="docutils literal notranslate"><span class="pre">StratisLockedPoolInfo.devices</span></code></a></li>
-<li><a class="reference internal" href="#blivet.static_data.stratis_info.StratisLockedPoolInfo.key_desc"><code class="docutils literal notranslate"><span class="pre">StratisLockedPoolInfo.key_desc</span></code></a></li>
-<li><a class="reference internal" href="#blivet.static_data.stratis_info.StratisLockedPoolInfo.uuid"><code class="docutils literal notranslate"><span class="pre">StratisLockedPoolInfo.uuid</span></code></a></li>
 </ul>
 </li>
 <li><a class="reference internal" href="#blivet.static_data.stratis_info.StratisPoolInfo"><code class="docutils literal notranslate"><span class="pre">StratisPoolInfo</span></code></a><ul>
@@ -554,6 +526,7 @@ Maintains the Stratis devices info cache.</p>
 <li><a class="reference internal" href="#blivet.static_data.stratis_info.StratisPoolInfo.encrypted"><code class="docutils literal notranslate"><span class="pre">StratisPoolInfo.encrypted</span></code></a></li>
 <li><a class="reference internal" href="#blivet.static_data.stratis_info.StratisPoolInfo.name"><code class="docutils literal notranslate"><span class="pre">StratisPoolInfo.name</span></code></a></li>
 <li><a class="reference internal" href="#blivet.static_data.stratis_info.StratisPoolInfo.object_path"><code class="docutils literal notranslate"><span class="pre">StratisPoolInfo.object_path</span></code></a></li>
+<li><a class="reference internal" href="#blivet.static_data.stratis_info.StratisPoolInfo.overprovisioning"><code class="docutils literal notranslate"><span class="pre">StratisPoolInfo.overprovisioning</span></code></a></li>
 <li><a class="reference internal" href="#blivet.static_data.stratis_info.StratisPoolInfo.physical_size"><code class="docutils literal notranslate"><span class="pre">StratisPoolInfo.physical_size</span></code></a></li>
 <li><a class="reference internal" href="#blivet.static_data.stratis_info.StratisPoolInfo.physical_used"><code class="docutils literal notranslate"><span class="pre">StratisPoolInfo.physical_used</span></code></a></li>
 <li><a class="reference internal" href="#blivet.static_data.stratis_info.StratisPoolInfo.uuid"><code class="docutils literal notranslate"><span class="pre">StratisPoolInfo.uuid</span></code></a></li>
@@ -620,7 +593,7 @@ Maintains the Stratis devices info cache.</p>
         <li class="right" >
           <a href="blivet.populator.helpers.html" title="blivet.populator.helpers package"
              >previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../index.html">Blivet 3.13.2 documentation</a> &#187;</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">Blivet 3.14.0 documentation</a> &#187;</li>
           <li class="nav-item nav-item-1"><a href="blivet.html" >blivet package</a> &#187;</li>
         <li class="nav-item nav-item-this"><a href="">blivet.static_data package</a></li> 
       </ul>

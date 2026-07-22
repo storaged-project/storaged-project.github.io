@@ -5,11 +5,11 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>blivet.devices package &#8212; Blivet 3.13.2 documentation</title>
+    <title>blivet.devices package &#8212; Blivet 3.14.0 documentation</title>
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=03e43079" />
     <link rel="stylesheet" type="text/css" href="../_static/classic.css?v=2bf1fcf8" />
     
-    <script src="../_static/documentation_options.js?v=f92f4e34"></script>
+    <script src="../_static/documentation_options.js?v=e4f4b189"></script>
     <script src="../_static/doctools.js?v=9bcbadda"></script>
     <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
     
@@ -33,7 +33,7 @@
         <li class="right" >
           <a href="blivet.devicelibs.html" title="blivet.devicelibs package"
              accesskey="P">previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../index.html">Blivet 3.13.2 documentation</a> &#187;</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">Blivet 3.14.0 documentation</a> &#187;</li>
           <li class="nav-item nav-item-1"><a href="blivet.html" accesskey="U">blivet package</a> &#187;</li>
         <li class="nav-item nav-item-this"><a href="">blivet.devices package</a></li> 
       </ul>
@@ -5044,6 +5044,7 @@ the size from /sys.</p>
 <li><p><strong>passphrase</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.14)"><em>str</em></a>) – device passphrase</p></li>
 <li><p><strong>key_file</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.14)"><em>str</em></a>) – path to a file containing a key</p></li>
 <li><p><strong>clevis</strong> – clevis configuration</p></li>
+<li><p><strong>overprovisioning</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.14)"><em>bool</em></a>) – whether overprovisioning is enabled for this pool or not</p></li>
 </ul>
 </dd>
 <dt class="field-odd">Type<span class="colon">:</span></dt>
@@ -5109,6 +5110,12 @@ False that are normally performed as part of the device constructor.</p>
 <dt class="sig sig-object py" id="blivet.devices.stratis.StratisPoolDevice.key_file">
 <em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">key_file</span></span><a class="headerlink" href="#blivet.devices.stratis.StratisPoolDevice.key_file" title="Link to this definition">¶</a></dt>
 <dd><p>Path to key file to be used in /etc/crypttab</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="blivet.devices.stratis.StratisPoolDevice.overprovisioning">
+<em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">overprovisioning</span></span><a class="headerlink" href="#blivet.devices.stratis.StratisPoolDevice.overprovisioning" title="Link to this definition">¶</a></dt>
+<dd><p>Whether this pool has overprovisioning enabled or not</p>
 </dd></dl>
 
 <dl class="py property">
@@ -5952,6 +5959,7 @@ override the default value of modparent in new code.</p>
 <li><a class="reference internal" href="#blivet.devices.stratis.StratisPoolDevice.free_space"><code class="docutils literal notranslate"><span class="pre">StratisPoolDevice.free_space</span></code></a></li>
 <li><a class="reference internal" href="#blivet.devices.stratis.StratisPoolDevice.has_key"><code class="docutils literal notranslate"><span class="pre">StratisPoolDevice.has_key</span></code></a></li>
 <li><a class="reference internal" href="#blivet.devices.stratis.StratisPoolDevice.key_file"><code class="docutils literal notranslate"><span class="pre">StratisPoolDevice.key_file</span></code></a></li>
+<li><a class="reference internal" href="#blivet.devices.stratis.StratisPoolDevice.overprovisioning"><code class="docutils literal notranslate"><span class="pre">StratisPoolDevice.overprovisioning</span></code></a></li>
 <li><a class="reference internal" href="#blivet.devices.stratis.StratisPoolDevice.passphrase"><code class="docutils literal notranslate"><span class="pre">StratisPoolDevice.passphrase</span></code></a></li>
 <li><a class="reference internal" href="#blivet.devices.stratis.StratisPoolDevice.remove_hook"><code class="docutils literal notranslate"><span class="pre">StratisPoolDevice.remove_hook()</span></code></a></li>
 <li><a class="reference internal" href="#blivet.devices.stratis.StratisPoolDevice.size"><code class="docutils literal notranslate"><span class="pre">StratisPoolDevice.size</span></code></a></li>
@@ -6012,7 +6020,7 @@ override the default value of modparent in new code.</p>
         <li class="right" >
           <a href="blivet.devicelibs.html" title="blivet.devicelibs package"
              >previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../index.html">Blivet 3.13.2 documentation</a> &#187;</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">Blivet 3.14.0 documentation</a> &#187;</li>
           <li class="nav-item nav-item-1"><a href="blivet.html" >blivet package</a> &#187;</li>
         <li class="nav-item nav-item-this"><a href="">blivet.devices package</a></li> 
       </ul>
