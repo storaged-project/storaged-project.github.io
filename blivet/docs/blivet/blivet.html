@@ -5,11 +5,11 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>blivet package &#8212; Blivet 3.14.0 documentation</title>
+    <title>blivet package &#8212; Blivet 3.14.1 documentation</title>
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=03e43079" />
     <link rel="stylesheet" type="text/css" href="../_static/classic.css?v=2bf1fcf8" />
     
-    <script src="../_static/documentation_options.js?v=e4f4b189"></script>
+    <script src="../_static/documentation_options.js?v=408c3590"></script>
     <script src="../_static/doctools.js?v=9bcbadda"></script>
     <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
     
@@ -33,7 +33,7 @@
         <li class="right" >
           <a href="../testing.html" title="Testing Blivet"
              accesskey="P">previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../index.html">Blivet 3.14.0 documentation</a> &#187;</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">Blivet 3.14.1 documentation</a> &#187;</li>
         <li class="nav-item nav-item-this"><a href="">blivet package</a></li> 
       </ul>
     </div>  
@@ -1100,6 +1100,7 @@
 <li class="toctree-l4"><a class="reference internal" href="blivet.devices.html#blivet.devices.stratis.StratisFilesystemDevice.dracut_setup_args"><code class="docutils literal notranslate"><span class="pre">StratisFilesystemDevice.dracut_setup_args()</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="blivet.devices.html#blivet.devices.stratis.StratisFilesystemDevice.fsname"><code class="docutils literal notranslate"><span class="pre">StratisFilesystemDevice.fsname</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="blivet.devices.html#blivet.devices.stratis.StratisFilesystemDevice.pool"><code class="docutils literal notranslate"><span class="pre">StratisFilesystemDevice.pool</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="blivet.devices.html#blivet.devices.stratis.StratisFilesystemDevice.populate_ksdata"><code class="docutils literal notranslate"><span class="pre">StratisFilesystemDevice.populate_ksdata()</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="blivet.devices.html#blivet.devices.stratis.StratisFilesystemDevice.used_size"><code class="docutils literal notranslate"><span class="pre">StratisFilesystemDevice.used_size</span></code></a></li>
 </ul>
 </li>
@@ -1111,10 +1112,12 @@
 <li class="toctree-l4"><a class="reference internal" href="blivet.devices.html#blivet.devices.stratis.StratisPoolDevice.encrypted"><code class="docutils literal notranslate"><span class="pre">StratisPoolDevice.encrypted</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="blivet.devices.html#blivet.devices.stratis.StratisPoolDevice.filesystems"><code class="docutils literal notranslate"><span class="pre">StratisPoolDevice.filesystems</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="blivet.devices.html#blivet.devices.stratis.StratisPoolDevice.free_space"><code class="docutils literal notranslate"><span class="pre">StratisPoolDevice.free_space</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="blivet.devices.html#blivet.devices.stratis.StratisPoolDevice.fs_limit"><code class="docutils literal notranslate"><span class="pre">StratisPoolDevice.fs_limit</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="blivet.devices.html#blivet.devices.stratis.StratisPoolDevice.has_key"><code class="docutils literal notranslate"><span class="pre">StratisPoolDevice.has_key</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="blivet.devices.html#blivet.devices.stratis.StratisPoolDevice.key_file"><code class="docutils literal notranslate"><span class="pre">StratisPoolDevice.key_file</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="blivet.devices.html#blivet.devices.stratis.StratisPoolDevice.overprovisioning"><code class="docutils literal notranslate"><span class="pre">StratisPoolDevice.overprovisioning</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="blivet.devices.html#blivet.devices.stratis.StratisPoolDevice.passphrase"><code class="docutils literal notranslate"><span class="pre">StratisPoolDevice.passphrase</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="blivet.devices.html#blivet.devices.stratis.StratisPoolDevice.populate_ksdata"><code class="docutils literal notranslate"><span class="pre">StratisPoolDevice.populate_ksdata()</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="blivet.devices.html#blivet.devices.stratis.StratisPoolDevice.remove_hook"><code class="docutils literal notranslate"><span class="pre">StratisPoolDevice.remove_hook()</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="blivet.devices.html#blivet.devices.stratis.StratisPoolDevice.size"><code class="docutils literal notranslate"><span class="pre">StratisPoolDevice.size</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="blivet.devices.html#blivet.devices.stratis.StratisPoolDevice.status"><code class="docutils literal notranslate"><span class="pre">StratisPoolDevice.status</span></code></a></li>
@@ -1473,6 +1476,7 @@
 <li class="toctree-l2"><a class="reference internal" href="blivet.formats.html#module-blivet.formats.stratis">blivet.formats.stratis module</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="blivet.formats.html#blivet.formats.stratis.StratisBlockdev"><code class="docutils literal notranslate"><span class="pre">StratisBlockdev</span></code></a><ul>
 <li class="toctree-l4"><a class="reference internal" href="blivet.formats.html#blivet.formats.stratis.StratisBlockdev.dict"><code class="docutils literal notranslate"><span class="pre">StratisBlockdev.dict</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="blivet.formats.html#blivet.formats.stratis.StratisBlockdev.populate_ksdata"><code class="docutils literal notranslate"><span class="pre">StratisBlockdev.populate_ksdata()</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="blivet.formats.html#blivet.formats.stratis.StratisBlockdev.status"><code class="docutils literal notranslate"><span class="pre">StratisBlockdev.status</span></code></a></li>
 </ul>
 </li>
@@ -1657,6 +1661,7 @@
 <li class="toctree-l4"><a class="reference internal" href="blivet.static_data.html#blivet.static_data.stratis_info.StratisFilesystemInfo.object_path"><code class="docutils literal notranslate"><span class="pre">StratisFilesystemInfo.object_path</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="blivet.static_data.html#blivet.static_data.stratis_info.StratisFilesystemInfo.pool_name"><code class="docutils literal notranslate"><span class="pre">StratisFilesystemInfo.pool_name</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="blivet.static_data.html#blivet.static_data.stratis_info.StratisFilesystemInfo.pool_uuid"><code class="docutils literal notranslate"><span class="pre">StratisFilesystemInfo.pool_uuid</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="blivet.static_data.html#blivet.static_data.stratis_info.StratisFilesystemInfo.size_limit"><code class="docutils literal notranslate"><span class="pre">StratisFilesystemInfo.size_limit</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="blivet.static_data.html#blivet.static_data.stratis_info.StratisFilesystemInfo.used_size"><code class="docutils literal notranslate"><span class="pre">StratisFilesystemInfo.used_size</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="blivet.static_data.html#blivet.static_data.stratis_info.StratisFilesystemInfo.uuid"><code class="docutils literal notranslate"><span class="pre">StratisFilesystemInfo.uuid</span></code></a></li>
 </ul>
@@ -1675,6 +1680,7 @@
 <li class="toctree-l3"><a class="reference internal" href="blivet.static_data.html#blivet.static_data.stratis_info.StratisPoolInfo"><code class="docutils literal notranslate"><span class="pre">StratisPoolInfo</span></code></a><ul>
 <li class="toctree-l4"><a class="reference internal" href="blivet.static_data.html#blivet.static_data.stratis_info.StratisPoolInfo.clevis"><code class="docutils literal notranslate"><span class="pre">StratisPoolInfo.clevis</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="blivet.static_data.html#blivet.static_data.stratis_info.StratisPoolInfo.encrypted"><code class="docutils literal notranslate"><span class="pre">StratisPoolInfo.encrypted</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="blivet.static_data.html#blivet.static_data.stratis_info.StratisPoolInfo.fs_limit"><code class="docutils literal notranslate"><span class="pre">StratisPoolInfo.fs_limit</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="blivet.static_data.html#blivet.static_data.stratis_info.StratisPoolInfo.name"><code class="docutils literal notranslate"><span class="pre">StratisPoolInfo.name</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="blivet.static_data.html#blivet.static_data.stratis_info.StratisPoolInfo.object_path"><code class="docutils literal notranslate"><span class="pre">StratisPoolInfo.object_path</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="blivet.static_data.html#blivet.static_data.stratis_info.StratisPoolInfo.overprovisioning"><code class="docutils literal notranslate"><span class="pre">StratisPoolInfo.overprovisioning</span></code></a></li>
@@ -10536,7 +10542,7 @@ discover.</p>
         <li class="right" >
           <a href="../testing.html" title="Testing Blivet"
              >previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../index.html">Blivet 3.14.0 documentation</a> &#187;</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">Blivet 3.14.1 documentation</a> &#187;</li>
         <li class="nav-item nav-item-this"><a href="">blivet package</a></li> 
       </ul>
     </div>
