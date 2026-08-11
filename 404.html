@@ -24,6 +24,12 @@ layout: page
   <p>The requested page could not be found.</p>
 </div>
 
+<script>
+  if (window.location.pathname.indexOf('/doc/storaged-api/') === 0) {
+    window.location.replace('/udisks/docs/');
+  }
+</script>
+
 {%- if site.goatcounter -%}
 <script>
   window.goatcounter = window.goatcounter || {};
