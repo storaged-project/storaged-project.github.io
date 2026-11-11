@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
@@ -26,20 +26,13 @@
   
 
   
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=8e8a900e" />
   
-    <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=b44ff054" />
   
-
+    <link rel="stylesheet" type="text/css" href="../../_static/graphviz.css?v=4ae1632d" />
   
-    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
-  
-    <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
-  
-    <link rel="stylesheet" href="../../_static/graphviz.css" type="text/css" />
-  
-
-  
-    <link rel="stylesheet" href="../../_static/css/pgi.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/css/pgi.css?v=b5928285" />
   
 
   
@@ -191,9 +184,9 @@
           <div role="main">
             
   <section id="blockdev-cryptointegrityextra">
-<h1>BlockDev.CryptoIntegrityExtra<a class="headerlink" href="#blockdev-cryptointegrityextra" title="Permalink to this heading">¶</a></h1>
+<h1>BlockDev.CryptoIntegrityExtra<a class="headerlink" href="#blockdev-cryptointegrityextra" title="Link to this heading">¶</a></h1>
 <section id="fields">
-<span id="blockdev-cryptointegrityextra-fields"></span><h2>Fields<a class="headerlink" href="#fields" title="Permalink to this heading">¶</a></h2>
+<span id="blockdev-cryptointegrityextra-fields"></span><h2>Fields<a class="headerlink" href="#fields" title="Link to this heading">¶</a></h2>
 <table class="docutils align-default">
 <colgroup>
 <col style="width: 16.4%" />
@@ -210,37 +203,37 @@
 </thead>
 <tbody>
 <tr class="row-even"><td><p>buffer_sectors</p></td>
-<td><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">int</span></code></a></p></td>
+<td><p><a class="reference external" href="https://docs.python.org/3/builtins/functions.html#int" title="(in Python v3.15)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">int</span></code></a></p></td>
 <td><p>r/w</p></td>
 <td><p>number of sectors in one buffer</p></td>
 </tr>
 <tr class="row-odd"><td><p>interleave_sectors</p></td>
-<td><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">int</span></code></a></p></td>
+<td><p><a class="reference external" href="https://docs.python.org/3/builtins/functions.html#int" title="(in Python v3.15)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">int</span></code></a></p></td>
 <td><p>r/w</p></td>
 <td><p>number of interleave sectors (power of two)</p></td>
 </tr>
 <tr class="row-even"><td><p>journal_commit_time</p></td>
-<td><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">int</span></code></a></p></td>
+<td><p><a class="reference external" href="https://docs.python.org/3/builtins/functions.html#int" title="(in Python v3.15)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">int</span></code></a></p></td>
 <td><p>r/w</p></td>
 <td><p>journal commit time (or bitmap flush time) in ms</p></td>
 </tr>
 <tr class="row-odd"><td><p>journal_size</p></td>
-<td><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">int</span></code></a></p></td>
+<td><p><a class="reference external" href="https://docs.python.org/3/builtins/functions.html#int" title="(in Python v3.15)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">int</span></code></a></p></td>
 <td><p>r/w</p></td>
 <td><p>size of journal in bytes</p></td>
 </tr>
 <tr class="row-even"><td><p>journal_watermark</p></td>
-<td><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">int</span></code></a></p></td>
+<td><p><a class="reference external" href="https://docs.python.org/3/builtins/functions.html#int" title="(in Python v3.15)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">int</span></code></a></p></td>
 <td><p>r/w</p></td>
 <td><p>journal flush watermark in percents; in bitmap mode sectors-per-bit</p></td>
 </tr>
 <tr class="row-odd"><td><p>sector_size</p></td>
-<td><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">int</span></code></a></p></td>
+<td><p><a class="reference external" href="https://docs.python.org/3/builtins/functions.html#int" title="(in Python v3.15)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">int</span></code></a></p></td>
 <td><p>r/w</p></td>
 <td><p>integrity sector size</p></td>
 </tr>
 <tr class="row-even"><td><p>tag_size</p></td>
-<td><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">int</span></code></a></p></td>
+<td><p><a class="reference external" href="https://docs.python.org/3/builtins/functions.html#int" title="(in Python v3.15)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">int</span></code></a></p></td>
 <td><p>r/w</p></td>
 <td><p>tag size per-sector in bytes</p></td>
 </tr>
@@ -248,7 +241,7 @@
 </table>
 </section>
 <section id="methods">
-<span id="blockdev-cryptointegrityextra-methods"></span><h2>Methods<a class="headerlink" href="#methods" title="Permalink to this heading">¶</a></h2>
+<span id="blockdev-cryptointegrityextra-methods"></span><h2>Methods<a class="headerlink" href="#methods" title="Link to this heading">¶</a></h2>
 <table class="docutils align-default">
 <colgroup>
 <col style="width: 1.0%" />
@@ -262,23 +255,23 @@
 </table>
 </section>
 <section id="details">
-<h2>Details<a class="headerlink" href="#details" title="Permalink to this heading">¶</a></h2>
+<h2>Details<a class="headerlink" href="#details" title="Link to this heading">¶</a></h2>
 <dl class="py class">
 <dt class="sig sig-object py" id="BlockDev.CryptoIntegrityExtra">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">BlockDev.</span></span><span class="sig-name descname"><span class="pre">CryptoIntegrityExtra</span></span><a class="headerlink" href="#BlockDev.CryptoIntegrityExtra" title="Permalink to this definition">¶</a></dt>
+<span class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></span><span class="sig-prename descclassname"><span class="pre">BlockDev.</span></span><span class="sig-name descname"><span class="pre">CryptoIntegrityExtra</span></span><a class="headerlink" href="#BlockDev.CryptoIntegrityExtra" title="Link to this definition">¶</a></dt>
 <dd><dl class="py method">
 <dt class="sig sig-object py" id="BlockDev.CryptoIntegrityExtra.new">
-<em class="property"><span class="pre">classmethod</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">new</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">sector_size</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">journal_size</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">journal_watermark</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">journal_commit_time</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">interleave_sectors</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tag_size</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">buffer_sectors</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#BlockDev.CryptoIntegrityExtra.new" title="Permalink to this definition">¶</a></dt>
+<span class="property"><span class="k"><span class="pre">classmethod</span></span><span class="w"> </span></span><span class="sig-name descname"><span class="pre">new</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">sector_size</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">journal_size</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">journal_watermark</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">journal_commit_time</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">interleave_sectors</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tag_size</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">buffer_sectors</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#BlockDev.CryptoIntegrityExtra.new" title="Link to this definition">¶</a></dt>
 <dd><dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>sector_size</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">int</span></code></a>) – integrity sector size, 0 for default (512)</p></li>
-<li><p><strong>journal_size</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">int</span></code></a>) – size of journal in bytes</p></li>
-<li><p><strong>journal_watermark</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">int</span></code></a>) – journal flush watermark in percents; in bitmap mode sectors-per-bit</p></li>
-<li><p><strong>journal_commit_time</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">int</span></code></a>) – journal commit time (or bitmap flush time) in ms</p></li>
-<li><p><strong>interleave_sectors</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">int</span></code></a>) – number of interleave sectors (power of two)</p></li>
-<li><p><strong>tag_size</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">int</span></code></a>) – tag size per-sector in bytes</p></li>
-<li><p><strong>buffer_sectors</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">int</span></code></a>) – number of sectors in one buffer</p></li>
+<li><p><strong>sector_size</strong> (<a class="reference external" href="https://docs.python.org/3/builtins/functions.html#int" title="(in Python v3.15)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">int</span></code></a>) – integrity sector size, 0 for default (512)</p></li>
+<li><p><strong>journal_size</strong> (<a class="reference external" href="https://docs.python.org/3/builtins/functions.html#int" title="(in Python v3.15)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">int</span></code></a>) – size of journal in bytes</p></li>
+<li><p><strong>journal_watermark</strong> (<a class="reference external" href="https://docs.python.org/3/builtins/functions.html#int" title="(in Python v3.15)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">int</span></code></a>) – journal flush watermark in percents; in bitmap mode sectors-per-bit</p></li>
+<li><p><strong>journal_commit_time</strong> (<a class="reference external" href="https://docs.python.org/3/builtins/functions.html#int" title="(in Python v3.15)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">int</span></code></a>) – journal commit time (or bitmap flush time) in ms</p></li>
+<li><p><strong>interleave_sectors</strong> (<a class="reference external" href="https://docs.python.org/3/builtins/functions.html#int" title="(in Python v3.15)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">int</span></code></a>) – number of interleave sectors (power of two)</p></li>
+<li><p><strong>tag_size</strong> (<a class="reference external" href="https://docs.python.org/3/builtins/functions.html#int" title="(in Python v3.15)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">int</span></code></a>) – tag size per-sector in bytes</p></li>
+<li><p><strong>buffer_sectors</strong> (<a class="reference external" href="https://docs.python.org/3/builtins/functions.html#int" title="(in Python v3.15)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">int</span></code></a>) – number of sectors in one buffer</p></li>
 </ul>
 </dd>
 <dt class="field-even">Returns<span class="colon">:</span></dt>

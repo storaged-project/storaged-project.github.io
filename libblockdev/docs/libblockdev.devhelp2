@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8" standalone="no"?>
-<book xmlns="http://www.devhelp.net/book" title="libblockdev Reference Manual for libblockdev 3.5.0." link="index.html" author="" name="libblockdev" version="2" language="c">
+<book xmlns="http://www.devhelp.net/book" title="libblockdev Reference Manual for libblockdev 3.6.0." link="index.html" author="" name="libblockdev" version="2" language="c">
   <chapters>
     <sub name="libblockdev Reference Manual" link="ch01.html">
       <sub name="blockdev library" link="libblockdev-blockdev-library.html"/>
@@ -85,6 +85,7 @@
     <keyword type="function" name="bd_crypto_device_seems_encrypted ()" link="libblockdev-Crypto.html#bd-crypto-device-seems-encrypted"/>
     <keyword type="function" name="bd_crypto_luks_status ()" link="libblockdev-Crypto.html#bd-crypto-luks-status"/>
     <keyword type="function" name="bd_crypto_luks_format ()" link="libblockdev-Crypto.html#bd-crypto-luks-format"/>
+    <keyword type="function" name="bd_crypto_luks_format_volume_key ()" link="libblockdev-Crypto.html#bd-crypto-luks-format-volume-key"/>
     <keyword type="function" name="bd_crypto_luks_extra_free ()" link="libblockdev-Crypto.html#bd-crypto-luks-extra-free"/>
     <keyword type="function" name="bd_crypto_luks_extra_copy ()" link="libblockdev-Crypto.html#bd-crypto-luks-extra-copy"/>
     <keyword type="function" name="bd_crypto_luks_extra_new ()" link="libblockdev-Crypto.html#bd-crypto-luks-extra-new"/>
@@ -176,9 +177,13 @@
     <keyword type="function" name="bd_dm_node_from_name ()" link="libblockdev-DeviceMapper.html#bd-dm-node-from-name"/>
     <keyword type="function" name="bd_dm_map_exists ()" link="libblockdev-DeviceMapper.html#bd-dm-map-exists"/>
     <keyword type="function" name="bd_dm_get_subsystem_from_name ()" link="libblockdev-DeviceMapper.html#bd-dm-get-subsystem-from-name"/>
+    <keyword type="function" name="bd_dm_get_thin_pool_stats ()" link="libblockdev-DeviceMapper.html#bd-dm-get-thin-pool-stats"/>
+    <keyword type="function" name="bd_dm_thin_pool_stats_copy ()" link="libblockdev-DeviceMapper.html#bd-dm-thin-pool-stats-copy"/>
+    <keyword type="function" name="bd_dm_thin_pool_stats_free ()" link="libblockdev-DeviceMapper.html#bd-dm-thin-pool-stats-free"/>
     <keyword type="function" name="bd_dm_is_tech_avail ()" link="libblockdev-DeviceMapper.html#bd-dm-is-tech-avail"/>
     <keyword type="macro" name="BD_DM_ERROR" link="libblockdev-DeviceMapper.html#BD-DM-ERROR:CAPS"/>
     <keyword type="enum" name="enum BDDMError" link="libblockdev-DeviceMapper.html#BDDMError"/>
+    <keyword type="struct" name="BDDMThinPoolStats" link="libblockdev-DeviceMapper.html#BDDMThinPoolStats"/>
     <keyword type="enum" name="enum BDDMTech" link="libblockdev-DeviceMapper.html#BDDMTech"/>
     <keyword type="enum" name="enum BDDMTechMode" link="libblockdev-DeviceMapper.html#BDDMTechMode"/>
     <keyword type="function" name="bd_fs_init ()" link="libblockdev-FS.html#bd-fs-init"/>
@@ -364,14 +369,18 @@
     <keyword type="function" name="bd_loop_close ()" link="libblockdev-Loop.html#bd-loop-close"/>
     <keyword type="function" name="bd_loop_error_quark ()" link="libblockdev-Loop.html#bd-loop-error-quark"/>
     <keyword type="function" name="bd_loop_info ()" link="libblockdev-Loop.html#bd-loop-info"/>
+    <keyword type="function" name="bd_loop_info_from_fd ()" link="libblockdev-Loop.html#bd-loop-info-from-fd"/>
     <keyword type="function" name="bd_loop_info_copy ()" link="libblockdev-Loop.html#bd-loop-info-copy"/>
     <keyword type="function" name="bd_loop_info_free ()" link="libblockdev-Loop.html#bd-loop-info-free"/>
     <keyword type="function" name="bd_loop_get_loop_name ()" link="libblockdev-Loop.html#bd-loop-get-loop-name"/>
     <keyword type="function" name="bd_loop_setup ()" link="libblockdev-Loop.html#bd-loop-setup"/>
     <keyword type="function" name="bd_loop_setup_from_fd ()" link="libblockdev-Loop.html#bd-loop-setup-from-fd"/>
     <keyword type="function" name="bd_loop_teardown ()" link="libblockdev-Loop.html#bd-loop-teardown"/>
+    <keyword type="function" name="bd_loop_teardown_from_fd ()" link="libblockdev-Loop.html#bd-loop-teardown-from-fd"/>
     <keyword type="function" name="bd_loop_set_autoclear ()" link="libblockdev-Loop.html#bd-loop-set-autoclear"/>
+    <keyword type="function" name="bd_loop_set_autoclear_from_fd ()" link="libblockdev-Loop.html#bd-loop-set-autoclear-from-fd"/>
     <keyword type="function" name="bd_loop_set_capacity ()" link="libblockdev-Loop.html#bd-loop-set-capacity"/>
+    <keyword type="function" name="bd_loop_set_capacity_from_fd ()" link="libblockdev-Loop.html#bd-loop-set-capacity-from-fd"/>
     <keyword type="function" name="bd_loop_is_tech_avail ()" link="libblockdev-Loop.html#bd-loop-is-tech-avail"/>
     <keyword type="macro" name="BD_LOOP_ERROR" link="libblockdev-Loop.html#BD-LOOP-ERROR:CAPS"/>
     <keyword type="enum" name="enum BDLoopError" link="libblockdev-Loop.html#BDLoopError"/>
@@ -742,9 +751,17 @@
     <keyword type="function" name="bd_s390_zfcp_online ()" link="libblockdev-s390.html#bd-s390-zfcp-online"/>
     <keyword type="function" name="bd_s390_zfcp_scsi_offline ()" link="libblockdev-s390.html#bd-s390-zfcp-scsi-offline"/>
     <keyword type="function" name="bd_s390_zfcp_offline ()" link="libblockdev-s390.html#bd-s390-zfcp-offline"/>
+    <keyword type="function" name="bd_s390_zkey_generate ()" link="libblockdev-s390.html#bd-s390-zkey-generate"/>
+    <keyword type="function" name="bd_s390_zkey_info_copy ()" link="libblockdev-s390.html#bd-s390-zkey-info-copy"/>
+    <keyword type="function" name="bd_s390_zkey_info_free ()" link="libblockdev-s390.html#bd-s390-zkey-info-free"/>
+    <keyword type="function" name="bd_s390_zkey_list ()" link="libblockdev-s390.html#bd-s390-zkey-list"/>
+    <keyword type="function" name="bd_s390_zkey_remove ()" link="libblockdev-s390.html#bd-s390-zkey-remove"/>
+    <keyword type="function" name="bd_s390_zkey_cryptsetup_setvp ()" link="libblockdev-s390.html#bd-s390-zkey-cryptsetup-setvp"/>
+    <keyword type="function" name="bd_s390_zkey_cryptsetup_validate ()" link="libblockdev-s390.html#bd-s390-zkey-cryptsetup-validate"/>
     <keyword type="function" name="bd_s390_is_tech_avail ()" link="libblockdev-s390.html#bd-s390-is-tech-avail"/>
     <keyword type="enum" name="enum BDS390Error" link="libblockdev-s390.html#BDS390Error"/>
     <keyword type="macro" name="BD_S390_ERROR" link="libblockdev-s390.html#BD-S390-ERROR:CAPS"/>
+    <keyword type="struct" name="BDS390ZkeyInfo" link="libblockdev-s390.html#BDS390ZkeyInfo"/>
     <keyword type="enum" name="enum BDS390Tech" link="libblockdev-s390.html#BDS390Tech"/>
     <keyword type="enum" name="enum BDS390TechMode" link="libblockdev-s390.html#BDS390TechMode"/>
     <keyword type="function" name="BDUtilsProgExtract ()" link="libblockdev-Utils.html#BDUtilsProgExtract"/>
@@ -1340,10 +1357,13 @@
     <keyword type="constant" name="BD_S390_ERROR_FORMAT_FAILED" link="libblockdev-s390.html#BD-S390-ERROR-FORMAT-FAILED:CAPS"/>
     <keyword type="constant" name="BD_S390_ERROR_DASDFMT" link="libblockdev-s390.html#BD-S390-ERROR-DASDFMT:CAPS"/>
     <keyword type="constant" name="BD_S390_ERROR_IO" link="libblockdev-s390.html#BD-S390-ERROR-IO:CAPS"/>
+    <keyword type="constant" name="BD_S390_ERROR_ZKEY" link="libblockdev-s390.html#BD-S390-ERROR-ZKEY:CAPS"/>
     <keyword type="constant" name="BD_S390_TECH_DASD" link="libblockdev-s390.html#BD-S390-TECH-DASD:CAPS"/>
     <keyword type="constant" name="BD_S390_TECH_ZFCP" link="libblockdev-s390.html#BD-S390-TECH-ZFCP:CAPS"/>
+    <keyword type="constant" name="BD_S390_TECH_PAES" link="libblockdev-s390.html#BD-S390-TECH-PAES:CAPS"/>
     <keyword type="constant" name="BD_S390_TECH_MODE_MODIFY" link="libblockdev-s390.html#BD-S390-TECH-MODE-MODIFY:CAPS"/>
     <keyword type="constant" name="BD_S390_TECH_MODE_QUERY" link="libblockdev-s390.html#BD-S390-TECH-MODE-QUERY:CAPS"/>
+    <keyword type="constant" name="BD_S390_TECH_MODE_CREATE" link="libblockdev-s390.html#BD-S390-TECH-MODE-CREATE:CAPS"/>
     <keyword type="constant" name="BD_UTILS_PROG_STARTED" link="libblockdev-Utils.html#BD-UTILS-PROG-STARTED:CAPS"/>
     <keyword type="constant" name="BD_UTILS_PROG_PROGRESS" link="libblockdev-Utils.html#BD-UTILS-PROG-PROGRESS:CAPS"/>
     <keyword type="constant" name="BD_UTILS_PROG_FINISHED" link="libblockdev-Utils.html#BD-UTILS-PROG-FINISHED:CAPS"/>
@@ -1428,6 +1448,14 @@
     <keyword type="member" name="BDCryptoBITLKInfo.uuid" link="libblockdev-Crypto.html#BDCryptoBITLKInfo.uuid"/>
     <keyword type="member" name="BDCryptoBITLKInfo.backing-device" link="libblockdev-Crypto.html#BDCryptoBITLKInfo.backing-device"/>
     <keyword type="member" name="BDCryptoBITLKInfo.sector-size" link="libblockdev-Crypto.html#BDCryptoBITLKInfo.sector-size"/>
+    <keyword type="member" name="BDDMThinPoolStats.used-metadata-blocks" link="libblockdev-DeviceMapper.html#BDDMThinPoolStats.used-metadata-blocks"/>
+    <keyword type="member" name="BDDMThinPoolStats.total-metadata-blocks" link="libblockdev-DeviceMapper.html#BDDMThinPoolStats.total-metadata-blocks"/>
+    <keyword type="member" name="BDDMThinPoolStats.used-data-blocks" link="libblockdev-DeviceMapper.html#BDDMThinPoolStats.used-data-blocks"/>
+    <keyword type="member" name="BDDMThinPoolStats.total-data-blocks" link="libblockdev-DeviceMapper.html#BDDMThinPoolStats.total-data-blocks"/>
+    <keyword type="member" name="BDDMThinPoolStats.read-only" link="libblockdev-DeviceMapper.html#BDDMThinPoolStats.read-only"/>
+    <keyword type="member" name="BDDMThinPoolStats.fail" link="libblockdev-DeviceMapper.html#BDDMThinPoolStats.fail"/>
+    <keyword type="member" name="BDDMThinPoolStats.out-of-data-space" link="libblockdev-DeviceMapper.html#BDDMThinPoolStats.out-of-data-space"/>
+    <keyword type="member" name="BDDMThinPoolStats.needs-check" link="libblockdev-DeviceMapper.html#BDDMThinPoolStats.needs-check"/>
     <keyword type="member" name="BDFSFeatures.resize" link="libblockdev-FS.html#BDFSFeatures.resize"/>
     <keyword type="member" name="BDFSFeatures.mkfs" link="libblockdev-FS.html#BDFSFeatures.mkfs"/>
     <keyword type="member" name="BDFSFeatures.fsck" link="libblockdev-FS.html#BDFSFeatures.fsck"/>
@@ -1755,6 +1783,18 @@
     <keyword type="member" name="BDSmartSCSI.temperature-warning-enabled" link="libblockdev-SMART.html#BDSmartSCSI.temperature-warning-enabled"/>
     <keyword type="member" name="BDSmartSCSI.temperature" link="libblockdev-SMART.html#BDSmartSCSI.temperature"/>
     <keyword type="member" name="BDSmartSCSI.temperature-drive-trip" link="libblockdev-SMART.html#BDSmartSCSI.temperature-drive-trip"/>
+    <keyword type="member" name="BDS390ZkeyInfo.name" link="libblockdev-s390.html#BDS390ZkeyInfo.name"/>
+    <keyword type="member" name="BDS390ZkeyInfo.description" link="libblockdev-s390.html#BDS390ZkeyInfo.description"/>
+    <keyword type="member" name="BDS390ZkeyInfo.secure-key-size" link="libblockdev-s390.html#BDS390ZkeyInfo.secure-key-size"/>
+    <keyword type="member" name="BDS390ZkeyInfo.clear-key-size" link="libblockdev-s390.html#BDS390ZkeyInfo.clear-key-size"/>
+    <keyword type="member" name="BDS390ZkeyInfo.xts" link="libblockdev-s390.html#BDS390ZkeyInfo.xts"/>
+    <keyword type="member" name="BDS390ZkeyInfo.key-type" link="libblockdev-s390.html#BDS390ZkeyInfo.key-type"/>
+    <keyword type="member" name="BDS390ZkeyInfo.volumes" link="libblockdev-s390.html#BDS390ZkeyInfo.volumes"/>
+    <keyword type="member" name="BDS390ZkeyInfo.apqns" link="libblockdev-s390.html#BDS390ZkeyInfo.apqns"/>
+    <keyword type="member" name="BDS390ZkeyInfo.key-file-name" link="libblockdev-s390.html#BDS390ZkeyInfo.key-file-name"/>
+    <keyword type="member" name="BDS390ZkeyInfo.sector-size" link="libblockdev-s390.html#BDS390ZkeyInfo.sector-size"/>
+    <keyword type="member" name="BDS390ZkeyInfo.volume-type" link="libblockdev-s390.html#BDS390ZkeyInfo.volume-type"/>
+    <keyword type="member" name="BDS390ZkeyInfo.dummy-passphrase" link="libblockdev-s390.html#BDS390ZkeyInfo.dummy-passphrase"/>
     <keyword type="member" name="BDExtraArg.opt" link="libblockdev-Utils.html#BDExtraArg.opt"/>
     <keyword type="member" name="BDExtraArg.val" link="libblockdev-Utils.html#BDExtraArg.val"/>
   </functions>

@@ -2,9 +2,9 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>s390: libblockdev Reference Manual for libblockdev 3.5.0.</title>
+<title>s390: libblockdev Reference Manual for libblockdev 3.6.0.</title>
 <meta name="generator" content="DocBook XSL Stylesheets Vsnapshot">
-<link rel="home" href="index.html" title="libblockdev Reference Manual for libblockdev 3.5.0.">
+<link rel="home" href="index.html" title="libblockdev Reference Manual for libblockdev 3.6.0.">
 <link rel="up" href="ch01.html" title="libblockdev Reference Manual">
 <link rel="prev" href="libblockdev-Swap.html" title="Swap">
 <link rel="next" href="libblockdev-Utils.html" title="Utils">
@@ -156,6 +156,62 @@
 <span class="returnvalue">gboolean</span>
 </td>
 <td class="function_name">
+<a class="link" href="libblockdev-s390.html#bd-s390-zkey-generate" title="bd_s390_zkey_generate ()">bd_s390_zkey_generate</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a class="link" href="libblockdev-s390.html#BDS390ZkeyInfo" title="BDS390ZkeyInfo"><span class="returnvalue">BDS390ZkeyInfo</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="libblockdev-s390.html#bd-s390-zkey-info-copy" title="bd_s390_zkey_info_copy ()">bd_s390_zkey_info_copy</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="libblockdev-s390.html#bd-s390-zkey-info-free" title="bd_s390_zkey_info_free ()">bd_s390_zkey_info_free</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a class="link" href="libblockdev-s390.html#BDS390ZkeyInfo" title="BDS390ZkeyInfo"><span class="returnvalue">BDS390ZkeyInfo</span></a> **
+</td>
+<td class="function_name">
+<a class="link" href="libblockdev-s390.html#bd-s390-zkey-list" title="bd_s390_zkey_list ()">bd_s390_zkey_list</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">gboolean</span>
+</td>
+<td class="function_name">
+<a class="link" href="libblockdev-s390.html#bd-s390-zkey-remove" title="bd_s390_zkey_remove ()">bd_s390_zkey_remove</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">gboolean</span>
+</td>
+<td class="function_name">
+<a class="link" href="libblockdev-s390.html#bd-s390-zkey-cryptsetup-setvp" title="bd_s390_zkey_cryptsetup_setvp ()">bd_s390_zkey_cryptsetup_setvp</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">gboolean</span>
+</td>
+<td class="function_name">
+<a class="link" href="libblockdev-s390.html#bd-s390-zkey-cryptsetup-validate" title="bd_s390_zkey_cryptsetup_validate ()">bd_s390_zkey_cryptsetup_validate</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">gboolean</span>
+</td>
+<td class="function_name">
 <a class="link" href="libblockdev-s390.html#bd-s390-is-tech-avail" title="bd_s390_is_tech_avail ()">bd_s390_is_tech_avail</a> <span class="c_punctuation">()</span>
 </td>
 </tr>
@@ -177,6 +233,10 @@
 <tr>
 <td class="define_keyword">#define</td>
 <td class="function_name"><a class="link" href="libblockdev-s390.html#BD-S390-ERROR:CAPS" title="BD_S390_ERROR">BD_S390_ERROR</a></td>
+</tr>
+<tr>
+<td class="datatype_keyword"> </td>
+<td class="function_name"><a class="link" href="libblockdev-s390.html#BDS390ZkeyInfo" title="BDS390ZkeyInfo">BDS390ZkeyInfo</a></td>
 </tr>
 <tr>
 <td class="datatype_keyword">enum</td>
@@ -651,6 +711,322 @@ bd_s390_zfcp_offline (<em class="parameter"><code>const <span class="type">gchar
 </div>
 <hr>
 <div class="refsect2">
+<a name="bd-s390-zkey-generate"></a><h3>bd_s390_zkey_generate ()</h3>
+<pre class="programlisting"><span class="returnvalue">gboolean</span>
+bd_s390_zkey_generate (<em class="parameter"><code>const <span class="type">gchar</span> *name</code></em>,
+                       <em class="parameter"><code>const <span class="type">gchar</span> *key_type</code></em>,
+                       <em class="parameter"><code><span class="type">guint64</span> keybits</code></em>,
+                       <em class="parameter"><code>const <span class="type">gchar</span> **volumes</code></em>,
+                       <em class="parameter"><code>const <span class="type">gchar</span> **apqns</code></em>,
+                       <em class="parameter"><code><span class="type">guint64</span> sector_size</code></em>,
+                       <em class="parameter"><code><span class="type">gboolean</span> dummy_passphrase</code></em>,
+                       <em class="parameter"><code>const <a class="link" href="libblockdev-Utils.html#BDExtraArg" title="BDExtraArg"><span class="type">BDExtraArg</span></a> **extra</code></em>,
+                       <em class="parameter"><code><span class="type">GError</span> **error</code></em>);</pre>
+<p>Generates a new secure key for pervasive encryption using the 'zkey' utility and stores it
+in the secure key repository. The key is generated as an XTS key with the 'LUKS2' volume type.</p>
+<div class="refsect3">
+<a name="bd-s390-zkey-generate.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>name</p></td>
+<td class="parameter_description"><p>name of the secure key to generate in the secure key repository</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>key_type</p></td>
+<td class="parameter_description"><p>type of the secure key to generate (e.g. "CCA-AESCIPHER") or <code class="literal">NULL</code> for the zkey default. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="NULL may be passed as the value in, out, in-out; or as a return value."><span class="acronym">nullable</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>keybits</p></td>
+<td class="parameter_description"><p>size of the key in bits or 0 for the zkey default</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>volumes</p></td>
+<td class="parameter_description"><p>list of volumes to associate with the key, each given
+in the "volume:dmname" format, or <code class="literal">NULL</code>. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="NULL may be passed as the value in, out, in-out; or as a return value."><span class="acronym">nullable</span></acronym>][<acronym title="Parameter points to an array of items."><span class="acronym">array</span></acronym> zero-terminated=1]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>apqns</p></td>
+<td class="parameter_description"><p>list of cryptographic adapters (APQNs) to associate with
+the key, each given in the "card.domain" format, or <code class="literal">NULL</code>. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="NULL may be passed as the value in, out, in-out; or as a return value."><span class="acronym">nullable</span></acronym>][<acronym title="Parameter points to an array of items."><span class="acronym">array</span></acronym> zero-terminated=1]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>sector_size</p></td>
+<td class="parameter_description"><p>sector size in bytes to use with dm-crypt or 0 for the system default</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>dummy_passphrase</p></td>
+<td class="parameter_description"><p>whether to generate and associate a dummy passphrase with the key</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>extra</p></td>
+<td class="parameter_description"><p>extra options for the key generation (right now
+passed to the 'zkey' utility). </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="NULL may be passed as the value in, out, in-out; or as a return value."><span class="acronym">nullable</span></acronym>][<acronym title="Parameter points to an array of items."><span class="acronym">array</span></acronym> zero-terminated=1]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>error</p></td>
+<td class="parameter_description"><p>place to store error (if any). </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for returning results. Default is transfer full."><span class="acronym">out</span></acronym>][<acronym title="NULL may be passed instead of a pointer to a location."><span class="acronym">optional</span></acronym>]</span></td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="bd-s390-zkey-generate.returns"></a><h4>Returns</h4>
+<p> whether the secure key was successfully generated or not</p>
+<p>Tech category: <a class="link" href="libblockdev-s390.html#BD-S390-TECH-PAES:CAPS"><code class="literal">BD_S390_TECH_PAES</code></a>-<a class="link" href="libblockdev-s390.html#BD-S390-TECH-MODE-CREATE:CAPS"><code class="literal">BD_S390_TECH_MODE_CREATE</code></a></p>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="bd-s390-zkey-info-copy"></a><h3>bd_s390_zkey_info_copy ()</h3>
+<pre class="programlisting"><a class="link" href="libblockdev-s390.html#BDS390ZkeyInfo" title="BDS390ZkeyInfo"><span class="returnvalue">BDS390ZkeyInfo</span></a> *
+bd_s390_zkey_info_copy (<em class="parameter"><code><a class="link" href="libblockdev-s390.html#BDS390ZkeyInfo" title="BDS390ZkeyInfo"><span class="type">BDS390ZkeyInfo</span></a> *info</code></em>);</pre>
+<p>Creates a new copy of <em class="parameter"><code>info</code></em>
+.</p>
+<p><span class="annotation">[<acronym title="Exposed in C code, not necessarily available in other languages."><span class="acronym">skip</span></acronym>]</span></p>
+<div class="refsect3">
+<a name="bd-s390-zkey-info-copy.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>info</p></td>
+<td class="parameter_description"><p><a class="link" href="libblockdev-s390.html#BDS390ZkeyInfo" title="BDS390ZkeyInfo"><code class="literal">BDS390ZkeyInfo</code></a> to copy. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="NULL may be passed as the value in, out, in-out; or as a return value."><span class="acronym">nullable</span></acronym>]</span></td>
+</tr></tbody>
+</table></div>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="bd-s390-zkey-info-free"></a><h3>bd_s390_zkey_info_free ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+bd_s390_zkey_info_free (<em class="parameter"><code><a class="link" href="libblockdev-s390.html#BDS390ZkeyInfo" title="BDS390ZkeyInfo"><span class="type">BDS390ZkeyInfo</span></a> *info</code></em>);</pre>
+<p>Frees <em class="parameter"><code>info</code></em>
+.</p>
+<p><span class="annotation">[<acronym title="Exposed in C code, not necessarily available in other languages."><span class="acronym">skip</span></acronym>]</span></p>
+<div class="refsect3">
+<a name="bd-s390-zkey-info-free.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>info</p></td>
+<td class="parameter_description"><p><a class="link" href="libblockdev-s390.html#BDS390ZkeyInfo" title="BDS390ZkeyInfo"><code class="literal">BDS390ZkeyInfo</code></a> to free. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="NULL may be passed as the value in, out, in-out; or as a return value."><span class="acronym">nullable</span></acronym>]</span></td>
+</tr></tbody>
+</table></div>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="bd-s390-zkey-list"></a><h3>bd_s390_zkey_list ()</h3>
+<pre class="programlisting"><a class="link" href="libblockdev-s390.html#BDS390ZkeyInfo" title="BDS390ZkeyInfo"><span class="returnvalue">BDS390ZkeyInfo</span></a> **
+bd_s390_zkey_list (<em class="parameter"><code>const <span class="type">gchar</span> *name</code></em>,
+                   <em class="parameter"><code><span class="type">GError</span> **error</code></em>);</pre>
+<p>Lists the secure keys stored in the secure key repository using the 'zkey' utility. If <em class="parameter"><code>name</code></em>
+
+is given, only the information about the matching key is returned.</p>
+<div class="refsect3">
+<a name="bd-s390-zkey-list.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>name</p></td>
+<td class="parameter_description"><p>name of a single secure key to get information about or <code class="literal">NULL</code> to list all keys. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="NULL may be passed as the value in, out, in-out; or as a return value."><span class="acronym">nullable</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>error</p></td>
+<td class="parameter_description"><p>place to store error (if any). </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for returning results. Default is transfer full."><span class="acronym">out</span></acronym>][<acronym title="NULL may be passed instead of a pointer to a location."><span class="acronym">optional</span></acronym>]</span></td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="bd-s390-zkey-list.returns"></a><h4>Returns</h4>
+<p>information about the secure keys in the
+repository (an empty list if there are none) or <code class="literal">NULL</code> in case of error</p>
+<p>Tech category: <a class="link" href="libblockdev-s390.html#BD-S390-TECH-PAES:CAPS"><code class="literal">BD_S390_TECH_PAES</code></a>-<a class="link" href="libblockdev-s390.html#BD-S390-TECH-MODE-QUERY:CAPS"><code class="literal">BD_S390_TECH_MODE_QUERY</code></a>. </p>
+<p><span class="annotation">[<acronym title="Parameter points to an array of items."><span class="acronym">array</span></acronym> zero-terminated=1][<acronym title="The caller owns the data, and is responsible for free it."><span class="acronym">transfer full</span></acronym>]</span></p>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="bd-s390-zkey-remove"></a><h3>bd_s390_zkey_remove ()</h3>
+<pre class="programlisting"><span class="returnvalue">gboolean</span>
+bd_s390_zkey_remove (<em class="parameter"><code>const <span class="type">gchar</span> *name</code></em>,
+                     <em class="parameter"><code><span class="type">GError</span> **error</code></em>);</pre>
+<p>Removes the secure key <em class="parameter"><code>name</code></em>
+ from the secure key repository using the 'zkey' utility.</p>
+<div class="refsect3">
+<a name="bd-s390-zkey-remove.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>name</p></td>
+<td class="parameter_description"><p>name of the secure key to remove from the secure key repository</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>error</p></td>
+<td class="parameter_description"><p>place to store error (if any). </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for returning results. Default is transfer full."><span class="acronym">out</span></acronym>][<acronym title="NULL may be passed instead of a pointer to a location."><span class="acronym">optional</span></acronym>]</span></td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="bd-s390-zkey-remove.returns"></a><h4>Returns</h4>
+<p> whether the secure key was successfully removed or not</p>
+<p>Tech category: <a class="link" href="libblockdev-s390.html#BD-S390-TECH-PAES:CAPS"><code class="literal">BD_S390_TECH_PAES</code></a>-<a class="link" href="libblockdev-s390.html#BD-S390-TECH-MODE-MODIFY:CAPS"><code class="literal">BD_S390_TECH_MODE_MODIFY</code></a></p>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="bd-s390-zkey-cryptsetup-setvp"></a><h3>bd_s390_zkey_cryptsetup_setvp ()</h3>
+<pre class="programlisting"><span class="returnvalue">gboolean</span>
+bd_s390_zkey_cryptsetup_setvp (<em class="parameter"><code>const <span class="type">gchar</span> *device</code></em>,
+                               <em class="parameter"><code>const <span class="type">gchar</span> *key_file</code></em>,
+                               <em class="parameter"><code>const <a class="link" href="libblockdev-Utils.html#BDExtraArg" title="BDExtraArg"><span class="type">BDExtraArg</span></a> **extra</code></em>,
+                               <em class="parameter"><code><span class="type">GError</span> **error</code></em>);</pre>
+<p>Sets the verification pattern of the secure key in the metadata of the LUKS2 volume <em class="parameter"><code>device</code></em>
+
+using the 'zkey-cryptsetup' utility. The verification pattern is used to identify the secure
+key associated with the volume. Setting the verification pattern requires unlocking a keyslot
+of <em class="parameter"><code>device</code></em>
+, so the LUKS passphrase needs to be provided in <em class="parameter"><code>key_file</code></em>
+ (this is a passphrase
+file, not the secure key file).</p>
+<div class="refsect3">
+<a name="bd-s390-zkey-cryptsetup-setvp.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>device</p></td>
+<td class="parameter_description"><p>LUKS2 device to set the verification pattern on</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>key_file</p></td>
+<td class="parameter_description"><p>path to a file containing the LUKS passphrase used to unlock a keyslot of <em class="parameter"><code>device</code></em>
+</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>extra</p></td>
+<td class="parameter_description"><p>extra options for setting the verification pattern
+(right now passed to the 'zkey-cryptsetup' utility). </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="NULL may be passed as the value in, out, in-out; or as a return value."><span class="acronym">nullable</span></acronym>][<acronym title="Parameter points to an array of items."><span class="acronym">array</span></acronym> zero-terminated=1]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>error</p></td>
+<td class="parameter_description"><p>place to store error (if any). </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for returning results. Default is transfer full."><span class="acronym">out</span></acronym>][<acronym title="NULL may be passed instead of a pointer to a location."><span class="acronym">optional</span></acronym>]</span></td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="bd-s390-zkey-cryptsetup-setvp.returns"></a><h4>Returns</h4>
+<p> whether the verification pattern was successfully set or not</p>
+<p>Tech category: <a class="link" href="libblockdev-s390.html#BD-S390-TECH-PAES:CAPS"><code class="literal">BD_S390_TECH_PAES</code></a>-<a class="link" href="libblockdev-s390.html#BD-S390-TECH-MODE-MODIFY:CAPS"><code class="literal">BD_S390_TECH_MODE_MODIFY</code></a></p>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="bd-s390-zkey-cryptsetup-validate"></a><h3>bd_s390_zkey_cryptsetup_validate ()</h3>
+<pre class="programlisting"><span class="returnvalue">gboolean</span>
+bd_s390_zkey_cryptsetup_validate (<em class="parameter"><code>const <span class="type">gchar</span> *device</code></em>,
+                                  <em class="parameter"><code>const <span class="type">gchar</span> *key_file</code></em>,
+                                  <em class="parameter"><code>const <a class="link" href="libblockdev-Utils.html#BDExtraArg" title="BDExtraArg"><span class="type">BDExtraArg</span></a> **extra</code></em>,
+                                  <em class="parameter"><code><span class="type">GError</span> **error</code></em>);</pre>
+<p>Validates that the LUKS2 volume <em class="parameter"><code>device</code></em>
+ is correctly set up for pervasive encryption using the
+'zkey-cryptsetup' utility. Validation requires unlocking a keyslot of <em class="parameter"><code>device</code></em>
+, so the LUKS
+passphrase needs to be provided in <em class="parameter"><code>key_file</code></em>
+ (this is a passphrase file, not the secure key
+file).</p>
+<div class="refsect3">
+<a name="bd-s390-zkey-cryptsetup-validate.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>device</p></td>
+<td class="parameter_description"><p>LUKS2 device to validate</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>key_file</p></td>
+<td class="parameter_description"><p>path to a file containing the LUKS passphrase used to unlock a keyslot of <em class="parameter"><code>device</code></em>
+</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>extra</p></td>
+<td class="parameter_description"><p>extra options for the validation
+(right now passed to the 'zkey-cryptsetup' utility). </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="NULL may be passed as the value in, out, in-out; or as a return value."><span class="acronym">nullable</span></acronym>][<acronym title="Parameter points to an array of items."><span class="acronym">array</span></acronym> zero-terminated=1]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>error</p></td>
+<td class="parameter_description"><p>place to store error (if any). </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for returning results. Default is transfer full."><span class="acronym">out</span></acronym>][<acronym title="NULL may be passed instead of a pointer to a location."><span class="acronym">optional</span></acronym>]</span></td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="bd-s390-zkey-cryptsetup-validate.returns"></a><h4>Returns</h4>
+<p> whether the LUKS2 volume <em class="parameter"><code>device</code></em>
+is correctly set up for pervasive encryption or not</p>
+<p>Tech category: <a class="link" href="libblockdev-s390.html#BD-S390-TECH-PAES:CAPS"><code class="literal">BD_S390_TECH_PAES</code></a>-<a class="link" href="libblockdev-s390.html#BD-S390-TECH-MODE-QUERY:CAPS"><code class="literal">BD_S390_TECH_MODE_QUERY</code></a></p>
+</div>
+</div>
+<hr>
+<div class="refsect2">
 <a name="bd-s390-is-tech-avail"></a><h3>bd_s390_is_tech_avail ()</h3>
 <pre class="programlisting"><span class="returnvalue">gboolean</span>
 bd_s390_is_tech_avail (<em class="parameter"><code><a class="link" href="libblockdev-s390.html#BDS390Tech" title="enum BDS390Tech"><span class="type">BDS390Tech</span></a> tech</code></em>,
@@ -733,6 +1109,11 @@ plugin implementation and having all the runtime dependencies available</p>
 <td> </td>
 <td> </td>
 </tr>
+<tr>
+<td class="enum_member_name"><p><a name="BD-S390-ERROR-ZKEY:CAPS"></a>BD_S390_ERROR_ZKEY</p></td>
+<td> </td>
+<td> </td>
+</tr>
 </tbody>
 </table></div>
 </div>
@@ -741,6 +1122,97 @@ plugin implementation and having all the runtime dependencies available</p>
 <div class="refsect2">
 <a name="BD-S390-ERROR:CAPS"></a><h3>BD_S390_ERROR</h3>
 <pre class="programlisting">#define             BD_S390_ERROR</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="BDS390ZkeyInfo"></a><h3>BDS390ZkeyInfo</h3>
+<pre class="programlisting">typedef struct {
+    gchar *name;
+    gchar *description;
+    guint64 secure_key_size;
+    guint64 clear_key_size;
+    gboolean xts;
+    gchar *key_type;
+    gchar **volumes;
+    gchar **apqns;
+    gchar *key_file_name;
+    guint64 sector_size;
+    gchar *volume_type;
+    gchar *dummy_passphrase;
+} BDS390ZkeyInfo;
+</pre>
+<div class="refsect3">
+<a name="BDS390ZkeyInfo.members"></a><h4>Members</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="300px" class="struct_members_name">
+<col class="struct_members_description">
+<col width="200px" class="struct_members_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="struct_member_name"><p><span class="type">gchar</span> *<em class="structfield"><code><a name="BDS390ZkeyInfo.name"></a>name</code></em>;</p></td>
+<td class="struct_member_description"><p>name of the secure key in the secure key repository;</p></td>
+<td class="struct_member_annotations"> </td>
+</tr>
+<tr>
+<td class="struct_member_name"><p><span class="type">gchar</span> *<em class="structfield"><code><a name="BDS390ZkeyInfo.description"></a>description</code></em>;</p></td>
+<td class="struct_member_description"><p>user provided description of the key or <code class="literal">NULL</code> if none was set;. </p></td>
+<td class="struct_member_annotations"><span class="annotation">[<acronym title="NULL may be passed as the value in, out, in-out; or as a return value."><span class="acronym">nullable</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="struct_member_name"><p><span class="type">guint64</span> <em class="structfield"><code><a name="BDS390ZkeyInfo.secure-key-size"></a>secure_key_size</code></em>;</p></td>
+<td class="struct_member_description"><p>size of the secure key in bytes;</p></td>
+<td class="struct_member_annotations"> </td>
+</tr>
+<tr>
+<td class="struct_member_name"><p><span class="type">guint64</span> <em class="structfield"><code><a name="BDS390ZkeyInfo.clear-key-size"></a>clear_key_size</code></em>;</p></td>
+<td class="struct_member_description"><p>size of the effective (clear) key in bits;</p></td>
+<td class="struct_member_annotations"> </td>
+</tr>
+<tr>
+<td class="struct_member_name"><p><span class="type">gboolean</span> <em class="structfield"><code><a name="BDS390ZkeyInfo.xts"></a>xts</code></em>;</p></td>
+<td class="struct_member_description"><p>whether the key is an XTS type key or not;</p></td>
+<td class="struct_member_annotations"> </td>
+</tr>
+<tr>
+<td class="struct_member_name"><p><span class="type">gchar</span> *<em class="structfield"><code><a name="BDS390ZkeyInfo.key-type"></a>key_type</code></em>;</p></td>
+<td class="struct_member_description"><p>type of the secure key (e.g. "CCA-AESCIPHER");</p></td>
+<td class="struct_member_annotations"> </td>
+</tr>
+<tr>
+<td class="struct_member_name"><p><span class="type">gchar</span> **<em class="structfield"><code><a name="BDS390ZkeyInfo.volumes"></a>volumes</code></em>;</p></td>
+<td class="struct_member_description"><p>volumes associated with the key, each in the "volume:dmname" format;. </p></td>
+<td class="struct_member_annotations"><span class="annotation">[<acronym title="Parameter points to an array of items."><span class="acronym">array</span></acronym> zero-terminated=1]</span></td>
+</tr>
+<tr>
+<td class="struct_member_name"><p><span class="type">gchar</span> **<em class="structfield"><code><a name="BDS390ZkeyInfo.apqns"></a>apqns</code></em>;</p></td>
+<td class="struct_member_description"><p>cryptographic adapters (APQNs) associated with the key, each in the "card.domain" format;. </p></td>
+<td class="struct_member_annotations"><span class="annotation">[<acronym title="Parameter points to an array of items."><span class="acronym">array</span></acronym> zero-terminated=1]</span></td>
+</tr>
+<tr>
+<td class="struct_member_name"><p><span class="type">gchar</span> *<em class="structfield"><code><a name="BDS390ZkeyInfo.key-file-name"></a>key_file_name</code></em>;</p></td>
+<td class="struct_member_description"><p>full path to the file holding the secure key;</p></td>
+<td class="struct_member_annotations"> </td>
+</tr>
+<tr>
+<td class="struct_member_name"><p><span class="type">guint64</span> <em class="structfield"><code><a name="BDS390ZkeyInfo.sector-size"></a>sector_size</code></em>;</p></td>
+<td class="struct_member_description"><p>sector size in bytes to use with dm-crypt or 0 for the system default;</p></td>
+<td class="struct_member_annotations"> </td>
+</tr>
+<tr>
+<td class="struct_member_name"><p><span class="type">gchar</span> *<em class="structfield"><code><a name="BDS390ZkeyInfo.volume-type"></a>volume_type</code></em>;</p></td>
+<td class="struct_member_description"><p>volume type the key is to be used with (e.g. "LUKS2");</p></td>
+<td class="struct_member_annotations"> </td>
+</tr>
+<tr>
+<td class="struct_member_name"><p><span class="type">gchar</span> *<em class="structfield"><code><a name="BDS390ZkeyInfo.dummy-passphrase"></a>dummy_passphrase</code></em>;</p></td>
+<td class="struct_member_description"><p>path to the dummy passphrase file associated with the key or <code class="literal">NULL</code> if none is set;. </p></td>
+<td class="struct_member_annotations"><span class="annotation">[<acronym title="NULL may be passed as the value in, out, in-out; or as a return value."><span class="acronym">nullable</span></acronym>]</span></td>
+</tr>
+</tbody>
+</table></div>
+</div>
 </div>
 <hr>
 <div class="refsect2">
@@ -761,6 +1233,11 @@ plugin implementation and having all the runtime dependencies available</p>
 </tr>
 <tr>
 <td class="enum_member_name"><p><a name="BD-S390-TECH-ZFCP:CAPS"></a>BD_S390_TECH_ZFCP</p></td>
+<td> </td>
+<td> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="BD-S390-TECH-PAES:CAPS"></a>BD_S390_TECH_PAES</p></td>
 <td> </td>
 <td> </td>
 </tr>
@@ -787,6 +1264,11 @@ plugin implementation and having all the runtime dependencies available</p>
 </tr>
 <tr>
 <td class="enum_member_name"><p><a name="BD-S390-TECH-MODE-QUERY:CAPS"></a>BD_S390_TECH_MODE_QUERY</p></td>
+<td> </td>
+<td> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="BD-S390-TECH-MODE-CREATE:CAPS"></a>BD_S390_TECH_MODE_CREATE</p></td>
 <td> </td>
 <td> </td>
 </tr>

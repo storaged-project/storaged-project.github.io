@@ -2,9 +2,9 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>DeviceMapper: libblockdev Reference Manual for libblockdev 3.5.0.</title>
+<title>DeviceMapper: libblockdev Reference Manual for libblockdev 3.6.0.</title>
 <meta name="generator" content="DocBook XSL Stylesheets Vsnapshot">
-<link rel="home" href="index.html" title="libblockdev Reference Manual for libblockdev 3.5.0.">
+<link rel="home" href="index.html" title="libblockdev Reference Manual for libblockdev 3.6.0.">
 <link rel="up" href="ch01.html" title="libblockdev Reference Manual">
 <link rel="prev" href="libblockdev-Crypto.html" title="Crypto">
 <link rel="next" href="libblockdev-FS.html" title="FS">
@@ -113,6 +113,30 @@
 </tr>
 <tr>
 <td class="function_type">
+<a class="link" href="libblockdev-DeviceMapper.html#BDDMThinPoolStats" title="BDDMThinPoolStats"><span class="returnvalue">BDDMThinPoolStats</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="libblockdev-DeviceMapper.html#bd-dm-get-thin-pool-stats" title="bd_dm_get_thin_pool_stats ()">bd_dm_get_thin_pool_stats</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a class="link" href="libblockdev-DeviceMapper.html#BDDMThinPoolStats" title="BDDMThinPoolStats"><span class="returnvalue">BDDMThinPoolStats</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="libblockdev-DeviceMapper.html#bd-dm-thin-pool-stats-copy" title="bd_dm_thin_pool_stats_copy ()">bd_dm_thin_pool_stats_copy</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="libblockdev-DeviceMapper.html#bd-dm-thin-pool-stats-free" title="bd_dm_thin_pool_stats_free ()">bd_dm_thin_pool_stats_free</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
 <span class="returnvalue">gboolean</span>
 </td>
 <td class="function_name">
@@ -137,6 +161,10 @@
 <tr>
 <td class="datatype_keyword">enum</td>
 <td class="function_name"><a class="link" href="libblockdev-DeviceMapper.html#BDDMError" title="enum BDDMError">BDDMError</a></td>
+</tr>
+<tr>
+<td class="datatype_keyword"> </td>
+<td class="function_name"><a class="link" href="libblockdev-DeviceMapper.html#BDDMThinPoolStats" title="BDDMThinPoolStats">BDDMThinPoolStats</a></td>
 </tr>
 <tr>
 <td class="datatype_keyword">enum</td>
@@ -434,6 +462,93 @@ bd_dm_get_subsystem_from_name (<em class="parameter"><code>const <span class="ty
 </div>
 <hr>
 <div class="refsect2">
+<a name="bd-dm-get-thin-pool-stats"></a><h3>bd_dm_get_thin_pool_stats ()</h3>
+<pre class="programlisting"><a class="link" href="libblockdev-DeviceMapper.html#BDDMThinPoolStats" title="BDDMThinPoolStats"><span class="returnvalue">BDDMThinPoolStats</span></a> *
+bd_dm_get_thin_pool_stats (<em class="parameter"><code>const <span class="type">gchar</span> *map_name</code></em>,
+                           <em class="parameter"><code><span class="type">GError</span> **error</code></em>);</pre>
+<div class="refsect3">
+<a name="bd-dm-get-thin-pool-stats.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>map_name</p></td>
+<td class="parameter_description"><p>name of the DM map (thin pool) to get stats for</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>error</p></td>
+<td class="parameter_description"><p>place to store error (if any). </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for returning results. Default is transfer full."><span class="acronym">out</span></acronym>][<acronym title="NULL may be passed instead of a pointer to a location."><span class="acronym">optional</span></acronym>]</span></td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="bd-dm-get-thin-pool-stats.returns"></a><h4>Returns</h4>
+<p>physical usage stats for the thin pool <em class="parameter"><code>map_name</code></em>
+or
+<code class="literal">NULL</code> in case of error (<em class="parameter"><code>error</code></em>
+is set). This works for any device mapper thin
+pool, it doesn't have to be managed by LVM.</p>
+<p>Tech category: <a class="link" href="libblockdev-DeviceMapper.html#BD-DM-TECH-MAP:CAPS"><code class="literal">BD_DM_TECH_MAP</code></a>-<a class="link" href="libblockdev-DeviceMapper.html#BD-DM-TECH-MODE-QUERY:CAPS"><code class="literal">BD_DM_TECH_MODE_QUERY</code></a>. </p>
+<p><span class="annotation">[<acronym title="The caller owns the data, and is responsible for free it."><span class="acronym">transfer full</span></acronym>]</span></p>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="bd-dm-thin-pool-stats-copy"></a><h3>bd_dm_thin_pool_stats_copy ()</h3>
+<pre class="programlisting"><a class="link" href="libblockdev-DeviceMapper.html#BDDMThinPoolStats" title="BDDMThinPoolStats"><span class="returnvalue">BDDMThinPoolStats</span></a> *
+bd_dm_thin_pool_stats_copy (<em class="parameter"><code><a class="link" href="libblockdev-DeviceMapper.html#BDDMThinPoolStats" title="BDDMThinPoolStats"><span class="type">BDDMThinPoolStats</span></a> *data</code></em>);</pre>
+<p>Creates a new copy of <em class="parameter"><code>data</code></em>
+.</p>
+<p><span class="annotation">[<acronym title="Exposed in C code, not necessarily available in other languages."><span class="acronym">skip</span></acronym>]</span></p>
+<div class="refsect3">
+<a name="bd-dm-thin-pool-stats-copy.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>data</p></td>
+<td class="parameter_description"><p><a class="link" href="libblockdev-DeviceMapper.html#BDDMThinPoolStats" title="BDDMThinPoolStats"><code class="literal">BDDMThinPoolStats</code></a> to copy. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="NULL may be passed as the value in, out, in-out; or as a return value."><span class="acronym">nullable</span></acronym>]</span></td>
+</tr></tbody>
+</table></div>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="bd-dm-thin-pool-stats-free"></a><h3>bd_dm_thin_pool_stats_free ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+bd_dm_thin_pool_stats_free (<em class="parameter"><code><a class="link" href="libblockdev-DeviceMapper.html#BDDMThinPoolStats" title="BDDMThinPoolStats"><span class="type">BDDMThinPoolStats</span></a> *data</code></em>);</pre>
+<p>Frees <em class="parameter"><code>data</code></em>
+.</p>
+<p><span class="annotation">[<acronym title="Exposed in C code, not necessarily available in other languages."><span class="acronym">skip</span></acronym>]</span></p>
+<div class="refsect3">
+<a name="bd-dm-thin-pool-stats-free.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>data</p></td>
+<td class="parameter_description"><p><a class="link" href="libblockdev-DeviceMapper.html#BDDMThinPoolStats" title="BDDMThinPoolStats"><code class="literal">BDDMThinPoolStats</code></a> to free. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="NULL may be passed as the value in, out, in-out; or as a return value."><span class="acronym">nullable</span></acronym>]</span></td>
+</tr></tbody>
+</table></div>
+</div>
+</div>
+<hr>
+<div class="refsect2">
 <a name="bd-dm-is-tech-avail"></a><h3>bd_dm_is_tech_avail ()</h3>
 <pre class="programlisting"><span class="returnvalue">gboolean</span>
 bd_dm_is_tech_avail (<em class="parameter"><code><a class="link" href="libblockdev-DeviceMapper.html#BDDMTech" title="enum BDDMTech"><span class="type">BDDMTech</span></a> tech</code></em>,
@@ -535,6 +650,76 @@ plugin implementation and having all the runtime dependencies available</p>
 <td class="enum_member_name"><p><a name="BD-DM-ERROR-DEVICE-NOEXIST:CAPS"></a>BD_DM_ERROR_DEVICE_NOEXIST</p></td>
 <td> </td>
 <td> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="BDDMThinPoolStats"></a><h3>BDDMThinPoolStats</h3>
+<pre class="programlisting">typedef struct {
+    guint64 used_metadata_blocks;
+    guint64 total_metadata_blocks;
+    guint64 used_data_blocks;
+    guint64 total_data_blocks;
+    gboolean read_only;
+    gboolean fail;
+    gboolean out_of_data_space;
+    gboolean needs_check;
+} BDDMThinPoolStats;
+</pre>
+<p>The block sizes are not reported by the device mapper thin pool status, only
+the numbers of blocks. To get the space usage as a percentage divide the used
+blocks by the total blocks.</p>
+<div class="refsect3">
+<a name="BDDMThinPoolStats.members"></a><h4>Members</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="300px" class="struct_members_name">
+<col class="struct_members_description">
+<col width="200px" class="struct_members_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="struct_member_name"><p><span class="type">guint64</span> <em class="structfield"><code><a name="BDDMThinPoolStats.used-metadata-blocks"></a>used_metadata_blocks</code></em>;</p></td>
+<td class="struct_member_description"><p>number of used metadata blocks</p></td>
+<td class="struct_member_annotations"> </td>
+</tr>
+<tr>
+<td class="struct_member_name"><p><span class="type">guint64</span> <em class="structfield"><code><a name="BDDMThinPoolStats.total-metadata-blocks"></a>total_metadata_blocks</code></em>;</p></td>
+<td class="struct_member_description"><p>total number of metadata blocks</p></td>
+<td class="struct_member_annotations"> </td>
+</tr>
+<tr>
+<td class="struct_member_name"><p><span class="type">guint64</span> <em class="structfield"><code><a name="BDDMThinPoolStats.used-data-blocks"></a>used_data_blocks</code></em>;</p></td>
+<td class="struct_member_description"><p>number of used data blocks</p></td>
+<td class="struct_member_annotations"> </td>
+</tr>
+<tr>
+<td class="struct_member_name"><p><span class="type">guint64</span> <em class="structfield"><code><a name="BDDMThinPoolStats.total-data-blocks"></a>total_data_blocks</code></em>;</p></td>
+<td class="struct_member_description"><p>total number of data blocks</p></td>
+<td class="struct_member_annotations"> </td>
+</tr>
+<tr>
+<td class="struct_member_name"><p><span class="type">gboolean</span> <em class="structfield"><code><a name="BDDMThinPoolStats.read-only"></a>read_only</code></em>;</p></td>
+<td class="struct_member_description"><p>whether the metadata may not be changed</p></td>
+<td class="struct_member_annotations"> </td>
+</tr>
+<tr>
+<td class="struct_member_name"><p><span class="type">gboolean</span> <em class="structfield"><code><a name="BDDMThinPoolStats.fail"></a>fail</code></em>;</p></td>
+<td class="struct_member_description"><p>whether the pool fails all I/O</p></td>
+<td class="struct_member_annotations"> </td>
+</tr>
+<tr>
+<td class="struct_member_name"><p><span class="type">gboolean</span> <em class="structfield"><code><a name="BDDMThinPoolStats.out-of-data-space"></a>out_of_data_space</code></em>;</p></td>
+<td class="struct_member_description"><p>whether the pool ran out of data space</p></td>
+<td class="struct_member_annotations"> </td>
+</tr>
+<tr>
+<td class="struct_member_name"><p><span class="type">gboolean</span> <em class="structfield"><code><a name="BDDMThinPoolStats.needs-check"></a>needs_check</code></em>;</p></td>
+<td class="struct_member_description"><p>whether the metadata needs a check</p></td>
+<td class="struct_member_annotations"> </td>
 </tr>
 </tbody>
 </table></div>
